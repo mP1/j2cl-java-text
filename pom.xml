@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <!-- ==================================================================== -->
+    <!-- Build requires Java SE 8 or later -->
+    <!-- Releases require Java SE 11 or later -->
+    <!-- ==================================================================== -->
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>walkingkooka</groupId>
+    <artifactId>java-text-j2cl</artifactId>
+    <packaging>jar</packaging>
+    <name>java.text.*</name>
+    <version>1.0.0-SNAPSHOT</version>
+    <description>A custom j2cl compatible java.text</description>
+    <url>https://github.com/mP1/java-text-j2cl</url>
+
+    <!-- ==================================================================== -->
+    <issueManagement>
+        <system>GitHub</system>
+        <url>https://github.com/mP1/java-text-j2cl/issues</url>
+    </issueManagement>
+    <inceptionYear>2019</inceptionYear>
+
+    <!-- ==================================================================== -->
+    <developers>
+        <developer>
+            <id>mP1</id>
+            <name>Miroslav Pokorny</name>
+            <roles>
+                <role>Project Lead</role>
+            </roles>
+            <timezone>10</timezone>
+            <url>https://github.com/mP1</url>
+        </developer>
+    </developers>
+
+    <!-- ==================================================================== -->
+    <licenses>
+        <license>
+            <name>Apache 2</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <scm>
+        <connection>scm:git:https://github.com/mP1/java-text-j2cl.git</connection>
+        <developerConnection>scm:git:https://github.com/mP1/java-text-j2cl.git</developerConnection>
+        <url>https://github.com/mP1/java-text-j2cl</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <!-- ==================================================================== -->
+    <properties>
+        <maven-install-plugin.version>2.5.2</maven-install-plugin.version>
+        <maven-source-plugin.version>3.0.1</maven-source-plugin.version>
+        <maven-surefire-plugin.version>2.22.1</maven-surefire-plugin.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>github-mp1-appengine-repo</id>
+            <url>https://maven-repo-254709.appspot.com</url>
+        </repository>
+        <repository>
+            <id>vertispan-releases</id>
+            <name>Vertispan hosted artifacts-releases</name>
+            <url>https://repo.vertispan.com/j2cl</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>vertispan-gwt-snapshots</id>
+            <url>https://repo.vertispan.com/gwt-snapshot/</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>google-sonatype-snapshots</id>
+            <url>https://oss.sonatype.org/content/repositories/google-snapshots/</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>central</id>
+            <name>Central Repository</name>
+            <url>http://repo.maven.apache.org/maven2</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+    </repositories>
+
+    <dependencies>
+
+        <!-- j2cl compile dependencies -->
+        <dependency>
+            <groupId>com.google.jsinterop</groupId>
+            <artifactId>jsinterop-annotations</artifactId>
+            <version>2.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.vertispan.j2cl</groupId>
+            <artifactId>bootstrap</artifactId>
+            <version>0.5-SNAPSHOT</version>
+            <type>zip</type>
+            <classifier>jszip</classifier>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.vertispan.j2cl</groupId>
+            <artifactId>javac-bootstrap-classpath</artifactId>
+            <version>0.5-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.vertispan.j2cl</groupId>
+            <artifactId>jre</artifactId>
+            <version>0.5-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.vertispan.j2cl</groupId>
+            <artifactId>jre</artifactId>
+            <version>0.5-SNAPSHOT</version>
+            <type>zip</type>
+            <classifier>jszip</classifier>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.annotation</groupId>
+            <artifactId>jsr250-api</artifactId>
+            <version>1.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.4.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>walkingkooka</groupId>
+            <artifactId>walkingkooka-tree-json</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+    </dependencies>
+
+    <!-- ==================================================================== -->
+    <build>
+        <!-- define build -->
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
+                <configuration>
+                    <source>9</source>
+                    <target>9</target>
+                    <forceJavacCompilerUse>true</forceJavacCompilerUse>
+                </configuration>
+            </plugin>
+            <!-- Setup testing -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <includes>
+                        <include>**/Test*.java</include>
+                    </includes>
+                    <argLine>-Xmx2G</argLine>
+                    <parallel>classes</parallel>
+                    <threadCount>1</threadCount>
+                    <!-- remove slow SuiteHTMLReporter -->
+                    <properties>
+                        <property>
+                            <name>usedefaultlisteners</name>
+                            <value>false</value>
+                        </property>
+                        <property>
+                            <name>listener</name>
+                            <value>org.testng.reporters.ExitCodeListener</value>
+                        </property>
+                        <property>
+                            <name>reporter</name>
+                            <value>org.testng.reporters.JUnitReportReporter</value>
+                        </property>
+                    </properties>
+                </configuration>
+            </plugin>
+
+            <!-- Setup source jar -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <configuration>
+                    <excludeResources>true</excludeResources>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+        <!-- Manage plugin versions -->
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.8.0</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-install-plugin</artifactId>
+                    <version>${maven-install-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-source-plugin</artifactId>
+                    <version>${maven-source-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>${maven-surefire-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-report-plugin</artifactId>
+                    <version>${maven-surefire-report-plugin.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <!-- ==================================================================== -->
+    <reporting>
+        <plugins>
+            <!-- Setup Surefire report -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-report-plugin</artifactId>
+                <version>${maven-surefire-report-plugin.version}</version>
+                <configuration>
+                    <showSuccess>true</showSuccess>
+                </configuration>
+            </plugin>
+        </plugins>
+    </reporting>
+
+    <!-- ==================================================================== -->
+    <distributionManagement>
+        <repository>
+            <id>github-mp1-appengine-repo</id>
+            <name>github.com/mP1 repository</name>
+            <url>https://maven-repo-254709.appspot.com</url>
+        </repository>
+    </distributionManagement>
+</project>
