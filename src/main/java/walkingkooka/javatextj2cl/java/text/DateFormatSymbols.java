@@ -32,6 +32,13 @@ import java.util.Optional;
  */
 public class DateFormatSymbols {
 
+    /**
+     * All available {@link Locale locales} also provide date format symbols.
+     */
+    public static Locale[] getAvailableLocales() {
+        return Locale.getAvailableLocales();
+    }
+
     public DateFormatSymbols() {
         this(Locale.getDefault());
     }
