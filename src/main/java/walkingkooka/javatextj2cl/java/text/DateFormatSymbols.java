@@ -52,7 +52,7 @@ public class DateFormatSymbols {
         return WalkingkookaLocale.forLanguageTag(WalkingkookaLanguageTag.parse(locale.toLanguageTag()));
     }
 
-    public DateFormatSymbols(final WalkingkookaLocale locale) {
+    private DateFormatSymbols(final WalkingkookaLocale locale) {
         super();
 
         final WalkingkookaDateFormatSymbols symbols = locale.dateFormatSymbols();
