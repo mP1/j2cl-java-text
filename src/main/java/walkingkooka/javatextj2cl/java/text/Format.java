@@ -17,9 +17,6 @@
 
 package walkingkooka.javatextj2cl.java.text;
 
-import walkingkooka.ToStringBuilder;
-
-import java.text.FieldPosition;
 import java.text.ParseException;
 import java.util.Objects;
 
@@ -28,7 +25,7 @@ public abstract class Format {
     protected Format() {
     }
 
-    public final String format (final Object value) {
+    public final String format(final Object value) {
         return format(value,
             new StringBuffer(),
             new FieldPosition(0)).toString();
@@ -41,7 +38,7 @@ public abstract class Format {
 
     abstract Object	parseObject(final String source, final ParsePosition pos);
 
-    public Object parseObject(String source) throws ParseException {
+    public Object parseObject(final String source) throws ParseException {
         final ParsePosition pos = new ParsePosition(0);
         final Object result = parseObject(source, pos);
         if (0 == pos.getIndex()) {
