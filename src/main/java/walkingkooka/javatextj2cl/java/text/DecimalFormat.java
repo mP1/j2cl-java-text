@@ -17,7 +17,7 @@
 
 package walkingkooka.javatextj2cl.java.text;
 
-final class DecimalFormat extends NumberFormat {
+public class DecimalFormat extends NumberFormat {
 
     static DecimalFormat with(final DecimalFormatSymbols symbols) {
         return new DecimalFormat(symbols);
