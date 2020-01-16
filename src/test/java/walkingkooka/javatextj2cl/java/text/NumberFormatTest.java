@@ -22,10 +22,53 @@ import walkingkooka.HashCodeEqualsDefinedTesting2;
 
 import java.util.Currency;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 
 public final class NumberFormatTest extends FormatTestCase<NumberFormat> implements HashCodeEqualsDefinedTesting2<NumberFormat> {
+
+    @Test
+    public void testDefaultGroupingUsed() {
+        assertEquals(new TestJdkNumberFormat().isGroupingUsed(),
+                new TestNumberFormat().isGroupingUsed(),
+                "groupingUsed");
+    }
+
+    @Test
+    public void testDefaultIsParseIntegerOnly() {
+        assertEquals(new TestJdkNumberFormat().isParseIntegerOnly(),
+                new TestNumberFormat().isParseIntegerOnly(),
+                "parseIntegerOnly");
+    }
+
+    @Test
+    public void testDefaultMaximumFractionDigits() {
+        assertEquals(new TestJdkNumberFormat().getMaximumFractionDigits(),
+                new TestNumberFormat().getMaximumFractionDigits(),
+                "getMaximumFractionDigits");
+    }
+
+    @Test
+    public void testDefaultMaximumIntegerDigits() {
+        assertEquals(new TestJdkNumberFormat().getMaximumIntegerDigits(),
+                new TestNumberFormat().getMaximumIntegerDigits(),
+                "getMaximumIntegerDigits");
+    }
+
+    @Test
+    public void testDefaultMinimumFractionDigits() {
+        assertEquals(new TestJdkNumberFormat().getMinimumFractionDigits(),
+                new TestNumberFormat().getMinimumFractionDigits(),
+                "getMinimumFractionDigits");
+    }
+
+    @Test
+    public void testDefaultMinimumIntegerDigits() {
+        assertEquals(new TestJdkNumberFormat().getMinimumIntegerDigits(),
+                new TestNumberFormat().getMinimumIntegerDigits(),
+                "getMinimumIntegerDigits");
+    }
 
     @Test
     public void testGetCurrencyFails() {
