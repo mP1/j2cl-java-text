@@ -18,14 +18,14 @@
 package walkingkooka.javatextj2cl.java.text;
 
 import org.junit.jupiter.api.Test;
+import walkingkooka.HashCodeEqualsDefinedTesting2;
 
 import java.util.Currency;
-import java.util.Locale;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 
-public final class NumberFormatTest extends FormatTestCase<NumberFormat> {
+public final class NumberFormatTest extends FormatTestCase<NumberFormat> implements HashCodeEqualsDefinedTesting2<NumberFormat> {
 
     @Test
     public void testGetCurrencyFails() {
@@ -38,6 +38,75 @@ public final class NumberFormatTest extends FormatTestCase<NumberFormat> {
         final Currency currency = Currency.getInstance("AUD");
         assertThrows(UnsupportedOperationException.class, () -> new TestJdkNumberFormat().setCurrency(currency));
         assertThrows(UnsupportedOperationException.class, () -> new TestNumberFormat().setCurrency(currency));
+    }
+
+    // equals...........................................................................................................
+
+    @Test
+    public void testDifferentGroupingUsed() {
+        final TestJdkNumberFormat jdk = new TestJdkNumberFormat();
+        jdk.setGroupingUsed(!jdk.isGroupingUsed());
+        this.checkNotEquals(new TestJdkNumberFormat(), jdk);
+
+        final TestNumberFormat format = new TestNumberFormat();
+        format.setGroupingUsed(!format.isGroupingUsed());
+        this.checkNotEquals(format);
+    }
+
+    @Test
+    public void testDifferentMaximumFractionDigits() {
+        final TestJdkNumberFormat jdk = new TestJdkNumberFormat();
+        jdk.setMaximumFractionDigits(10);
+        this.checkNotEquals(new TestJdkNumberFormat(), jdk);
+
+        final TestNumberFormat format = new TestNumberFormat();
+        format.setMaximumFractionDigits(10);
+        this.checkNotEquals(format);
+    }
+
+    @Test
+    public void testDifferentMaximumIntegerDigits() {
+        final TestJdkNumberFormat jdk = new TestJdkNumberFormat();
+        jdk.setMaximumIntegerDigits(5);
+        this.checkNotEquals(new TestJdkNumberFormat(), jdk);
+
+        final TestNumberFormat format = new TestNumberFormat();
+        format.setMaximumIntegerDigits(5);
+        this.checkNotEquals(format);
+    }
+
+    @Test
+    public void testDifferentMinimumFractionDigits() {
+        final TestJdkNumberFormat jdk = new TestJdkNumberFormat();
+        jdk.setMinimumFractionDigits(1);
+        this.checkNotEquals(new TestJdkNumberFormat(), jdk);
+
+        final TestNumberFormat format = new TestNumberFormat();
+        format.setMinimumFractionDigits(1);
+        this.checkNotEquals(format);
+    }
+
+    @Test
+    public void testDifferentMinimumIntegerDigits() {
+        final TestJdkNumberFormat jdk = new TestJdkNumberFormat();
+        jdk.setMinimumIntegerDigits(5);
+        this.checkNotEquals(jdk, new TestJdkNumberFormat());
+
+        final TestNumberFormat format = new TestNumberFormat();
+        format.setMinimumIntegerDigits(5);
+        this.checkNotEquals(format);
+    }
+
+    @Test
+    public void testDifferentParseIntegerOnly() {
+        final TestJdkNumberFormat jdk = new TestJdkNumberFormat();
+        jdk.setParseIntegerOnly(true);
+        this.checkNotEquals(new TestJdkNumberFormat(), jdk);
+
+
+        final TestNumberFormat format = new TestNumberFormat();
+        format.setParseIntegerOnly(true);
+        this.checkNotEquals(format);
     }
 
     private class TestJdkNumberFormat extends java.text.NumberFormat {
@@ -91,5 +160,10 @@ public final class NumberFormatTest extends FormatTestCase<NumberFormat> {
     @Override
     public Class<NumberFormat> type() {
         return NumberFormat.class;
+    }
+
+    @Override
+    public NumberFormat createObject() {
+        return new TestNumberFormat();
     }
 }
