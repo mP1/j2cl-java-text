@@ -22,6 +22,7 @@ import walkingkooka.HashCodeEqualsDefinedTesting2;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.text.ParseException;
 import java.util.Currency;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicLong;
@@ -229,6 +230,79 @@ public final class NumberFormatTest extends FormatTestCase<NumberFormat> impleme
         assertEquals(jdkFieldPosition.getEndIndex(), fieldPosition.getEndIndex(), "endIndex");
     }
 
+    // parse............................................................................................................
+
+    @Test
+    public void testParseZero() throws ParseException {
+        this.parseAndCheck("0");
+    }
+
+    @Test
+    public void testParseOne() throws ParseException {
+        this.parseAndCheck("1");
+    }
+
+    @Test
+    public void testParseTenHalf() throws ParseException {
+        this.parseAndCheck("10.5");
+    }
+
+    @Test
+    public void testParseStringParsePosition() throws ParseException {
+        this.parseStringAndCheck("10.5", new java.text.ParsePosition(1));
+    }
+
+    @Test
+    public void testParseObjectParsePosition() throws ParseException {
+        this.parseObjectAndCheck("10.5", new java.text.ParsePosition(1));
+    }
+
+    private void parseAndCheck(final String parse) throws ParseException {
+        final TestJdkNumberFormat jdk = new TestJdkNumberFormat();
+        final TestNumberFormat format = new TestNumberFormat();
+
+        assertEquals(jdk.parse(parse),
+                format.parse(parse),
+                () -> "parse " + parse);
+
+        this.parseStringAndCheck(parse,
+                new java.text.ParsePosition(0));
+        this.parseObjectAndCheck(parse,
+                new java.text.ParsePosition(0));
+    }
+
+    private void parseStringAndCheck(final String parse,
+                                     final java.text.ParsePosition jdkPosition) throws ParseException {
+        final TestJdkNumberFormat jdk = new TestJdkNumberFormat();
+        final TestNumberFormat format = new TestNumberFormat();
+
+        final ParsePosition position = new ParsePosition(jdkPosition.getIndex());
+
+        assertEquals(jdk.parse(parse, jdkPosition),
+                format.parse(parse, position),
+                () -> "parse " + parse);
+        checkParsePosition(jdkPosition, position);
+    }
+
+    private void parseObjectAndCheck(final String parse,
+                                     final java.text.ParsePosition jdkPosition) throws ParseException {
+        final TestJdkNumberFormat jdk = new TestJdkNumberFormat();
+        final TestNumberFormat format = new TestNumberFormat();
+
+        final ParsePosition position = new ParsePosition(jdkPosition.getIndex());
+
+        assertEquals(jdk.parse(parse, jdkPosition),
+                format.parse(parse, position),
+                () -> "parse " + parse);
+        checkParsePosition(jdkPosition, position);
+    }
+
+    private void checkParsePosition(final java.text.ParsePosition jdkParsePosition,
+                                    final ParsePosition parsePosition) {
+        assertEquals(jdkParsePosition.getIndex(), parsePosition.getIndex(), "index");
+        assertEquals(jdkParsePosition.getErrorIndex(), parsePosition.getErrorIndex(), "errorIndex");
+    }
+
     // equals...........................................................................................................
 
     @Test
@@ -327,7 +401,7 @@ public final class NumberFormatTest extends FormatTestCase<NumberFormat> impleme
         @Override
         public Number parse(final String source,
                             final java.text.ParsePosition pos) {
-            throw new UnsupportedOperationException();
+            return java.text.NumberFormat.getInstance().parse(source, pos);
         }
     }
 
@@ -358,7 +432,11 @@ public final class NumberFormatTest extends FormatTestCase<NumberFormat> impleme
         @Override
         public Number parse(final String source,
                             final ParsePosition pos) {
-            throw new UnsupportedOperationException();
+            final java.text.ParsePosition jdkParsePosition = new java.text.ParsePosition(pos.getIndex());
+            final Number result = java.text.NumberFormat.getInstance().parse(source, jdkParsePosition);
+            pos.setIndex(jdkParsePosition.getIndex());
+            pos.setErrorIndex(jdkParsePosition.getErrorIndex());
+            return result;
         }
     }
 
