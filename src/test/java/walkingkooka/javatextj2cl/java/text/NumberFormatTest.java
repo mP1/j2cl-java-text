@@ -34,6 +34,18 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 public final class NumberFormatTest extends FormatTestCase<NumberFormat> implements HashCodeEqualsDefinedTesting2<NumberFormat> {
 
     @Test
+    public void testFractionField() {
+        assertEquals(java.text.NumberFormat.FRACTION_FIELD, NumberFormat.FRACTION_FIELD);
+    }
+
+    @Test
+    public void testIntegerField() {
+        assertEquals(java.text.NumberFormat.INTEGER_FIELD, NumberFormat.INTEGER_FIELD);
+    }
+
+    // defaults.........................................................................................................
+
+    @Test
     public void testDefaultGroupingUsed() {
         assertEquals(new TestJdkNumberFormat().isGroupingUsed(),
                 new TestNumberFormat().isGroupingUsed(),
