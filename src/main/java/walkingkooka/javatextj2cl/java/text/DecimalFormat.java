@@ -27,6 +27,17 @@ public class DecimalFormat extends NumberFormat {
         this.symbols = symbols;
     }
 
+    /**
+     * Changes the pattern of this decimal format to the specified pattern which
+     * uses non-localized pattern characters.
+     *
+     * @param pattern the non-localized pattern.
+     * @throws IllegalArgumentException if the pattern cannot be parsed.
+     */
+    public void applyPattern(final String pattern) {
+        throw new UnsupportedOperationException();
+    }
+
     @Override
     public StringBuffer format(final double number,
                                final StringBuffer append,
