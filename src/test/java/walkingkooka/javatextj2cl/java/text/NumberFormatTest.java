@@ -276,11 +276,12 @@ public final class NumberFormatTest extends FormatTestCase<NumberFormat> impleme
         final TestJdkNumberFormat jdk = new TestJdkNumberFormat();
         final TestNumberFormat format = new TestNumberFormat();
 
+        final String jdkPositionToString = jdkPosition.toString();
         final ParsePosition position = new ParsePosition(jdkPosition.getIndex());
 
         assertEquals(jdk.parse(parse, jdkPosition),
                 format.parse(parse, position),
-                () -> "parse " + parse);
+                () -> "parse " + parse + "," + jdkPositionToString);
         checkParsePosition(jdkPosition, position);
     }
 
@@ -290,10 +291,11 @@ public final class NumberFormatTest extends FormatTestCase<NumberFormat> impleme
         final TestNumberFormat format = new TestNumberFormat();
 
         final ParsePosition position = new ParsePosition(jdkPosition.getIndex());
+        final String jdkPositionToString = jdkPosition.toString();
 
-        assertEquals(jdk.parse(parse, jdkPosition),
-                format.parse(parse, position),
-                () -> "parse " + parse);
+        assertEquals(jdk.parseObject(parse, jdkPosition),
+                format.parseObject(parse, position),
+                () -> "parseObject " + parse + ", " + jdkPositionToString);
         checkParsePosition(jdkPosition, position);
     }
 
