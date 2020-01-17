@@ -29,6 +29,17 @@ public class DecimalFormat extends NumberFormat {
 
     /**
      * Changes the pattern of this decimal format to the specified pattern which
+     * uses localized pattern characters.
+     *
+     * @param pattern the localized pattern.
+     * @throws IllegalArgumentException if the pattern cannot be parsed.
+     */
+    public void applyLocalizedPattern(final String pattern) {
+        throw new UnsupportedOperationException();
+    }
+
+    /**
+     * Changes the pattern of this decimal format to the specified pattern which
      * uses non-localized pattern characters.
      *
      * @param pattern the non-localized pattern.
