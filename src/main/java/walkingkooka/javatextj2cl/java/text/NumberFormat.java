@@ -28,6 +28,16 @@ import java.util.concurrent.atomic.AtomicLong;
 public abstract class NumberFormat extends Format {
 
     /**
+     * Field constant identifying the integer part of a number.
+     */
+    public static final int INTEGER_FIELD = 0;
+
+    /**
+     * Field constant identifying the fractional part of a number.
+     */
+    public static final int FRACTION_FIELD = 1;
+
+    /**
      * All available {@link Locale locales} also provide number format symbols.
      */
     public static Locale[] getAvailableLocales() {
