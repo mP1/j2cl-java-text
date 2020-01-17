@@ -181,16 +181,22 @@ public abstract class NumberFormat extends Format {
     public final String format(final double number) {
         return this.format(number,
                 new StringBuffer(),
-                null/*DontCareFieldPosition.INSTANCE*/)
+                FIELD_POSITION)
                 .toString();
     }
 
     public final String format(final long number) {
         return this.format(number,
                 new StringBuffer(),
-                null/*DontCareFieldPosition.INSTANCE*/)
+                FIELD_POSITION)
                 .toString();
     }
+
+    /**
+     * A dummy FieldPosition that will be updated by the {@link #format(long, StringBuffer, FieldPosition)} and ignored
+     * because it is never known by callers.
+     */
+    private final static FieldPosition FIELD_POSITION = new FieldPosition(0);
 
     public abstract StringBuffer format(final double number,
                                         final StringBuffer append,

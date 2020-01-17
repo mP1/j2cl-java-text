@@ -20,7 +20,11 @@ package walkingkooka.javatextj2cl.java.text;
 import org.junit.jupiter.api.Test;
 import walkingkooka.HashCodeEqualsDefinedTesting2;
 
+import java.math.BigDecimal;
+import java.math.BigInteger;
 import java.util.Currency;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.AtomicLong;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -81,6 +85,148 @@ public final class NumberFormatTest extends FormatTestCase<NumberFormat> impleme
         final Currency currency = Currency.getInstance("AUD");
         assertThrows(UnsupportedOperationException.class, () -> new TestJdkNumberFormat().setCurrency(currency));
         assertThrows(UnsupportedOperationException.class, () -> new TestNumberFormat().setCurrency(currency));
+    }
+
+    // format...........................................................................................................
+    // tests format overloads do the right thing.
+
+    @Test
+    public void testFormatByteFive() {
+        this.formatObjectStringBufferFieldPositionAndCheck((byte) 5);
+    }
+
+    @Test
+    public void testFormatShortFive() {
+        this.formatObjectStringBufferFieldPositionAndCheck((short) 5);
+    }
+
+    @Test
+    public void testFormatIntegerFive() {
+        this.formatObjectStringBufferFieldPositionAndCheck(5);
+    }
+
+    @Test
+    public void testFormatAtomicIntegerFive() {
+        this.formatObjectStringBufferFieldPositionAndCheck(new AtomicInteger(5));
+    }
+
+    @Test
+    public void testFormatAtomicLongFive() {
+        this.formatObjectStringBufferFieldPositionAndCheck(new AtomicLong(5));
+    }
+
+    @Test
+    public void testFormatBigDecimalHalf() {
+        this.formatObjectStringBufferFieldPositionAndCheck(new BigDecimal(0.5));
+    }
+
+    @Test
+    public void testFormatBigIntegerFive() {
+        this.formatObjectStringBufferFieldPositionAndCheck(BigInteger.valueOf(5));
+    }
+
+    @Test
+    public void testFormatDoubleHalf() {
+        this.formatDoubleAndCheck(0.5);
+    }
+
+    @Test
+    public void testFormatDoubleOneHalf() {
+        this.formatDoubleAndCheck(1.5);
+    }
+
+    @Test
+    public void testFormatDoubleTenHalf() {
+        this.formatDoubleAndCheck(10.5);
+    }
+
+    @Test
+    public void testFormatLongZero() {
+        this.formatLongAndCheck(0L);
+    }
+
+    @Test
+    public void testFormatLongOne() {
+        this.formatLongAndCheck(1L);
+    }
+
+    @Test
+    public void testFormatLongTen() {
+        this.formatLongAndCheck(10L);
+    }
+
+    private void formatDoubleAndCheck(final double value) {
+        final TestJdkNumberFormat jdk = new TestJdkNumberFormat();
+        final TestNumberFormat format = new TestNumberFormat();
+
+        assertEquals(jdk.format(value), format.format(value), "format(double) " + value);
+
+        this.formatDoubleStringBufferFieldPositionAndCheck(value);
+        this.formatObjectStringBufferFieldPositionAndCheck(value);
+    }
+
+    private void formatLongAndCheck(final long value) {
+        final TestJdkNumberFormat jdk = new TestJdkNumberFormat();
+        final TestNumberFormat format = new TestNumberFormat();
+
+        assertEquals(jdk.format(value), format.format(value), "format(long) " + value);
+
+        this.formatLongStringBufferFieldPositionAndCheck(value);
+        this.formatObjectStringBufferFieldPositionAndCheck(value);
+    }
+
+    private void formatDoubleStringBufferFieldPositionAndCheck(final double value) {
+        final TestJdkNumberFormat jdk = new TestJdkNumberFormat();
+        final TestNumberFormat format = new TestNumberFormat();
+
+        final StringBuffer jdkStringBuffer = new StringBuffer();
+        final StringBuffer stringBuffer = new StringBuffer();
+
+        final java.text.FieldPosition jdkFieldPosition = new java.text.FieldPosition(TestJdkNumberFormat.INTEGER_FIELD);
+        final FieldPosition fieldPosition = new FieldPosition(TestJdkNumberFormat.INTEGER_FIELD);
+
+        assertEquals(jdk.format(value, jdkStringBuffer, jdkFieldPosition).toString(),
+                format.format(value, stringBuffer, fieldPosition).toString(),
+                "format(double, StringBuilder, FieldPosition) " + value);
+        this.checkFieldPosition(jdkFieldPosition, fieldPosition);
+    }
+
+    private void formatLongStringBufferFieldPositionAndCheck(final long value) {
+        final TestJdkNumberFormat jdk = new TestJdkNumberFormat();
+        final TestNumberFormat format = new TestNumberFormat();
+
+        final StringBuffer jdkStringBuffer = new StringBuffer();
+        final StringBuffer stringBuffer = new StringBuffer();
+
+        final java.text.FieldPosition jdkFieldPosition = new java.text.FieldPosition(TestJdkNumberFormat.INTEGER_FIELD);
+        final FieldPosition fieldPosition = new FieldPosition(TestJdkNumberFormat.INTEGER_FIELD);
+
+        assertEquals(jdk.format(value, jdkStringBuffer, jdkFieldPosition).toString(),
+                format.format(value, stringBuffer, fieldPosition).toString(),
+                "format(long, StringBuilder, FieldPosition) " + value);
+        this.checkFieldPosition(jdkFieldPosition, fieldPosition);
+    }
+
+    private void formatObjectStringBufferFieldPositionAndCheck(final Object value) {
+        final TestJdkNumberFormat jdk = new TestJdkNumberFormat();
+        final TestNumberFormat format = new TestNumberFormat();
+
+        final StringBuffer jdkStringBuffer = new StringBuffer();
+        final StringBuffer stringBuffer = new StringBuffer();
+
+        final java.text.FieldPosition jdkFieldPosition = new java.text.FieldPosition(TestJdkNumberFormat.INTEGER_FIELD);
+        final FieldPosition fieldPosition = new FieldPosition(TestJdkNumberFormat.INTEGER_FIELD);
+
+        assertEquals(jdk.format(value, jdkStringBuffer, jdkFieldPosition).toString(),
+                format.format(value, stringBuffer, fieldPosition).toString(),
+                "format(Object, StringBuilder, FieldPosition) " + value);
+        this.checkFieldPosition(jdkFieldPosition, fieldPosition);
+    }
+
+    private void checkFieldPosition(final java.text.FieldPosition jdkFieldPosition,
+                                    final FieldPosition fieldPosition) {
+        assertEquals(jdkFieldPosition.getBeginIndex(), fieldPosition.getBeginIndex(), "beginIndex");
+        assertEquals(jdkFieldPosition.getEndIndex(), fieldPosition.getEndIndex(), "endIndex");
     }
 
     // equals...........................................................................................................
@@ -160,14 +306,22 @@ public final class NumberFormatTest extends FormatTestCase<NumberFormat> impleme
         public StringBuffer format(final double number,
                                    final StringBuffer append,
                                    final java.text.FieldPosition pos) {
-            throw new UnsupportedOperationException();
+            final String formatted = String.valueOf(number);
+            append.append("D").append(formatted);
+            pos.setBeginIndex(0);
+            pos.setEndIndex(formatted.length() + 1);
+            return append;
         }
 
         @Override
         public StringBuffer format(final long number,
                                    final StringBuffer append,
                                    final java.text.FieldPosition pos) {
-            throw new UnsupportedOperationException();
+            final String formatted = String.valueOf(number);
+            append.append("L").append(formatted);
+            pos.setBeginIndex(0);
+            pos.setEndIndex(formatted.length() + 1);
+            return append;
         }
 
         @Override
@@ -183,14 +337,22 @@ public final class NumberFormatTest extends FormatTestCase<NumberFormat> impleme
         public StringBuffer format(final double number,
                                    final StringBuffer append,
                                    final FieldPosition pos) {
-            throw new UnsupportedOperationException();
+            final String formatted = String.valueOf(number);
+            append.append("D").append(formatted);
+            pos.setBeginIndex(0);
+            pos.setEndIndex(formatted.length() + 1);
+            return append;
         }
 
         @Override
         public StringBuffer format(final long number,
                                    final StringBuffer append,
                                    final FieldPosition pos) {
-            throw new UnsupportedOperationException();
+            final String formatted = String.valueOf(number);
+            append.append("L").append(formatted);
+            pos.setBeginIndex(0);
+            pos.setEndIndex(formatted.length() + 1);
+            return append;
         }
 
         @Override
