@@ -49,17 +49,10 @@ public final class DateFormatSymbolsProviderTool extends LocaleProviderTool {
 
     @Override
     void printLocales(final List<Locale> locales) {
-        final Map<DateFormatSymbols, String> symbolToMethodName = Maps.sorted(DateFormatSymbolsProviderTool::dateFormatSymbolsComparator);
         final Map<DateFormatSymbols, Set<String>> symbolToLanguageTags = Maps.sorted(DateFormatSymbolsProviderTool::dateFormatSymbolsComparator);
 
         for (final Locale locale : locales) {
             final DateFormatSymbols symbols = DateFormatSymbols.getInstance(locale);
-
-            String method = symbolToMethodName.get(symbols);
-            if (null == method) {
-                method = javaMethodNameSafe(locale.toString());
-                symbolToMethodName.put(symbols, method);
-            }
 
             Set<String> symbolLocales = symbolToLanguageTags.get(symbols);
             if (null == symbolLocales) {
@@ -72,14 +65,13 @@ public final class DateFormatSymbolsProviderTool extends LocaleProviderTool {
         this.line("static void register() {");
         this.indent();
         {
-            for (final DateFormatSymbols symbols : symbolToMethodName.keySet()) {
-                final String methodName = symbolToMethodName.get(symbols);
+            for (final DateFormatSymbols symbols : symbolToLanguageTags.keySet()) {
                 final Set<String> languageTags = symbolToLanguageTags.get(symbols);
 
                 this.line(type(walkingkooka.javatextj2cl.java.text.DateFormatSymbols.class) + ".register(");
                 this.indent();
                 {
-                    this.line(quote(languageTags.stream().collect(Collectors.joining(","))) + ",");
+                    this.line(tabbed(languageTags) + ",");
 
                     this.line(tabbed(symbols.getAmPmStrings()) + ",");
                     this.line(tabbed(symbols.getEras()) + ",");
