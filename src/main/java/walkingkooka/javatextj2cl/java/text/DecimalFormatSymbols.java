@@ -18,15 +18,98 @@
 package walkingkooka.javatextj2cl.java.text;
 
 import walkingkooka.ToStringBuilder;
-import walkingkooka.javautillocalej2cl.WalkingkookaDecimalFormatSymbols;
+import walkingkooka.collect.map.Maps;
 import walkingkooka.javautillocalej2cl.WalkingkookaLanguageTag;
 import walkingkooka.javautillocalej2cl.WalkingkookaLocale;
 
 import java.util.Locale;
+import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 
 public class DecimalFormatSymbols {
+
+    /**
+     * Language tag to symbols, this is used internally to "get" the symbols for a given Locale.
+     */
+    private final static Map<String, DecimalFormatSymbols> LANGUAGE_TAG_TO_SYMBOLS = Maps.ordered();
+
+    static {
+        DecimalFormatSymbolProvider.register();
+    }
+
+    /**
+     * Used by {@link DecimalFormatSymbolProvider#register()} to register individual symbols
+     */
+    static void register(final String locales,
+                         final String currency,
+                         final String currencySymbol,
+                         final char decimalSeparator,
+                         final char digit,
+                         final String exponentSeparator,
+                         final char groupingSeparator,
+                         final String infinity,
+                         final String internationalCurrencySymbol,
+                         final char minusSign,
+                         final char monetaryDecimalSeparator,
+                         final String nan,
+                         final char patternSeparator,
+                         final char percent,
+                         final char perMill,
+                         final char zeroDigit) {
+        final DecimalFormatSymbols symbols = new DecimalFormatSymbols(currency,
+                currencySymbol,
+                decimalSeparator,
+                digit,
+                exponentSeparator,
+                groupingSeparator,
+                infinity,
+                internationalCurrencySymbol,
+                minusSign,
+                monetaryDecimalSeparator,
+                nan,
+                patternSeparator,
+                percent,
+                perMill,
+                zeroDigit);
+
+        for (final String locale : locales.split("\t")) {
+            LANGUAGE_TAG_TO_SYMBOLS.put(locale, symbols);
+        }
+    }
+
+    private DecimalFormatSymbols(final String currency,
+                                 final String currencySymbol,
+                                 final char decimalSeparator,
+                                 final char digit,
+                                 final String exponentSeparator,
+                                 final char groupingSeparator,
+                                 final String infinity,
+                                 final String internationalCurrencySymbol,
+                                 final char minusSign,
+                                 final char monetaryDecimalSeparator,
+                                 final String nan,
+                                 final char patternSeparator,
+                                 final char percent,
+                                 final char perMill,
+                                 final char zeroDigit) {
+        super();
+        this.currency = currency;
+        this.currencySymbol = currencySymbol;
+        this.decimalSeparator = decimalSeparator;
+        this.digit = digit;
+        this.exponentSeparator = exponentSeparator;
+        this.groupingSeparator = groupingSeparator;
+        this.infinity = infinity;
+        this.internationalCurrencySymbol = internationalCurrencySymbol;
+        this.minusSign = minusSign;
+        this.monetaryDecimalSeparator = monetaryDecimalSeparator;
+        this.nan = nan;
+        this.patternSeparator = patternSeparator;
+        this.percent = percent;
+        this.perMill = perMill;
+        this.zeroDigit = zeroDigit;
+    }
 
     /**
      * All available {@link Locale locales} also provide date format symbols.
@@ -51,22 +134,22 @@ public class DecimalFormatSymbols {
     private DecimalFormatSymbols(final WalkingkookaLocale locale) {
         super();
 
-        final WalkingkookaDecimalFormatSymbols symbols = locale.decimalFormatSymbols();
-        this.currency = symbols.currency();
-        this.currencySymbol = symbols.currencySymbol();
-        this.decimalSeparator = symbols.decimalSeparator();
-        this.digit = symbols.digit();
-        this.exponentSeparator = symbols.exponentSeparator();
-        this.groupingSeparator = symbols.groupingSeparator();
-        this.infinity = symbols.infinity();
-        this.internationalCurrencySymbol = symbols.internationalCurrencySymbol();
-        this.minusSign = symbols.minusSign();
-        this.monetaryDecimalSeparator = symbols.monetaryDecimalSeparator();
-        this.nan = symbols.nan();
-        this.patternSeparator = symbols.patternSeparator();
-        this.percent = symbols.percent();
-        this.perMill = symbols.perMill();
-        this.zeroDigit = symbols.zeroDigit();
+        final DecimalFormatSymbols symbols = LANGUAGE_TAG_TO_SYMBOLS.get(locale.languageTag().toLanguageTag());
+        this.currency = symbols.getCurrency();
+        this.currencySymbol = symbols.getCurrencySymbol();
+        this.decimalSeparator = symbols.getDecimalSeparator();
+        this.digit = symbols.getDigit();
+        this.exponentSeparator = symbols.getExponentSeparator();
+        this.groupingSeparator = symbols.getGroupingSeparator();
+        this.infinity = symbols.getInfinity();
+        this.internationalCurrencySymbol = symbols.getInternationalCurrencySymbol();
+        this.minusSign = symbols.getMinusSign();
+        this.monetaryDecimalSeparator = symbols.getMonetaryDecimalSeparator();
+        this.nan = symbols.getNan();
+        this.patternSeparator = symbols.getPatternSeparator();
+        this.percent = symbols.getPercent();
+        this.perMill = symbols.getPerMill();
+        this.zeroDigit = symbols.getZeroDigit();
     }
 
     public String getCurrency() {
