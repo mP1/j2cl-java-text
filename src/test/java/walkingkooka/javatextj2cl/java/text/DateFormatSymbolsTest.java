@@ -27,7 +27,8 @@ import walkingkooka.reflect.JavaVisibility;
 import java.util.Locale;
 
 public final class DateFormatSymbolsTest implements ClassTesting<DateFormatSymbols>,
-        HashCodeEqualsDefinedTesting2<DateFormatSymbols> {
+        HashCodeEqualsDefinedTesting2<DateFormatSymbols>,
+        ToStringTesting<DateFormatSymbols> {
 
     @Test
     public void testNew() {
@@ -103,6 +104,14 @@ public final class DateFormatSymbolsTest implements ClassTesting<DateFormatSymbo
         final DateFormatSymbols symbols = this.createObject();
         symbols.setWeekdays(new String[]{"X", "Y"});
         this.checkNotEquals(symbols);
+    }
+
+    // ToString.........................................................................................................
+
+    @Test
+    public void testToString() {
+        this.toStringAndCheck(this.createObject(),
+                "ampm=\"AM\", \"PM\" eras=\"BC\", \"AD\" months=\"January\", \"February\", \"March\", \"April\", \"May\", \"June\", \"July\", \"August\", \"September\", \"October\", \"November\", \"December\", \"\" shortMonths=\"Jan\", \"Feb\", \"Mar\", \"Apr\", \"May\", \"Jun\", \"Jul\", \"Aug\", \"Sep\", \"Oct\", \"Nov\", \"Dec\", \"\" shortWeekdays=\"\", \"Sun\", \"Mon\", \"Tue\", \"Wed\", \"Thu\", \"Fri\", \"Sat\" weekdays=\"\", \"Sunday\", \"Monday\", \"Tuesday\", \"Wednesday\", \"Thursday\", \"Friday\", \"Saturday\"");
     }
 
     // ClassTesting.....................................................................................................
