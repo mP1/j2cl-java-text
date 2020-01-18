@@ -145,7 +145,7 @@ public class DecimalFormatSymbols {
         this.internationalCurrencySymbol = symbols.getInternationalCurrencySymbol();
         this.minusSign = symbols.getMinusSign();
         this.monetaryDecimalSeparator = symbols.getMonetaryDecimalSeparator();
-        this.nan = symbols.getNan();
+        this.nan = symbols.getNaN();
         this.patternSeparator = symbols.getPatternSeparator();
         this.percent = symbols.getPercent();
         this.perMill = symbols.getPerMill();
@@ -253,11 +253,11 @@ public class DecimalFormatSymbols {
 
     private char monetaryDecimalSeparator;
 
-    public String getNan() {
+    public String getNaN() {
         return this.nan;
     }
 
-    public void setNan(final String nan) {
+    public void setNaN(final String nan) {
         this.nan = nan;
     }
 

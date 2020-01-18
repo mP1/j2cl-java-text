@@ -60,6 +60,7 @@ public final class DecimalFormatSymbolsTest implements ClassTesting<DecimalForma
         assertEquals(expected.getInternationalCurrencySymbol(), emulated.getInternationalCurrencySymbol(), "internationalCurrencySymbol");
         assertEquals(expected.getMinusSign(), emulated.getMinusSign(), "minusSign");
         assertEquals(expected.getMonetaryDecimalSeparator(), emulated.getMonetaryDecimalSeparator(), "monetaryDecimalSeparator");
+        assertEquals(expected.getNaN(), emulated.getNaN(), "nan");
         assertEquals(expected.getPatternSeparator(), emulated.getPatternSeparator(), "patternSeparator");
         assertEquals(expected.getPercent(), emulated.getPercent(), "percent");
         assertEquals(expected.getPerMill(), emulated.getPerMill(), "perMill");
@@ -142,9 +143,9 @@ public final class DecimalFormatSymbolsTest implements ClassTesting<DecimalForma
     }
 
     @Test
-    public void testDifferentNan() {
+    public void testDifferentNaN() {
         final DecimalFormatSymbols symbols = this.createObject();
-        symbols.setNan("Q");
+        symbols.setNaN("Q");
         this.checkNotEquals(symbols);
     }
 
