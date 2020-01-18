@@ -19,6 +19,7 @@ package walkingkooka.javatextj2cl.java.text;
 
 import org.junit.jupiter.api.Test;
 import walkingkooka.HashCodeEqualsDefinedTesting2;
+import walkingkooka.ToStringTesting;
 import walkingkooka.reflect.ClassTesting;
 import walkingkooka.reflect.JavaVisibility;
 
@@ -27,7 +28,8 @@ import java.util.Locale;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public final class DecimalFormatSymbolsTest implements ClassTesting<DecimalFormatSymbols>,
-        HashCodeEqualsDefinedTesting2<DecimalFormatSymbols> {
+        HashCodeEqualsDefinedTesting2<DecimalFormatSymbols>,
+        ToStringTesting<DecimalFormatSymbols> {
 
     @Test
     public void testNew() {
@@ -175,6 +177,14 @@ public final class DecimalFormatSymbolsTest implements ClassTesting<DecimalForma
         final DecimalFormatSymbols symbols = this.createObject();
         symbols.setZeroDigit('Q');
         this.checkNotEquals(symbols);
+    }
+
+    // String...........................................................................................................
+
+    @Test
+    public void testToString() {
+        this.toStringAndCheck(this.createObject(),
+                "currency=\"XXX\" currencySymbol=\"¤\" decimalSeparator='.' digit='#' exponentSeparator=\"E\" groupingSeparator=',' infinity=\"∞\" internationalCurrencySymbol=\"XXX\" minusSign='-' monetaryDecimalSeparator='.' nan=\"NaN\" patternSeparator=';' percent='%' perMill='‰' zeroDigit='0'");
     }
 
     // ClassTesting.....................................................................................................
