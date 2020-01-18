@@ -19,12 +19,10 @@ package walkingkooka.javatextj2cl.java.text;
 
 import walkingkooka.ToStringBuilder;
 import walkingkooka.collect.map.Maps;
-import walkingkooka.javautillocalej2cl.WalkingkookaDateFormatSymbols;
 import walkingkooka.javautillocalej2cl.WalkingkookaLanguageTag;
 import walkingkooka.javautillocalej2cl.WalkingkookaLocale;
 
 import java.util.Arrays;
-import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Objects;
