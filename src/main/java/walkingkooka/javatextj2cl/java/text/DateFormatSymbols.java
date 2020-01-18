@@ -18,12 +18,15 @@
 package walkingkooka.javatextj2cl.java.text;
 
 import walkingkooka.ToStringBuilder;
+import walkingkooka.collect.map.Maps;
 import walkingkooka.javautillocalej2cl.WalkingkookaDateFormatSymbols;
 import walkingkooka.javautillocalej2cl.WalkingkookaLanguageTag;
 import walkingkooka.javautillocalej2cl.WalkingkookaLocale;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -31,6 +34,72 @@ import java.util.Optional;
  * A very much simplified {@link java.text.DateFormatSymbols}.
  */
 public class DateFormatSymbols {
+
+    /**
+     * Language tag to symbols, this is used internally to "get" the symbols for a given Locale.
+     */
+    private final static Map<String, DateFormatSymbols> LANGUAGE_TAG_TO_SYMBOLS = Maps.ordered();
+
+    static {
+        DateFormatSymbolProvider.register();
+    }
+
+    /**
+     * Used by {@link DateFormatSymbolProvider#register()} to register individual symbols
+     */
+    static void register(final String locales,
+                         final String ampms,
+                         final String eras,
+                         final String months,
+                         final String shortMonths,
+                         final String shortWeekdays,
+                         final String weekdays) {
+        final DateFormatSymbols symbols = new DateFormatSymbols(ampms,
+                eras,
+                months,
+                shortMonths,
+                shortWeekdays,
+                weekdays);
+
+        for(final String locale : locales.split(",")) {
+            LANGUAGE_TAG_TO_SYMBOLS.put(locale, symbols);
+        }
+    }
+
+    private DateFormatSymbols(final String ampms,
+                              final String eras,
+                              final String months,
+                              final String shortMonths,
+                              final String shortWeekdays,
+                              final String weekdays) {
+        super();
+        this.ampm = extractTokens(ampms);
+        this.eras = extractTokens(eras);
+        this.months = extractMonths(months);
+        this.shortMonths = extractMonths(shortMonths);
+        this.shortWeekdays = extractWeekdays(shortWeekdays);
+        this.weekdays = extractWeekdays(weekdays);
+    }
+
+    private static String[] extractTokens(final String text) {
+        return text.split("\t");
+    }
+
+    private static String[] extractMonths(final String text) {
+        final String[] months = extractTokens(text);
+        final String[] array = new String[13];
+        array[12] = ""; // restore empty string in slot 12
+        System.arraycopy(months, 0, array, 0, months.length);
+        return array;
+    }
+
+    private static String[] extractWeekdays(final String text) {
+        final String[] weekdays = extractTokens(text);
+        final String[] array = new String[weekdays.length + 1];
+        array[0] = ""; // restore the empty String at slot zero
+        System.arraycopy(weekdays, 0, array, 1, weekdays.length);
+        return array;
+    }
 
     /**
      * All available {@link Locale locales} also provide date format symbols.
@@ -55,71 +124,71 @@ public class DateFormatSymbols {
     private DateFormatSymbols(final WalkingkookaLocale locale) {
         super();
 
-        final WalkingkookaDateFormatSymbols symbols = locale.dateFormatSymbols();
-        this.ampm = symbols.ampm();
-        this.eras = symbols.eras();
-        this.months = symbols.months();
-        this.shortMonths = symbols.shortMonths();
-        this.shortWeekdays = symbols.shortWeekdays();
-        this.weekdays = symbols.weekdays();
+        final DateFormatSymbols symbols = LANGUAGE_TAG_TO_SYMBOLS.get(locale.languageTag().toLanguageTag());
+        this.ampm = symbols.ampm;
+        this.eras = symbols.eras;
+        this.months = symbols.months;
+        this.shortMonths = symbols.shortMonths;
+        this.shortWeekdays = symbols.shortWeekdays;
+        this.weekdays = symbols.weekdays;
     }
 
     public String[] getAmPmStrings() {
-        return this.copyOf(this.ampm);
+        return copyOf(this.ampm);
     }
 
     public void setAmPmStrings(final String[] ampm) {
-        this.ampm = this.copyOf(ampm);
+        this.ampm = copyOf(ampm);
     }
 
     private String[] ampm;
 
     public String[] getEras() {
-        return this.copyOf(this.eras);
+        return copyOf(this.eras);
     }
 
     public void setEras(final String[] eras) {
-        this.eras = this.copyOf(eras);
+        this.eras = copyOf(eras);
     }
 
     private String[] eras;
 
     public String[] getMonths() {
-        return this.copyOf(this.months);
+        return copyOf(this.months);
     }
 
     public void setMonths(final String[] months) {
-        this.months = this.copyOf(months);
+        this.months = copyOf(months);
     }
 
     private String[] months;
 
     public String[] getShortMonths() {
-        return this.copyOf(this.shortMonths);
+        return copyOf(this.shortMonths);
     }
 
     public void setShortMonths(final String[] shortMonths) {
-        this.shortMonths = this.copyOf(shortMonths);
+        this.shortMonths = copyOf(shortMonths);
     }
 
     private String[] shortMonths;
 
     public String[] getShortWeekdays() {
-        return this.copyOf(this.shortWeekdays);
+        return copyOf(this.shortWeekdays);
     }
 
     public void setShortWeekdays(final String[] shortWeekdays) {
-        this.shortWeekdays = this.copyOf(shortWeekdays);
+        this.shortWeekdays = copyOf(shortWeekdays);
     }
 
     private String[] shortWeekdays;
 
     public String[] getWeekdays() {
-        return this.copyOf(this.weekdays);
+        return copyOf(this.weekdays);
     }
 
     public void setWeekdays(final String[] weekdays) {
-        this.weekdays = this.copyOf(weekdays);
+        this.weekdays = copyOf(weekdays);
     }
 
     private String[] weekdays;
