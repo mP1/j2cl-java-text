@@ -20,7 +20,7 @@ package walkingkooka.javatextj2cl.java.text;
 final class DateFormatSymbolProvider {
     static void register() {
         DateFormatSymbols.register(
-                "br,br-FR",
+                "br\tbr-FR",
                 "A.M.\tG.M.",
                 "a-raok J.K.\tgoude J.K.",
                 "Genver\tCʼhwevrer\tMeurzh\tEbrel\tMae\tMezheven\tGouere\tEost\tGwengolo\tHere\tDu\tKerzu",
@@ -29,7 +29,7 @@ final class DateFormatSymbolProvider {
                 "Sul\tLun\tMeurzh\tMercʼher\tYaou\tGwener\tSadorn"
         );
         DateFormatSymbols.register(
-                "ig,ig-NG",
+                "ig\tig-NG",
                 "A.M.\tP.M.",
                 "T.K.\tA.K.",
                 "Jenụwarị\tFebrụwarị\tMaachị\tEprel\tMee\tJuun\tJulaị\tỌgọọst\tSeptemba\tỌktoba\tNovemba\tDisemba",
@@ -38,7 +38,7 @@ final class DateFormatSymbolProvider {
                 "Mbọsị Ụka\tMọnde\tTiuzdee\tWenezdee\tTọọzdee\tFraịdee\tSatọdee"
         );
         DateFormatSymbols.register(
-                "seh,seh-MZ",
+                "seh\tseh-MZ",
                 "AM\tPM",
                 "AC\tAD",
                 "Janeiro\tFevreiro\tMarco\tAbril\tMaio\tJunho\tJulho\tAugusto\tSetembro\tOtubro\tNovembro\tDecembro",
@@ -47,7 +47,7 @@ final class DateFormatSymbolProvider {
                 "Dimingu\tChiposi\tChipiri\tChitatu\tChinai\tChishanu\tSabudu"
         );
         DateFormatSymbols.register(
-                "dyo,dyo-SN",
+                "dyo\tdyo-SN",
                 "AM\tPM",
                 "ArY\tAtY",
                 "Sanvie\tFébirie\tMars\tAburil\tMee\tSueŋ\tSúuyee\tUt\tSettembar\tOktobar\tNovembar\tDisambar",
@@ -56,7 +56,7 @@ final class DateFormatSymbolProvider {
                 "Dimas\tTeneŋ\tTalata\tAlarbay\tAramisay\tArjuma\tSibiti"
         );
         DateFormatSymbols.register(
-                "fil,fil-PH",
+                "fil\tfil-PH",
                 "AM\tPM",
                 "BC\tAD",
                 "Enero\tPebrero\tMarso\tAbril\tMayo\tHunyo\tHulyo\tAgosto\tSetyembre\tOktubre\tNobyembre\tDisyembre",
@@ -65,7 +65,7 @@ final class DateFormatSymbolProvider {
                 "Linggo\tLunes\tMartes\tMiyerkules\tHuwebes\tBiyernes\tSabado"
         );
         DateFormatSymbols.register(
-                "mg,mg-MG",
+                "mg\tmg-MG",
                 "AM\tPM",
                 "BC\tAD",
                 "Janoary\tFebroary\tMartsa\tAprily\tMey\tJona\tJolay\tAogositra\tSeptambra\tOktobra\tNovambra\tDesambra",
@@ -74,7 +74,7 @@ final class DateFormatSymbolProvider {
                 "Alahady\tAlatsinainy\tTalata\tAlarobia\tAlakamisy\tZoma\tAsabotsy"
         );
         DateFormatSymbols.register(
-                "sw,sw-KE,sw-TZ,sw-UG",
+                "sw\tsw-KE\tsw-TZ\tsw-UG",
                 "AM\tPM",
                 "BC\tAD",
                 "Januari\tFebruari\tMachi\tAprili\tMei\tJuni\tJulai\tAgosti\tSeptemba\tOktoba\tNovemba\tDesemba",
@@ -83,7 +83,7 @@ final class DateFormatSymbolProvider {
                 "Jumapili\tJumatatu\tJumanne\tJumatano\tAlhamisi\tIjumaa\tJumamosi"
         );
         DateFormatSymbols.register(
-                "en,en-001,en-150,en-AG,en-AI,en-AS,en-AT,en-BB,en-BE,en-BI,en-BM,en-BS,en-BW,en-BZ,en-CA,en-CC,en-CH,en-CK,en-CM,en-CX,en-CY,en-DE,en-DG,en-DK,en-DM,en-ER,en-FI,en-FJ,en-FK,en-FM,en-GD,en-GG,en-GH,en-GI,en-GM,en-GU,en-GY,en-HK,en-IL,en-IM,en-IN,en-IO,en-JE,en-JM,en-KE,en-KI,en-KN,en-KY,en-LC,en-LR,en-LS,en-MG,en-MH,en-MO,en-MP,en-MS,en-MT,en-MU,en-MW,en-MY,en-NA,en-NF,en-NG,en-NL,en-NR,en-NU,en-NZ,en-PG,en-PH,en-PK,en-PN,en-PR,en-PW,en-RW,en-SB,en-SC,en-SD,en-SE,en-SG,en-SH,en-SI,en-SL,en-SS,en-SX,en-SZ,en-TC,en-TK,en-TO,en-TT,en-TV,en-TZ,en-UG,en-UM,en-US,en-US-POSIX,en-VC,en-VG,en-VI,en-VU,en-WS,en-ZA,en-ZM,en-ZW",
+                "en\ten-001\ten-150\ten-AG\ten-AI\ten-AS\ten-AT\ten-BB\ten-BE\ten-BI\ten-BM\ten-BS\ten-BW\ten-BZ\ten-CA\ten-CC\ten-CH\ten-CK\ten-CM\ten-CX\ten-CY\ten-DE\ten-DG\ten-DK\ten-DM\ten-ER\ten-FI\ten-FJ\ten-FK\ten-FM\ten-GD\ten-GG\ten-GH\ten-GI\ten-GM\ten-GU\ten-GY\ten-HK\ten-IL\ten-IM\ten-IN\ten-IO\ten-JE\ten-JM\ten-KE\ten-KI\ten-KN\ten-KY\ten-LC\ten-LR\ten-LS\ten-MG\ten-MH\ten-MO\ten-MP\ten-MS\ten-MT\ten-MU\ten-MW\ten-MY\ten-NA\ten-NF\ten-NG\ten-NL\ten-NR\ten-NU\ten-NZ\ten-PG\ten-PH\ten-PK\ten-PN\ten-PR\ten-PW\ten-RW\ten-SB\ten-SC\ten-SD\ten-SE\ten-SG\ten-SH\ten-SI\ten-SL\ten-SS\ten-SX\ten-SZ\ten-TC\ten-TK\ten-TO\ten-TT\ten-TV\ten-TZ\ten-UG\ten-UM\ten-US\ten-US-POSIX\ten-VC\ten-VG\ten-VI\ten-VU\ten-WS\ten-ZA\ten-ZM\ten-ZW",
                 "AM\tPM",
                 "BC\tAD",
                 "January\tFebruary\tMarch\tApril\tMay\tJune\tJuly\tAugust\tSeptember\tOctober\tNovember\tDecember",
@@ -92,7 +92,7 @@ final class DateFormatSymbolProvider {
                 "Sunday\tMonday\tTuesday\tWednesday\tThursday\tFriday\tSaturday"
         );
         DateFormatSymbols.register(
-                "zu,zu-ZA",
+                "zu\tzu-ZA",
                 "AM\tPM",
                 "BC\tAD",
                 "Januwari\tFebruwari\tMashi\tEphreli\tMeyi\tJuni\tJulayi\tAgasti\tSepthemba\tOkthoba\tNovemba\tDisemba",
@@ -101,7 +101,7 @@ final class DateFormatSymbolProvider {
                 "ISonto\tUMsombuluko\tULwesibili\tULwesithathu\tULwesine\tULwesihlanu\tUMgqibelo"
         );
         DateFormatSymbols.register(
-                "lg,lg-UG",
+                "lg\tlg-UG",
                 "AM\tPM",
                 "BC\tAD",
                 "Janwaliyo\tFebwaliyo\tMarisi\tApuli\tMaayi\tJuuni\tJulaayi\tAgusito\tSebuttemba\tOkitobba\tNovemba\tDesemba",
@@ -110,7 +110,7 @@ final class DateFormatSymbolProvider {
                 "Sabbiiti\tBalaza\tLwakubiri\tLwakusatu\tLwakuna\tLwakutaano\tLwamukaaga"
         );
         DateFormatSymbols.register(
-                "sn,sn-ZW",
+                "sn\tsn-ZW",
                 "AM\tPM",
                 "BC\tAD",
                 "Ndira\tKukadzi\tKurume\tKubvumbi\tChivabvu\tChikumi\tChikunguru\tNyamavhuvhu\tGunyana\tGumiguru\tMbudzi\tZvita",
@@ -119,7 +119,7 @@ final class DateFormatSymbolProvider {
                 "Svondo\tMuvhuro\tChipiri\tChitatu\tChina\tChishanu\tMugovera"
         );
         DateFormatSymbols.register(
-                "cgg,cgg-UG,nyn,nyn-UG",
+                "cgg\tcgg-UG\tnyn\tnyn-UG",
                 "AM\tPM",
                 "BC\tAD",
                 "Okwokubanza\tOkwakabiri\tOkwakashatu\tOkwakana\tOkwakataana\tOkwamukaaga\tOkwamushanju\tOkwamunaana\tOkwamwenda\tOkwaikumi\tOkwaikumi na kumwe\tOkwaikumi na ibiri",
@@ -128,7 +128,7 @@ final class DateFormatSymbolProvider {
                 "Sande\tOrwokubanza\tOrwakabiri\tOrwakashatu\tOrwakana\tOrwakataano\tOrwamukaaga"
         );
         DateFormatSymbols.register(
-                "nd,nd-ZW",
+                "nd\tnd-ZW",
                 "AM\tPM",
                 "BC\tAD",
                 "Zibandlela\tNhlolanja\tMbimbitho\tMabasa\tNkwenkwezi\tNhlangula\tNtulikazi\tNcwabakazi\tMpandula\tMfumfu\tLwezi\tMpalakazi",
@@ -137,7 +137,7 @@ final class DateFormatSymbolProvider {
                 "Sonto\tMvulo\tSibili\tSithathu\tSine\tSihlanu\tMgqibelo"
         );
         DateFormatSymbols.register(
-                "haw,haw-US",
+                "haw\thaw-US",
                 "AM\tPM",
                 "BCE\tCE",
                 "Ianuali\tPepeluali\tMalaki\tʻApelila\tMei\tIune\tIulai\tʻAukake\tKepakemapa\tʻOkakopa\tNowemapa\tKekemapa",
@@ -146,7 +146,7 @@ final class DateFormatSymbolProvider {
                 "Lāpule\tPoʻakahi\tPoʻalua\tPoʻakolu\tPoʻahā\tPoʻalima\tPoʻaono"
         );
         DateFormatSymbols.register(
-                "ckb,ckb-IQ,ckb-IR,cu,cu-RU,prg,prg-001,tk,tk-TM,und,vo,vo-001",
+                "ckb\tckb-IQ\tckb-IR\tcu\tcu-RU\tprg\tprg-001\ttk\ttk-TM\tund\tvo\tvo-001",
                 "AM\tPM",
                 "BCE\tCE",
                 "Jan\tFeb\tMar\tApr\tMay\tJun\tJul\tAug\tSep\tOct\tNov\tDec",
@@ -155,7 +155,7 @@ final class DateFormatSymbolProvider {
                 "Sun\tMon\tTue\tWed\tThu\tFri\tSat"
         );
         DateFormatSymbols.register(
-                "rw,rw-RW",
+                "rw\trw-RW",
                 "AM\tPM",
                 "BCE\tCE",
                 "Mutarama\tGashyantare\tWerurwe\tMata\tGicuransi\tKamena\tNyakanga\tKanama\tNzeli\tUkwakira\tUgushyingo\tUkuboza",
@@ -164,7 +164,7 @@ final class DateFormatSymbolProvider {
                 "Ku cyumweru\tKuwa mbere\tKuwa kabiri\tKuwa gatatu\tKuwa kane\tKuwa gatanu\tKuwa gatandatu"
         );
         DateFormatSymbols.register(
-                "lkt,lkt-US",
+                "lkt\tlkt-US",
                 "AM\tPM",
                 "BCE\tCE",
                 "Wiótheȟika Wí\tThiyóȟeyuŋka Wí\tIštáwičhayazaŋ Wí\tPȟežítȟo Wí\tČhaŋwápetȟo Wí\tWípazukȟa-wašté Wí\tČhaŋpȟásapa Wí\tWasútȟuŋ Wí\tČhaŋwápeǧi Wí\tČhaŋwápe-kasná Wí\tWaníyetu Wí\tTȟahékapšuŋ Wí",
@@ -173,7 +173,7 @@ final class DateFormatSymbolProvider {
                 "Aŋpétuwakȟaŋ\tAŋpétuwaŋži\tAŋpétunuŋpa\tAŋpétuyamni\tAŋpétutopa\tAŋpétuzaptaŋ\tOwáŋgyužažapi"
         );
         DateFormatSymbols.register(
-                "mgo,mgo-CM",
+                "mgo\tmgo-CM",
                 "AM\tPM",
                 "BCE\tCE",
                 "iməg mbegtug\timeg àbùbì\timeg mbəŋchubi\timəg ngwə̀t\timəg fog\timəg ichiibɔd\timəg àdùmbə̀ŋ\timəg ichika\timəg kud\timəg tèsiʼe\timəg zò\timəg krizmed",
@@ -182,7 +182,7 @@ final class DateFormatSymbolProvider {
                 "Aneg 1\tAneg 2\tAneg 3\tAneg 4\tAneg 5\tAneg 6\tAneg 7"
         );
         DateFormatSymbols.register(
-                "kl,kl-GL",
+                "kl\tkl-GL",
                 "AM\tPM",
                 "BCE\tCE",
                 "januari\tfebruari\tmartsi\taprili\tmaji\tjuni\tjuli\taugustusi\tseptemberi\toktoberi\tnovemberi\tdecemberi",
@@ -191,7 +191,7 @@ final class DateFormatSymbolProvider {
                 "sabaat\tataasinngorneq\tmarlunngorneq\tpingasunngorneq\tsisamanngorneq\ttallimanngorneq\tarfininngorneq"
         );
         DateFormatSymbols.register(
-                "vai-Latn,vai-Latn-LR",
+                "vai-Latn\tvai-Latn-LR",
                 "AM\tPM",
                 "BCE\tCE",
                 "luukao kemã\tɓandaɓu\tvɔɔ\tfulu\tgoo\t6\t7\tkɔnde\tsaah\tgalo\tkenpkato ɓololɔ\tluukao lɔma",
@@ -200,7 +200,7 @@ final class DateFormatSymbolProvider {
                 "lahadi\ttɛɛnɛɛ\ttalata\talaba\taimisa\taijima\tsiɓiti"
         );
         DateFormatSymbols.register(
-                "kkj,kkj-CM",
+                "kkj\tkkj-CM",
                 "AM\tPM",
                 "BCE\tCE",
                 "pamba\twanja\tmbiyɔ mɛndoŋgɔ\tNyɔlɔmbɔŋgɔ\tMɔnɔ ŋgbanja\tNyaŋgwɛ ŋgbanja\tkuŋgwɛ\tfɛ\tnjapi\tnyukul\t11\tɓulɓusɛ",
@@ -209,7 +209,7 @@ final class DateFormatSymbolProvider {
                 "sɔndi\tlundi\tmardi\tmɛrkɛrɛdi\tyedi\tvaŋdɛrɛdi\tmɔnɔ sɔndi"
         );
         DateFormatSymbols.register(
-                "smn,smn-FI",
+                "smn\tsmn-FI",
                 "AM\tPM",
                 "BCE\tCE",
                 "uđđâivemáánu\tkuovâmáánu\tnjuhčâmáánu\tcuáŋuimáánu\tvyesimáánu\tkesimáánu\tsyeinimáánu\tporgemáánu\tčohčâmáánu\troovvâdmáánu\tskammâmáánu\tjuovlâmáánu",
@@ -218,7 +218,7 @@ final class DateFormatSymbolProvider {
                 "pasepeeivi\tvuossaargâ\tmajebaargâ\tkoskoho\ttuorâstuv\tvástuppeeivi\tlávurduv"
         );
         DateFormatSymbols.register(
-                "ce,ce-RU",
+                "ce\tce-RU",
                 "AM\tPM",
                 "BCE\tCE",
                 "январь\tфевраль\tмарт\tапрель\tмай\tиюнь\tиюль\tавгуст\tсентябрь\tоктябрь\tноябрь\tдекабрь",
@@ -227,7 +227,7 @@ final class DateFormatSymbolProvider {
                 "кӀиранан де\tоршотан де\tшинарин де\tкхаарин де\tеарин де\tпӀераскан де\tшот де"
         );
         DateFormatSymbols.register(
-                "az-Cyrl,az-Cyrl-AZ",
+                "az-Cyrl\taz-Cyrl-AZ",
                 "AM\tPM",
                 "BCE\tCE",
                 "јанвар\tфеврал\tмарт\tапрел\tмай\tијун\tијул\tавгуст\tсентјабр\tоктјабр\tнојабр\tдекабр",
@@ -236,7 +236,7 @@ final class DateFormatSymbolProvider {
                 "базар\tбазар ертәси\tчәршәнбә ахшамы\tчәршәнбә\tҹүмә ахшамы\tҹүмә\tшәнбә"
         );
         DateFormatSymbols.register(
-                "lrc,lrc-IQ,lrc-IR",
+                "lrc\tlrc-IQ\tlrc-IR",
                 "AM\tPM",
                 "BCE\tCE",
                 "جانڤیە\tفئڤریە\tمارس\tآڤریل\tمئی\tجوٙأن\tجوٙلا\tآگوست\tسئپتامر\tئوکتوڤر\tنوڤامر\tدئسامر",
@@ -245,7 +245,7 @@ final class DateFormatSymbolProvider {
                 "Sun\tMon\tTue\tWed\tThu\tFri\tSat"
         );
         DateFormatSymbols.register(
-                "uz-Arab,uz-Arab-AF",
+                "uz-Arab\tuz-Arab-AF",
                 "AM\tPM",
                 "BCE\tCE",
                 "جنوری\tفبروری\tمارچ\tاپریل\tمی\tجون\tجولای\tاگست\tسپتمبر\tاکتوبر\tنومبر\tدسمبر",
@@ -254,7 +254,7 @@ final class DateFormatSymbolProvider {
                 "یکشنبه\tدوشنبه\tسه‌شنبه\tچهارشنبه\tپنجشنبه\tجمعه\tشنبه"
         );
         DateFormatSymbols.register(
-                "vai,vai-LR,vai-Vaii,vai-Vaii-LR",
+                "vai\tvai-LR\tvai-Vaii\tvai-Vaii-LR",
                 "AM\tPM",
                 "BCE\tCE",
                 "ꖨꕪꖃ ꔞꕮ\tꕒꕡꖝꖕ\tꕾꖺ\tꖢꖕ\tꖑꕱ\t6\t7\tꗛꔕ\tꕢꕌ\tꕭꖃ\tꔞꘋꕔꕿ ꕸꖃꗏ\tꖨꕪꕱ ꗏꕮ",
@@ -263,7 +263,7 @@ final class DateFormatSymbolProvider {
                 "ꕞꕌꔵ\tꗳꗡꘉ\tꕚꕞꕚ\tꕉꕞꕒ\tꕉꔤꕆꕢ\tꕉꔤꕀꕮ\tꔻꔬꔳ"
         );
         DateFormatSymbols.register(
-                "cy,cy-GB",
+                "cy\tcy-GB",
                 "AM\tPM",
                 "CC\tOC",
                 "Ionawr\tChwefror\tMawrth\tEbrill\tMai\tMehefin\tGorffennaf\tAwst\tMedi\tHydref\tTachwedd\tRhagfyr",
@@ -272,7 +272,7 @@ final class DateFormatSymbolProvider {
                 "Dydd Sul\tDydd Llun\tDydd Mawrth\tDydd Mercher\tDydd Iau\tDydd Gwener\tDydd Sadwrn"
         );
         DateFormatSymbols.register(
-                "bm,bm-ML",
+                "bm\tbm-ML",
                 "AM\tPM",
                 "J.-C. ɲɛ\tni J.-C.",
                 "zanwuye\tfeburuye\tmarisi\tawirili\tmɛ\tzuwɛn\tzuluye\tuti\tsɛtanburu\tɔkutɔburu\tnowanburu\tdesanburu",
@@ -281,7 +281,7 @@ final class DateFormatSymbolProvider {
                 "kari\tntɛnɛ\ttarata\taraba\talamisa\tjuma\tsibiri"
         );
         DateFormatSymbols.register(
-                "eu,eu-ES",
+                "eu\teu-ES",
                 "AM\tPM",
                 "K.a.\tK.o.",
                 "urtarrilak\totsailak\tmartxoak\tapirilak\tmaiatzak\tekainak\tuztailak\tabuztuak\tirailak\turriak\tazaroak\tabenduak",
@@ -290,7 +290,7 @@ final class DateFormatSymbolProvider {
                 "igandea\tastelehena\tasteartea\tasteazkena\tosteguna\tostirala\tlarunbata"
         );
         DateFormatSymbols.register(
-                "ha,ha-GH,ha-NE,ha-NG",
+                "ha\tha-GH\tha-NE\tha-NG",
                 "AM\tPM",
                 "KHAI\tBHAI",
                 "Janairu\tFaburairu\tMaris\tAfirilu\tMayu\tYuni\tYuli\tAgusta\tSatumba\tOktoba\tNuwamba\tDisamba",
@@ -299,7 +299,7 @@ final class DateFormatSymbolProvider {
                 "Lahadi\tLitinin\tTalata\tLaraba\tAlhamis\tJummaʼa\tAsabar"
         );
         DateFormatSymbols.register(
-                "to,to-TO",
+                "to\tto-TO",
                 "AM\tPM",
                 "KM\tTS",
                 "Sānuali\tFēpueli\tMaʻasi\tʻEpeleli\tMē\tSune\tSiulai\tʻAokosi\tSepitema\tʻOkatopa\tNōvema\tTīsema",
@@ -308,7 +308,7 @@ final class DateFormatSymbolProvider {
                 "Sāpate\tMōnite\tTūsite\tPulelulu\tTuʻapulelulu\tFalaite\tTokonaki"
         );
         DateFormatSymbols.register(
-                "mt,mt-MT",
+                "mt\tmt-MT",
                 "AM\tPM",
                 "QK\tWK",
                 "Jannar\tFrar\tMarzu\tApril\tMejju\tĠunju\tLulju\tAwwissu\tSettembru\tOttubru\tNovembru\tDiċembru",
@@ -317,7 +317,7 @@ final class DateFormatSymbolProvider {
                 "Il-Ħadd\tIt-Tnejn\tIt-Tlieta\tL-Erbgħa\tIl-Ħamis\tIl-Ġimgħa\tIs-Sibt"
         );
         DateFormatSymbols.register(
-                "id,id-ID",
+                "id\tid-ID",
                 "AM\tPM",
                 "SM\tM",
                 "Januari\tFebruari\tMaret\tApril\tMei\tJuni\tJuli\tAgustus\tSeptember\tOktober\tNovember\tDesember",
@@ -335,7 +335,7 @@ final class DateFormatSymbolProvider {
                 "domingo\tlunes\tmartes\tmiércoles\tjueves\tviernes\tsábado"
         );
         DateFormatSymbols.register(
-                "it,it-CH,it-IT,it-SM",
+                "it\tit-CH\tit-IT\tit-SM",
                 "AM\tPM",
                 "a.C.\td.C.",
                 "gennaio\tfebbraio\tmarzo\taprile\tmaggio\tgiugno\tluglio\tagosto\tsettembre\tottobre\tnovembre\tdicembre",
@@ -344,7 +344,7 @@ final class DateFormatSymbolProvider {
                 "domenica\tlunedì\tmartedì\tmercoledì\tgiovedì\tvenerdì\tsabato"
         );
         DateFormatSymbols.register(
-                "pt,pt-BR",
+                "pt\tpt-BR",
                 "AM\tPM",
                 "a.C.\td.C.",
                 "janeiro\tfevereiro\tmarço\tabril\tmaio\tjunho\tjulho\tagosto\tsetembro\toutubro\tnovembro\tdezembro",
@@ -353,7 +353,7 @@ final class DateFormatSymbolProvider {
                 "domingo\tsegunda-feira\tterça-feira\tquarta-feira\tquinta-feira\tsexta-feira\tsábado"
         );
         DateFormatSymbols.register(
-                "fr,fr-BE,fr-BF,fr-BI,fr-BJ,fr-BL,fr-CA,fr-CD,fr-CF,fr-CG,fr-CH,fr-CI,fr-CM,fr-DJ,fr-DZ,fr-FR,fr-GA,fr-GF,fr-GN,fr-GP,fr-GQ,fr-HT,fr-KM,fr-LU,fr-MC,fr-MF,fr-MG,fr-ML,fr-MQ,fr-MR,fr-MU,fr-NC,fr-NE,fr-PF,fr-PM,fr-RE,fr-RW,fr-SC,fr-SN,fr-SY,fr-TD,fr-TG,fr-TN,fr-VU,fr-WF,fr-YT",
+                "fr\tfr-BE\tfr-BF\tfr-BI\tfr-BJ\tfr-BL\tfr-CA\tfr-CD\tfr-CF\tfr-CG\tfr-CH\tfr-CI\tfr-CM\tfr-DJ\tfr-DZ\tfr-FR\tfr-GA\tfr-GF\tfr-GN\tfr-GP\tfr-GQ\tfr-HT\tfr-KM\tfr-LU\tfr-MC\tfr-MF\tfr-MG\tfr-ML\tfr-MQ\tfr-MR\tfr-MU\tfr-NC\tfr-NE\tfr-PF\tfr-PM\tfr-RE\tfr-RW\tfr-SC\tfr-SN\tfr-SY\tfr-TD\tfr-TG\tfr-TN\tfr-VU\tfr-WF\tfr-YT",
                 "AM\tPM",
                 "av. J.-C.\tap. J.-C.",
                 "janvier\tfévrier\tmars\tavril\tmai\tjuin\tjuillet\taoût\tseptembre\toctobre\tnovembre\tdécembre",
@@ -362,7 +362,7 @@ final class DateFormatSymbolProvider {
                 "dimanche\tlundi\tmardi\tmercredi\tjeudi\tvendredi\tsamedi"
         );
         DateFormatSymbols.register(
-                "mfe,mfe-MU",
+                "mfe\tmfe-MU",
                 "AM\tPM",
                 "av. Z-K\tap. Z-K",
                 "zanvie\tfevriye\tmars\tavril\tme\tzin\tzilye\tout\tseptam\toktob\tnovam\tdesam",
@@ -371,7 +371,7 @@ final class DateFormatSymbolProvider {
                 "dimans\tlindi\tmardi\tmerkredi\tzedi\tvandredi\tsamdi"
         );
         DateFormatSymbols.register(
-                "az,az-AZ,az-Latn,az-Latn-AZ",
+                "az\taz-AZ\taz-Latn\taz-Latn-AZ",
                 "AM\tPM",
                 "e.ə.\tb.e.",
                 "yanvar\tfevral\tmart\taprel\tmay\tiyun\tiyul\tavqust\tsentyabr\toktyabr\tnoyabr\tdekabr",
@@ -380,7 +380,7 @@ final class DateFormatSymbolProvider {
                 "bazar\tbazar ertəsi\tçərşənbə axşamı\tçərşənbə\tcümə axşamı\tcümə\tşənbə"
         );
         DateFormatSymbols.register(
-                "et,et-EE",
+                "et\tet-EE",
                 "AM\tPM",
                 "eKr\tpKr",
                 "jaanuar\tveebruar\tmärts\taprill\tmai\tjuuni\tjuuli\taugust\tseptember\toktoober\tnovember\tdetsember",
@@ -389,7 +389,7 @@ final class DateFormatSymbolProvider {
                 "pühapäev\tesmaspäev\tteisipäev\tkolmapäev\tneljapäev\treede\tlaupäev"
         );
         DateFormatSymbols.register(
-                "fo,fo-DK,fo-FO",
+                "fo\tfo-DK\tfo-FO",
                 "AM\tPM",
                 "f.Kr.\te.Kr.",
                 "januar\tfebruar\tmars\tapríl\tmai\tjuni\tjuli\taugust\tseptember\toktober\tnovember\tdesember",
@@ -398,7 +398,7 @@ final class DateFormatSymbolProvider {
                 "sunnudagur\tmánadagur\ttýsdagur\tmikudagur\thósdagur\tfríggjadagur\tleygardagur"
         );
         DateFormatSymbols.register(
-                "da,da-DK,da-GL",
+                "da\tda-DK\tda-GL",
                 "AM\tPM",
                 "f.Kr.\te.Kr.",
                 "januar\tfebruar\tmarts\tapril\tmaj\tjuni\tjuli\taugust\tseptember\toktober\tnovember\tdecember",
@@ -407,7 +407,7 @@ final class DateFormatSymbolProvider {
                 "søndag\tmandag\ttirsdag\tonsdag\ttorsdag\tfredag\tlørdag"
         );
         DateFormatSymbols.register(
-                "fy,fy-NL",
+                "fy\tfy-NL",
                 "AM\tPM",
                 "f.Kr.\tn.Kr.",
                 "jannewaris\tfebrewaris\tmaart\tapril\tmaaie\tjuny\tjuly\taugustus\tseptimber\toktober\tnovimber\tdesimber",
@@ -416,7 +416,7 @@ final class DateFormatSymbolProvider {
                 "snein\tmoandei\ttiisdei\twoansdei\ttongersdei\tfreed\tsneon"
         );
         DateFormatSymbols.register(
-                "pl,pl-PL",
+                "pl\tpl-PL",
                 "AM\tPM",
                 "p.n.e.\tn.e.",
                 "stycznia\tlutego\tmarca\tkwietnia\tmaja\tczerwca\tlipca\tsierpnia\twrześnia\tpaździernika\tlistopada\tgrudnia",
@@ -425,7 +425,7 @@ final class DateFormatSymbolProvider {
                 "niedziela\tponiedziałek\twtorek\tśroda\tczwartek\tpiątek\tsobota"
         );
         DateFormatSymbols.register(
-                "hr,hr-BA,hr-HR",
+                "hr\thr-BA\thr-HR",
                 "AM\tPM",
                 "pr. Kr.\tp. Kr.",
                 "siječnja\tveljače\tožujka\ttravnja\tsvibnja\tlipnja\tsrpnja\tkolovoza\trujna\tlistopada\tstudenoga\tprosinca",
@@ -434,7 +434,7 @@ final class DateFormatSymbolProvider {
                 "nedjelja\tponedjeljak\tutorak\tsrijeda\tčetvrtak\tpetak\tsubota"
         );
         DateFormatSymbols.register(
-                "sk,sk-SK",
+                "sk\tsk-SK",
                 "AM\tPM",
                 "pred Kr.\tpo Kr.",
                 "januára\tfebruára\tmarca\tapríla\tmája\tjúna\tjúla\taugusta\tseptembra\toktóbra\tnovembra\tdecembra",
@@ -443,7 +443,7 @@ final class DateFormatSymbolProvider {
                 "nedeľa\tpondelok\tutorok\tstreda\tštvrtok\tpiatok\tsobota"
         );
         DateFormatSymbols.register(
-                "wae,wae-CH",
+                "wae\twae-CH",
                 "AM\tPM",
                 "v. Chr.\tn. Chr",
                 "Jenner\tHornig\tMärze\tAbrille\tMeije\tBráčet\tHeiwet\tÖigšte\tHerbštmánet\tWímánet\tWintermánet\tChrištmánet",
@@ -452,7 +452,7 @@ final class DateFormatSymbolProvider {
                 "Sunntag\tMäntag\tZištag\tMittwuč\tFróntag\tFritag\tSamštag"
         );
         DateFormatSymbols.register(
-                "uz-Cyrl,uz-Cyrl-UZ",
+                "uz-Cyrl\tuz-Cyrl-UZ",
                 "AM\tPM",
                 "М.А.\tЭ",
                 "Январ\tФеврал\tМарт\tАпрел\tМай\tИюн\tИюл\tАвгуст\tСентябр\tОктябр\tНоябр\tДекабр",
@@ -461,7 +461,7 @@ final class DateFormatSymbolProvider {
                 "якшанба\tдушанба\tсешанба\tчоршанба\tпайшанба\tжума\tшанба"
         );
         DateFormatSymbols.register(
-                "sr-CS,sr-ME",
+                "sr-CS\tsr-ME",
                 "AM\tPM",
                 "п. н. е.\tн. е",
                 "јануар\tфебруар\tмарт\tаприл\tмај\tјун\tјул\tавгуст\tсептембар\tоктобар\tновембар\tдецембар",
@@ -479,7 +479,7 @@ final class DateFormatSymbolProvider {
                 "недеља\tпонедељак\tуторак\tсриједа\tчетвртак\tпетак\tсубота"
         );
         DateFormatSymbols.register(
-                "hy,hy-AM",
+                "hy\thy-AM",
                 "AM\tPM",
                 "մ.թ.ա.\tմ.թ.",
                 "հունվարի\tփետրվարի\tմարտի\tապրիլի\tմայիսի\tհունիսի\tհուլիսի\tօգոստոսի\tսեպտեմբերի\tհոկտեմբերի\tնոյեմբերի\tդեկտեմբերի",
@@ -488,7 +488,7 @@ final class DateFormatSymbolProvider {
                 "կիրակի\tերկուշաբթի\tերեքշաբթի\tչորեքշաբթի\tհինգշաբթի\tուրբաթ\tշաբաթ"
         );
         DateFormatSymbols.register(
-                "pa-Arab,pa-Arab-PK",
+                "pa-Arab\tpa-Arab-PK",
                 "AM\tPM",
                 "ايساپورو\tسں",
                 "جنوری\tفروری\tمارچ\tاپریل\tمئ\tجون\tجولائی\tاگست\tستمبر\tاکتوبر\tنومبر\tدسمبر",
@@ -497,7 +497,7 @@ final class DateFormatSymbolProvider {
                 "اتوار\tپیر\tمنگل\tبُدھ\tجمعرات\tجمعہ\tہفتہ"
         );
         DateFormatSymbols.register(
-                "ks,ks-IN",
+                "ks\tks-IN",
                 "AM\tPM",
                 "بی سی\tاے ڈی",
                 "جنؤری\tفرؤری\tمارٕچ\tاپریل\tمیٔ\tجوٗن\tجوٗلایی\tاگست\tستمبر\tاکتوٗبر\tنومبر\tدسمبر",
@@ -506,7 +506,7 @@ final class DateFormatSymbolProvider {
                 "اَتھوار\tژٔنٛدرٕروار\tبوٚموار\tبودوار\tبرٛٮ۪سوار\tجُمہ\tبٹوار"
         );
         DateFormatSymbols.register(
-                "mzn,mzn-IR",
+                "mzn\tmzn-IR",
                 "AM\tPM",
                 "پ.م\tم.",
                 "ژانویه\tفوریه\tمارس\tآوریل\tمه\tژوئن\tژوئیه\tاوت\tسپتامبر\tاکتبر\tنوامبر\tدسامبر",
@@ -515,7 +515,7 @@ final class DateFormatSymbolProvider {
                 "Sun\tMon\tTue\tWed\tThu\tFri\tSat"
         );
         DateFormatSymbols.register(
-                "gu,gu-IN",
+                "gu\tgu-IN",
                 "AM\tPM",
                 "ઈ.સ.પૂર્વે\tઈ.સ.",
                 "જાન્યુઆરી\tફેબ્રુઆરી\tમાર્ચ\tએપ્રિલ\tમે\tજૂન\tજુલાઈ\tઑગસ્ટ\tસપ્ટેમ્બર\tઑક્ટોબર\tનવેમ્બર\tડિસેમ્બર",
@@ -524,7 +524,7 @@ final class DateFormatSymbolProvider {
                 "રવિવાર\tસોમવાર\tમંગળવાર\tબુધવાર\tગુરુવાર\tશુક્રવાર\tશનિવાર"
         );
         DateFormatSymbols.register(
-                "ml,ml-IN",
+                "ml\tml-IN",
                 "AM\tPM",
                 "ക്രി.മു.\tഎഡി",
                 "ജനുവരി\tഫെബ്രുവരി\tമാർച്ച്\tഏപ്രിൽ\tമേയ്\tജൂൺ\tജൂലൈ\tഓഗസ്റ്റ്\tസെപ്റ്റംബർ\tഒക്‌ടോബർ\tനവംബർ\tഡിസംബർ",
@@ -533,7 +533,7 @@ final class DateFormatSymbolProvider {
                 "ഞായറാഴ്‌ച\tതിങ്കളാഴ്‌ച\tചൊവ്വാഴ്ച\tബുധനാഴ്‌ച\tവ്യാഴാഴ്‌ച\tവെള്ളിയാഴ്‌ച\tശനിയാഴ്‌ച"
         );
         DateFormatSymbols.register(
-                "ka,ka-GE",
+                "ka\tka-GE",
                 "AM\tPM",
                 "ძვ. წ.\tახ. წ.",
                 "იანვარი\tთებერვალი\tმარტი\tაპრილი\tმაისი\tივნისი\tივლისი\tაგვისტო\tსექტემბერი\tოქტომბერი\tნოემბერი\tდეკემბერი",
@@ -542,7 +542,7 @@ final class DateFormatSymbolProvider {
                 "კვირა\tორშაბათი\tსამშაბათი\tოთხშაბათი\tხუთშაბათი\tპარასკევი\tშაბათი"
         );
         DateFormatSymbols.register(
-                "ak,ak-GH",
+                "ak\tak-GH",
                 "AN\tEW",
                 "AK\tKE",
                 "Sanda-Ɔpɛpɔn\tKwakwar-Ɔgyefuo\tEbɔw-Ɔbenem\tEbɔbira-Oforisuo\tEsusow Aketseaba-Kɔtɔnimba\tObirade-Ayɛwohomumu\tAyɛwoho-Kitawonsa\tDifuu-Ɔsandaa\tFankwa-Ɛbɔ\tƆbɛsɛ-Ahinime\tƆberɛfɛw-Obubuo\tMumu-Ɔpɛnimba",
@@ -551,7 +551,7 @@ final class DateFormatSymbolProvider {
                 "Kwesida\tDwowda\tBenada\tWukuda\tYawda\tFida\tMemeneda"
         );
         DateFormatSymbols.register(
-                "khq,khq-ML",
+                "khq\tkhq-ML",
                 "Adduha\tAluula",
                 "IJ\tIZ",
                 "Žanwiye\tFeewiriye\tMarsi\tAwiril\tMe\tŽuweŋ\tŽuyye\tUt\tSektanbur\tOktoobur\tNoowanbur\tDeesanbur",
@@ -560,7 +560,7 @@ final class DateFormatSymbolProvider {
                 "Alhadi\tAtini\tAtalata\tAlarba\tAlhamiisa\tAljuma\tAssabdu"
         );
         DateFormatSymbols.register(
-                "ses,ses-ML",
+                "ses\tses-ML",
                 "Adduha\tAluula",
                 "IJ\tIZ",
                 "Žanwiye\tFeewiriye\tMarsi\tAwiril\tMe\tŽuweŋ\tŽuyye\tUt\tSektanbur\tOktoobur\tNoowanbur\tDeesanbur",
@@ -569,7 +569,7 @@ final class DateFormatSymbolProvider {
                 "Alhadi\tAtinni\tAtalaata\tAlarba\tAlhamiisa\tAlzuma\tAsibti"
         );
         DateFormatSymbols.register(
-                "lu,lu-CD",
+                "lu\tlu-CD",
                 "Dinda\tDilolo",
                 "kmp. Y.K.\tkny. Y. K.",
                 "Ciongo\tLùishi\tLusòlo\tMùuyà\tLumùngùlù\tLufuimi\tKabàlàshìpù\tLùshìkà\tLutongolo\tLungùdi\tKaswèkèsè\tCiswà",
@@ -578,7 +578,7 @@ final class DateFormatSymbolProvider {
                 "Lumingu\tNkodya\tNdàayà\tNdangù\tNjòwa\tNgòvya\tLubingu"
         );
         DateFormatSymbols.register(
-                "bas,bas-CM",
+                "bas\tbas-CM",
                 "I bikɛ̂glà\tI ɓugajɔp",
                 "b.Y.K\tm.Y.K",
                 "Kɔndɔŋ\tMàcɛ̂l\tMàtùmb\tMàtop\tM̀puyɛ\tHìlòndɛ̀\tNjèbà\tHìkaŋ\tDìpɔ̀s\tBìòôm\tMàyɛsèp\tLìbuy li ńyèe",
@@ -587,7 +587,7 @@ final class DateFormatSymbolProvider {
                 "ŋgwà nɔ̂y\tŋgwà njaŋgumba\tŋgwà ûm\tŋgwà ŋgê\tŋgwà mbɔk\tŋgwà kɔɔ\tŋgwà jôn"
         );
         DateFormatSymbols.register(
-                "ebu,ebu-KE",
+                "ebu\tebu-KE",
                 "KI\tUT",
                 "MK\tTK",
                 "Mweri wa mbere\tMweri wa kaĩri\tMweri wa kathatũ\tMweri wa kana\tMweri wa gatano\tMweri wa gatantatũ\tMweri wa mũgwanja\tMweri wa kanana\tMweri wa kenda\tMweri wa ikũmi\tMweri wa ikũmi na ũmwe\tMweri wa ikũmi na Kaĩrĩ",
@@ -596,7 +596,7 @@ final class DateFormatSymbolProvider {
                 "Kiumia\tNjumatatu\tNjumaine\tNjumatano\tAramithi\tNjumaa\tNJumamothii"
         );
         DateFormatSymbols.register(
-                "ki,ki-KE",
+                "ki\tki-KE",
                 "Kiroko\tHwaĩ-inĩ",
                 "MK\tTK",
                 "Njenuarĩ\tMwere wa kerĩ\tMwere wa gatatũ\tMwere wa kana\tMwere wa gatano\tMwere wa gatandatũ\tMwere wa mũgwanja\tMwere wa kanana\tMwere wa kenda\tMwere wa ikũmi\tMwere wa ikũmi na ũmwe\tNdithemba",
@@ -605,7 +605,7 @@ final class DateFormatSymbolProvider {
                 "Kiumia\tNjumatatũ\tNjumaine\tNjumatana\tAramithi\tNjumaa\tNjumamothi"
         );
         DateFormatSymbols.register(
-                "dav,dav-KE",
+                "dav\tdav-KE",
                 "Luma lwa K\tluma lwa p",
                 "KK\tBK",
                 "Mori ghwa imbiri\tMori ghwa kawi\tMori ghwa kadadu\tMori ghwa kana\tMori ghwa kasanu\tMori ghwa karandadu\tMori ghwa mfungade\tMori ghwa wunyanya\tMori ghwa ikenda\tMori ghwa ikumi\tMori ghwa ikumi na imweri\tMori ghwa ikumi na iwi",
@@ -614,7 +614,7 @@ final class DateFormatSymbolProvider {
                 "Ituku ja jumwa\tKuramuka jimweri\tKuramuka kawi\tKuramuka kadadu\tKuramuka kana\tKuramuka kasanu\tKifula nguwo"
         );
         DateFormatSymbols.register(
-                "sbp,sbp-TZ",
+                "sbp\tsbp-TZ",
                 "Lwamilawu\tPashamihe",
                 "AK\tPK",
                 "Mupalangulwa\tMwitope\tMushende\tMunyi\tMushende Magali\tMujimbi\tMushipepo\tMupuguto\tMunyense\tMokhu\tMusongandembwe\tMuhaano",
@@ -623,7 +623,7 @@ final class DateFormatSymbolProvider {
                 "Mulungu\tJumatatu\tJumanne\tJumatano\tAlahamisi\tIjumaa\tJumamosi"
         );
         DateFormatSymbols.register(
-                "guz,guz-KE",
+                "guz\tguz-KE",
                 "Mambia\tMog",
                 "YA\tYK",
                 "Chanuari\tFeburari\tMachi\tApiriri\tMei\tJuni\tChulai\tAgosti\tSeptemba\tOkitoba\tNobemba\tDisemba",
@@ -632,7 +632,7 @@ final class DateFormatSymbolProvider {
                 "Chumapiri\tChumatato\tChumaine\tChumatano\tAramisi\tIchuma\tEsabato"
         );
         DateFormatSymbols.register(
-                "kde,kde-TZ",
+                "kde\tkde-TZ",
                 "Muhi\tChilo",
                 "AY\tNY",
                 "Mwedi Ntandi\tMwedi wa Pili\tMwedi wa Tatu\tMwedi wa Nchechi\tMwedi wa Nnyano\tMwedi wa Nnyano na Umo\tMwedi wa Nnyano na Mivili\tMwedi wa Nnyano na Mitatu\tMwedi wa Nnyano na Nchechi\tMwedi wa Nnyano na Nnyano\tMwedi wa Nnyano na Nnyano na U\tMwedi wa Nnyano na Nnyano na M",
@@ -641,7 +641,7 @@ final class DateFormatSymbolProvider {
                 "Liduva lyapili\tLiduva lyatatu\tLiduva lyanchechi\tLiduva lyannyano\tLiduva lyannyano na linji\tLiduva lyannyano na mavili\tLiduva litandi"
         );
         DateFormatSymbols.register(
-                "xog,xog-UG",
+                "xog\txog-UG",
                 "Munkyo\tEigulo",
                 "AZ\tAF",
                 "Janwaliyo\tFebwaliyo\tMarisi\tApuli\tMaayi\tJuuni\tJulaayi\tAgusito\tSebuttemba\tOkitobba\tNovemba\tDesemba",
@@ -650,7 +650,7 @@ final class DateFormatSymbolProvider {
                 "Sabiiti\tBalaza\tOwokubili\tOwokusatu\tOlokuna\tOlokutaanu\tOlomukaaga"
         );
         DateFormatSymbols.register(
-                "sg,sg-CF",
+                "sg\tsg-CF",
                 "ND\tLK",
                 "KnK\tNpK",
                 "Nyenye\tFulundïgi\tMbängü\tNgubùe\tBêläwü\tFöndo\tLengua\tKükürü\tMvuka\tNgberere\tNabändüru\tKakauka",
@@ -659,7 +659,7 @@ final class DateFormatSymbolProvider {
                 "Bikua-ôko\tBïkua-ûse\tBïkua-ptâ\tBïkua-usïö\tBïkua-okü\tLâpôsö\tLâyenga"
         );
         DateFormatSymbols.register(
-                "luo,luo-KE",
+                "luo\tluo-KE",
                 "OD\tOT",
                 "BC\tAD",
                 "Dwe mar Achiel\tDwe mar Ariyo\tDwe mar Adek\tDwe mar Ang’wen\tDwe mar Abich\tDwe mar Auchiel\tDwe mar Abiriyo\tDwe mar Aboro\tDwe mar Ochiko\tDwe mar Apar\tDwe mar gi achiel\tDwe mar Apar gi ariyo",
@@ -668,7 +668,7 @@ final class DateFormatSymbolProvider {
                 "Jumapil\tWuok Tich\tTich Ariyo\tTich Adek\tTich Ang’wen\tTich Abich\tNgeso"
         );
         DateFormatSymbols.register(
-                "ms,ms-BN,ms-MY,ms-SG",
+                "ms\tms-BN\tms-MY\tms-SG",
                 "PG\tPTG",
                 "S.M.\tTM",
                 "Januari\tFebruari\tMac\tApril\tMei\tJun\tJulai\tOgos\tSeptember\tOktober\tNovember\tDisember",
@@ -677,7 +677,7 @@ final class DateFormatSymbolProvider {
                 "Ahad\tIsnin\tSelasa\tRabu\tKhamis\tJumaat\tSabtu"
         );
         DateFormatSymbols.register(
-                "nus,nus-SS",
+                "nus\tnus-SS",
                 "RW\tTŊ",
                 "AY\tƐY",
                 "Tiop thar pɛt\tPɛt\tDuɔ̱ɔ̱ŋ\tGuak\tDuät\tKornyoot\tPay yie̱tni\tTho̱o̱r\tTɛɛr\tLaath\tKur\tTio̱p in di̱i̱t",
@@ -686,7 +686,7 @@ final class DateFormatSymbolProvider {
                 "Cäŋ kuɔth\tJiec la̱t\tRɛw lätni\tDiɔ̱k lätni\tŊuaan lätni\tDhieec lätni\tBäkɛl lätni"
         );
         DateFormatSymbols.register(
-                "mer,mer-KE",
+                "mer\tmer-KE",
                 "RŨ\tŨG",
                 "MK\tNK",
                 "Januarĩ\tFeburuarĩ\tMachi\tĨpurũ\tMĩĩ\tNjuni\tNjuraĩ\tAgasti\tSeptemba\tOktũba\tNovemba\tDicemba",
@@ -695,7 +695,7 @@ final class DateFormatSymbolProvider {
                 "Kiumia\tMuramuko\tWairi\tWethatu\tWena\tWetano\tJumamosi"
         );
         DateFormatSymbols.register(
-                "vi,vi-VN",
+                "vi\tvi-VN",
                 "SA\tCH",
                 "tr. CN\tsau CN",
                 "tháng 1\ttháng 2\ttháng 3\ttháng 4\ttháng 5\ttháng 6\ttháng 7\ttháng 8\ttháng 9\ttháng 10\ttháng 11\ttháng 12",
@@ -704,7 +704,7 @@ final class DateFormatSymbolProvider {
                 "Chủ Nhật\tThứ Hai\tThứ Ba\tThứ Tư\tThứ Năm\tThứ Sáu\tThứ Bảy"
         );
         DateFormatSymbols.register(
-                "twq,twq-NE",
+                "twq\ttwq-NE",
                 "Subbaahi\tZaarikay b",
                 "IJ\tIZ",
                 "Žanwiye\tFeewiriye\tMarsi\tAwiril\tMe\tŽuweŋ\tŽuyye\tUt\tSektanbur\tOktoobur\tNoowanbur\tDeesanbur",
@@ -713,7 +713,7 @@ final class DateFormatSymbolProvider {
                 "Alhadi\tAtinni\tAtalaata\tAlarba\tAlhamiisa\tAlzuma\tAsibti"
         );
         DateFormatSymbols.register(
-                "dje,dje-NE",
+                "dje\tdje-NE",
                 "Subbaahi\tZaarikay b",
                 "IJ\tIZ",
                 "Žanwiye\tFeewiriye\tMarsi\tAwiril\tMe\tŽuweŋ\tŽuyye\tUt\tSektanbur\tOktoobur\tNoowanbur\tDeesanbur",
@@ -722,7 +722,7 @@ final class DateFormatSymbolProvider {
                 "Alhadi\tAtinni\tAtalaata\tAlarba\tAlhamisi\tAlzuma\tAsibti"
         );
         DateFormatSymbols.register(
-                "uz,uz-AF,uz-Latn,uz-Latn-UZ,uz-UZ",
+                "uz\tuz-AF\tuz-Latn\tuz-Latn-UZ\tuz-UZ",
                 "TO\tTK",
                 "m.a.\tmilodiy",
                 "yanvar\tfevral\tmart\taprel\tmay\tiyun\tiyul\tavgust\tSentabr\tOktabr\tnoyabr\tdekabr",
@@ -731,7 +731,7 @@ final class DateFormatSymbolProvider {
                 "yakshanba\tdushanba\tseshanba\tchorshanba\tpayshanba\tjuma\tshanba"
         );
         DateFormatSymbols.register(
-                "lag,lag-TZ",
+                "lag\tlag-TZ",
                 "TOO\tMUU",
                 "KSA\tKA",
                 "Kʉfúngatɨ\tKʉnaanɨ\tKʉkeenda\tKwiikumi\tKwiinyambála\tKwiidwaata\tKʉmʉʉnchɨ\tKʉvɨɨrɨ\tKʉsaatʉ\tKwiinyi\tKʉsaano\tKʉsasatʉ",
@@ -740,7 +740,7 @@ final class DateFormatSymbolProvider {
                 "Jumapíiri\tJumatátu\tJumaíne\tJumatáano\tAlamíisi\tIjumáa\tJumamóosi"
         );
         DateFormatSymbols.register(
-                "teo,teo-KE,teo-UG",
+                "teo\tteo-KE\tteo-UG",
                 "Taparachu\tEbongi",
                 "KK\tBK",
                 "Orara\tOmuk\tOkwamg’\tOdung’el\tOmaruk\tOmodok’king’ol\tOjola\tOpedel\tOsokosokoma\tOtibar\tOlabor\tOpoo",
@@ -749,7 +749,7 @@ final class DateFormatSymbolProvider {
                 "Nakaejuma\tNakaebarasa\tNakaare\tNakauni\tNakaung’on\tNakakany\tNakasabiti"
         );
         DateFormatSymbols.register(
-                "saq,saq-KE",
+                "saq\tsaq-KE",
                 "Tesiran\tTeipa",
                 "KK\tBK",
                 "Lapa le obo\tLapa le waare\tLapa le okuni\tLapa le ong’wan\tLapa le imet\tLapa le ile\tLapa le sapa\tLapa le isiet\tLapa le saal\tLapa le tomon\tLapa le tomon obo\tLapa le tomon waare",
@@ -758,7 +758,7 @@ final class DateFormatSymbolProvider {
                 "Mderot ee are\tMderot ee kuni\tMderot ee ong’wan\tMderot ee inet\tMderot ee ile\tMderot ee sapa\tMderot ee kwe"
         );
         DateFormatSymbols.register(
-                "ksh,ksh-DE",
+                "ksh\tksh-DE",
                 "Uhr vörmiddaachs\tUhr nommendaachs",
                 "v. Chr.\tn. Chr.",
                 "Jannewa\tFäbrowa\tMääz\tAprell\tMäi\tJuuni\tJuuli\tOujoß\tSeptämber\tOktoober\tNovämber\tDezämber",
@@ -767,7 +767,7 @@ final class DateFormatSymbolProvider {
                 "Sunndaach\tMoondaach\tDinnsdaach\tMetwoch\tDunnersdaach\tFriidaach\tSamsdaach"
         );
         DateFormatSymbols.register(
-                "om,om-ET,om-KE",
+                "om\tom-ET\tom-KE",
                 "WD\tWB",
                 "KD\tKB",
                 "Amajjii\tGuraandhala\tBitooteessa\tElba\tCaamsa\tWaxabajjii\tAdooleessa\tHagayya\tFuulbana\tOnkololeessa\tSadaasa\tMuddee",
@@ -776,7 +776,7 @@ final class DateFormatSymbolProvider {
                 "Dilbata\tWiixata\tQibxata\tRoobii\tKamiisa\tJimaata\tSanbata"
         );
         DateFormatSymbols.register(
-                "rn,rn-BI",
+                "rn\trn-BI",
                 "Z.MU.\tZ.MW.",
                 "Mb.Y.\tNy.Y",
                 "Nzero\tRuhuhuma\tNtwarante\tNdamukiza\tRusama\tRuheshi\tMukakaro\tNyandagaro\tNyakanga\tGitugutu\tMunyonyo\tKigarama",
@@ -785,7 +785,7 @@ final class DateFormatSymbolProvider {
                 "Ku w’indwi\tKu wa mbere\tKu wa kabiri\tKu wa gatatu\tKu wa kane\tKu wa gatanu\tKu wa gatandatu"
         );
         DateFormatSymbols.register(
-                "tzm,tzm-MA",
+                "tzm\ttzm-MA",
                 "Zdat azal\tḌeffir aza",
                 "ZƐ\tḌƐ",
                 "Yennayer\tYebrayer\tMars\tIbrir\tMayyu\tYunyu\tYulyuz\tƔuct\tCutanbir\tKṭuber\tNwanbir\tDujanbir",
@@ -794,7 +794,7 @@ final class DateFormatSymbolProvider {
                 "Asamas\tAynas\tAsinas\tAkras\tAkwas\tAsimwas\tAsiḍyas"
         );
         DateFormatSymbols.register(
-                "te,te-IN",
+                "te\tte-IN",
                 "[AM]\t[PM]",
                 "క్రీపూ\tక్రీశ",
                 "జనవరి\tఫిబ్రవరి\tమార్చి\tఏప్రిల్\tమే\tజూన్\tజులై\tఆగస్టు\tసెప్టెంబర్\tఅక్టోబర్\tనవంబర్\tడిసెంబర్",
@@ -803,7 +803,7 @@ final class DateFormatSymbolProvider {
                 "ఆదివారం\tసోమవారం\tమంగళవారం\tబుధవారం\tగురువారం\tశుక్రవారం\tశనివారం"
         );
         DateFormatSymbols.register(
-                "es,es-EA,es-ES,es-GQ,es-IC,es-PH,es-VE",
+                "es\tes-EA\tes-ES\tes-GQ\tes-IC\tes-PH\tes-VE",
                 "a. m.\tp. m.",
                 "a. C.\td. C.",
                 "enero\tfebrero\tmarzo\tabril\tmayo\tjunio\tjulio\tagosto\tseptiembre\toctubre\tnoviembre\tdiciembre",
@@ -812,7 +812,7 @@ final class DateFormatSymbolProvider {
                 "domingo\tlunes\tmartes\tmiércoles\tjueves\tviernes\tsábado"
         );
         DateFormatSymbols.register(
-                "ca,ca-AD,ca-ES,ca-ES-VALENCIA,ca-FR,ca-IT",
+                "ca\tca-AD\tca-ES\tca-ES-VALENCIA\tca-FR\tca-IT",
                 "a. m.\tp. m.",
                 "aC\tdC",
                 "de gener\tde febrer\tde març\td’abril\tde maig\tde juny\tde juliol\td’agost\tde setembre\td’octubre\tde novembre\tde desembre",
@@ -821,7 +821,7 @@ final class DateFormatSymbolProvider {
                 "diumenge\tdilluns\tdimarts\tdimecres\tdijous\tdivendres\tdissabte"
         );
         DateFormatSymbols.register(
-                "fur,fur-IT",
+                "fur\tfur-IT",
                 "a.\tp.",
                 "pdC\tddC",
                 "Zenâr\tFevrâr\tMarç\tAvrîl\tMai\tJugn\tLui\tAvost\tSetembar\tOtubar\tNovembar\tDicembar",
@@ -830,7 +830,7 @@ final class DateFormatSymbolProvider {
                 "domenie\tlunis\tmartars\tmiercus\tjoibe\tvinars\tsabide"
         );
         DateFormatSymbols.register(
-                "agq,agq-CM",
+                "agq\tagq-CM",
                 "a.g\ta.k",
                 "SK\tBK",
                 "ndzɔ̀ŋɔ̀nùm\tndzɔ̀ŋɔ̀kƗ̀zùʔ\tndzɔ̀ŋɔ̀tƗ̀dʉ̀ghà\tndzɔ̀ŋɔ̀tǎafʉ̄ghā\tndzɔ̀ŋèsèe\tndzɔ̀ŋɔ̀nzùghò\tndzɔ̀ŋɔ̀dùmlo\tndzɔ̀ŋɔ̀kwîfɔ̀e\tndzɔ̀ŋɔ̀tƗ̀fʉ̀ghàdzughù\tndzɔ̀ŋɔ̀ghǔuwelɔ̀m\tndzɔ̀ŋɔ̀chwaʔàkaa wo\tndzɔ̀ŋèfwòo",
@@ -839,7 +839,7 @@ final class DateFormatSymbolProvider {
                 "tsuʔntsɨ\ttsuʔukpà\ttsuʔughɔe\ttsuʔutɔ̀mlò\ttsuʔumè\ttsuʔughɨ̂m\ttsuʔndzɨkɔʔɔ"
         );
         DateFormatSymbols.register(
-                "luy,luy-KE",
+                "luy\tluy-KE",
                 "a.m.\tp.m.",
                 "BC\tAD",
                 "Januari\tFebruari\tMachi\tAprili\tMei\tJuni\tJulai\tAgosti\tSeptemba\tOktoba\tNovemba\tDesemba",
@@ -857,7 +857,7 @@ final class DateFormatSymbolProvider {
                 "Sunday\tMonday\tTuesday\tWednesday\tThursday\tFriday\tSaturday"
         );
         DateFormatSymbols.register(
-                "qu,qu-BO,qu-EC,qu-PE",
+                "qu\tqu-BO\tqu-EC\tqu-PE",
                 "a.m.\tp.m.",
                 "BCE\td.C.",
                 "Qulla puquy\tHatun puquy\tPauqar waray\tAyriwa\tAymuray\tInti raymi\tAnta Sitwa\tQhapaq Sitwa\tUma raymi\tKantaray\tAyamarqʼa\tKapaq Raymi",
@@ -866,7 +866,7 @@ final class DateFormatSymbolProvider {
                 "Domingo\tLunes\tMartes\tMiércoles\tJueves\tViernes\tSábado"
         );
         DateFormatSymbols.register(
-                "ga,ga-IE",
+                "ga\tga-IE",
                 "a.m.\tp.m.",
                 "RC\tAD",
                 "Eanáir\tFeabhra\tMárta\tAibreán\tBealtaine\tMeitheamh\tIúil\tLúnasa\tMeán Fómhair\tDeireadh Fómhair\tSamhain\tNollaig",
@@ -875,7 +875,7 @@ final class DateFormatSymbolProvider {
                 "Dé Domhnaigh\tDé Luain\tDé Máirt\tDé Céadaoin\tDéardaoin\tDé hAoine\tDé Sathairn"
         );
         DateFormatSymbols.register(
-                "gv,gv-IM",
+                "gv\tgv-IM",
                 "a.m.\tp.m.",
                 "RC\tAD",
                 "Jerrey-geuree\tToshiaght-arree\tMayrnt\tAveril\tBoaldyn\tMean-souree\tJerrey-souree\tLuanistyn\tMean-fouyir\tJerrey-fouyir\tMee Houney\tMee ny Nollick",
@@ -884,7 +884,7 @@ final class DateFormatSymbolProvider {
                 "Jedoonee\tJelhein\tJemayrt\tJercean\tJerdein\tJeheiney\tJesarn"
         );
         DateFormatSymbols.register(
-                "kw,kw-GB",
+                "kw\tkw-GB",
                 "a.m.\tp.m.",
                 "RC\tAD",
                 "mis Genver\tmis Hwevrer\tmis Meurth\tmis Ebrel\tmis Me\tmis Metheven\tmis Gortheren\tmis Est\tmis Gwynngala\tmis Hedra\tmis Du\tmis Kevardhu",
@@ -902,7 +902,7 @@ final class DateFormatSymbolProvider {
                 "domingo\tlunes\tmartes\tmiércoles\tjueves\tviernes\tsábado"
         );
         DateFormatSymbols.register(
-                "es-419,es-AR,es-BO,es-BR,es-CR,es-CU,es-DO,es-EC,es-GT,es-HN,es-NI,es-PA,es-PR,es-SV",
+                "es-419\tes-AR\tes-BO\tes-BR\tes-CR\tes-CU\tes-DO\tes-EC\tes-GT\tes-HN\tes-NI\tes-PA\tes-PR\tes-SV",
                 "a.m.\tp.m.",
                 "a. C.\td. C.",
                 "enero\tfebrero\tmarzo\tabril\tmayo\tjunio\tjulio\tagosto\tseptiembre\toctubre\tnoviembre\tdiciembre",
@@ -911,7 +911,7 @@ final class DateFormatSymbolProvider {
                 "domingo\tlunes\tmartes\tmiércoles\tjueves\tviernes\tsábado"
         );
         DateFormatSymbols.register(
-                "es-CL,es-CO,es-PY",
+                "es-CL\tes-CO\tes-PY",
                 "a.m.\tp.m.",
                 "a. C.\td. C.",
                 "enero\tfebrero\tmarzo\tabril\tmayo\tjunio\tjulio\tagosto\tseptiembre\toctubre\tnoviembre\tdiciembre",
@@ -920,7 +920,7 @@ final class DateFormatSymbolProvider {
                 "domingo\tlunes\tmartes\tmiércoles\tjueves\tviernes\tsábado"
         );
         DateFormatSymbols.register(
-                "es-PE,es-UY",
+                "es-PE\tes-UY",
                 "a.m.\tp.m.",
                 "a. C.\td. C.",
                 "enero\tfebrero\tmarzo\tabril\tmayo\tjunio\tjulio\tagosto\tsetiembre\toctubre\tnoviembre\tdiciembre",
@@ -929,7 +929,7 @@ final class DateFormatSymbolProvider {
                 "domingo\tlunes\tmartes\tmiércoles\tjueves\tviernes\tsábado"
         );
         DateFormatSymbols.register(
-                "gl,gl-ES",
+                "gl\tgl-ES",
                 "a.m.\tp.m.",
                 "a.C.\td.C.",
                 "xaneiro\tfebreiro\tmarzo\tabril\tmaio\txuño\txullo\tagosto\tsetembro\toutubro\tnovembro\tdecembro",
@@ -947,7 +947,7 @@ final class DateFormatSymbolProvider {
                 "dimanche\tlundi\tmardi\tmercredi\tjeudi\tvendredi\tsamedi"
         );
         DateFormatSymbols.register(
-                "nb,nb-NO,nb-SJ,no,no-NO",
+                "nb\tnb-NO\tnb-SJ\tno\tno-NO",
                 "a.m.\tp.m.",
                 "f.Kr.\te.Kr.",
                 "januar\tfebruar\tmars\tapril\tmai\tjuni\tjuli\taugust\tseptember\toktober\tnovember\tdesember",
@@ -956,7 +956,7 @@ final class DateFormatSymbolProvider {
                 "søndag\tmandag\ttirsdag\tonsdag\ttorsdag\tfredag\tlørdag"
         );
         DateFormatSymbols.register(
-                "nl,nl-AW,nl-BE,nl-BQ,nl-CW,nl-NL,nl-SR,nl-SX",
+                "nl\tnl-AW\tnl-BE\tnl-BQ\tnl-CW\tnl-NL\tnl-SR\tnl-SX",
                 "a.m.\tp.m.",
                 "v.Chr.\tn.Chr.",
                 "januari\tfebruari\tmaart\tapril\tmei\tjuni\tjuli\taugustus\tseptember\toktober\tnovember\tdecember",
@@ -974,7 +974,7 @@ final class DateFormatSymbolProvider {
                 "duminică\tluni\tmarți\tmiercuri\tjoi\tvineri\tsâmbătă"
         );
         DateFormatSymbols.register(
-                "ro,ro-RO",
+                "ro\tro-RO",
                 "a.m.\tp.m.",
                 "î.Hr.\td.Hr.",
                 "ianuarie\tfebruarie\tmartie\taprilie\tmai\tiunie\tiulie\taugust\tseptembrie\toctombrie\tnoiembrie\tdecembrie",
@@ -983,7 +983,7 @@ final class DateFormatSymbolProvider {
                 "duminică\tluni\tmarți\tmiercuri\tjoi\tvineri\tsâmbătă"
         );
         DateFormatSymbols.register(
-                "kea,kea-CV",
+                "kea\tkea-CV",
                 "am\tpm",
                 "AK\tDK",
                 "Janeru\tFebreru\tMarsu\tAbril\tMaiu\tJunhu\tJulhu\tAgostu\tSetenbru\tOtubru\tNuvenbru\tDizenbru",
@@ -1010,7 +1010,7 @@ final class DateFormatSymbolProvider {
                 "Sunday\tMonday\tTuesday\tWednesday\tThursday\tFriday\tSaturday"
         );
         DateFormatSymbols.register(
-                "or,or-IN",
+                "or\tor-IN",
                 "am\tpm",
                 "BCE\tCE",
                 "ଜାନୁଆରୀ\tଫେବୃଆରୀ\tମାର୍ଚ୍ଚ\tଅପ୍ରେଲ\tମଇ\tଜୁନ\tଜୁଲାଇ\tଅଗଷ୍ଟ\tସେପ୍ଟେମ୍ବର\tଅକ୍ଟୋବର\tନଭେମ୍ବର\tଡିସେମ୍ବର",
@@ -1019,7 +1019,7 @@ final class DateFormatSymbolProvider {
                 "ରବିବାର\tସୋମବାର\tମଙ୍ଗଳବାର\tବୁଧବାର\tଗୁରୁବାର\tଶୁକ୍ରବାର\tଶନିବାର"
         );
         DateFormatSymbols.register(
-                "rm,rm-CH",
+                "rm\trm-CH",
                 "am\tsm",
                 "av. Cr.\ts. Cr.",
                 "schaner\tfavrer\tmars\tavrigl\tmatg\tzercladur\tfanadur\tavust\tsettember\toctober\tnovember\tdecember",
@@ -1028,7 +1028,7 @@ final class DateFormatSymbolProvider {
                 "dumengia\tglindesdi\tmardi\tmesemna\tgievgia\tvenderdi\tsonda"
         );
         DateFormatSymbols.register(
-                "fi,fi-FI",
+                "fi\tfi-FI",
                 "ap.\tip.",
                 "eKr.\tjKr.",
                 "tammikuuta\thelmikuuta\tmaaliskuuta\thuhtikuuta\ttoukokuuta\tkesäkuuta\theinäkuuta\telokuuta\tsyyskuuta\tlokakuuta\tmarraskuuta\tjoulukuuta",
@@ -1037,7 +1037,7 @@ final class DateFormatSymbolProvider {
                 "sunnuntaina\tmaanantaina\ttiistaina\tkeskiviikkona\ttorstaina\tperjantaina\tlauantaina"
         );
         DateFormatSymbols.register(
-                "eo,eo-001",
+                "eo\teo-001",
                 "atm\tptm",
                 "aK\tpK",
                 "januaro\tfebruaro\tmarto\taprilo\tmajo\tjunio\tjulio\taŭgusto\tseptembro\toktobro\tnovembro\tdecembro",
@@ -1046,7 +1046,7 @@ final class DateFormatSymbolProvider {
                 "dimanĉo\tlundo\tmardo\tmerkredo\tĵaŭdo\tvendredo\tsabato"
         );
         DateFormatSymbols.register(
-                "mua,mua-CM",
+                "mua\tmua-CM",
                 "comme\tlilli",
                 "KK\tPK",
                 "Fĩi Loo\tCokcwaklaŋne\tCokcwaklii\tFĩi Marfoo\tMadǝǝuutǝbijaŋ\tMamǝŋgwãafahbii\tMamǝŋgwãalii\tMadǝmbii\tFĩi Dǝɓlii\tFĩi Mundaŋ\tFĩi Gwahlle\tFĩi Yuru",
@@ -1055,7 +1055,7 @@ final class DateFormatSymbolProvider {
                 "Com’yakke\tComlaaɗii\tComzyiiɗii\tComkolle\tComkaldǝɓlii\tComgaisuu\tComzyeɓsuu"
         );
         DateFormatSymbols.register(
-                "pt-AO,pt-CH,pt-CV,pt-GQ,pt-GW,pt-LU,pt-MO,pt-MZ,pt-PT,pt-ST,pt-TL",
+                "pt-AO\tpt-CH\tpt-CV\tpt-GQ\tpt-GW\tpt-LU\tpt-MO\tpt-MZ\tpt-PT\tpt-ST\tpt-TL",
                 "da manhã\tda tarde",
                 "a.C.\td.C.",
                 "janeiro\tfevereiro\tmarço\tabril\tmaio\tjunho\tjulho\tagosto\tsetembro\toutubro\tnovembro\tdezembro",
@@ -1064,7 +1064,7 @@ final class DateFormatSymbolProvider {
                 "domingo\tsegunda-feira\tterça-feira\tquarta-feira\tquinta-feira\tsexta-feira\tsábado"
         );
         DateFormatSymbols.register(
-                "ast,ast-ES",
+                "ast\tast-ES",
                 "de la mañana\tde la tardi",
                 "a.C.\td.C.",
                 "de xineru\tde febreru\tde marzu\td’abril\tde mayu\tde xunu\tde xunetu\td’agostu\tde setiembre\td’ochobre\tde payares\td’avientu",
@@ -1073,7 +1073,7 @@ final class DateFormatSymbolProvider {
                 "domingu\tllunes\tmartes\tmiércoles\txueves\tvienres\tsábadu"
         );
         DateFormatSymbols.register(
-                "hu,hu-HU",
+                "hu\thu-HU",
                 "de.\tdu.",
                 "i. e.\ti. sz.",
                 "január\tfebruár\tmárcius\táprilis\tmájus\tjúnius\tjúlius\taugusztus\tszeptember\toktóber\tnovember\tdecember",
@@ -1082,7 +1082,7 @@ final class DateFormatSymbolProvider {
                 "vasárnap\thétfő\tkedd\tszerda\tcsütörtök\tpéntek\tszombat"
         );
         DateFormatSymbols.register(
-                "cs,cs-CZ",
+                "cs\tcs-CZ",
                 "dop.\todp.",
                 "př. n. l.\tn. l.",
                 "ledna\túnora\tbřezna\tdubna\tkvětna\tčervna\tčervence\tsrpna\tzáří\tříjna\tlistopadu\tprosince",
@@ -1091,7 +1091,7 @@ final class DateFormatSymbolProvider {
                 "neděle\tpondělí\túterý\tstředa\tčtvrtek\tpátek\tsobota"
         );
         DateFormatSymbols.register(
-                "sl,sl-SI",
+                "sl\tsl-SI",
                 "dop.\tpop.",
                 "pr. Kr.\tpo n. št.",
                 "januar\tfebruar\tmarec\tapril\tmaj\tjunij\tjulij\tavgust\tseptember\toktober\tnovember\tdecember",
@@ -1100,7 +1100,7 @@ final class DateFormatSymbolProvider {
                 "nedelja\tponedeljek\ttorek\tsreda\tčetrtek\tpetek\tsobota"
         );
         DateFormatSymbols.register(
-                "hsb,hsb-DE",
+                "hsb\thsb-DE",
                 "dopołdnja\tpopołdnju",
                 "př.Chr.n.\tpo Chr.n.",
                 "januara\tfebruara\tměrca\tapryla\tmeje\tjunija\tjulija\tawgusta\tseptembra\toktobra\tnowembra\tdecembra",
@@ -1109,7 +1109,7 @@ final class DateFormatSymbolProvider {
                 "njedźela\tpóndźela\twutora\tsrjeda\tštwórtk\tpjatk\tsobota"
         );
         DateFormatSymbols.register(
-                "dsb,dsb-DE",
+                "dsb\tdsb-DE",
                 "dopołdnja\twótpołdnja",
                 "pś.Chr.n.\tpó Chr.n.",
                 "januara\tfebruara\tměrca\tapryla\tmaja\tjunija\tjulija\tawgusta\tseptembra\toktobra\tnowembra\tdecembra",
@@ -1118,7 +1118,7 @@ final class DateFormatSymbolProvider {
                 "njeźela\tpónjeźele\twałtora\tsrjoda\tstwórtk\tpětk\tsobota"
         );
         DateFormatSymbols.register(
-                "sq,sq-AL,sq-MK,sq-XK",
+                "sq\tsq-AL\tsq-MK\tsq-XK",
                 "e paradites\te pasdites",
                 "p.e.r.\te.r.",
                 "janar\tshkurt\tmars\tprill\tmaj\tqershor\tkorrik\tgusht\tshtator\ttetor\tnëntor\tdhjetor",
@@ -1127,7 +1127,7 @@ final class DateFormatSymbolProvider {
                 "e diel\te hënë\te martë\te mërkurë\te enjte\te premte\te shtunë"
         );
         DateFormatSymbols.register(
-                "is,is-IS",
+                "is\tis-IS",
                 "f.h.\te.h.",
                 "f.Kr.\te.Kr.",
                 "janúar\tfebrúar\tmars\tapríl\tmaí\tjúní\tjúlí\tágúst\tseptember\toktóber\tnóvember\tdesember",
@@ -1136,7 +1136,7 @@ final class DateFormatSymbolProvider {
                 "sunnudagur\tmánudagur\tþriðjudagur\tmiðvikudagur\tfimmtudagur\tföstudagur\tlaugardagur"
         );
         DateFormatSymbols.register(
-                "sv,sv-AX,sv-FI,sv-SE",
+                "sv\tsv-AX\tsv-FI\tsv-SE",
                 "fm\tem",
                 "f.Kr.\te.Kr.",
                 "januari\tfebruari\tmars\tapril\tmaj\tjuni\tjuli\taugusti\tseptember\toktober\tnovember\tdecember",
@@ -1145,7 +1145,7 @@ final class DateFormatSymbolProvider {
                 "söndag\tmåndag\ttisdag\tonsdag\ttorsdag\tfredag\tlördag"
         );
         DateFormatSymbols.register(
-                "nn,nn-NO",
+                "nn\tnn-NO",
                 "formiddag\tettermiddag",
                 "f.Kr.\te.Kr.",
                 "januar\tfebruar\tmars\tapril\tmai\tjuni\tjuli\taugust\tseptember\toktober\tnovember\tdesember",
@@ -1154,7 +1154,7 @@ final class DateFormatSymbolProvider {
                 "søndag\tmåndag\ttysdag\tonsdag\ttorsdag\tfredag\tlaurdag"
         );
         DateFormatSymbols.register(
-                "asa,asa-TZ",
+                "asa\tasa-TZ",
                 "icheheavo\tichamthi",
                 "KM\tBM",
                 "Januari\tFebruari\tMachi\tAprili\tMei\tJuni\tJulai\tAgosti\tSeptemba\tOktoba\tNovemba\tDesemba",
@@ -1163,7 +1163,7 @@ final class DateFormatSymbolProvider {
                 "Jumapili\tJumatatu\tJumanne\tJumatano\tAlhamisi\tIjumaa\tJumamosi"
         );
         DateFormatSymbols.register(
-                "dua,dua-CM",
+                "dua\tdua-CM",
                 "idiɓa\tebyámu",
                 "ɓ.Ys\tmb.Ys",
                 "dimɔ́di\tŋgɔndɛ\tsɔŋɛ\tdiɓáɓá\temiasele\tesɔpɛsɔpɛ\tmadiɓɛ́díɓɛ́\tdiŋgindi\tnyɛtɛki\tmayésɛ́\ttiníní\teláŋgɛ́",
@@ -1172,7 +1172,7 @@ final class DateFormatSymbolProvider {
                 "éti\tmɔ́sú\tkwasú\tmukɔ́sú\tŋgisú\tɗónɛsú\tesaɓasú"
         );
         DateFormatSymbols.register(
-                "se,se-FI,se-NO,se-SE",
+                "se\tse-FI\tse-NO\tse-SE",
                 "iđitbeaivet\teahketbeaivet",
                 "o.Kr.\tm.Kr.",
                 "ođđajagemánnu\tguovvamánnu\tnjukčamánnu\tcuoŋománnu\tmiessemánnu\tgeassemánnu\tsuoidnemánnu\tborgemánnu\tčakčamánnu\tgolggotmánnu\tskábmamánnu\tjuovlamánnu",
@@ -1181,7 +1181,7 @@ final class DateFormatSymbolProvider {
                 "sotnabeaivi\tvuossárga\tmaŋŋebárga\tgaskavahkku\tduorasdat\tbearjadat\tlávvardat"
         );
         DateFormatSymbols.register(
-                "rof,rof-TZ",
+                "rof\trof-TZ",
                 "kang’ama\tkingoto",
                 "KM\tBM",
                 "Mweri wa kwanza\tMweri wa kaili\tMweri wa katatu\tMweri wa kaana\tMweri wa tanu\tMweri wa sita\tMweri wa saba\tMweri wa nane\tMweri wa tisa\tMweri wa ikumi\tMweri wa ikumi na moja\tMweri wa ikumi na mbili",
@@ -1190,7 +1190,7 @@ final class DateFormatSymbolProvider {
                 "Ijumapili\tIjumatatu\tIjumanne\tIjumatano\tAlhamisi\tIjumaa\tIjumamosi"
         );
         DateFormatSymbols.register(
-                "kln,kln-KE",
+                "kln\tkln-KE",
                 "karoon\tkooskoliny",
                 "AM\tKO",
                 "Mulgul\tNg’atyaato\tKiptaamo\tIwootkuut\tMamuut\tPaagi\tNg’eiyeet\tRooptui\tBureet\tEpeeso\tKipsuunde ne taai\tKipsuunde nebo aeng’",
@@ -1199,7 +1199,7 @@ final class DateFormatSymbolProvider {
                 "Kotisap\tKotaai\tKoaeng’\tKosomok\tKoang’wan\tKomuut\tKolo"
         );
         DateFormatSymbols.register(
-                "yav,yav-CM",
+                "yav\tyav-CM",
                 "kiɛmɛ́ɛm\tkisɛ́ndɛ",
                 "k.Y.\t+J.C.",
                 "pikítíkítie, oólí ú kutúan\tsiɛyɛ́, oóli ú kándíɛ\tɔnsúmbɔl, oóli ú kátátúɛ\tmesiŋ, oóli ú kénie\tensil, oóli ú kátánuɛ\tɔsɔn\tefute\tpisuyú\timɛŋ i puɔs\timɛŋ i putúk,oóli ú kátíɛ\tmakandikɛ\tpilɔndɔ́",
@@ -1208,7 +1208,7 @@ final class DateFormatSymbolProvider {
                 "sɔ́ndiɛ\tmóndie\tmuányáŋmóndie\tmetúkpíápɛ\tkúpélimetúkpiapɛ\tfeléte\tséselé"
         );
         DateFormatSymbols.register(
-                "ewo,ewo-CM",
+                "ewo\tewo-CM",
                 "kíkíríg\tngəgógəle",
                 "oyk\tayk",
                 "ngɔn osú\tngɔn bɛ̌\tngɔn lála\tngɔn nyina\tngɔn tána\tngɔn saməna\tngɔn zamgbála\tngɔn mwom\tngɔn ebulú\tngɔn awóm\tngɔn awóm ai dziá\tngɔn awóm ai bɛ̌",
@@ -1217,7 +1217,7 @@ final class DateFormatSymbolProvider {
                 "sɔ́ndɔ\tmɔ́ndi\tsɔ́ndɔ məlú mə́bɛ̌\tsɔ́ndɔ məlú mə́lɛ́\tsɔ́ndɔ məlú mə́nyi\tfúladé\tséradé"
         );
         DateFormatSymbols.register(
-                "gd,gd-GB",
+                "gd\tgd-GB",
                 "m\tf",
                 "RC\tAD",
                 "dhen Fhaoilleach\tdhen Ghearran\tdhen Mhàrt\tdhen Ghiblean\tdhen Chèitean\tdhen Ògmhios\tdhen Iuchar\tdhen Lùnastal\tdhen t-Sultain\tdhen Dàmhair\tdhen t-Samhain\tdhen Dùbhlachd",
@@ -1226,7 +1226,7 @@ final class DateFormatSymbolProvider {
                 "DiDòmhnaich\tDiLuain\tDiMàirt\tDiCiadain\tDiarDaoin\tDihAoine\tDiSathairne"
         );
         DateFormatSymbols.register(
-                "ksb,ksb-TZ",
+                "ksb\tksb-TZ",
                 "makeo\tnyiaghuo",
                 "KK\tBK",
                 "Januali\tFebluali\tMachi\tAplili\tMei\tJuni\tJulai\tAgosti\tSeptemba\tOktoba\tNovemba\tDesemba",
@@ -1235,7 +1235,7 @@ final class DateFormatSymbolProvider {
                 "Jumaapii\tJumaatatu\tJumaane\tJumaatano\tAlhamisi\tIjumaa\tJumaamosi"
         );
         DateFormatSymbols.register(
-                "nmg,nmg-CM",
+                "nmg\tnmg-CM",
                 "maná\tkugú",
                 "BL\tPB",
                 "ngwɛn matáhra\tngwɛn ńmba\tngwɛn ńlal\tngwɛn ńna\tngwɛn ńtan\tngwɛn ńtuó\tngwɛn hɛmbuɛrí\tngwɛn lɔmbi\tngwɛn rɛbvuâ\tngwɛn wum\tngwɛn wum navǔr\tkrísimin",
@@ -1244,7 +1244,7 @@ final class DateFormatSymbolProvider {
                 "sɔ́ndɔ\tmɔ́ndɔ\tsɔ́ndɔ mafú mába\tsɔ́ndɔ mafú málal\tsɔ́ndɔ mafú mána\tmabágá má sukul\tsásadi"
         );
         DateFormatSymbols.register(
-                "nnh,nnh-CM",
+                "nnh\tnnh-CM",
                 "mbaʼámbaʼ\tncwònzém",
                 "m.z.Y.\tm.g.n.Y.",
                 "saŋ tsetsɛ̀ɛ lùm\tsaŋ kàg ngwóŋ\tsaŋ lepyè shúm\tsaŋ cÿó\tsaŋ tsɛ̀ɛ cÿó\tsaŋ njÿoláʼ\tsaŋ tyɛ̀b tyɛ̀b mbʉ̀ŋ\tsaŋ mbʉ̀ŋ\tsaŋ ngwɔ̀ʼ mbÿɛ\tsaŋ tàŋa tsetsáʼ\tsaŋ mejwoŋó\tsaŋ lùm",
@@ -1253,7 +1253,7 @@ final class DateFormatSymbolProvider {
                 "lyɛʼɛ́ sẅíŋtè\tmvfò lyɛ̌ʼ\tmbɔ́ɔntè mvfò lyɛ̌ʼ\ttsètsɛ̀ɛ lyɛ̌ʼ\tmbɔ́ɔntè tsetsɛ̀ɛ lyɛ̌ʼ\tmvfò màga lyɛ̌ʼ\tmàga lyɛ̌ʼ"
         );
         DateFormatSymbols.register(
-                "jgo,jgo-CM",
+                "jgo\tjgo-CM",
                 "mbaꞌmbaꞌ\tŋka mbɔ́t nji",
                 "BCE\tCE",
                 "Nduŋmbi Saŋ\tPɛsaŋ Pɛ́pá\tPɛsaŋ Pɛ́tát\tPɛsaŋ Pɛ́nɛ́kwa\tPɛsaŋ Pataa\tPɛsaŋ Pɛ́nɛ́ntúkú\tPɛsaŋ Saambá\tPɛsaŋ Pɛ́nɛ́fɔm\tPɛsaŋ Pɛ́nɛ́pfúꞋú\tPɛsaŋ Nɛgɛ́m\tPɛsaŋ Ntsɔ̌pmɔ́\tPɛsaŋ Ntsɔ̌ppá",
@@ -1262,7 +1262,7 @@ final class DateFormatSymbolProvider {
                 "Sɔ́ndi\tMɔ́ndi\tÁpta Mɔ́ndi\tWɛ́nɛsɛdɛ\tTɔ́sɛdɛ\tFɛlâyɛdɛ\tSásidɛ"
         );
         DateFormatSymbols.register(
-                "lb,lb-LU",
+                "lb\tlb-LU",
                 "moies\tnomëttes",
                 "v. Chr.\tn. Chr.",
                 "Januar\tFebruar\tMäerz\tAbrëll\tMee\tJuni\tJuli\tAugust\tSeptember\tOktober\tNovember\tDezember",
@@ -1271,7 +1271,7 @@ final class DateFormatSymbolProvider {
                 "Sonndeg\tMéindeg\tDënschdeg\tMëttwoch\tDonneschdeg\tFreideg\tSamschdeg"
         );
         DateFormatSymbols.register(
-                "kab,kab-DZ",
+                "kab\tkab-DZ",
                 "n tufat\tn tmeddit",
                 "snd. T.Ɛ\tsld. T.Ɛ",
                 "Yennayer\tFuṛar\tMeɣres\tYebrir\tMayyu\tYunyu\tYulyu\tƔuct\tCtembeṛ\tTubeṛ\tNunembeṛ\tDuǧembeṛ",
@@ -1280,7 +1280,7 @@ final class DateFormatSymbolProvider {
                 "Yanass\tSanass\tKraḍass\tKuẓass\tSamass\tSḍisass\tSayass"
         );
         DateFormatSymbols.register(
-                "ln,ln-AO,ln-CD,ln-CF,ln-CG",
+                "ln\tln-AO\tln-CD\tln-CF\tln-CG",
                 "ntɔ́ngɔ́\tmpókwa",
                 "libóso ya\tnsima ya Y",
                 "sánzá ya yambo\tsánzá ya míbalé\tsánzá ya mísáto\tsánzá ya mínei\tsánzá ya mítáno\tsánzá ya motóbá\tsánzá ya nsambo\tsánzá ya mwambe\tsánzá ya libwa\tsánzá ya zómi\tsánzá ya zómi na mɔ̌kɔ́\tsánzá ya zómi na míbalé",
@@ -1289,7 +1289,7 @@ final class DateFormatSymbolProvider {
                 "eyenga\tmokɔlɔ mwa yambo\tmokɔlɔ mwa míbalé\tmokɔlɔ mwa mísáto\tmokɔlɔ ya mínéi\tmokɔlɔ ya mítáno\tmpɔ́sɔ"
         );
         DateFormatSymbols.register(
-                "bez,bez-TZ",
+                "bez\tbez-TZ",
                 "pamilau\tpamunyi",
                 "KM\tBM",
                 "pa mwedzi gwa hutala\tpa mwedzi gwa wuvili\tpa mwedzi gwa wudatu\tpa mwedzi gwa wutai\tpa mwedzi gwa wuhanu\tpa mwedzi gwa sita\tpa mwedzi gwa saba\tpa mwedzi gwa nane\tpa mwedzi gwa tisa\tpa mwedzi gwa kumi\tpa mwedzi gwa kumi na moja\tpa mwedzi gwa kumi na mbili",
@@ -1298,7 +1298,7 @@ final class DateFormatSymbolProvider {
                 "pa mulungu\tpa shahuviluha\tpa hivili\tpa hidatu\tpa hitayi\tpa hihanu\tpa shahulembela"
         );
         DateFormatSymbols.register(
-                "sr-Latn,sr-Latn-BA,sr-Latn-ME,sr-Latn-RS,sr-Latn-XK",
+                "sr-Latn\tsr-Latn-BA\tsr-Latn-ME\tsr-Latn-RS\tsr-Latn-XK",
                 "pre podne\tpo podne",
                 "p. n. e.\tn. e.",
                 "januar\tfebruar\tmart\tapril\tmaj\tjun\tjul\tavgust\tseptembar\toktobar\tnovembar\tdecembar",
@@ -1307,7 +1307,7 @@ final class DateFormatSymbolProvider {
                 "nedelja\tponedeljak\tutorak\tsreda\tčetvrtak\tpetak\tsubota"
         );
         DateFormatSymbols.register(
-                "lv,lv-LV",
+                "lv\tlv-LV",
                 "priekšpusdienā\tpēcpusdienā",
                 "p.m.ē.\tm.ē.",
                 "janvāris\tfebruāris\tmarts\taprīlis\tmaijs\tjūnijs\tjūlijs\taugusts\tseptembris\toktobris\tnovembris\tdecembris",
@@ -1316,7 +1316,7 @@ final class DateFormatSymbolProvider {
                 "svētdiena\tpirmdiena\totrdiena\ttrešdiena\tceturtdiena\tpiektdiena\tsestdiena"
         );
         DateFormatSymbols.register(
-                "lt,lt-LT",
+                "lt\tlt-LT",
                 "priešpiet\tpopiet",
                 "pr. Kr.\tpo Kr.",
                 "sausio\tvasario\tkovo\tbalandžio\tgegužės\tbirželio\tliepos\trugpjūčio\trugsėjo\tspalio\tlapkričio\tgruodžio",
@@ -1325,7 +1325,7 @@ final class DateFormatSymbolProvider {
                 "sekmadienis\tpirmadienis\tantradienis\ttrečiadienis\tketvirtadienis\tpenktadienis\tšeštadienis"
         );
         DateFormatSymbols.register(
-                "bs,bs-BA,bs-Latn,bs-Latn-BA",
+                "bs\tbs-BA\tbs-Latn\tbs-Latn-BA",
                 "prije podne\tpopodne",
                 "p. n. e.\tn. e.",
                 "januar\tfebruar\tmart\tapril\tmaj\tjuni\tjuli\taugust\tseptembar\toktobar\tnovembar\tdecembar",
@@ -1334,7 +1334,7 @@ final class DateFormatSymbolProvider {
                 "nedjelja\tponedjeljak\tutorak\tsrijeda\tčetvrtak\tpetak\tsubota"
         );
         DateFormatSymbols.register(
-                "so,so-DJ,so-ET,so-KE,so-SO",
+                "so\tso-DJ\tso-ET\tso-KE\tso-SO",
                 "sn.\tgn.",
                 "CK\tCD",
                 "Bisha Koobaad\tBisha Labaad\tBisha Saddexaad\tBisha Afraad\tBisha Shanaad\tBisha Lixaad\tBisha Todobaad\tBisha Sideedaad\tBisha Sagaalaad\tBisha Tobnaad\tBisha Kow iyo Tobnaad\tBisha Laba iyo Tobnaad",
@@ -1343,7 +1343,7 @@ final class DateFormatSymbolProvider {
                 "Axad\tIsniin\tTalaado\tArbaco\tKhamiis\tJimco\tSabti"
         );
         DateFormatSymbols.register(
-                "ff,ff-CM,ff-GN,ff-MR,ff-SN",
+                "ff\tff-CM\tff-GN\tff-MR\tff-SN",
                 "subaka\tkikiiɗe",
                 "H-I\tC-I",
                 "siilo\tcolte\tmbooy\tseeɗto\tduujal\tkorse\tmorso\tjuko\tsiilto\tyarkomaa\tjolal\tbowte",
@@ -1352,7 +1352,7 @@ final class DateFormatSymbolProvider {
                 "dewo\taaɓnde\tmawbaare\tnjeslaare\tnaasaande\tmawnde\thoore-biir"
         );
         DateFormatSymbols.register(
-                "ksf,ksf-CM",
+                "ksf\tksf-CM",
                 "sárúwá\tcɛɛ́nko",
                 "d.Y.\tk.Y.",
                 "ŋwíí a ntɔ́ntɔ\tŋwíí akǝ bɛ́ɛ\tŋwíí akǝ ráá\tŋwíí akǝ nin\tŋwíí akǝ táan\tŋwíí akǝ táafɔk\tŋwíí akǝ táabɛɛ\tŋwíí akǝ táaraa\tŋwíí akǝ táanin\tŋwíí akǝ ntɛk\tŋwíí akǝ ntɛk di bɔ́k\tŋwíí akǝ ntɛk di bɛ́ɛ",
@@ -1361,7 +1361,7 @@ final class DateFormatSymbolProvider {
                 "sɔ́ndǝ\tlǝndí\tmaadí\tmɛkrɛdí\tjǝǝdí\tjúmbá\tsamdí"
         );
         DateFormatSymbols.register(
-                "shi-Latn,shi-Latn-MA",
+                "shi-Latn\tshi-Latn-MA",
                 "tifawt\ttadggʷat",
                 "daɛ\tdfɛ",
                 "innayr\tbṛayṛ\tmaṛṣ\tibrir\tmayyu\tyunyu\tyulyuz\tɣuct\tcutanbir\tktubr\tnuwanbir\tdujanbir",
@@ -1370,7 +1370,7 @@ final class DateFormatSymbolProvider {
                 "asamas\taynas\tasinas\takṛas\takwas\tasimwas\tasiḍyas"
         );
         DateFormatSymbols.register(
-                "bem,bem-ZM",
+                "bem\tbem-ZM",
                 "uluchelo\takasuba",
                 "BC\tAD",
                 "Januari\tFebruari\tMachi\tEpreo\tMei\tJuni\tJulai\tOgasti\tSeptemba\tOktoba\tNovemba\tDisemba",
@@ -1379,7 +1379,7 @@ final class DateFormatSymbolProvider {
                 "Pa Mulungu\tPalichimo\tPalichibuli\tPalichitatu\tPalichine\tPalichisano\tPachibelushi"
         );
         DateFormatSymbols.register(
-                "jmc,jmc-TZ,rwk,rwk-TZ,vun,vun-TZ",
+                "jmc\tjmc-TZ\trwk\trwk-TZ\tvun\tvun-TZ",
                 "utuko\tkyiukonyi",
                 "KK\tBK",
                 "Januari\tFebruari\tMachi\tAprilyi\tMei\tJunyi\tJulyai\tAgusti\tSeptemba\tOktoba\tNovemba\tDesemba",
@@ -1388,7 +1388,7 @@ final class DateFormatSymbolProvider {
                 "Jumapilyi\tJumatatuu\tJumanne\tJumatanu\tAlhamisi\tIjumaa\tJumamosi"
         );
         DateFormatSymbols.register(
-                "af,af-NA,af-ZA",
+                "af\taf-NA\taf-ZA",
                 "vm.\tnm.",
                 "v.C.\tn.C.",
                 "Januarie\tFebruarie\tMaart\tApril\tMei\tJunie\tJulie\tAugustus\tSeptember\tOktober\tNovember\tDesember",
@@ -1397,7 +1397,7 @@ final class DateFormatSymbolProvider {
                 "Sondag\tMaandag\tDinsdag\tWoensdag\tDonderdag\tVrydag\tSaterdag"
         );
         DateFormatSymbols.register(
-                "de,de-BE,de-CH,de-DE,de-LI,de-LU",
+                "de\tde-BE\tde-CH\tde-DE\tde-LI\tde-LU",
                 "vorm.\tnachm.",
                 "v. Chr.\tn. Chr.",
                 "Januar\tFebruar\tMärz\tApril\tMai\tJuni\tJuli\tAugust\tSeptember\tOktober\tNovember\tDezember",
@@ -1415,7 +1415,7 @@ final class DateFormatSymbolProvider {
                 "Sonntag\tMontag\tDienstag\tMittwoch\tDonnerstag\tFreitag\tSamstag"
         );
         DateFormatSymbols.register(
-                "gsw,gsw-CH,gsw-FR,gsw-LI",
+                "gsw\tgsw-CH\tgsw-FR\tgsw-LI",
                 "vorm.\tnam.",
                 "v. Chr.\tn. Chr.",
                 "Januar\tFebruar\tMärz\tApril\tMai\tJuni\tJuli\tAuguscht\tSeptämber\tOktoober\tNovämber\tDezämber",
@@ -1424,7 +1424,7 @@ final class DateFormatSymbolProvider {
                 "Sunntig\tMääntig\tZiischtig\tMittwuch\tDunschtig\tFriitig\tSamschtig"
         );
         DateFormatSymbols.register(
-                "mgh,mgh-MZ",
+                "mgh\tmgh-MZ",
                 "wichishu\tmchochil’l",
                 "HY\tYY",
                 "Mweri wo kwanza\tMweri wo unayeli\tMweri wo uneraru\tMweri wo unecheshe\tMweri wo unethanu\tMweri wo thanu na mocha\tMweri wo saba\tMweri wo nane\tMweri wo tisa\tMweri wo kumi\tMweri wo kumi na moja\tMweri wo kumi na yel’li",
@@ -1451,7 +1451,7 @@ final class DateFormatSymbolProvider {
                 "Ɔjɔ́ Àìkú\tƆjɔ́ Ajé\tƆjɔ́ Ìsɛ́gun\tƆjɔ́rú\tƆjɔ́bɔ\tƆjɔ́ Ɛtì\tƆjɔ́ Àbámɛ́ta"
         );
         DateFormatSymbols.register(
-                "yo,yo-NG",
+                "yo\tyo-NG",
                 "Àárọ̀\tỌ̀sán",
                 "SK\tLK",
                 "Oṣù Ṣẹ́rẹ́\tOṣù Èrèlè\tOṣù Ẹrẹ̀nà\tOṣù Ìgbé\tOṣù Ẹ̀bibi\tOṣù Òkúdu\tOṣù Agẹmọ\tOṣù Ògún\tOṣù Owewe\tOṣù Ọ̀wàrà\tOṣù Bélú\tOṣù Ọ̀pẹ̀",
@@ -1460,7 +1460,7 @@ final class DateFormatSymbolProvider {
                 "Ọjọ́ Àìkú\tỌjọ́ Ajé\tỌjọ́ Ìsẹ́gun\tỌjọ́rú\tỌjọ́bọ\tỌjọ́ Ẹtì\tỌjọ́ Àbámẹ́ta"
         );
         DateFormatSymbols.register(
-                "tr,tr-CY,tr-TR",
+                "tr\ttr-CY\ttr-TR",
                 "ÖÖ\tÖS",
                 "MÖ\tMS",
                 "Ocak\tŞubat\tMart\tNisan\tMayıs\tHaziran\tTemmuz\tAğustos\tEylül\tEkim\tKasım\tAralık",
@@ -1469,7 +1469,7 @@ final class DateFormatSymbolProvider {
                 "Pazar\tPazartesi\tSalı\tÇarşamba\tPerşembe\tCuma\tCumartesi"
         );
         DateFormatSymbols.register(
-                "kam,kam-KE",
+                "kam\tkam-KE",
                 "Ĩyakwakya\tĨyawĩoo",
                 "MY\tIY",
                 "Mwai wa mbee\tMwai wa kelĩ\tMwai wa katatũ\tMwai wa kana\tMwai wa katano\tMwai wa thanthatũ\tMwai wa muonza\tMwai wa nyaanya\tMwai wa kenda\tMwai wa ĩkumi\tMwai wa ĩkumi na ĩmwe\tMwai wa ĩkumi na ilĩ",
@@ -1478,7 +1478,7 @@ final class DateFormatSymbolProvider {
                 "Wa kyumwa\tWa kwambĩlĩlya\tWa kelĩ\tWa katatũ\tWa kana\tWa katano\tWa thanthatũ"
         );
         DateFormatSymbols.register(
-                "ee,ee-GH,ee-TG",
+                "ee\tee-GH\tee-TG",
                 "ŋdi\tɣetrɔ",
                 "hY\tYŋ",
                 "dzove\tdzodze\ttedoxe\tafɔfĩe\tdama\tmasa\tsiamlɔm\tdeasiamime\tanyɔnyɔ\tkele\tadeɛmekpɔxe\tdzome",
@@ -1487,7 +1487,7 @@ final class DateFormatSymbolProvider {
                 "kɔsiɖa\tdzoɖa\tblaɖa\tkuɖa\tyawoɖa\tfiɖa\tmemleɖa"
         );
         DateFormatSymbols.register(
-                "mas,mas-KE,mas-TZ",
+                "mas\tmas-KE\tmas-TZ",
                 "Ɛnkakɛnyá\tƐndámâ",
                 "MY\tEY",
                 "Oladalʉ́\tArát\tƆɛnɨ́ɔɨŋɔk\tOlodoyíóríê inkókúâ\tOloilépūnyīē inkókúâ\tKújúɔrɔk\tMórusásin\tƆlɔ́ɨ́bɔ́rárɛ\tKúshîn\tOlgísan\tPʉshʉ́ka\tNtʉ́ŋʉ́s",
@@ -1496,7 +1496,7 @@ final class DateFormatSymbolProvider {
                 "Jumapílí\tJumatátu\tJumane\tJumatánɔ\tAlaámisi\tJumáa\tJumamósi"
         );
         DateFormatSymbols.register(
-                "naq,naq-NA",
+                "naq\tnaq-NA",
                 "ǁgoagas\tǃuias",
                 "BC\tAD",
                 "ǃKhanni\tǃKhanǀgôab\tǀKhuuǁkhâb\tǃHôaǂkhaib\tǃKhaitsâb\tGamaǀaeb\tǂKhoesaob\tAoǁkhuumûǁkhâb\tTaraǀkhuumûǁkhâb\tǂNûǁnâiseb\tǀHooǂgaeb\tHôasoreǁkhâb",
@@ -1505,7 +1505,7 @@ final class DateFormatSymbolProvider {
                 "Sontaxtsees\tMantaxtsees\tDenstaxtsees\tWunstaxtsees\tDondertaxtsees\tFraitaxtsees\tSatertaxtsees"
         );
         DateFormatSymbols.register(
-                "el,el-CY,el-GR",
+                "el\tel-CY\tel-GR",
                 "π.μ.\tμ.μ.",
                 "π.Χ.\tμ.Χ.",
                 "Ιανουαρίου\tΦεβρουαρίου\tΜαρτίου\tΑπριλίου\tΜαΐου\tΙουνίου\tΙουλίου\tΑυγούστου\tΣεπτεμβρίου\tΟκτωβρίου\tΝοεμβρίου\tΔεκεμβρίου",
@@ -1514,7 +1514,7 @@ final class DateFormatSymbolProvider {
                 "Κυριακή\tΔευτέρα\tΤρίτη\tΤετάρτη\tΠέμπτη\tΠαρασκευή\tΣάββατο"
         );
         DateFormatSymbols.register(
-                "ru,ru-BY,ru-KG,ru-KZ,ru-MD,ru-RU,ru-UA",
+                "ru\tru-BY\tru-KG\tru-KZ\tru-MD\tru-RU\tru-UA",
                 "ДП\tПП",
                 "до н. э.\tн. э.",
                 "января\tфевраля\tмарта\tапреля\tмая\tиюня\tиюля\tавгуста\tсентября\tоктября\tноября\tдекабря",
@@ -1523,7 +1523,7 @@ final class DateFormatSymbolProvider {
                 "воскресенье\tпонедельник\tвторник\tсреда\tчетверг\tпятница\tсуббота"
         );
         DateFormatSymbols.register(
-                "sah,sah-RU",
+                "sah\tsah-RU",
                 "ЭИ\tЭК",
                 "б. э. и.\tб. э",
                 "Тохсунньу\tОлунньу\tКулун тутар\tМуус устар\tЫам ыйын\tБэс ыйын\tОт ыйын\tАтырдьых ыйын\tБалаҕан ыйын\tАлтынньы\tСэтинньи\tАхсынньы",
@@ -1532,7 +1532,7 @@ final class DateFormatSymbolProvider {
                 "Баскыһыанньа\tБэнидиэлинньик\tОптуорунньук\tСэрэдэ\tЧэппиэр\tБээтиҥсэ\tСубуота"
         );
         DateFormatSymbols.register(
-                "be,be-BY",
+                "be\tbe-BY",
                 "да паўдня\tпасля паўдня",
                 "да н.э.\tн.э.",
                 "студзеня\tлютага\tсакавіка\tкрасавіка\tмая\tчэрвеня\tліпеня\tжніўня\tверасня\tкастрычніка\tлістапада\tснежня",
@@ -1541,7 +1541,7 @@ final class DateFormatSymbolProvider {
                 "нядзеля\tпанядзелак\tаўторак\tсерада\tчацвер\tпятніца\tсубота"
         );
         DateFormatSymbols.register(
-                "uk,uk-UA",
+                "uk\tuk-UA",
                 "дп\tпп",
                 "до н. е.\tн. е.",
                 "січня\tлютого\tберезня\tквітня\tтравня\tчервня\tлипня\tсерпня\tвересня\tжовтня\tлистопада\tгрудня",
@@ -1550,7 +1550,7 @@ final class DateFormatSymbolProvider {
                 "неділя\tпонеділок\tвівторок\tсереда\tчетвер\tпʼятниця\tсубота"
         );
         DateFormatSymbols.register(
-                "bg,bg-BG",
+                "bg\tbg-BG",
                 "пр.об.\tсл.об.",
                 "пр.Хр.\tсл.Хр.",
                 "януари\tфевруари\tмарт\tаприл\tмай\tюни\tюли\tавгуст\tсептември\tоктомври\tноември\tдекември",
@@ -1559,7 +1559,7 @@ final class DateFormatSymbolProvider {
                 "неделя\tпонеделник\tвторник\tсряда\tчетвъртък\tпетък\tсъбота"
         );
         DateFormatSymbols.register(
-                "sr,sr-Cyrl,sr-Cyrl-BA,sr-Cyrl-ME,sr-Cyrl-RS,sr-Cyrl-XK,sr-RS",
+                "sr\tsr-Cyrl\tsr-Cyrl-BA\tsr-Cyrl-ME\tsr-Cyrl-RS\tsr-Cyrl-XK\tsr-RS",
                 "пре подне\tпо подне",
                 "п. н. е.\tн. е.",
                 "јануар\tфебруар\tмарт\tаприл\tмај\tјун\tјул\tавгуст\tсептембар\tоктобар\tновембар\tдецембар",
@@ -1568,7 +1568,7 @@ final class DateFormatSymbolProvider {
                 "недеља\tпонедељак\tуторак\tсреда\tчетвртак\tпетак\tсубота"
         );
         DateFormatSymbols.register(
-                "bs-Cyrl,bs-Cyrl-BA",
+                "bs-Cyrl\tbs-Cyrl-BA",
                 "пре подне\tпоподне",
                 "п. н. е.\tн. е.",
                 "јануар\tфебруар\tмарт\tаприл\tмај\tјуни\tјули\tавгуст\tсептембар\tоктобар\tновембар\tдецембар",
@@ -1577,7 +1577,7 @@ final class DateFormatSymbolProvider {
                 "недеља\tпонедељак\tуторак\tсриједа\tчетвртак\tпетак\tсубота"
         );
         DateFormatSymbols.register(
-                "mk,mk-MK",
+                "mk\tmk-MK",
                 "претпладне\tпопладне",
                 "пр.н.е.\tн.е.",
                 "јануари\tфевруари\tмарт\tаприл\tмај\tјуни\tјули\tавгуст\tсептември\tоктомври\tноември\tдекември",
@@ -1586,7 +1586,7 @@ final class DateFormatSymbolProvider {
                 "недела\tпонеделник\tвторник\tсреда\tчетврток\tпеток\tсабота"
         );
         DateFormatSymbols.register(
-                "ky,ky-KG",
+                "ky\tky-KG",
                 "таңкы\tтүштөн кийинки",
                 "б.з.ч.\tб.з.",
                 "январь\tфевраль\tмарт\tапрель\tмай\tиюнь\tиюль\tавгуст\tсентябрь\tоктябрь\tноябрь\tдекабрь",
@@ -1595,7 +1595,7 @@ final class DateFormatSymbolProvider {
                 "жекшемби\tдүйшөмбү\tшейшемби\tшаршемби\tбейшемби\tжума\tишемби"
         );
         DateFormatSymbols.register(
-                "kk,kk-KZ",
+                "kk\tkk-KZ",
                 "таңғы\tтүскі/кешкі",
                 "б.з.д.\tб.з.",
                 "қаңтар\tақпан\tнаурыз\tсәуір\tмамыр\tмаусым\tшілде\tтамыз\tқыркүйек\tқазан\tқараша\tжелтоқсан",
@@ -1604,7 +1604,7 @@ final class DateFormatSymbolProvider {
                 "жексенбі\tдүйсенбі\tсейсенбі\tсәрсенбі\tбейсенбі\tжұма\tсенбі"
         );
         DateFormatSymbols.register(
-                "mn,mn-MN",
+                "mn\tmn-MN",
                 "ҮӨ\tҮХ",
                 "м.э.ө\tм.э.",
                 "Нэгдүгээр сар\tХоёрдугаар сар\tГуравдугаар сар\tДөрөвдүгээр сар\tТавдугаар сар\tЗургадугаар сар\tДолдугаар сар\tНаймдугаар сар\tЕсдүгээр сар\tАравдугаар сар\tАрван нэгдүгээр сар\tАрван хоёрдугаар сар",
@@ -1613,7 +1613,7 @@ final class DateFormatSymbolProvider {
                 "ням\tдаваа\tмягмар\tлхагва\tпүрэв\tбаасан\tбямба"
         );
         DateFormatSymbols.register(
-                "os,os-GE,os-RU",
+                "os\tos-GE\tos-RU",
                 "ӕмбисбоны размӕ\tӕмбисбоны фӕстӕ",
                 "н.д.а.\tн.д.",
                 "январы\tфевралы\tмартъийы\tапрелы\tмайы\tиюны\tиюлы\tавгусты\tсентябры\tоктябры\tноябры\tдекабры",
@@ -1622,7 +1622,7 @@ final class DateFormatSymbolProvider {
                 "хуыцаубон\tкъуырисӕр\tдыццӕг\tӕртыццӕг\tцыппӕрӕм\tмайрӕмбон\tсабат"
         );
         DateFormatSymbols.register(
-                "he,he-IL",
+                "he\the-IL",
                 "לפנה״צ\tאחה״צ",
                 "לפנה״ס\tלספירה",
                 "ינואר\tפברואר\tמרץ\tאפריל\tמאי\tיוני\tיולי\tאוגוסט\tספטמבר\tאוקטובר\tנובמבר\tדצמבר",
@@ -1631,7 +1631,7 @@ final class DateFormatSymbolProvider {
                 "יום ראשון\tיום שני\tיום שלישי\tיום רביעי\tיום חמישי\tיום שישי\tיום שבת"
         );
         DateFormatSymbols.register(
-                "yi,yi-001",
+                "yi\tyi-001",
                 "פֿאַרמיטאָג\tנאָכמיטאָג",
                 "BCE\tCE",
                 "יאַנואַר\tפֿעברואַר\tמערץ\tאַפּריל\tמיי\tיוני\tיולי\tאויגוסט\tסעפּטעמבער\tאקטאבער\tנאוועמבער\tדעצעמבער",
@@ -1640,7 +1640,7 @@ final class DateFormatSymbolProvider {
                 "זונטיק\tמאָנטיק\tדינסטיק\tמיטוואך\tדאנערשטיק\tפֿרײַטיק\tשבת"
         );
         DateFormatSymbols.register(
-                "ar-DZ,ar-TN",
+                "ar-DZ\tar-TN",
                 "ص\tم",
                 "ق.م\tم",
                 "جانفي\tفيفري\tمارس\tأفريل\tماي\tجوان\tجويلية\tأوت\tسبتمبر\tأكتوبر\tنوفمبر\tديسمبر",
@@ -1649,7 +1649,7 @@ final class DateFormatSymbolProvider {
                 "الأحد\tالاثنين\tالثلاثاء\tالأربعاء\tالخميس\tالجمعة\tالسبت"
         );
         DateFormatSymbols.register(
-                "ar-JO,ar-LB,ar-PS,ar-SY",
+                "ar-JO\tar-LB\tar-PS\tar-SY",
                 "ص\tم",
                 "ق.م\tم",
                 "كانون الثاني\tشباط\tآذار\tنيسان\tأيار\tحزيران\tتموز\tآب\tأيلول\tتشرين الأول\tتشرين الثاني\tكانون الأول",
@@ -1676,7 +1676,7 @@ final class DateFormatSymbolProvider {
                 "الأحد\tالاثنين\tالثلاثاء\tالأربعاء\tالخميس\tالجمعة\tالسبت"
         );
         DateFormatSymbols.register(
-                "ar,ar-001,ar-AE,ar-BH,ar-DJ,ar-EG,ar-EH,ar-ER,ar-IL,ar-KM,ar-KW,ar-LY,ar-OM,ar-QA,ar-SA,ar-SD,ar-SO,ar-SS,ar-TD,ar-YE",
+                "ar\tar-001\tar-AE\tar-BH\tar-DJ\tar-EG\tar-EH\tar-ER\tar-IL\tar-KM\tar-KW\tar-LY\tar-OM\tar-QA\tar-SA\tar-SD\tar-SO\tar-SS\tar-TD\tar-YE",
                 "ص\tم",
                 "ق.م\tم",
                 "يناير\tفبراير\tمارس\tأبريل\tمايو\tيونيو\tيوليو\tأغسطس\tسبتمبر\tأكتوبر\tنوفمبر\tديسمبر",
@@ -1694,7 +1694,7 @@ final class DateFormatSymbolProvider {
                 "الأحد\tالاثنين\tالثلاثاء\tالأربعاء\tالخميس\tالجمعة\tالسبت"
         );
         DateFormatSymbols.register(
-                "ps,ps-AF",
+                "ps\tps-AF",
                 "غ.م.\tغ.و.",
                 "ق.م.\tم.",
                 "جنوري\tفبروري\tمارچ\tاپریل\tمی\tجون\tجولای\tاګست\tسپتمبر\tاکتوبر\tنومبر\tدسمبر",
@@ -1703,7 +1703,7 @@ final class DateFormatSymbolProvider {
                 "یکشنبه\tدوشنبه\tسه‌شنبه\tچهارشنبه\tپنجشنبه\tجمعه\tشنبه"
         );
         DateFormatSymbols.register(
-                "ur,ur-IN,ur-PK",
+                "ur\tur-IN\tur-PK",
                 "قبل دوپہر\tبعد دوپہر",
                 "قبل مسیح\tعیسوی",
                 "جنوری\tفروری\tمارچ\tاپریل\tمئی\tجون\tجولائی\tاگست\tستمبر\tاکتوبر\tنومبر\tدسمبر",
@@ -1721,7 +1721,7 @@ final class DateFormatSymbolProvider {
                 "یکشنبه\tدوشنبه\tسه‌شنبه\tچهارشنبه\tپنجشنبه\tجمعه\tشنبه"
         );
         DateFormatSymbols.register(
-                "fa,fa-IR",
+                "fa\tfa-IR",
                 "قبل‌ازظهر\tبعدازظهر",
                 "ق.م.\tم.",
                 "ژانویهٔ\tفوریهٔ\tمارس\tآوریل\tمهٔ\tژوئن\tژوئیهٔ\tاوت\tسپتامبر\tاکتبر\tنوامبر\tدسامبر",
@@ -1730,7 +1730,7 @@ final class DateFormatSymbolProvider {
                 "یکشنبه\tدوشنبه\tسه‌شنبه\tچهارشنبه\tپنجشنبه\tجمعه\tشنبه"
         );
         DateFormatSymbols.register(
-                "ug,ug-CN",
+                "ug\tug-CN",
                 "چۈشتىن بۇرۇن\tچۈشتىن كېيىن",
                 "BCE\tمىلادىيە",
                 "يانۋار\tفېۋرال\tمارت\tئاپرېل\tماي\tئىيۇن\tئىيۇل\tئاۋغۇست\tسېنتەبىر\tئۆكتەبىر\tنويابىر\tدېكابىر",
@@ -1739,7 +1739,7 @@ final class DateFormatSymbolProvider {
                 "يەكشەنبە\tدۈشەنبە\tسەيشەنبە\tچارشەنبە\tپەيشەنبە\tجۈمە\tشەنبە"
         );
         DateFormatSymbols.register(
-                "ne,ne-IN,ne-NP",
+                "ne\tne-IN\tne-NP",
                 "पूर्वाह्न\tअपराह्न",
                 "ईसा पूर्व\tसन्",
                 "जनवरी\tफेब्रुअरी\tमार्च\tअप्रिल\tमई\tजुन\tजुलाई\tअगस्ट\tसेप्टेम्बर\tअक्टोबर\tनोभेम्बर\tडिसेम्बर",
@@ -1748,7 +1748,7 @@ final class DateFormatSymbolProvider {
                 "आइतबार\tसोमबार\tमङ्गलबार\tबुधबार\tबिहिबार\tशुक्रबार\tशनिबार"
         );
         DateFormatSymbols.register(
-                "hi,hi-IN",
+                "hi\thi-IN",
                 "पूर्वाह्न\tअपराह्न",
                 "ईसा-पूर्व\tईस्वी",
                 "जनवरी\tफ़रवरी\tमार्च\tअप्रैल\tमई\tजून\tजुलाई\tअगस्त\tसितंबर\tअक्तूबर\tनवंबर\tदिसंबर",
@@ -1757,7 +1757,7 @@ final class DateFormatSymbolProvider {
                 "रविवार\tसोमवार\tमंगलवार\tबुधवार\tगुरुवार\tशुक्रवार\tशनिवार"
         );
         DateFormatSymbols.register(
-                "brx,brx-IN",
+                "brx\tbrx-IN",
                 "फुं\tबेलासे",
                 "ईसा.पूर्व\tसन",
                 "जानुवारी\tफेब्रुवारी\tमार्स\tएफ्रिल\tमे\tजुन\tजुलाइ\tआगस्थ\tसेबथेज्ब़र\tअखथबर\tनबेज्ब़र\tदिसेज्ब़र",
@@ -1766,7 +1766,7 @@ final class DateFormatSymbolProvider {
                 "रबिबार\tसमबार\tमंगलबार\tबुदबार\tबिसथिबार\tसुखुरबार\tसुनिबार"
         );
         DateFormatSymbols.register(
-                "mr,mr-IN",
+                "mr\tmr-IN",
                 "म.पू.\tम.उ.",
                 "इ. स. पू.\tइ. स.",
                 "जानेवारी\tफेब्रुवारी\tमार्च\tएप्रिल\tमे\tजून\tजुलै\tऑगस्ट\tसप्टेंबर\tऑक्टोबर\tनोव्हेंबर\tडिसेंबर",
@@ -1775,7 +1775,7 @@ final class DateFormatSymbolProvider {
                 "रविवार\tसोमवार\tमंगळवार\tबुधवार\tगुरुवार\tशुक्रवार\tशनिवार"
         );
         DateFormatSymbols.register(
-                "kok,kok-IN",
+                "kok\tkok-IN",
                 "म.पू.\tम.नं.",
                 "क्रिस्तपूर्व\tक्रिस्तशखा",
                 "जानेवारी\tफेब्रुवारी\tमार्च\tएप्रिल\tमे\tजून\tजुलै\tओगस्ट\tसेप्टेंबर\tओक्टोबर\tनोव्हेंबर\tडिसेंबर",
@@ -1784,7 +1784,7 @@ final class DateFormatSymbolProvider {
                 "आदित्यवार\tसोमवार\tमंगळार\tबुधवार\tगुरुवार\tशुक्रवार\tशनिवार"
         );
         DateFormatSymbols.register(
-                "bn,bn-BD,bn-IN",
+                "bn\tbn-BD\tbn-IN",
                 "পূর্বাহ্ণ\tঅপরাহ্ণ",
                 "খ্রিস্টপূর্ব\tখৃষ্টাব্দ",
                 "জানুয়ারী\tফেব্রুয়ারী\tমার্চ\tএপ্রিল\tমে\tজুন\tজুলাই\tআগস্ট\tসেপ্টেম্বর\tঅক্টোবর\tনভেম্বর\tডিসেম্বর",
@@ -1793,7 +1793,7 @@ final class DateFormatSymbolProvider {
                 "রবিবার\tসোমবার\tমঙ্গলবার\tবুধবার\tবৃহস্পতিবার\tশুক্রবার\tশনিবার"
         );
         DateFormatSymbols.register(
-                "as,as-IN",
+                "as\tas-IN",
                 "পূৰ্বাহ্ণ\tঅপৰাহ্ণ",
                 "BCE\tCE",
                 "জানুৱাৰী\tফেব্ৰুৱাৰী\tমাৰ্চ\tএপ্ৰিল\tমে\tজুন\tজুলাই\tআগষ্ট\tছেপ্তেম্বৰ\tঅক্টোবৰ\tনৱেম্বৰ\tডিচেম্বৰ",
@@ -1802,7 +1802,7 @@ final class DateFormatSymbolProvider {
                 "দেওবাৰ\tসোমবাৰ\tমঙ্গলবাৰ\tবুধবাৰ\tবৃহষ্পতিবাৰ\tশুক্ৰবাৰ\tশনিবাৰ"
         );
         DateFormatSymbols.register(
-                "pa,pa-Guru,pa-Guru-IN,pa-IN,pa-PK",
+                "pa\tpa-Guru\tpa-Guru-IN\tpa-IN\tpa-PK",
                 "ਪੂ.ਦੁ.\tਬਾ.ਦੁ.",
                 "ਈ. ਪੂ.\tਸੰਨ",
                 "ਜਨਵਰੀ\tਫ਼ਰਵਰੀ\tਮਾਰਚ\tਅਪ੍ਰੈਲ\tਮਈ\tਜੂਨ\tਜੁਲਾਈ\tਅਗਸਤ\tਸਤੰਬਰ\tਅਕਤੂਬਰ\tਨਵੰਬਰ\tਦਸੰਬਰ",
@@ -1811,7 +1811,7 @@ final class DateFormatSymbolProvider {
                 "ਐਤਵਾਰ\tਸੋਮਵਾਰ\tਮੰਗਲਵਾਰ\tਬੁੱਧਵਾਰ\tਵੀਰਵਾਰ\tਸ਼ੁੱਕਰਵਾਰ\tਸ਼ਨਿੱਚਰਵਾਰ"
         );
         DateFormatSymbols.register(
-                "ta,ta-IN,ta-LK,ta-MY,ta-SG",
+                "ta\tta-IN\tta-LK\tta-MY\tta-SG",
                 "முற்பகல்\tபிற்பகல்",
                 "கி.மு.\tகி.பி.",
                 "ஜனவரி\tபிப்ரவரி\tமார்ச்\tஏப்ரல்\tமே\tஜூன்\tஜூலை\tஆகஸ்ட்\tசெப்டம்பர்\tஅக்டோபர்\tநவம்பர்\tடிசம்பர்",
@@ -1820,7 +1820,7 @@ final class DateFormatSymbolProvider {
                 "ஞாயிறு\tதிங்கள்\tசெவ்வாய்\tபுதன்\tவியாழன்\tவெள்ளி\tசனி"
         );
         DateFormatSymbols.register(
-                "kn,kn-IN",
+                "kn\tkn-IN",
                 "ಪೂರ್ವಾಹ್ನ\tಅಪರಾಹ್ನ",
                 "ಕ್ರಿ.ಪೂ\tಕ್ರಿ.ಶ",
                 "ಜನವರಿ\tಫೆಬ್ರವರಿ\tಮಾರ್ಚ್\tಏಪ್ರಿಲ್\tಮೇ\tಜೂನ್\tಜುಲೈ\tಆಗಸ್ಟ್\tಸೆಪ್ಟೆಂಬರ್\tಅಕ್ಟೋಬರ್\tನವೆಂಬರ್\tಡಿಸೆಂಬರ್",
@@ -1829,7 +1829,7 @@ final class DateFormatSymbolProvider {
                 "ಭಾನುವಾರ\tಸೋಮವಾರ\tಮಂಗಳವಾರ\tಬುಧವಾರ\tಗುರುವಾರ\tಶುಕ್ರವಾರ\tಶನಿವಾರ"
         );
         DateFormatSymbols.register(
-                "si,si-LK",
+                "si\tsi-LK",
                 "පෙ.ව.\tප.ව.",
                 "ක්‍රි.පූ.\tක්‍රි.ව.",
                 "ජනවාරි\tපෙබරවාරි\tමාර්තු\tඅප්‍රේල්\tමැයි\tජූනි\tජූලි\tඅගෝස්තු\tසැප්තැම්බර්\tඔක්තෝබර්\tනොවැම්බර්\tදෙසැම්බර්",
@@ -1838,7 +1838,7 @@ final class DateFormatSymbolProvider {
                 "ඉරිදා\tසඳුදා\tඅඟහරුවාදා\tබදාදා\tබ්‍රහස්පතින්දා\tසිකුරාදා\tසෙනසුරාදා"
         );
         DateFormatSymbols.register(
-                "th,th-TH",
+                "th\tth-TH",
                 "ก่อนเที่ยง\tหลังเที่ยง",
                 "ปีก่อน ค.ศ.\tค.ศ.",
                 "มกราคม\tกุมภาพันธ์\tมีนาคม\tเมษายน\tพฤษภาคม\tมิถุนายน\tกรกฎาคม\tสิงหาคม\tกันยายน\tตุลาคม\tพฤศจิกายน\tธันวาคม",
@@ -1847,7 +1847,7 @@ final class DateFormatSymbolProvider {
                 "วันอาทิตย์\tวันจันทร์\tวันอังคาร\tวันพุธ\tวันพฤหัสบดี\tวันศุกร์\tวันเสาร์"
         );
         DateFormatSymbols.register(
-                "lo,lo-LA",
+                "lo\tlo-LA",
                 "ກ່ອນທ່ຽງ\tຫຼັງທ່ຽງ",
                 "ກ່ອນ ຄ.ສ.\tຄ.ສ.",
                 "ມັງກອນ\tກຸມພາ\tມີນາ\tເມສາ\tພຶດສະພາ\tມິຖຸນາ\tກໍລະກົດ\tສິງຫາ\tກັນຍາ\tຕຸລາ\tພະຈິກ\tທັນວາ",
@@ -1856,7 +1856,7 @@ final class DateFormatSymbolProvider {
                 "ວັນອາທິດ\tວັນຈັນ\tວັນອັງຄານ\tວັນພຸດ\tວັນພະຫັດ\tວັນສຸກ\tວັນເສົາ"
         );
         DateFormatSymbols.register(
-                "dz,dz-BT",
+                "dz\tdz-BT",
                 "སྔ་ཆ་\tཕྱི་ཆ་",
                 "BCE\tCE",
                 "ཟླ་དངཔ་\tཟླ་གཉིས་པ་\tཟླ་གསུམ་པ་\tཟླ་བཞི་པ་\tཟླ་ལྔ་པ་\tཟླ་དྲུག་པ\tཟླ་བདུན་པ་\tཟླ་བརྒྱད་པ་\tཟླ་དགུ་པ་\tཟླ་བཅུ་པ་\tཟླ་བཅུ་གཅིག་པ་\tཟླ་བཅུ་གཉིས་པ་",
@@ -1865,7 +1865,7 @@ final class DateFormatSymbolProvider {
                 "གཟའ་ཟླ་བ་\tགཟའ་མིག་དམར་\tགཟའ་ལྷག་པ་\tགཟའ་ཕུར་བུ་\tགཟའ་པ་སངས་\tགཟའ་སྤེན་པ་\tགཟའ་ཉི་མ་"
         );
         DateFormatSymbols.register(
-                "bo,bo-CN,bo-IN",
+                "bo\tbo-CN\tbo-IN",
                 "སྔ་དྲོ་\tཕྱི་དྲོ་",
                 "སྤྱི་ལོ་སྔོན་\tསྤྱི་ལོ་",
                 "ཟླ་བ་དང་པོ\tཟླ་བ་གཉིས་པ\tཟླ་བ་གསུམ་པ\tཟླ་བ་བཞི་པ\tཟླ་བ་ལྔ་པ\tཟླ་བ་དྲུག་པ\tཟླ་བ་བདུན་པ\tཟླ་བ་བརྒྱད་པ\tཟླ་བ་དགུ་པ\tཟླ་བ་བཅུ་པ\tཟླ་བ་བཅུ་གཅིག་པ\tཟླ་བ་བཅུ་གཉིས་པ",
@@ -1874,7 +1874,7 @@ final class DateFormatSymbolProvider {
                 "གཟའ་ཉི་མ་\tགཟའ་ཟླ་བ་\tགཟའ་མིག་དམར་\tགཟའ་ལྷག་པ་\tགཟའ་ཕུར་བུ་\tགཟའ་པ་སངས་\tགཟའ་སྤེན་པ་"
         );
         DateFormatSymbols.register(
-                "my,my-MM",
+                "my\tmy-MM",
                 "နံနက်\tညနေ",
                 "ဘီစီ\tအေဒီ",
                 "ဇန်နဝါရီ\tဖေဖော်ဝါရီ\tမတ်\tဧပြီ\tမေ\tဇွန်\tဇူလိုင်\tဩဂုတ်\tစက်တင်ဘာ\tအောက်တိုဘာ\tနိုဝင်ဘာ\tဒီဇင်ဘာ",
@@ -1883,7 +1883,7 @@ final class DateFormatSymbolProvider {
                 "တနင်္ဂနွေ\tတနင်္လာ\tအင်္ဂါ\tဗုဒ္ဓဟူး\tကြာသပတေး\tသောကြာ\tစနေ"
         );
         DateFormatSymbols.register(
-                "ti,ti-ET",
+                "ti\tti-ET",
                 "ንጉሆ ሰዓተ\tድሕር ሰዓት",
                 "ዓ/ዓ\tዓ/ም",
                 "ጃንዩወሪ\tፌብሩወሪ\tማርች\tኤፕረል\tሜይ\tጁን\tጁላይ\tኦገስት\tሴፕቴምበር\tኦክተውበር\tኖቬምበር\tዲሴምበር",
@@ -1901,7 +1901,7 @@ final class DateFormatSymbolProvider {
                 "ሰንበት\tሰኑይ\tሰሉስ\tረቡዕ\tሓሙስ\tዓርቢ\tቀዳም"
         );
         DateFormatSymbols.register(
-                "am,am-ET",
+                "am\tam-ET",
                 "ጥዋት\tከሰዓት",
                 "ዓ/ዓ\tዓ/ም",
                 "ጃንዩወሪ\tፌብሩወሪ\tማርች\tኤፕሪል\tሜይ\tጁን\tጁላይ\tኦገስት\tሴፕቴምበር\tኦክቶበር\tኖቬምበር\tዲሴምበር",
@@ -1910,7 +1910,7 @@ final class DateFormatSymbolProvider {
                 "እሑድ\tሰኞ\tማክሰኞ\tረቡዕ\tሐሙስ\tዓርብ\tቅዳሜ"
         );
         DateFormatSymbols.register(
-                "chr,chr-US",
+                "chr\tchr-US",
                 "ᏌᎾᎴ\tᏒᎯᏱᎢᏗᏢ",
                 "ᎤᏓᎷᎸ\tᎤᎶᏐᏅ",
                 "ᎤᏃᎸᏔᏅ\tᎧᎦᎵ\tᎠᏅᏱ\tᎧᏬᏂ\tᎠᏂᏍᎬᏘ\tᏕᎭᎷᏱ\tᎫᏰᏉᏂ\tᎦᎶᏂ\tᏚᎵᏍᏗ\tᏚᏂᏅᏗ\tᏅᏓᏕᏆ\tᎥᏍᎩᏱ",
@@ -1919,7 +1919,7 @@ final class DateFormatSymbolProvider {
                 "ᎤᎾᏙᏓᏆᏍᎬ\tᎤᎾᏙᏓᏉᏅᎯ\tᏔᎵᏁᎢᎦ\tᏦᎢᏁᎢᎦ\tᏅᎩᏁᎢᎦ\tᏧᎾᎩᎶᏍᏗ\tᎤᎾᏙᏓᏈᏕᎾ"
         );
         DateFormatSymbols.register(
-                "km,km-KH",
+                "km\tkm-KH",
                 "ព្រឹក\tល្ងាច",
                 "មុន គ.ស.\tគ.ស.",
                 "មករា\tកុម្ភៈ\tមីនា\tមេសា\tឧសភា\tមិថុនា\tកក្កដា\tសីហា\tកញ្ញា\tតុលា\tវិច្ឆិកា\tធ្នូ",
@@ -1928,7 +1928,7 @@ final class DateFormatSymbolProvider {
                 "អាទិត្យ\tច័ន្ទ\tអង្គារ\tពុធ\tព្រហស្បតិ៍\tសុក្រ\tសៅរ៍"
         );
         DateFormatSymbols.register(
-                "zgh,zgh-MA",
+                "zgh\tzgh-MA",
                 "ⵜⵉⴼⴰⵡⵜ\tⵜⴰⴷⴳⴳⵯⴰⵜ",
                 "ⴷⴰⵄ\tⴷⴼⵄ",
                 "ⵉⵏⵏⴰⵢⵔ\tⴱⵕⴰⵢⵕ\tⵎⴰⵕⵚ\tⵉⴱⵔⵉⵔ\tⵎⴰⵢⵢⵓ\tⵢⵓⵏⵢⵓ\tⵢⵓⵍⵢⵓⵣ\tⵖⵓⵛⵜ\tⵛⵓⵜⴰⵏⴱⵉⵔ\tⴽⵜⵓⴱⵔ\tⵏⵓⵡⴰⵏⴱⵉⵔ\tⴷⵓⵊⴰⵏⴱⵉⵔ",
@@ -1937,7 +1937,7 @@ final class DateFormatSymbolProvider {
                 "ⴰⵙⴰⵎⴰⵙ\tⴰⵢⵏⴰⵙ\tⴰⵙⵉⵏⴰⵙ\tⴰⴽⵕⴰⵙ\tⴰⴽⵡⴰⵙ\tⴰⵙⵉⵎⵡⴰⵙ\tⴰⵙⵉⴹⵢⴰⵙ"
         );
         DateFormatSymbols.register(
-                "shi,shi-MA,shi-Tfng,shi-Tfng-MA",
+                "shi\tshi-MA\tshi-Tfng\tshi-Tfng-MA",
                 "ⵜⵉⴼⴰⵡⵜ\tⵜⴰⴷⴳⴳⵯⴰⵜ",
                 "ⴷⴰⵄ\tⴷⴼⵄ",
                 "ⵉⵏⵏⴰⵢⵔ\tⴱⵕⴰⵢⵕ\tⵎⴰⵕⵚ\tⵉⴱⵔⵉⵔ\tⵎⴰⵢⵢⵓ\tⵢⵓⵏⵢⵓ\tⵢⵓⵍⵢⵓⵣ\tⵖⵓⵛⵜ\tⵛⵓⵜⴰⵏⴱⵉⵔ\tⴽⵜⵓⴱⵔ\tⵏⵓⵡⴰⵏⴱⵉⵔ\tⴷⵓⵊⴰⵏⴱⵉⵔ",
@@ -1946,7 +1946,7 @@ final class DateFormatSymbolProvider {
                 "ⴰⵙⴰⵎⴰⵙ\tⴰⵢⵏⴰⵙ\tⴰⵙⵉⵏⴰⵙ\tⴰⴽⵕⴰⵙ\tⴰⴽⵡⴰⵙ\tⵙⵉⵎⵡⴰⵙ\tⴰⵙⵉⴹⵢⴰⵙ"
         );
         DateFormatSymbols.register(
-                "zh-HK,zh-Hant-HK,zh-Hant-MO",
+                "zh-HK\tzh-Hant-HK\tzh-Hant-MO",
                 "上午\t下午",
                 "公元前\t公元",
                 "1月\t2月\t3月\t4月\t5月\t6月\t7月\t8月\t9月\t10月\t11月\t12月",
@@ -1955,7 +1955,7 @@ final class DateFormatSymbolProvider {
                 "星期日\t星期一\t星期二\t星期三\t星期四\t星期五\t星期六"
         );
         DateFormatSymbols.register(
-                "zh,zh-CN,zh-Hans,zh-Hans-CN,zh-Hans-HK,zh-Hans-MO,zh-Hans-SG",
+                "zh\tzh-CN\tzh-Hans\tzh-Hans-CN\tzh-Hans-HK\tzh-Hans-MO\tzh-Hans-SG",
                 "上午\t下午",
                 "公元前\t公元",
                 "一月\t二月\t三月\t四月\t五月\t六月\t七月\t八月\t九月\t十月\t十一月\t十二月",
@@ -1973,7 +1973,7 @@ final class DateFormatSymbolProvider {
                 "星期日\t星期一\t星期二\t星期三\t星期四\t星期五\t星期六"
         );
         DateFormatSymbols.register(
-                "yue,yue-HK,zh-Hant,zh-Hant-TW,zh-TW",
+                "yue\tyue-HK\tzh-Hant\tzh-Hant-TW\tzh-TW",
                 "上午\t下午",
                 "西元前\t西元",
                 "1月\t2月\t3月\t4月\t5月\t6月\t7月\t8月\t9月\t10月\t11月\t12月",
@@ -1982,7 +1982,7 @@ final class DateFormatSymbolProvider {
                 "星期日\t星期一\t星期二\t星期三\t星期四\t星期五\t星期六"
         );
         DateFormatSymbols.register(
-                "ja,ja-JP",
+                "ja\tja-JP",
                 "午前\t午後",
                 "紀元前\t西暦",
                 "1月\t2月\t3月\t4月\t5月\t6月\t7月\t8月\t9月\t10月\t11月\t12月",
@@ -1991,7 +1991,7 @@ final class DateFormatSymbolProvider {
                 "日曜日\t月曜日\t火曜日\t水曜日\t木曜日\t金曜日\t土曜日"
         );
         DateFormatSymbols.register(
-                "ii,ii-CN",
+                "ii\tii-CN",
                 "ꎸꄑ\tꁯꋒ",
                 "ꃅꋊꂿ\tꃅꋊꊂ",
                 "ꋍꆪ\tꑍꆪ\tꌕꆪ\tꇖꆪ\tꉬꆪ\tꃘꆪ\tꏃꆪ\tꉆꆪ\tꈬꆪ\tꊰꆪ\tꊰꊪꆪ\tꊰꑋꆪ",
@@ -2000,7 +2000,7 @@ final class DateFormatSymbolProvider {
                 "ꑭꆏꑍ\tꆏꊂꋍ\tꆏꊂꑍ\tꆏꊂꌕ\tꆏꊂꇖ\tꆏꊂꉬ\tꆏꊂꃘ"
         );
         DateFormatSymbols.register(
-                "ko,ko-KP,ko-KR",
+                "ko\tko-KP\tko-KR",
                 "오전\t오후",
                 "BC\tAD",
                 "1월\t2월\t3월\t4월\t5월\t6월\t7월\t8월\t9월\t10월\t11월\t12월",

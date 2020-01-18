@@ -59,7 +59,7 @@ public class DateFormatSymbols {
                 shortWeekdays,
                 weekdays);
 
-        for(final String locale : locales.split(",")) {
+        for(final String locale : extractTokens(locales)) {
             LANGUAGE_TAG_TO_SYMBOLS.put(locale, symbols);
         }
     }

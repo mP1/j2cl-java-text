@@ -18,16 +18,14 @@
 package walkingkooka.javatextj2cl.java.text;
 
 import walkingkooka.collect.list.Lists;
-import walkingkooka.collect.map.Maps;
 import walkingkooka.javautillocalej2cl.WalkingkookaLocale;
 import walkingkooka.text.CharSequences;
 import walkingkooka.text.printer.IndentingPrinter;
 
-import java.text.DateFormatSymbols;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 import java.util.Locale;
-import java.util.Map;
 import java.util.stream.Collectors;
 
 abstract class LocaleProviderTool {
@@ -83,6 +81,10 @@ abstract class LocaleProviderTool {
 
     final static CharSequence quote(final String value) {
         return CharSequences.quoteAndEscape(value);
+    }
+
+    final static CharSequence tabbed(final Collection<String> values) {
+        return tabbed(values.toArray(new String[0]));
     }
 
     final static CharSequence tabbed(final String[] values) {
