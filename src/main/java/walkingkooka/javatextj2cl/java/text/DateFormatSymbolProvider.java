@@ -17,9 +17,6 @@
 
 package walkingkooka.javatextj2cl.java.text;
 
-import walkingkooka.collect.list.Lists;
-import walkingkooka.javautillocalej2cl.WalkingkookaDateFormatSymbols;
-
 final class DateFormatSymbolProvider {
     static void register() {
         DateFormatSymbols.register(
