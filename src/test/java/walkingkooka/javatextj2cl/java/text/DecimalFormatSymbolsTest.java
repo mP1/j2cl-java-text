@@ -20,16 +20,39 @@ package walkingkooka.javatextj2cl.java.text;
 import org.junit.jupiter.api.Test;
 import walkingkooka.HashCodeEqualsDefinedTesting2;
 import walkingkooka.ToStringTesting;
+import walkingkooka.collect.set.Sets;
 import walkingkooka.reflect.ClassTesting;
 import walkingkooka.reflect.JavaVisibility;
 
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Locale;
+import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public final class DecimalFormatSymbolsTest implements ClassTesting<DecimalFormatSymbols>,
         HashCodeEqualsDefinedTesting2<DecimalFormatSymbols>,
         ToStringTesting<DecimalFormatSymbols> {
+
+    // getAvailableLocales..............................................................................................
+
+    @Test
+    public void testGetAvailableLocales() {
+        final Comparator<Locale> comparator = (l, r) -> l.toLanguageTag().compareTo(r.toLanguageTag());
+
+        final Set<Locale> jdk = Sets.sorted(comparator);
+        jdk.addAll(Arrays.asList(java.text.DecimalFormatSymbols.getAvailableLocales()));
+        jdk.removeIf(l -> l.toString().equals("th_TH_TH_#u-nu-thai"));
+        jdk.removeIf(l -> l.toString().equals("ja_JP_JP_#u-ca-japanese"));
+
+        final Set<Locale> emulated = Sets.sorted(comparator);
+        emulated.addAll(Arrays.asList(DecimalFormatSymbols.getAvailableLocales()));
+
+        assertEquals(jdk, emulated);
+    }
+
+    // new..............................................................................................................
 
     @Test
     public void testNew() {
