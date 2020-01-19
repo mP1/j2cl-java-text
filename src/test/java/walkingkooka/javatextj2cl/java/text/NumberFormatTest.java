@@ -22,6 +22,7 @@ import walkingkooka.HashCodeEqualsDefinedTesting2;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.math.RoundingMode;
 import java.text.ParseException;
 import java.util.Currency;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -86,6 +87,8 @@ public final class NumberFormatTest extends FormatTestCase<NumberFormat> impleme
                 new TestNumberFormat().getMinimumIntegerDigits(),
                 "getMinimumIntegerDigits");
     }
+
+    // currency..........................................................................................
 
     @Test
     public void testGetCurrencyFails() {
@@ -288,6 +291,21 @@ public final class NumberFormatTest extends FormatTestCase<NumberFormat> impleme
         assertEquals(jdk.getMinimumIntegerDigits(),
                 emulated.getMinimumIntegerDigits(),
                 () -> "setMinimumIntegerDigitsAndCheck " + min + " setMaximumIntegerDigitsAndCheck " + max);
+    }
+
+    // roundingMode.....................................................................................................
+
+    @Test
+    public void testGetRoundingModeFails() {
+        assertThrows(UnsupportedOperationException.class, () -> new TestJdkNumberFormat().getRoundingMode());
+        assertThrows(UnsupportedOperationException.class, () -> new TestNumberFormat().getRoundingMode());
+    }
+
+    @Test
+    public void testSetRoundingModeFails() {
+        final RoundingMode roundingMode = RoundingMode.DOWN;
+        assertThrows(UnsupportedOperationException.class, () -> new TestJdkNumberFormat().setRoundingMode(roundingMode));
+        assertThrows(UnsupportedOperationException.class, () -> new TestNumberFormat().setRoundingMode(roundingMode));
     }
 
     // format...........................................................................................................
