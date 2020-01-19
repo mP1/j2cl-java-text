@@ -30,7 +30,7 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * This tool prints to sysout, the {@link DateFormatSymbolProvider#register()}
+ * This tool prints to sysout, the {@link DecimalFormatSymbolProvider#register}
  */
 public final class DecimalFormatSymbolsProviderTool extends LocaleProviderTool {
 
