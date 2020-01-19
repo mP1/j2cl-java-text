@@ -33,7 +33,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
- * This tool prints to sysout, that prints a List holding all {@link WalkingkookaLocale} with their data queried from the JDK classes.
+ * This tool prints to sysout, that prints a {@link DateFormatSymbolsProvider#register()}
  */
 public final class DateFormatSymbolsProviderTool extends LocaleProviderTool {
 
