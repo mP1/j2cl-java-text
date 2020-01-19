@@ -69,6 +69,41 @@ public final class DecimalFormatSymbolsTest implements ClassTesting<DecimalForma
         assertEquals(expected.getZeroDigit(), emulated.getZeroDigit(), "zeroDigit");
     }
 
+    // clone............................................................................................................
+
+    @Test
+    public void testCloneState() {
+        this.cloneStateAndCheck(new DecimalFormatSymbols());
+    }
+
+    @Test
+    public void testCloneState2() {
+        final DecimalFormatSymbols symbols = new DecimalFormatSymbols();
+        symbols.setCurrency("AUD");
+        symbols.setCurrencySymbol("$");
+        symbols.setDecimalSeparator('.');
+        symbols.setDigit('D');
+        symbols.setExponentSeparator("E");
+        symbols.setGroupingSeparator('G');
+        symbols.setInfinity("I");
+        symbols.setInternationalCurrencySymbol("@");
+        symbols.setMinusSign('-');
+        symbols.setMonetaryDecimalSeparator('M');
+        symbols.setNaN("N");
+        symbols.setPatternSeparator('P');
+        symbols.setPercent('%');
+        symbols.setPerMill('T');
+        symbols.setZeroDigit('Z');
+
+        this.cloneStateAndCheck(symbols);
+    }
+
+    private void cloneStateAndCheck(final DecimalFormatSymbols symbols) {
+        this.checkEquals(symbols, symbols.cloneState());
+    }
+
+    // equals...........................................................................................................
+
     @Test
     public void testDifferentLocale() {
         this.checkNotEquals(new DecimalFormatSymbols(Locale.FRANCE));
