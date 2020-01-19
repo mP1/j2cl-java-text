@@ -104,6 +104,12 @@ public final class NumberFormatTest extends FormatTestCase<NumberFormat> impleme
     // tests format overloads do the right thing.
 
     @Test
+    public void testFormatNonNumberFails() {
+        assertThrows(IllegalArgumentException.class,
+                () -> new TestNumberFormat().format("not a number", new StringBuffer(), new FieldPosition(0)));
+    }
+
+    @Test
     public void testFormatByteFive() {
         this.formatObjectStringBufferFieldPositionAndCheck((byte) 5);
     }
