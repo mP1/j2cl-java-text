@@ -303,6 +303,29 @@ public class DecimalFormatSymbols {
 
     private char zeroDigit;
 
+    // clone...........................................................................................................
+
+    /**
+     * Used internally to make a defensive copy
+     */
+    final DecimalFormatSymbols cloneState() {
+        return new DecimalFormatSymbols(this.currency,
+                this.currencySymbol,
+                this.decimalSeparator,
+                this.digit,
+                this.exponentSeparator,
+                this.groupingSeparator,
+                this.infinity,
+                this.internationalCurrencySymbol,
+                this.minusSign,
+                this.monetaryDecimalSeparator,
+                this.nan,
+                this.patternSeparator,
+                this.percent,
+                this.perMill,
+                this.zeroDigit);
+    }
+
     // Object...........................................................................................................
 
     @Override
