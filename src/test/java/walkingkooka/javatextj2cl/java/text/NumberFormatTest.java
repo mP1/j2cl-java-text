@@ -100,6 +100,196 @@ public final class NumberFormatTest extends FormatTestCase<NumberFormat> impleme
         assertThrows(UnsupportedOperationException.class, () -> new TestNumberFormat().setCurrency(currency));
     }
 
+    // setMaximumFractionDigits..........................................................................................
+
+    @Test
+    public void testSetMaximumFractionDigitsZero() {
+        this.setMaximumFractionDigitsAndCheck(0);
+    }
+
+    @Test
+    public void testSetMaximumFractionDigitsNegative() {
+        this.setMaximumFractionDigitsAndCheck(-1);
+    }
+
+    @Test
+    public void testSetMaximumFractionDigitsPositive() {
+        this.setMaximumFractionDigitsAndCheck(2);
+    }
+
+    private void setMaximumFractionDigitsAndCheck(final int value) {
+        final TestJdkNumberFormat jdk = new TestJdkNumberFormat();
+        jdk.setMaximumFractionDigits(value);
+
+        final TestNumberFormat emulated = new TestNumberFormat();
+        emulated.setMaximumFractionDigits(value);
+
+        assertEquals(jdk.getMaximumFractionDigits(),
+                emulated.getMaximumFractionDigits(),
+                () -> "setMaximumFractionDigitsAndCheck " + value);
+
+        assertEquals(jdk.getMinimumFractionDigits(),
+                emulated.getMinimumFractionDigits(),
+                () -> "setMinimumFractionDigitsAndCheck " + value);
+    }
+
+    // setMaximumFractionDigits then setMinimumFractionDigits...........................................................
+
+    @Test
+    public void testSetMinimumFractionDigitsLess() {
+        this.setMaximumMinimumFractionDigitsAndCheck(5, 4);
+    }
+
+    @Test
+    public void testSetMinimumFractionDigitsMore() {
+        this.setMaximumMinimumFractionDigitsAndCheck(5, 6);
+    }
+
+    private void setMaximumMinimumFractionDigitsAndCheck(final int max,
+                                                         final int oldMin) {
+        final TestJdkNumberFormat jdk = new TestJdkNumberFormat();
+        jdk.setMaximumFractionDigits(max);
+        jdk.setMinimumFractionDigits(oldMin);
+
+        final TestNumberFormat emulated = new TestNumberFormat();
+        emulated.setMaximumFractionDigits(max);
+        emulated.setMinimumFractionDigits(oldMin);
+
+        assertEquals(jdk.getMinimumFractionDigits(),
+                emulated.getMinimumFractionDigits(),
+                () -> "setMaximumFractionDigitsAndCheck " + max + " setMinimumFractionDigitsAndCheck " + oldMin);
+
+        assertEquals(jdk.getMaximumFractionDigits(),
+                emulated.getMaximumFractionDigits(),
+                () -> "setMaximumFractionDigitsAndCheck " + max + " setMinimumFractionDigitsAndCheck " + oldMin);
+    }
+
+    // setMinimumFractionDigits then setMaximumFractionDigits...........................................................
+
+    @Test
+    public void testSetMaximumFractionDigitsLess() {
+        this.setMinimumMaximumFractionDigitsAndCheck(5, 4);
+    }
+
+    @Test
+    public void testSetMaximumFractionDigitsMore() {
+        this.setMinimumMaximumFractionDigitsAndCheck(5, 6);
+    }
+
+    private void setMinimumMaximumFractionDigitsAndCheck(final int min,
+                                                         final int max) {
+        final TestJdkNumberFormat jdk = new TestJdkNumberFormat();
+        jdk.setMinimumFractionDigits(min);
+        jdk.setMaximumFractionDigits(max);
+
+        final TestNumberFormat emulated = new TestNumberFormat();
+        emulated.setMinimumFractionDigits(min);
+        emulated.setMaximumFractionDigits(max);
+
+        assertEquals(jdk.getMaximumFractionDigits(),
+                emulated.getMaximumFractionDigits(),
+                () -> "setMinimumFractionDigitsAndCheck " + min + " setMaximumFractionDigitsAndCheck " + max);
+
+        assertEquals(jdk.getMinimumFractionDigits(),
+                emulated.getMinimumFractionDigits(),
+                () -> "setMinimumFractionDigitsAndCheck " + min + " setMaximumFractionDigitsAndCheck " + max);
+    }
+
+    // setMaximumIntegerDigits..........................................................................................
+
+    @Test
+    public void testSetMaximumIntegerDigitsZero() {
+        this.setMaximumIntegerDigitsAndCheck(0);
+    }
+
+    @Test
+    public void testSetMaximumIntegerDigitsNegative() {
+        this.setMaximumIntegerDigitsAndCheck(-1);
+    }
+
+    @Test
+    public void testSetMaximumIntegerDigitsPositive() {
+        this.setMaximumIntegerDigitsAndCheck(2);
+    }
+
+    private void setMaximumIntegerDigitsAndCheck(final int value) {
+        final TestJdkNumberFormat jdk = new TestJdkNumberFormat();
+        jdk.setMaximumIntegerDigits(value);
+
+        final TestNumberFormat emulated = new TestNumberFormat();
+        emulated.setMaximumIntegerDigits(value);
+
+        assertEquals(jdk.getMaximumIntegerDigits(),
+                emulated.getMaximumIntegerDigits(),
+                () -> "setMaximumIntegerDigitsAndCheck " + value);
+
+        assertEquals(jdk.getMinimumIntegerDigits(),
+                emulated.getMinimumIntegerDigits(),
+                () -> "setMinimumIntegerDigitsAndCheck " + value);
+    }
+
+    // setMaximumIntegerDigits then setMinimumIntegerDigits...........................................................
+
+    @Test
+    public void testSetMinimumIntegerDigitsLess() {
+        this.setMaximumMinimumIntegerDigitsAndCheck(5, 4);
+    }
+
+    @Test
+    public void testSetMinimumIntegerDigitsMore() {
+        this.setMaximumMinimumIntegerDigitsAndCheck(5, 6);
+    }
+
+    private void setMaximumMinimumIntegerDigitsAndCheck(final int max,
+                                                        final int oldMin) {
+        final TestJdkNumberFormat jdk = new TestJdkNumberFormat();
+        jdk.setMaximumIntegerDigits(max);
+        jdk.setMinimumIntegerDigits(oldMin);
+
+        final TestNumberFormat emulated = new TestNumberFormat();
+        emulated.setMaximumIntegerDigits(max);
+        emulated.setMinimumIntegerDigits(oldMin);
+
+        assertEquals(jdk.getMinimumIntegerDigits(),
+                emulated.getMinimumIntegerDigits(),
+                () -> "setMaximumIntegerDigitsAndCheck " + max + " setMinimumIntegerDigitsAndCheck " + oldMin);
+
+        assertEquals(jdk.getMaximumIntegerDigits(),
+                emulated.getMaximumIntegerDigits(),
+                () -> "setMaximumIntegerDigitsAndCheck " + max + " setMinimumIntegerDigitsAndCheck " + oldMin);
+    }
+
+    // setMinimumIntegerDigits then setMaximumIntegerDigits...........................................................
+
+    @Test
+    public void testSetMaximumIntegerDigitsLess() {
+        this.setMinimumMaximumIntegerDigitsAndCheck(5, 4);
+    }
+
+    @Test
+    public void testSetMaximumIntegerDigitsMore() {
+        this.setMinimumMaximumIntegerDigitsAndCheck(5, 6);
+    }
+
+    private void setMinimumMaximumIntegerDigitsAndCheck(final int min,
+                                                        final int max) {
+        final TestJdkNumberFormat jdk = new TestJdkNumberFormat();
+        jdk.setMinimumIntegerDigits(min);
+        jdk.setMaximumIntegerDigits(max);
+
+        final TestNumberFormat emulated = new TestNumberFormat();
+        emulated.setMinimumIntegerDigits(min);
+        emulated.setMaximumIntegerDigits(max);
+
+        assertEquals(jdk.getMaximumIntegerDigits(),
+                emulated.getMaximumIntegerDigits(),
+                () -> "setMinimumIntegerDigitsAndCheck " + min + " setMaximumIntegerDigitsAndCheck " + max);
+
+        assertEquals(jdk.getMinimumIntegerDigits(),
+                emulated.getMinimumIntegerDigits(),
+                () -> "setMinimumIntegerDigitsAndCheck " + min + " setMaximumIntegerDigitsAndCheck " + max);
+    }
+
     // format...........................................................................................................
     // tests format overloads do the right thing.
 
