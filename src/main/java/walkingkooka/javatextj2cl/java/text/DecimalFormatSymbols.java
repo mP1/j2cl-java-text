@@ -112,7 +112,7 @@ public class DecimalFormatSymbols {
     }
 
     /**
-     * All available {@link Locale locales} also provide date format symbols.
+     * All available {@link Locale locales} also provide decimal format symbols.
      */
     public static Locale[] getAvailableLocales() {
         return LANGUAGE_TAG_TO_SYMBOLS.keySet()
