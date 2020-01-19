@@ -18,6 +18,7 @@
 package walkingkooka.javatextj2cl.java.text;
 
 import java.math.BigInteger;
+import java.math.RoundingMode;
 import java.text.ParseException;
 import java.util.Currency;
 import java.util.Locale;
@@ -432,6 +433,16 @@ public abstract class NumberFormat extends Format {
     }
 
     private int minimumIntegerDigits = 1;
+
+    // RoundingMode.....................................................................................................
+
+    public RoundingMode getRoundingMode() {
+        throw new UnsupportedOperationException();
+    }
+
+    public void setRoundingMode(final RoundingMode roundingMode) {
+        throw new UnsupportedOperationException();
+    }
 
     // Object...........................................................................................................
 
