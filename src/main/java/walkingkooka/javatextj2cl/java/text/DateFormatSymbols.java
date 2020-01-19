@@ -103,7 +103,11 @@ public class DateFormatSymbols {
      * All available {@link Locale locales} also provide date format symbols.
      */
     public static Locale[] getAvailableLocales() {
-        return Locale.getAvailableLocales();
+        return LANGUAGE_TAG_TO_SYMBOLS.keySet()
+                .stream()
+                .map(Locale::forLanguageTag)
+                .sorted((l, r) -> l.toLanguageTag().compareTo(r.toLanguageTag()))
+                .toArray(Locale[]::new);
     }
 
     public DateFormatSymbols() {
