@@ -68,23 +68,23 @@ public final class DecimalFormatSymbolsProviderTool extends LocaleProviderTool {
                 this.line(type(walkingkooka.javatextj2cl.java.text.DecimalFormatSymbols.class) + ".register(");
                 this.indent();
                 {
-                    this.line(tabbed(languageTags) + ",");
+                    this.line(tabbed(languageTags) + ", // locales");
 
-                    this.line(quote(symbols.getCurrency().toString()) + ",");
-                    this.line(quote(symbols.getCurrencySymbol()) + ",");
-                    this.line(quote(symbols.getDecimalSeparator()) + ",");
-                    this.line(quote(symbols.getDigit()) + ",");
-                    this.line(quote(symbols.getExponentSeparator()) + ",");
-                    this.line(quote(symbols.getGroupingSeparator()) + ",");
-                    this.line(quote(symbols.getInfinity()) + ",");
-                    this.line(quote(symbols.getInternationalCurrencySymbol()) + ",");
-                    this.line(quote(symbols.getMinusSign()) + ",");
-                    this.line(quote(symbols.getMonetaryDecimalSeparator()) + ",");
-                    this.line(quote(symbols.getNaN()) + ",");
-                    this.line(quote(symbols.getPatternSeparator()) + ",");
-                    this.line(quote(symbols.getPercent()) + ",");
-                    this.line(quote(symbols.getPerMill()) + ",");
-                    this.line(quote(symbols.getZeroDigit()));
+                    this.line(quote(symbols.getCurrency().toString()) + ", // currency");
+                    this.line(quote(symbols.getCurrencySymbol()) + ", // currencySymbols");
+                    this.line(quote(symbols.getDecimalSeparator()) + ", // decimalSeparator");
+                    this.line(quote(symbols.getDigit()) + ", // digit");
+                    this.line(quote(symbols.getExponentSeparator()) + ", // exponentSeparator");
+                    this.line(quote(symbols.getGroupingSeparator()) + ", // groupingSeparator");
+                    this.line(quote(symbols.getInfinity()) + ", // inifinity");
+                    this.line(quote(symbols.getInternationalCurrencySymbol()) + ", // internationalCurrencySymbol");
+                    this.line(quote(symbols.getMinusSign()) + ", // minusSign");
+                    this.line(quote(symbols.getMonetaryDecimalSeparator()) + ", // monetaryDecimalSeparator");
+                    this.line(quote(symbols.getNaN()) + ", // nan");
+                    this.line(quote(symbols.getPatternSeparator()) + ", // patternSeparator");
+                    this.line(quote(symbols.getPercent()) + ", // percent");
+                    this.line(quote(symbols.getPerMill()) + ", // perMill");
+                    this.line(quote(symbols.getZeroDigit()) + " // zeroDigit");
                 }
                 this.outdent();
 
