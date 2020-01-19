@@ -71,14 +71,14 @@ public final class DateFormatSymbolsProviderTool extends LocaleProviderTool {
                 this.line(type(walkingkooka.javatextj2cl.java.text.DateFormatSymbols.class) + ".register(");
                 this.indent();
                 {
-                    this.line(tabbed(languageTags) + ",");
+                    this.line(tabbed(languageTags) + ", // locales");
 
-                    this.line(tabbed(symbols.getAmPmStrings()) + ",");
-                    this.line(tabbed(symbols.getEras()) + ",");
-                    this.line(months(symbols.getMonths()) + ","); // add extra 13th
-                    this.line(months(symbols.getShortMonths()) + ",");
-                    this.line(weekdays(symbols.getShortWeekdays()) + ","); // add empty 1st.
-                    this.line(weekdays(symbols.getWeekdays()));
+                    this.line(tabbed(symbols.getAmPmStrings()) + ", // ampm");
+                    this.line(tabbed(symbols.getEras()) + ", // eras");
+                    this.line(months(symbols.getMonths()) + ", // months"); // add extra 13th
+                    this.line(months(symbols.getShortMonths()) + ", // shortMonths");
+                    this.line(weekdays(symbols.getShortWeekdays()) + ", // shortWeekdays"); // add empty 1st.
+                    this.line(weekdays(symbols.getWeekdays()) + " // weekdays");
                 }
                 this.outdent();
 
