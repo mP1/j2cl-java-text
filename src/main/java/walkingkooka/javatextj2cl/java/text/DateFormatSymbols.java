@@ -39,11 +39,11 @@ public class DateFormatSymbols {
     private final static Map<String, DateFormatSymbols> LANGUAGE_TAG_TO_SYMBOLS = Maps.ordered();
 
     static {
-        DateFormatSymbolProvider.register();
+        DateFormatSymbolsProvider.register();
     }
 
     /**
-     * Used by {@link DateFormatSymbolProvider#register()} to register individual symbols
+     * Used by {@link DateFormatSymbolsProvider#register()} to register individual symbols
      */
     static void register(final String locales,
                          final String ampms,

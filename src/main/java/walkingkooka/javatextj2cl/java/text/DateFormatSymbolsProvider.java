@@ -17,7 +17,7 @@
 
 package walkingkooka.javatextj2cl.java.text;
 
-final class DateFormatSymbolProvider {
+final class DateFormatSymbolsProvider {
     static void register() {
         DateFormatSymbols.register(
                 "br\tbr-FR",

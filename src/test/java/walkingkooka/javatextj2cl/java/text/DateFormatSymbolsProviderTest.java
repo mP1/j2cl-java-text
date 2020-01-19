@@ -20,11 +20,11 @@ package walkingkooka.javatextj2cl.java.text;
 import walkingkooka.reflect.ClassTesting;
 import walkingkooka.reflect.JavaVisibility;
 
-public final class DateFormatSymbolProviderTest implements ClassTesting<DateFormatSymbolProvider> {
+public final class DateFormatSymbolsProviderTest implements ClassTesting<DateFormatSymbolsProvider> {
 
     @Override
-    public Class<DateFormatSymbolProvider> type() {
-        return DateFormatSymbolProvider.class;
+    public Class<DateFormatSymbolsProvider> type() {
+        return DateFormatSymbolsProvider.class;
     }
 
     @Override
