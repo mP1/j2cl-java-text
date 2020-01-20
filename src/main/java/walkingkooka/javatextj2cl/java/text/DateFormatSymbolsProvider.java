@@ -28,6 +28,7 @@ final class DateFormatSymbolsProvider {
                 "Sul\tLun\tMeu.\tMer.\tYaou\tGwe.\tSad.", // shortWeekdays
                 "Sul\tLun\tMeurzh\tMercʼher\tYaou\tGwener\tSadorn" // weekdays
         );
+
         DateFormatSymbols.register(
                 "ig\tig-NG", // locales
                 "A.M.\tP.M.", // ampm
@@ -37,6 +38,7 @@ final class DateFormatSymbolsProvider {
                 "Ụka\tMọn\tTiu\tWen\tTọọ\tFraị\tSat", // shortWeekdays
                 "Mbọsị Ụka\tMọnde\tTiuzdee\tWenezdee\tTọọzdee\tFraịdee\tSatọdee" // weekdays
         );
+
         DateFormatSymbols.register(
                 "seh\tseh-MZ", // locales
                 "AM\tPM", // ampm
@@ -46,6 +48,7 @@ final class DateFormatSymbolsProvider {
                 "Dim\tPos\tPir\tTat\tNai\tSha\tSab", // shortWeekdays
                 "Dimingu\tChiposi\tChipiri\tChitatu\tChinai\tChishanu\tSabudu" // weekdays
         );
+
         DateFormatSymbols.register(
                 "dyo\tdyo-SN", // locales
                 "AM\tPM", // ampm
@@ -55,6 +58,7 @@ final class DateFormatSymbolsProvider {
                 "Dim\tTen\tTal\tAla\tAra\tArj\tSib", // shortWeekdays
                 "Dimas\tTeneŋ\tTalata\tAlarbay\tAramisay\tArjuma\tSibiti" // weekdays
         );
+
         DateFormatSymbols.register(
                 "fil\tfil-PH", // locales
                 "AM\tPM", // ampm
@@ -64,6 +68,7 @@ final class DateFormatSymbolsProvider {
                 "Lin\tLun\tMar\tMiy\tHuw\tBiy\tSab", // shortWeekdays
                 "Linggo\tLunes\tMartes\tMiyerkules\tHuwebes\tBiyernes\tSabado" // weekdays
         );
+
         DateFormatSymbols.register(
                 "mg\tmg-MG", // locales
                 "AM\tPM", // ampm
@@ -73,6 +78,7 @@ final class DateFormatSymbolsProvider {
                 "Alah\tAlats\tTal\tAlar\tAlak\tZom\tAsab", // shortWeekdays
                 "Alahady\tAlatsinainy\tTalata\tAlarobia\tAlakamisy\tZoma\tAsabotsy" // weekdays
         );
+
         DateFormatSymbols.register(
                 "sw\tsw-KE\tsw-TZ\tsw-UG", // locales
                 "AM\tPM", // ampm
@@ -82,6 +88,7 @@ final class DateFormatSymbolsProvider {
                 "Jumapili\tJumatatu\tJumanne\tJumatano\tAlhamisi\tIjumaa\tJumamosi", // shortWeekdays
                 "Jumapili\tJumatatu\tJumanne\tJumatano\tAlhamisi\tIjumaa\tJumamosi" // weekdays
         );
+
         DateFormatSymbols.register(
                 "en\ten-001\ten-150\ten-AG\ten-AI\ten-AS\ten-AT\ten-BB\ten-BE\ten-BI\ten-BM\ten-BS\ten-BW\ten-BZ\ten-CA\ten-CC\ten-CH\ten-CK\ten-CM\ten-CX\ten-CY\ten-DE\ten-DG\ten-DK\ten-DM\ten-ER\ten-FI\ten-FJ\ten-FK\ten-FM\ten-GD\ten-GG\ten-GH\ten-GI\ten-GM\ten-GU\ten-GY\ten-HK\ten-IL\ten-IM\ten-IN\ten-IO\ten-JE\ten-JM\ten-KE\ten-KI\ten-KN\ten-KY\ten-LC\ten-LR\ten-LS\ten-MG\ten-MH\ten-MO\ten-MP\ten-MS\ten-MT\ten-MU\ten-MW\ten-MY\ten-NA\ten-NF\ten-NG\ten-NL\ten-NR\ten-NU\ten-NZ\ten-PG\ten-PH\ten-PK\ten-PN\ten-PR\ten-PW\ten-RW\ten-SB\ten-SC\ten-SD\ten-SE\ten-SG\ten-SH\ten-SI\ten-SL\ten-SS\ten-SX\ten-SZ\ten-TC\ten-TK\ten-TO\ten-TT\ten-TV\ten-TZ\ten-UG\ten-UM\ten-US\ten-US-POSIX\ten-VC\ten-VG\ten-VI\ten-VU\ten-WS\ten-ZA\ten-ZM\ten-ZW", // locales
                 "AM\tPM", // ampm
@@ -91,6 +98,7 @@ final class DateFormatSymbolsProvider {
                 "Sun\tMon\tTue\tWed\tThu\tFri\tSat", // shortWeekdays
                 "Sunday\tMonday\tTuesday\tWednesday\tThursday\tFriday\tSaturday" // weekdays
         );
+
         DateFormatSymbols.register(
                 "zu\tzu-ZA", // locales
                 "AM\tPM", // ampm
@@ -100,6 +108,7 @@ final class DateFormatSymbolsProvider {
                 "Son\tMso\tBil\tTha\tSin\tHla\tMgq", // shortWeekdays
                 "ISonto\tUMsombuluko\tULwesibili\tULwesithathu\tULwesine\tULwesihlanu\tUMgqibelo" // weekdays
         );
+
         DateFormatSymbols.register(
                 "lg\tlg-UG", // locales
                 "AM\tPM", // ampm
@@ -109,6 +118,7 @@ final class DateFormatSymbolsProvider {
                 "Sab\tBal\tLw2\tLw3\tLw4\tLw5\tLw6", // shortWeekdays
                 "Sabbiiti\tBalaza\tLwakubiri\tLwakusatu\tLwakuna\tLwakutaano\tLwamukaaga" // weekdays
         );
+
         DateFormatSymbols.register(
                 "sn\tsn-ZW", // locales
                 "AM\tPM", // ampm
@@ -118,6 +128,7 @@ final class DateFormatSymbolsProvider {
                 "Svo\tMuv\tChip\tChit\tChin\tChis\tMug", // shortWeekdays
                 "Svondo\tMuvhuro\tChipiri\tChitatu\tChina\tChishanu\tMugovera" // weekdays
         );
+
         DateFormatSymbols.register(
                 "cgg\tcgg-UG\tnyn\tnyn-UG", // locales
                 "AM\tPM", // ampm
@@ -127,6 +138,7 @@ final class DateFormatSymbolsProvider {
                 "SAN\tORK\tOKB\tOKS\tOKN\tOKT\tOMK", // shortWeekdays
                 "Sande\tOrwokubanza\tOrwakabiri\tOrwakashatu\tOrwakana\tOrwakataano\tOrwamukaaga" // weekdays
         );
+
         DateFormatSymbols.register(
                 "nd\tnd-ZW", // locales
                 "AM\tPM", // ampm
@@ -136,6 +148,7 @@ final class DateFormatSymbolsProvider {
                 "Son\tMvu\tSib\tSit\tSin\tSih\tMgq", // shortWeekdays
                 "Sonto\tMvulo\tSibili\tSithathu\tSine\tSihlanu\tMgqibelo" // weekdays
         );
+
         DateFormatSymbols.register(
                 "haw\thaw-US", // locales
                 "AM\tPM", // ampm
@@ -145,6 +158,7 @@ final class DateFormatSymbolsProvider {
                 "LP\tP1\tP2\tP3\tP4\tP5\tP6", // shortWeekdays
                 "Lāpule\tPoʻakahi\tPoʻalua\tPoʻakolu\tPoʻahā\tPoʻalima\tPoʻaono" // weekdays
         );
+
         DateFormatSymbols.register(
                 "ckb\tckb-IQ\tckb-IR\tcu\tcu-RU\tprg\tprg-001\ttk\ttk-TM\tund\tvo\tvo-001", // locales
                 "AM\tPM", // ampm
@@ -154,6 +168,7 @@ final class DateFormatSymbolsProvider {
                 "Sun\tMon\tTue\tWed\tThu\tFri\tSat", // shortWeekdays
                 "Sun\tMon\tTue\tWed\tThu\tFri\tSat" // weekdays
         );
+
         DateFormatSymbols.register(
                 "rw\trw-RW", // locales
                 "AM\tPM", // ampm
@@ -163,6 +178,7 @@ final class DateFormatSymbolsProvider {
                 "cyu.\tmbe.\tkab.\tgtu.\tkan.\tgnu.\tgnd.", // shortWeekdays
                 "Ku cyumweru\tKuwa mbere\tKuwa kabiri\tKuwa gatatu\tKuwa kane\tKuwa gatanu\tKuwa gatandatu" // weekdays
         );
+
         DateFormatSymbols.register(
                 "lkt\tlkt-US", // locales
                 "AM\tPM", // ampm
@@ -172,6 +188,7 @@ final class DateFormatSymbolsProvider {
                 "Aŋpétuwakȟaŋ\tAŋpétuwaŋži\tAŋpétunuŋpa\tAŋpétuyamni\tAŋpétutopa\tAŋpétuzaptaŋ\tOwáŋgyužažapi", // shortWeekdays
                 "Aŋpétuwakȟaŋ\tAŋpétuwaŋži\tAŋpétunuŋpa\tAŋpétuyamni\tAŋpétutopa\tAŋpétuzaptaŋ\tOwáŋgyužažapi" // weekdays
         );
+
         DateFormatSymbols.register(
                 "mgo\tmgo-CM", // locales
                 "AM\tPM", // ampm
@@ -181,6 +198,7 @@ final class DateFormatSymbolsProvider {
                 "Aneg 1\tAneg 2\tAneg 3\tAneg 4\tAneg 5\tAneg 6\tAneg 7", // shortWeekdays
                 "Aneg 1\tAneg 2\tAneg 3\tAneg 4\tAneg 5\tAneg 6\tAneg 7" // weekdays
         );
+
         DateFormatSymbols.register(
                 "kl\tkl-GL", // locales
                 "AM\tPM", // ampm
@@ -190,6 +208,7 @@ final class DateFormatSymbolsProvider {
                 "sab\tata\tmar\tpin\tsis\ttal\tarf", // shortWeekdays
                 "sabaat\tataasinngorneq\tmarlunngorneq\tpingasunngorneq\tsisamanngorneq\ttallimanngorneq\tarfininngorneq" // weekdays
         );
+
         DateFormatSymbols.register(
                 "vai-Latn\tvai-Latn-LR", // locales
                 "AM\tPM", // ampm
@@ -199,6 +218,7 @@ final class DateFormatSymbolsProvider {
                 "lahadi\ttɛɛnɛɛ\ttalata\talaba\taimisa\taijima\tsiɓiti", // shortWeekdays
                 "lahadi\ttɛɛnɛɛ\ttalata\talaba\taimisa\taijima\tsiɓiti" // weekdays
         );
+
         DateFormatSymbols.register(
                 "kkj\tkkj-CM", // locales
                 "AM\tPM", // ampm
@@ -208,6 +228,7 @@ final class DateFormatSymbolsProvider {
                 "sɔndi\tlundi\tmardi\tmɛrkɛrɛdi\tyedi\tvaŋdɛrɛdi\tmɔnɔ sɔndi", // shortWeekdays
                 "sɔndi\tlundi\tmardi\tmɛrkɛrɛdi\tyedi\tvaŋdɛrɛdi\tmɔnɔ sɔndi" // weekdays
         );
+
         DateFormatSymbols.register(
                 "smn\tsmn-FI", // locales
                 "AM\tPM", // ampm
@@ -217,6 +238,7 @@ final class DateFormatSymbolsProvider {
                 "pa\tvu\tma\tko\ttu\tvá\tlá", // shortWeekdays
                 "pasepeeivi\tvuossaargâ\tmajebaargâ\tkoskoho\ttuorâstuv\tvástuppeeivi\tlávurduv" // weekdays
         );
+
         DateFormatSymbols.register(
                 "ce\tce-RU", // locales
                 "AM\tPM", // ampm
@@ -226,6 +248,7 @@ final class DateFormatSymbolsProvider {
                 "кӀиранан де\tоршотан де\tшинарин де\tкхаарин де\tеарин де\tпӀераскан де\tшот де", // shortWeekdays
                 "кӀиранан де\tоршотан де\tшинарин де\tкхаарин де\tеарин де\tпӀераскан де\tшот де" // weekdays
         );
+
         DateFormatSymbols.register(
                 "az-Cyrl\taz-Cyrl-AZ", // locales
                 "AM\tPM", // ampm
@@ -235,6 +258,7 @@ final class DateFormatSymbolsProvider {
                 "базар\tбазар ертәси\tчәршәнбә ахшамы\tчәршәнбә\tҹүмә ахшамы\tҹүмә\tшәнбә", // shortWeekdays
                 "базар\tбазар ертәси\tчәршәнбә ахшамы\tчәршәнбә\tҹүмә ахшамы\tҹүмә\tшәнбә" // weekdays
         );
+
         DateFormatSymbols.register(
                 "lrc\tlrc-IQ\tlrc-IR", // locales
                 "AM\tPM", // ampm
@@ -244,6 +268,7 @@ final class DateFormatSymbolsProvider {
                 "Sun\tMon\tTue\tWed\tThu\tFri\tSat", // shortWeekdays
                 "Sun\tMon\tTue\tWed\tThu\tFri\tSat" // weekdays
         );
+
         DateFormatSymbols.register(
                 "uz-Arab\tuz-Arab-AF", // locales
                 "AM\tPM", // ampm
@@ -253,6 +278,7 @@ final class DateFormatSymbolsProvider {
                 "ی.\tد.\tس.\tچ.\tپ.\tج.\tش.", // shortWeekdays
                 "یکشنبه\tدوشنبه\tسه‌شنبه\tچهارشنبه\tپنجشنبه\tجمعه\tشنبه" // weekdays
         );
+
         DateFormatSymbols.register(
                 "vai\tvai-LR\tvai-Vaii\tvai-Vaii-LR", // locales
                 "AM\tPM", // ampm
@@ -262,6 +288,7 @@ final class DateFormatSymbolsProvider {
                 "ꕞꕌꔵ\tꗳꗡꘉ\tꕚꕞꕚ\tꕉꕞꕒ\tꕉꔤꕆꕢ\tꕉꔤꕀꕮ\tꔻꔬꔳ", // shortWeekdays
                 "ꕞꕌꔵ\tꗳꗡꘉ\tꕚꕞꕚ\tꕉꕞꕒ\tꕉꔤꕆꕢ\tꕉꔤꕀꕮ\tꔻꔬꔳ" // weekdays
         );
+
         DateFormatSymbols.register(
                 "cy\tcy-GB", // locales
                 "AM\tPM", // ampm
@@ -271,6 +298,7 @@ final class DateFormatSymbolsProvider {
                 "Sul\tLlun\tMaw\tMer\tIau\tGwen\tSad", // shortWeekdays
                 "Dydd Sul\tDydd Llun\tDydd Mawrth\tDydd Mercher\tDydd Iau\tDydd Gwener\tDydd Sadwrn" // weekdays
         );
+
         DateFormatSymbols.register(
                 "bm\tbm-ML", // locales
                 "AM\tPM", // ampm
@@ -280,6 +308,7 @@ final class DateFormatSymbolsProvider {
                 "kar\tntɛ\ttar\tara\tala\tjum\tsib", // shortWeekdays
                 "kari\tntɛnɛ\ttarata\taraba\talamisa\tjuma\tsibiri" // weekdays
         );
+
         DateFormatSymbols.register(
                 "eu\teu-ES", // locales
                 "AM\tPM", // ampm
@@ -289,6 +318,7 @@ final class DateFormatSymbolsProvider {
                 "ig.\tal.\tar.\taz.\tog.\tor.\tlr.", // shortWeekdays
                 "igandea\tastelehena\tasteartea\tasteazkena\tosteguna\tostirala\tlarunbata" // weekdays
         );
+
         DateFormatSymbols.register(
                 "ha\tha-GH\tha-NE\tha-NG", // locales
                 "AM\tPM", // ampm
@@ -298,6 +328,7 @@ final class DateFormatSymbolsProvider {
                 "Lh\tLi\tTa\tLr\tAl\tJu\tAs", // shortWeekdays
                 "Lahadi\tLitinin\tTalata\tLaraba\tAlhamis\tJummaʼa\tAsabar" // weekdays
         );
+
         DateFormatSymbols.register(
                 "to\tto-TO", // locales
                 "AM\tPM", // ampm
@@ -307,6 +338,7 @@ final class DateFormatSymbolsProvider {
                 "Sāp\tMōn\tTūs\tPul\tTuʻa\tFal\tTok", // shortWeekdays
                 "Sāpate\tMōnite\tTūsite\tPulelulu\tTuʻapulelulu\tFalaite\tTokonaki" // weekdays
         );
+
         DateFormatSymbols.register(
                 "mt\tmt-MT", // locales
                 "AM\tPM", // ampm
@@ -316,6 +348,7 @@ final class DateFormatSymbolsProvider {
                 "Ħad\tTne\tTli\tErb\tĦam\tĠim\tSib", // shortWeekdays
                 "Il-Ħadd\tIt-Tnejn\tIt-Tlieta\tL-Erbgħa\tIl-Ħamis\tIl-Ġimgħa\tIs-Sibt" // weekdays
         );
+
         DateFormatSymbols.register(
                 "id\tid-ID", // locales
                 "AM\tPM", // ampm
@@ -325,6 +358,7 @@ final class DateFormatSymbolsProvider {
                 "Min\tSen\tSel\tRab\tKam\tJum\tSab", // shortWeekdays
                 "Minggu\tSenin\tSelasa\tRabu\tKamis\tJumat\tSabtu" // weekdays
         );
+
         DateFormatSymbols.register(
                 "es-US", // locales
                 "AM\tPM", // ampm
@@ -334,6 +368,7 @@ final class DateFormatSymbolsProvider {
                 "dom.\tlun.\tmar.\tmié.\tjue.\tvie.\tsáb.", // shortWeekdays
                 "domingo\tlunes\tmartes\tmiércoles\tjueves\tviernes\tsábado" // weekdays
         );
+
         DateFormatSymbols.register(
                 "it\tit-CH\tit-IT\tit-SM", // locales
                 "AM\tPM", // ampm
@@ -343,6 +378,7 @@ final class DateFormatSymbolsProvider {
                 "dom\tlun\tmar\tmer\tgio\tven\tsab", // shortWeekdays
                 "domenica\tlunedì\tmartedì\tmercoledì\tgiovedì\tvenerdì\tsabato" // weekdays
         );
+
         DateFormatSymbols.register(
                 "pt\tpt-BR", // locales
                 "AM\tPM", // ampm
@@ -352,6 +388,7 @@ final class DateFormatSymbolsProvider {
                 "dom\tseg\tter\tqua\tqui\tsex\tsáb", // shortWeekdays
                 "domingo\tsegunda-feira\tterça-feira\tquarta-feira\tquinta-feira\tsexta-feira\tsábado" // weekdays
         );
+
         DateFormatSymbols.register(
                 "fr\tfr-BE\tfr-BF\tfr-BI\tfr-BJ\tfr-BL\tfr-CA\tfr-CD\tfr-CF\tfr-CG\tfr-CH\tfr-CI\tfr-CM\tfr-DJ\tfr-DZ\tfr-FR\tfr-GA\tfr-GF\tfr-GN\tfr-GP\tfr-GQ\tfr-HT\tfr-KM\tfr-LU\tfr-MC\tfr-MF\tfr-MG\tfr-ML\tfr-MQ\tfr-MR\tfr-MU\tfr-NC\tfr-NE\tfr-PF\tfr-PM\tfr-RE\tfr-RW\tfr-SC\tfr-SN\tfr-SY\tfr-TD\tfr-TG\tfr-TN\tfr-VU\tfr-WF\tfr-YT", // locales
                 "AM\tPM", // ampm
@@ -361,6 +398,7 @@ final class DateFormatSymbolsProvider {
                 "dim.\tlun.\tmar.\tmer.\tjeu.\tven.\tsam.", // shortWeekdays
                 "dimanche\tlundi\tmardi\tmercredi\tjeudi\tvendredi\tsamedi" // weekdays
         );
+
         DateFormatSymbols.register(
                 "mfe\tmfe-MU", // locales
                 "AM\tPM", // ampm
@@ -370,6 +408,7 @@ final class DateFormatSymbolsProvider {
                 "dim\tlin\tmar\tmer\tze\tvan\tsam", // shortWeekdays
                 "dimans\tlindi\tmardi\tmerkredi\tzedi\tvandredi\tsamdi" // weekdays
         );
+
         DateFormatSymbols.register(
                 "az\taz-AZ\taz-Latn\taz-Latn-AZ", // locales
                 "AM\tPM", // ampm
@@ -379,6 +418,7 @@ final class DateFormatSymbolsProvider {
                 "B.\tB.E.\tÇ.A.\tÇ.\tC.A.\tC.\tŞ.", // shortWeekdays
                 "bazar\tbazar ertəsi\tçərşənbə axşamı\tçərşənbə\tcümə axşamı\tcümə\tşənbə" // weekdays
         );
+
         DateFormatSymbols.register(
                 "et\tet-EE", // locales
                 "AM\tPM", // ampm
@@ -388,6 +428,7 @@ final class DateFormatSymbolsProvider {
                 "P\tE\tT\tK\tN\tR\tL", // shortWeekdays
                 "pühapäev\tesmaspäev\tteisipäev\tkolmapäev\tneljapäev\treede\tlaupäev" // weekdays
         );
+
         DateFormatSymbols.register(
                 "fo\tfo-DK\tfo-FO", // locales
                 "AM\tPM", // ampm
@@ -397,6 +438,7 @@ final class DateFormatSymbolsProvider {
                 "sun.\tmán.\ttýs.\tmik.\thós.\tfrí.\tley.", // shortWeekdays
                 "sunnudagur\tmánadagur\ttýsdagur\tmikudagur\thósdagur\tfríggjadagur\tleygardagur" // weekdays
         );
+
         DateFormatSymbols.register(
                 "da\tda-DK\tda-GL", // locales
                 "AM\tPM", // ampm
@@ -406,6 +448,7 @@ final class DateFormatSymbolsProvider {
                 "søn.\tman.\ttir.\tons.\ttor.\tfre.\tlør.", // shortWeekdays
                 "søndag\tmandag\ttirsdag\tonsdag\ttorsdag\tfredag\tlørdag" // weekdays
         );
+
         DateFormatSymbols.register(
                 "fy\tfy-NL", // locales
                 "AM\tPM", // ampm
@@ -415,6 +458,7 @@ final class DateFormatSymbolsProvider {
                 "si\tmo\tti\two\tto\tfr\tso", // shortWeekdays
                 "snein\tmoandei\ttiisdei\twoansdei\ttongersdei\tfreed\tsneon" // weekdays
         );
+
         DateFormatSymbols.register(
                 "pl\tpl-PL", // locales
                 "AM\tPM", // ampm
@@ -424,6 +468,7 @@ final class DateFormatSymbolsProvider {
                 "niedz.\tpon.\twt.\tśr.\tczw.\tpt.\tsob.", // shortWeekdays
                 "niedziela\tponiedziałek\twtorek\tśroda\tczwartek\tpiątek\tsobota" // weekdays
         );
+
         DateFormatSymbols.register(
                 "hr\thr-BA\thr-HR", // locales
                 "AM\tPM", // ampm
@@ -433,6 +478,7 @@ final class DateFormatSymbolsProvider {
                 "ned\tpon\tuto\tsri\tčet\tpet\tsub", // shortWeekdays
                 "nedjelja\tponedjeljak\tutorak\tsrijeda\tčetvrtak\tpetak\tsubota" // weekdays
         );
+
         DateFormatSymbols.register(
                 "sk\tsk-SK", // locales
                 "AM\tPM", // ampm
@@ -442,6 +488,7 @@ final class DateFormatSymbolsProvider {
                 "ne\tpo\tut\tst\tšt\tpi\tso", // shortWeekdays
                 "nedeľa\tpondelok\tutorok\tstreda\tštvrtok\tpiatok\tsobota" // weekdays
         );
+
         DateFormatSymbols.register(
                 "wae\twae-CH", // locales
                 "AM\tPM", // ampm
@@ -451,6 +498,7 @@ final class DateFormatSymbolsProvider {
                 "Sun\tMän\tZiš\tMit\tFró\tFri\tSam", // shortWeekdays
                 "Sunntag\tMäntag\tZištag\tMittwuč\tFróntag\tFritag\tSamštag" // weekdays
         );
+
         DateFormatSymbols.register(
                 "uz-Cyrl\tuz-Cyrl-UZ", // locales
                 "AM\tPM", // ampm
@@ -460,6 +508,7 @@ final class DateFormatSymbolsProvider {
                 "Якш\tДуш\tСеш\tЧор\tПай\tЖум\tШан", // shortWeekdays
                 "якшанба\tдушанба\tсешанба\tчоршанба\tпайшанба\tжума\tшанба" // weekdays
         );
+
         DateFormatSymbols.register(
                 "sr-CS\tsr-ME", // locales
                 "AM\tPM", // ampm
@@ -469,6 +518,7 @@ final class DateFormatSymbolsProvider {
                 "нед\tпон\tуто\tсре\tчет\tпет\tсуб", // shortWeekdays
                 "недеља\tпонедељак\tуторак\tсреда\tчетвртак\tпетак\tсубота" // weekdays
         );
+
         DateFormatSymbols.register(
                 "sr-BA", // locales
                 "AM\tPM", // ampm
@@ -478,6 +528,7 @@ final class DateFormatSymbolsProvider {
                 "нед\tпон\tуто\tсри\tчет\tпет\tсуб", // shortWeekdays
                 "недеља\tпонедељак\tуторак\tсриједа\tчетвртак\tпетак\tсубота" // weekdays
         );
+
         DateFormatSymbols.register(
                 "hy\thy-AM", // locales
                 "AM\tPM", // ampm
@@ -487,6 +538,7 @@ final class DateFormatSymbolsProvider {
                 "կիր\tերկ\tերք\tչրք\tհնգ\tուր\tշբթ", // shortWeekdays
                 "կիրակի\tերկուշաբթի\tերեքշաբթի\tչորեքշաբթի\tհինգշաբթի\tուրբաթ\tշաբաթ" // weekdays
         );
+
         DateFormatSymbols.register(
                 "pa-Arab\tpa-Arab-PK", // locales
                 "AM\tPM", // ampm
@@ -496,6 +548,7 @@ final class DateFormatSymbolsProvider {
                 "اتوار\tپیر\tمنگل\tبُدھ\tجمعرات\tجمعہ\tہفتہ", // shortWeekdays
                 "اتوار\tپیر\tمنگل\tبُدھ\tجمعرات\tجمعہ\tہفتہ" // weekdays
         );
+
         DateFormatSymbols.register(
                 "ks\tks-IN", // locales
                 "AM\tPM", // ampm
@@ -505,6 +558,7 @@ final class DateFormatSymbolsProvider {
                 "آتھوار\tژٔنٛدٕروار\tبوٚموار\tبودوار\tبرٛٮ۪سوار\tجُمہ\tبٹوار", // shortWeekdays
                 "اَتھوار\tژٔنٛدرٕروار\tبوٚموار\tبودوار\tبرٛٮ۪سوار\tجُمہ\tبٹوار" // weekdays
         );
+
         DateFormatSymbols.register(
                 "mzn\tmzn-IR", // locales
                 "AM\tPM", // ampm
@@ -514,6 +568,7 @@ final class DateFormatSymbolsProvider {
                 "Sun\tMon\tTue\tWed\tThu\tFri\tSat", // shortWeekdays
                 "Sun\tMon\tTue\tWed\tThu\tFri\tSat" // weekdays
         );
+
         DateFormatSymbols.register(
                 "gu\tgu-IN", // locales
                 "AM\tPM", // ampm
@@ -523,6 +578,7 @@ final class DateFormatSymbolsProvider {
                 "રવિ\tસોમ\tમંગળ\tબુધ\tગુરુ\tશુક્ર\tશનિ", // shortWeekdays
                 "રવિવાર\tસોમવાર\tમંગળવાર\tબુધવાર\tગુરુવાર\tશુક્રવાર\tશનિવાર" // weekdays
         );
+
         DateFormatSymbols.register(
                 "ml\tml-IN", // locales
                 "AM\tPM", // ampm
@@ -532,6 +588,7 @@ final class DateFormatSymbolsProvider {
                 "ഞായർ\tതിങ്കൾ\tചൊവ്വ\tബുധൻ\tവ്യാഴം\tവെള്ളി\tശനി", // shortWeekdays
                 "ഞായറാഴ്‌ച\tതിങ്കളാഴ്‌ച\tചൊവ്വാഴ്ച\tബുധനാഴ്‌ച\tവ്യാഴാഴ്‌ച\tവെള്ളിയാഴ്‌ച\tശനിയാഴ്‌ച" // weekdays
         );
+
         DateFormatSymbols.register(
                 "ka\tka-GE", // locales
                 "AM\tPM", // ampm
@@ -541,6 +598,7 @@ final class DateFormatSymbolsProvider {
                 "კვი\tორშ\tსამ\tოთხ\tხუთ\tპარ\tშაბ", // shortWeekdays
                 "კვირა\tორშაბათი\tსამშაბათი\tოთხშაბათი\tხუთშაბათი\tპარასკევი\tშაბათი" // weekdays
         );
+
         DateFormatSymbols.register(
                 "ak\tak-GH", // locales
                 "AN\tEW", // ampm
@@ -550,6 +608,7 @@ final class DateFormatSymbolsProvider {
                 "Kwe\tDwo\tBen\tWuk\tYaw\tFia\tMem", // shortWeekdays
                 "Kwesida\tDwowda\tBenada\tWukuda\tYawda\tFida\tMemeneda" // weekdays
         );
+
         DateFormatSymbols.register(
                 "khq\tkhq-ML", // locales
                 "Adduha\tAluula", // ampm
@@ -559,6 +618,7 @@ final class DateFormatSymbolsProvider {
                 "Alh\tAti\tAta\tAla\tAlm\tAlj\tAss", // shortWeekdays
                 "Alhadi\tAtini\tAtalata\tAlarba\tAlhamiisa\tAljuma\tAssabdu" // weekdays
         );
+
         DateFormatSymbols.register(
                 "ses\tses-ML", // locales
                 "Adduha\tAluula", // ampm
@@ -568,6 +628,7 @@ final class DateFormatSymbolsProvider {
                 "Alh\tAti\tAta\tAla\tAlm\tAlz\tAsi", // shortWeekdays
                 "Alhadi\tAtinni\tAtalaata\tAlarba\tAlhamiisa\tAlzuma\tAsibti" // weekdays
         );
+
         DateFormatSymbols.register(
                 "lu\tlu-CD", // locales
                 "Dinda\tDilolo", // ampm
@@ -577,6 +638,7 @@ final class DateFormatSymbolsProvider {
                 "Lum\tNko\tNdy\tNdg\tNjw\tNgv\tLub", // shortWeekdays
                 "Lumingu\tNkodya\tNdàayà\tNdangù\tNjòwa\tNgòvya\tLubingu" // weekdays
         );
+
         DateFormatSymbols.register(
                 "bas\tbas-CM", // locales
                 "I bikɛ̂glà\tI ɓugajɔp", // ampm
@@ -586,6 +648,7 @@ final class DateFormatSymbolsProvider {
                 "nɔy\tnja\tuum\tŋge\tmbɔ\tkɔɔ\tjon", // shortWeekdays
                 "ŋgwà nɔ̂y\tŋgwà njaŋgumba\tŋgwà ûm\tŋgwà ŋgê\tŋgwà mbɔk\tŋgwà kɔɔ\tŋgwà jôn" // weekdays
         );
+
         DateFormatSymbols.register(
                 "ebu\tebu-KE", // locales
                 "KI\tUT", // ampm
@@ -595,6 +658,7 @@ final class DateFormatSymbolsProvider {
                 "Kma\tTat\tIne\tTan\tArm\tMaa\tNMM", // shortWeekdays
                 "Kiumia\tNjumatatu\tNjumaine\tNjumatano\tAramithi\tNjumaa\tNJumamothii" // weekdays
         );
+
         DateFormatSymbols.register(
                 "ki\tki-KE", // locales
                 "Kiroko\tHwaĩ-inĩ", // ampm
@@ -604,6 +668,7 @@ final class DateFormatSymbolsProvider {
                 "KMA\tNTT\tNMN\tNMT\tART\tNMA\tNMM", // shortWeekdays
                 "Kiumia\tNjumatatũ\tNjumaine\tNjumatana\tAramithi\tNjumaa\tNjumamothi" // weekdays
         );
+
         DateFormatSymbols.register(
                 "dav\tdav-KE", // locales
                 "Luma lwa K\tluma lwa p", // ampm
@@ -613,6 +678,7 @@ final class DateFormatSymbolsProvider {
                 "Jum\tJim\tKaw\tKad\tKan\tKas\tNgu", // shortWeekdays
                 "Ituku ja jumwa\tKuramuka jimweri\tKuramuka kawi\tKuramuka kadadu\tKuramuka kana\tKuramuka kasanu\tKifula nguwo" // weekdays
         );
+
         DateFormatSymbols.register(
                 "sbp\tsbp-TZ", // locales
                 "Lwamilawu\tPashamihe", // ampm
@@ -622,6 +688,7 @@ final class DateFormatSymbolsProvider {
                 "Mul\tJtt\tJnn\tJtn\tAlh\tIju\tJmo", // shortWeekdays
                 "Mulungu\tJumatatu\tJumanne\tJumatano\tAlahamisi\tIjumaa\tJumamosi" // weekdays
         );
+
         DateFormatSymbols.register(
                 "guz\tguz-KE", // locales
                 "Mambia\tMog", // ampm
@@ -631,6 +698,7 @@ final class DateFormatSymbolsProvider {
                 "Cpr\tCtt\tCmn\tCmt\tArs\tIcm\tEst", // shortWeekdays
                 "Chumapiri\tChumatato\tChumaine\tChumatano\tAramisi\tIchuma\tEsabato" // weekdays
         );
+
         DateFormatSymbols.register(
                 "kde\tkde-TZ", // locales
                 "Muhi\tChilo", // ampm
@@ -640,6 +708,7 @@ final class DateFormatSymbolsProvider {
                 "Ll2\tLl3\tLl4\tLl5\tLl6\tLl7\tLl1", // shortWeekdays
                 "Liduva lyapili\tLiduva lyatatu\tLiduva lyanchechi\tLiduva lyannyano\tLiduva lyannyano na linji\tLiduva lyannyano na mavili\tLiduva litandi" // weekdays
         );
+
         DateFormatSymbols.register(
                 "xog\txog-UG", // locales
                 "Munkyo\tEigulo", // ampm
@@ -649,6 +718,7 @@ final class DateFormatSymbolsProvider {
                 "Sabi\tBala\tKubi\tKusa\tKuna\tKuta\tMuka", // shortWeekdays
                 "Sabiiti\tBalaza\tOwokubili\tOwokusatu\tOlokuna\tOlokutaanu\tOlomukaaga" // weekdays
         );
+
         DateFormatSymbols.register(
                 "sg\tsg-CF", // locales
                 "ND\tLK", // ampm
@@ -658,6 +728,7 @@ final class DateFormatSymbolsProvider {
                 "Bk1\tBk2\tBk3\tBk4\tBk5\tLâp\tLây", // shortWeekdays
                 "Bikua-ôko\tBïkua-ûse\tBïkua-ptâ\tBïkua-usïö\tBïkua-okü\tLâpôsö\tLâyenga" // weekdays
         );
+
         DateFormatSymbols.register(
                 "luo\tluo-KE", // locales
                 "OD\tOT", // ampm
@@ -667,6 +738,7 @@ final class DateFormatSymbolsProvider {
                 "JMP\tWUT\tTAR\tTAD\tTAN\tTAB\tNGS", // shortWeekdays
                 "Jumapil\tWuok Tich\tTich Ariyo\tTich Adek\tTich Ang’wen\tTich Abich\tNgeso" // weekdays
         );
+
         DateFormatSymbols.register(
                 "ms\tms-BN\tms-MY\tms-SG", // locales
                 "PG\tPTG", // ampm
@@ -676,6 +748,7 @@ final class DateFormatSymbolsProvider {
                 "Ahd\tIsn\tSel\tRab\tKha\tJum\tSab", // shortWeekdays
                 "Ahad\tIsnin\tSelasa\tRabu\tKhamis\tJumaat\tSabtu" // weekdays
         );
+
         DateFormatSymbols.register(
                 "nus\tnus-SS", // locales
                 "RW\tTŊ", // ampm
@@ -685,6 +758,7 @@ final class DateFormatSymbolsProvider {
                 "Cäŋ\tJiec\tRɛw\tDiɔ̱k\tŊuaan\tDhieec\tBäkɛl", // shortWeekdays
                 "Cäŋ kuɔth\tJiec la̱t\tRɛw lätni\tDiɔ̱k lätni\tŊuaan lätni\tDhieec lätni\tBäkɛl lätni" // weekdays
         );
+
         DateFormatSymbols.register(
                 "mer\tmer-KE", // locales
                 "RŨ\tŨG", // ampm
@@ -694,6 +768,7 @@ final class DateFormatSymbolsProvider {
                 "KIU\tMRA\tWAI\tWET\tWEN\tWTN\tJUM", // shortWeekdays
                 "Kiumia\tMuramuko\tWairi\tWethatu\tWena\tWetano\tJumamosi" // weekdays
         );
+
         DateFormatSymbols.register(
                 "vi\tvi-VN", // locales
                 "SA\tCH", // ampm
@@ -703,6 +778,7 @@ final class DateFormatSymbolsProvider {
                 "CN\tTh 2\tTh 3\tTh 4\tTh 5\tTh 6\tTh 7", // shortWeekdays
                 "Chủ Nhật\tThứ Hai\tThứ Ba\tThứ Tư\tThứ Năm\tThứ Sáu\tThứ Bảy" // weekdays
         );
+
         DateFormatSymbols.register(
                 "twq\ttwq-NE", // locales
                 "Subbaahi\tZaarikay b", // ampm
@@ -712,6 +788,7 @@ final class DateFormatSymbolsProvider {
                 "Alh\tAti\tAta\tAla\tAlm\tAlz\tAsi", // shortWeekdays
                 "Alhadi\tAtinni\tAtalaata\tAlarba\tAlhamiisa\tAlzuma\tAsibti" // weekdays
         );
+
         DateFormatSymbols.register(
                 "dje\tdje-NE", // locales
                 "Subbaahi\tZaarikay b", // ampm
@@ -721,6 +798,7 @@ final class DateFormatSymbolsProvider {
                 "Alh\tAti\tAta\tAla\tAlm\tAlz\tAsi", // shortWeekdays
                 "Alhadi\tAtinni\tAtalaata\tAlarba\tAlhamisi\tAlzuma\tAsibti" // weekdays
         );
+
         DateFormatSymbols.register(
                 "uz\tuz-AF\tuz-Latn\tuz-Latn-UZ\tuz-UZ", // locales
                 "TO\tTK", // ampm
@@ -730,6 +808,7 @@ final class DateFormatSymbolsProvider {
                 "Ya\tDu\tSe\tCh\tPa\tJu\tSh", // shortWeekdays
                 "yakshanba\tdushanba\tseshanba\tchorshanba\tpayshanba\tjuma\tshanba" // weekdays
         );
+
         DateFormatSymbols.register(
                 "lag\tlag-TZ", // locales
                 "TOO\tMUU", // ampm
@@ -739,6 +818,7 @@ final class DateFormatSymbolsProvider {
                 "Píili\tTáatu\tÍne\tTáano\tAlh\tIjm\tMóosi", // shortWeekdays
                 "Jumapíiri\tJumatátu\tJumaíne\tJumatáano\tAlamíisi\tIjumáa\tJumamóosi" // weekdays
         );
+
         DateFormatSymbols.register(
                 "teo\tteo-KE\tteo-UG", // locales
                 "Taparachu\tEbongi", // ampm
@@ -748,6 +828,7 @@ final class DateFormatSymbolsProvider {
                 "Jum\tBar\tAar\tUni\tUng\tKan\tSab", // shortWeekdays
                 "Nakaejuma\tNakaebarasa\tNakaare\tNakauni\tNakaung’on\tNakakany\tNakasabiti" // weekdays
         );
+
         DateFormatSymbols.register(
                 "saq\tsaq-KE", // locales
                 "Tesiran\tTeipa", // ampm
@@ -757,6 +838,7 @@ final class DateFormatSymbolsProvider {
                 "Are\tKun\tOng\tIne\tIle\tSap\tKwe", // shortWeekdays
                 "Mderot ee are\tMderot ee kuni\tMderot ee ong’wan\tMderot ee inet\tMderot ee ile\tMderot ee sapa\tMderot ee kwe" // weekdays
         );
+
         DateFormatSymbols.register(
                 "ksh\tksh-DE", // locales
                 "Uhr vörmiddaachs\tUhr nommendaachs", // ampm
@@ -766,6 +848,7 @@ final class DateFormatSymbolsProvider {
                 "Su.\tMo.\tDi.\tMe.\tDu.\tFr.\tSa.", // shortWeekdays
                 "Sunndaach\tMoondaach\tDinnsdaach\tMetwoch\tDunnersdaach\tFriidaach\tSamsdaach" // weekdays
         );
+
         DateFormatSymbols.register(
                 "om\tom-ET\tom-KE", // locales
                 "WD\tWB", // ampm
@@ -775,6 +858,7 @@ final class DateFormatSymbolsProvider {
                 "Dil\tWix\tQib\tRob\tKam\tJim\tSan", // shortWeekdays
                 "Dilbata\tWiixata\tQibxata\tRoobii\tKamiisa\tJimaata\tSanbata" // weekdays
         );
+
         DateFormatSymbols.register(
                 "rn\trn-BI", // locales
                 "Z.MU.\tZ.MW.", // ampm
@@ -784,6 +868,7 @@ final class DateFormatSymbolsProvider {
                 "cu.\tmbe.\tkab.\tgtu.\tkan.\tgnu.\tgnd.", // shortWeekdays
                 "Ku w’indwi\tKu wa mbere\tKu wa kabiri\tKu wa gatatu\tKu wa kane\tKu wa gatanu\tKu wa gatandatu" // weekdays
         );
+
         DateFormatSymbols.register(
                 "tzm\ttzm-MA", // locales
                 "Zdat azal\tḌeffir aza", // ampm
@@ -793,6 +878,7 @@ final class DateFormatSymbolsProvider {
                 "Asa\tAyn\tAsn\tAkr\tAkw\tAsm\tAsḍ", // shortWeekdays
                 "Asamas\tAynas\tAsinas\tAkras\tAkwas\tAsimwas\tAsiḍyas" // weekdays
         );
+
         DateFormatSymbols.register(
                 "te\tte-IN", // locales
                 "[AM]\t[PM]", // ampm
@@ -802,6 +888,7 @@ final class DateFormatSymbolsProvider {
                 "ఆది\tసోమ\tమంగళ\tబుధ\tగురు\tశుక్ర\tశని", // shortWeekdays
                 "ఆదివారం\tసోమవారం\tమంగళవారం\tబుధవారం\tగురువారం\tశుక్రవారం\tశనివారం" // weekdays
         );
+
         DateFormatSymbols.register(
                 "es\tes-EA\tes-ES\tes-GQ\tes-IC\tes-PH\tes-VE", // locales
                 "a. m.\tp. m.", // ampm
@@ -811,6 +898,7 @@ final class DateFormatSymbolsProvider {
                 "dom.\tlun.\tmar.\tmié.\tjue.\tvie.\tsáb.", // shortWeekdays
                 "domingo\tlunes\tmartes\tmiércoles\tjueves\tviernes\tsábado" // weekdays
         );
+
         DateFormatSymbols.register(
                 "ca\tca-AD\tca-ES\tca-ES-VALENCIA\tca-FR\tca-IT", // locales
                 "a. m.\tp. m.", // ampm
@@ -820,6 +908,7 @@ final class DateFormatSymbolsProvider {
                 "dg.\tdl.\tdt.\tdc.\tdj.\tdv.\tds.", // shortWeekdays
                 "diumenge\tdilluns\tdimarts\tdimecres\tdijous\tdivendres\tdissabte" // weekdays
         );
+
         DateFormatSymbols.register(
                 "fur\tfur-IT", // locales
                 "a.\tp.", // ampm
@@ -829,6 +918,7 @@ final class DateFormatSymbolsProvider {
                 "dom\tlun\tmar\tmie\tjoi\tvin\tsab", // shortWeekdays
                 "domenie\tlunis\tmartars\tmiercus\tjoibe\tvinars\tsabide" // weekdays
         );
+
         DateFormatSymbols.register(
                 "agq\tagq-CM", // locales
                 "a.g\ta.k", // ampm
@@ -838,6 +928,7 @@ final class DateFormatSymbolsProvider {
                 "nts\tkpa\tghɔ\ttɔm\tume\tghɨ\tdzk", // shortWeekdays
                 "tsuʔntsɨ\ttsuʔukpà\ttsuʔughɔe\ttsuʔutɔ̀mlò\ttsuʔumè\ttsuʔughɨ̂m\ttsuʔndzɨkɔʔɔ" // weekdays
         );
+
         DateFormatSymbols.register(
                 "luy\tluy-KE", // locales
                 "a.m.\tp.m.", // ampm
@@ -847,6 +938,7 @@ final class DateFormatSymbolsProvider {
                 "J2\tJ3\tJ4\tJ5\tAl\tIj\tJ1", // shortWeekdays
                 "Jumapiri\tJumatatu\tJumanne\tJumatano\tMurwa wa Kanne\tMurwa wa Katano\tJumamosi" // weekdays
         );
+
         DateFormatSymbols.register(
                 "en-IE", // locales
                 "a.m.\tp.m.", // ampm
@@ -856,6 +948,7 @@ final class DateFormatSymbolsProvider {
                 "Sun\tMon\tTue\tWed\tThu\tFri\tSat", // shortWeekdays
                 "Sunday\tMonday\tTuesday\tWednesday\tThursday\tFriday\tSaturday" // weekdays
         );
+
         DateFormatSymbols.register(
                 "qu\tqu-BO\tqu-EC\tqu-PE", // locales
                 "a.m.\tp.m.", // ampm
@@ -865,6 +958,7 @@ final class DateFormatSymbolsProvider {
                 "Dom\tLun\tMar\tMié\tJue\tVie\tSab", // shortWeekdays
                 "Domingo\tLunes\tMartes\tMiércoles\tJueves\tViernes\tSábado" // weekdays
         );
+
         DateFormatSymbols.register(
                 "ga\tga-IE", // locales
                 "a.m.\tp.m.", // ampm
@@ -874,6 +968,7 @@ final class DateFormatSymbolsProvider {
                 "Domh\tLuan\tMáirt\tCéad\tDéar\tAoine\tSath", // shortWeekdays
                 "Dé Domhnaigh\tDé Luain\tDé Máirt\tDé Céadaoin\tDéardaoin\tDé hAoine\tDé Sathairn" // weekdays
         );
+
         DateFormatSymbols.register(
                 "gv\tgv-IM", // locales
                 "a.m.\tp.m.", // ampm
@@ -883,6 +978,7 @@ final class DateFormatSymbolsProvider {
                 "Jed\tJel\tJem\tJerc\tJerd\tJeh\tJes", // shortWeekdays
                 "Jedoonee\tJelhein\tJemayrt\tJercean\tJerdein\tJeheiney\tJesarn" // weekdays
         );
+
         DateFormatSymbols.register(
                 "kw\tkw-GB", // locales
                 "a.m.\tp.m.", // ampm
@@ -892,6 +988,7 @@ final class DateFormatSymbolsProvider {
                 "Sul\tLun\tMth\tMhr\tYow\tGwe\tSad", // shortWeekdays
                 "dy Sul\tdy Lun\tdy Meurth\tdy Merher\tdy Yow\tdy Gwener\tdy Sadorn" // weekdays
         );
+
         DateFormatSymbols.register(
                 "es-MX", // locales
                 "a.m.\tp.m.", // ampm
@@ -901,6 +998,7 @@ final class DateFormatSymbolsProvider {
                 "dom.\tlun.\tmar.\tmié.\tjue.\tvie.\tsáb.", // shortWeekdays
                 "domingo\tlunes\tmartes\tmiércoles\tjueves\tviernes\tsábado" // weekdays
         );
+
         DateFormatSymbols.register(
                 "es-419\tes-AR\tes-BO\tes-BR\tes-CR\tes-CU\tes-DO\tes-EC\tes-GT\tes-HN\tes-NI\tes-PA\tes-PR\tes-SV", // locales
                 "a.m.\tp.m.", // ampm
@@ -910,6 +1008,7 @@ final class DateFormatSymbolsProvider {
                 "dom.\tlun.\tmar.\tmié.\tjue.\tvie.\tsáb.", // shortWeekdays
                 "domingo\tlunes\tmartes\tmiércoles\tjueves\tviernes\tsábado" // weekdays
         );
+
         DateFormatSymbols.register(
                 "es-CL\tes-CO\tes-PY", // locales
                 "a.m.\tp.m.", // ampm
@@ -919,6 +1018,7 @@ final class DateFormatSymbolsProvider {
                 "dom.\tlun.\tmar.\tmié.\tjue.\tvie.\tsáb.", // shortWeekdays
                 "domingo\tlunes\tmartes\tmiércoles\tjueves\tviernes\tsábado" // weekdays
         );
+
         DateFormatSymbols.register(
                 "es-PE\tes-UY", // locales
                 "a.m.\tp.m.", // ampm
@@ -928,6 +1028,7 @@ final class DateFormatSymbolsProvider {
                 "dom.\tlun.\tmar.\tmié.\tjue.\tvie.\tsáb.", // shortWeekdays
                 "domingo\tlunes\tmartes\tmiércoles\tjueves\tviernes\tsábado" // weekdays
         );
+
         DateFormatSymbols.register(
                 "gl\tgl-ES", // locales
                 "a.m.\tp.m.", // ampm
@@ -937,6 +1038,7 @@ final class DateFormatSymbolsProvider {
                 "dom\tluns\tmar\tmér\txov\tven\tsáb", // shortWeekdays
                 "domingo\tluns\tmartes\tmércores\txoves\tvenres\tsábado" // weekdays
         );
+
         DateFormatSymbols.register(
                 "fr-MA", // locales
                 "a.m.\tp.m.", // ampm
@@ -946,6 +1048,7 @@ final class DateFormatSymbolsProvider {
                 "dim.\tlun.\tmar.\tmer.\tjeu.\tven.\tsam.", // shortWeekdays
                 "dimanche\tlundi\tmardi\tmercredi\tjeudi\tvendredi\tsamedi" // weekdays
         );
+
         DateFormatSymbols.register(
                 "nb\tnb-NO\tnb-SJ\tno\tno-NO", // locales
                 "a.m.\tp.m.", // ampm
@@ -955,6 +1058,7 @@ final class DateFormatSymbolsProvider {
                 "søn.\tman.\ttir.\tons.\ttor.\tfre.\tlør.", // shortWeekdays
                 "søndag\tmandag\ttirsdag\tonsdag\ttorsdag\tfredag\tlørdag" // weekdays
         );
+
         DateFormatSymbols.register(
                 "nl\tnl-AW\tnl-BE\tnl-BQ\tnl-CW\tnl-NL\tnl-SR\tnl-SX", // locales
                 "a.m.\tp.m.", // ampm
@@ -964,6 +1068,7 @@ final class DateFormatSymbolsProvider {
                 "zo\tma\tdi\two\tdo\tvr\tza", // shortWeekdays
                 "zondag\tmaandag\tdinsdag\twoensdag\tdonderdag\tvrijdag\tzaterdag" // weekdays
         );
+
         DateFormatSymbols.register(
                 "ro-MD", // locales
                 "a.m.\tp.m.", // ampm
@@ -973,6 +1078,7 @@ final class DateFormatSymbolsProvider {
                 "Dum\tLun\tMar\tMie\tJoi\tVin\tSâm", // shortWeekdays
                 "duminică\tluni\tmarți\tmiercuri\tjoi\tvineri\tsâmbătă" // weekdays
         );
+
         DateFormatSymbols.register(
                 "ro\tro-RO", // locales
                 "a.m.\tp.m.", // ampm
@@ -982,6 +1088,7 @@ final class DateFormatSymbolsProvider {
                 "dum.\tlun.\tmar.\tmie.\tjoi\tvin.\tsâm.", // shortWeekdays
                 "duminică\tluni\tmarți\tmiercuri\tjoi\tvineri\tsâmbătă" // weekdays
         );
+
         DateFormatSymbols.register(
                 "kea\tkea-CV", // locales
                 "am\tpm", // ampm
@@ -991,6 +1098,7 @@ final class DateFormatSymbolsProvider {
                 "dum\tsig\tter\tkua\tkin\tses\tsab", // shortWeekdays
                 "dumingu\tsigunda-fera\ttersa-fera\tkuarta-fera\tkinta-fera\tsesta-fera\tsabadu" // weekdays
         );
+
         DateFormatSymbols.register(
                 "en-GB", // locales
                 "am\tpm", // ampm
@@ -1000,6 +1108,7 @@ final class DateFormatSymbolsProvider {
                 "Sun\tMon\tTue\tWed\tThu\tFri\tSat", // shortWeekdays
                 "Sunday\tMonday\tTuesday\tWednesday\tThursday\tFriday\tSaturday" // weekdays
         );
+
         DateFormatSymbols.register(
                 "en-AU", // locales
                 "am\tpm", // ampm
@@ -1009,6 +1118,7 @@ final class DateFormatSymbolsProvider {
                 "Sun.\tMon.\tTue.\tWed.\tThu.\tFri.\tSat.", // shortWeekdays
                 "Sunday\tMonday\tTuesday\tWednesday\tThursday\tFriday\tSaturday" // weekdays
         );
+
         DateFormatSymbols.register(
                 "or\tor-IN", // locales
                 "am\tpm", // ampm
@@ -1018,6 +1128,7 @@ final class DateFormatSymbolsProvider {
                 "ରବି\tସୋମ\tମଙ୍ଗଳ\tବୁଧ\tଗୁରୁ\tଶୁକ୍ର\tଶନି", // shortWeekdays
                 "ରବିବାର\tସୋମବାର\tମଙ୍ଗଳବାର\tବୁଧବାର\tଗୁରୁବାର\tଶୁକ୍ରବାର\tଶନିବାର" // weekdays
         );
+
         DateFormatSymbols.register(
                 "rm\trm-CH", // locales
                 "am\tsm", // ampm
@@ -1027,6 +1138,7 @@ final class DateFormatSymbolsProvider {
                 "du\tgli\tma\tme\tgie\tve\tso", // shortWeekdays
                 "dumengia\tglindesdi\tmardi\tmesemna\tgievgia\tvenderdi\tsonda" // weekdays
         );
+
         DateFormatSymbols.register(
                 "fi\tfi-FI", // locales
                 "ap.\tip.", // ampm
@@ -1036,6 +1148,7 @@ final class DateFormatSymbolsProvider {
                 "su\tma\tti\tke\tto\tpe\tla", // shortWeekdays
                 "sunnuntaina\tmaanantaina\ttiistaina\tkeskiviikkona\ttorstaina\tperjantaina\tlauantaina" // weekdays
         );
+
         DateFormatSymbols.register(
                 "eo\teo-001", // locales
                 "atm\tptm", // ampm
@@ -1045,6 +1158,7 @@ final class DateFormatSymbolsProvider {
                 "di\tlu\tma\tme\tĵa\tve\tsa", // shortWeekdays
                 "dimanĉo\tlundo\tmardo\tmerkredo\tĵaŭdo\tvendredo\tsabato" // weekdays
         );
+
         DateFormatSymbols.register(
                 "mua\tmua-CM", // locales
                 "comme\tlilli", // ampm
@@ -1054,6 +1168,7 @@ final class DateFormatSymbolsProvider {
                 "Cya\tCla\tCzi\tCko\tCka\tCga\tCze", // shortWeekdays
                 "Com’yakke\tComlaaɗii\tComzyiiɗii\tComkolle\tComkaldǝɓlii\tComgaisuu\tComzyeɓsuu" // weekdays
         );
+
         DateFormatSymbols.register(
                 "pt-AO\tpt-CH\tpt-CV\tpt-GQ\tpt-GW\tpt-LU\tpt-MO\tpt-MZ\tpt-PT\tpt-ST\tpt-TL", // locales
                 "da manhã\tda tarde", // ampm
@@ -1063,6 +1178,7 @@ final class DateFormatSymbolsProvider {
                 "domingo\tsegunda\tterça\tquarta\tquinta\tsexta\tsábado", // shortWeekdays
                 "domingo\tsegunda-feira\tterça-feira\tquarta-feira\tquinta-feira\tsexta-feira\tsábado" // weekdays
         );
+
         DateFormatSymbols.register(
                 "ast\tast-ES", // locales
                 "de la mañana\tde la tardi", // ampm
@@ -1072,6 +1188,7 @@ final class DateFormatSymbolsProvider {
                 "dom\tllu\tmar\tmié\txue\tvie\tsáb", // shortWeekdays
                 "domingu\tllunes\tmartes\tmiércoles\txueves\tvienres\tsábadu" // weekdays
         );
+
         DateFormatSymbols.register(
                 "hu\thu-HU", // locales
                 "de.\tdu.", // ampm
@@ -1081,6 +1198,7 @@ final class DateFormatSymbolsProvider {
                 "V\tH\tK\tSze\tCs\tP\tSzo", // shortWeekdays
                 "vasárnap\thétfő\tkedd\tszerda\tcsütörtök\tpéntek\tszombat" // weekdays
         );
+
         DateFormatSymbols.register(
                 "cs\tcs-CZ", // locales
                 "dop.\todp.", // ampm
@@ -1090,6 +1208,7 @@ final class DateFormatSymbolsProvider {
                 "ne\tpo\tút\tst\tčt\tpá\tso", // shortWeekdays
                 "neděle\tpondělí\túterý\tstředa\tčtvrtek\tpátek\tsobota" // weekdays
         );
+
         DateFormatSymbols.register(
                 "sl\tsl-SI", // locales
                 "dop.\tpop.", // ampm
@@ -1099,6 +1218,7 @@ final class DateFormatSymbolsProvider {
                 "ned.\tpon.\ttor.\tsre.\tčet.\tpet.\tsob.", // shortWeekdays
                 "nedelja\tponedeljek\ttorek\tsreda\tčetrtek\tpetek\tsobota" // weekdays
         );
+
         DateFormatSymbols.register(
                 "hsb\thsb-DE", // locales
                 "dopołdnja\tpopołdnju", // ampm
@@ -1108,6 +1228,7 @@ final class DateFormatSymbolsProvider {
                 "nje\tpón\twut\tsrj\tštw\tpja\tsob", // shortWeekdays
                 "njedźela\tpóndźela\twutora\tsrjeda\tštwórtk\tpjatk\tsobota" // weekdays
         );
+
         DateFormatSymbols.register(
                 "dsb\tdsb-DE", // locales
                 "dopołdnja\twótpołdnja", // ampm
@@ -1117,6 +1238,7 @@ final class DateFormatSymbolsProvider {
                 "nje\tpón\twał\tsrj\tstw\tpět\tsob", // shortWeekdays
                 "njeźela\tpónjeźele\twałtora\tsrjoda\tstwórtk\tpětk\tsobota" // weekdays
         );
+
         DateFormatSymbols.register(
                 "sq\tsq-AL\tsq-MK\tsq-XK", // locales
                 "e paradites\te pasdites", // ampm
@@ -1126,6 +1248,7 @@ final class DateFormatSymbolsProvider {
                 "Die\tHën\tMar\tMër\tEnj\tPre\tSht", // shortWeekdays
                 "e diel\te hënë\te martë\te mërkurë\te enjte\te premte\te shtunë" // weekdays
         );
+
         DateFormatSymbols.register(
                 "is\tis-IS", // locales
                 "f.h.\te.h.", // ampm
@@ -1135,6 +1258,7 @@ final class DateFormatSymbolsProvider {
                 "sun.\tmán.\tþri.\tmið.\tfim.\tfös.\tlau.", // shortWeekdays
                 "sunnudagur\tmánudagur\tþriðjudagur\tmiðvikudagur\tfimmtudagur\tföstudagur\tlaugardagur" // weekdays
         );
+
         DateFormatSymbols.register(
                 "sv\tsv-AX\tsv-FI\tsv-SE", // locales
                 "fm\tem", // ampm
@@ -1144,6 +1268,7 @@ final class DateFormatSymbolsProvider {
                 "sön\tmån\ttis\tons\ttors\tfre\tlör", // shortWeekdays
                 "söndag\tmåndag\ttisdag\tonsdag\ttorsdag\tfredag\tlördag" // weekdays
         );
+
         DateFormatSymbols.register(
                 "nn\tnn-NO", // locales
                 "formiddag\tettermiddag", // ampm
@@ -1153,6 +1278,7 @@ final class DateFormatSymbolsProvider {
                 "sø.\tmå.\tty.\ton.\tto.\tfr.\tla.", // shortWeekdays
                 "søndag\tmåndag\ttysdag\tonsdag\ttorsdag\tfredag\tlaurdag" // weekdays
         );
+
         DateFormatSymbols.register(
                 "asa\tasa-TZ", // locales
                 "icheheavo\tichamthi", // ampm
@@ -1162,6 +1288,7 @@ final class DateFormatSymbolsProvider {
                 "Jpi\tJtt\tJnn\tJtn\tAlh\tIjm\tJmo", // shortWeekdays
                 "Jumapili\tJumatatu\tJumanne\tJumatano\tAlhamisi\tIjumaa\tJumamosi" // weekdays
         );
+
         DateFormatSymbols.register(
                 "dua\tdua-CM", // locales
                 "idiɓa\tebyámu", // ampm
@@ -1171,6 +1298,7 @@ final class DateFormatSymbolsProvider {
                 "ét\tmɔ́s\tkwa\tmuk\tŋgi\tɗón\tesa", // shortWeekdays
                 "éti\tmɔ́sú\tkwasú\tmukɔ́sú\tŋgisú\tɗónɛsú\tesaɓasú" // weekdays
         );
+
         DateFormatSymbols.register(
                 "se\tse-FI\tse-NO\tse-SE", // locales
                 "iđitbeaivet\teahketbeaivet", // ampm
@@ -1180,6 +1308,7 @@ final class DateFormatSymbolsProvider {
                 "sotn\tvuos\tmaŋ\tgask\tduor\tbear\tláv", // shortWeekdays
                 "sotnabeaivi\tvuossárga\tmaŋŋebárga\tgaskavahkku\tduorasdat\tbearjadat\tlávvardat" // weekdays
         );
+
         DateFormatSymbols.register(
                 "rof\trof-TZ", // locales
                 "kang’ama\tkingoto", // ampm
@@ -1189,6 +1318,7 @@ final class DateFormatSymbolsProvider {
                 "Ijp\tIjt\tIjn\tIjtn\tAlh\tIju\tIjm", // shortWeekdays
                 "Ijumapili\tIjumatatu\tIjumanne\tIjumatano\tAlhamisi\tIjumaa\tIjumamosi" // weekdays
         );
+
         DateFormatSymbols.register(
                 "kln\tkln-KE", // locales
                 "karoon\tkooskoliny", // ampm
@@ -1198,6 +1328,7 @@ final class DateFormatSymbolsProvider {
                 "Kts\tKot\tKoo\tKos\tKoa\tKom\tKol", // shortWeekdays
                 "Kotisap\tKotaai\tKoaeng’\tKosomok\tKoang’wan\tKomuut\tKolo" // weekdays
         );
+
         DateFormatSymbols.register(
                 "yav\tyav-CM", // locales
                 "kiɛmɛ́ɛm\tkisɛ́ndɛ", // ampm
@@ -1207,6 +1338,7 @@ final class DateFormatSymbolsProvider {
                 "sd\tmd\tmw\tet\tkl\tfl\tss", // shortWeekdays
                 "sɔ́ndiɛ\tmóndie\tmuányáŋmóndie\tmetúkpíápɛ\tkúpélimetúkpiapɛ\tfeléte\tséselé" // weekdays
         );
+
         DateFormatSymbols.register(
                 "ewo\tewo-CM", // locales
                 "kíkíríg\tngəgógəle", // ampm
@@ -1216,6 +1348,7 @@ final class DateFormatSymbolsProvider {
                 "sɔ́n\tmɔ́n\tsmb\tsml\tsmn\tfúl\tsér", // shortWeekdays
                 "sɔ́ndɔ\tmɔ́ndi\tsɔ́ndɔ məlú mə́bɛ̌\tsɔ́ndɔ məlú mə́lɛ́\tsɔ́ndɔ məlú mə́nyi\tfúladé\tséradé" // weekdays
         );
+
         DateFormatSymbols.register(
                 "gd\tgd-GB", // locales
                 "m\tf", // ampm
@@ -1225,6 +1358,7 @@ final class DateFormatSymbolsProvider {
                 "DiD\tDiL\tDiM\tDiC\tDia\tDih\tDiS", // shortWeekdays
                 "DiDòmhnaich\tDiLuain\tDiMàirt\tDiCiadain\tDiarDaoin\tDihAoine\tDiSathairne" // weekdays
         );
+
         DateFormatSymbols.register(
                 "ksb\tksb-TZ", // locales
                 "makeo\tnyiaghuo", // ampm
@@ -1234,6 +1368,7 @@ final class DateFormatSymbolsProvider {
                 "Jpi\tJtt\tJmn\tJtn\tAlh\tIju\tJmo", // shortWeekdays
                 "Jumaapii\tJumaatatu\tJumaane\tJumaatano\tAlhamisi\tIjumaa\tJumaamosi" // weekdays
         );
+
         DateFormatSymbols.register(
                 "nmg\tnmg-CM", // locales
                 "maná\tkugú", // ampm
@@ -1243,6 +1378,7 @@ final class DateFormatSymbolsProvider {
                 "sɔ́n\tmɔ́n\tsmb\tsml\tsmn\tmbs\tsas", // shortWeekdays
                 "sɔ́ndɔ\tmɔ́ndɔ\tsɔ́ndɔ mafú mába\tsɔ́ndɔ mafú málal\tsɔ́ndɔ mafú mána\tmabágá má sukul\tsásadi" // weekdays
         );
+
         DateFormatSymbols.register(
                 "nnh\tnnh-CM", // locales
                 "mbaʼámbaʼ\tncwònzém", // ampm
@@ -1252,6 +1388,7 @@ final class DateFormatSymbolsProvider {
                 "lyɛʼɛ́ sẅíŋtè\tmvfò lyɛ̌ʼ\tmbɔ́ɔntè mvfò lyɛ̌ʼ\ttsètsɛ̀ɛ lyɛ̌ʼ\tmbɔ́ɔntè tsetsɛ̀ɛ lyɛ̌ʼ\tmvfò màga lyɛ̌ʼ\tmàga lyɛ̌ʼ", // shortWeekdays
                 "lyɛʼɛ́ sẅíŋtè\tmvfò lyɛ̌ʼ\tmbɔ́ɔntè mvfò lyɛ̌ʼ\ttsètsɛ̀ɛ lyɛ̌ʼ\tmbɔ́ɔntè tsetsɛ̀ɛ lyɛ̌ʼ\tmvfò màga lyɛ̌ʼ\tmàga lyɛ̌ʼ" // weekdays
         );
+
         DateFormatSymbols.register(
                 "jgo\tjgo-CM", // locales
                 "mbaꞌmbaꞌ\tŋka mbɔ́t nji", // ampm
@@ -1261,6 +1398,7 @@ final class DateFormatSymbolsProvider {
                 "Sɔ́ndi\tMɔ́ndi\tÁpta Mɔ́ndi\tWɛ́nɛsɛdɛ\tTɔ́sɛdɛ\tFɛlâyɛdɛ\tSásidɛ", // shortWeekdays
                 "Sɔ́ndi\tMɔ́ndi\tÁpta Mɔ́ndi\tWɛ́nɛsɛdɛ\tTɔ́sɛdɛ\tFɛlâyɛdɛ\tSásidɛ" // weekdays
         );
+
         DateFormatSymbols.register(
                 "lb\tlb-LU", // locales
                 "moies\tnomëttes", // ampm
@@ -1270,6 +1408,7 @@ final class DateFormatSymbolsProvider {
                 "Son.\tMéi.\tDën.\tMët.\tDon.\tFre.\tSam.", // shortWeekdays
                 "Sonndeg\tMéindeg\tDënschdeg\tMëttwoch\tDonneschdeg\tFreideg\tSamschdeg" // weekdays
         );
+
         DateFormatSymbols.register(
                 "kab\tkab-DZ", // locales
                 "n tufat\tn tmeddit", // ampm
@@ -1279,6 +1418,7 @@ final class DateFormatSymbolsProvider {
                 "Yan\tSan\tKraḍ\tKuẓ\tSam\tSḍis\tSay", // shortWeekdays
                 "Yanass\tSanass\tKraḍass\tKuẓass\tSamass\tSḍisass\tSayass" // weekdays
         );
+
         DateFormatSymbols.register(
                 "ln\tln-AO\tln-CD\tln-CF\tln-CG", // locales
                 "ntɔ́ngɔ́\tmpókwa", // ampm
@@ -1288,6 +1428,7 @@ final class DateFormatSymbolsProvider {
                 "eye\tybo\tmbl\tmst\tmin\tmtn\tmps", // shortWeekdays
                 "eyenga\tmokɔlɔ mwa yambo\tmokɔlɔ mwa míbalé\tmokɔlɔ mwa mísáto\tmokɔlɔ ya mínéi\tmokɔlɔ ya mítáno\tmpɔ́sɔ" // weekdays
         );
+
         DateFormatSymbols.register(
                 "bez\tbez-TZ", // locales
                 "pamilau\tpamunyi", // ampm
@@ -1297,6 +1438,7 @@ final class DateFormatSymbolsProvider {
                 "Mul\tVil\tHiv\tHid\tHit\tHih\tLem", // shortWeekdays
                 "pa mulungu\tpa shahuviluha\tpa hivili\tpa hidatu\tpa hitayi\tpa hihanu\tpa shahulembela" // weekdays
         );
+
         DateFormatSymbols.register(
                 "sr-Latn\tsr-Latn-BA\tsr-Latn-ME\tsr-Latn-RS\tsr-Latn-XK", // locales
                 "pre podne\tpo podne", // ampm
@@ -1306,6 +1448,7 @@ final class DateFormatSymbolsProvider {
                 "ned\tpon\tuto\tsre\tčet\tpet\tsub", // shortWeekdays
                 "nedelja\tponedeljak\tutorak\tsreda\tčetvrtak\tpetak\tsubota" // weekdays
         );
+
         DateFormatSymbols.register(
                 "lv\tlv-LV", // locales
                 "priekšpusdienā\tpēcpusdienā", // ampm
@@ -1315,6 +1458,7 @@ final class DateFormatSymbolsProvider {
                 "Sv\tPr\tOt\tTr\tCe\tPk\tSe", // shortWeekdays
                 "svētdiena\tpirmdiena\totrdiena\ttrešdiena\tceturtdiena\tpiektdiena\tsestdiena" // weekdays
         );
+
         DateFormatSymbols.register(
                 "lt\tlt-LT", // locales
                 "priešpiet\tpopiet", // ampm
@@ -1324,6 +1468,7 @@ final class DateFormatSymbolsProvider {
                 "sk\tpr\tan\ttr\tkt\tpn\tšt", // shortWeekdays
                 "sekmadienis\tpirmadienis\tantradienis\ttrečiadienis\tketvirtadienis\tpenktadienis\tšeštadienis" // weekdays
         );
+
         DateFormatSymbols.register(
                 "bs\tbs-BA\tbs-Latn\tbs-Latn-BA", // locales
                 "prije podne\tpopodne", // ampm
@@ -1333,6 +1478,7 @@ final class DateFormatSymbolsProvider {
                 "ned\tpon\tuto\tsri\tčet\tpet\tsub", // shortWeekdays
                 "nedjelja\tponedjeljak\tutorak\tsrijeda\tčetvrtak\tpetak\tsubota" // weekdays
         );
+
         DateFormatSymbols.register(
                 "so\tso-DJ\tso-ET\tso-KE\tso-SO", // locales
                 "sn.\tgn.", // ampm
@@ -1342,6 +1488,7 @@ final class DateFormatSymbolsProvider {
                 "Axd\tIsn\tTal\tArb\tKha\tJim\tSab", // shortWeekdays
                 "Axad\tIsniin\tTalaado\tArbaco\tKhamiis\tJimco\tSabti" // weekdays
         );
+
         DateFormatSymbols.register(
                 "ff\tff-CM\tff-GN\tff-MR\tff-SN", // locales
                 "subaka\tkikiiɗe", // ampm
@@ -1351,6 +1498,7 @@ final class DateFormatSymbolsProvider {
                 "dew\taaɓ\tmaw\tnje\tnaa\tmwd\thbi", // shortWeekdays
                 "dewo\taaɓnde\tmawbaare\tnjeslaare\tnaasaande\tmawnde\thoore-biir" // weekdays
         );
+
         DateFormatSymbols.register(
                 "ksf\tksf-CM", // locales
                 "sárúwá\tcɛɛ́nko", // ampm
@@ -1360,6 +1508,7 @@ final class DateFormatSymbolsProvider {
                 "sɔ́n\tlǝn\tmaa\tmɛk\tjǝǝ\tjúm\tsam", // shortWeekdays
                 "sɔ́ndǝ\tlǝndí\tmaadí\tmɛkrɛdí\tjǝǝdí\tjúmbá\tsamdí" // weekdays
         );
+
         DateFormatSymbols.register(
                 "shi-Latn\tshi-Latn-MA", // locales
                 "tifawt\ttadggʷat", // ampm
@@ -1369,6 +1518,7 @@ final class DateFormatSymbolsProvider {
                 "asa\tayn\tasi\takṛ\takw\tasim\tasiḍ", // shortWeekdays
                 "asamas\taynas\tasinas\takṛas\takwas\tasimwas\tasiḍyas" // weekdays
         );
+
         DateFormatSymbols.register(
                 "bem\tbem-ZM", // locales
                 "uluchelo\takasuba", // ampm
@@ -1378,6 +1528,7 @@ final class DateFormatSymbolsProvider {
                 "Pa Mulungu\tPalichimo\tPalichibuli\tPalichitatu\tPalichine\tPalichisano\tPachibelushi", // shortWeekdays
                 "Pa Mulungu\tPalichimo\tPalichibuli\tPalichitatu\tPalichine\tPalichisano\tPachibelushi" // weekdays
         );
+
         DateFormatSymbols.register(
                 "jmc\tjmc-TZ\trwk\trwk-TZ\tvun\tvun-TZ", // locales
                 "utuko\tkyiukonyi", // ampm
@@ -1387,6 +1538,7 @@ final class DateFormatSymbolsProvider {
                 "Jpi\tJtt\tJnn\tJtn\tAlh\tIju\tJmo", // shortWeekdays
                 "Jumapilyi\tJumatatuu\tJumanne\tJumatanu\tAlhamisi\tIjumaa\tJumamosi" // weekdays
         );
+
         DateFormatSymbols.register(
                 "af\taf-NA\taf-ZA", // locales
                 "vm.\tnm.", // ampm
@@ -1396,6 +1548,7 @@ final class DateFormatSymbolsProvider {
                 "So.\tMa.\tDi.\tWo.\tDo.\tVr.\tSa.", // shortWeekdays
                 "Sondag\tMaandag\tDinsdag\tWoensdag\tDonderdag\tVrydag\tSaterdag" // weekdays
         );
+
         DateFormatSymbols.register(
                 "de\tde-BE\tde-CH\tde-DE\tde-LI\tde-LU", // locales
                 "vorm.\tnachm.", // ampm
@@ -1405,6 +1558,7 @@ final class DateFormatSymbolsProvider {
                 "So.\tMo.\tDi.\tMi.\tDo.\tFr.\tSa.", // shortWeekdays
                 "Sonntag\tMontag\tDienstag\tMittwoch\tDonnerstag\tFreitag\tSamstag" // weekdays
         );
+
         DateFormatSymbols.register(
                 "de-AT", // locales
                 "vorm.\tnachm.", // ampm
@@ -1414,6 +1568,7 @@ final class DateFormatSymbolsProvider {
                 "So.\tMo.\tDi.\tMi.\tDo.\tFr.\tSa.", // shortWeekdays
                 "Sonntag\tMontag\tDienstag\tMittwoch\tDonnerstag\tFreitag\tSamstag" // weekdays
         );
+
         DateFormatSymbols.register(
                 "gsw\tgsw-CH\tgsw-FR\tgsw-LI", // locales
                 "vorm.\tnam.", // ampm
@@ -1423,6 +1578,7 @@ final class DateFormatSymbolsProvider {
                 "Su.\tMä.\tZi.\tMi.\tDu.\tFr.\tSa.", // shortWeekdays
                 "Sunntig\tMääntig\tZiischtig\tMittwuch\tDunschtig\tFriitig\tSamschtig" // weekdays
         );
+
         DateFormatSymbols.register(
                 "mgh\tmgh-MZ", // locales
                 "wichishu\tmchochil’l", // ampm
@@ -1432,6 +1588,7 @@ final class DateFormatSymbolsProvider {
                 "Sab\tJtt\tJnn\tJtn\tAra\tIju\tJmo", // shortWeekdays
                 "Sabato\tJumatatu\tJumanne\tJumatano\tArahamisi\tIjumaa\tJumamosi" // weekdays
         );
+
         DateFormatSymbols.register(
                 "sw-CD", // locales
                 "ya asubuyi\tya muchana", // ampm
@@ -1441,6 +1598,7 @@ final class DateFormatSymbolsProvider {
                 "yen\tkwa\tpil\ttat\tine\ttan\tsit", // shortWeekdays
                 "siku ya yenga\tsiku ya kwanza\tsiku ya pili\tsiku ya tatu\tsiku ya ine\tsiku ya tanu\tsiku ya sita" // weekdays
         );
+
         DateFormatSymbols.register(
                 "yo-BJ", // locales
                 "Àárɔ̀\tƆ̀sán", // ampm
@@ -1450,6 +1608,7 @@ final class DateFormatSymbolsProvider {
                 "Àìkú\tAjé\tÌsɛ́gun\tƆjɔ́rú\tƆjɔ́bɔ\tƐtì\tÀbámɛ́ta", // shortWeekdays
                 "Ɔjɔ́ Àìkú\tƆjɔ́ Ajé\tƆjɔ́ Ìsɛ́gun\tƆjɔ́rú\tƆjɔ́bɔ\tƆjɔ́ Ɛtì\tƆjɔ́ Àbámɛ́ta" // weekdays
         );
+
         DateFormatSymbols.register(
                 "yo\tyo-NG", // locales
                 "Àárọ̀\tỌ̀sán", // ampm
@@ -1459,6 +1618,7 @@ final class DateFormatSymbolsProvider {
                 "Àìkú\tAjé\tÌsẹ́gun\tỌjọ́rú\tỌjọ́bọ\tẸtì\tÀbámẹ́ta", // shortWeekdays
                 "Ọjọ́ Àìkú\tỌjọ́ Ajé\tỌjọ́ Ìsẹ́gun\tỌjọ́rú\tỌjọ́bọ\tỌjọ́ Ẹtì\tỌjọ́ Àbámẹ́ta" // weekdays
         );
+
         DateFormatSymbols.register(
                 "tr\ttr-CY\ttr-TR", // locales
                 "ÖÖ\tÖS", // ampm
@@ -1468,6 +1628,7 @@ final class DateFormatSymbolsProvider {
                 "Paz\tPzt\tSal\tÇar\tPer\tCum\tCmt", // shortWeekdays
                 "Pazar\tPazartesi\tSalı\tÇarşamba\tPerşembe\tCuma\tCumartesi" // weekdays
         );
+
         DateFormatSymbols.register(
                 "kam\tkam-KE", // locales
                 "Ĩyakwakya\tĨyawĩoo", // ampm
@@ -1477,6 +1638,7 @@ final class DateFormatSymbolsProvider {
                 "Wky\tWkw\tWkl\tWtũ\tWkn\tWtn\tWth", // shortWeekdays
                 "Wa kyumwa\tWa kwambĩlĩlya\tWa kelĩ\tWa katatũ\tWa kana\tWa katano\tWa thanthatũ" // weekdays
         );
+
         DateFormatSymbols.register(
                 "ee\tee-GH\tee-TG", // locales
                 "ŋdi\tɣetrɔ", // ampm
@@ -1486,6 +1648,7 @@ final class DateFormatSymbolsProvider {
                 "kɔs\tdzo\tbla\tkuɖ\tyaw\tfiɖ\tmem", // shortWeekdays
                 "kɔsiɖa\tdzoɖa\tblaɖa\tkuɖa\tyawoɖa\tfiɖa\tmemleɖa" // weekdays
         );
+
         DateFormatSymbols.register(
                 "mas\tmas-KE\tmas-TZ", // locales
                 "Ɛnkakɛnyá\tƐndámâ", // ampm
@@ -1495,6 +1658,7 @@ final class DateFormatSymbolsProvider {
                 "Jpi\tJtt\tJnn\tJtn\tAlh\tIju\tJmo", // shortWeekdays
                 "Jumapílí\tJumatátu\tJumane\tJumatánɔ\tAlaámisi\tJumáa\tJumamósi" // weekdays
         );
+
         DateFormatSymbols.register(
                 "naq\tnaq-NA", // locales
                 "ǁgoagas\tǃuias", // ampm
@@ -1504,6 +1668,7 @@ final class DateFormatSymbolsProvider {
                 "Son\tMa\tDe\tWu\tDo\tFr\tSat", // shortWeekdays
                 "Sontaxtsees\tMantaxtsees\tDenstaxtsees\tWunstaxtsees\tDondertaxtsees\tFraitaxtsees\tSatertaxtsees" // weekdays
         );
+
         DateFormatSymbols.register(
                 "el\tel-CY\tel-GR", // locales
                 "π.μ.\tμ.μ.", // ampm
@@ -1513,6 +1678,7 @@ final class DateFormatSymbolsProvider {
                 "Κυρ\tΔευ\tΤρί\tΤετ\tΠέμ\tΠαρ\tΣάβ", // shortWeekdays
                 "Κυριακή\tΔευτέρα\tΤρίτη\tΤετάρτη\tΠέμπτη\tΠαρασκευή\tΣάββατο" // weekdays
         );
+
         DateFormatSymbols.register(
                 "ru\tru-BY\tru-KG\tru-KZ\tru-MD\tru-RU\tru-UA", // locales
                 "ДП\tПП", // ampm
@@ -1522,6 +1688,7 @@ final class DateFormatSymbolsProvider {
                 "вс\tпн\tвт\tср\tчт\tпт\tсб", // shortWeekdays
                 "воскресенье\tпонедельник\tвторник\tсреда\tчетверг\tпятница\tсуббота" // weekdays
         );
+
         DateFormatSymbols.register(
                 "sah\tsah-RU", // locales
                 "ЭИ\tЭК", // ampm
@@ -1531,6 +1698,7 @@ final class DateFormatSymbolsProvider {
                 "Бс\tБн\tОп\tСэ\tЧп\tБэ\tСб", // shortWeekdays
                 "Баскыһыанньа\tБэнидиэлинньик\tОптуорунньук\tСэрэдэ\tЧэппиэр\tБээтиҥсэ\tСубуота" // weekdays
         );
+
         DateFormatSymbols.register(
                 "be\tbe-BY", // locales
                 "да паўдня\tпасля паўдня", // ampm
@@ -1540,6 +1708,7 @@ final class DateFormatSymbolsProvider {
                 "нд\tпн\tаў\tср\tчц\tпт\tсб", // shortWeekdays
                 "нядзеля\tпанядзелак\tаўторак\tсерада\tчацвер\tпятніца\tсубота" // weekdays
         );
+
         DateFormatSymbols.register(
                 "uk\tuk-UA", // locales
                 "дп\tпп", // ampm
@@ -1549,6 +1718,7 @@ final class DateFormatSymbolsProvider {
                 "Нд\tПн\tВт\tСр\tЧт\tПт\tСб", // shortWeekdays
                 "неділя\tпонеділок\tвівторок\tсереда\tчетвер\tпʼятниця\tсубота" // weekdays
         );
+
         DateFormatSymbols.register(
                 "bg\tbg-BG", // locales
                 "пр.об.\tсл.об.", // ampm
@@ -1558,6 +1728,7 @@ final class DateFormatSymbolsProvider {
                 "нд\tпн\tвт\tср\tчт\tпт\tсб", // shortWeekdays
                 "неделя\tпонеделник\tвторник\tсряда\tчетвъртък\tпетък\tсъбота" // weekdays
         );
+
         DateFormatSymbols.register(
                 "sr\tsr-Cyrl\tsr-Cyrl-BA\tsr-Cyrl-ME\tsr-Cyrl-RS\tsr-Cyrl-XK\tsr-RS", // locales
                 "пре подне\tпо подне", // ampm
@@ -1567,6 +1738,7 @@ final class DateFormatSymbolsProvider {
                 "нед\tпон\tуто\tсре\tчет\tпет\tсуб", // shortWeekdays
                 "недеља\tпонедељак\tуторак\tсреда\tчетвртак\tпетак\tсубота" // weekdays
         );
+
         DateFormatSymbols.register(
                 "bs-Cyrl\tbs-Cyrl-BA", // locales
                 "пре подне\tпоподне", // ampm
@@ -1576,6 +1748,7 @@ final class DateFormatSymbolsProvider {
                 "нед\tпон\tуто\tсри\tчет\tпет\tсуб", // shortWeekdays
                 "недеља\tпонедељак\tуторак\tсриједа\tчетвртак\tпетак\tсубота" // weekdays
         );
+
         DateFormatSymbols.register(
                 "mk\tmk-MK", // locales
                 "претпладне\tпопладне", // ampm
@@ -1585,6 +1758,7 @@ final class DateFormatSymbolsProvider {
                 "нед.\tпон.\tвт.\tсре.\tчет.\tпет.\tсаб.", // shortWeekdays
                 "недела\tпонеделник\tвторник\tсреда\tчетврток\tпеток\tсабота" // weekdays
         );
+
         DateFormatSymbols.register(
                 "ky\tky-KG", // locales
                 "таңкы\tтүштөн кийинки", // ampm
@@ -1594,6 +1768,7 @@ final class DateFormatSymbolsProvider {
                 "жек.\tдүй.\tшейш.\tшарш.\tбейш.\tжума\tишм.", // shortWeekdays
                 "жекшемби\tдүйшөмбү\tшейшемби\tшаршемби\tбейшемби\tжума\tишемби" // weekdays
         );
+
         DateFormatSymbols.register(
                 "kk\tkk-KZ", // locales
                 "таңғы\tтүскі/кешкі", // ampm
@@ -1603,6 +1778,7 @@ final class DateFormatSymbolsProvider {
                 "Жс\tДс\tСс\tСр\tБс\tЖм\tСб", // shortWeekdays
                 "жексенбі\tдүйсенбі\tсейсенбі\tсәрсенбі\tбейсенбі\tжұма\tсенбі" // weekdays
         );
+
         DateFormatSymbols.register(
                 "mn\tmn-MN", // locales
                 "ҮӨ\tҮХ", // ampm
@@ -1612,6 +1788,7 @@ final class DateFormatSymbolsProvider {
                 "Ня\tДа\tМя\tЛх\tПү\tБа\tБя", // shortWeekdays
                 "ням\tдаваа\tмягмар\tлхагва\tпүрэв\tбаасан\tбямба" // weekdays
         );
+
         DateFormatSymbols.register(
                 "os\tos-GE\tos-RU", // locales
                 "ӕмбисбоны размӕ\tӕмбисбоны фӕстӕ", // ampm
@@ -1621,6 +1798,7 @@ final class DateFormatSymbolsProvider {
                 "хцб\tкрс\tдцг\tӕрт\tцпр\tмрб\tсбт", // shortWeekdays
                 "хуыцаубон\tкъуырисӕр\tдыццӕг\tӕртыццӕг\tцыппӕрӕм\tмайрӕмбон\tсабат" // weekdays
         );
+
         DateFormatSymbols.register(
                 "he\the-IL", // locales
                 "לפנה״צ\tאחה״צ", // ampm
@@ -1630,6 +1808,7 @@ final class DateFormatSymbolsProvider {
                 "יום א׳\tיום ב׳\tיום ג׳\tיום ד׳\tיום ה׳\tיום ו׳\tשבת", // shortWeekdays
                 "יום ראשון\tיום שני\tיום שלישי\tיום רביעי\tיום חמישי\tיום שישי\tיום שבת" // weekdays
         );
+
         DateFormatSymbols.register(
                 "yi\tyi-001", // locales
                 "פֿאַרמיטאָג\tנאָכמיטאָג", // ampm
@@ -1639,6 +1818,7 @@ final class DateFormatSymbolsProvider {
                 "זונטיק\tמאָנטיק\tדינסטיק\tמיטוואך\tדאנערשטיק\tפֿרײַטיק\tשבת", // shortWeekdays
                 "זונטיק\tמאָנטיק\tדינסטיק\tמיטוואך\tדאנערשטיק\tפֿרײַטיק\tשבת" // weekdays
         );
+
         DateFormatSymbols.register(
                 "ar-DZ\tar-TN", // locales
                 "ص\tم", // ampm
@@ -1648,6 +1828,7 @@ final class DateFormatSymbolsProvider {
                 "الأحد\tالاثنين\tالثلاثاء\tالأربعاء\tالخميس\tالجمعة\tالسبت", // shortWeekdays
                 "الأحد\tالاثنين\tالثلاثاء\tالأربعاء\tالخميس\tالجمعة\tالسبت" // weekdays
         );
+
         DateFormatSymbols.register(
                 "ar-JO\tar-LB\tar-PS\tar-SY", // locales
                 "ص\tم", // ampm
@@ -1657,6 +1838,7 @@ final class DateFormatSymbolsProvider {
                 "الأحد\tالاثنين\tالثلاثاء\tالأربعاء\tالخميس\tالجمعة\tالسبت", // shortWeekdays
                 "الأحد\tالاثنين\tالثلاثاء\tالأربعاء\tالخميس\tالجمعة\tالسبت" // weekdays
         );
+
         DateFormatSymbols.register(
                 "ar-IQ", // locales
                 "ص\tم", // ampm
@@ -1666,6 +1848,7 @@ final class DateFormatSymbolsProvider {
                 "الأحد\tالاثنين\tالثلاثاء\tالأربعاء\tالخميس\tالجمعة\tالسبت", // shortWeekdays
                 "الأحد\tالاثنين\tالثلاثاء\tالأربعاء\tالخميس\tالجمعة\tالسبت" // weekdays
         );
+
         DateFormatSymbols.register(
                 "ar-MA", // locales
                 "ص\tم", // ampm
@@ -1675,6 +1858,7 @@ final class DateFormatSymbolsProvider {
                 "الأحد\tالاثنين\tالثلاثاء\tالأربعاء\tالخميس\tالجمعة\tالسبت", // shortWeekdays
                 "الأحد\tالاثنين\tالثلاثاء\tالأربعاء\tالخميس\tالجمعة\tالسبت" // weekdays
         );
+
         DateFormatSymbols.register(
                 "ar\tar-001\tar-AE\tar-BH\tar-DJ\tar-EG\tar-EH\tar-ER\tar-IL\tar-KM\tar-KW\tar-LY\tar-OM\tar-QA\tar-SA\tar-SD\tar-SO\tar-SS\tar-TD\tar-YE", // locales
                 "ص\tم", // ampm
@@ -1684,6 +1868,7 @@ final class DateFormatSymbolsProvider {
                 "الأحد\tالاثنين\tالثلاثاء\tالأربعاء\tالخميس\tالجمعة\tالسبت", // shortWeekdays
                 "الأحد\tالاثنين\tالثلاثاء\tالأربعاء\tالخميس\tالجمعة\tالسبت" // weekdays
         );
+
         DateFormatSymbols.register(
                 "ar-MR", // locales
                 "ص\tم", // ampm
@@ -1693,6 +1878,7 @@ final class DateFormatSymbolsProvider {
                 "الأحد\tالاثنين\tالثلاثاء\tالأربعاء\tالخميس\tالجمعة\tالسبت", // shortWeekdays
                 "الأحد\tالاثنين\tالثلاثاء\tالأربعاء\tالخميس\tالجمعة\tالسبت" // weekdays
         );
+
         DateFormatSymbols.register(
                 "ps\tps-AF", // locales
                 "غ.م.\tغ.و.", // ampm
@@ -1702,6 +1888,7 @@ final class DateFormatSymbolsProvider {
                 "یکشنبه\tدوشنبه\tسه‌شنبه\tچهارشنبه\tپنجشنبه\tجمعه\tشنبه", // shortWeekdays
                 "یکشنبه\tدوشنبه\tسه‌شنبه\tچهارشنبه\tپنجشنبه\tجمعه\tشنبه" // weekdays
         );
+
         DateFormatSymbols.register(
                 "ur\tur-IN\tur-PK", // locales
                 "قبل دوپہر\tبعد دوپہر", // ampm
@@ -1711,6 +1898,7 @@ final class DateFormatSymbolsProvider {
                 "اتوار\tسوموار\tمنگل\tبدھ\tجمعرات\tجمعہ\tہفتہ", // shortWeekdays
                 "اتوار\tسوموار\tمنگل\tبدھ\tجمعرات\tجمعہ\tہفتہ" // weekdays
         );
+
         DateFormatSymbols.register(
                 "fa-AF", // locales
                 "قبل‌ازظهر\tبعدازظهر", // ampm
@@ -1720,6 +1908,7 @@ final class DateFormatSymbolsProvider {
                 "یکشنبه\tدوشنبه\tسه‌شنبه\tچهارشنبه\tپنجشنبه\tجمعه\tشنبه", // shortWeekdays
                 "یکشنبه\tدوشنبه\tسه‌شنبه\tچهارشنبه\tپنجشنبه\tجمعه\tشنبه" // weekdays
         );
+
         DateFormatSymbols.register(
                 "fa\tfa-IR", // locales
                 "قبل‌ازظهر\tبعدازظهر", // ampm
@@ -1729,6 +1918,7 @@ final class DateFormatSymbolsProvider {
                 "یکشنبه\tدوشنبه\tسه‌شنبه\tچهارشنبه\tپنجشنبه\tجمعه\tشنبه", // shortWeekdays
                 "یکشنبه\tدوشنبه\tسه‌شنبه\tچهارشنبه\tپنجشنبه\tجمعه\tشنبه" // weekdays
         );
+
         DateFormatSymbols.register(
                 "ug\tug-CN", // locales
                 "چۈشتىن بۇرۇن\tچۈشتىن كېيىن", // ampm
@@ -1738,6 +1928,7 @@ final class DateFormatSymbolsProvider {
                 "يە\tدۈ\tسە\tچا\tپە\tجۈ\tشە", // shortWeekdays
                 "يەكشەنبە\tدۈشەنبە\tسەيشەنبە\tچارشەنبە\tپەيشەنبە\tجۈمە\tشەنبە" // weekdays
         );
+
         DateFormatSymbols.register(
                 "ne\tne-IN\tne-NP", // locales
                 "पूर्वाह्न\tअपराह्न", // ampm
@@ -1747,6 +1938,7 @@ final class DateFormatSymbolsProvider {
                 "आइत\tसोम\tमङ्गल\tबुध\tबिही\tशुक्र\tशनि", // shortWeekdays
                 "आइतबार\tसोमबार\tमङ्गलबार\tबुधबार\tबिहिबार\tशुक्रबार\tशनिबार" // weekdays
         );
+
         DateFormatSymbols.register(
                 "hi\thi-IN", // locales
                 "पूर्वाह्न\tअपराह्न", // ampm
@@ -1756,6 +1948,7 @@ final class DateFormatSymbolsProvider {
                 "रवि\tसोम\tमंगल\tबुध\tगुरु\tशुक्र\tशनि", // shortWeekdays
                 "रविवार\tसोमवार\tमंगलवार\tबुधवार\tगुरुवार\tशुक्रवार\tशनिवार" // weekdays
         );
+
         DateFormatSymbols.register(
                 "brx\tbrx-IN", // locales
                 "फुं\tबेलासे", // ampm
@@ -1765,6 +1958,7 @@ final class DateFormatSymbolsProvider {
                 "रबि\tसम\tमंगल\tबुद\tबिसथि\tसुखुर\tसुनि", // shortWeekdays
                 "रबिबार\tसमबार\tमंगलबार\tबुदबार\tबिसथिबार\tसुखुरबार\tसुनिबार" // weekdays
         );
+
         DateFormatSymbols.register(
                 "mr\tmr-IN", // locales
                 "म.पू.\tम.उ.", // ampm
@@ -1774,6 +1968,7 @@ final class DateFormatSymbolsProvider {
                 "रवि\tसोम\tमंगळ\tबुध\tगुरु\tशुक्र\tशनि", // shortWeekdays
                 "रविवार\tसोमवार\tमंगळवार\tबुधवार\tगुरुवार\tशुक्रवार\tशनिवार" // weekdays
         );
+
         DateFormatSymbols.register(
                 "kok\tkok-IN", // locales
                 "म.पू.\tम.नं.", // ampm
@@ -1783,6 +1978,7 @@ final class DateFormatSymbolsProvider {
                 "रवि\tसोम\tमंगळ\tबुध\tगुरु\tशुक्र\tशनि", // shortWeekdays
                 "आदित्यवार\tसोमवार\tमंगळार\tबुधवार\tगुरुवार\tशुक्रवार\tशनिवार" // weekdays
         );
+
         DateFormatSymbols.register(
                 "bn\tbn-BD\tbn-IN", // locales
                 "পূর্বাহ্ণ\tঅপরাহ্ণ", // ampm
@@ -1792,6 +1988,7 @@ final class DateFormatSymbolsProvider {
                 "রবি\tসোম\tমঙ্গল\tবুধ\tবৃহস্পতি\tশুক্র\tশনি", // shortWeekdays
                 "রবিবার\tসোমবার\tমঙ্গলবার\tবুধবার\tবৃহস্পতিবার\tশুক্রবার\tশনিবার" // weekdays
         );
+
         DateFormatSymbols.register(
                 "as\tas-IN", // locales
                 "পূৰ্বাহ্ণ\tঅপৰাহ্ণ", // ampm
@@ -1801,6 +1998,7 @@ final class DateFormatSymbolsProvider {
                 "ৰবি\tসোম\tমঙ্গল\tবুধ\tবৃহষ্পতি\tশুক্ৰ\tশনি", // shortWeekdays
                 "দেওবাৰ\tসোমবাৰ\tমঙ্গলবাৰ\tবুধবাৰ\tবৃহষ্পতিবাৰ\tশুক্ৰবাৰ\tশনিবাৰ" // weekdays
         );
+
         DateFormatSymbols.register(
                 "pa\tpa-Guru\tpa-Guru-IN\tpa-IN\tpa-PK", // locales
                 "ਪੂ.ਦੁ.\tਬਾ.ਦੁ.", // ampm
@@ -1810,6 +2008,7 @@ final class DateFormatSymbolsProvider {
                 "ਐਤ\tਸੋਮ\tਮੰਗਲ\tਬੁੱਧ\tਵੀਰ\tਸ਼ੁੱਕਰ\tਸ਼ਨਿੱਚਰ", // shortWeekdays
                 "ਐਤਵਾਰ\tਸੋਮਵਾਰ\tਮੰਗਲਵਾਰ\tਬੁੱਧਵਾਰ\tਵੀਰਵਾਰ\tਸ਼ੁੱਕਰਵਾਰ\tਸ਼ਨਿੱਚਰਵਾਰ" // weekdays
         );
+
         DateFormatSymbols.register(
                 "ta\tta-IN\tta-LK\tta-MY\tta-SG", // locales
                 "முற்பகல்\tபிற்பகல்", // ampm
@@ -1819,6 +2018,7 @@ final class DateFormatSymbolsProvider {
                 "ஞாயி.\tதிங்.\tசெவ்.\tபுத.\tவியா.\tவெள்.\tசனி", // shortWeekdays
                 "ஞாயிறு\tதிங்கள்\tசெவ்வாய்\tபுதன்\tவியாழன்\tவெள்ளி\tசனி" // weekdays
         );
+
         DateFormatSymbols.register(
                 "kn\tkn-IN", // locales
                 "ಪೂರ್ವಾಹ್ನ\tಅಪರಾಹ್ನ", // ampm
@@ -1828,6 +2028,7 @@ final class DateFormatSymbolsProvider {
                 "ಭಾನು\tಸೋಮ\tಮಂಗಳ\tಬುಧ\tಗುರು\tಶುಕ್ರ\tಶನಿ", // shortWeekdays
                 "ಭಾನುವಾರ\tಸೋಮವಾರ\tಮಂಗಳವಾರ\tಬುಧವಾರ\tಗುರುವಾರ\tಶುಕ್ರವಾರ\tಶನಿವಾರ" // weekdays
         );
+
         DateFormatSymbols.register(
                 "si\tsi-LK", // locales
                 "පෙ.ව.\tප.ව.", // ampm
@@ -1837,6 +2038,7 @@ final class DateFormatSymbolsProvider {
                 "ඉරිදා\tසඳුදා\tඅඟහ\tබදාදා\tබ්‍රහස්\tසිකු\tසෙන", // shortWeekdays
                 "ඉරිදා\tසඳුදා\tඅඟහරුවාදා\tබදාදා\tබ්‍රහස්පතින්දා\tසිකුරාදා\tසෙනසුරාදා" // weekdays
         );
+
         DateFormatSymbols.register(
                 "th\tth-TH", // locales
                 "ก่อนเที่ยง\tหลังเที่ยง", // ampm
@@ -1846,6 +2048,7 @@ final class DateFormatSymbolsProvider {
                 "อา.\tจ.\tอ.\tพ.\tพฤ.\tศ.\tส.", // shortWeekdays
                 "วันอาทิตย์\tวันจันทร์\tวันอังคาร\tวันพุธ\tวันพฤหัสบดี\tวันศุกร์\tวันเสาร์" // weekdays
         );
+
         DateFormatSymbols.register(
                 "lo\tlo-LA", // locales
                 "ກ່ອນທ່ຽງ\tຫຼັງທ່ຽງ", // ampm
@@ -1855,6 +2058,7 @@ final class DateFormatSymbolsProvider {
                 "ວັນອາທິດ\tວັນຈັນ\tວັນອັງຄານ\tວັນພຸດ\tວັນພະຫັດ\tວັນສຸກ\tວັນເສົາ", // shortWeekdays
                 "ວັນອາທິດ\tວັນຈັນ\tວັນອັງຄານ\tວັນພຸດ\tວັນພະຫັດ\tວັນສຸກ\tວັນເສົາ" // weekdays
         );
+
         DateFormatSymbols.register(
                 "dz\tdz-BT", // locales
                 "སྔ་ཆ་\tཕྱི་ཆ་", // ampm
@@ -1864,6 +2068,7 @@ final class DateFormatSymbolsProvider {
                 "ཟླ་\tམིར་\tལྷག་\tཕུར་\tསངས་\tསྤེན་\tཉི་", // shortWeekdays
                 "གཟའ་ཟླ་བ་\tགཟའ་མིག་དམར་\tགཟའ་ལྷག་པ་\tགཟའ་ཕུར་བུ་\tགཟའ་པ་སངས་\tགཟའ་སྤེན་པ་\tགཟའ་ཉི་མ་" // weekdays
         );
+
         DateFormatSymbols.register(
                 "bo\tbo-CN\tbo-IN", // locales
                 "སྔ་དྲོ་\tཕྱི་དྲོ་", // ampm
@@ -1873,6 +2078,7 @@ final class DateFormatSymbolsProvider {
                 "ཉི་མ་\tཟླ་བ་\tམིག་དམར་\tལྷག་པ་\tཕུར་བུ་\tཔ་སངས་\tསྤེན་པ་", // shortWeekdays
                 "གཟའ་ཉི་མ་\tགཟའ་ཟླ་བ་\tགཟའ་མིག་དམར་\tགཟའ་ལྷག་པ་\tགཟའ་ཕུར་བུ་\tགཟའ་པ་སངས་\tགཟའ་སྤེན་པ་" // weekdays
         );
+
         DateFormatSymbols.register(
                 "my\tmy-MM", // locales
                 "နံနက်\tညနေ", // ampm
@@ -1882,6 +2088,7 @@ final class DateFormatSymbolsProvider {
                 "တနင်္ဂနွေ\tတနင်္လာ\tအင်္ဂါ\tဗုဒ္ဓဟူး\tကြာသပတေး\tသောကြာ\tစနေ", // shortWeekdays
                 "တနင်္ဂနွေ\tတနင်္လာ\tအင်္ဂါ\tဗုဒ္ဓဟူး\tကြာသပတေး\tသောကြာ\tစနေ" // weekdays
         );
+
         DateFormatSymbols.register(
                 "ti\tti-ET", // locales
                 "ንጉሆ ሰዓተ\tድሕር ሰዓት", // ampm
@@ -1891,6 +2098,7 @@ final class DateFormatSymbolsProvider {
                 "ሰንበት\tሰኑይ\tሠሉስ\tረቡዕ\tኃሙስ\tዓርቢ\tቀዳም", // shortWeekdays
                 "ሰንበት\tሰኑይ\tሠሉስ\tረቡዕ\tኃሙስ\tዓርቢ\tቀዳም" // weekdays
         );
+
         DateFormatSymbols.register(
                 "ti-ER", // locales
                 "ንጉሆ ሰዓተ\tድሕር ሰዓት", // ampm
@@ -1900,6 +2108,7 @@ final class DateFormatSymbolsProvider {
                 "ሰንበት\tሰኑይ\tሰሉስ\tረቡዕ\tሓሙስ\tዓርቢ\tቀዳም", // shortWeekdays
                 "ሰንበት\tሰኑይ\tሰሉስ\tረቡዕ\tሓሙስ\tዓርቢ\tቀዳም" // weekdays
         );
+
         DateFormatSymbols.register(
                 "am\tam-ET", // locales
                 "ጥዋት\tከሰዓት", // ampm
@@ -1909,6 +2118,7 @@ final class DateFormatSymbolsProvider {
                 "እሑድ\tሰኞ\tማክሰ\tረቡዕ\tሐሙስ\tዓርብ\tቅዳሜ", // shortWeekdays
                 "እሑድ\tሰኞ\tማክሰኞ\tረቡዕ\tሐሙስ\tዓርብ\tቅዳሜ" // weekdays
         );
+
         DateFormatSymbols.register(
                 "chr\tchr-US", // locales
                 "ᏌᎾᎴ\tᏒᎯᏱᎢᏗᏢ", // ampm
@@ -1918,6 +2128,7 @@ final class DateFormatSymbolsProvider {
                 "ᏆᏍᎬ\tᏉᏅᎯ\tᏔᎵᏁ\tᏦᎢᏁ\tᏅᎩᏁ\tᏧᎾᎩ\tᏈᏕᎾ", // shortWeekdays
                 "ᎤᎾᏙᏓᏆᏍᎬ\tᎤᎾᏙᏓᏉᏅᎯ\tᏔᎵᏁᎢᎦ\tᏦᎢᏁᎢᎦ\tᏅᎩᏁᎢᎦ\tᏧᎾᎩᎶᏍᏗ\tᎤᎾᏙᏓᏈᏕᎾ" // weekdays
         );
+
         DateFormatSymbols.register(
                 "km\tkm-KH", // locales
                 "ព្រឹក\tល្ងាច", // ampm
@@ -1927,6 +2138,7 @@ final class DateFormatSymbolsProvider {
                 "អាទិត្យ\tច័ន្ទ\tអង្គារ\tពុធ\tព្រហស្បតិ៍\tសុក្រ\tសៅរ៍", // shortWeekdays
                 "អាទិត្យ\tច័ន្ទ\tអង្គារ\tពុធ\tព្រហស្បតិ៍\tសុក្រ\tសៅរ៍" // weekdays
         );
+
         DateFormatSymbols.register(
                 "zgh\tzgh-MA", // locales
                 "ⵜⵉⴼⴰⵡⵜ\tⵜⴰⴷⴳⴳⵯⴰⵜ", // ampm
@@ -1936,6 +2148,7 @@ final class DateFormatSymbolsProvider {
                 "ⴰⵙⴰ\tⴰⵢⵏ\tⴰⵙⵉ\tⴰⴽⵕ\tⴰⴽⵡ\tⴰⵙⵉⵎ\tⴰⵙⵉⴹ", // shortWeekdays
                 "ⴰⵙⴰⵎⴰⵙ\tⴰⵢⵏⴰⵙ\tⴰⵙⵉⵏⴰⵙ\tⴰⴽⵕⴰⵙ\tⴰⴽⵡⴰⵙ\tⴰⵙⵉⵎⵡⴰⵙ\tⴰⵙⵉⴹⵢⴰⵙ" // weekdays
         );
+
         DateFormatSymbols.register(
                 "shi\tshi-MA\tshi-Tfng\tshi-Tfng-MA", // locales
                 "ⵜⵉⴼⴰⵡⵜ\tⵜⴰⴷⴳⴳⵯⴰⵜ", // ampm
@@ -1945,6 +2158,7 @@ final class DateFormatSymbolsProvider {
                 "ⴰⵙⴰ\tⴰⵢⵏ\tⴰⵙⵉ\tⴰⴽⵕ\tⴰⴽⵡ\tⴰⵙⵉⵎ\tⴰⵙⵉⴹ", // shortWeekdays
                 "ⴰⵙⴰⵎⴰⵙ\tⴰⵢⵏⴰⵙ\tⴰⵙⵉⵏⴰⵙ\tⴰⴽⵕⴰⵙ\tⴰⴽⵡⴰⵙ\tⵙⵉⵎⵡⴰⵙ\tⴰⵙⵉⴹⵢⴰⵙ" // weekdays
         );
+
         DateFormatSymbols.register(
                 "zh-HK\tzh-Hant-HK\tzh-Hant-MO", // locales
                 "上午\t下午", // ampm
@@ -1954,6 +2168,7 @@ final class DateFormatSymbolsProvider {
                 "週日\t週一\t週二\t週三\t週四\t週五\t週六", // shortWeekdays
                 "星期日\t星期一\t星期二\t星期三\t星期四\t星期五\t星期六" // weekdays
         );
+
         DateFormatSymbols.register(
                 "zh\tzh-CN\tzh-Hans\tzh-Hans-CN\tzh-Hans-HK\tzh-Hans-MO\tzh-Hans-SG", // locales
                 "上午\t下午", // ampm
@@ -1963,6 +2178,7 @@ final class DateFormatSymbolsProvider {
                 "周日\t周一\t周二\t周三\t周四\t周五\t周六", // shortWeekdays
                 "星期日\t星期一\t星期二\t星期三\t星期四\t星期五\t星期六" // weekdays
         );
+
         DateFormatSymbols.register(
                 "zh-SG", // locales
                 "上午\t下午", // ampm
@@ -1972,6 +2188,7 @@ final class DateFormatSymbolsProvider {
                 "周日\t周一\t周二\t周三\t周四\t周五\t周六", // shortWeekdays
                 "星期日\t星期一\t星期二\t星期三\t星期四\t星期五\t星期六" // weekdays
         );
+
         DateFormatSymbols.register(
                 "yue\tyue-HK\tzh-Hant\tzh-Hant-TW\tzh-TW", // locales
                 "上午\t下午", // ampm
@@ -1981,6 +2198,7 @@ final class DateFormatSymbolsProvider {
                 "週日\t週一\t週二\t週三\t週四\t週五\t週六", // shortWeekdays
                 "星期日\t星期一\t星期二\t星期三\t星期四\t星期五\t星期六" // weekdays
         );
+
         DateFormatSymbols.register(
                 "ja\tja-JP", // locales
                 "午前\t午後", // ampm
@@ -1990,6 +2208,7 @@ final class DateFormatSymbolsProvider {
                 "日\t月\t火\t水\t木\t金\t土", // shortWeekdays
                 "日曜日\t月曜日\t火曜日\t水曜日\t木曜日\t金曜日\t土曜日" // weekdays
         );
+
         DateFormatSymbols.register(
                 "ii\tii-CN", // locales
                 "ꎸꄑ\tꁯꋒ", // ampm
@@ -1999,6 +2218,7 @@ final class DateFormatSymbolsProvider {
                 "ꑭꆏ\tꆏꋍ\tꆏꑍ\tꆏꌕ\tꆏꇖ\tꆏꉬ\tꆏꃘ", // shortWeekdays
                 "ꑭꆏꑍ\tꆏꊂꋍ\tꆏꊂꑍ\tꆏꊂꌕ\tꆏꊂꇖ\tꆏꊂꉬ\tꆏꊂꃘ" // weekdays
         );
+
         DateFormatSymbols.register(
                 "ko\tko-KP\tko-KR", // locales
                 "오전\t오후", // ampm
@@ -2008,5 +2228,6 @@ final class DateFormatSymbolsProvider {
                 "일\t월\t화\t수\t목\t금\t토", // shortWeekdays
                 "일요일\t월요일\t화요일\t수요일\t목요일\t금요일\t토요일" // weekdays
         );
+
     }
 }

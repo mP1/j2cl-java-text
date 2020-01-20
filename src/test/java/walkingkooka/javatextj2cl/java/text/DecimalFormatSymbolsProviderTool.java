@@ -89,6 +89,8 @@ public final class DecimalFormatSymbolsProviderTool extends LocaleProviderTool {
                 this.outdent();
 
                 this.line(");");
+
+                this.emptyLine();
             }
         }
         this.outdent();

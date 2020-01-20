@@ -60,6 +60,10 @@ abstract class LocaleProviderTool {
         this.printer.outdent();
     }
 
+    final void emptyLine() {
+        this.printer.print(this.printer.lineEnding());
+    }
+
     final void line(final CharSequence text) {
         this.printer.print(text);
         this.printer.lineStart();
