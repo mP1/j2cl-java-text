@@ -112,6 +112,16 @@ public final class DateFormatSymbolsTest implements ClassTesting<DateFormatSymbo
         this.check(DateFormatSymbols.getInstance(Locale.getDefault()), new java.text.DateFormatSymbols(locale));
     }
 
+    @Test
+    public void testGetInstanceLocaleAllLocales() {
+        for (final Locale locale : Locale.getAvailableLocales()) {
+            if(WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+                continue;
+            }
+            this.check(DateFormatSymbols.getInstance(locale), java.text.DateFormatSymbols.getInstance(locale));
+        }
+    }
+
     // new..............................................................................................................
     
     @Test
@@ -130,6 +140,25 @@ public final class DateFormatSymbolsTest implements ClassTesting<DateFormatSymbo
         Locale.setDefault(Locale.forLanguageTag(locale.toLanguageTag()));
 
         this.check(new DateFormatSymbols(Locale.getDefault()), new java.text.DateFormatSymbols(locale));
+    }
+
+    @Test
+    public void testNewLocaleYi001() {
+        final java.util.Locale locale = Locale.forLanguageTag("yi-001");
+        java.util.Locale.setDefault(locale);
+        Locale.setDefault(Locale.forLanguageTag(locale.toLanguageTag()));
+
+        this.check(new DateFormatSymbols(Locale.getDefault()), new java.text.DateFormatSymbols(locale));
+    }
+
+    @Test
+    public void testNewLocaleAllLocales() {
+        for (final Locale locale : Locale.getAvailableLocales()) {
+            if(WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+                continue;
+            }
+            this.check(new DateFormatSymbols(locale), new java.text.DateFormatSymbols(locale));
+        }
     }
 
     private void check(final DateFormatSymbols emulated,
