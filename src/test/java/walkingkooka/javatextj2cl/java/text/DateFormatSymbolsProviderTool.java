@@ -83,6 +83,8 @@ public final class DateFormatSymbolsProviderTool extends LocaleProviderTool {
                 this.outdent();
 
                 this.line(");");
+
+                this.emptyLine();
             }
         }
         this.outdent();
