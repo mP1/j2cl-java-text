@@ -136,24 +136,27 @@ public class DecimalFormatSymbols {
     }
 
     private DecimalFormatSymbols(final WalkingkookaLocale locale) {
+        this(LANGUAGE_TAG_TO_SYMBOLS.get(locale.languageTag().toLanguageTag()));
+    }
+
+    private DecimalFormatSymbols(final DecimalFormatSymbols source) {
         super();
 
-        final DecimalFormatSymbols symbols = LANGUAGE_TAG_TO_SYMBOLS.get(locale.languageTag().toLanguageTag());
-        this.currency = symbols.getCurrency();
-        this.currencySymbol = symbols.getCurrencySymbol();
-        this.decimalSeparator = symbols.getDecimalSeparator();
-        this.digit = symbols.getDigit();
-        this.exponentSeparator = symbols.getExponentSeparator();
-        this.groupingSeparator = symbols.getGroupingSeparator();
-        this.infinity = symbols.getInfinity();
-        this.internationalCurrencySymbol = symbols.getInternationalCurrencySymbol();
-        this.minusSign = symbols.getMinusSign();
-        this.monetaryDecimalSeparator = symbols.getMonetaryDecimalSeparator();
-        this.nan = symbols.getNaN();
-        this.patternSeparator = symbols.getPatternSeparator();
-        this.percent = symbols.getPercent();
-        this.perMill = symbols.getPerMill();
-        this.zeroDigit = symbols.getZeroDigit();
+        this.currency = source.getCurrency();
+        this.currencySymbol = source.getCurrencySymbol();
+        this.decimalSeparator = source.getDecimalSeparator();
+        this.digit = source.getDigit();
+        this.exponentSeparator = source.getExponentSeparator();
+        this.groupingSeparator = source.getGroupingSeparator();
+        this.infinity = source.getInfinity();
+        this.internationalCurrencySymbol = source.getInternationalCurrencySymbol();
+        this.minusSign = source.getMinusSign();
+        this.monetaryDecimalSeparator = source.getMonetaryDecimalSeparator();
+        this.nan = source.getNaN();
+        this.patternSeparator = source.getPatternSeparator();
+        this.percent = source.getPercent();
+        this.perMill = source.getPerMill();
+        this.zeroDigit = source.getZeroDigit();
     }
 
     public String getCurrency() {
@@ -313,21 +316,7 @@ public class DecimalFormatSymbols {
      * Used internally to make a defensive copy
      */
     final DecimalFormatSymbols cloneState() {
-        return new DecimalFormatSymbols(this.currency,
-                this.currencySymbol,
-                this.decimalSeparator,
-                this.digit,
-                this.exponentSeparator,
-                this.groupingSeparator,
-                this.infinity,
-                this.internationalCurrencySymbol,
-                this.minusSign,
-                this.monetaryDecimalSeparator,
-                this.nan,
-                this.patternSeparator,
-                this.percent,
-                this.perMill,
-                this.zeroDigit);
+        return new DecimalFormatSymbols(this);
     }
 
     // Object...........................................................................................................
