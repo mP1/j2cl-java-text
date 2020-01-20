@@ -100,6 +100,17 @@ public final class DateFormatSymbolsTest implements ClassTesting<DateFormatSymbo
         assertNotEquals(symbols, DateFormatSymbols.getInstance());
     }
 
+    // getInstance(Locale)...............................................................................................
+
+    @Test
+    public void testGetInstanceLocale() {
+        final java.util.Locale locale = Locale.FRENCH;
+        java.util.Locale.setDefault(locale);
+        Locale.setDefault(Locale.forLanguageTag(locale.toLanguageTag()));
+
+        this.check(DateFormatSymbols.getInstance(Locale.getDefault()), new java.text.DateFormatSymbols(locale));
+    }
+
     // new..............................................................................................................
     
     @Test
