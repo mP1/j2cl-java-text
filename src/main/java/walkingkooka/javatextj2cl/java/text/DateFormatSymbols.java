@@ -120,6 +120,9 @@ public class DateFormatSymbols {
     // @VisibleForTestin
     static DateFormatSymbols DEFAULT;
 
+    public static DateFormatSymbols getInstance(final Locale locale) {
+        return new DateFormatSymbols(locale);
+    }
 
     public DateFormatSymbols() {
         this(Locale.getDefault());
