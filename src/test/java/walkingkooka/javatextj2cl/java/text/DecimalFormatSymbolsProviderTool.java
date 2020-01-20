@@ -23,10 +23,12 @@ import walkingkooka.text.Indentation;
 import walkingkooka.text.printer.IndentingPrinter;
 import walkingkooka.text.printer.Printers;
 
+import java.text.DateFormatSymbols;
 import java.text.DecimalFormatSymbols;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 
 /**
@@ -59,10 +61,15 @@ public final class DecimalFormatSymbolsProviderTool extends LocaleProviderTool {
             symbolLocales.add(locale.toLanguageTag());
         }
 
+        final Map<String, java.text.DecimalFormatSymbols> languageTagToSymbols = Maps.sorted();
+        for(final Entry<DecimalFormatSymbols, Set<String>> languageTagAndSymbol : symbolToLanguageTags.entrySet()) {
+            languageTagToSymbols.put(languageTagAndSymbol.getValue().iterator().next(), languageTagAndSymbol.getKey());
+        }
+
         this.line("static void register() {");
         this.indent();
         {
-            for (final DecimalFormatSymbols symbols : symbolToLanguageTags.keySet()) {
+            for (final DecimalFormatSymbols symbols : languageTagToSymbols.values()) {
                 final Set<String> languageTags = symbolToLanguageTags.get(symbols);
 
                 this.line(type(walkingkooka.javatextj2cl.java.text.DecimalFormatSymbols.class) + ".register(");
