@@ -110,6 +110,17 @@ public class DateFormatSymbols {
                 .toArray(Locale[]::new);
     }
 
+    public static DateFormatSymbols getInstance() {
+        if (null == DEFAULT) {
+            DEFAULT = new DateFormatSymbols();
+        }
+        return DEFAULT.cloneState();
+    }
+
+    // @VisibleForTestin
+    static DateFormatSymbols DEFAULT;
+
+
     public DateFormatSymbols() {
         this(Locale.getDefault());
     }

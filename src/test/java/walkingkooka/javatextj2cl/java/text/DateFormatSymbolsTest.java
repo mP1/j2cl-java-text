@@ -31,6 +31,7 @@ import java.util.Locale;
 import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertNotSame;
 
 public final class DateFormatSymbolsTest implements ClassTesting<DateFormatSymbols>,
@@ -52,6 +53,51 @@ public final class DateFormatSymbolsTest implements ClassTesting<DateFormatSymbo
         emulated.addAll(Arrays.asList(DateFormatSymbols.getAvailableLocales()));
 
         assertEquals(jdk, emulated);
+    }
+
+    // getInstance......................................................................................................
+
+    @Test
+    public void testGetInstance() {
+        DateFormatSymbols.DEFAULT = null;
+
+        final java.util.Locale locale = Locale.FRENCH;
+        java.util.Locale.setDefault(locale);
+
+        this.check(DateFormatSymbols.getInstance(), java.text.DateFormatSymbols.getInstance());
+    }
+
+    @Test
+    public void testGetInstance2() {
+        DateFormatSymbols.DEFAULT = null;
+
+        final java.util.Locale locale = Locale.GERMAN;
+        java.util.Locale.setDefault(locale);
+
+        this.check(DateFormatSymbols.getInstance(), java.text.DateFormatSymbols.getInstance());
+    }
+
+    @Test
+    public void testGetInstanceSingleton() {
+        DateFormatSymbols.DEFAULT = null;
+
+        final java.util.Locale locale = Locale.GERMAN;
+        java.util.Locale.setDefault(locale);
+
+        assertEquals(java.text.DateFormatSymbols.getInstance(), java.text.DateFormatSymbols.getInstance());
+    }
+
+    @Test
+    public void testGetInstanceCloned() {
+        DateFormatSymbols.DEFAULT = null;
+
+        final java.util.Locale locale = Locale.ITALIAN;
+        java.util.Locale.setDefault(locale);
+
+        final DateFormatSymbols symbols = DateFormatSymbols.getInstance();
+        symbols.setAmPmStrings(new String[]{ "XXX", "YYYY"});
+
+        assertNotEquals(symbols, DateFormatSymbols.getInstance());
     }
 
     // new..............................................................................................................
