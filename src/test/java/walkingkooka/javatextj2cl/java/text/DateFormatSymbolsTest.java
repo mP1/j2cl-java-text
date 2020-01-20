@@ -31,6 +31,7 @@ import java.util.Locale;
 import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotSame;
 
 public final class DateFormatSymbolsTest implements ClassTesting<DateFormatSymbols>,
         HashCodeEqualsDefinedTesting2<DateFormatSymbols>,
@@ -83,6 +84,30 @@ public final class DateFormatSymbolsTest implements ClassTesting<DateFormatSymbo
         Assertions.assertArrayEquals(expected.getShortWeekdays(), emulated.getShortWeekdays(), "shortWeekdays");
         Assertions.assertArrayEquals(expected.getWeekdays(), emulated.getWeekdays(), "weekdays");
     }
+
+    // cloneState........................................................................................................
+
+    @Test
+    public void testCloneState() {
+        final DateFormatSymbols symbols = new DateFormatSymbols(Locale.FRANCE);
+        final DateFormatSymbols clone = symbols.cloneState();
+
+        assertNotSame(symbols, clone);
+        this.checkEquals(symbols, clone);
+    }
+
+    @Test
+    public void testCloneState2() {
+        for (final Locale locale : Locale.getAvailableLocales()) {
+            final DateFormatSymbols symbols = new DateFormatSymbols(locale);
+            final DateFormatSymbols clone = symbols.cloneState();
+
+            assertNotSame(symbols, clone);
+            this.checkEquals(symbols, clone);
+        }
+    }
+
+    // equals...........................................................................................................
 
     @Test
     public void testDifferentLocale() {

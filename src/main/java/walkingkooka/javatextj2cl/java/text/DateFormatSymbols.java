@@ -124,15 +124,18 @@ public class DateFormatSymbols {
     }
 
     private DateFormatSymbols(final WalkingkookaLocale locale) {
+        this(LANGUAGE_TAG_TO_SYMBOLS.get(locale.languageTag().toLanguageTag()));
+    }
+
+    private DateFormatSymbols(final DateFormatSymbols source) {
         super();
 
-        final DateFormatSymbols symbols = LANGUAGE_TAG_TO_SYMBOLS.get(locale.languageTag().toLanguageTag());
-        this.ampm = symbols.ampm;
-        this.eras = symbols.eras;
-        this.months = symbols.months;
-        this.shortMonths = symbols.shortMonths;
-        this.shortWeekdays = symbols.shortWeekdays;
-        this.weekdays = symbols.weekdays;
+        this.ampm = source.ampm;
+        this.eras = source.eras;
+        this.months = source.months;
+        this.shortMonths = source.shortMonths;
+        this.shortWeekdays = source.shortWeekdays;
+        this.weekdays = source.weekdays;
     }
 
     public String[] getAmPmStrings() {
@@ -197,6 +200,12 @@ public class DateFormatSymbols {
 
     private static String[] copyOf(final String[] array) {
         return Arrays.copyOf(array, array.length);
+    }
+
+    // clone...........................................................................................................
+
+    final DateFormatSymbols cloneState() {
+        return new DateFormatSymbols(this);
     }
 
     // Object...........................................................................................................
