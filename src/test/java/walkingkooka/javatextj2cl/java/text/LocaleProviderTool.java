@@ -52,10 +52,6 @@ abstract class LocaleProviderTool {
         return Arrays.toString(array);
     }
 
-    static String javaMethodNameSafe(final String tag) {
-        return tag.replace('-', '_').replace("#", "");
-    }
-
     final void indent() {
         this.printer.indent();
     }
