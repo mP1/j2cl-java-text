@@ -29,6 +29,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -62,10 +63,15 @@ public final class DateFormatSymbolsProviderTool extends LocaleProviderTool {
             symbolLocales.add(locale.toLanguageTag());
         }
 
+        final Map<String, DateFormatSymbols> languageTagToSymbols = Maps.sorted();
+        for(final Entry<DateFormatSymbols, Set<String>> languageTagAndSymbol : symbolToLanguageTags.entrySet()) {
+            languageTagToSymbols.put(languageTagAndSymbol.getValue().iterator().next(), languageTagAndSymbol.getKey());
+        }
+
         this.line("static void register() {");
         this.indent();
         {
-            for (final DateFormatSymbols symbols : symbolToLanguageTags.keySet()) {
+            for (final DateFormatSymbols symbols : languageTagToSymbols.values()) {
                 final Set<String> languageTags = symbolToLanguageTags.get(symbols);
 
                 this.line(type(walkingkooka.javatextj2cl.java.text.DateFormatSymbols.class) + ".register(");
