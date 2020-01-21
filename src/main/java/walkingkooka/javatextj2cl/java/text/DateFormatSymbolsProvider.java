@@ -20,6 +20,16 @@ package walkingkooka.javatextj2cl.java.text;
 final class DateFormatSymbolsProvider {
     static void register() {
         DateFormatSymbols.register(
+                "\tckb\tckb-IQ\tckb-IR\tcu\tcu-RU\tprg\tprg-001\ttk\ttk-TM\tund\tvo\tvo-001", // locales
+                "AM\tPM", // ampm
+                "BCE\tCE", // eras
+                "Jan\tFeb\tMar\tApr\tMay\tJun\tJul\tAug\tSep\tOct\tNov\tDec", // months
+                "Jan\tFeb\tMar\tApr\tMay\tJun\tJul\tAug\tSep\tOct\tNov\tDec", // shortMonths
+                "Sun\tMon\tTue\tWed\tThu\tFri\tSat", // shortWeekdays
+                "Sun\tMon\tTue\tWed\tThu\tFri\tSat" // weekdays
+        );
+
+        DateFormatSymbols.register(
                 "af\taf-NA\taf-ZA", // locales
                 "vm.\tnm.", // ampm
                 "v.C.\tn.C.", // eras
@@ -327,16 +337,6 @@ final class DateFormatSymbolsProvider {
                 "ᎤᏃ\tᎧᎦ\tᎠᏅ\tᎧᏬ\tᎠᏂ\tᏕᎭ\tᎫᏰ\tᎦᎶ\tᏚᎵ\tᏚᏂ\tᏅᏓ\tᎥᏍ", // shortMonths
                 "ᏆᏍᎬ\tᏉᏅᎯ\tᏔᎵᏁ\tᏦᎢᏁ\tᏅᎩᏁ\tᏧᎾᎩ\tᏈᏕᎾ", // shortWeekdays
                 "ᎤᎾᏙᏓᏆᏍᎬ\tᎤᎾᏙᏓᏉᏅᎯ\tᏔᎵᏁᎢᎦ\tᏦᎢᏁᎢᎦ\tᏅᎩᏁᎢᎦ\tᏧᎾᎩᎶᏍᏗ\tᎤᎾᏙᏓᏈᏕᎾ" // weekdays
-        );
-
-        DateFormatSymbols.register(
-                "ckb\tckb-IQ\tckb-IR\tcu\tcu-RU\tprg\tprg-001\ttk\ttk-TM\tund\tvo\tvo-001", // locales
-                "AM\tPM", // ampm
-                "BCE\tCE", // eras
-                "Jan\tFeb\tMar\tApr\tMay\tJun\tJul\tAug\tSep\tOct\tNov\tDec", // months
-                "Jan\tFeb\tMar\tApr\tMay\tJun\tJul\tAug\tSep\tOct\tNov\tDec", // shortMonths
-                "Sun\tMon\tTue\tWed\tThu\tFri\tSat", // shortWeekdays
-                "Sun\tMon\tTue\tWed\tThu\tFri\tSat" // weekdays
         );
 
         DateFormatSymbols.register(
@@ -810,7 +810,7 @@ final class DateFormatSymbolsProvider {
         );
 
         DateFormatSymbols.register(
-                "he\the-IL", // locales
+                "he\the-IL\tiw\tiw-IL", // locales
                 "לפנה״צ\tאחה״צ", // ampm
                 "לפנה״ס\tלספירה", // eras
                 "ינואר\tפברואר\tמרץ\tאפריל\tמאי\tיוני\tיולי\tאוגוסט\tספטמבר\tאוקטובר\tנובמבר\tדצמבר", // months
@@ -870,7 +870,7 @@ final class DateFormatSymbolsProvider {
         );
 
         DateFormatSymbols.register(
-                "id\tid-ID", // locales
+                "id\tid-ID\tin\tin-ID", // locales
                 "AM\tPM", // ampm
                 "SM\tM", // eras
                 "Januari\tFebruari\tMaret\tApril\tMei\tJuni\tJuli\tAgustus\tSeptember\tOktober\tNovember\tDesember", // months
@@ -937,6 +937,16 @@ final class DateFormatSymbolsProvider {
                 "Nduŋmbi Saŋ\tPɛsaŋ Pɛ́pá\tPɛsaŋ Pɛ́tát\tPɛsaŋ Pɛ́nɛ́kwa\tPɛsaŋ Pataa\tPɛsaŋ Pɛ́nɛ́ntúkú\tPɛsaŋ Saambá\tPɛsaŋ Pɛ́nɛ́fɔm\tPɛsaŋ Pɛ́nɛ́pfúꞋú\tPɛsaŋ Nɛgɛ́m\tPɛsaŋ Ntsɔ̌pmɔ́\tPɛsaŋ Ntsɔ̌ppá", // shortMonths
                 "Sɔ́ndi\tMɔ́ndi\tÁpta Mɔ́ndi\tWɛ́nɛsɛdɛ\tTɔ́sɛdɛ\tFɛlâyɛdɛ\tSásidɛ", // shortWeekdays
                 "Sɔ́ndi\tMɔ́ndi\tÁpta Mɔ́ndi\tWɛ́nɛsɛdɛ\tTɔ́sɛdɛ\tFɛlâyɛdɛ\tSásidɛ" // weekdays
+        );
+
+        DateFormatSymbols.register(
+                "ji\tji-001\tyi\tyi-001", // locales
+                "פֿאַרמיטאָג\tנאָכמיטאָג", // ampm
+                "BCE\tCE", // eras
+                "יאַנואַר\tפֿעברואַר\tמערץ\tאַפּריל\tמיי\tיוני\tיולי\tאויגוסט\tסעפּטעמבער\tאקטאבער\tנאוועמבער\tדעצעמבער", // months
+                "יאַנואַר\tפֿעברואַר\tמערץ\tאַפּריל\tמיי\tיוני\tיולי\tאויגוסט\tסעפּטעמבער\tאקטאבער\tנאוועמבער\tדעצעמבער", // shortMonths
+                "זונטיק\tמאָנטיק\tדינסטיק\tמיטוואך\tדאנערשטיק\tפֿרײַטיק\tשבת", // shortWeekdays
+                "זונטיק\tמאָנטיק\tדינסטיק\tמיטוואך\tדאנערשטיק\tפֿרײַטיק\tשבת" // weekdays
         );
 
         DateFormatSymbols.register(
@@ -1440,7 +1450,7 @@ final class DateFormatSymbolsProvider {
         );
 
         DateFormatSymbols.register(
-                "nb\tnb-NO\tnb-SJ\tno\tno-NO", // locales
+                "nb\tnb-NO\tnb-SJ\tno\tno-NO\tno-NO-NY", // locales
                 "a.m.\tp.m.", // ampm
                 "f.Kr.\te.Kr.", // eras
                 "januar\tfebruar\tmars\tapril\tmai\tjuni\tjuli\taugust\tseptember\toktober\tnovember\tdesember", // months
@@ -2137,16 +2147,6 @@ final class DateFormatSymbolsProvider {
                 "o.1\to.2\to.3\to.4\to.5\to.6\to.7\to.8\to.9\to.10\to.11\to.12", // shortMonths
                 "sd\tmd\tmw\tet\tkl\tfl\tss", // shortWeekdays
                 "sɔ́ndiɛ\tmóndie\tmuányáŋmóndie\tmetúkpíápɛ\tkúpélimetúkpiapɛ\tfeléte\tséselé" // weekdays
-        );
-
-        DateFormatSymbols.register(
-                "yi\tyi-001", // locales
-                "פֿאַרמיטאָג\tנאָכמיטאָג", // ampm
-                "BCE\tCE", // eras
-                "יאַנואַר\tפֿעברואַר\tמערץ\tאַפּריל\tמיי\tיוני\tיולי\tאויגוסט\tסעפּטעמבער\tאקטאבער\tנאוועמבער\tדעצעמבער", // months
-                "יאַנואַר\tפֿעברואַר\tמערץ\tאַפּריל\tמיי\tיוני\tיולי\tאויגוסט\tסעפּטעמבער\tאקטאבער\tנאוועמבער\tדעצעמבער", // shortMonths
-                "זונטיק\tמאָנטיק\tדינסטיק\tמיטוואך\tדאנערשטיק\tפֿרײַטיק\tשבת", // shortWeekdays
-                "זונטיק\tמאָנטיק\tדינסטיק\tמיטוואך\tדאנערשטיק\tפֿרײַטיק\tשבת" // weekdays
         );
 
         DateFormatSymbols.register(

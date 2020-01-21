@@ -18,6 +18,7 @@
 package walkingkooka.javatextj2cl.java.text;
 
 import walkingkooka.collect.list.Lists;
+import walkingkooka.javautillocalej2cl.WalkingkookaLanguageTagTool;
 import walkingkooka.javautillocalej2cl.WalkingkookaLocale;
 import walkingkooka.text.CharSequences;
 import walkingkooka.text.printer.IndentingPrinter;
@@ -26,6 +27,7 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 import java.util.Locale;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 abstract class LocaleProviderTool {
@@ -36,17 +38,10 @@ abstract class LocaleProviderTool {
     }
 
     final void print() {
-        final List<Locale> locales = Lists.array();
-        locales.addAll(Lists.of(Locale.getAvailableLocales()));
-        locales.removeIf(l -> {
-            return WalkingkookaLocale.isUnsupported(l.toLanguageTag());
-        });
-        locales.sort((l, r) -> l.toLanguageTag().compareTo(r.toLanguageTag()));
-
-        this.printLocales(locales);
+        this.printLocales(WalkingkookaLanguageTagTool.all());
     }
 
-    abstract void printLocales(final List<Locale> locales);
+    abstract void printLocales(final Set<String> languageTags);
 
     static String toString(final String[] array) {
         return Arrays.toString(array);
