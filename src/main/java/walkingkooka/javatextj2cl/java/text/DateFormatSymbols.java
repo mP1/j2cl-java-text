@@ -18,15 +18,10 @@
 package walkingkooka.javatextj2cl.java.text;
 
 import walkingkooka.ToStringBuilder;
-import walkingkooka.collect.map.Maps;
-import walkingkooka.javautillocalej2cl.WalkingkookaLanguageTag;
-import walkingkooka.javautillocalej2cl.WalkingkookaLocale;
 
 import java.util.Arrays;
 import java.util.Locale;
-import java.util.Map;
 import java.util.Objects;
-import java.util.Optional;
 
 /**
  * A very much simplified {@link java.text.DateFormatSymbols}.
@@ -36,7 +31,7 @@ public class DateFormatSymbols {
     /**
      * Language tag to symbols, this is used internally to "get" the symbols for a given Locale.
      */
-    private final static Map<String, DateFormatSymbols> LANGUAGE_TAG_TO_SYMBOLS = Maps.ordered();
+    private final static LanguageTagLookup<DateFormatSymbols> LANGUAGE_TAG_TO_SYMBOLS = LanguageTagLookup.empty();
 
     static {
         DateFormatSymbolsProvider.register();
@@ -60,7 +55,7 @@ public class DateFormatSymbols {
                 weekdays);
 
         for(final String locale : extractTokens(locales)) {
-            LANGUAGE_TAG_TO_SYMBOLS.put(locale, symbols);
+            LANGUAGE_TAG_TO_SYMBOLS.add(locale, symbols);
         }
     }
 
@@ -103,11 +98,7 @@ public class DateFormatSymbols {
      * All available {@link Locale locales} also provide date format symbols.
      */
     public static Locale[] getAvailableLocales() {
-        return LANGUAGE_TAG_TO_SYMBOLS.keySet()
-                .stream()
-                .map(Locale::forLanguageTag)
-                .sorted((l, r) -> l.toLanguageTag().compareTo(r.toLanguageTag()))
-                .toArray(Locale[]::new);
+        return LANGUAGE_TAG_TO_SYMBOLS.availableLocales();
     }
 
     public static DateFormatSymbols getInstance() {
@@ -129,16 +120,7 @@ public class DateFormatSymbols {
     }
 
     public DateFormatSymbols(final Locale locale) {
-        this(toWalkingkookaLocale(locale).orElse(toWalkingkookaLocale(Locale.getDefault()).orElseThrow(() -> new IllegalStateException())));
-    }
-
-    private static Optional<WalkingkookaLocale> toWalkingkookaLocale(final Locale locale) {
-        // TODO extract a js version that calls Locale#toWalkingkookaLanguageTag
-        return WalkingkookaLocale.forLanguageTag(WalkingkookaLanguageTag.parse(locale.toLanguageTag()));
-    }
-
-    private DateFormatSymbols(final WalkingkookaLocale locale) {
-        this(LANGUAGE_TAG_TO_SYMBOLS.get(locale.languageTag().toLanguageTag()));
+        this(LANGUAGE_TAG_TO_SYMBOLS.get(locale.toLanguageTag()).orElseThrow(() -> new IllegalStateException()));
     }
 
     private DateFormatSymbols(final DateFormatSymbols source) {

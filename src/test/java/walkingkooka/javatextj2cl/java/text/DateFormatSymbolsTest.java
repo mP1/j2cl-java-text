@@ -22,6 +22,7 @@ import org.junit.jupiter.api.Test;
 import walkingkooka.HashCodeEqualsDefinedTesting2;
 import walkingkooka.ToStringTesting;
 import walkingkooka.collect.set.Sets;
+import walkingkooka.javautillocalej2cl.WalkingkookaLocale;
 import walkingkooka.reflect.ClassTesting;
 import walkingkooka.reflect.JavaVisibility;
 
@@ -156,6 +157,9 @@ public final class DateFormatSymbolsTest implements ClassTesting<DateFormatSymbo
     @Test
     public void testCloneState2() {
         for (final Locale locale : Locale.getAvailableLocales()) {
+            if(WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+                continue;
+            }
             final DateFormatSymbols symbols = new DateFormatSymbols(locale);
             final DateFormatSymbols clone = symbols.cloneState();
 
