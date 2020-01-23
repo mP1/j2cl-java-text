@@ -17,6 +17,7 @@
 
 package walkingkooka.javatextj2cl.java.text;
 
+import walkingkooka.ToStringBuilder;
 import walkingkooka.collect.map.Maps;
 import walkingkooka.collect.set.Sets;
 import walkingkooka.text.Indentation;
@@ -83,7 +84,7 @@ public final class DecimalFormatSymbolsProviderTool extends LocaleProviderTool {
                     this.line(quote(symbols.getDigit()) + ", // digit");
                     this.line(quote(symbols.getExponentSeparator()) + ", // exponentSeparator");
                     this.line(quote(symbols.getGroupingSeparator()) + ", // groupingSeparator");
-                    this.line(quote(symbols.getInfinity()) + ", // inifinity");
+                    this.line(quote(symbols.getInfinity()) + ", // infinity");
                     this.line(quote(symbols.getInternationalCurrencySymbol()) + ", // internationalCurrencySymbol");
                     this.line(quote(symbols.getMinusSign()) + ", // minusSign");
                     this.line(quote(symbols.getMonetaryDecimalSeparator()) + ", // monetaryDecimalSeparator");
@@ -110,6 +111,21 @@ public final class DecimalFormatSymbolsProviderTool extends LocaleProviderTool {
     }
 
     private static String toString(final DecimalFormatSymbols symbols) {
-        return symbols.toString();
+        return ToStringBuilder.empty()
+        .label("currency").value(symbols.getCurrency())
+                .label("currencySymbols").value(symbols.getCurrencySymbol())
+                .label("decimalSeparator").value(symbols.getDecimalSeparator())
+                .label("digit").value(symbols.getDigit())
+                .label("exponentSeparator").value(symbols.getExponentSeparator())
+                .label("groupingSeparator").value(symbols.getGroupingSeparator())
+                .label("infinity").value(symbols.getInfinity())
+                .label("minus").value(symbols.getMinusSign())
+                .label("monetaryDecimalSeparator").value(symbols.getMonetaryDecimalSeparator())
+                .label("nan").value(symbols.getNaN())
+                .label("patternSeparator").value(symbols.getPatternSeparator())
+                .label("percent").value(symbols.getPercent())
+                .label("perMill").value(symbols.getPerMill())
+                .label("zeroDigit").value(symbols.getZeroDigit())
+                .build();
     }
 }
