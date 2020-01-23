@@ -21,6 +21,7 @@ import org.junit.jupiter.api.Test;
 import walkingkooka.HashCodeEqualsDefinedTesting2;
 import walkingkooka.ToStringTesting;
 import walkingkooka.collect.set.Sets;
+import walkingkooka.javautillocalej2cl.WalkingkookaLocale;
 import walkingkooka.reflect.ClassTesting;
 import walkingkooka.reflect.JavaVisibility;
 
@@ -30,6 +31,7 @@ import java.util.Locale;
 import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 public final class DecimalFormatSymbolsTest implements ClassTesting<DecimalFormatSymbols>,
         HashCodeEqualsDefinedTesting2<DecimalFormatSymbols>,
@@ -52,6 +54,80 @@ public final class DecimalFormatSymbolsTest implements ClassTesting<DecimalForma
         assertEquals(jdk, emulated);
     }
 
+    // getInstance......................................................................................................
+
+    @Test
+    public void testGetInstance() {
+        DecimalFormatSymbols.DEFAULT = null;
+
+        final java.util.Locale locale = Locale.FRENCH;
+        java.util.Locale.setDefault(locale);
+
+        this.check(DecimalFormatSymbols.getInstance(),
+                java.text.DecimalFormatSymbols.getInstance(),
+                locale);
+    }
+
+    @Test
+    public void testGetInstance2() {
+        DecimalFormatSymbols.DEFAULT = null;
+
+        final java.util.Locale locale = Locale.GERMAN;
+        java.util.Locale.setDefault(locale);
+
+        this.check(DecimalFormatSymbols.getInstance(),
+                java.text.DecimalFormatSymbols.getInstance(),
+                locale);
+    }
+
+    @Test
+    public void testGetInstanceSingleton() {
+        DecimalFormatSymbols.DEFAULT = null;
+
+        final java.util.Locale locale = Locale.GERMAN;
+        java.util.Locale.setDefault(locale);
+
+        assertEquals(java.text.DecimalFormatSymbols.getInstance(), java.text.DecimalFormatSymbols.getInstance());
+    }
+
+    @Test
+    public void testGetInstanceCloned() {
+        DecimalFormatSymbols.DEFAULT = null;
+
+        final java.util.Locale locale = Locale.ITALIAN;
+        java.util.Locale.setDefault(locale);
+
+        final DecimalFormatSymbols symbols = DecimalFormatSymbols.getInstance();
+        symbols.setInfinity("symbols was not cloned if this property value is present!!!");
+
+        assertNotEquals(symbols, DecimalFormatSymbols.getInstance());
+    }
+
+    // getInstance(Locale)...............................................................................................
+
+    @Test
+    public void testGetInstanceLocale() {
+        final java.util.Locale locale = Locale.FRENCH;
+        java.util.Locale.setDefault(locale);
+        Locale.setDefault(Locale.forLanguageTag(locale.toLanguageTag()));
+
+        this.check(DecimalFormatSymbols.getInstance(locale),
+                new java.text.DecimalFormatSymbols(locale),
+                locale);
+    }
+
+    @Test
+    public void testGetInstanceLocaleAllLocales() {
+        for (final Locale locale : Locale.getAvailableLocales()) {
+            if(WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+                continue;
+            }
+            this.check(DecimalFormatSymbols.getInstance(locale),
+                    java.text.DecimalFormatSymbols.getInstance(locale),
+                    locale);
+        }
+    }
+
     // new..............................................................................................................
 
     @Test
@@ -60,7 +136,9 @@ public final class DecimalFormatSymbolsTest implements ClassTesting<DecimalForma
         Locale.setDefault(locale);
         Locale.setDefault(Locale.forLanguageTag(locale.toLanguageTag()));
 
-        this.check(new DecimalFormatSymbols(), new java.text.DecimalFormatSymbols());
+        this.check(new DecimalFormatSymbols(),
+                new java.text.DecimalFormatSymbols(),
+                locale);
     }
 
     @Test
@@ -69,27 +147,30 @@ public final class DecimalFormatSymbolsTest implements ClassTesting<DecimalForma
         Locale.setDefault(locale);
         Locale.setDefault(Locale.forLanguageTag(locale.toLanguageTag()));
 
-        this.check(new DecimalFormatSymbols(Locale.getDefault()), new java.text.DecimalFormatSymbols(locale));
+        this.check(new DecimalFormatSymbols(locale),
+                new java.text.DecimalFormatSymbols(locale),
+                locale);
     }
 
     private void check(final DecimalFormatSymbols emulated,
-                       final java.text.DecimalFormatSymbols expected) {
+                       final java.text.DecimalFormatSymbols expected,
+                       final Locale locale) {
 
-        assertEquals(expected.getCurrency().toString(), emulated.getCurrency(), "currency");
-        assertEquals(expected.getCurrencySymbol(), emulated.getCurrencySymbol(), "currencySymbol");
-        assertEquals(expected.getDecimalSeparator(), emulated.getDecimalSeparator(), "decimalSeparator");
-        assertEquals(expected.getDigit(), emulated.getDigit(), "digit");
-        assertEquals(expected.getExponentSeparator(), emulated.getExponentSeparator(), "exponentSeparator");
-        assertEquals(expected.getGroupingSeparator(), emulated.getGroupingSeparator(), "groupingSeparator");
-        assertEquals(expected.getInfinity(), emulated.getInfinity(), "infinity");
-        assertEquals(expected.getInternationalCurrencySymbol(), emulated.getInternationalCurrencySymbol(), "internationalCurrencySymbol");
-        assertEquals(expected.getMinusSign(), emulated.getMinusSign(), "minusSign");
-        assertEquals(expected.getMonetaryDecimalSeparator(), emulated.getMonetaryDecimalSeparator(), "monetaryDecimalSeparator");
-        assertEquals(expected.getNaN(), emulated.getNaN(), "nan");
-        assertEquals(expected.getPatternSeparator(), emulated.getPatternSeparator(), "patternSeparator");
-        assertEquals(expected.getPercent(), emulated.getPercent(), "percent");
-        assertEquals(expected.getPerMill(), emulated.getPerMill(), "perMill");
-        assertEquals(expected.getZeroDigit(), emulated.getZeroDigit(), "zeroDigit");
+        assertEquals(expected.getCurrency().toString(), emulated.getCurrency(), () -> "currency " + locale.toLanguageTag());
+        assertEquals(expected.getCurrencySymbol(), emulated.getCurrencySymbol(), () -> "currencySymbol " + locale.toLanguageTag());
+        assertEquals(expected.getDecimalSeparator(), emulated.getDecimalSeparator(), () -> "decimalSeparator " + locale.toLanguageTag());
+        assertEquals(expected.getDigit(), emulated.getDigit(), () -> "digit " + locale.toLanguageTag());
+        assertEquals(expected.getExponentSeparator(), emulated.getExponentSeparator(), () -> "exponentSeparator " + locale.toLanguageTag());
+        assertEquals(expected.getGroupingSeparator(), emulated.getGroupingSeparator(), () -> "groupingSeparator " + locale.toLanguageTag());
+        assertEquals(expected.getInfinity(), emulated.getInfinity(), "infinity " + locale.toLanguageTag());
+        assertEquals(expected.getInternationalCurrencySymbol(), emulated.getInternationalCurrencySymbol(), () -> "internationalCurrencySymbol " + locale.toLanguageTag());
+        assertEquals(expected.getMinusSign(), emulated.getMinusSign(), () -> "minusSign " + locale.toLanguageTag());
+        assertEquals(expected.getMonetaryDecimalSeparator(), emulated.getMonetaryDecimalSeparator(), () -> "monetaryDecimalSeparator " + locale.toLanguageTag());
+        assertEquals(expected.getNaN(), emulated.getNaN(), () -> "nan " + locale.toLanguageTag());
+        assertEquals(expected.getPatternSeparator(), emulated.getPatternSeparator(), () -> "patternSeparator " + locale.toLanguageTag());
+        assertEquals(expected.getPercent(), emulated.getPercent(), () -> "percent " + locale.toLanguageTag());
+        assertEquals(expected.getPerMill(), emulated.getPerMill(), () -> "perMill " + locale.toLanguageTag());
+        assertEquals(expected.getZeroDigit(), emulated.getZeroDigit(), () -> "zeroDigit " + locale.toLanguageTag());
     }
 
     // clone............................................................................................................

@@ -113,6 +113,20 @@ public class DecimalFormatSymbols {
         return LANGUAGE_TAG_TO_SYMBOLS.availableLocales();
     }
 
+    public static DecimalFormatSymbols getInstance() {
+        if (null == DEFAULT) {
+            DEFAULT = new DecimalFormatSymbols();
+        }
+        return DEFAULT.cloneState();
+    }
+
+    // @VisibleForTestin
+    static DecimalFormatSymbols DEFAULT;
+
+    public static DecimalFormatSymbols getInstance(final Locale locale) {
+        return new DecimalFormatSymbols(locale);
+    }
+
     public DecimalFormatSymbols() {
         this(Locale.getDefault());
     }
