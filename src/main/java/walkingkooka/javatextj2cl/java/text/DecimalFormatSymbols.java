@@ -228,6 +228,7 @@ public class DecimalFormatSymbols {
     }
 
     public void setExponentSeparator(final String exponentSeparator) {
+        Objects.requireNonNull(exponentSeparator, "exponentSeparator");
         this.exponentSeparator = exponentSeparator;
     }
 
