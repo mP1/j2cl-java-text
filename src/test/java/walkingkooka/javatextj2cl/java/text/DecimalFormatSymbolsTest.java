@@ -331,6 +331,14 @@ public final class DecimalFormatSymbolsTest implements ClassTesting<DecimalForma
         this.getCurrencyAndCheck(jdk, emul, locale);
     }
 
+    // exponent.........................................................................................................
+
+    @Test
+    public void testSetExponentSeparatorNullFails() {
+        assertThrows(NullPointerException.class, () -> new java.text.DecimalFormatSymbols().setExponentSeparator(null));
+        assertThrows(NullPointerException.class, () -> new DecimalFormatSymbols().setExponentSeparator(null));
+    }
+
     // clone............................................................................................................
 
     @Test
