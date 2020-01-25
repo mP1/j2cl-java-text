@@ -18,10 +18,10 @@
 package walkingkooka.javatextj2cl.java.text;
 
 import walkingkooka.collect.map.Maps;
+import walkingkooka.text.CharSequences;
 
 import java.util.Locale;
 import java.util.Map;
-import java.util.Optional;
 
 /**
  * A mapping between language tags to values with extra support methods that are common to {@link DateFormatSymbols},
@@ -46,8 +46,16 @@ final class LanguageTagLookup<T> {
         this.mappings.put(tag, value);
     }
 
-    Optional<T> get(final String tag) {
-        return Optional.ofNullable(this.mappings.get(tag));
+    T getOrFail(final Locale locale) {
+        return this.getOrFail(locale.toLanguageTag());
+    }
+
+    T getOrFail(final String tag) {
+        final T value = this.mappings.get(tag);
+        if (null == value) {
+            throw new IllegalArgumentException("Unknown locale " + CharSequences.quote(tag));
+        }
+        return value;
     }
 
     Locale[] availableLocales() {

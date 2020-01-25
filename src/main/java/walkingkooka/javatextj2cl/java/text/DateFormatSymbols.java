@@ -120,7 +120,7 @@ public class DateFormatSymbols {
     }
 
     public DateFormatSymbols(final Locale locale) {
-        this(LANGUAGE_TAG_TO_SYMBOLS.get(locale.toLanguageTag()).orElseThrow(() -> new IllegalStateException("Unknown locale: " + locale.toLanguageTag())));
+        this(LANGUAGE_TAG_TO_SYMBOLS.getOrFail(locale));
     }
 
     private DateFormatSymbols(final DateFormatSymbols source) {

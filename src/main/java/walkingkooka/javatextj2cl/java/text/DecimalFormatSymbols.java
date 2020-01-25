@@ -133,7 +133,7 @@ public class DecimalFormatSymbols {
     }
 
     public DecimalFormatSymbols(final Locale locale) {
-        this(LANGUAGE_TAG_TO_SYMBOLS.get(locale.toLanguageTag()).orElseThrow(() -> new IllegalStateException("Unable to find locale " + CharSequences.quote(locale.toLanguageTag()))));
+        this(LANGUAGE_TAG_TO_SYMBOLS.getOrFail(locale));
     }
 
     private DecimalFormatSymbols(final DecimalFormatSymbols source) {
