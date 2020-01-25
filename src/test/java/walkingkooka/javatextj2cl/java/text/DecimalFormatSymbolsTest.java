@@ -34,6 +34,7 @@ import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public final class DecimalFormatSymbolsTest implements ClassTesting<DecimalFormatSymbols>,
         HashCodeEqualsDefinedTesting2<DecimalFormatSymbols>,
@@ -165,7 +166,7 @@ public final class DecimalFormatSymbolsTest implements ClassTesting<DecimalForma
                        final java.text.DecimalFormatSymbols expected,
                        final Locale locale) {
 
-        assertEquals(expected.getCurrency().toString(), emulated.getCurrency(), () -> "currency " + locale.toLanguageTag());
+        assertEquals(expected.getCurrency(), emulated.getCurrency(), () -> "currency " + locale.toLanguageTag());
         assertEquals(expected.getCurrencySymbol(), emulated.getCurrencySymbol(), () -> "currencySymbol " + locale.toLanguageTag());
         assertEquals(expected.getDecimalSeparator(), emulated.getDecimalSeparator(), () -> "decimalSeparator " + locale.toLanguageTag());
         assertEquals(expected.getDigit(), emulated.getDigit(), () -> "digit " + locale.toLanguageTag());
@@ -182,6 +183,154 @@ public final class DecimalFormatSymbolsTest implements ClassTesting<DecimalForma
         assertEquals(expected.getZeroDigit(), emulated.getZeroDigit(), () -> "zeroDigit " + locale.toLanguageTag());
     }
 
+    // currency.........................................................................................................
+
+    @Test
+    public void testCurrencyEnAu() {
+        this.getCurrencyAndCheck(Locale.forLanguageTag("en-au"));
+    }
+
+    @Test
+    public void testCurrencyEnCa() {
+        this.getCurrencyAndCheck(Locale.forLanguageTag("en-ca"));
+    }
+
+    @Test
+    public void testCurrencyAllLocales() {
+        for (final Locale locale : java.text.DecimalFormatSymbols.getAvailableLocales()) {
+            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+                continue;
+            }
+            this.getCurrencyAndCheck(locale);
+        }
+    }
+
+    private void getCurrencyAndCheck(final Locale locale) {
+        Locale.setDefault(locale);
+        getCurrencyAndCheck(new java.text.DecimalFormatSymbols(),
+                new DecimalFormatSymbols(),
+                locale);
+    }
+
+    private void getCurrencyAndCheck(final java.text.DecimalFormatSymbols jdk,
+                                     final DecimalFormatSymbols emul,
+                                     final Locale locale) {
+
+        assertEquals(jdk.getCurrency(),
+                emul.getCurrency(),
+                () -> "currency " + locale);
+        this.getCurrencySymbolAndCheck(jdk, emul, locale);
+    }
+
+    private void getCurrencySymbolAndCheck(final java.text.DecimalFormatSymbols jdk,
+                                           final DecimalFormatSymbols emul,
+                                           final Locale locale) {
+
+        assertEquals(jdk.getCurrencySymbol(),
+                emul.getCurrencySymbol(),
+                () -> "currencySymbol " + locale);
+    }
+
+    @Test
+    public void testSetCurrencyNullFails() {
+        assertThrows(NullPointerException.class, () -> new DecimalFormatSymbols().setCurrency(null));
+    }
+
+    @Test
+    public void testSetCurrencySymbolNullFails() {
+        assertThrows(NullPointerException.class, () -> new DecimalFormatSymbols().setCurrencySymbol(null));
+    }
+
+    @Test
+    public void testSetCurrencyNZD() {
+        this.setCurrencyAndCheck(Locale.forLanguageTag("en-au"),
+                Currency.getInstance("NZD"));
+    }
+
+    @Test
+    public void testSetCurrencyEuro() {
+        this.setCurrencyAndCheck(Locale.forLanguageTag("en-au"),
+                Currency.getInstance("EUR"));
+    }
+
+    @Test
+    public void testSetCurrencyAllLocalesAUD() {
+        for (final Locale locale : Locale.getAvailableLocales()) {
+            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+                continue;
+            }
+            this.setCurrencyAndCheck(locale,
+                    Currency.getInstance("AUD"));
+        }
+    }
+
+    @Test
+    public void testSetCurrencyAllLocalesAllCurrencies() {
+        for (final Locale locale : Locale.getAvailableLocales()) {
+            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+                continue;
+            }
+            for (final Currency currency : Currency.getAvailableCurrencies()) {
+                this.setCurrencyAndCheck(locale,
+                        currency);
+            }
+        }
+    }
+
+    private void setCurrencyAndCheck(final Locale locale,
+                                     final Currency currency) {
+        Locale.setDefault(locale);
+
+        final java.text.DecimalFormatSymbols jdk = new java.text.DecimalFormatSymbols();
+        jdk.setCurrency(currency);
+
+        final DecimalFormatSymbols emul = new DecimalFormatSymbols();
+        emul.setCurrency(currency);
+
+        this.getCurrencyAndCheck(jdk, emul, locale);
+    }
+
+    @Test
+    public void testSetCurrencySymbolNZD() {
+        this.setCurrencySymbolAndCheck(Locale.forLanguageTag("en-au"), "NZD");
+    }
+
+    @Test
+    public void testSetCurrencySymbolAllLocalesAUD() {
+        for (final Locale locale : Locale.getAvailableLocales()) {
+            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+                continue;
+            }
+            this.setCurrencySymbolAndCheck(locale, "AUD");
+        }
+    }
+
+    @Test
+    public void testSetCurrencySymbolAllLocalesAllCurrencySymbols() {
+        for (final Locale locale : Locale.getAvailableLocales()) {
+            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+                continue;
+            }
+
+            for (final Currency currency : Currency.getAvailableCurrencies()) {
+                this.setCurrencySymbolAndCheck(locale, currency.getSymbol());
+            }
+        }
+    }
+
+    private void setCurrencySymbolAndCheck(final Locale locale,
+                                           final String currencySymbol) {
+        Locale.setDefault(locale);
+
+        final java.text.DecimalFormatSymbols jdk = new java.text.DecimalFormatSymbols();
+        jdk.setCurrencySymbol(currencySymbol);
+
+        final DecimalFormatSymbols emul = new DecimalFormatSymbols();
+        emul.setCurrencySymbol(currencySymbol);
+
+        this.getCurrencyAndCheck(jdk, emul, locale);
+    }
+
     // clone............................................................................................................
 
     @Test
@@ -191,8 +340,10 @@ public final class DecimalFormatSymbolsTest implements ClassTesting<DecimalForma
 
     @Test
     public void testCloneState2() {
+        Locale.setDefault(Locale.forLanguageTag("EN-AU"));
+
         final DecimalFormatSymbols symbols = new DecimalFormatSymbols();
-        symbols.setCurrency("AUD");
+        symbols.setCurrency(Currency.getInstance("AUD"));
         symbols.setCurrencySymbol("$");
         symbols.setDecimalSeparator('.');
         symbols.setDigit('D');
@@ -225,7 +376,7 @@ public final class DecimalFormatSymbolsTest implements ClassTesting<DecimalForma
     @Test
     public void testDifferentCurrency() {
         final DecimalFormatSymbols symbols = this.createObject();
-        symbols.setCurrency("Q");
+        symbols.setCurrency(Currency.getInstance("NZD"));
         this.checkNotEquals(symbols);
     }
 
@@ -332,7 +483,7 @@ public final class DecimalFormatSymbolsTest implements ClassTesting<DecimalForma
     @Test
     public void testToString() {
         this.toStringAndCheck(this.createObject(),
-                "currency=\"XXX\" currencySymbol=\"¤\" decimalSeparator='.' digit='#' exponentSeparator=\"E\" groupingSeparator=',' infinity=\"∞\" internationalCurrencySymbol=\"XXX\" minusSign='-' monetaryDecimalSeparator='.' nan=\"NaN\" patternSeparator=';' percent='%' perMill='‰' zeroDigit='0'");
+                "currency=XXX currencySymbol=\"¤\" decimalSeparator='.' digit='#' exponentSeparator=\"E\" groupingSeparator=',' infinity=\"∞\" internationalCurrencySymbol=\"XXX\" minusSign='-' monetaryDecimalSeparator='.' nan=\"NaN\" patternSeparator=';' percent='%' perMill='‰' zeroDigit='0'");
     }
 
     // ClassTesting.....................................................................................................

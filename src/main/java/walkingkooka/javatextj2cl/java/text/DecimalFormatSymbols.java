@@ -72,7 +72,7 @@ public class DecimalFormatSymbols {
             }
 
             LANGUAGE_TAG_TO_SYMBOLS.add(languageTag,
-                    new DecimalFormatSymbols(currency.toString(),
+                    new DecimalFormatSymbols(currency,
                             currencySymbol,
                             decimalSeparator,
                             digit,
@@ -86,11 +86,12 @@ public class DecimalFormatSymbols {
                             patternSeparator,
                             percent,
                             perMill,
-                            zeroDigit));
+                            zeroDigit,
+                            locale));
         }
     }
 
-    private DecimalFormatSymbols(final String currency,
+    private DecimalFormatSymbols(final Currency currency,
                                  final String currencySymbol,
                                  final char decimalSeparator,
                                  final char digit,
@@ -104,7 +105,8 @@ public class DecimalFormatSymbols {
                                  final char patternSeparator,
                                  final char percent,
                                  final char perMill,
-                                 final char zeroDigit) {
+                                 final char zeroDigit,
+                                 final Locale locale) {
         super();
         this.currency = currency;
         this.currencySymbol = currencySymbol;
@@ -121,6 +123,8 @@ public class DecimalFormatSymbols {
         this.percent = percent;
         this.perMill = perMill;
         this.zeroDigit = zeroDigit;
+
+        this.locale = locale;
     }
 
     /**
@@ -149,10 +153,11 @@ public class DecimalFormatSymbols {
     }
 
     public DecimalFormatSymbols(final Locale locale) {
-        this(LANGUAGE_TAG_TO_SYMBOLS.getOrFail(locale));
+        this(LANGUAGE_TAG_TO_SYMBOLS.getOrFail(locale), locale);
     }
 
-    private DecimalFormatSymbols(final DecimalFormatSymbols source) {
+    private DecimalFormatSymbols(final DecimalFormatSymbols source,
+                                 final Locale locale) {
         super();
 
         this.currency = source.getCurrency();
@@ -170,23 +175,28 @@ public class DecimalFormatSymbols {
         this.percent = source.getPercent();
         this.perMill = source.getPerMill();
         this.zeroDigit = source.getZeroDigit();
+
+        this.locale = locale;
     }
 
-    public String getCurrency() {
+    public Currency getCurrency() {
         return this.currency;
     }
 
-    public void setCurrency(final String currency) {
+    public void setCurrency(final Currency currency) {
+        Objects.requireNonNull(currency, "currency");
         this.currency = currency;
+        this.setCurrencySymbol(currency.getSymbol(this.locale));
     }
 
-    private String currency;
+    private Currency currency;
 
     public String getCurrencySymbol() {
         return this.currencySymbol;
     }
 
     public void setCurrencySymbol(final String currencySymbol) {
+        Objects.requireNonNull(currencySymbol, "currencySymbol");
         this.currencySymbol = currencySymbol;
     }
 
@@ -323,13 +333,19 @@ public class DecimalFormatSymbols {
 
     private char zeroDigit;
 
+    /**
+     * This is never publically available but it is tracked and used by {@link #setCurrency(Currency)} when it calls
+     * {@link #setCurrencySymbol(String)} using the provided {@link Currency}.
+     */
+    private final Locale locale;
+
     // clone...........................................................................................................
 
     /**
      * Used internally to make a defensive copy
      */
     final DecimalFormatSymbols cloneState() {
-        return new DecimalFormatSymbols(this);
+        return new DecimalFormatSymbols(this, this.locale);
     }
 
     // Object...........................................................................................................
