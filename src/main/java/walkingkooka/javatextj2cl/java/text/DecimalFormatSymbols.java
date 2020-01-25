@@ -18,6 +18,7 @@
 package walkingkooka.javatextj2cl.java.text;
 
 import walkingkooka.ToStringBuilder;
+import walkingkooka.text.CharSequences;
 
 import java.util.Locale;
 import java.util.Objects;
@@ -132,7 +133,7 @@ public class DecimalFormatSymbols {
     }
 
     public DecimalFormatSymbols(final Locale locale) {
-        this(LANGUAGE_TAG_TO_SYMBOLS.get(locale.toLanguageTag()).orElseThrow(() -> new IllegalStateException()));
+        this(LANGUAGE_TAG_TO_SYMBOLS.get(locale.toLanguageTag()).orElseThrow(() -> new IllegalStateException("Unable to find locale " + CharSequences.quote(locale.toLanguageTag()))));
     }
 
     private DecimalFormatSymbols(final DecimalFormatSymbols source) {
