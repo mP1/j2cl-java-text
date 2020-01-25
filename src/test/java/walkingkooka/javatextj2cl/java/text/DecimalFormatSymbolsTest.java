@@ -233,6 +233,7 @@ public final class DecimalFormatSymbolsTest implements ClassTesting<DecimalForma
 
     @Test
     public void testSetCurrencyNullFails() {
+        assertThrows(NullPointerException.class, () -> new java.text.DecimalFormatSymbols().setCurrency(null));
         assertThrows(NullPointerException.class, () -> new DecimalFormatSymbols().setCurrency(null));
     }
 
