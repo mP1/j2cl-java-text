@@ -18,8 +18,8 @@
 package walkingkooka.javatextj2cl.java.text;
 
 import walkingkooka.ToStringBuilder;
-import walkingkooka.text.CharSequences;
 
+import java.util.Currency;
 import java.util.Locale;
 import java.util.Objects;
 
@@ -38,8 +38,6 @@ public class DecimalFormatSymbols {
      * Used by {@link DecimalFormatSymbolProvider#register()} to register individual symbols
      */
     static void register(final String locales,
-                         final String currency,
-                         final String currencySymbol,
                          final char decimalSeparator,
                          final char digit,
                          final String exponentSeparator,
@@ -53,24 +51,42 @@ public class DecimalFormatSymbols {
                          final char percent,
                          final char perMill,
                          final char zeroDigit) {
-        final DecimalFormatSymbols symbols = new DecimalFormatSymbols(currency,
-                currencySymbol,
-                decimalSeparator,
-                digit,
-                exponentSeparator,
-                groupingSeparator,
-                infinity,
-                internationalCurrencySymbol,
-                minusSign,
-                monetaryDecimalSeparator,
-                nan,
-                patternSeparator,
-                percent,
-                perMill,
-                zeroDigit);
+        for (final String languageTag : locales.split("\t")) {
+            Locale locale = Locale.forLanguageTag(languageTag);
 
-        for (final String locale : locales.split("\t")) {
-            LANGUAGE_TAG_TO_SYMBOLS.add(locale, symbols);
+            Currency currency = null;
+            String currencySymbol = null;
+
+            // Locale must have country with 2 chars otherwise will fail.
+            if (locale.getCountry().length() == 2) {
+                try {
+                    currency = Currency.getInstance(locale);
+                    currencySymbol = currency.getSymbol(locale);
+                } catch (final Exception ignore) {
+                    // unknown locale.country etc. will default to XXX
+                }
+            }
+            if (null == currency) {
+                currency = Currency.getInstance("XXX");
+                currencySymbol = "\u00A4";
+            }
+
+            LANGUAGE_TAG_TO_SYMBOLS.add(languageTag,
+                    new DecimalFormatSymbols(currency.toString(),
+                            currencySymbol,
+                            decimalSeparator,
+                            digit,
+                            exponentSeparator,
+                            groupingSeparator,
+                            infinity,
+                            internationalCurrencySymbol,
+                            minusSign,
+                            monetaryDecimalSeparator,
+                            nan,
+                            patternSeparator,
+                            percent,
+                            perMill,
+                            zeroDigit));
         }
     }
 

@@ -78,8 +78,6 @@ public final class DecimalFormatSymbolsProviderTool extends LocaleProviderTool {
                 {
                     this.line(tabbed(symbolLanguageTags) + ", // locales");
 
-                    this.line(quote(symbols.getCurrency().toString()) + ", // currency");
-                    this.line(quote(symbols.getCurrencySymbol()) + ", // currencySymbols");
                     this.line(quote(symbols.getDecimalSeparator()) + ", // decimalSeparator");
                     this.line(quote(symbols.getDigit()) + ", // digit");
                     this.line(quote(symbols.getExponentSeparator()) + ", // exponentSeparator");
@@ -110,15 +108,15 @@ public final class DecimalFormatSymbolsProviderTool extends LocaleProviderTool {
         return toString(left).compareTo(toString(right));
     }
 
+    // currency + currencySymbol are not written by generated code so they are not important to equality.
     private static String toString(final DecimalFormatSymbols symbols) {
         return ToStringBuilder.empty()
-        .label("currency").value(symbols.getCurrency())
-                .label("currencySymbols").value(symbols.getCurrencySymbol())
                 .label("decimalSeparator").value(symbols.getDecimalSeparator())
                 .label("digit").value(symbols.getDigit())
                 .label("exponentSeparator").value(symbols.getExponentSeparator())
                 .label("groupingSeparator").value(symbols.getGroupingSeparator())
                 .label("infinity").value(symbols.getInfinity())
+                .label("internationalCurrencySymbol").value(symbols.getInternationalCurrencySymbol())
                 .label("minus").value(symbols.getMinusSign())
                 .label("monetaryDecimalSeparator").value(symbols.getMonetaryDecimalSeparator())
                 .label("nan").value(symbols.getNaN())

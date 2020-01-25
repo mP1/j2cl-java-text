@@ -17,6 +17,7 @@
 
 package walkingkooka.javatextj2cl.java.text;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import walkingkooka.HashCodeEqualsDefinedTesting2;
 import walkingkooka.ToStringTesting;
@@ -27,6 +28,7 @@ import walkingkooka.reflect.JavaVisibility;
 
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.Currency;
 import java.util.Locale;
 import java.util.Set;
 
@@ -36,6 +38,11 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 public final class DecimalFormatSymbolsTest implements ClassTesting<DecimalFormatSymbols>,
         HashCodeEqualsDefinedTesting2<DecimalFormatSymbols>,
         ToStringTesting<DecimalFormatSymbols> {
+
+    @BeforeEach
+    public void beforeEach() {
+        DateFormatSymbols.DEFAULT = null;
+    }
 
     // getAvailableLocales..............................................................................................
 
@@ -146,6 +153,8 @@ public final class DecimalFormatSymbolsTest implements ClassTesting<DecimalForma
         final Locale locale = Locale.FRENCH;
         Locale.setDefault(locale);
         Locale.setDefault(Locale.forLanguageTag(locale.toLanguageTag()));
+
+        DecimalFormatSymbols.getAvailableLocales();
 
         this.check(new DecimalFormatSymbols(locale),
                 new java.text.DecimalFormatSymbols(locale),
