@@ -23,9 +23,8 @@ import walkingkooka.ToStringTesting;
 import walkingkooka.reflect.ClassTesting2;
 import walkingkooka.reflect.JavaVisibility;
 
-import java.util.Optional;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public final class LanguageTagLookupTest implements ClassTesting2<LanguageTagLookup<Integer>>,
         ToStringTesting<LanguageTagLookup<Integer>> {
@@ -35,30 +34,25 @@ public final class LanguageTagLookupTest implements ClassTesting2<LanguageTagLoo
     private final static Integer VALUE1 = 1;
 
     @Test
-    public void testGetFails() {
-        this.getAndCheck(LanguageTagLookup.empty(), EN, null);
+    public void testGetStringOrFailFails() {
+        assertThrows(IllegalArgumentException.class, () -> LanguageTagLookup.empty().getOrFail(EN));
     }
 
     @Test
-    public void testGetFails2() {
+    public void testGetStringOrFailFails2() {
         final LanguageTagLookup<Integer> lookup = LanguageTagLookup.empty();
         lookup.add(EN, VALUE1);
-        this.getAndCheck(lookup, FR, null);
+        assertThrows(IllegalArgumentException.class, () -> LanguageTagLookup.empty().getOrFail(FR));
     }
 
     @Test
-    public void testGet() {
+    public void testGetStringOrFail() {
         final LanguageTagLookup<Integer> lookup = LanguageTagLookup.empty();
         lookup.add(EN, VALUE1);
-        this.getAndCheck(lookup, EN, VALUE1);
-    }
 
-    private void getAndCheck(final LanguageTagLookup<Integer> lookup,
-                             final String tag,
-                             final Integer value) {
-        assertEquals(Optional.ofNullable(value),
-                lookup.get(tag),
-                () -> lookup + " get " + tag);
+        assertEquals(VALUE1,
+                lookup.getOrFail(EN),
+                () -> lookup + " getOrFail " + EN);
     }
 
     // toString.........................................................................................................
