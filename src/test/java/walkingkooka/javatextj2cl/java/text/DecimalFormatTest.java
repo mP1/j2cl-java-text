@@ -694,6 +694,28 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> {
         assertEquals(jdk.getPositivePrefix(), jdk.getPositivePrefix(), () -> "positivePrefix");
     }
 
+    // positiveSuffix.........................................................................................................
+
+    @Test
+    public void testSetPositiveSuffixNull() {
+        new java.text.DecimalFormat("#").setPositiveSuffix(null);
+        new DecimalFormat("#").setPositiveSuffix(null);
+    }
+
+    @Test
+    public void testSetPositiveSuffix() {
+        final String positiveSuffix = "ABC";
+
+        final java.text.DecimalFormat jdk = new java.text.DecimalFormat("#");
+        jdk.setPositiveSuffix(positiveSuffix);
+
+        final DecimalFormat emul = new DecimalFormat("#");
+        emul.setPositiveSuffix(positiveSuffix);
+
+        assertEquals(jdk.getPositiveSuffix(), jdk.getPositiveSuffix(), () -> "positiveSuffix");
+        assertEquals(jdk.getPositiveSuffix(), jdk.getPositiveSuffix(), () -> "positiveSuffix");
+    }
+
     // check............................................................................................................
 
     private void check(final java.text.NumberFormat jdk,

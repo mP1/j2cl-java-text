@@ -436,7 +436,6 @@ public class DecimalFormat extends NumberFormat {
     }
 
     public void setPositiveSuffix(final String positiveSuffix) {
-        Objects.requireNonNull(positiveSuffix, "positiveSuffix");
         this.positiveSuffix = positiveSuffix;
     }
 
