@@ -39,12 +39,11 @@ public class DecimalFormat extends NumberFormat {
         DecimalFormatProvider.register();
     }
 
-    private final static int CURRENCY = 0;
-    private final static int INSTANCE = 1;
-    private final static int INTEGER = 2;
-    private final static int NUMBER = 3;
-    private final static int PERCENT = 4;
-    private final static int UNKNOWN = -1;
+    final static int CURRENCY = 0;
+    final static int INSTANCE = 1;
+    final static int INTEGER = 2;
+    final static int NUMBER = 3;
+    final static int PERCENT = 4;
 
     /**
      * Factory called by {@link DecimalFormatProvider#register()}, recording a DecimalFormat for currency,
@@ -163,8 +162,8 @@ public class DecimalFormat extends NumberFormat {
         return forLocale(Locale.getDefault(), INSTANCE);
     }
 
-    private static DecimalFormat forLocale(final Locale locale,
-                                           final int selectorIndex) {
+    static DecimalFormat forLocale(final Locale locale,
+                                   final int selectorIndex) {
         return forLocale(locale.toLanguageTag(), selectorIndex);
     }
 
