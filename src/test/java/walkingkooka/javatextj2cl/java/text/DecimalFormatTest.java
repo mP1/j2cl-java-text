@@ -20,6 +20,7 @@ package walkingkooka.javatextj2cl.java.text;
 import org.junit.jupiter.api.Test;
 import walkingkooka.javautillocalej2cl.WalkingkookaLocale;
 
+import java.math.RoundingMode;
 import java.util.Currency;
 import java.util.Locale;
 
@@ -714,6 +715,43 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> {
 
         assertEquals(jdk.getPositiveSuffix(), jdk.getPositiveSuffix(), () -> "positiveSuffix");
         assertEquals(jdk.getPositiveSuffix(), jdk.getPositiveSuffix(), () -> "positiveSuffix");
+    }
+
+    // roundingMode.........................................................................................................
+
+    @Test
+    public void testSetRoundingModeNullFails() {
+        assertThrows(NullPointerException.class, () -> new java.text.DecimalFormat("#").setRoundingMode(null));
+        assertThrows(NullPointerException.class, () -> new DecimalFormat("#").setRoundingMode(null));
+    }
+
+    @Test
+    public void testSetRoundingMode() {
+        final RoundingMode roundingMode = RoundingMode.DOWN;
+
+        final java.text.DecimalFormat jdk = new java.text.DecimalFormat("#");
+        jdk.setRoundingMode(roundingMode);
+
+        final DecimalFormat emul = new DecimalFormat("#");
+        emul.setRoundingMode(roundingMode);
+
+        assertEquals(jdk.getRoundingMode(), emul.getRoundingMode(), () -> "roundingMode");
+        assertEquals(jdk.getRoundingMode(), emul.getRoundingMode(), () -> "roundingMode");
+    }
+
+    @Test
+    public void testSetRoundingModeAll() {
+        for (final RoundingMode roundingMode : RoundingMode.values()) {
+
+            final java.text.DecimalFormat jdk = new java.text.DecimalFormat("#");
+            jdk.setRoundingMode(roundingMode);
+
+            final DecimalFormat emul = new DecimalFormat("#");
+            emul.setRoundingMode(roundingMode);
+
+            assertEquals(jdk.getRoundingMode(), emul.getRoundingMode(), () -> "roundingMode");
+            assertEquals(jdk.getRoundingMode(), emul.getRoundingMode(), () -> "roundingMode");
+        }
     }
 
     // check............................................................................................................
