@@ -579,8 +579,8 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> {
     public void testNewPatternSymbolsFr() {
         Locale.setDefault(FR);
 
-        this.check(new java.text.DecimalFormat(PATTERN, new java.text.DecimalFormatSymbols(EN_AU)),
-                new DecimalFormat(PATTERN, new DecimalFormatSymbols(EN_AU)),
+        this.check(new java.text.DecimalFormat(PATTERN, new java.text.DecimalFormatSymbols(FR)),
+                new DecimalFormat(PATTERN, new DecimalFormatSymbols(FR)),
                 FR);
     }
 
@@ -622,7 +622,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> {
                        final Locale locale) {
         // the commented out tests will fail because the pattern is not parsed and the tested values not correctly set.
 
-        assertEquals(jdk.getCurrency(), jdk.getCurrency(), () -> "currency " + locale);
+        assertEquals(jdk.getCurrency(), emul.getCurrency(), () -> "currency " + locale);
 //        assertEquals(jdk.getGroupingSize(), emul.getGroupingSize(), () -> "groupingSize " + locale);
 //        assertEquals(jdk.isGroupingUsed(), emul.isGroupingUsed(), () -> "groupingUsed " + locale);
 //        assertEquals(jdk.getMaximumFractionDigits(), emul.getMaximumFractionDigits(), () -> "maximumFractionDigits " + locale);
