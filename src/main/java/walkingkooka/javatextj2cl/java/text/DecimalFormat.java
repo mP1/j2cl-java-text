@@ -400,7 +400,6 @@ public class DecimalFormat extends NumberFormat {
     }
 
     public void setNegativePrefix(final String negativePrefix) {
-        Objects.requireNonNull(negativePrefix, "negativePrefix");
         this.negativePrefix = negativePrefix;
     }
 

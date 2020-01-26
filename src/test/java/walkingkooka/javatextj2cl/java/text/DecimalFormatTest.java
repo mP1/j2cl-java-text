@@ -628,6 +628,28 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> {
         assertEquals(jdk.getCurrency(), jdk.getCurrency(), () -> "currency AUD");
     }
 
+    // negativePrefix.........................................................................................................
+
+    @Test
+    public void testSetNegativePrefixNull() {
+        new java.text.DecimalFormat("#").setNegativePrefix(null);
+        new DecimalFormat("#").setNegativePrefix(null);
+    }
+
+    @Test
+    public void testSetNegativePrefix() {
+        final String negativePrefix = "ABC";
+
+        final java.text.DecimalFormat jdk = new java.text.DecimalFormat("#");
+        jdk.setNegativePrefix(negativePrefix);
+
+        final DecimalFormat emul = new DecimalFormat("#");
+        emul.setNegativePrefix(negativePrefix);
+
+        assertEquals(jdk.getNegativePrefix(), jdk.getNegativePrefix(), () -> "negativePrefix");
+        assertEquals(jdk.getNegativePrefix(), jdk.getNegativePrefix(), () -> "negativePrefix");
+    }
+
     // check............................................................................................................
 
     private void check(final java.text.NumberFormat jdk,
