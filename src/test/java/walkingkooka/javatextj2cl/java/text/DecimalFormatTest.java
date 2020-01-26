@@ -672,6 +672,28 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> {
         assertEquals(jdk.getNegativeSuffix(), jdk.getNegativeSuffix(), () -> "negativeSuffix");
     }
 
+    // positivePrefix.........................................................................................................
+
+    @Test
+    public void testSetPositivePrefixNull() {
+        new java.text.DecimalFormat("#").setPositivePrefix(null);
+        new DecimalFormat("#").setPositivePrefix(null);
+    }
+
+    @Test
+    public void testSetPositivePrefix() {
+        final String positivePrefix = "ABC";
+
+        final java.text.DecimalFormat jdk = new java.text.DecimalFormat("#");
+        jdk.setPositivePrefix(positivePrefix);
+
+        final DecimalFormat emul = new DecimalFormat("#");
+        emul.setPositivePrefix(positivePrefix);
+
+        assertEquals(jdk.getPositivePrefix(), jdk.getPositivePrefix(), () -> "positivePrefix");
+        assertEquals(jdk.getPositivePrefix(), jdk.getPositivePrefix(), () -> "positivePrefix");
+    }
+
     // check............................................................................................................
 
     private void check(final java.text.NumberFormat jdk,
