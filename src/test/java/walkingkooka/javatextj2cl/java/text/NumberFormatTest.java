@@ -19,15 +19,22 @@ package walkingkooka.javatextj2cl.java.text;
 
 import org.junit.jupiter.api.Test;
 import walkingkooka.HashCodeEqualsDefinedTesting2;
+import walkingkooka.collect.set.Sets;
+import walkingkooka.javautillocalej2cl.WalkingkookaLocale;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.math.RoundingMode;
 import java.text.ParseException;
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Currency;
+import java.util.Locale;
+import java.util.Set;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicLong;
 
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
@@ -42,6 +49,21 @@ public final class NumberFormatTest extends FormatTestCase<NumberFormat> impleme
     @Test
     public void testIntegerField() {
         assertEquals(java.text.NumberFormat.INTEGER_FIELD, NumberFormat.INTEGER_FIELD);
+    }
+
+    @Test
+    public void testGetAvailableLocales() {
+        final Comparator<Locale> comparator = (l, r) -> l.toLanguageTag().compareTo(r.toLanguageTag());
+
+        final Set<Locale> jdk = Sets.sorted(comparator);
+        jdk.addAll(Arrays.asList(java.text.NumberFormat.getAvailableLocales()));
+        jdk.removeIf(l -> l.toString().equals("th_TH_TH_#u-nu-thai"));
+        jdk.removeIf(l -> l.toString().equals("ja_JP_JP_#u-ca-japanese"));
+
+        final Set<Locale> emulated = Sets.sorted(comparator);
+        emulated.addAll(Arrays.asList(NumberFormat.getAvailableLocales()));
+
+        assertEquals(jdk, emulated);
     }
 
     // defaults.........................................................................................................
