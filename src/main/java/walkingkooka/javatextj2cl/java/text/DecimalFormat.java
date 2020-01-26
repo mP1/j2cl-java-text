@@ -424,7 +424,6 @@ public class DecimalFormat extends NumberFormat {
     }
 
     public void setPositivePrefix(final String positivePrefix) {
-        Objects.requireNonNull(positivePrefix, "positivePrefix");
         this.positivePrefix = positivePrefix;
     }
 
