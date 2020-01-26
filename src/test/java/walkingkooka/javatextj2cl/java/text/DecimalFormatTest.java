@@ -20,10 +20,12 @@ package walkingkooka.javatextj2cl.java.text;
 import org.junit.jupiter.api.Test;
 import walkingkooka.javautillocalej2cl.WalkingkookaLocale;
 
+import java.util.Currency;
 import java.util.Locale;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> {
 
@@ -606,6 +608,25 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> {
 
     // currency.........................................................................................................
 
+    @Test
+    public void testSetCurrencyNullFails() {
+        assertThrows(NullPointerException.class, () -> new java.text.DecimalFormat("#").setCurrency(null));
+        assertThrows(NullPointerException.class, () -> new DecimalFormat("#").setCurrency(null));
+    }
+
+    @Test
+    public void testSetCurrencyAUD() {
+        final Currency currency = Currency.getInstance("AUD");
+
+        final java.text.DecimalFormat jdk = new java.text.DecimalFormat("#");
+        jdk.setCurrency(currency);
+
+        final DecimalFormat emul = new DecimalFormat("#");
+        emul.setCurrency(currency);
+
+        assertEquals(jdk.getCurrency(), jdk.getCurrency(), () -> "currency AUD");
+        assertEquals(jdk.getCurrency(), jdk.getCurrency(), () -> "currency AUD");
+    }
 
     // check............................................................................................................
 
