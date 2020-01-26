@@ -127,7 +127,7 @@ public class DecimalFormat extends NumberFormat {
                          final RoundingMode percentRoundingMode
 
     ) {
-        final Currency defaultCurrency = Currency.getInstance("AUD");
+        final Currency defaultCurrency = Currency.getInstance("XXX");
 
         for (final String languageTag : languageTags.split("\t")) {
             final Locale locale = Locale.forLanguageTag(languageTag);
