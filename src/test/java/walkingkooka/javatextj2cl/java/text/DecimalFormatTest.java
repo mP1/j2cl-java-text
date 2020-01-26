@@ -625,8 +625,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> {
         final DecimalFormat emul = new DecimalFormat("#");
         emul.setCurrency(currency);
 
-        assertEquals(jdk.getCurrency(), jdk.getCurrency(), () -> "currency AUD");
-        assertEquals(jdk.getCurrency(), jdk.getCurrency(), () -> "currency AUD");
+        assertEquals(jdk.getCurrency(), emul.getCurrency(), () -> "currency AUD");;
     }
 
     // negativePrefix.........................................................................................................
@@ -647,8 +646,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> {
         final DecimalFormat emul = new DecimalFormat("#");
         emul.setNegativePrefix(negativePrefix);
 
-        assertEquals(jdk.getNegativePrefix(), jdk.getNegativePrefix(), () -> "negativePrefix");
-        assertEquals(jdk.getNegativePrefix(), jdk.getNegativePrefix(), () -> "negativePrefix");
+        assertEquals(jdk.getNegativePrefix(), emul.getNegativePrefix(), () -> "negativePrefix");
     }
 
     // negativeSuffix.........................................................................................................
@@ -669,8 +667,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> {
         final DecimalFormat emul = new DecimalFormat("#");
         emul.setNegativeSuffix(negativeSuffix);
 
-        assertEquals(jdk.getNegativeSuffix(), jdk.getNegativeSuffix(), () -> "negativeSuffix");
-        assertEquals(jdk.getNegativeSuffix(), jdk.getNegativeSuffix(), () -> "negativeSuffix");
+        assertEquals(jdk.getNegativeSuffix(), emul.getNegativeSuffix(), () -> "negativeSuffix");
     }
 
     // positivePrefix.........................................................................................................
@@ -691,8 +688,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> {
         final DecimalFormat emul = new DecimalFormat("#");
         emul.setPositivePrefix(positivePrefix);
 
-        assertEquals(jdk.getPositivePrefix(), jdk.getPositivePrefix(), () -> "positivePrefix");
-        assertEquals(jdk.getPositivePrefix(), jdk.getPositivePrefix(), () -> "positivePrefix");
+        assertEquals(jdk.getPositivePrefix(), emul.getPositivePrefix(), () -> "positivePrefix");
     }
 
     // positiveSuffix.........................................................................................................
@@ -713,8 +709,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> {
         final DecimalFormat emul = new DecimalFormat("#");
         emul.setPositiveSuffix(positiveSuffix);
 
-        assertEquals(jdk.getPositiveSuffix(), jdk.getPositiveSuffix(), () -> "positiveSuffix");
-        assertEquals(jdk.getPositiveSuffix(), jdk.getPositiveSuffix(), () -> "positiveSuffix");
+        assertEquals(jdk.getPositiveSuffix(), emul.getPositiveSuffix(), () -> "positiveSuffix");
     }
 
     // roundingMode.........................................................................................................
