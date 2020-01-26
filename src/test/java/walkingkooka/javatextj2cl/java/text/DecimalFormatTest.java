@@ -23,6 +23,7 @@ import walkingkooka.javautillocalej2cl.WalkingkookaLocale;
 import java.util.Locale;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> {
 
@@ -30,6 +31,476 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> {
     private final static Locale FR = Locale.forLanguageTag("fr");
 
     private final static String PATTERN = "0";
+
+    // NumberFormat.getCurrencyInstance(Locale) ........................................................................
+
+    @Test
+    public void testCurrencyInstanceDefaultEnAu() {
+        this.currencyInstanceAndCheck(EN_AU);
+    }
+
+    @Test
+    public void testCurrencyInstanceDefaultFr() {
+        this.currencyInstanceAndCheck(FR);
+    }
+
+    @Test
+    public void testCurrencyInstanceDefaultAllLocales() {
+        for (final Locale locale : java.text.DecimalFormat.getAvailableLocales()) {
+            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+                continue;
+            }
+            this.currencyInstanceAndCheck(locale);
+        }
+    }
+
+    private void currencyInstanceAndCheck(final Locale locale) {
+        Locale.setDefault(locale);
+
+        this.check(java.text.NumberFormat.getCurrencyInstance(),
+                NumberFormat.getCurrencyInstance(),
+                locale);
+    }
+
+    @Test
+    public void testCurrencyInstanceCloned() {
+        for (final Locale locale : java.text.DecimalFormat.getAvailableLocales()) {
+            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+                continue;
+            }
+
+            Locale.setDefault(locale);
+
+            final NumberFormat format = DecimalFormat.getCurrencyInstance();
+            format.setMaximumFractionDigits(66);
+            format.setMinimumFractionDigits(77);
+            format.setMaximumIntegerDigits(88);
+            format.setMinimumIntegerDigits(99);
+
+            assertNotEquals(format, DecimalFormat.getCurrencyInstance());
+        }
+    }
+
+    // NumberFormat.getCurrencyInstance(Locale) ........................................................................
+
+    @Test
+    public void testCurrencyInstanceLocaleDefaultEnAu() {
+        this.currencyInstanceLocaleAndCheck(EN_AU);
+    }
+
+    @Test
+    public void testCurrencyInstanceLocaleDefaultFr() {
+        this.currencyInstanceLocaleAndCheck(FR);
+    }
+
+    @Test
+    public void testCurrencyInstanceLocaleDefaultAllLocales() {
+        for (final Locale locale : java.text.DecimalFormat.getAvailableLocales()) {
+            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+                continue;
+            }
+            this.currencyInstanceLocaleAndCheck(locale);
+        }
+    }
+
+    private void currencyInstanceLocaleAndCheck(final Locale locale) {
+        this.check(java.text.NumberFormat.getCurrencyInstance(locale),
+                NumberFormat.getCurrencyInstance(locale),
+                locale);
+    }
+
+    @Test
+    public void testCurrencyInstanceLocaleCloned() {
+        for (final Locale locale : java.text.DecimalFormat.getAvailableLocales()) {
+            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+                continue;
+            }
+
+            final NumberFormat format = DecimalFormat.getCurrencyInstance(locale);
+            format.setMaximumFractionDigits(66);
+            format.setMinimumFractionDigits(77);
+            format.setMaximumIntegerDigits(88);
+            format.setMinimumIntegerDigits(99);
+
+            assertNotEquals(format, DecimalFormat.getCurrencyInstance(locale));
+        }
+    }
+
+    // NumberFormat.getIntegerInstance(Locale) .........................................................................
+
+    @Test
+    public void testIntegerInstanceDefaultEnAu() {
+        this.integerInstanceAndCheck(EN_AU);
+    }
+
+    @Test
+    public void testIntegerInstanceDefaultFr() {
+        this.integerInstanceAndCheck(FR);
+    }
+
+    @Test
+    public void testIntegerInstanceDefaultAllLocales() {
+        for (final Locale locale : java.text.DecimalFormat.getAvailableLocales()) {
+            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+                continue;
+            }
+            this.integerInstanceAndCheck(locale);
+        }
+    }
+
+    private void integerInstanceAndCheck(final Locale locale) {
+        Locale.setDefault(locale);
+
+        this.check(java.text.NumberFormat.getIntegerInstance(),
+                NumberFormat.getIntegerInstance(),
+                locale);
+    }
+
+    @Test
+    public void testIntegerInstanceCloned() {
+        for (final Locale locale : java.text.DecimalFormat.getAvailableLocales()) {
+            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+                continue;
+            }
+
+            Locale.setDefault(locale);
+
+            final NumberFormat format = DecimalFormat.getCurrencyInstance();
+            format.setMaximumFractionDigits(66);
+            format.setMinimumFractionDigits(77);
+            format.setMaximumIntegerDigits(88);
+            format.setMinimumIntegerDigits(99);
+
+            assertNotEquals(format, DecimalFormat.getCurrencyInstance());
+        }
+    }
+
+    // NumberFormat.getIntegerInstance(Locale) .........................................................................
+
+    @Test
+    public void testIntegerInstanceLocaleDefaultEnAu() {
+        this.integerInstanceLocaleAndCheck(EN_AU);
+    }
+
+    @Test
+    public void testIntegerInstanceLocaleDefaultFr() {
+        this.integerInstanceLocaleAndCheck(FR);
+    }
+
+    @Test
+    public void testIntegerInstanceLocaleDefaultAllLocales() {
+        for (final Locale locale : java.text.DecimalFormat.getAvailableLocales()) {
+            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+                continue;
+            }
+            this.integerInstanceLocaleAndCheck(locale);
+        }
+    }
+
+    private void integerInstanceLocaleAndCheck(final Locale locale) {
+        this.check(java.text.NumberFormat.getIntegerInstance(locale),
+                NumberFormat.getIntegerInstance(locale),
+                locale);
+    }
+
+    @Test
+    public void testIntegerInstanceLocaleCloned() {
+        for (final Locale locale : java.text.DecimalFormat.getAvailableLocales()) {
+            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+                continue;
+            }
+
+            final NumberFormat format = DecimalFormat.getCurrencyInstance(locale);
+            format.setMaximumFractionDigits(66);
+            format.setMinimumFractionDigits(77);
+            format.setMaximumIntegerDigits(88);
+            format.setMinimumIntegerDigits(99);
+
+            assertNotEquals(format, DecimalFormat.getCurrencyInstance(locale));
+        }
+    }
+
+    // NumberFormat.getInstance(Locale) ................................................................................
+
+    @Test
+    public void testInstanceDefaultEnAu() {
+        this.instanceAndCheck(EN_AU);
+    }
+
+    @Test
+    public void testInstanceDefaultFr() {
+        this.instanceAndCheck(FR);
+    }
+
+    @Test
+    public void testInstanceDefaultAllLocales() {
+        for (final Locale locale : java.text.DecimalFormat.getAvailableLocales()) {
+            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+                continue;
+            }
+            this.instanceAndCheck(locale);
+        }
+    }
+
+    private void instanceAndCheck(final Locale locale) {
+        Locale.setDefault(locale);
+
+        this.check(java.text.NumberFormat.getInstance(),
+                NumberFormat.getInstance(),
+                locale);
+    }
+
+    @Test
+    public void testInstanceCloned() {
+        for (final Locale locale : java.text.DecimalFormat.getAvailableLocales()) {
+            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+                continue;
+            }
+
+            Locale.setDefault(locale);
+
+            final NumberFormat format = DecimalFormat.getCurrencyInstance();
+            format.setMaximumFractionDigits(66);
+            format.setMinimumFractionDigits(77);
+            format.setMaximumIntegerDigits(88);
+            format.setMinimumIntegerDigits(99);
+
+            assertNotEquals(format, DecimalFormat.getCurrencyInstance());
+        }
+    }
+
+    // NumberFormat.getInstance(Locale) ................................................................................
+
+    @Test
+    public void testInstanceLocaleDefaultEnAu() {
+        this.instanceLocaleAndCheck(EN_AU);
+    }
+
+    @Test
+    public void testInstanceLocaleDefaultFr() {
+        this.instanceLocaleAndCheck(FR);
+    }
+
+    @Test
+    public void testInstanceLocaleDefaultAllLocales() {
+        for (final Locale locale : java.text.DecimalFormat.getAvailableLocales()) {
+            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+                continue;
+            }
+            this.instanceLocaleAndCheck(locale);
+        }
+    }
+
+    private void instanceLocaleAndCheck(final Locale locale) {
+        this.check(java.text.NumberFormat.getInstance(locale),
+                NumberFormat.getInstance(locale),
+                locale);
+    }
+
+    @Test
+    public void testInstanceLocaleCloned() {
+        for (final Locale locale : java.text.DecimalFormat.getAvailableLocales()) {
+            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+                continue;
+            }
+
+            final NumberFormat format = DecimalFormat.getCurrencyInstance(locale);
+            format.setMaximumFractionDigits(66);
+            format.setMinimumFractionDigits(77);
+            format.setMaximumIntegerDigits(88);
+            format.setMinimumIntegerDigits(99);
+
+            assertNotEquals(format, DecimalFormat.getCurrencyInstance(locale));
+        }
+    }
+
+    // NumberFormat.getNumberInstance(Locale) ................................................................................
+
+    @Test
+    public void testNumberInstanceDefaultEnAu() {
+        this.numberInstanceAndCheck(EN_AU);
+    }
+
+    @Test
+    public void testNumberInstanceDefaultFr() {
+        this.numberInstanceAndCheck(FR);
+    }
+
+    @Test
+    public void testNumberInstanceDefaultAllLocales() {
+        for (final Locale locale : java.text.DecimalFormat.getAvailableLocales()) {
+            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+                continue;
+            }
+            this.numberInstanceAndCheck(locale);
+        }
+    }
+
+    private void numberInstanceAndCheck(final Locale locale) {
+        Locale.setDefault(locale);
+
+        this.check(java.text.NumberFormat.getNumberInstance(),
+                NumberFormat.getNumberInstance(),
+                locale);
+    }
+
+    @Test
+    public void testNumberInstanceCloned() {
+        for (final Locale locale : java.text.DecimalFormat.getAvailableLocales()) {
+            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+                continue;
+            }
+
+            Locale.setDefault(locale);
+
+            final NumberFormat format = DecimalFormat.getCurrencyInstance();
+            format.setMaximumFractionDigits(66);
+            format.setMinimumFractionDigits(77);
+            format.setMaximumIntegerDigits(88);
+            format.setMinimumIntegerDigits(99);
+
+            assertNotEquals(format, DecimalFormat.getCurrencyInstance());
+        }
+    }
+
+    // NumberFormat.getNumberInstance(Locale) ..........................................................................
+
+    @Test
+    public void testNumberInstanceLocaleDefaultEnAu() {
+        this.numberInstanceLocaleAndCheck(EN_AU);
+    }
+
+    @Test
+    public void testNumberInstanceLocaleDefaultFr() {
+        this.numberInstanceLocaleAndCheck(FR);
+    }
+
+    @Test
+    public void testNumberInstanceLocaleDefaultAllLocales() {
+        for (final Locale locale : java.text.DecimalFormat.getAvailableLocales()) {
+            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+                continue;
+            }
+            this.numberInstanceLocaleAndCheck(locale);
+        }
+    }
+
+    private void numberInstanceLocaleAndCheck(final Locale locale) {
+        this.check(java.text.NumberFormat.getNumberInstance(locale),
+                NumberFormat.getNumberInstance(locale),
+                locale);
+    }
+
+    @Test
+    public void testNumberInstanceLocaleCloned() {
+        for (final Locale locale : java.text.DecimalFormat.getAvailableLocales()) {
+            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+                continue;
+            }
+
+            final NumberFormat format = DecimalFormat.getCurrencyInstance(locale);
+            format.setMaximumFractionDigits(66);
+            format.setMinimumFractionDigits(77);
+            format.setMaximumIntegerDigits(88);
+            format.setMinimumIntegerDigits(99);
+
+            assertNotEquals(format, DecimalFormat.getCurrencyInstance(locale));
+        }
+    }
+
+    // NumberFormat.getPercentInstance(Locale) .........................................................................
+
+    @Test
+    public void testPercentInstanceDefaultEnAu() {
+        this.percentInstanceAndCheck(EN_AU);
+    }
+
+    @Test
+    public void testPercentInstanceDefaultFr() {
+        this.percentInstanceAndCheck(FR);
+    }
+
+    @Test
+    public void testPercentInstanceDefaultAllLocales() {
+        for (final Locale locale : java.text.DecimalFormat.getAvailableLocales()) {
+            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+                continue;
+            }
+            this.percentInstanceAndCheck(locale);
+        }
+    }
+
+    private void percentInstanceAndCheck(final Locale locale) {
+        Locale.setDefault(locale);
+
+        this.check(java.text.NumberFormat.getPercentInstance(),
+                NumberFormat.getPercentInstance(),
+                locale);
+    }
+
+    @Test
+    public void testPercentInstanceCloned() {
+        for (final Locale locale : java.text.DecimalFormat.getAvailableLocales()) {
+            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+                continue;
+            }
+
+            Locale.setDefault(locale);
+
+            final NumberFormat format = DecimalFormat.getPercentInstance();
+            format.setMaximumFractionDigits(66);
+            format.setMinimumFractionDigits(77);
+            format.setMaximumIntegerDigits(88);
+            format.setMinimumIntegerDigits(99);
+
+            assertNotEquals(format, DecimalFormat.getPercentInstance());
+        }
+    }
+
+    // NumberFormat.getPercentInstance(Locale) .........................................................................
+
+    @Test
+    public void testPercentInstanceLocaleDefaultEnAu() {
+        this.percentInstanceLocaleAndCheck(EN_AU);
+    }
+
+    @Test
+    public void testPercentInstanceLocaleDefaultFr() {
+        this.percentInstanceLocaleAndCheck(FR);
+    }
+
+    @Test
+    public void testPercentInstanceLocaleDefaultAllLocales() {
+        for (final Locale locale : java.text.DecimalFormat.getAvailableLocales()) {
+            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+                continue;
+            }
+            this.percentInstanceLocaleAndCheck(locale);
+        }
+    }
+
+    private void percentInstanceLocaleAndCheck(final Locale locale) {
+        this.check(java.text.NumberFormat.getPercentInstance(locale),
+                NumberFormat.getPercentInstance(locale),
+                locale);
+    }
+
+    @Test
+    public void testPercentInstanceLocaleCloned() {
+        for (final Locale locale : java.text.DecimalFormat.getAvailableLocales()) {
+            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+                continue;
+            }
+
+            final NumberFormat format = DecimalFormat.getPercentInstance(locale);
+            format.setMaximumFractionDigits(66);
+            format.setMinimumFractionDigits(77);
+            format.setMaximumIntegerDigits(88);
+            format.setMinimumIntegerDigits(99);
+
+            assertNotEquals(format, DecimalFormat.getPercentInstance(locale));
+        }
+    }
 
     // new .............................................................................................................
 
@@ -93,7 +564,6 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> {
                 locale);
     }
 
-
     // new pattern, symbols.............................................................................................
 
     @Test
@@ -138,6 +608,14 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> {
 
 
     // check............................................................................................................
+
+    private void check(final java.text.NumberFormat jdk,
+                       final NumberFormat emul,
+                       final Locale locale) {
+        this.check((java.text.DecimalFormat) jdk,
+                (DecimalFormat) emul,
+                locale);
+    }
 
     private void check(final java.text.DecimalFormat jdk,
                        final DecimalFormat emul,

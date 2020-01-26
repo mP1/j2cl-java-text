@@ -64,12 +64,9 @@ public abstract class NumberFormat extends Format {
      * @param locale the locale to use.
      * @return a {@code NumberFormat} for handling currency values.
      */
-    public static NumberFormat getCurrencyInstance(Locale locale) {
-//        com.ibm.icu.text.DecimalFormat icuFormat = (com.ibm.icu.text.DecimalFormat) com.ibm.icu.text.NumberFormat
-//                .getCurrencyInstance(locale);
-//        String pattern = icuFormat.toPattern();
-//        return new java.text.DecimalFormat(pattern, new java.text.DecimalFormatSymbols(locale));
-        throw new UnsupportedOperationException();
+    public static NumberFormat getCurrencyInstance(final Locale locale) {
+        return DecimalFormat.forLocale(locale, DecimalFormat.CURRENCY)
+                .cloneState();
     }
 
     /**
@@ -90,7 +87,8 @@ public abstract class NumberFormat extends Format {
      * @return a {@code NumberFormat} for handling {@code Number} objects.
      */
     public static NumberFormat getInstance(final Locale locale) {
-        return new DecimalFormat("instance-format-pattern", new DecimalFormatSymbols(locale));
+        return DecimalFormat.forLocale(locale, DecimalFormat.INSTANCE)
+                .cloneState();
     }
 
     /**
@@ -100,7 +98,7 @@ public abstract class NumberFormat extends Format {
      * @return a {@code NumberFormat} for handling {@code Number} objects.
      */
     public static final NumberFormat getNumberInstance() {
-        return getInstance();
+        return getNumberInstance(Locale.getDefault());
     }
 
     /**
@@ -111,7 +109,8 @@ public abstract class NumberFormat extends Format {
      * @return a {@code NumberFormat} for handling {@code Number} objects.
      */
     public static NumberFormat getNumberInstance(final Locale locale) {
-        return getInstance(locale);
+        return DecimalFormat.forLocale(locale, DecimalFormat.NUMBER)
+                .cloneState();
     }
 
     /**
@@ -121,7 +120,7 @@ public abstract class NumberFormat extends Format {
      * @return a {@code NumberFormat} for handling integers.
      */
     public static final NumberFormat getIntegerInstance() {
-        return getInstance(Locale.getDefault());
+        return getIntegerInstance(Locale.getDefault());
     }
 
     /**
@@ -132,10 +131,8 @@ public abstract class NumberFormat extends Format {
      * @return a {@code NumberFormat} for handling integers.
      */
     public static NumberFormat getIntegerInstance(final Locale locale) {
-        // TODO get Integer-decimal-format for locale
-        final NumberFormat format = new DecimalFormat("integer-decimal-format-for-locale", new DecimalFormatSymbols(locale));
-        format.setParseIntegerOnly(true);
-        return format;
+        return DecimalFormat.forLocale(locale, DecimalFormat.INTEGER)
+                .cloneState();
     }
 
     /**
@@ -156,11 +153,8 @@ public abstract class NumberFormat extends Format {
      * @return a {@code NumberFormat} for handling percentage values.
      */
     public static NumberFormat getPercentInstance(Locale locale) {
-//        com.ibm.icu.text.DecimalFormat icuFormat = (com.ibm.icu.text.DecimalFormat) com.ibm.icu.text.NumberFormat
-//                .getPercentInstance(locale);
-//        String pattern = icuFormat.toPattern();
-//        return new java.text.DecimalFormat(pattern, new java.text.DecimalFormatSymbols(locale));
-        throw new UnsupportedOperationException();
+        return DecimalFormat.forLocale(locale, DecimalFormat.PERCENT)
+                .cloneState();
     }
 
     protected NumberFormat() {
@@ -441,6 +435,15 @@ public abstract class NumberFormat extends Format {
     }
 
     public void setRoundingMode(final RoundingMode roundingMode) {
+        throw new UnsupportedOperationException();
+    }
+
+    // static getXXXInstance............................................................................................
+
+    /**
+     * This will be overridden by {@link DecimalFormat} and used by the static getXXXInstance methods to clone the constant.
+     */
+    DecimalFormat cloneState() {
         throw new UnsupportedOperationException();
     }
 
