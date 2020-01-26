@@ -30,7 +30,7 @@ public class DecimalFormat extends NumberFormat {
     /**
      * Language tag to an array of {@link DecimalFormat}, this is used internally to "get" the symbols for a given Locale.
      */
-    private final static LanguageTagLookup<DecimalFormat[]> LANGUAGE_TAG_TO_FORMATS = LanguageTagLookup.empty();
+    final static LanguageTagLookup<DecimalFormat[]> LANGUAGE_TAG_TO_FORMATS = LanguageTagLookup.empty();
 
     /**
      * Registers all locale and their formats.
