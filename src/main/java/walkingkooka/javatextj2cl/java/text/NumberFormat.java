@@ -90,7 +90,7 @@ public abstract class NumberFormat extends Format {
      * @return a {@code NumberFormat} for handling {@code Number} objects.
      */
     public static NumberFormat getInstance(final Locale locale) {
-        return DecimalFormat.with(new DecimalFormatSymbols(locale));
+        return new DecimalFormat("instance-format-pattern", new DecimalFormatSymbols(locale));
     }
 
     /**
@@ -132,7 +132,8 @@ public abstract class NumberFormat extends Format {
      * @return a {@code NumberFormat} for handling integers.
      */
     public static NumberFormat getIntegerInstance(final Locale locale) {
-        final NumberFormat format = DecimalFormat.with(new DecimalFormatSymbols(locale));
+        // TODO get Integer-decimal-format for locale
+        final NumberFormat format = new DecimalFormat("integer-decimal-format-for-locale", new DecimalFormatSymbols(locale));
         format.setParseIntegerOnly(true);
         return format;
     }
@@ -301,7 +302,7 @@ public abstract class NumberFormat extends Format {
         groupingUsed = value;
     }
 
-    private boolean groupingUsed = true;
+    boolean groupingUsed = true;
 
     /**
      * Indicates whether this number format only parses integer numbers. Parsing
@@ -327,7 +328,7 @@ public abstract class NumberFormat extends Format {
         parseIntegerOnly = value;
     }
 
-    private boolean parseIntegerOnly = false;
+    boolean parseIntegerOnly = false;
 
     /**
      * Returns the maximum number of fraction digits that are printed when
@@ -354,7 +355,7 @@ public abstract class NumberFormat extends Format {
         }
     }
 
-    private int maximumFractionDigits = 3;
+    int maximumFractionDigits = 3;
 
     /**
      * Returns the maximum number of integer digits that are printed when
@@ -381,8 +382,7 @@ public abstract class NumberFormat extends Format {
         }
     }
 
-    private int maximumIntegerDigits = 40;
-
+    int maximumIntegerDigits = 40;
 
     /**
      * Returns the minimum number of fraction digits that are printed when
@@ -407,7 +407,7 @@ public abstract class NumberFormat extends Format {
         }
     }
 
-    private int minimumFractionDigits = 0;
+    int minimumFractionDigits = 0;
 
     /**
      * Returns the minimum number of integer digits that are printed when
@@ -432,7 +432,7 @@ public abstract class NumberFormat extends Format {
         }
     }
 
-    private int minimumIntegerDigits = 1;
+    int minimumIntegerDigits = 1;
 
     // RoundingMode.....................................................................................................
 
