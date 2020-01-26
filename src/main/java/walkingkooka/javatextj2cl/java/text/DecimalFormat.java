@@ -412,7 +412,6 @@ public class DecimalFormat extends NumberFormat {
     }
 
     public void setNegativeSuffix(final String negativeSuffix) {
-        Objects.requireNonNull(negativeSuffix, "negativeSuffix");
         this.negativeSuffix = negativeSuffix;
     }
 
