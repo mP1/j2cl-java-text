@@ -18,8 +18,20 @@
 package walkingkooka.javatextj2cl.java.text;
 
 import org.junit.jupiter.api.Test;
+import walkingkooka.HashCodeEqualsDefinedTesting2;
 
-public final class DecimalFormatPatternComponentTextLiteralTest extends DecimalFormatPatternComponentTestCase<DecimalFormatPatternComponentTextLiteral> {
+public final class DecimalFormatPatternComponentTextLiteralTest extends DecimalFormatPatternComponentTestCase<DecimalFormatPatternComponentTextLiteral>
+        implements HashCodeEqualsDefinedTesting2<DecimalFormatPatternComponentTextLiteral> {
+
+    @Test
+    public void testDifferentCase() {
+        this.checkNotEquals(DecimalFormatPatternComponentTextLiteral.with("abC"));
+    }
+
+    @Test
+    public void testDifferentText() {
+        this.checkNotEquals(DecimalFormatPatternComponentTextLiteral.with("DEF"));
+    }
 
     @Test
     public void testToString() {
@@ -30,5 +42,12 @@ public final class DecimalFormatPatternComponentTextLiteralTest extends DecimalF
     @Override
     public Class<DecimalFormatPatternComponentTextLiteral> type() {
         return DecimalFormatPatternComponentTextLiteral.class;
+    }
+
+    // HashCodeEqualsDefinedTesting2....................................................................................
+
+    @Override
+    public DecimalFormatPatternComponentTextLiteral createObject() {
+        return DecimalFormatPatternComponentTextLiteral.with("abc");
     }
 }
