@@ -30,4 +30,11 @@ final class DecimalFormatPatternComponentSubpatternSeparator extends DecimalForm
     private DecimalFormatPatternComponentSubpatternSeparator() {
         super();
     }
+
+    final static char LITERAL = ';';
+
+    @Override
+    public String toString() {
+        return "" + LITERAL;
+    }
 }

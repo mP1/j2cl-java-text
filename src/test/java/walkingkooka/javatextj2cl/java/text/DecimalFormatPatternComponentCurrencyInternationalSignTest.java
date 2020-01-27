@@ -17,7 +17,7 @@
 
 package walkingkooka.javatextj2cl.java.text;
 
-public final class DecimalFormatPatternComponentCurrencyInternationalSignTest extends DecimalFormatPatternComponentTestCase<DecimalFormatPatternComponentCurrencyInternationalSign> {
+public final class DecimalFormatPatternComponentCurrencyInternationalSignTest extends DecimalFormatPatternComponentTestCase2<DecimalFormatPatternComponentCurrencyInternationalSign> {
     @Override
     public Class<DecimalFormatPatternComponentCurrencyInternationalSign> type() {
         return DecimalFormatPatternComponentCurrencyInternationalSign.class;

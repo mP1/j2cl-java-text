@@ -17,10 +17,12 @@
 
 package walkingkooka.javatextj2cl.java.text;
 
+import walkingkooka.ToStringTesting;
 import walkingkooka.reflect.ClassTesting2;
 import walkingkooka.reflect.JavaVisibility;
 
-public abstract class DecimalFormatPatternComponentTestCase<C extends DecimalFormatPatternComponent> implements ClassTesting2<C> {
+public abstract class DecimalFormatPatternComponentTestCase<C extends DecimalFormatPatternComponent> implements ClassTesting2<C>,
+        ToStringTesting<C> {
 
     DecimalFormatPatternComponentTestCase() {
         super();

@@ -30,4 +30,11 @@ final class DecimalFormatPatternComponentMinusSign extends DecimalFormatPatternC
     private DecimalFormatPatternComponentMinusSign() {
         super();
     }
+
+    final static char LITERAL = '-';
+
+    @Override
+    public String toString() {
+        return "" + LITERAL;
+    }
 }

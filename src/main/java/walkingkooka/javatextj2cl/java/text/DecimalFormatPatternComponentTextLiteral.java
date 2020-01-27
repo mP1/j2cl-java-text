@@ -35,4 +35,12 @@ final class DecimalFormatPatternComponentTextLiteral extends DecimalFormatPatter
     }
 
     private final String text;
+
+    @Override
+    public String toString() {
+        final String text = this.text;
+        return text.equals("'") ?
+                "''" :
+                "'" + text.replace("'", "''") + "'";
+    }
 }

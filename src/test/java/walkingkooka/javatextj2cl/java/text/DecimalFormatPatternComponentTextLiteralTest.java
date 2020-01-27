@@ -17,7 +17,16 @@
 
 package walkingkooka.javatextj2cl.java.text;
 
+import org.junit.jupiter.api.Test;
+
 public final class DecimalFormatPatternComponentTextLiteralTest extends DecimalFormatPatternComponentTestCase<DecimalFormatPatternComponentTextLiteral> {
+
+    @Test
+    public void testToString() {
+        final String text = "abc123";
+        this.toStringAndCheck(DecimalFormatPatternComponentTextLiteral.with(text), "'" + text + "'");
+    }
+
     @Override
     public Class<DecimalFormatPatternComponentTextLiteral> type() {
         return DecimalFormatPatternComponentTextLiteral.class;
