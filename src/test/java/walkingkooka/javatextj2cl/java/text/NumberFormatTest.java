@@ -20,7 +20,6 @@ package walkingkooka.javatextj2cl.java.text;
 import org.junit.jupiter.api.Test;
 import walkingkooka.HashCodeEqualsDefinedTesting2;
 import walkingkooka.collect.set.Sets;
-import walkingkooka.javautillocalej2cl.WalkingkookaLocale;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
@@ -34,7 +33,6 @@ import java.util.Set;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicLong;
 
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
