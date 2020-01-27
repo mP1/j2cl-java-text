@@ -36,6 +36,22 @@ final class DecimalFormatPatternComponentTextLiteral extends DecimalFormatPatter
 
     private final String text;
 
+    // Object...........................................................................................................
+
+    @Override
+    public int hashCode() {
+        return this.text.hashCode();
+    }
+
+    @Override
+    public boolean equals(final Object other) {
+        return this == other || other instanceof DecimalFormatPatternComponentTextLiteral && this.equals0((DecimalFormatPatternComponentTextLiteral) other);
+    }
+
+    private boolean equals0(final DecimalFormatPatternComponentTextLiteral other) {
+        return this.text.equals(other.text);
+    }
+
     @Override
     public String toString() {
         final String text = this.text;
