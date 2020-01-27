@@ -17,9 +17,19 @@
 
 package walkingkooka.javatextj2cl.java.text;
 
-public final class DecimalFormatPatternComponentPerMilleTest extends DecimalFormatPatternComponentTestCase2<DecimalFormatPatternComponentPerMille> {
-    @Override
-    public Class<DecimalFormatPatternComponentPerMille> type() {
-        return DecimalFormatPatternComponentPerMille.class;
+import org.junit.jupiter.api.Test;
+
+import java.lang.reflect.Field;
+
+public abstract class DecimalFormatPatternComponentTestCase2<C extends DecimalFormatPatternComponent> extends DecimalFormatPatternComponentTestCase<C> {
+
+    DecimalFormatPatternComponentTestCase2() {
+        super();
+    }
+
+    @Test
+    public final void testToString() throws Exception {
+        final Field c = this.type().getDeclaredField("LITERAL");
+        this.toStringAndCheck(c.get(null), this.type().getDeclaredField("INSTANCE").get(null).toString());
     }
 }

@@ -30,4 +30,11 @@ final class DecimalFormatPatternComponentExponent extends DecimalFormatPatternCo
     private DecimalFormatPatternComponentExponent() {
         super();
     }
+
+    final static char LITERAL = 'E';
+
+    @Override
+    public String toString() {
+        return "" + LITERAL;
+    }
 }

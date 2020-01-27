@@ -30,4 +30,11 @@ final class DecimalFormatPatternComponentPerMille extends DecimalFormatPatternCo
     private DecimalFormatPatternComponentPerMille() {
         super();
     }
+
+    final static char LITERAL = '\u2030';
+
+    @Override
+    public String toString() {
+        return "" + LITERAL;
+    }
 }

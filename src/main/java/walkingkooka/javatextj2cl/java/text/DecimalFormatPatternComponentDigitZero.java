@@ -27,4 +27,11 @@ final class DecimalFormatPatternComponentDigitZero extends DecimalFormatPatternC
     private DecimalFormatPatternComponentDigitZero() {
         super();
     }
+
+    final static char LITERAL = '0';
+
+    @Override
+    public String toString() {
+        return "" + LITERAL;
+    }
 }

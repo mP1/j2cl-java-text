@@ -30,4 +30,11 @@ final class DecimalFormatPatternComponentCurrencyInternationalSign extends Decim
     private DecimalFormatPatternComponentCurrencyInternationalSign() {
         super();
     }
+
+    final static String LITERAL = "\u00A4\u00A4";
+
+    @Override
+    public String toString() {
+        return LITERAL;
+    }
 }

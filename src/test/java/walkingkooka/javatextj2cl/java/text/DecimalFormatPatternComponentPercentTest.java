@@ -17,7 +17,7 @@
 
 package walkingkooka.javatextj2cl.java.text;
 
-public final class DecimalFormatPatternComponentPercentTest extends DecimalFormatPatternComponentTestCase<DecimalFormatPatternComponentPercent> {
+public final class DecimalFormatPatternComponentPercentTest extends DecimalFormatPatternComponentTestCase2<DecimalFormatPatternComponentPercent> {
     @Override
     public Class<DecimalFormatPatternComponentPercent> type() {
         return DecimalFormatPatternComponentPercent.class;

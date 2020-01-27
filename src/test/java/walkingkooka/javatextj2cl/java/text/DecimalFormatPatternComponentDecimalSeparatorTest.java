@@ -17,7 +17,7 @@
 
 package walkingkooka.javatextj2cl.java.text;
 
-public final class DecimalFormatPatternComponentDecimalSeparatorTest extends DecimalFormatPatternComponentTestCase<DecimalFormatPatternComponentDecimalSeparator> {
+public final class DecimalFormatPatternComponentDecimalSeparatorTest extends DecimalFormatPatternComponentTestCase2<DecimalFormatPatternComponentDecimalSeparator> {
     @Override
     public Class<DecimalFormatPatternComponentDecimalSeparator> type() {
         return DecimalFormatPatternComponentDecimalSeparator.class;

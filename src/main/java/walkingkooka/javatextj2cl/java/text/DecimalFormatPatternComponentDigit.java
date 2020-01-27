@@ -27,4 +27,11 @@ final class DecimalFormatPatternComponentDigit extends DecimalFormatPatternCompo
     private DecimalFormatPatternComponentDigit() {
         super();
     }
+
+    final static char LITERAL = '#';
+
+    @Override
+    public String toString() {
+        return "" + LITERAL;
+    }
 }

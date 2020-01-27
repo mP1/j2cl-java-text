@@ -30,4 +30,11 @@ final class DecimalFormatPatternComponentDecimalSeparator extends DecimalFormatP
     private DecimalFormatPatternComponentDecimalSeparator() {
         super();
     }
+
+    final static char LITERAL = ',';
+
+    @Override
+    public String toString() {
+        return "" + LITERAL;
+    }
 }

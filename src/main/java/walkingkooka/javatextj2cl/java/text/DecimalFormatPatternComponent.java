@@ -98,4 +98,7 @@ abstract class DecimalFormatPatternComponent {
     DecimalFormatPatternComponent() {
         super();
     }
+
+    @Override
+    public abstract String toString();
 }
