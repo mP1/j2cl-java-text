@@ -31,6 +31,11 @@ final class DecimalFormatPatternComponentMinusSign extends DecimalFormatPatternC
         super();
     }
 
+    @Override
+    boolean isCurrency() {
+        return false;
+    }
+
     final static char LITERAL = '-';
 
     @Override

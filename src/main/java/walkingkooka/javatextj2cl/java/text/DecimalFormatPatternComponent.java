@@ -99,6 +99,11 @@ abstract class DecimalFormatPatternComponent {
         super();
     }
 
+    /**
+     * Returns true if this symbol makes this pattern a currency format pattern.
+     */
+    abstract boolean isCurrency();
+
     @Override
     public abstract String toString();
 }

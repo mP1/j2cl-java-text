@@ -28,6 +28,12 @@ public abstract class DecimalFormatPatternComponentTestCase2<C extends DecimalFo
     }
 
     @Test
+    public final void testIsCurrency() throws Exception {
+        this.isCurrencyAndCheck((C) this.type().getDeclaredField("INSTANCE").get(null),
+                this.type().getSimpleName().contains("Currency"));
+    }
+
+    @Test
     public final void testToString() throws Exception {
         final Field c = this.type().getDeclaredField("LITERAL");
         this.toStringAndCheck(c.get(null), this.type().getDeclaredField("INSTANCE").get(null).toString());

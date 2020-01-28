@@ -21,11 +21,20 @@ import walkingkooka.ToStringTesting;
 import walkingkooka.reflect.ClassTesting2;
 import walkingkooka.reflect.JavaVisibility;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public abstract class DecimalFormatPatternComponentTestCase<C extends DecimalFormatPatternComponent> implements ClassTesting2<C>,
         ToStringTesting<C> {
 
     DecimalFormatPatternComponentTestCase() {
         super();
+    }
+
+    final void isCurrencyAndCheck(final C component,
+                                  final boolean currency) {
+        assertEquals(currency,
+                component.isCurrency(),
+                () -> component.toString());
     }
 
     // ClassTesting2....................................................................................................

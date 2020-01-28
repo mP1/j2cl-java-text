@@ -28,6 +28,11 @@ final class DecimalFormatPatternComponentDigitZero extends DecimalFormatPatternC
         super();
     }
 
+    @Override
+    boolean isCurrency() {
+        return false;
+    }
+
     final static char LITERAL = '0';
 
     @Override

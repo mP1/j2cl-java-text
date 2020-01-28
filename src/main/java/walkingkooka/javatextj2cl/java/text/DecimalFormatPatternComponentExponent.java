@@ -31,6 +31,11 @@ final class DecimalFormatPatternComponentExponent extends DecimalFormatPatternCo
         super();
     }
 
+    @Override
+    boolean isCurrency() {
+        return false;
+    }
+
     final static char LITERAL = 'E';
 
     @Override
