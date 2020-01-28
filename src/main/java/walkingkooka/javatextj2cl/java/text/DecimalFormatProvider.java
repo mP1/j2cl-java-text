@@ -32,7 +32,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-¤ ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "¤ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -46,7 +46,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -60,7 +60,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -74,7 +74,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -88,7 +88,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -106,7 +106,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-¤", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "¤", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -120,7 +120,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -134,7 +134,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -148,7 +148,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -162,7 +162,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -180,7 +180,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-$", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "$", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -194,7 +194,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -208,7 +208,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -222,7 +222,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -236,7 +236,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -254,7 +254,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-R", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "R", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -268,7 +268,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -282,7 +282,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -296,7 +296,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -310,7 +310,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -328,7 +328,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 "¤", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00¤", // Currency pattern
                 "", // Currency positivePrefix
                 "¤", // Currency positiveSuffix
@@ -342,7 +342,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -356,7 +356,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -370,7 +370,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -384,7 +384,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -402,7 +402,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 "FCFA", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0¤", // Currency pattern
                 "", // Currency positivePrefix
                 "FCFA", // Currency positiveSuffix
@@ -416,7 +416,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -430,7 +430,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -444,7 +444,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -458,7 +458,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -476,7 +476,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-GH₵", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "GH₵", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -490,7 +490,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -504,7 +504,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -518,7 +518,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -532,7 +532,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -550,7 +550,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-ብር", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "ብር", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -564,7 +564,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -578,7 +578,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -592,7 +592,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -606,7 +606,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -624,7 +624,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "‏¤ ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "¤ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -638,7 +638,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "‏", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -652,7 +652,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "‏", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -666,7 +666,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "‏", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -680,7 +680,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "‏", // Percent negativePrefix
                 "٪", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "٪", // Percent positiveSuffix
@@ -698,7 +698,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "‏د.إ.‏ ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "د.إ.‏ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -712,7 +712,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "‏", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -726,7 +726,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "‏", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -740,7 +740,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "‏", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -754,7 +754,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "‏", // Percent negativePrefix
                 "٪", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "٪", // Percent positiveSuffix
@@ -772,7 +772,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "‏د.ب.‏ ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.000", // Currency pattern
                 "د.ب.‏ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -786,7 +786,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "‏", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -800,7 +800,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "‏", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -814,7 +814,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "‏", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -828,7 +828,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "‏", // Percent negativePrefix
                 "٪", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "٪", // Percent positiveSuffix
@@ -846,7 +846,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "‏Fdj ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0", // Currency pattern
                 "Fdj ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -860,7 +860,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "‏", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -874,7 +874,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "‏", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -888,7 +888,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "‏", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -902,7 +902,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "‏", // Percent negativePrefix
                 "٪", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "٪", // Percent positiveSuffix
@@ -920,7 +920,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "‎د.ج.‏ ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "د.ج.‏ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -934,7 +934,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "‎", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -948,7 +948,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "‎", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -962,7 +962,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "‎", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -976,7 +976,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "‎", // Percent negativePrefix
                 "٪", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "٪", // Percent positiveSuffix
@@ -994,7 +994,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "‏ج.م.‏ ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "ج.م.‏ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -1008,7 +1008,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "‏", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -1022,7 +1022,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "‏", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -1036,7 +1036,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "‏", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -1050,7 +1050,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "‏", // Percent negativePrefix
                 "٪", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "٪", // Percent positiveSuffix
@@ -1068,7 +1068,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "‎د.م.‏ ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "د.م.‏ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -1082,7 +1082,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "‎", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -1096,7 +1096,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "‎", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -1110,7 +1110,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "‎", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -1124,7 +1124,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "‎", // Percent negativePrefix
                 "٪", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "٪", // Percent positiveSuffix
@@ -1142,7 +1142,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "‏Nfk ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "Nfk ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -1156,7 +1156,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "‏", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -1170,7 +1170,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "‏", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -1184,7 +1184,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "‏", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -1198,7 +1198,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "‏", // Percent negativePrefix
                 "٪", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "٪", // Percent positiveSuffix
@@ -1216,7 +1216,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "‏₪ ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "₪ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -1230,7 +1230,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "‏", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -1244,7 +1244,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "‏", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -1258,7 +1258,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "‏", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -1272,7 +1272,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "‏", // Percent negativePrefix
                 "٪", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "٪", // Percent positiveSuffix
@@ -1290,7 +1290,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "‏د.ع.‏ ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.000", // Currency pattern
                 "د.ع.‏ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -1304,7 +1304,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "‏", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -1318,7 +1318,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "‏", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -1332,7 +1332,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "‏", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -1346,7 +1346,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "‏", // Percent negativePrefix
                 "٪", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "٪", // Percent positiveSuffix
@@ -1364,7 +1364,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "‏د.أ.‏ ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.000", // Currency pattern
                 "د.أ.‏ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -1378,7 +1378,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "‏", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -1392,7 +1392,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "‏", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -1406,7 +1406,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "‏", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -1420,7 +1420,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "‏", // Percent negativePrefix
                 "٪", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "٪", // Percent positiveSuffix
@@ -1438,7 +1438,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "‏ف.ج.ق.‏ ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0", // Currency pattern
                 "ف.ج.ق.‏ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -1452,7 +1452,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "‏", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -1466,7 +1466,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "‏", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -1480,7 +1480,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "‏", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -1494,7 +1494,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "‏", // Percent negativePrefix
                 "٪", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "٪", // Percent positiveSuffix
@@ -1512,7 +1512,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "‏د.ك.‏ ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.000", // Currency pattern
                 "د.ك.‏ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -1526,7 +1526,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "‏", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -1540,7 +1540,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "‏", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -1554,7 +1554,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "‏", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -1568,7 +1568,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "‏", // Percent negativePrefix
                 "٪", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "٪", // Percent positiveSuffix
@@ -1586,7 +1586,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "‎ل.ل.‏ ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "ل.ل.‏ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -1600,7 +1600,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "‎", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -1614,7 +1614,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "‎", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -1628,7 +1628,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "‎", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -1642,7 +1642,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "‎", // Percent negativePrefix
                 "٪", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "٪", // Percent positiveSuffix
@@ -1660,7 +1660,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "‎د.ل.‏ ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.000", // Currency pattern
                 "د.ل.‏ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -1674,7 +1674,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "‎", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -1688,7 +1688,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "‎", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -1702,7 +1702,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "‎", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -1716,7 +1716,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "‎", // Percent negativePrefix
                 "٪", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "٪", // Percent positiveSuffix
@@ -1734,7 +1734,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "‎أ.م.‏ ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "أ.م.‏ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -1748,7 +1748,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "‎", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -1762,7 +1762,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "‎", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -1776,7 +1776,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "‎", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -1790,7 +1790,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "‎", // Percent negativePrefix
                 "٪", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "٪", // Percent positiveSuffix
@@ -1808,7 +1808,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "‏ر.ع.‏ ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.000", // Currency pattern
                 "ر.ع.‏ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -1822,7 +1822,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "‏", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -1836,7 +1836,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "‏", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -1850,7 +1850,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "‏", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -1864,7 +1864,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "‏", // Percent negativePrefix
                 "٪", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "٪", // Percent positiveSuffix
@@ -1882,7 +1882,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "‏ر.ق.‏ ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "ر.ق.‏ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -1896,7 +1896,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "‏", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -1910,7 +1910,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "‏", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -1924,7 +1924,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "‏", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -1938,7 +1938,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "‏", // Percent negativePrefix
                 "٪", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "٪", // Percent positiveSuffix
@@ -1956,7 +1956,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "‏ر.س.‏ ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "ر.س.‏ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -1970,7 +1970,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "‏", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -1984,7 +1984,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "‏", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -1998,7 +1998,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "‏", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -2012,7 +2012,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "‏", // Percent negativePrefix
                 "٪", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "٪", // Percent positiveSuffix
@@ -2030,7 +2030,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "‏ج.س.‏ ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "ج.س.‏ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -2044,7 +2044,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "‏", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -2058,7 +2058,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "‏", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -2072,7 +2072,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "‏", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -2086,7 +2086,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "‏", // Percent negativePrefix
                 "٪", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "٪", // Percent positiveSuffix
@@ -2104,7 +2104,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "‏S ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "S ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -2118,7 +2118,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "‏", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -2132,7 +2132,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "‏", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -2146,7 +2146,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "‏", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -2160,7 +2160,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "‏", // Percent negativePrefix
                 "٪", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "٪", // Percent positiveSuffix
@@ -2178,7 +2178,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "‏£ ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "£ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -2192,7 +2192,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "‏", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -2206,7 +2206,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "‏", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -2220,7 +2220,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "‏", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -2234,7 +2234,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "‏", // Percent negativePrefix
                 "٪", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "٪", // Percent positiveSuffix
@@ -2252,7 +2252,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "‏ل.س.‏ ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "ل.س.‏ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -2266,7 +2266,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "‏", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -2280,7 +2280,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "‏", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -2294,7 +2294,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "‏", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -2308,7 +2308,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "‏", // Percent negativePrefix
                 "٪", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "٪", // Percent positiveSuffix
@@ -2326,7 +2326,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "‏FCFA ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0", // Currency pattern
                 "FCFA ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -2340,7 +2340,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "‏", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -2354,7 +2354,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "‏", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -2368,7 +2368,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "‏", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -2382,7 +2382,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "‏", // Percent negativePrefix
                 "٪", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "٪", // Percent positiveSuffix
@@ -2400,7 +2400,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "‎د.ت.‏ ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.000", // Currency pattern
                 "د.ت.‏ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -2414,7 +2414,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "‎", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -2428,7 +2428,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "‎", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -2442,7 +2442,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "‎", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -2456,7 +2456,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "‎", // Percent negativePrefix
                 "٪", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "٪", // Percent positiveSuffix
@@ -2474,7 +2474,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "‏ر.ي.‏ ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "ر.ي.‏ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -2488,7 +2488,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "‏", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -2502,7 +2502,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "‏", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -2516,7 +2516,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "‏", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -2530,7 +2530,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "‏", // Percent negativePrefix
                 "٪", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "٪", // Percent positiveSuffix
@@ -2548,7 +2548,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-₹ ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "₹ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -2562,7 +2562,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -2576,7 +2576,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -2590,7 +2590,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -2604,7 +2604,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -2622,7 +2622,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " ¤", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " ¤", // Currency positiveSuffix
@@ -2636,7 +2636,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -2650,7 +2650,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -2664,7 +2664,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -2678,7 +2678,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -2696,7 +2696,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " TSh", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " TSh", // Currency positiveSuffix
@@ -2710,7 +2710,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -2724,7 +2724,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -2738,7 +2738,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -2752,7 +2752,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -2770,7 +2770,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " €", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " €", // Currency positiveSuffix
@@ -2784,7 +2784,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -2798,7 +2798,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -2812,7 +2812,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -2826,7 +2826,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -2844,7 +2844,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-₼ ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "₼ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -2858,7 +2858,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -2872,7 +2872,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -2886,7 +2886,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -2900,7 +2900,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -2918,7 +2918,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " ¤", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " ¤", // Currency positiveSuffix
@@ -2932,7 +2932,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -2946,7 +2946,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -2960,7 +2960,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -2974,7 +2974,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -2992,7 +2992,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " FCFA", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " FCFA", // Currency positiveSuffix
@@ -3006,7 +3006,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -3020,7 +3020,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -3034,7 +3034,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -3048,7 +3048,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -3066,7 +3066,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " Руб", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " Руб", // Currency positiveSuffix
@@ -3080,7 +3080,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -3094,7 +3094,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -3108,7 +3108,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -3122,7 +3122,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -3140,7 +3140,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-K", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "K", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -3154,7 +3154,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -3168,7 +3168,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -3182,7 +3182,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -3196,7 +3196,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -3214,7 +3214,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 "TSh", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00¤", // Currency pattern
                 "", // Currency positivePrefix
                 "TSh", // Currency positiveSuffix
@@ -3228,7 +3228,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -3242,7 +3242,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -3256,7 +3256,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -3270,7 +3270,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -3288,7 +3288,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " лв.", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " лв.", // Currency positiveSuffix
@@ -3302,7 +3302,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -3316,7 +3316,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -3330,7 +3330,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -3344,7 +3344,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -3362,7 +3362,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-CFA", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0", // Currency pattern
                 "CFA", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -3376,7 +3376,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -3390,7 +3390,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -3404,7 +3404,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -3418,7 +3418,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -3436,7 +3436,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 "৳", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00¤", // Currency pattern
                 "", // Currency positivePrefix
                 "৳", // Currency positiveSuffix
@@ -3450,7 +3450,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -3464,7 +3464,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -3478,7 +3478,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -3492,7 +3492,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -3510,7 +3510,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 "₹", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00¤", // Currency pattern
                 "", // Currency positivePrefix
                 "₹", // Currency positiveSuffix
@@ -3524,7 +3524,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -3538,7 +3538,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -3552,7 +3552,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -3566,7 +3566,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -3584,7 +3584,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-¥ ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "¥ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -3598,7 +3598,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -3612,7 +3612,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -3626,7 +3626,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -3640,7 +3640,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -3658,7 +3658,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " €", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " €", // Currency positiveSuffix
@@ -3672,7 +3672,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -3686,7 +3686,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -3700,7 +3700,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -3714,7 +3714,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -3732,7 +3732,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " KM", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " KM", // Currency positiveSuffix
@@ -3746,7 +3746,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -3760,7 +3760,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -3774,7 +3774,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -3788,7 +3788,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -3806,7 +3806,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " КМ", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " КМ", // Currency positiveSuffix
@@ -3820,7 +3820,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -3834,7 +3834,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -3848,7 +3848,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -3862,7 +3862,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -3880,7 +3880,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " ₽", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " ₽", // Currency positiveSuffix
@@ -3894,7 +3894,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -3908,7 +3908,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -3922,7 +3922,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -3936,7 +3936,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -3954,7 +3954,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-USh", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0", // Currency pattern
                 "USh", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -3968,7 +3968,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -3982,7 +3982,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -3996,7 +3996,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -4010,7 +4010,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -4028,7 +4028,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "‏IQD ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.000", // Currency pattern
                 "IQD ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -4042,7 +4042,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "‏", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -4056,7 +4056,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "‏", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -4070,7 +4070,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "‏", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -4084,7 +4084,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "‏", // Percent negativePrefix
                 "٪", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "٪", // Percent positiveSuffix
@@ -4102,7 +4102,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "‏IRR ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "IRR ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -4116,7 +4116,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "‏", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -4130,7 +4130,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "‏", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -4144,7 +4144,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "‏", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -4158,7 +4158,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "‏", // Percent negativePrefix
                 "٪", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "٪", // Percent positiveSuffix
@@ -4176,7 +4176,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " Kč", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " Kč", // Currency positiveSuffix
@@ -4190,7 +4190,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -4204,7 +4204,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -4218,7 +4218,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -4232,7 +4232,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -4250,7 +4250,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-₽ ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "₽ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -4264,7 +4264,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -4278,7 +4278,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -4292,7 +4292,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -4306,7 +4306,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -4324,7 +4324,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-£", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "£", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -4338,7 +4338,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -4352,7 +4352,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -4366,7 +4366,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -4380,7 +4380,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -4398,7 +4398,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " kr.", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " kr.", // Currency positiveSuffix
@@ -4412,7 +4412,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -4426,7 +4426,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -4440,7 +4440,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -4454,7 +4454,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -4472,7 +4472,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-Ksh", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "Ksh", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -4486,7 +4486,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -4500,7 +4500,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -4514,7 +4514,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -4528,7 +4528,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -4546,7 +4546,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-€ ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "€ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -4560,7 +4560,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -4574,7 +4574,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -4588,7 +4588,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -4602,7 +4602,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -4620,7 +4620,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "CHF-", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00;¤-#,##0.00", // Currency pattern
                 "CHF ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -4634,7 +4634,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -4648,7 +4648,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -4662,7 +4662,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -4676,7 +4676,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -4694,7 +4694,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-CHF ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "CHF ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -4708,7 +4708,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -4722,7 +4722,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -4736,7 +4736,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -4750,7 +4750,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -4768,7 +4768,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 "CFA", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0¤", // Currency pattern
                 "", // Currency positivePrefix
                 "CFA", // Currency positiveSuffix
@@ -4782,7 +4782,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -4796,7 +4796,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -4810,7 +4810,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -4824,7 +4824,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -4842,7 +4842,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " CFA", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " CFA", // Currency positiveSuffix
@@ -4856,7 +4856,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -4870,7 +4870,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -4884,7 +4884,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -4898,7 +4898,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -4916,7 +4916,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-¤", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "¤", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -4930,7 +4930,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -4944,7 +4944,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -4958,7 +4958,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -4972,7 +4972,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -4990,7 +4990,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-Nu.", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "Nu.", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -5004,7 +5004,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -5018,7 +5018,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -5032,7 +5032,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -5046,7 +5046,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -5064,7 +5064,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-FBu", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0", // Currency pattern
                 "FBu", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -5078,7 +5078,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -5092,7 +5092,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -5106,7 +5106,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -5120,7 +5120,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -5138,7 +5138,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-P", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "P", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -5152,7 +5152,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -5166,7 +5166,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -5180,7 +5180,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -5194,7 +5194,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -5212,7 +5212,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-FCFA", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0", // Currency pattern
                 "FCFA", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -5226,7 +5226,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -5240,7 +5240,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -5254,7 +5254,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -5268,7 +5268,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -5286,7 +5286,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-€", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "€", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -5300,7 +5300,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -5314,7 +5314,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -5328,7 +5328,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -5342,7 +5342,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -5360,7 +5360,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-Nfk", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "Nfk", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -5374,7 +5374,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -5388,7 +5388,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -5402,7 +5402,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -5416,7 +5416,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -5434,7 +5434,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-US$", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "US$", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -5448,7 +5448,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -5462,7 +5462,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -5476,7 +5476,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -5490,7 +5490,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -5508,7 +5508,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-D", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "D", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -5522,7 +5522,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -5536,7 +5536,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -5550,7 +5550,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -5564,7 +5564,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -5582,7 +5582,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-HK$", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "HK$", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -5596,7 +5596,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -5610,7 +5610,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -5624,7 +5624,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -5638,7 +5638,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -5656,7 +5656,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-₪", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "₪", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -5670,7 +5670,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -5684,7 +5684,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -5698,7 +5698,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -5712,7 +5712,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -5730,7 +5730,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-Rs. ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "Rs. ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -5744,7 +5744,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -5758,7 +5758,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -5772,7 +5772,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -5786,7 +5786,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -5804,7 +5804,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-LSL", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "LSL", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -5818,7 +5818,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -5832,7 +5832,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -5846,7 +5846,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -5860,7 +5860,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -5878,7 +5878,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-Ar", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "Ar", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -5892,7 +5892,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -5906,7 +5906,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -5920,7 +5920,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -5934,7 +5934,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -5952,7 +5952,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-MOP$", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "MOP$", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -5966,7 +5966,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -5980,7 +5980,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -5994,7 +5994,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -6008,7 +6008,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -6026,7 +6026,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-Rs", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "Rs", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -6040,7 +6040,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -6054,7 +6054,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -6068,7 +6068,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -6082,7 +6082,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -6100,7 +6100,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-MK", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "MK", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -6114,7 +6114,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -6128,7 +6128,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -6142,7 +6142,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -6156,7 +6156,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -6174,7 +6174,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-RM", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "RM", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -6188,7 +6188,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -6202,7 +6202,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -6216,7 +6216,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -6230,7 +6230,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -6248,7 +6248,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-₦", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "₦", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -6262,7 +6262,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -6276,7 +6276,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -6290,7 +6290,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -6304,7 +6304,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -6322,7 +6322,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "€ -", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00;¤ -#,##0.00", // Currency pattern
                 "€ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -6336,7 +6336,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -6350,7 +6350,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -6364,7 +6364,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -6378,7 +6378,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -6396,7 +6396,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-₱", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "₱", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -6410,7 +6410,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -6424,7 +6424,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -6438,7 +6438,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -6452,7 +6452,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -6470,7 +6470,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-RF", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0", // Currency pattern
                 "RF", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -6484,7 +6484,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -6498,7 +6498,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -6512,7 +6512,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -6526,7 +6526,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -6544,7 +6544,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-SR", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "SR", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -6558,7 +6558,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -6572,7 +6572,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -6586,7 +6586,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -6600,7 +6600,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -6618,7 +6618,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-SDG", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "SDG", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -6632,7 +6632,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -6646,7 +6646,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -6660,7 +6660,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -6674,7 +6674,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -6692,7 +6692,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " kr", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " kr", // Currency positiveSuffix
@@ -6706,7 +6706,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -6720,7 +6720,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -6734,7 +6734,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -6748,7 +6748,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -6766,7 +6766,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-Le", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "Le", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -6780,7 +6780,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -6794,7 +6794,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -6808,7 +6808,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -6822,7 +6822,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -6840,7 +6840,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-NAf.", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "NAf.", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -6854,7 +6854,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -6868,7 +6868,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -6882,7 +6882,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -6896,7 +6896,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -6914,7 +6914,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-E", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "E", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -6928,7 +6928,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -6942,7 +6942,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -6956,7 +6956,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -6970,7 +6970,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -6988,7 +6988,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-T$", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "T$", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -7002,7 +7002,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -7016,7 +7016,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -7030,7 +7030,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -7044,7 +7044,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -7062,7 +7062,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-TSh", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "TSh", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -7076,7 +7076,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -7090,7 +7090,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -7104,7 +7104,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -7118,7 +7118,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -7136,7 +7136,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-$ ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #0.00", // Currency pattern
                 "$ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -7150,7 +7150,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#0.######", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -7164,7 +7164,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -7178,7 +7178,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#0.######", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -7192,7 +7192,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -7210,7 +7210,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-VT", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0", // Currency pattern
                 "VT", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -7224,7 +7224,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -7238,7 +7238,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -7252,7 +7252,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -7266,7 +7266,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -7284,7 +7284,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-WS$", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "WS$", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -7298,7 +7298,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -7312,7 +7312,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -7326,7 +7326,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -7340,7 +7340,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -7358,7 +7358,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-ZWL", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "ZWL", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -7372,7 +7372,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -7386,7 +7386,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -7400,7 +7400,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -7414,7 +7414,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -7432,7 +7432,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-$ ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "$ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -7446,7 +7446,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -7460,7 +7460,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -7474,7 +7474,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -7488,7 +7488,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -7506,7 +7506,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-Bs", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "Bs", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -7520,7 +7520,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -7534,7 +7534,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -7548,7 +7548,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -7562,7 +7562,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -7580,7 +7580,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-R$", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "R$", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -7594,7 +7594,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -7608,7 +7608,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -7622,7 +7622,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -7636,7 +7636,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -7654,7 +7654,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "$-", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0;¤-#,##0", // Currency pattern
                 "$", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -7668,7 +7668,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -7682,7 +7682,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -7696,7 +7696,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -7710,7 +7710,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -7728,7 +7728,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-$ ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "$ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -7742,7 +7742,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -7756,7 +7756,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -7770,7 +7770,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -7784,7 +7784,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -7802,7 +7802,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-₡", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "₡", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -7816,7 +7816,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -7830,7 +7830,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -7844,7 +7844,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -7858,7 +7858,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -7876,7 +7876,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-$", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "$", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -7890,7 +7890,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -7904,7 +7904,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -7918,7 +7918,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -7932,7 +7932,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -7950,7 +7950,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-RD$", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "RD$", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -7964,7 +7964,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -7978,7 +7978,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -7992,7 +7992,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -8006,7 +8006,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -8024,7 +8024,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "$-", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00;¤-#,##0.00", // Currency pattern
                 "$", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -8038,7 +8038,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -8052,7 +8052,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -8066,7 +8066,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -8080,7 +8080,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -8098,7 +8098,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-FCFA", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0", // Currency pattern
                 "FCFA", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -8112,7 +8112,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -8126,7 +8126,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -8140,7 +8140,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -8154,7 +8154,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -8172,7 +8172,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-Q", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "Q", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -8186,7 +8186,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -8200,7 +8200,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -8214,7 +8214,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -8228,7 +8228,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -8246,7 +8246,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-L", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "L", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -8260,7 +8260,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -8274,7 +8274,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -8288,7 +8288,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -8302,7 +8302,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -8320,7 +8320,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-C$", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "C$", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -8334,7 +8334,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -8348,7 +8348,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -8362,7 +8362,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -8376,7 +8376,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -8394,7 +8394,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-B/.", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "B/.", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -8408,7 +8408,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -8422,7 +8422,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -8436,7 +8436,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -8450,7 +8450,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -8468,7 +8468,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-S/.", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "S/.", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -8482,7 +8482,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -8496,7 +8496,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -8510,7 +8510,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -8524,7 +8524,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -8542,7 +8542,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " ₱", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " ₱", // Currency positiveSuffix
@@ -8556,7 +8556,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -8570,7 +8570,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -8584,7 +8584,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -8598,7 +8598,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -8616,7 +8616,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "Gs. -", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0;¤ -#,##0", // Currency pattern
                 "Gs. ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -8630,7 +8630,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -8644,7 +8644,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -8658,7 +8658,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -8672,7 +8672,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -8690,7 +8690,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-C", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "C", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -8704,7 +8704,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -8718,7 +8718,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -8732,7 +8732,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -8746,7 +8746,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -8764,7 +8764,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "Bs.-", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00;¤-#,##0.00", // Currency pattern
                 "Bs.", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -8778,7 +8778,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -8792,7 +8792,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -8806,7 +8806,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -8820,7 +8820,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -8838,7 +8838,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "−", // Currency negativePrefix
                 " ¤", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " ¤", // Currency positiveSuffix
@@ -8852,7 +8852,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "−", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -8866,7 +8866,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "−", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -8880,7 +8880,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "−", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -8894,7 +8894,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "−", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -8912,7 +8912,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "−", // Currency negativePrefix
                 " €", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " €", // Currency positiveSuffix
@@ -8926,7 +8926,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "−", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -8940,7 +8940,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "−", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -8954,7 +8954,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "−", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -8968,7 +8968,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "−", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -8986,7 +8986,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " ¤", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " ¤", // Currency positiveSuffix
@@ -9000,7 +9000,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -9014,7 +9014,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -9028,7 +9028,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -9042,7 +9042,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-% ", // Percent negativePrefix
                 "", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "% #,##0", // Percent pattern
                 "% ", // Percent positivePrefix
                 "", // Percent positiveSuffix
@@ -9060,7 +9060,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " €", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " €", // Currency positiveSuffix
@@ -9074,7 +9074,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -9088,7 +9088,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -9102,7 +9102,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -9116,7 +9116,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-% ", // Percent negativePrefix
                 "", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "% #,##0", // Percent pattern
                 "% ", // Percent positivePrefix
                 "", // Percent positiveSuffix
@@ -9134,7 +9134,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " FCFA", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " FCFA", // Currency positiveSuffix
@@ -9148,7 +9148,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -9162,7 +9162,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -9176,7 +9176,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -9190,7 +9190,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -9208,7 +9208,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "‎‎¤", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "‎¤#,##0.00", // Currency pattern
                 "‎¤", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -9222,7 +9222,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "‎", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -9236,7 +9236,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "‎", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -9250,7 +9250,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "‎", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -9264,7 +9264,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "‎", // Percent negativePrefix
                 "٪", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "٪", // Percent positiveSuffix
@@ -9282,7 +9282,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "‎‎؋", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "‎¤#,##0.00", // Currency pattern
                 "‎؋", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -9296,7 +9296,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "‎", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -9310,7 +9310,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "‎", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -9324,7 +9324,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "‎", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -9338,7 +9338,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "‎", // Percent negativePrefix
                 "٪", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "٪", // Percent positiveSuffix
@@ -9356,7 +9356,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "‎‎ریال", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "‎¤#,##0.00", // Currency pattern
                 "‎ریال", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -9370,7 +9370,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "‎", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -9384,7 +9384,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "‎", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -9398,7 +9398,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "‎", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -9412,7 +9412,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "‎", // Percent negativePrefix
                 "٪", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "٪", // Percent positiveSuffix
@@ -9430,7 +9430,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " FG", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " FG", // Currency positiveSuffix
@@ -9444,7 +9444,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -9458,7 +9458,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -9472,7 +9472,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -9486,7 +9486,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -9504,7 +9504,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " UM", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " UM", // Currency positiveSuffix
@@ -9518,7 +9518,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -9532,7 +9532,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -9546,7 +9546,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -9560,7 +9560,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -9578,7 +9578,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "−", // Currency negativePrefix
                 " ¤", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " ¤", // Currency positiveSuffix
@@ -9592,7 +9592,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "−", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -9606,7 +9606,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "−", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -9620,7 +9620,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "−", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -9634,7 +9634,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "−", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -9652,7 +9652,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "−", // Currency negativePrefix
                 " €", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " €", // Currency positiveSuffix
@@ -9666,7 +9666,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "−", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -9680,7 +9680,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "−", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -9694,7 +9694,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "−", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -9708,7 +9708,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "−", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -9726,7 +9726,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "−", // Currency negativePrefix
                 " kr.", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " kr.", // Currency positiveSuffix
@@ -9740,7 +9740,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "−", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -9754,7 +9754,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "−", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -9768,7 +9768,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "−", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -9782,7 +9782,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "−", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -9800,7 +9800,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "−", // Currency negativePrefix
                 " kr", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " kr", // Currency positiveSuffix
@@ -9814,7 +9814,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "−", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -9828,7 +9828,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "−", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -9842,7 +9842,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "−", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -9856,7 +9856,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "−", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -9874,7 +9874,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " CFA", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " CFA", // Currency positiveSuffix
@@ -9888,7 +9888,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -9902,7 +9902,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -9916,7 +9916,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -9930,7 +9930,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -9948,7 +9948,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " FBu", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " FBu", // Currency positiveSuffix
@@ -9962,7 +9962,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -9976,7 +9976,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -9990,7 +9990,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -10004,7 +10004,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -10022,7 +10022,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " $", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " $", // Currency positiveSuffix
@@ -10036,7 +10036,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -10050,7 +10050,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -10064,7 +10064,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -10078,7 +10078,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -10096,7 +10096,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " FC", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " FC", // Currency positiveSuffix
@@ -10110,7 +10110,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -10124,7 +10124,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -10138,7 +10138,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -10152,7 +10152,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -10170,7 +10170,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "SFr.-", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00;¤-#,##0.00", // Currency pattern
                 "SFr. ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -10184,7 +10184,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -10198,7 +10198,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -10212,7 +10212,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -10226,7 +10226,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -10244,7 +10244,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " Fdj", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " Fdj", // Currency positiveSuffix
@@ -10258,7 +10258,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -10272,7 +10272,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -10286,7 +10286,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -10300,7 +10300,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -10318,7 +10318,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " DA", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " DA", // Currency positiveSuffix
@@ -10332,7 +10332,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -10346,7 +10346,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -10360,7 +10360,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -10374,7 +10374,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -10392,7 +10392,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " FG", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " FG", // Currency positiveSuffix
@@ -10406,7 +10406,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -10420,7 +10420,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -10434,7 +10434,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -10448,7 +10448,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -10466,7 +10466,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " G", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " G", // Currency positiveSuffix
@@ -10480,7 +10480,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -10494,7 +10494,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -10508,7 +10508,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -10522,7 +10522,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -10540,7 +10540,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " CF", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " CF", // Currency positiveSuffix
@@ -10554,7 +10554,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -10568,7 +10568,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -10582,7 +10582,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -10596,7 +10596,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -10614,7 +10614,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " MAD", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " MAD", // Currency positiveSuffix
@@ -10628,7 +10628,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -10642,7 +10642,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -10656,7 +10656,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -10670,7 +10670,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -10688,7 +10688,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " Ar", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " Ar", // Currency positiveSuffix
@@ -10702,7 +10702,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -10716,7 +10716,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -10730,7 +10730,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -10744,7 +10744,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -10762,7 +10762,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " UM", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " UM", // Currency positiveSuffix
@@ -10776,7 +10776,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -10790,7 +10790,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -10804,7 +10804,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -10818,7 +10818,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -10836,7 +10836,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " Rs", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " Rs", // Currency positiveSuffix
@@ -10850,7 +10850,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -10864,7 +10864,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -10878,7 +10878,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -10892,7 +10892,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -10910,7 +10910,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " FCFP", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " FCFP", // Currency positiveSuffix
@@ -10924,7 +10924,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -10938,7 +10938,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -10952,7 +10952,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -10966,7 +10966,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -10984,7 +10984,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " RF", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " RF", // Currency positiveSuffix
@@ -10998,7 +10998,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -11012,7 +11012,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -11026,7 +11026,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -11040,7 +11040,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -11058,7 +11058,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " SR", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " SR", // Currency positiveSuffix
@@ -11072,7 +11072,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -11086,7 +11086,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -11100,7 +11100,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -11114,7 +11114,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -11132,7 +11132,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " LS", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " LS", // Currency positiveSuffix
@@ -11146,7 +11146,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -11160,7 +11160,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -11174,7 +11174,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -11188,7 +11188,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -11206,7 +11206,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " DT", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.000 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " DT", // Currency positiveSuffix
@@ -11220,7 +11220,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -11234,7 +11234,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -11248,7 +11248,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -11262,7 +11262,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -11280,7 +11280,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " VT", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " VT", // Currency positiveSuffix
@@ -11294,7 +11294,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -11308,7 +11308,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -11322,7 +11322,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -11336,7 +11336,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -11354,7 +11354,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-€ ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "€ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -11368,7 +11368,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -11382,7 +11382,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -11396,7 +11396,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -11410,7 +11410,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -11428,7 +11428,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "¤ ", // Currency negativePrefix
                 "-", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00;¤ #,##0.00-", // Currency pattern
                 "¤ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -11442,7 +11442,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -11456,7 +11456,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -11470,7 +11470,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -11484,7 +11484,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -11502,7 +11502,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "€ ", // Currency negativePrefix
                 "-", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00;¤ #,##0.00-", // Currency pattern
                 "€ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -11516,7 +11516,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -11530,7 +11530,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -11544,7 +11544,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -11558,7 +11558,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -11576,7 +11576,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "−", // Currency negativePrefix
                 " CHF", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " CHF", // Currency positiveSuffix
@@ -11590,7 +11590,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "−", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -11604,7 +11604,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "−", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -11618,7 +11618,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "−", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -11632,7 +11632,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "−", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -11650,7 +11650,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-₹", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "₹", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -11664,7 +11664,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -11678,7 +11678,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -11692,7 +11692,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -11706,7 +11706,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -11724,7 +11724,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-GH₵ ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "GH₵ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -11738,7 +11738,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -11752,7 +11752,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -11766,7 +11766,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -11780,7 +11780,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -11798,7 +11798,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-CFA ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0", // Currency pattern
                 "CFA ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -11812,7 +11812,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -11826,7 +11826,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -11840,7 +11840,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -11854,7 +11854,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -11872,7 +11872,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-₦ ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "₦ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -11886,7 +11886,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -11900,7 +11900,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -11914,7 +11914,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -11928,7 +11928,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -11946,7 +11946,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "‎", // Currency negativePrefix
                 " ¤", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " ¤", // Currency positiveSuffix
@@ -11960,7 +11960,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "‎", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -11974,7 +11974,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "‎", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -11988,7 +11988,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "‎", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -12002,7 +12002,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "‎", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -12020,7 +12020,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "‎", // Currency negativePrefix
                 " ₪", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " ₪", // Currency positiveSuffix
@@ -12034,7 +12034,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "‎", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -12048,7 +12048,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "‎", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -12062,7 +12062,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "‎", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -12076,7 +12076,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "‎", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -12094,7 +12094,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " HRK", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " HRK", // Currency positiveSuffix
@@ -12108,7 +12108,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -12122,7 +12122,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -12136,7 +12136,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -12150,7 +12150,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -12168,7 +12168,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " Ft", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " Ft", // Currency positiveSuffix
@@ -12182,7 +12182,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -12196,7 +12196,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -12210,7 +12210,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -12224,7 +12224,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -12242,7 +12242,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-¤ ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "¤ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -12256,7 +12256,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -12270,7 +12270,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -12284,7 +12284,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -12298,7 +12298,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -12316,7 +12316,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-֏ ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "֏ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -12330,7 +12330,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -12344,7 +12344,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -12358,7 +12358,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -12372,7 +12372,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -12390,7 +12390,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-Rp", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "Rp", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -12404,7 +12404,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -12418,7 +12418,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -12432,7 +12432,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -12446,7 +12446,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -12464,7 +12464,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " ISK", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " ISK", // Currency positiveSuffix
@@ -12478,7 +12478,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -12492,7 +12492,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -12506,7 +12506,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -12520,7 +12520,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -12538,7 +12538,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-￥", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0", // Currency pattern
                 "￥", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -12552,7 +12552,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -12566,7 +12566,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -12580,7 +12580,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -12594,7 +12594,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -12612,7 +12612,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-FCFA ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0", // Currency pattern
                 "FCFA ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -12626,7 +12626,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -12640,7 +12640,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -12654,7 +12654,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -12668,7 +12668,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -12686,7 +12686,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " ₾", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " ₾", // Currency positiveSuffix
@@ -12700,7 +12700,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -12714,7 +12714,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -12728,7 +12728,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -12742,7 +12742,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -12760,7 +12760,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 "DA", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00¤", // Currency pattern
                 "", // Currency positivePrefix
                 "DA", // Currency positiveSuffix
@@ -12774,7 +12774,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -12788,7 +12788,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -12802,7 +12802,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -12816,7 +12816,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -12834,7 +12834,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " ​", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " ​", // Currency positiveSuffix
@@ -12848,7 +12848,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -12862,7 +12862,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -12876,7 +12876,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -12890,7 +12890,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -12908,7 +12908,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " ₸", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " ₸", // Currency positiveSuffix
@@ -12922,7 +12922,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -12936,7 +12936,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -12950,7 +12950,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -12964,7 +12964,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -12982,7 +12982,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "¤-", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00;¤-#,##0.00", // Currency pattern
                 "¤", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -12996,7 +12996,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -13010,7 +13010,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -13024,7 +13024,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -13038,7 +13038,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -13056,7 +13056,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "kr.-", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00;¤-#,##0.00", // Currency pattern
                 "kr.", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -13070,7 +13070,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -13084,7 +13084,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -13098,7 +13098,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -13112,7 +13112,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -13130,7 +13130,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-៛", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "៛", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -13144,7 +13144,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -13158,7 +13158,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -13172,7 +13172,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -13186,7 +13186,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -13204,7 +13204,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-KPW", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "KPW", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -13218,7 +13218,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -13232,7 +13232,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -13246,7 +13246,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -13260,7 +13260,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -13278,7 +13278,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-₩", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0", // Currency pattern
                 "₩", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -13292,7 +13292,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -13306,7 +13306,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -13320,7 +13320,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -13334,7 +13334,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -13352,7 +13352,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "‎¤ ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "¤ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -13366,7 +13366,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "‎", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -13380,7 +13380,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "‎", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -13394,7 +13394,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "‎", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -13408,7 +13408,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "‎", // Percent negativePrefix
                 "٪", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "٪", // Percent positiveSuffix
@@ -13426,7 +13426,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "‎₹ ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "₹ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -13440,7 +13440,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "‎", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -13454,7 +13454,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "‎", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -13468,7 +13468,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "‎", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -13482,7 +13482,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "‎", // Percent negativePrefix
                 "٪", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "٪", // Percent positiveSuffix
@@ -13500,7 +13500,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " сом", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " сом", // Currency positiveSuffix
@@ -13514,7 +13514,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -13528,7 +13528,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -13542,7 +13542,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -13556,7 +13556,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -13574,7 +13574,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-TSh ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "TSh ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -13588,7 +13588,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -13602,7 +13602,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -13616,7 +13616,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -13630,7 +13630,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -13648,7 +13648,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 "USh", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0¤", // Currency pattern
                 "", // Currency positivePrefix
                 "USh", // Currency positiveSuffix
@@ -13662,7 +13662,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -13676,7 +13676,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -13690,7 +13690,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -13704,7 +13704,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -13722,7 +13722,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " Kz", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " Kz", // Currency positiveSuffix
@@ -13736,7 +13736,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -13750,7 +13750,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -13764,7 +13764,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -13778,7 +13778,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -13796,7 +13796,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " FC", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " FC", // Currency positiveSuffix
@@ -13810,7 +13810,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -13824,7 +13824,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -13838,7 +13838,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -13852,7 +13852,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -13870,7 +13870,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "¤-", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00;¤-#,##0.00", // Currency pattern
                 "¤", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -13884,7 +13884,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -13898,7 +13898,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -13912,7 +13912,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -13926,7 +13926,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -13944,7 +13944,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "₭-", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00;¤-#,##0.00", // Currency pattern
                 "₭", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -13958,7 +13958,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -13972,7 +13972,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -13986,7 +13986,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -14000,7 +14000,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -14018,7 +14018,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "‎IQD ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.000", // Currency pattern
                 "IQD ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -14032,7 +14032,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "‎", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -14046,7 +14046,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "‎", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -14060,7 +14060,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "‎", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -14074,7 +14074,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "‎", // Percent negativePrefix
                 "٪", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "٪", // Percent positiveSuffix
@@ -14092,7 +14092,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "‎IRR ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "IRR ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -14106,7 +14106,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "‎", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -14120,7 +14120,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "‎", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -14134,7 +14134,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "‎", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -14148,7 +14148,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "‎", // Percent negativePrefix
                 "٪", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "٪", // Percent positiveSuffix
@@ -14166,7 +14166,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 "FC", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00¤", // Currency pattern
                 "", // Currency positivePrefix
                 "FC", // Currency positiveSuffix
@@ -14180,7 +14180,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -14194,7 +14194,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -14208,7 +14208,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -14222,7 +14222,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -14240,7 +14240,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 "Ksh", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00¤", // Currency pattern
                 "", // Currency positivePrefix
                 "Ksh", // Currency positiveSuffix
@@ -14254,7 +14254,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -14268,7 +14268,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -14282,7 +14282,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -14296,7 +14296,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -14314,7 +14314,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "¤- ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00;¤- #,##0.00", // Currency pattern
                 "¤", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -14328,7 +14328,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -14342,7 +14342,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -14356,7 +14356,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -14370,7 +14370,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -14388,7 +14388,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "Ksh- ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00;¤- #,##0.00", // Currency pattern
                 "Ksh", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -14402,7 +14402,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -14416,7 +14416,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -14430,7 +14430,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -14444,7 +14444,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -14462,7 +14462,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " ¤", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " ¤", // Currency positiveSuffix
@@ -14476,7 +14476,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -14490,7 +14490,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -14504,7 +14504,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -14518,7 +14518,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -14536,7 +14536,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " €", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " €", // Currency positiveSuffix
@@ -14550,7 +14550,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -14564,7 +14564,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -14578,7 +14578,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -14592,7 +14592,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -14610,7 +14610,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-Rs ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "Rs ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -14624,7 +14624,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -14638,7 +14638,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -14652,7 +14652,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -14666,7 +14666,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -14684,7 +14684,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-MTn ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "MTn ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -14698,7 +14698,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -14712,7 +14712,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -14726,7 +14726,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -14740,7 +14740,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -14758,7 +14758,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-ден ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "ден ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -14772,7 +14772,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -14786,7 +14786,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -14800,7 +14800,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -14814,7 +14814,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -14832,7 +14832,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-₮ ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "₮ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -14846,7 +14846,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -14860,7 +14860,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -14874,7 +14874,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -14888,7 +14888,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -14906,7 +14906,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-K ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "K ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -14920,7 +14920,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -14934,7 +14934,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -14948,7 +14948,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -14962,7 +14962,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -14980,7 +14980,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "−¤ ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "¤ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -14994,7 +14994,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "−", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -15008,7 +15008,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "−", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -15022,7 +15022,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "−", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -15036,7 +15036,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "−", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -15054,7 +15054,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "−kr ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "kr ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -15068,7 +15068,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "−", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -15082,7 +15082,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "−", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -15096,7 +15096,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "−", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -15110,7 +15110,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "−", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -15128,7 +15128,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-नेरू ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "नेरू ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -15142,7 +15142,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -15156,7 +15156,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -15170,7 +15170,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -15184,7 +15184,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -15202,7 +15202,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "¤ -", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00;¤ -#,##0.00", // Currency pattern
                 "¤ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -15216,7 +15216,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -15230,7 +15230,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -15244,7 +15244,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -15258,7 +15258,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -15276,7 +15276,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "Afl. -", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00;¤ -#,##0.00", // Currency pattern
                 "Afl. ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -15290,7 +15290,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -15304,7 +15304,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -15318,7 +15318,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -15332,7 +15332,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -15350,7 +15350,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "$ -", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00;¤ -#,##0.00", // Currency pattern
                 "$ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -15364,7 +15364,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -15378,7 +15378,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -15392,7 +15392,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -15406,7 +15406,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -15424,7 +15424,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "NAf. -", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00;¤ -#,##0.00", // Currency pattern
                 "NAf. ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -15438,7 +15438,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -15452,7 +15452,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -15466,7 +15466,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -15480,7 +15480,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -15498,7 +15498,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-Br", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "Br", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -15512,7 +15512,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -15526,7 +15526,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -15540,7 +15540,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -15554,7 +15554,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -15572,7 +15572,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-₾ ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "₾ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -15586,7 +15586,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -15600,7 +15600,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -15614,7 +15614,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -15628,7 +15628,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -15646,7 +15646,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "‎ر ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "ر ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -15660,7 +15660,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "‎", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -15674,7 +15674,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "‎", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -15688,7 +15688,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "‎", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -15702,7 +15702,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "‎", // Percent negativePrefix
                 "٪", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "٪", // Percent positiveSuffix
@@ -15720,7 +15720,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-PKR ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "PKR ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -15734,7 +15734,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -15748,7 +15748,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -15762,7 +15762,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -15776,7 +15776,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -15794,7 +15794,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " zł", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " zł", // Currency positiveSuffix
@@ -15808,7 +15808,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -15822,7 +15822,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -15836,7 +15836,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -15850,7 +15850,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -15868,7 +15868,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "‎", // Currency negativePrefix
                 " ¤", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " ¤", // Currency positiveSuffix
@@ -15882,7 +15882,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "‎", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -15896,7 +15896,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "‎", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -15910,7 +15910,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "‎", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -15924,7 +15924,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "‎", // Percent negativePrefix
                 "٪", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "٪", // Percent positiveSuffix
@@ -15942,7 +15942,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "‎", // Currency negativePrefix
                 " ؋", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " ؋", // Currency positiveSuffix
@@ -15956,7 +15956,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "‎", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -15970,7 +15970,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "‎", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -15984,7 +15984,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "‎", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -15998,7 +15998,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "‎", // Percent negativePrefix
                 "٪", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "٪", // Percent positiveSuffix
@@ -16016,7 +16016,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-R$", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "R$", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -16030,7 +16030,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -16044,7 +16044,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -16058,7 +16058,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -16072,7 +16072,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -16090,7 +16090,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " CHF", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " CHF", // Currency positiveSuffix
@@ -16104,7 +16104,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -16118,7 +16118,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -16132,7 +16132,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -16146,7 +16146,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -16164,7 +16164,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " MOP$", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " MOP$", // Currency positiveSuffix
@@ -16178,7 +16178,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -16192,7 +16192,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -16206,7 +16206,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -16220,7 +16220,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -16238,7 +16238,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " MTn", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " MTn", // Currency positiveSuffix
@@ -16252,7 +16252,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -16266,7 +16266,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -16280,7 +16280,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -16294,7 +16294,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -16312,7 +16312,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " Db", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " Db", // Currency positiveSuffix
@@ -16326,7 +16326,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -16340,7 +16340,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -16354,7 +16354,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -16368,7 +16368,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -16386,7 +16386,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " US$", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " US$", // Currency positiveSuffix
@@ -16400,7 +16400,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -16414,7 +16414,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -16428,7 +16428,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -16442,7 +16442,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -16460,7 +16460,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-¤ ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "¤ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -16474,7 +16474,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -16488,7 +16488,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -16502,7 +16502,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -16516,7 +16516,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -16534,7 +16534,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-Bs ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "Bs ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -16548,7 +16548,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -16562,7 +16562,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -16576,7 +16576,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -16590,7 +16590,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -16608,7 +16608,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-S/. ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "S/. ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -16622,7 +16622,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -16636,7 +16636,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -16650,7 +16650,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -16664,7 +16664,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -16682,7 +16682,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 "¤", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00¤", // Currency pattern
                 "", // Currency positivePrefix
                 "¤", // Currency positiveSuffix
@@ -16696,7 +16696,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -16710,7 +16710,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -16724,7 +16724,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -16738,7 +16738,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -16756,7 +16756,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 "FBu", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0¤", // Currency pattern
                 "", // Currency positivePrefix
                 "FBu", // Currency positiveSuffix
@@ -16770,7 +16770,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -16784,7 +16784,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -16798,7 +16798,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -16812,7 +16812,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -16830,7 +16830,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " L", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " L", // Currency positiveSuffix
@@ -16844,7 +16844,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -16858,7 +16858,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -16872,7 +16872,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -16886,7 +16886,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -16904,7 +16904,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " RON", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " RON", // Currency positiveSuffix
@@ -16918,7 +16918,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -16932,7 +16932,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -16946,7 +16946,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -16960,7 +16960,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -16978,7 +16978,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " BYN", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " BYN", // Currency positiveSuffix
@@ -16992,7 +16992,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -17006,7 +17006,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -17020,7 +17020,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -17034,7 +17034,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -17052,7 +17052,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " сом", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " сом", // Currency positiveSuffix
@@ -17066,7 +17066,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -17080,7 +17080,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -17094,7 +17094,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -17108,7 +17108,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -17126,7 +17126,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " ₸", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " ₸", // Currency positiveSuffix
@@ -17140,7 +17140,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -17154,7 +17154,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -17168,7 +17168,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -17182,7 +17182,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -17200,7 +17200,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " ₴", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " ₴", // Currency positiveSuffix
@@ -17214,7 +17214,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -17228,7 +17228,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -17242,7 +17242,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -17256,7 +17256,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -17274,7 +17274,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-RF ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0", // Currency pattern
                 "RF ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -17288,7 +17288,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -17302,7 +17302,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -17316,7 +17316,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -17330,7 +17330,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -17348,7 +17348,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 "MTn", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00¤", // Currency pattern
                 "", // Currency positivePrefix
                 "MTn", // Currency positiveSuffix
@@ -17362,7 +17362,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -17376,7 +17376,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -17390,7 +17390,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -17404,7 +17404,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -17422,7 +17422,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "FCFA-", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0;¤-#,##0", // Currency pattern
                 "FCFA", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -17436,7 +17436,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -17450,7 +17450,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -17464,7 +17464,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -17478,7 +17478,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -17496,7 +17496,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 "MAD", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00¤", // Currency pattern
                 "", // Currency positivePrefix
                 "MAD", // Currency positiveSuffix
@@ -17510,7 +17510,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -17524,7 +17524,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -17538,7 +17538,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -17552,7 +17552,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -17570,7 +17570,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-රු.", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "රු.", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -17584,7 +17584,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -17598,7 +17598,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -17612,7 +17612,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -17626,7 +17626,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -17644,7 +17644,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-Fdj", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0", // Currency pattern
                 "Fdj", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -17658,7 +17658,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -17672,7 +17672,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -17686,7 +17686,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -17700,7 +17700,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -17718,7 +17718,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-S", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "S", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -17732,7 +17732,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -17746,7 +17746,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -17760,7 +17760,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -17774,7 +17774,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -17792,7 +17792,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " Lekë", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " Lekë", // Currency positiveSuffix
@@ -17806,7 +17806,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -17820,7 +17820,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -17834,7 +17834,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -17848,7 +17848,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -17866,7 +17866,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " den", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " den", // Currency positiveSuffix
@@ -17880,7 +17880,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -17894,7 +17894,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -17908,7 +17908,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -17922,7 +17922,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -17940,7 +17940,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-КМ. ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "КМ. ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -17954,7 +17954,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -17968,7 +17968,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -17982,7 +17982,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -17996,7 +17996,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -18014,7 +18014,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-CSD ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "CSD ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -18028,7 +18028,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -18042,7 +18042,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -18056,7 +18056,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -18070,7 +18070,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -18088,7 +18088,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " КМ.", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " КМ.", // Currency positiveSuffix
@@ -18102,7 +18102,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -18116,7 +18116,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -18130,7 +18130,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -18144,7 +18144,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -18162,7 +18162,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " RSD", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " RSD", // Currency positiveSuffix
@@ -18176,7 +18176,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -18190,7 +18190,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -18204,7 +18204,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -18218,7 +18218,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -18236,7 +18236,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " din.", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " din.", // Currency positiveSuffix
@@ -18250,7 +18250,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -18264,7 +18264,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -18278,7 +18278,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -18292,7 +18292,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -18310,7 +18310,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-€ ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "€ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -18324,7 +18324,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -18338,7 +18338,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -18352,7 +18352,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -18366,7 +18366,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -18384,7 +18384,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-FC", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "FC", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -18398,7 +18398,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -18412,7 +18412,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -18426,7 +18426,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -18440,7 +18440,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -18458,7 +18458,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-RM ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "RM ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -18472,7 +18472,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -18486,7 +18486,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -18500,7 +18500,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -18514,7 +18514,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -18532,7 +18532,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-THB", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "THB", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -18546,7 +18546,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -18560,7 +18560,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -18574,7 +18574,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -18588,7 +18588,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -18606,7 +18606,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " TMT", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " TMT", // Currency positiveSuffix
@@ -18620,7 +18620,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -18634,7 +18634,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -18648,7 +18648,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -18662,7 +18662,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
@@ -18680,7 +18680,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-T$ ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "T$ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -18694,7 +18694,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -18708,7 +18708,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -18722,7 +18722,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -18736,7 +18736,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -18754,7 +18754,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " ¤", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " ¤", // Currency positiveSuffix
@@ -18768,7 +18768,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -18782,7 +18782,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -18796,7 +18796,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -18810,7 +18810,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-%", // Percent negativePrefix
                 "", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "%#,##0", // Percent pattern
                 "%", // Percent positivePrefix
                 "", // Percent positiveSuffix
@@ -18828,7 +18828,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " €", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " €", // Currency positiveSuffix
@@ -18842,7 +18842,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -18856,7 +18856,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -18870,7 +18870,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -18884,7 +18884,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-%", // Percent negativePrefix
                 "", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "%#,##0", // Percent pattern
                 "%", // Percent positivePrefix
                 "", // Percent positiveSuffix
@@ -18902,7 +18902,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " ₺", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " ₺", // Currency positiveSuffix
@@ -18916,7 +18916,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -18930,7 +18930,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -18944,7 +18944,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -18958,7 +18958,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-%", // Percent negativePrefix
                 "", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "%#,##0", // Percent pattern
                 "%", // Percent positivePrefix
                 "", // Percent positiveSuffix
@@ -18976,7 +18976,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " MAD", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " MAD", // Currency positiveSuffix
@@ -18990,7 +18990,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -19004,7 +19004,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -19018,7 +19018,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -19032,7 +19032,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -19050,7 +19050,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-￥", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤#,##0.00", // Currency pattern
                 "￥", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -19064,7 +19064,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -19078,7 +19078,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -19092,7 +19092,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -19106,7 +19106,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -19124,7 +19124,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " ₴", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " ₴", // Currency positiveSuffix
@@ -19138,7 +19138,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -19152,7 +19152,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -19166,7 +19166,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -19180,7 +19180,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -19198,7 +19198,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "‎¤ ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "¤ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -19212,7 +19212,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "‎", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -19226,7 +19226,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "‎", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -19240,7 +19240,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "‎", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -19254,7 +19254,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "‎", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -19272,7 +19272,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "‎₹ ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "₹ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -19286,7 +19286,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "‎", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -19300,7 +19300,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "‎", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -19314,7 +19314,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "‎", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -19328,7 +19328,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "‎", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -19346,7 +19346,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "‎Rs ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "Rs ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -19360,7 +19360,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "‎", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -19374,7 +19374,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "‎", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -19388,7 +19388,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "‎", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -19402,7 +19402,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "‎", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -19420,7 +19420,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " AFN", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " AFN", // Currency positiveSuffix
@@ -19434,7 +19434,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -19448,7 +19448,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -19462,7 +19462,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -19476,7 +19476,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -19494,7 +19494,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "‎؋ ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "؋ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -19508,7 +19508,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "‎", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -19522,7 +19522,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "‎", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -19536,7 +19536,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "‎", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -19550,7 +19550,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "‎", // Percent negativePrefix
                 "٪", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "٪", // Percent positiveSuffix
@@ -19568,7 +19568,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-¤ ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "¤ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -19582,7 +19582,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -19596,7 +19596,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -19610,7 +19610,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -19624,7 +19624,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "٪", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "٪", // Percent positiveSuffix
@@ -19642,7 +19642,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-сўм ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0.00", // Currency pattern
                 "сўм ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -19656,7 +19656,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -19670,7 +19670,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -19684,7 +19684,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -19698,7 +19698,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "٪", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "٪", // Percent positiveSuffix
@@ -19716,7 +19716,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " soʻm", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " soʻm", // Currency positiveSuffix
@@ -19730,7 +19730,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -19744,7 +19744,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -19758,7 +19758,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -19772,7 +19772,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -19790,7 +19790,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-₫ ", // Currency negativePrefix
                 "", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "¤ #,##0", // Currency pattern
                 "₫ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
@@ -19804,7 +19804,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -19818,7 +19818,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -19832,7 +19832,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -19846,7 +19846,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -19864,7 +19864,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 " USh", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0 ¤", // Currency pattern
                 "", // Currency positivePrefix
                 " USh", // Currency positiveSuffix
@@ -19878,7 +19878,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -19892,7 +19892,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -19906,7 +19906,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -19920,7 +19920,7 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 "%", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0%", // Percent pattern
                 "", // Percent positivePrefix
                 "%", // Percent positiveSuffix
@@ -19938,7 +19938,7 @@ final class DecimalFormatProvider {
                 1, // Currency multiplier
                 "-", // Currency negativePrefix
                 "MAD", // Currency negativeSuffix
-                false, // Currency parseIntegerOnly
+                0, // Currency parse
                 "#,##0.00¤", // Currency pattern
                 "", // Currency positivePrefix
                 "MAD", // Currency positiveSuffix
@@ -19952,7 +19952,7 @@ final class DecimalFormatProvider {
                 1, // Instance multiplier
                 "-", // Instance negativePrefix
                 "", // Instance negativeSuffix
-                false, // Instance parseIntegerOnly
+                0, // Instance parse
                 "#,##0.###", // Instance pattern
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
@@ -19966,7 +19966,7 @@ final class DecimalFormatProvider {
                 1, // Integer multiplier
                 "-", // Integer negativePrefix
                 "", // Integer negativeSuffix
-                true, // Integer parseIntegerOnly
+                1, // Integer parse
                 "#,##0", // Integer pattern
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
@@ -19980,7 +19980,7 @@ final class DecimalFormatProvider {
                 1, // Number multiplier
                 "-", // Number negativePrefix
                 "", // Number negativeSuffix
-                false, // Number parseIntegerOnly
+                0, // Number parse
                 "#,##0.###", // Number pattern
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
@@ -19994,11 +19994,12 @@ final class DecimalFormatProvider {
                 100, // Percent multiplier
                 "-", // Percent negativePrefix
                 " %", // Percent negativeSuffix
-                false, // Percent parseIntegerOnly
+                0, // Percent parse
                 "#,##0 %", // Percent pattern
                 "", // Percent positivePrefix
                 " %", // Percent positiveSuffix
                 RoundingMode.HALF_EVEN // Percent roundingMode
         );
+
     }
 }

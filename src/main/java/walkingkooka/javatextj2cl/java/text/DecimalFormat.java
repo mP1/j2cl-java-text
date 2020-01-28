@@ -17,8 +17,8 @@
 
 package walkingkooka.javatextj2cl.java.text;
 
+import walkingkooka.NeverError;
 import walkingkooka.ToStringBuilder;
-import walkingkooka.text.CharSequences;
 
 import java.math.RoundingMode;
 import java.util.Currency;
@@ -60,7 +60,7 @@ public class DecimalFormat extends NumberFormat {
                          final int currencyMultiplier,
                          final String currencyNegativePrefix,
                          final String currencyNegativeSuffix,
-                         final boolean currencyParseIntegerOnly,
+                         final int currencyParse,
                          final String currencyPattern,
                          final String currencyPositivePrefix,
                          final String currencyPositiveSuffix,
@@ -75,7 +75,7 @@ public class DecimalFormat extends NumberFormat {
                          final int instanceMultiplier,
                          final String instanceNegativePrefix,
                          final String instanceNegativeSuffix,
-                         final boolean instanceParseIntegerOnly,
+                         final int instanceParse,
                          final String instancePattern,
                          final String instancePositivePrefix,
                          final String instancePositiveSuffix,
@@ -90,7 +90,7 @@ public class DecimalFormat extends NumberFormat {
                          final int integerMultiplier,
                          final String integerNegativePrefix,
                          final String integerNegativeSuffix,
-                         final boolean integerParseIntegerOnly,
+                         final int integerParse,
                          final String integerPattern,
                          final String integerPositivePrefix,
                          final String integerPositiveSuffix,
@@ -105,7 +105,7 @@ public class DecimalFormat extends NumberFormat {
                          final int numberMultiplier,
                          final String numberNegativePrefix,
                          final String numberNegativeSuffix,
-                         final boolean numberParseIntegerOnly,
+                         final int numberParse,
                          final String numberPattern,
                          final String numberPositivePrefix,
                          final String numberPositiveSuffix,
@@ -120,7 +120,7 @@ public class DecimalFormat extends NumberFormat {
                          final int percentMultiplier,
                          final String percentNegativePrefix,
                          final String percentNegativeSuffix,
-                         final boolean percentParseIntegerOnly,
+                         final int percentParse,
                          final String percentPattern,
                          final String percentPositivePrefix,
                          final String percentPositiveSuffix,
@@ -147,11 +147,11 @@ public class DecimalFormat extends NumberFormat {
 
             LANGUAGE_TAG_TO_FORMATS.add(languageTag,
                     new DecimalFormat[]{
-                            new DecimalFormat(currency, currencyGroupingSize, currencyGroupingUsed, currencyMaximumFractionDigits, currencyMinimumFractionDigits, currencyMaximumIntegerDigits, currencyMinimumIntegerDigits, currencyMultiplier, currencyNegativePrefix, currencyNegativeSuffix, currencyParseIntegerOnly, currencyPattern, currencyPositivePrefix, currencyPositiveSuffix, currencyRoundingMode, symbols),
-                            new DecimalFormat(currency, instanceGroupingSize, instanceGroupingUsed, instanceMaximumFractionDigits, instanceMinimumFractionDigits, instanceMaximumIntegerDigits, instanceMinimumIntegerDigits, instanceMultiplier, instanceNegativePrefix, instanceNegativeSuffix, instanceParseIntegerOnly, instancePattern, instancePositivePrefix, instancePositiveSuffix, instanceRoundingMode, symbols),
-                            new DecimalFormat(currency, integerGroupingSize, integerGroupingUsed, integerMaximumFractionDigits, integerMinimumFractionDigits, integerMaximumIntegerDigits, integerMinimumIntegerDigits, integerMultiplier, integerNegativePrefix, integerNegativeSuffix, integerParseIntegerOnly, integerPattern, integerPositivePrefix, integerPositiveSuffix, integerRoundingMode, symbols),
-                            new DecimalFormat(currency, numberGroupingSize, numberGroupingUsed, numberMaximumFractionDigits, numberMinimumFractionDigits, numberMaximumIntegerDigits, numberMinimumIntegerDigits, numberMultiplier, numberNegativePrefix, numberNegativeSuffix, numberParseIntegerOnly, numberPattern, numberPositivePrefix, numberPositiveSuffix, numberRoundingMode, symbols),
-                            new DecimalFormat(currency, percentGroupingSize, percentGroupingUsed, percentMaximumFractionDigits, percentMinimumFractionDigits, percentMaximumIntegerDigits, percentMinimumIntegerDigits, percentMultiplier, percentNegativePrefix, percentNegativeSuffix, percentParseIntegerOnly, percentPattern, percentPositivePrefix, percentPositiveSuffix, percentRoundingMode, symbols),
+                            new DecimalFormat(currency, currencyGroupingSize, currencyGroupingUsed, currencyMaximumFractionDigits, currencyMinimumFractionDigits, currencyMaximumIntegerDigits, currencyMinimumIntegerDigits, currencyMultiplier, currencyNegativePrefix, currencyNegativeSuffix, currencyParse, currencyPattern, currencyPositivePrefix, currencyPositiveSuffix, currencyRoundingMode, symbols),
+                            new DecimalFormat(currency, instanceGroupingSize, instanceGroupingUsed, instanceMaximumFractionDigits, instanceMinimumFractionDigits, instanceMaximumIntegerDigits, instanceMinimumIntegerDigits, instanceMultiplier, instanceNegativePrefix, instanceNegativeSuffix, instanceParse, instancePattern, instancePositivePrefix, instancePositiveSuffix, instanceRoundingMode, symbols),
+                            new DecimalFormat(currency, integerGroupingSize, integerGroupingUsed, integerMaximumFractionDigits, integerMinimumFractionDigits, integerMaximumIntegerDigits, integerMinimumIntegerDigits, integerMultiplier, integerNegativePrefix, integerNegativeSuffix, integerParse, integerPattern, integerPositivePrefix, integerPositiveSuffix, integerRoundingMode, symbols),
+                            new DecimalFormat(currency, numberGroupingSize, numberGroupingUsed, numberMaximumFractionDigits, numberMinimumFractionDigits, numberMaximumIntegerDigits, numberMinimumIntegerDigits, numberMultiplier, numberNegativePrefix, numberNegativeSuffix, numberParse, numberPattern, numberPositivePrefix, numberPositiveSuffix, numberRoundingMode, symbols),
+                            new DecimalFormat(currency, percentGroupingSize, percentGroupingUsed, percentMaximumFractionDigits, percentMinimumFractionDigits, percentMaximumIntegerDigits, percentMinimumIntegerDigits, percentMultiplier, percentNegativePrefix, percentNegativeSuffix, percentParse, percentPattern, percentPositivePrefix, percentPositiveSuffix, percentRoundingMode, symbols),
                     });
 
             // TODO symbols.setCurrency();
@@ -185,7 +185,7 @@ public class DecimalFormat extends NumberFormat {
                           final int multiplier,
                           final String negativePrefix,
                           final String negativeSuffix,
-                          final boolean parseIntegerOnly,
+                          final int parse,
                           final String pattern,
                           final String positivePrefix,
                           final String positiveSuffix,
@@ -207,7 +207,25 @@ public class DecimalFormat extends NumberFormat {
         this.negativePrefix = negativePrefix;
         this.negativeSuffix = negativeSuffix;
 
-        this.parseIntegerOnly = parseIntegerOnly;
+        switch (parse) {
+            case PARSE_NONE:
+                this.parseBigDecimal = false;
+                this.parseIntegerOnly = false;
+                break;
+            case PARSE_INTEGER_ONLY:
+                this.parseBigDecimal = false;
+                this.parseIntegerOnly = true;
+                break;
+            case PARSE_BIG_DECIMAL:
+                this.parseBigDecimal = true;
+                this.parseIntegerOnly = false;
+                break;
+            default:
+                NeverError.unhandledCase(parse, PARSE_NONE, PARSE_INTEGER_ONLY, PARSE_BIG_DECIMAL);
+                this.parseBigDecimal = false;
+                this.parseIntegerOnly = false;
+                break;
+        }
 
         this.positivePrefix = positivePrefix;
         this.positiveSuffix = positiveSuffix;
@@ -217,6 +235,12 @@ public class DecimalFormat extends NumberFormat {
 
         this.applyPattern(pattern);
     }
+
+    // constants used by parse.
+
+    final static int PARSE_NONE = 0;
+    final static int PARSE_INTEGER_ONLY = 1;
+    final static int PARSE_BIG_DECIMAL = 2;
 
     /**
      * Constructs a new {@code DecimalFormat} for formatting and parsing numbers
@@ -296,6 +320,7 @@ public class DecimalFormat extends NumberFormat {
         this.negativePrefix = copy.negativePrefix;
         this.negativeSuffix = copy.negativeSuffix;
 
+        this.parseBigDecimal = copy.parseBigDecimal;
         this.parseIntegerOnly = copy.parseIntegerOnly;
 
         this.positivePrefix = copy.positivePrefix;
@@ -349,10 +374,6 @@ public class DecimalFormat extends NumberFormat {
     @Override
     public Number parse(final String source,
                         final ParsePosition position) {
-        throw new UnsupportedOperationException();
-    }
-
-    public boolean isParseBigDecimal() {
         throw new UnsupportedOperationException();
     }
 
@@ -416,6 +437,20 @@ public class DecimalFormat extends NumberFormat {
     }
 
     private String negativeSuffix;
+
+    // parseBigDecimal...................................................................................................
+
+    public boolean isParseBigDecimal() {
+        return this.parseBigDecimal;
+    }
+
+    public void setParseBigDecimal(final boolean parseBigDecimal) {
+        this.parseBigDecimal = parseBigDecimal;
+
+        // tests show parseIntegerOnly is not modified.
+    }
+
+    private boolean parseBigDecimal;
 
     // PositivePrefix.....................................................................................................
 
@@ -499,6 +534,7 @@ public class DecimalFormat extends NumberFormat {
                 this.multiplier,
                 this.negativePrefix,
                 this.negativeSuffix,
+                this.parseBigDecimal,
                 this.pattern,
                 this.positivePrefix,
                 this.positiveSuffix,
@@ -527,6 +563,7 @@ public class DecimalFormat extends NumberFormat {
                 this.multiplier == other.multiplier &&
                 this.negativePrefix.equals(other.negativePrefix) &&
                 this.negativeSuffix.equals(other.negativeSuffix) &&
+                this.parseBigDecimal == other.parseBigDecimal &&
                 this.parseIntegerOnly == other.parseIntegerOnly &&
                 this.pattern.equals(other.pattern) &&
                 this.positivePrefix.equals(other.positivePrefix) &&
@@ -548,6 +585,7 @@ public class DecimalFormat extends NumberFormat {
                 .label("multiplier").value(this.multiplier)
                 .label("negativePrefix").value(this.negativePrefix)
                 .label("negativeSuffix").value(this.negativeSuffix)
+                .label("parseBigDecimalOnly").value(this.parseBigDecimal)
                 .label("parseIntegerOnly").value(this.parseIntegerOnly)
                 .label("pattern").value(this.pattern)
                 .label("positivePrefix").value(this.positivePrefix)

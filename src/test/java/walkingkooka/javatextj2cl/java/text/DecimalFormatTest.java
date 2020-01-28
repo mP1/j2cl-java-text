@@ -670,6 +670,101 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> {
         assertEquals(jdk.getNegativeSuffix(), emul.getNegativeSuffix(), () -> "negativeSuffix");
     }
 
+    // parseBigDecimal, parseIntegerOnly................................................................................
+
+    @Test
+    public void testSetParseBigDecimalTrue() {
+        this.setParseBigDecimalAndCheck(true);
+    }
+
+    @Test
+    public void testSetBigIntegerTrueBigDecimalTrue() {
+        this.setParseBigDecimalAndCheck(true, true);
+    }
+
+    @Test
+    public void testSetBigIntegerFalseBigDecimalFalse() {
+        this.setParseBigDecimalAndCheck(false, true);
+    }
+
+    private void setParseBigDecimalAndCheck(final boolean integerOnly,
+                                            final boolean bigDecimal) {
+        final java.text.DecimalFormat jdk = new java.text.DecimalFormat("#");
+        jdk.setParseIntegerOnly(integerOnly);
+        jdk.setParseBigDecimal(bigDecimal);
+
+        final DecimalFormat emul = new DecimalFormat("#");
+        emul.setParseIntegerOnly(integerOnly);
+        emul.setParseBigDecimal(bigDecimal);
+
+        this.checkParseBigDecimalParseIntegerOnly(jdk, emul);
+    }
+
+    @Test
+    public void testSetParseBigDecimalFalse() {
+        this.setParseBigDecimalAndCheck(true);
+    }
+
+    private void setParseBigDecimalAndCheck(final boolean bigDecimal) {
+        final java.text.DecimalFormat jdk = new java.text.DecimalFormat("#");
+        jdk.setParseBigDecimal(bigDecimal);
+
+        final DecimalFormat emul = new DecimalFormat("#");
+        emul.setParseBigDecimal(bigDecimal);
+
+        this.checkParseBigDecimalParseIntegerOnly(jdk, emul);
+    }
+
+    @Test
+    public void testSetParseIntegerOnlyTrue() {
+        this.setParseIntegerOnlyAndCheck(true);
+    }
+
+    @Test
+    public void testSetBigIntegerTrueParseIntegerOnlyTrue() {
+        this.setParseIntegerOnlyAndCheck(true, true);
+    }
+
+    @Test
+    public void testSetBigIntegerFalseParseIntegerOnlyFalse() {
+        this.setParseIntegerOnlyAndCheck(false, true);
+    }
+
+    private void setParseIntegerOnlyAndCheck(final boolean integerOnly,
+                                             final boolean bigDecimal) {
+        final java.text.DecimalFormat jdk = new java.text.DecimalFormat("#");
+        jdk.setParseIntegerOnly(integerOnly);
+        jdk.setParseBigDecimal(bigDecimal);
+
+        final DecimalFormat emul = new DecimalFormat("#");
+        emul.setParseIntegerOnly(integerOnly);
+        emul.setParseBigDecimal(bigDecimal);
+
+        this.checkParseBigDecimalParseIntegerOnly(jdk, emul);
+    }
+
+    @Test
+    public void testSetParseIntegerOnlyFalse() {
+        this.setParseIntegerOnlyAndCheck(true);
+    }
+
+    private void setParseIntegerOnlyAndCheck(final boolean parseIntegerOnly) {
+        final java.text.DecimalFormat jdk = new java.text.DecimalFormat("#");
+        jdk.setParseIntegerOnly(parseIntegerOnly);
+
+        final DecimalFormat emul = new DecimalFormat("#");
+        emul.setParseIntegerOnly(parseIntegerOnly);
+
+        this.checkParseBigDecimalParseIntegerOnly(jdk, emul);
+    }
+
+    private void checkParseBigDecimalParseIntegerOnly(final java.text.DecimalFormat jdk,
+                                                      final DecimalFormat emul) {
+        assertEquals(jdk.isParseBigDecimal(), emul.isParseBigDecimal(), () -> "parseBigDecimal");
+        ;
+        assertEquals(jdk.isParseIntegerOnly(), emul.isParseIntegerOnly(), () -> "parseIntegerOnly");
+    }
+
     // positivePrefix.........................................................................................................
 
     @Test
@@ -774,6 +869,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> {
         assertEquals(jdk.getMultiplier(), emul.getMultiplier(), () -> "multiplier " + locale);
         assertEquals(jdk.getNegativePrefix(), emul.getNegativePrefix(), () -> "negativePrefix " + locale);
         assertEquals(jdk.getNegativeSuffix(), emul.getNegativeSuffix(), () -> "negativeSuffix " + locale);
+        assertEquals(jdk.isParseBigDecimal(), emul.isParseBigDecimal(), () -> "parseBigDecimal " + locale);
         assertEquals(jdk.isParseIntegerOnly(), emul.isParseIntegerOnly(), () -> "parseIntegerOnly " + locale);
 //        assertEquals(jdk.toPattern(), emul.toPattern(), () -> "pattern " + locale);
         assertEquals(jdk.getPositivePrefix(), emul.getPositivePrefix(), () -> "positivePrefix " + locale);

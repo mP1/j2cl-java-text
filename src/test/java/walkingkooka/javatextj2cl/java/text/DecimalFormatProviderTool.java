@@ -129,6 +129,7 @@ public final class DecimalFormatProviderTool extends LocaleProviderTool {
                 .label("multiplier").value(format.getMultiplier())
                 .label("negativePrefix").value(format.getNegativePrefix())
                 .label("negativeSuffix").value(format.getNegativeSuffix())
+                .label("parseBigDecimal").value(format.isParseBigDecimal())
                 .label("parseIntegerOnly").value(format.isParseIntegerOnly())
                 .label("pattern").value(format.toPattern())
                 .label("positivePrefix").value(format.getPositivePrefix())
@@ -140,6 +141,14 @@ public final class DecimalFormatProviderTool extends LocaleProviderTool {
     private void line(final DecimalFormat format,
                       final String type,
                       final boolean last) {
+        int parse = 0;
+        if (format.isParseIntegerOnly()) {
+            parse |= walkingkooka.javatextj2cl.java.text.DecimalFormat.PARSE_INTEGER_ONLY;
+        }
+        if (format.isParseBigDecimal()) {
+            parse |= walkingkooka.javatextj2cl.java.text.DecimalFormat.PARSE_BIG_DECIMAL;
+        }
+
         this.line(format.getGroupingSize(), type, "groupingSize");
         this.line(format.isGroupingUsed(), type, "groupingUsed");
         this.line(format.getMaximumFractionDigits(), type, "maximumFractionDigits");
@@ -149,7 +158,7 @@ public final class DecimalFormatProviderTool extends LocaleProviderTool {
         this.line(format.getMultiplier(), type, "multiplier");
         this.line(format.getNegativePrefix(), type, "negativePrefix");
         this.line(format.getNegativeSuffix(), type, "negativeSuffix");
-        this.line(format.isParseIntegerOnly(), type, "parseIntegerOnly");
+        this.line(parse, type, "parse");
         this.line(format.toPattern(), type, "pattern");
         this.line(format.getPositivePrefix(), type, "positivePrefix");
         this.line(format.getPositiveSuffix(), type, "positiveSuffix");
