@@ -31,6 +31,11 @@ final class DecimalFormatPatternComponentCurrencyInternationalSign extends Decim
         super();
     }
 
+    @Override
+    boolean isCurrency() {
+        return true;
+    }
+
     final static String LITERAL = "\u00A4\u00A4";
 
     @Override

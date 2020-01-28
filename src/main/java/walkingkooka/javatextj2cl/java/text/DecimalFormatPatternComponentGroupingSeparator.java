@@ -31,6 +31,11 @@ final class DecimalFormatPatternComponentGroupingSeparator extends DecimalFormat
         super();
     }
 
+    @Override
+    boolean isCurrency() {
+        return false;
+    }
+
     final static char LITERAL = ',';
 
     @Override

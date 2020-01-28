@@ -36,6 +36,11 @@ final class DecimalFormatPatternComponentTextLiteral extends DecimalFormatPatter
 
     private final String text;
 
+    @Override
+    boolean isCurrency() {
+        return false;
+    }
+
     // Object...........................................................................................................
 
     @Override

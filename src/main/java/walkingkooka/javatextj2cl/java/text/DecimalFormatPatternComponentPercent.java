@@ -31,6 +31,11 @@ final class DecimalFormatPatternComponentPercent extends DecimalFormatPatternCom
         super();
     }
 
+    @Override
+    boolean isCurrency() {
+        return false;
+    }
+
     final static char LITERAL = '%';
 
     @Override

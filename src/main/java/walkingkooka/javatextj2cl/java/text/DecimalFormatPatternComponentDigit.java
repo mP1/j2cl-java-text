@@ -28,6 +28,11 @@ final class DecimalFormatPatternComponentDigit extends DecimalFormatPatternCompo
         super();
     }
 
+    @Override
+    boolean isCurrency() {
+        return false;
+    }
+
     final static char LITERAL = '#';
 
     @Override

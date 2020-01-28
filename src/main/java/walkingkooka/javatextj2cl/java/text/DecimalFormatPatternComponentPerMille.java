@@ -31,6 +31,11 @@ final class DecimalFormatPatternComponentPerMille extends DecimalFormatPatternCo
         super();
     }
 
+    @Override
+    boolean isCurrency() {
+        return false;
+    }
+
     final static char LITERAL = '\u2030';
 
     @Override
