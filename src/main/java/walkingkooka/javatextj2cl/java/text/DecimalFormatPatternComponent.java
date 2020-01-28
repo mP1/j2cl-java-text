@@ -22,6 +22,10 @@ package walkingkooka.javatextj2cl.java.text;
  */
 abstract class DecimalFormatPatternComponent {
 
+    final static int PERCENT_MULTIPLIER = 100;
+
+    final static int PER_MILLE_MULTIPLIER = 1000;
+
     /**
      * {@see DecimalFormatPatternComponentDecimalSeparator}
      */
@@ -103,6 +107,11 @@ abstract class DecimalFormatPatternComponent {
      * Returns true if this symbol makes this pattern a currency format pattern.
      */
     abstract boolean isCurrency();
+
+    /**
+     * All components except for percent and permill will return 1.
+     */
+    abstract int multiplier();
 
     @Override
     public abstract String toString();

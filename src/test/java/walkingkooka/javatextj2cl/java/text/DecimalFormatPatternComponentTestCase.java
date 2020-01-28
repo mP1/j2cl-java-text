@@ -37,6 +37,13 @@ public abstract class DecimalFormatPatternComponentTestCase<C extends DecimalFor
                 () -> component.toString());
     }
 
+    final void multiplierAndCheck(final C component,
+                                  final int multipler) {
+        assertEquals(component.multiplier(),
+                multipler,
+                () -> component.toString());
+    }
+
     // ClassTesting2....................................................................................................
 
     @Override

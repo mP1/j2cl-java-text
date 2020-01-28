@@ -33,6 +33,11 @@ final class DecimalFormatPatternComponentDigitZero extends DecimalFormatPatternC
         return false;
     }
 
+    @Override
+    int multiplier() {
+        return 0;
+    }
+
     final static char LITERAL = '0';
 
     @Override
