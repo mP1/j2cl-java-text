@@ -36,6 +36,11 @@ final class DecimalFormatPatternComponentPercent extends DecimalFormatPatternCom
         return false;
     }
 
+    @Override
+    int multiplier() {
+        return PERCENT_MULTIPLIER;
+    }
+
     final static char LITERAL = '%';
 
     @Override

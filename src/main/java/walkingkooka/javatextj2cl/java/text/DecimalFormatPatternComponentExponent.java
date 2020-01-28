@@ -36,6 +36,11 @@ final class DecimalFormatPatternComponentExponent extends DecimalFormatPatternCo
         return false;
     }
 
+    @Override
+    int multiplier() {
+        return 0;
+    }
+
     final static char LITERAL = 'E';
 
     @Override

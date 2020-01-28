@@ -36,6 +36,11 @@ final class DecimalFormatPatternComponentPerMille extends DecimalFormatPatternCo
         return false;
     }
 
+    @Override
+    int multiplier() {
+        return PER_MILLE_MULTIPLIER;
+    }
+
     final static char LITERAL = '\u2030';
 
     @Override

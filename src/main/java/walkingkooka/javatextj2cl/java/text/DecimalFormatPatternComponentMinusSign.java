@@ -36,6 +36,11 @@ final class DecimalFormatPatternComponentMinusSign extends DecimalFormatPatternC
         return false;
     }
 
+    @Override
+    int multiplier() {
+        return 0;
+    }
+
     final static char LITERAL = '-';
 
     @Override

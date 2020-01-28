@@ -29,8 +29,31 @@ public abstract class DecimalFormatPatternComponentTestCase2<C extends DecimalFo
 
     @Test
     public final void testIsCurrency() throws Exception {
-        this.isCurrencyAndCheck((C) this.type().getDeclaredField("INSTANCE").get(null),
+        this.isCurrencyAndCheck(this.instance(),
                 this.type().getSimpleName().contains("Currency"));
+    }
+
+    @Test
+    public final void testMultiplier() throws Exception {
+        final int multiplier;
+
+        switch (this.type().getSimpleName()) {
+            case "DecimalFormatPatternComponentPercent":
+                multiplier = 100;
+                break;
+            case "DecimalFormatPatternComponentPerMille":
+                multiplier = 1000;
+                break;
+            default:
+                multiplier = 0;
+                break;
+        }
+
+        this.multiplierAndCheck(this.instance(), multiplier);
+    }
+
+    private C instance() throws Exception {
+        return (C) this.type().getDeclaredField("INSTANCE").get(null);
     }
 
     @Test

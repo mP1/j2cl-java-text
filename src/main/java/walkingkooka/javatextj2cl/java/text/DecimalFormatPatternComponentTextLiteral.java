@@ -41,6 +41,11 @@ final class DecimalFormatPatternComponentTextLiteral extends DecimalFormatPatter
         return false;
     }
 
+    @Override
+    int multiplier() {
+        return 0;
+    }
+
     // Object...........................................................................................................
 
     @Override
