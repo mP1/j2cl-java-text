@@ -18,6 +18,7 @@
 package walkingkooka.javatextj2cl.java.text;
 
 import org.junit.jupiter.api.Test;
+import walkingkooka.HashCodeEqualsDefinedTesting2;
 import walkingkooka.javautillocalej2cl.WalkingkookaLocale;
 
 import java.math.RoundingMode;
@@ -26,14 +27,36 @@ import java.util.Locale;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.assertNotSame;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> {
+public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> implements HashCodeEqualsDefinedTesting2<DecimalFormat> {
 
     private final static Locale EN_AU = Locale.forLanguageTag("en-AU");
     private final static Locale FR = Locale.forLanguageTag("fr");
 
     private final static String PATTERN = "0";
+
+    private final static Currency CURRENCY = Currency.getInstance("AUD");
+    private final static int GROUPING_SIZE = 10;
+
+    private final static int MAX_FRACTION = 8;
+    private final static int MIN_FRACTION = 4;
+    private final static int MAX_INTEGER = 20;
+    private final static int MIN_INTEGER = 10;
+
+    private final static int MULTPLIER = 100;
+
+    private final static String NEGATIVE_PREFIX = "NegativePrefix1";
+    private final static String NEGATIVE_SUFFIX = "NegativeSuffix2";
+
+    private final static boolean PARSE_BIG_DECIMAL = false;
+    private final static boolean PARSE_INTEGER_ONLY = false;
+
+    private final static String POSITIVE_PREFIX = "PositivePrefix1";
+    private final static String POSITIVE_SUFFIX = "PositiveSuffix2";
+
+    private final static RoundingMode ROUNDING_MODE = RoundingMode.HALF_EVEN;
 
     // NumberFormat.getCurrencyInstance(Locale) ........................................................................
 
@@ -900,6 +923,97 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> {
         assertEquals(expected.getZeroDigit(), emulated.getZeroDigit(), () -> "zeroDigit " + locale.toLanguageTag());
     }
 
+    // equals............................................................................................................
+
+    @Test
+    public void testDifferentCurrency() {
+        final DecimalFormat format = this.createObject();
+        format.setCurrency(Currency.getInstance("NZD"));
+        this.checkNotEquals(format);
+    }
+
+    @Test
+    public void testDifferentGroupingSize() {
+        final DecimalFormat format = this.createObject();
+        format.setGroupingSize(format.getGroupingSize() + 1);
+        this.checkNotEquals(format);
+    }
+
+    @Test
+    public void testDifferentMaximumFractionDigits() {
+        final DecimalFormat format = this.createObject();
+        format.setMaximumFractionDigits(format.getMaximumFractionDigits() + 1);
+        this.checkNotEquals(format);
+    }
+
+    @Test
+    public void testDifferentMinimumFractionDigits() {
+        final DecimalFormat format = this.createObject();
+        format.setMinimumFractionDigits(format.getMinimumFractionDigits() + 1);
+        this.checkNotEquals(format);
+    }
+
+    @Test
+    public void testDifferentMaximumIntegerDigits() {
+        final DecimalFormat format = this.createObject();
+        format.setMaximumIntegerDigits(format.getMaximumIntegerDigits() + 1);
+        this.checkNotEquals(format);
+    }
+
+    @Test
+    public void testDifferentMinimumIntegerDigits() {
+        final DecimalFormat format = this.createObject();
+        format.setMinimumIntegerDigits(format.getMinimumIntegerDigits() + 1);
+        this.checkNotEquals(format);
+    }
+
+    @Test
+    public void testDifferentMultiplier() {
+        final DecimalFormat format = this.createObject();
+        format.setMultiplier(format.getMultiplier() + 1);
+        this.checkNotEquals(format);
+    }
+
+    @Test
+    public void testDifferentRoundingMode() {
+        final DecimalFormat format = this.createObject();
+
+        final RoundingMode roundingMode = RoundingMode.CEILING;
+        assertNotSame(ROUNDING_MODE, roundingMode);
+
+        format.setRoundingMode(roundingMode);
+        this.checkNotEquals(format);
+    }
+
+    @Override
+    public DecimalFormat createObject() {
+        final DecimalFormat format = new DecimalFormat("#", new DecimalFormatSymbols(Locale.forLanguageTag("en-AU")));
+
+
+        format.setCurrency(CURRENCY);
+        format.setGroupingSize(GROUPING_SIZE);
+
+        format.setMinimumFractionDigits(MIN_FRACTION);
+        format.setMaximumFractionDigits(MAX_FRACTION);
+        format.setMinimumIntegerDigits(MIN_INTEGER);
+        format.setMaximumIntegerDigits(MAX_INTEGER);
+
+        format.setMultiplier(MULTPLIER);
+
+        format.setNegativePrefix(NEGATIVE_PREFIX);
+        format.setNegativeSuffix(NEGATIVE_SUFFIX);
+
+        format.setParseBigDecimal(PARSE_BIG_DECIMAL);
+        format.setParseIntegerOnly(PARSE_INTEGER_ONLY);
+
+        format.setPositivePrefix(POSITIVE_PREFIX);
+        format.setPositiveSuffix(POSITIVE_SUFFIX);
+
+        format.setRoundingMode(ROUNDING_MODE);
+        return format;
+    }
+
+    // ClassTesting.....................................................................................................
 
     @Override
     public Class<DecimalFormat> type() {
