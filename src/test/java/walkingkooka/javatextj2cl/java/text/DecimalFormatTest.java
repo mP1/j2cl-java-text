@@ -19,6 +19,7 @@ package walkingkooka.javatextj2cl.java.text;
 
 import org.junit.jupiter.api.Test;
 import walkingkooka.HashCodeEqualsDefinedTesting2;
+import walkingkooka.ToStringTesting;
 import walkingkooka.javautillocalej2cl.WalkingkookaLocale;
 
 import java.math.RoundingMode;
@@ -30,7 +31,8 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertNotSame;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> implements HashCodeEqualsDefinedTesting2<DecimalFormat> {
+public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> implements HashCodeEqualsDefinedTesting2<DecimalFormat>,
+        ToStringTesting<DecimalFormat> {
 
     private final static Locale EN_AU = Locale.forLanguageTag("en-AU");
     private final static Locale FR = Locale.forLanguageTag("fr");
@@ -1011,6 +1013,14 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
 
         format.setRoundingMode(ROUNDING_MODE);
         return format;
+    }
+
+    // String...........................................................................................................
+
+    @Test
+    public void testToString() {
+        this.toStringAndCheck(this.createObject(),
+                "currency=AUD groupingSize=10 groupingUsed=true maximumFractionDigits=8 minimumFractionDigits=4 maximumIntegerDigits=20 minimumIntegerDigits=10 multiplier=100 negativePrefix=\"NegativePrefix1\" negativeSuffix=\"NegativeSuffix2\" pattern=\"#\" positivePrefix=\"PositivePrefix1\" positiveSuffix=\"PositiveSuffix2\" roundingMode=HALF_EVEN symbols=currency=AUD currencySymbol=\"$\" decimalSeparator='.' digit='#' exponentSeparator=\"e\" groupingSeparator=',' infinity=\"∞\" internationalCurrencySymbol=\"AUD\" minusSign='-' monetaryDecimalSeparator='.' nan=\"NaN\" patternSeparator=';' percent='%' perMill='‰' zeroDigit='0'");
     }
 
     // ClassTesting.....................................................................................................
