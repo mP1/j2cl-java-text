@@ -17,6 +17,12 @@
 
 package walkingkooka.javatextj2cl.java.text;
 
+import walkingkooka.NeverError;
+import walkingkooka.collect.list.Lists;
+
+import java.util.List;
+import java.util.Objects;
+
 /**
  * Base class for all components belonging to a {@link DecimalFormat} pattern.
  */
