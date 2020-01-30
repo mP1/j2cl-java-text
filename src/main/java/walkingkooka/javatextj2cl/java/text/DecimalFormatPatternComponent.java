@@ -17,12 +17,6 @@
 
 package walkingkooka.javatextj2cl.java.text;
 
-import walkingkooka.NeverError;
-import walkingkooka.collect.list.Lists;
-
-import java.util.List;
-import java.util.Objects;
-
 /**
  * Base class for all components belonging to a {@link DecimalFormat} pattern.
  */
@@ -31,6 +25,13 @@ abstract class DecimalFormatPatternComponent {
     final static int PERCENT_MULTIPLIER = 100;
 
     final static int PER_MILLE_MULTIPLIER = 1000;
+
+    /**
+     * {@see DecimalFormatPatternComponentCurrencySeparator}
+     */
+    static DecimalFormatPatternComponent currencySeparator() {
+        return DecimalFormatPatternComponentCurrencySeparator.INSTANCE;
+    }
 
     /**
      * {@see DecimalFormatPatternComponentDecimalSeparator}
