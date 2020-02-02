@@ -41,10 +41,8 @@ final class DecimalFormatPatternComponentGroupingSeparator extends DecimalFormat
         return 0;
     }
 
-    final static char LITERAL = ',';
-
     @Override
     public String toString() {
-        return "" + LITERAL;
+        return "" + DecimalFormat.GROUPING_SEPARATOR;
     }
 }

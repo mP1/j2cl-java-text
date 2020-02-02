@@ -22,4 +22,9 @@ public final class DecimalFormatPatternComponentCurrencySignTest extends Decimal
     public Class<DecimalFormatPatternComponentCurrencySign> type() {
         return DecimalFormatPatternComponentCurrencySign.class;
     }
+
+    @Override
+    String literal() {
+        return "" + DecimalFormat.CURRENCY;
+    }
 }

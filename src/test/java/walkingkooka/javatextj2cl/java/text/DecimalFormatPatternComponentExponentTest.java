@@ -22,4 +22,9 @@ public final class DecimalFormatPatternComponentExponentTest extends DecimalForm
     public Class<DecimalFormatPatternComponentExponent> type() {
         return DecimalFormatPatternComponentExponent.class;
     }
+
+    @Override
+    String literal() {
+        return "" + DecimalFormat.EXPONENT;
+    }
 }

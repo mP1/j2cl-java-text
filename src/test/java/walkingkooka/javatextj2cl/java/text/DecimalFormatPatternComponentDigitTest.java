@@ -22,4 +22,9 @@ public final class DecimalFormatPatternComponentDigitTest extends DecimalFormatP
     public Class<DecimalFormatPatternComponentDigit> type() {
         return DecimalFormatPatternComponentDigit.class;
     }
+
+    @Override
+    String literal() {
+        return "" + DecimalFormat.DIGIT;
+    }
 }

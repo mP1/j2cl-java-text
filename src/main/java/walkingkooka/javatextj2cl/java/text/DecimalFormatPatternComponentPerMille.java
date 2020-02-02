@@ -41,10 +41,8 @@ final class DecimalFormatPatternComponentPerMille extends DecimalFormatPatternCo
         return PER_MILLE_MULTIPLIER;
     }
 
-    final static char LITERAL = '\u2030';
-
     @Override
     public String toString() {
-        return "" + LITERAL;
+        return "" + DecimalFormat.PER_MILLE;
     }
 }

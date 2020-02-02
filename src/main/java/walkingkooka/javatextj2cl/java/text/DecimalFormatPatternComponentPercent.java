@@ -41,10 +41,8 @@ final class DecimalFormatPatternComponentPercent extends DecimalFormatPatternCom
         return PERCENT_MULTIPLIER;
     }
 
-    final static char LITERAL = '%';
-
     @Override
     public String toString() {
-        return "" + LITERAL;
+        return "" + DecimalFormat.PERCENT;
     }
 }

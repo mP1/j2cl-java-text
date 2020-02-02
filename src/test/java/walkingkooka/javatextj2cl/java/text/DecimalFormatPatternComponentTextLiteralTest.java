@@ -20,8 +20,6 @@ package walkingkooka.javatextj2cl.java.text;
 import org.junit.jupiter.api.Test;
 import walkingkooka.HashCodeEqualsDefinedTesting2;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 public final class DecimalFormatPatternComponentTextLiteralTest extends DecimalFormatPatternComponentTestCase<DecimalFormatPatternComponentTextLiteral>
         implements HashCodeEqualsDefinedTesting2<DecimalFormatPatternComponentTextLiteral> {
 

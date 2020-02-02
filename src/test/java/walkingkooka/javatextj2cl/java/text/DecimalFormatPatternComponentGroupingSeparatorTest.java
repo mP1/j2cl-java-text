@@ -22,4 +22,9 @@ public final class DecimalFormatPatternComponentGroupingSeparatorTest extends De
     public Class<DecimalFormatPatternComponentGroupingSeparator> type() {
         return DecimalFormatPatternComponentGroupingSeparator.class;
     }
+
+    @Override
+    String literal() {
+        return "" + DecimalFormat.GROUPING_SEPARATOR;
+    }
 }

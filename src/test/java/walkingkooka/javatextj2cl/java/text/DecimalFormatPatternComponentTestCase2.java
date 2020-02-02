@@ -19,8 +19,6 @@ package walkingkooka.javatextj2cl.java.text;
 
 import org.junit.jupiter.api.Test;
 
-import java.lang.reflect.Field;
-
 public abstract class DecimalFormatPatternComponentTestCase2<C extends DecimalFormatPatternComponent> extends DecimalFormatPatternComponentTestCase<C> {
 
     DecimalFormatPatternComponentTestCase2() {
@@ -58,7 +56,9 @@ public abstract class DecimalFormatPatternComponentTestCase2<C extends DecimalFo
 
     @Test
     public final void testToString() throws Exception {
-        final Field c = this.type().getDeclaredField("LITERAL");
-        this.toStringAndCheck(c.get(null), this.type().getDeclaredField("INSTANCE").get(null).toString());
+        final String literal = this.literal();
+        this.toStringAndCheck(literal, this.type().getDeclaredField("INSTANCE").get(null).toString());
     }
+
+    abstract String literal();
 }

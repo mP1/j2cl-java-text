@@ -41,10 +41,8 @@ final class DecimalFormatPatternComponentExponent extends DecimalFormatPatternCo
         return 0;
     }
 
-    final static char LITERAL = 'E';
-
     @Override
     public String toString() {
-        return "" + LITERAL;
+        return "" + DecimalFormat.EXPONENT;
     }
 }
