@@ -22,6 +22,7 @@ import walkingkooka.ToStringBuilder;
 
 import java.math.RoundingMode;
 import java.util.Currency;
+import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
 
@@ -354,7 +355,7 @@ public class DecimalFormat extends NumberFormat {
     }
 
     private void copyPattern(final DecimalFormat copy) {
-        this.applyPattern(copy.pattern); // TODO copy compiled pattern form.
+        this.pattern = copy.pattern;
     }
 
     /**
@@ -365,8 +366,8 @@ public class DecimalFormat extends NumberFormat {
      * @throws IllegalArgumentException if the pattern cannot be parsed.
      */
     public void applyPattern(final String pattern) {
+        Objects.requireNonNull(pattern, "pattern");
         this.pattern = pattern;
-        // TODO compile pattern here...
     }
 
     /**
@@ -376,7 +377,7 @@ public class DecimalFormat extends NumberFormat {
      * @return the non-localized pattern.
      */
     public String toPattern() {
-        return this.pattern;
+        return this.pattern.toString();
     }
 
     private String pattern;

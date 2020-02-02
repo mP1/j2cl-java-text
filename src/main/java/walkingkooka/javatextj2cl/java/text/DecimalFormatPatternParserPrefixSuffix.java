@@ -65,12 +65,22 @@ final class DecimalFormatPatternParserPrefixSuffix extends DecimalFormatPatternP
     }
 
     @Override
-    void addComponent(final DecimalFormatPatternComponent component) {
+    boolean isFinished() {
+        return false; // never
+    }
+
+    @Override
+    void onComplete() {
+        // nop
+    }
+
+    @Override
+    void addNonNumberComponent(final DecimalFormatPatternComponent component) {
         this.components.add(component);
     }
 
     @Override
-    List<DecimalFormatPatternComponent> components() {
+    List<DecimalFormatPatternComponent> nonNumberComponents() {
         return this.components;
     }
 

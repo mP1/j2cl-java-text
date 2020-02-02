@@ -208,7 +208,7 @@ public final class DecimalFormatPatternParserPrefixSuffixTest extends DecimalFor
 
         final String pattern = parser.pattern;
         assertEquals(Lists.of(components),
-                parser.components(),
+                parser.components,
                 "components parse " + CharSequences.quoteAndEscape(pattern));
 
         assertEquals(left,
