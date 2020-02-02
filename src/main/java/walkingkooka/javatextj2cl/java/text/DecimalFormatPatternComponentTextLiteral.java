@@ -64,9 +64,38 @@ final class DecimalFormatPatternComponentTextLiteral extends DecimalFormatPatter
 
     @Override
     public String toString() {
-        final String text = this.text;
-        return text.equals("'") ?
-                "''" :
-                "'" + text.replace("'", "''") + "'";
+        final StringBuilder b = new StringBuilder();
+
+        char previous = 0;
+        for(final char c : this.text.toCharArray()) {
+            switch(c) {
+                case '\'':
+                    if(0 == previous) {
+                        b.append('\'');
+                        previous = c;
+                    } else {
+                        previous = 0;
+                    }
+                    break;
+                case '.':
+                case '#':
+                case '0':
+                case ',':
+                    case '-':
+                case '%':
+                case '\u2030':
+                    b.append('\'');
+                    b.append(c);
+                    b.append('\'');
+                    previous = 0;
+                    break;
+                default:
+                    b.append(c);
+                    previous = c;
+                    break;
+            }
+        }
+
+        return b.toString();
     }
 }
