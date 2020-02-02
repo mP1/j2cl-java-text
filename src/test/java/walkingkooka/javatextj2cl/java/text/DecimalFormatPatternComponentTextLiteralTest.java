@@ -43,7 +43,62 @@ public final class DecimalFormatPatternComponentTextLiteralTest extends DecimalF
     @Test
     public void testToString() {
         final String text = "abc123";
-        this.toStringAndCheck(DecimalFormatPatternComponentTextLiteral.with(text), "'" + text + "'");
+        this.toStringAndCheck(text, text);
+    }
+
+    @Test
+    public void testToStringDecimalSeparator() {
+        this.toStringAndCheck(",", "','");
+    }
+
+    @Test
+    public void testToStringDigit() {
+        this.toStringAndCheck("#", "'#'");
+    }
+
+    @Test
+    public void testToStringDigit2() {
+        this.toStringAndCheck("b#a", "b'#'a");
+    }
+
+    @Test
+    public void testToStringDigitZero() {
+        this.toStringAndCheck("0", "'0'");
+    }
+
+    @Test
+    public void testToStringDigitZero2() {
+        this.toStringAndCheck("b0a", "b'0'a");
+    }
+
+    @Test
+    public void testToStringE() {
+        this.toStringAndCheck("E", "E");
+    }
+
+    @Test
+    public void testToStringGroupingSeparator() {
+        this.toStringAndCheck(",", "','");
+    }
+
+    @Test
+    public void testToStringMinusSign() {
+        this.toStringAndCheck("-", "'-'");
+    }
+
+    @Test
+    public void testToStringPercent() {
+        this.toStringAndCheck("%", "'%'");
+    }
+
+    @Test
+    public void testToStringPerMille() {
+        this.toStringAndCheck("\u2030", "'\u2030'");
+    }
+
+    private void toStringAndCheck(final String text,
+                                  final String toString) {
+        this.toStringAndCheck(DecimalFormatPatternComponentTextLiteral.with(text), toString);
     }
 
     @Override
