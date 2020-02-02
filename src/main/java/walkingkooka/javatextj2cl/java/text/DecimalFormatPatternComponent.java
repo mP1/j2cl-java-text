@@ -22,6 +22,8 @@ package walkingkooka.javatextj2cl.java.text;
  */
 abstract class DecimalFormatPatternComponent {
 
+    final static int DEFAULT_MULTIPLIER = 1;
+
     final static int PERCENT_MULTIPLIER = 100;
 
     final static int PER_MILLE_MULTIPLIER = 1000;
@@ -31,6 +33,20 @@ abstract class DecimalFormatPatternComponent {
      */
     static DecimalFormatPatternComponent currencySeparator() {
         return DecimalFormatPatternComponentCurrencySeparator.INSTANCE;
+    }
+
+    /**
+     * {@see DecimalFormatPatternComponentCurrencySign}
+     */
+    static DecimalFormatPatternComponent currencySign() {
+        return DecimalFormatPatternComponentCurrencySign.INSTANCE;
+    }
+
+    /**
+     * {@see DecimalFormatPatternComponentCurrencyInternationalSign}
+     */
+    static DecimalFormatPatternComponent currencyInternationalSign() {
+        return DecimalFormatPatternComponentCurrencyInternationalSign.INSTANCE;
     }
 
     /**
