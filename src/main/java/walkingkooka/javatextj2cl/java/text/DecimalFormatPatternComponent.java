@@ -90,13 +90,6 @@ abstract class DecimalFormatPatternComponent {
     }
 
     /**
-     * {@see DecimalFormatPatternComponentSubpatternSeparator}
-     */
-    static DecimalFormatPatternComponent subpatternSeparator() {
-        return DecimalFormatPatternComponentSubpatternSeparator.INSTANCE;
-    }
-
-    /**
      * {@see DecimalFormatPatternComponentTextLiteral}
      */
     static DecimalFormatPatternComponent textLiteral(final String text) {
