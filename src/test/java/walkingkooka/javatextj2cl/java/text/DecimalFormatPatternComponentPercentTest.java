@@ -22,4 +22,9 @@ public final class DecimalFormatPatternComponentPercentTest extends DecimalForma
     public Class<DecimalFormatPatternComponentPercent> type() {
         return DecimalFormatPatternComponentPercent.class;
     }
+
+    @Override
+    String literal() {
+        return "" + DecimalFormat.PERCENT;
+    }
 }

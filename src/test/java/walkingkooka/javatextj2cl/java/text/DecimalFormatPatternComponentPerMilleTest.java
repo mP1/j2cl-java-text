@@ -22,4 +22,9 @@ public final class DecimalFormatPatternComponentPerMilleTest extends DecimalForm
     public Class<DecimalFormatPatternComponentPerMille> type() {
         return DecimalFormatPatternComponentPerMille.class;
     }
+
+    @Override
+    String literal() {
+        return "" + DecimalFormat.PER_MILLE;
+    }
 }

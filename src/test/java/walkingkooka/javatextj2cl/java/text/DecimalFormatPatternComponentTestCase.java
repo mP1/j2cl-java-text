@@ -18,13 +18,11 @@
 package walkingkooka.javatextj2cl.java.text;
 
 import walkingkooka.ToStringTesting;
-import walkingkooka.reflect.ClassTesting2;
-import walkingkooka.reflect.JavaVisibility;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public abstract class DecimalFormatPatternComponentTestCase<C extends DecimalFormatPatternComponent> implements ClassTesting2<C>,
-        ToStringTesting<C> {
+public abstract class DecimalFormatPatternComponentTestCase<C extends DecimalFormatPatternComponent> extends DecimalFormatPatternTestCase<C>
+        implements ToStringTesting<C> {
 
     DecimalFormatPatternComponentTestCase() {
         super();
@@ -44,10 +42,15 @@ public abstract class DecimalFormatPatternComponentTestCase<C extends DecimalFor
                 () -> component.toString());
     }
 
-    // ClassTesting2....................................................................................................
+    // TypeNameTesting..................................................................................................
 
     @Override
-    public final JavaVisibility typeVisibility() {
-        return JavaVisibility.PACKAGE_PRIVATE;
+    public final String typeNamePrefix() {
+        return DecimalFormatPatternComponent.class.getSimpleName();
+    }
+
+    @Override
+    public final String typeNameSuffix() {
+        return "";
     }
 }

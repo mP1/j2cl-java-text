@@ -22,4 +22,9 @@ public final class DecimalFormatPatternComponentMinusSignTest extends DecimalFor
     public Class<DecimalFormatPatternComponentMinusSign> type() {
         return DecimalFormatPatternComponentMinusSign.class;
     }
+
+    @Override
+    String literal() {
+        return "" + DecimalFormat.MINUS_SIGN;
+    }
 }

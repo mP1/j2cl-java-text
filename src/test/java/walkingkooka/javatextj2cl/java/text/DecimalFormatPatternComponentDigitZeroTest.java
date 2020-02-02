@@ -22,4 +22,9 @@ public final class DecimalFormatPatternComponentDigitZeroTest extends DecimalFor
     public Class<DecimalFormatPatternComponentDigitZero> type() {
         return DecimalFormatPatternComponentDigitZero.class;
     }
+
+    @Override
+    String literal() {
+        return "" + DecimalFormat.DIGIT_ZERO;
+    }
 }

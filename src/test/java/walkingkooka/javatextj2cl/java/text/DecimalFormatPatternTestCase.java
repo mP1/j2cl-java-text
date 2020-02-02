@@ -17,32 +17,20 @@
 
 package walkingkooka.javatextj2cl.java.text;
 
-/**
- * Place holder for the negative or minus sign.
- */
-final class DecimalFormatPatternComponentMinusSign extends DecimalFormatPatternComponent {
+import walkingkooka.reflect.ClassTesting;
+import walkingkooka.reflect.JavaVisibility;
+import walkingkooka.reflect.TypeNameTesting;
 
-    /**
-     * Singleton
-     */
-    final static DecimalFormatPatternComponentMinusSign INSTANCE = new DecimalFormatPatternComponentMinusSign();
+public abstract class DecimalFormatPatternTestCase<T> implements ClassTesting<T>, TypeNameTesting<T> {
 
-    private DecimalFormatPatternComponentMinusSign() {
+    final static char CURRENCY = '\u00A4';
+
+    DecimalFormatPatternTestCase() {
         super();
     }
 
     @Override
-    boolean isCurrency() {
-        return false;
-    }
-
-    @Override
-    int multiplier() {
-        return 0;
-    }
-
-    @Override
-    public String toString() {
-        return "" + DecimalFormat.MINUS_SIGN;
+    public final JavaVisibility typeVisibility() {
+        return JavaVisibility.PACKAGE_PRIVATE;
     }
 }

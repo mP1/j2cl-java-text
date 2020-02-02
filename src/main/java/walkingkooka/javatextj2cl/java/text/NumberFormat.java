@@ -65,7 +65,7 @@ public abstract class NumberFormat extends Format {
      * @return a {@code NumberFormat} for handling currency values.
      */
     public static NumberFormat getCurrencyInstance(final Locale locale) {
-        return DecimalFormat.forLocale(locale, DecimalFormat.CURRENCY)
+        return DecimalFormat.forLocale(locale, DecimalFormat.INDEX_CURRENCY)
                 .cloneState();
     }
 
@@ -87,7 +87,7 @@ public abstract class NumberFormat extends Format {
      * @return a {@code NumberFormat} for handling {@code Number} objects.
      */
     public static NumberFormat getInstance(final Locale locale) {
-        return DecimalFormat.forLocale(locale, DecimalFormat.INSTANCE)
+        return DecimalFormat.forLocale(locale, DecimalFormat.INDEX_INSTANCE)
                 .cloneState();
     }
 
@@ -109,7 +109,7 @@ public abstract class NumberFormat extends Format {
      * @return a {@code NumberFormat} for handling {@code Number} objects.
      */
     public static NumberFormat getNumberInstance(final Locale locale) {
-        return DecimalFormat.forLocale(locale, DecimalFormat.NUMBER)
+        return DecimalFormat.forLocale(locale, DecimalFormat.INDEX_NUMBER)
                 .cloneState();
     }
 
@@ -131,7 +131,7 @@ public abstract class NumberFormat extends Format {
      * @return a {@code NumberFormat} for handling integers.
      */
     public static NumberFormat getIntegerInstance(final Locale locale) {
-        return DecimalFormat.forLocale(locale, DecimalFormat.INTEGER)
+        return DecimalFormat.forLocale(locale, DecimalFormat.INDEX_INTEGER)
                 .cloneState();
     }
 
@@ -153,7 +153,7 @@ public abstract class NumberFormat extends Format {
      * @return a {@code NumberFormat} for handling percentage values.
      */
     public static NumberFormat getPercentInstance(Locale locale) {
-        return DecimalFormat.forLocale(locale, DecimalFormat.PERCENT)
+        return DecimalFormat.forLocale(locale, DecimalFormat.INDEX_PERCENT)
                 .cloneState();
     }
 

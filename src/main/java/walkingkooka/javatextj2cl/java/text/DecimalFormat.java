@@ -27,6 +27,28 @@ import java.util.Objects;
 
 public class DecimalFormat extends NumberFormat {
 
+    final static char CURRENCY = '\u00A4';
+
+    final static char DECIMAL_SEPARATOR = '.';
+
+    final static char DIGIT = '#';
+
+    final static char DIGIT_ZERO = '0';
+
+    final static char EXPONENT = 'E';
+
+    final static char GROUPING_SEPARATOR = ',';
+
+    final static char MINUS_SIGN = '-';
+
+    final static char PERCENT = '%';
+
+    final static char PER_MILLE = '\u2030';
+
+    final static char QUOTE = '\'';
+
+    final static char SUB_PATTERN_SEPARATOR = ';';
+
     /**
      * Language tag to an array of {@link DecimalFormat}, this is used internally to "get" the symbols for a given Locale.
      */
@@ -39,11 +61,13 @@ public class DecimalFormat extends NumberFormat {
         DecimalFormatProvider.register();
     }
 
-    final static int CURRENCY = 0;
-    final static int INSTANCE = 1;
-    final static int INTEGER = 2;
-    final static int NUMBER = 3;
-    final static int PERCENT = 4;
+    // indices into the LANGUAGE_TAG_TO_FORMATS array.
+
+    final static int INDEX_CURRENCY = 0;
+    final static int INDEX_INSTANCE = 1;
+    final static int INDEX_INTEGER = 2;
+    final static int INDEX_NUMBER = 3;
+    final static int INDEX_PERCENT = 4;
 
     /**
      * Factory called by {@link DecimalFormatProvider#register()}, recording a DecimalFormat for currency,
@@ -159,7 +183,7 @@ public class DecimalFormat extends NumberFormat {
     }
 
     private static DecimalFormat forDefaultLocale() {
-        return forLocale(Locale.getDefault(), INSTANCE);
+        return forLocale(Locale.getDefault(), INDEX_INSTANCE);
     }
 
     static DecimalFormat forLocale(final Locale locale,

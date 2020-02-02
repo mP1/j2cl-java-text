@@ -38,10 +38,8 @@ final class DecimalFormatPatternComponentDigitZero extends DecimalFormatPatternC
         return 0;
     }
 
-    final static char LITERAL = '0';
-
     @Override
     public String toString() {
-        return "" + LITERAL;
+        return "" + DecimalFormat.DIGIT_ZERO;
     }
 }

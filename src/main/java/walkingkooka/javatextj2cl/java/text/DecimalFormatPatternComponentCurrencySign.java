@@ -41,10 +41,8 @@ final class DecimalFormatPatternComponentCurrencySign extends DecimalFormatPatte
         return 0;
     }
 
-    final static char LITERAL = '\u00A4';
-
     @Override
     public String toString() {
-        return "" + LITERAL;
+        return "" + DecimalFormat.CURRENCY;
     }
 }

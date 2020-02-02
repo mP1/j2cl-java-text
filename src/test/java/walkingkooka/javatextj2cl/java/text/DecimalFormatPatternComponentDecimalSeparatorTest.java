@@ -22,4 +22,9 @@ public final class DecimalFormatPatternComponentDecimalSeparatorTest extends Dec
     public Class<DecimalFormatPatternComponentDecimalSeparator> type() {
         return DecimalFormatPatternComponentDecimalSeparator.class;
     }
+
+    @Override
+    String literal() {
+        return "" + DecimalFormat.DECIMAL_SEPARATOR;
+    }
 }
