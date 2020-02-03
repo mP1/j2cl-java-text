@@ -65,9 +65,6 @@ abstract class DecimalFormatPatternParser {
                 default:
                     NeverError.unhandledCase(escapedMode, MODE_NORMAL, MODE_ESCAPED, MODE_CLOSING_QUOTE);
             }
-            if (this.shouldStop()) {
-                break;
-            }
             pattern.next();
         }
 
@@ -82,11 +79,6 @@ abstract class DecimalFormatPatternParser {
      * Handles a non character literal.
      */
     abstract void handle(final char c);
-
-    /**
-     * Returns true if this parser should ignore any extra charactes and stop immediately.
-     */
-    abstract boolean shouldStop();
 
     /**
      * Handles currency symbols in a pattern, including detection of double currency symbol and transforming that into the international sign.

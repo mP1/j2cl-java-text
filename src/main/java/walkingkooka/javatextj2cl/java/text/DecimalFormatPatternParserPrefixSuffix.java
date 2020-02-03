@@ -22,15 +22,12 @@ package walkingkooka.javatextj2cl.java.text;
  */
 final class DecimalFormatPatternParserPrefixSuffix extends DecimalFormatPatternParser {
 
-    static DecimalFormatPatternParserPrefixSuffix with(final DecimalFormatPatternParserTextCursor text,
-                                                       final boolean stop) {
-        return new DecimalFormatPatternParserPrefixSuffix(text, stop);
+    static DecimalFormatPatternParserPrefixSuffix with(final DecimalFormatPatternParserTextCursor text) {
+        return new DecimalFormatPatternParserPrefixSuffix(text);
     }
 
-    private DecimalFormatPatternParserPrefixSuffix(final DecimalFormatPatternParserTextCursor text,
-                                                   final boolean stop) {
+    private DecimalFormatPatternParserPrefixSuffix(final DecimalFormatPatternParserTextCursor text) {
         super(text);
-        this.stop = stop;
     }
 
     @Override
@@ -43,11 +40,7 @@ final class DecimalFormatPatternParserPrefixSuffix extends DecimalFormatPatternP
             case DecimalFormat.DIGIT:
             case DecimalFormat.DIGIT_ZERO:
             case DecimalFormat.GROUPING_SEPARATOR:
-                if (this.stop) {
-                    this.shouldStop = true;
-                } else {
-                    this.addCharacterLiteral(c);
-                }
+                this.addCharacterLiteral(c);
                 break;
             case DecimalFormat.MINUS_SIGN:
                 this.minusSign();
@@ -63,13 +56,4 @@ final class DecimalFormatPatternParserPrefixSuffix extends DecimalFormatPatternP
                 break;
         }
     }
-
-    private final boolean stop;
-
-    @Override
-    boolean shouldStop() {
-        return this.shouldStop;
-    }
-
-    private boolean shouldStop;
 }
