@@ -17,10 +17,8 @@
 
 package walkingkooka.javatextj2cl.java.text;
 
-import walkingkooka.InvalidCharacterException;
 import walkingkooka.NeverError;
 import walkingkooka.collect.list.Lists;
-import walkingkooka.text.CharSequences;
 
 import java.util.List;
 
@@ -46,7 +44,7 @@ abstract class DecimalFormatPatternParser {
 
             switch (escapedMode) {
                 case MODE_NORMAL:
-                    if(DecimalFormat.QUOTE == c) {
+                    if (DecimalFormat.QUOTE == c) {
                         escapedMode = MODE_ESCAPED;
                     } else {
                         this.handle(c);
@@ -73,7 +71,6 @@ abstract class DecimalFormatPatternParser {
             pattern.next();
         }
 
-        this.addTextLiteralIfNecessary();
         return this.components;
     }
 
@@ -145,26 +142,8 @@ abstract class DecimalFormatPatternParser {
     }
 
     final void addCharacterLiteral(final char c) {
-        this.textLiteral.append(c);
+        this.addComponent(DecimalFormatPatternComponent.characterLiteral(c));
     }
-
-    /**
-     * Checks if a text literal is being built and adds it if present.
-     */
-    final void addTextLiteralIfNecessary() {
-        final StringBuilder textLiteral = this.textLiteral;
-
-        if (textLiteral.length() > 0) {
-            this.components.add(DecimalFormatPatternComponent.textLiteral(textLiteral.toString()));
-
-            textLiteral.setLength(0);
-        }
-    }
-
-    /**
-     * Used to collect one or more charater literals.
-     */
-    private final StringBuilder textLiteral = new StringBuilder();
 
     // component........................................................................................................
 
@@ -179,7 +158,6 @@ abstract class DecimalFormatPatternParser {
     }
 
     final void addComponent(final DecimalFormatPatternComponent component) {
-        this.addTextLiteralIfNecessary();
         this.components.add(component);
     }
 

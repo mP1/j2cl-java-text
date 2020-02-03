@@ -29,6 +29,13 @@ abstract class DecimalFormatPatternComponent {
     final static int PER_MILLE_MULTIPLIER = 1000;
 
     /**
+     * {@see DecimalFormatPatternComponentCharacterLiteral}
+     */
+    static DecimalFormatPatternComponent characterLiteral(final char value) {
+        return DecimalFormatPatternComponentCharacterLiteral.with(value);
+    }
+
+    /**
      * {@see DecimalFormatPatternComponentCurrencySeparator}
      */
     static DecimalFormatPatternComponent currencySeparator() {
@@ -103,13 +110,6 @@ abstract class DecimalFormatPatternComponent {
      */
     static DecimalFormatPatternComponent perMille() {
         return DecimalFormatPatternComponentPerMille.INSTANCE;
-    }
-
-    /**
-     * {@see DecimalFormatPatternComponentTextLiteral}
-     */
-    static DecimalFormatPatternComponent textLiteral(final String text) {
-        return DecimalFormatPatternComponentTextLiteral.with(text);
     }
 
     /**
