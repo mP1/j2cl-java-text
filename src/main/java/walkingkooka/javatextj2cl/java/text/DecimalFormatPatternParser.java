@@ -17,6 +17,7 @@
 
 package walkingkooka.javatextj2cl.java.text;
 
+import walkingkooka.InvalidCharacterException;
 import walkingkooka.NeverError;
 import walkingkooka.collect.list.Lists;
 
@@ -27,20 +28,22 @@ import java.util.List;
  */
 abstract class DecimalFormatPatternParser {
 
-    DecimalFormatPatternParser(final DecimalFormatPatternParserTextCursor pattern) {
+    DecimalFormatPatternParser(final String pattern,
+                               final int position) {
         super();
         this.pattern = pattern;
+        this.position = position;
     }
 
     /**
      * Parses the pattern text into its equivalent pattern components.
      */
     final List<DecimalFormatPatternComponent> parse() {
-        final DecimalFormatPatternParserTextCursor pattern = this.pattern;
+        final String pattern = this.pattern;
         int escapedMode = MODE_NORMAL;
 
-        while (pattern.hasMore()) {
-            final char c = pattern.charAt();
+        while (this.position < pattern.length()) {
+            final char c = pattern.charAt(this.position);
 
             switch (escapedMode) {
                 case MODE_NORMAL:
@@ -58,14 +61,14 @@ abstract class DecimalFormatPatternParser {
                     break;
                 case MODE_CLOSING_QUOTE:
                     if (DecimalFormat.QUOTE != c) {
-                        pattern.failInvalidCharacter();
+                        this.failInvalidCharacter();
                     }
                     escapedMode = MODE_NORMAL;
                     break;
                 default:
                     NeverError.unhandledCase(escapedMode, MODE_NORMAL, MODE_ESCAPED, MODE_CLOSING_QUOTE);
             }
-            pattern.next();
+            this.position++;
         }
 
         return this.components;
@@ -119,7 +122,7 @@ abstract class DecimalFormatPatternParser {
     private void setMultiplier(final int multiplier,
                                final DecimalFormatPatternComponent component) {
         if (DecimalFormatPatternComponent.DEFAULT_MULTIPLIER != this.multiplier) {
-            this.pattern.failInvalidCharacter();
+            this.failInvalidCharacter();
         }
         this.multiplier = multiplier;
         this.addComponent(component);
@@ -128,10 +131,6 @@ abstract class DecimalFormatPatternParser {
     private int multiplier = DecimalFormatPatternComponent.DEFAULT_MULTIPLIER;
 
     // text literal.....................................................................................................
-
-    final void addCharacterLiteral() {
-        this.addCharacterLiteral(this.pattern.charAt());
-    }
 
     final void addCharacterLiteral(final char c) {
         this.addComponent(DecimalFormatPatternComponent.characterLiteral(c));
@@ -144,7 +143,7 @@ abstract class DecimalFormatPatternParser {
      */
     final void addComponentFailDuplicate(final DecimalFormatPatternComponent component) {
         if (this.components.contains(component)) {
-            this.pattern.failInvalidCharacter();
+            this.failInvalidCharacter();
         }
         this.addComponent(component);
     }
@@ -158,11 +157,22 @@ abstract class DecimalFormatPatternParser {
      */
     final List<DecimalFormatPatternComponent> components = Lists.array();
 
+    /**
+     * Used to report an invalid pattern character.
+     */
+    final void failInvalidCharacter() {
+        throw new InvalidCharacterException(this.pattern, this.position);
+    }
 
     /**
-     * The pattern being parsed
+     * The pattern text being parsed.
      */
-    final DecimalFormatPatternParserTextCursor pattern;
+    final String pattern;
+
+    /**
+     * Points to the current character in the pattern. This is used to build fail messages.
+     */
+    int position;
 
     // Object...........................................................................................................
 
