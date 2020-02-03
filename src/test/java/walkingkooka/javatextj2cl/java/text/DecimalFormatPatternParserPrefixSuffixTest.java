@@ -73,7 +73,7 @@ public final class DecimalFormatPatternParserPrefixSuffixTest extends DecimalFor
         final char c = DecimalFormat.EXPONENT;
 
         this.parsePrefixAndCheck("" + c,
-                DecimalFormatPatternComponent.textLiteral("" + c));
+                DecimalFormatPatternComponent.characterLiteral(c));
     }
 
     @Test
@@ -95,13 +95,14 @@ public final class DecimalFormatPatternParserPrefixSuffixTest extends DecimalFor
     @Test
     public void testPrefixNonSpecial() {
         this.parsePrefixAndCheck("A",
-                DecimalFormatPatternComponent.textLiteral("A"));
+                DecimalFormatPatternComponent.characterLiteral('A'));
     }
 
     @Test
     public void testPrefixNonSpecial2() {
         this.parsePrefixAndCheck("AB",
-                DecimalFormatPatternComponent.textLiteral("AB"));
+                DecimalFormatPatternComponent.characterLiteral('A'),
+                DecimalFormatPatternComponent.characterLiteral('B'));
     }
 
     @Test
@@ -121,44 +122,54 @@ public final class DecimalFormatPatternParserPrefixSuffixTest extends DecimalFor
     @Test
     public void testPrefixQuote() {
         this.parsePrefixAndCheck("''",
-                DecimalFormatPatternComponent.textLiteral("\'"));
+                DecimalFormatPatternComponent.characterLiteral('\''));
     }
 
     @Test
     public void testPrefixQuotedDigit() {
         final char c = DecimalFormat.DIGIT;
         this.parsePrefixAndCheck("\'" + c + "\'",
-                DecimalFormatPatternComponent.textLiteral("" + c));
+                DecimalFormatPatternComponent.characterLiteral(c));
     }
 
     @Test
     public void testPrefixQuotedZero() {
         final char c = DecimalFormat.DIGIT_ZERO;
         this.parsePrefixAndCheck("\'" + c + "\'",
-                DecimalFormatPatternComponent.textLiteral("" + c));
+                DecimalFormatPatternComponent.characterLiteral(c));
     }
 
     @Test
     public void testPrefixMixed() {
         this.parsePrefixAndCheck("ABC % ",
-                DecimalFormatPatternComponent.textLiteral("ABC "),
+                DecimalFormatPatternComponent.characterLiteral('A'),
+                DecimalFormatPatternComponent.characterLiteral('B'),
+                DecimalFormatPatternComponent.characterLiteral('C'),
+                DecimalFormatPatternComponent.characterLiteral(' '),
                 DecimalFormatPatternComponent.percent(),
-                DecimalFormatPatternComponent.textLiteral(" "));
+                DecimalFormatPatternComponent.characterLiteral(' '));
     }
 
     @Test
     public void testPrefixMixed2() {
         this.parsePrefixAndCheck("ABC % " + CURRENCY + CURRENCY,
-                DecimalFormatPatternComponent.textLiteral("ABC "),
+                DecimalFormatPatternComponent.characterLiteral('A'),
+                DecimalFormatPatternComponent.characterLiteral('B'),
+                DecimalFormatPatternComponent.characterLiteral('C'),
+                DecimalFormatPatternComponent.characterLiteral(' '),
                 DecimalFormatPatternComponent.percent(),
-                DecimalFormatPatternComponent.textLiteral(" "),
+                DecimalFormatPatternComponent.characterLiteral(' '),
                 DecimalFormatPatternComponent.currencyInternationalSign());
     }
 
     @Test
     public void testPrefixMixed3IncludesQuoted() {
-        this.parsePrefixAndCheck("ABC 'D' $$",
-                DecimalFormatPatternComponent.textLiteral("ABC D $$"));
+        this.parsePrefixAndCheck("ABC 'D'",
+                DecimalFormatPatternComponent.characterLiteral('A'),
+                DecimalFormatPatternComponent.characterLiteral('B'),
+                DecimalFormatPatternComponent.characterLiteral('C'),
+                DecimalFormatPatternComponent.characterLiteral(' '),
+                DecimalFormatPatternComponent.characterLiteral('D'));
     }
 
     // suffix mode, decimalSeparator/digit/digitZero/exponen are literals................................................
@@ -179,35 +190,35 @@ public final class DecimalFormatPatternParserPrefixSuffixTest extends DecimalFor
     public void testSuffixDecimalSeparator() {
         final char c = DecimalFormat.DECIMAL_SEPARATOR;
         this.parseSuffixAndCheck("" + c,
-                DecimalFormatPatternComponent.textLiteral("" + c));
+                DecimalFormatPatternComponent.characterLiteral(c));
     }
 
     @Test
     public void testSuffixDigit() {
         final char c = DecimalFormat.DIGIT;
         this.parseSuffixAndCheck("" + c,
-                DecimalFormatPatternComponent.textLiteral("" + c));
+                DecimalFormatPatternComponent.characterLiteral(c));
     }
 
     @Test
     public void testSuffixDigitZero() {
         final char c = DecimalFormat.DIGIT_ZERO;
         this.parseSuffixAndCheck("" + c,
-                DecimalFormatPatternComponent.textLiteral("" + c));
+                DecimalFormatPatternComponent.characterLiteral(c));
     }
 
     @Test
     public void testSuffixExponent() {
         final char c = DecimalFormat.EXPONENT;
         this.parseSuffixAndCheck("" + c,
-                DecimalFormatPatternComponent.textLiteral("" + c));
+                DecimalFormatPatternComponent.characterLiteral(c));
     }
 
     @Test
     public void testSuffixGroupingSeparator() {
         final char c = DecimalFormat.GROUPING_SEPARATOR;
         this.parseSuffixAndCheck("" + c,
-                DecimalFormatPatternComponent.textLiteral("" + c));
+                DecimalFormatPatternComponent.characterLiteral(c));
     }
 
     @Test
@@ -220,13 +231,14 @@ public final class DecimalFormatPatternParserPrefixSuffixTest extends DecimalFor
     @Test
     public void testSuffixNonSpecial() {
         this.parseSuffixAndCheck("A",
-                DecimalFormatPatternComponent.textLiteral("A"));
+                DecimalFormatPatternComponent.characterLiteral('A'));
     }
 
     @Test
     public void testSuffixNonSpecial2() {
         this.parseSuffixAndCheck("AB",
-                DecimalFormatPatternComponent.textLiteral("AB"));
+                DecimalFormatPatternComponent.characterLiteral('A'),
+                DecimalFormatPatternComponent.characterLiteral('B'));
     }
 
     @Test
@@ -246,44 +258,54 @@ public final class DecimalFormatPatternParserPrefixSuffixTest extends DecimalFor
     @Test
     public void testSuffixQuote() {
         this.parseSuffixAndCheck("''",
-                DecimalFormatPatternComponent.textLiteral("\'"));
+                DecimalFormatPatternComponent.characterLiteral('\''));
     }
 
     @Test
     public void testSuffixQuotedDigit() {
         final char c = DecimalFormat.DIGIT;
         this.parseSuffixAndCheck("\'" + c + "\'",
-                DecimalFormatPatternComponent.textLiteral("" + c));
+                DecimalFormatPatternComponent.characterLiteral(c));
     }
 
     @Test
     public void testSuffixQuotedZero() {
         final char c = DecimalFormat.DIGIT_ZERO;
         this.parseSuffixAndCheck("\'" + c + "\'",
-                DecimalFormatPatternComponent.textLiteral("" + c));
+                DecimalFormatPatternComponent.characterLiteral(c));
     }
 
     @Test
     public void testSuffixMixed() {
         this.parseSuffixAndCheck("ABC % ",
-                DecimalFormatPatternComponent.textLiteral("ABC "),
+                DecimalFormatPatternComponent.characterLiteral('A'),
+                DecimalFormatPatternComponent.characterLiteral('B'),
+                DecimalFormatPatternComponent.characterLiteral('C'),
+                DecimalFormatPatternComponent.characterLiteral(' '),
                 DecimalFormatPatternComponent.percent(),
-                DecimalFormatPatternComponent.textLiteral(" "));
+                DecimalFormatPatternComponent.characterLiteral(' '));
     }
 
     @Test
     public void testSuffixMixed2() {
         this.parseSuffixAndCheck("ABC % " + CURRENCY + CURRENCY,
-                DecimalFormatPatternComponent.textLiteral("ABC "),
+                DecimalFormatPatternComponent.characterLiteral('A'),
+                DecimalFormatPatternComponent.characterLiteral('B'),
+                DecimalFormatPatternComponent.characterLiteral('C'),
+                DecimalFormatPatternComponent.characterLiteral(' '),
                 DecimalFormatPatternComponent.percent(),
-                DecimalFormatPatternComponent.textLiteral(" "),
+                DecimalFormatPatternComponent.characterLiteral(' '),
                 DecimalFormatPatternComponent.currencyInternationalSign());
     }
 
     @Test
-    public void testSuffixMixed3InludesQuoted() {
-        this.parseSuffixAndCheck("ABC '%' $$",
-                DecimalFormatPatternComponent.textLiteral("ABC % $$"));
+    public void testSuffixMixed3IncludesQuoted() {
+        this.parseSuffixAndCheck("ABC 'D'",
+                DecimalFormatPatternComponent.characterLiteral('A'),
+                DecimalFormatPatternComponent.characterLiteral('B'),
+                DecimalFormatPatternComponent.characterLiteral('C'),
+                DecimalFormatPatternComponent.characterLiteral(' '),
+                DecimalFormatPatternComponent.characterLiteral('D'));
     }
 
     // helpers..........................................................................................................
