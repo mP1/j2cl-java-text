@@ -22,12 +22,14 @@ package walkingkooka.javatextj2cl.java.text;
  */
 final class DecimalFormatPatternParserPrefixSuffix extends DecimalFormatPatternParser {
 
-    static DecimalFormatPatternParserPrefixSuffix with(final DecimalFormatPatternParserTextCursor text) {
-        return new DecimalFormatPatternParserPrefixSuffix(text);
+    static DecimalFormatPatternParserPrefixSuffix with(final String pattern,
+                                                       final int position) {
+        return new DecimalFormatPatternParserPrefixSuffix(pattern, position);
     }
 
-    private DecimalFormatPatternParserPrefixSuffix(final DecimalFormatPatternParserTextCursor text) {
-        super(text);
+    private DecimalFormatPatternParserPrefixSuffix(final String pattern,
+                                                   final int position) {
+        super(pattern, position);
     }
 
     @Override

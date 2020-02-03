@@ -19,8 +19,6 @@ package walkingkooka.javatextj2cl.java.text;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.Locale;
-
 public final class DecimalFormatPatternParserPrefixSuffixTest extends DecimalFormatPatternParserTestCase<DecimalFormatPatternParserPrefixSuffix> {
 
     @Test
@@ -160,8 +158,9 @@ public final class DecimalFormatPatternParserPrefixSuffixTest extends DecimalFor
     // helpers..........................................................................................................
 
     @Override
-    DecimalFormatPatternParserPrefixSuffix createParser(final DecimalFormatPatternParserTextCursor pattern) {
-        return DecimalFormatPatternParserPrefixSuffix.with(pattern);
+    DecimalFormatPatternParserPrefixSuffix createParser(final String pattern,
+                                                        final int position) {
+        return DecimalFormatPatternParserPrefixSuffix.with(pattern, position);
     }
 
     // ClassTesting.....................................................................................................

@@ -46,45 +46,30 @@ public abstract class DecimalFormatPatternParserTestCase<P extends DecimalFormat
                 components);
     }
 
-    final void parseAndCheck(final String text,
+    final void parseAndCheck(final String pattern,
                              final String left,
                              final DecimalFormatPatternComponent... components) {
-        final DecimalFormatPatternParserTextCursor cursor = DecimalFormatPatternParserTextCursor.with(text, 0);
-        final P parser = this.createParser(cursor);
+        final P parser = this.createParser(pattern, 0);
 
         assertEquals(Lists.of(components),
                 parser.parse(),
-                "components parse " + CharSequences.quoteAndEscape(text));
-
-        final StringBuilder actualLeft = new StringBuilder();
-        while (cursor.hasMore()) {
-            actualLeft.append(cursor.charAt());
-            cursor.next();
-        }
+                "components parse " + CharSequences.quoteAndEscape(pattern));
 
         assertEquals(left,
-                actualLeft.toString(),
-                () -> "remaining pattern, parse " + CharSequences.quoteAndEscape(text) + " components: " + Arrays.toString(components));
+                parser.pattern.substring(parser.position),
+                () -> "remaining pattern, parse " + CharSequences.quoteAndEscape(pattern) + " components: " + Arrays.toString(components));
     }
 
     final void parseAndCheck(final P parser,
                              final String left,
                              final DecimalFormatPatternComponent... components) {
-        final DecimalFormatPatternParserTextCursor cursor = parser.pattern;
-
         assertEquals(Lists.of(components),
                 parser.parse(),
-                "components parse " + CharSequences.quoteAndEscape(cursor.text));
-
-        final StringBuilder actualLeft = new StringBuilder();
-        while (cursor.hasMore()) {
-            actualLeft.append(cursor.charAt());
-            cursor.next();
-        }
+                "components parse " + CharSequences.quoteAndEscape(parser.pattern));
 
         assertEquals(left,
-                actualLeft.toString(),
-                () -> "remaining pattern, parse " + CharSequences.quoteAndEscape(cursor.text) + " components: " + Arrays.toString(components));
+                parser.pattern.substring(parser.position),
+                () -> "remaining pattern, parse " + CharSequences.quoteAndEscape(parser.pattern) + " components: " + Arrays.toString(components));
     }
 
     final void parseFails(final String pattern,
@@ -108,7 +93,7 @@ public abstract class DecimalFormatPatternParserTestCase<P extends DecimalFormat
         final InvalidCharacterException thrown = assertThrows(InvalidCharacterException.class,
                 () -> parser.parse());
         assertEquals(position, thrown.position(), "position");
-        assertEquals(parser.pattern.text, thrown.text(), "text");
+        assertEquals(parser.pattern, thrown.text(), "text");
     }
 
     // helpers..........................................................................................................
@@ -117,12 +102,8 @@ public abstract class DecimalFormatPatternParserTestCase<P extends DecimalFormat
         return this.createParser(pattern, 0);
     }
 
-    final P createParser(final String pattern,
-                         final int position) {
-        return this.createParser(DecimalFormatPatternParserTextCursor.with(pattern, position));
-    }
-
-    abstract P createParser(final DecimalFormatPatternParserTextCursor pattern);
+    abstract P createParser(final String pattern,
+                            final int position);
 
 
     final void checkPrefixAndSuffix(final String pattern,
