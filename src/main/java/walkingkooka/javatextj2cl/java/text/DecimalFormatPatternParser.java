@@ -19,7 +19,6 @@ package walkingkooka.javatextj2cl.java.text;
 
 import walkingkooka.InvalidCharacterException;
 import walkingkooka.NeverError;
-import walkingkooka.collect.list.Lists;
 
 import java.util.List;
 
@@ -38,7 +37,7 @@ abstract class DecimalFormatPatternParser {
     /**
      * Parses the pattern text into its equivalent pattern components.
      */
-    final List<DecimalFormatPatternComponent> parse() {
+    final void parse() {
         final String pattern = this.pattern;
         int escapedMode = MODE_NORMAL;
 
@@ -70,8 +69,6 @@ abstract class DecimalFormatPatternParser {
             }
             this.position++;
         }
-
-        return this.components;
     }
 
     private final static int MODE_NORMAL = 1;
@@ -87,7 +84,7 @@ abstract class DecimalFormatPatternParser {
      * Handles currency symbols in a pattern, including detection of double currency symbol and transforming that into the international sign.
      */
     final void currency() {
-        final List<DecimalFormatPatternComponent> components = this.components;
+        final List<DecimalFormatPatternComponent> components = this.components();
         final int last = components.size() - 1;
 
         final boolean currency;
@@ -138,24 +135,9 @@ abstract class DecimalFormatPatternParser {
 
     // component........................................................................................................
 
-    /**
-     * Used to detect duplicate percent signs and similar.
-     */
-    final void addComponentFailDuplicate(final DecimalFormatPatternComponent component) {
-        if (this.components.contains(component)) {
-            this.failInvalidCharacter();
-        }
-        this.addComponent(component);
-    }
+    abstract void addComponent(final DecimalFormatPatternComponent component);
 
-    final void addComponent(final DecimalFormatPatternComponent component) {
-        this.components.add(component);
-    }
-
-    /**
-     * Contains the translated pattern into components in order.
-     */
-    final List<DecimalFormatPatternComponent> components = Lists.array();
+    abstract List<DecimalFormatPatternComponent> components();
 
     /**
      * Used to report an invalid pattern character.
@@ -173,11 +155,4 @@ abstract class DecimalFormatPatternParser {
      * Points to the current character in the pattern. This is used to build fail messages.
      */
     int position;
-
-    // Object...........................................................................................................
-
-    @Override
-    public String toString() {
-        return this.pattern + " " + this.components.toString();
-    }
 }
