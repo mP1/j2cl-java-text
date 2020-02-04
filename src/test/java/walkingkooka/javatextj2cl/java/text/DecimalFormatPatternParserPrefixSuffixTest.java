@@ -18,6 +18,12 @@
 package walkingkooka.javatextj2cl.java.text;
 
 import org.junit.jupiter.api.Test;
+import walkingkooka.collect.list.Lists;
+import walkingkooka.text.CharSequences;
+
+import java.util.Arrays;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public final class DecimalFormatPatternParserPrefixSuffixTest extends DecimalFormatPatternParserTestCase<DecimalFormatPatternParserPrefixSuffix> {
 
@@ -161,6 +167,43 @@ public final class DecimalFormatPatternParserPrefixSuffixTest extends DecimalFor
     DecimalFormatPatternParserPrefixSuffix createParser(final String pattern,
                                                         final int position) {
         return DecimalFormatPatternParserPrefixSuffix.with(pattern, position);
+    }
+
+    private void parseAndCheck(final String text,
+                               final DecimalFormatPatternComponent... components) {
+        this.parseAndCheck(this.createParser(text, 0),
+                "",
+                components);
+    }
+
+    private void parseAndCheck(final DecimalFormatPatternParserPrefixSuffix parser,
+                               final DecimalFormatPatternComponent... components) {
+        this.parseAndCheck(parser,
+                "",
+                components);
+    }
+
+    private void parseAndCheck(final String text,
+                               final String left,
+                               final DecimalFormatPatternComponent... components) {
+        this.parseAndCheck(DecimalFormatPatternParserPrefixSuffix.with(text, 0),
+                left,
+                components);
+    }
+
+    private void parseAndCheck(final DecimalFormatPatternParserPrefixSuffix parser,
+                               final String left,
+                               final DecimalFormatPatternComponent... components) {
+        parser.parse();
+
+        final String pattern = parser.pattern;
+        assertEquals(Lists.of(components),
+                parser.components(),
+                "components parse " + CharSequences.quoteAndEscape(pattern));
+
+        assertEquals(left,
+                pattern.substring(parser.position),
+                () -> "remaining pattern, parse " + CharSequences.quoteAndEscape(pattern) + " components: " + Arrays.toString(components));
     }
 
     // ClassTesting.....................................................................................................

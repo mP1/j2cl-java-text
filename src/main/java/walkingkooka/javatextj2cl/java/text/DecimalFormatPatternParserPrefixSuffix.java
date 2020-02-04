@@ -17,6 +17,10 @@
 
 package walkingkooka.javatextj2cl.java.text;
 
+import walkingkooka.collect.list.Lists;
+
+import java.util.List;
+
 /**
  * A parser that handles parsing the prefix or suffix with a pattern.
  */
@@ -57,5 +61,27 @@ final class DecimalFormatPatternParserPrefixSuffix extends DecimalFormatPatternP
                 this.addCharacterLiteral(c);
                 break;
         }
+    }
+
+    @Override
+    void addComponent(final DecimalFormatPatternComponent component) {
+        this.components.add(component);
+    }
+
+    @Override
+    List<DecimalFormatPatternComponent> components() {
+        return this.components;
+    }
+
+    /**
+     * Contains the translated pattern into components in order.
+     */
+    final List<DecimalFormatPatternComponent> components = Lists.array();
+
+    // Object...........................................................................................................
+
+    @Override
+    public String toString() {
+        return this.pattern + " " + this.components.toString();
     }
 }

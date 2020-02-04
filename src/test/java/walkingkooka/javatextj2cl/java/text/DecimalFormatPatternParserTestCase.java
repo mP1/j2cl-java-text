@@ -32,46 +32,6 @@ public abstract class DecimalFormatPatternParserTestCase<P extends DecimalFormat
         super();
     }
 
-    final void parseAndCheck(final String text,
-                             final DecimalFormatPatternComponent... components) {
-        this.parseAndCheck(this.createParser(text, 0),
-                "",
-                components);
-    }
-
-    final void parseAndCheck(final P parser,
-                             final DecimalFormatPatternComponent... components) {
-        this.parseAndCheck(parser,
-                "",
-                components);
-    }
-
-    final void parseAndCheck(final String pattern,
-                             final String left,
-                             final DecimalFormatPatternComponent... components) {
-        final P parser = this.createParser(pattern, 0);
-
-        assertEquals(Lists.of(components),
-                parser.parse(),
-                "components parse " + CharSequences.quoteAndEscape(pattern));
-
-        assertEquals(left,
-                parser.pattern.substring(parser.position),
-                () -> "remaining pattern, parse " + CharSequences.quoteAndEscape(pattern) + " components: " + Arrays.toString(components));
-    }
-
-    final void parseAndCheck(final P parser,
-                             final String left,
-                             final DecimalFormatPatternComponent... components) {
-        assertEquals(Lists.of(components),
-                parser.parse(),
-                "components parse " + CharSequences.quoteAndEscape(parser.pattern));
-
-        assertEquals(left,
-                parser.pattern.substring(parser.position),
-                () -> "remaining pattern, parse " + CharSequences.quoteAndEscape(parser.pattern) + " components: " + Arrays.toString(components));
-    }
-
     final void parseFails(final String pattern,
                           final int position) {
         this.parseFails(pattern,
