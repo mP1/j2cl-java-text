@@ -34,7 +34,7 @@ public final class DecimalFormatPatternComponentCharacterLiteralTest extends Dec
     }
 
     @Test
-    public void testToString() {
+    public void testToStringNonStandard() {
         this.toStringAndCheck('A', "A");
     }
 
@@ -77,7 +77,12 @@ public final class DecimalFormatPatternComponentCharacterLiteralTest extends Dec
     public void testToStringPerMille() {
         this.toStringAndCheck('\u2030', "'\u2030'");
     }
-    
+
+    @Test
+    public void testToStringQuote() {
+        this.toStringAndCheck(DecimalFormat.QUOTE, "''");
+    }
+
     @Test
     public void testToStringZero() {
         this.toStringAndCheck('0', "'0'");
