@@ -18,6 +18,7 @@
 package walkingkooka.javatextj2cl.java.text;
 
 import walkingkooka.InvalidCharacterException;
+import walkingkooka.ToStringTesting;
 import walkingkooka.collect.list.Lists;
 import walkingkooka.text.CharSequences;
 
@@ -26,7 +27,8 @@ import java.util.Arrays;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public abstract class DecimalFormatPatternParserTestCase<P extends DecimalFormatPatternParser> extends DecimalFormatPatternTestCase<P> {
+public abstract class DecimalFormatPatternParserTestCase<P extends DecimalFormatPatternParser> extends DecimalFormatPatternTestCase<P>
+        implements ToStringTesting<P> {
 
     DecimalFormatPatternParserTestCase() {
         super();
