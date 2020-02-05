@@ -43,8 +43,8 @@ final class DecimalFormatPatternParserPrefixSuffix extends DecimalFormatPatternP
                 this.currency();
                 break;
             case DecimalFormat.DECIMAL_SEPARATOR:
-            case DecimalFormat.DIGIT:
-            case DecimalFormat.DIGIT_ZERO:
+            case DecimalFormat.HASH:
+            case DecimalFormat.ZERO:
             case DecimalFormat.GROUPING_SEPARATOR:
                 this.addCharacterLiteral(c);
                 break;

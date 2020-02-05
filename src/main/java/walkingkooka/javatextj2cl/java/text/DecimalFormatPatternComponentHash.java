@@ -17,14 +17,14 @@
 
 package walkingkooka.javatextj2cl.java.text;
 
-final class DecimalFormatPatternComponentDigit extends DecimalFormatPatternComponent {
+final class DecimalFormatPatternComponentHash extends DecimalFormatPatternComponent {
 
     /**
      * Singleton
      */
-    final static DecimalFormatPatternComponentDigit INSTANCE = new DecimalFormatPatternComponentDigit();
+    final static DecimalFormatPatternComponentHash INSTANCE = new DecimalFormatPatternComponentHash();
 
-    private DecimalFormatPatternComponentDigit() {
+    private DecimalFormatPatternComponentHash() {
         super();
     }
 
@@ -40,6 +40,6 @@ final class DecimalFormatPatternComponentDigit extends DecimalFormatPatternCompo
 
     @Override
     public String toString() {
-        return "" + DecimalFormat.DIGIT;
+        return "" + DecimalFormat.HASH;
     }
 }

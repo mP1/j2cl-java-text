@@ -47,20 +47,6 @@ public final class DecimalFormatPatternParserPrefixSuffixTest extends DecimalFor
     }
 
     @Test
-    public void testDigit() {
-        final char c = DecimalFormat.DIGIT;
-        this.parseAndCheck("" + c,
-                DecimalFormatPatternComponent.characterLiteral(c));
-    }
-
-    @Test
-    public void testDigitZero() {
-        final char c = DecimalFormat.DIGIT_ZERO;
-        this.parseAndCheck("" + c,
-                DecimalFormatPatternComponent.characterLiteral(c));
-    }
-
-    @Test
     public void testExponent() {
         final char c = DecimalFormat.EXPONENT;
         this.parseAndCheck("" + c,
@@ -70,6 +56,13 @@ public final class DecimalFormatPatternParserPrefixSuffixTest extends DecimalFor
     @Test
     public void testGroupingSeparator() {
         final char c = DecimalFormat.GROUPING_SEPARATOR;
+        this.parseAndCheck("" + c,
+                DecimalFormatPatternComponent.characterLiteral(c));
+    }
+
+    @Test
+    public void testHash() {
+        final char c = DecimalFormat.HASH;
         this.parseAndCheck("" + c,
                 DecimalFormatPatternComponent.characterLiteral(c));
     }
@@ -115,16 +108,23 @@ public final class DecimalFormatPatternParserPrefixSuffixTest extends DecimalFor
     }
 
     @Test
-    public void testQuotedDigit() {
-        final char c = DecimalFormat.DIGIT;
+    public void testQuotedHash() {
+        final char c = DecimalFormat.HASH;
         this.parseAndCheck("\'" + c + "\'",
                 DecimalFormatPatternComponent.characterLiteral(c));
     }
 
     @Test
     public void testQuotedZero() {
-        final char c = DecimalFormat.DIGIT_ZERO;
+        final char c = DecimalFormat.ZERO;
         this.parseAndCheck("\'" + c + "\'",
+                DecimalFormatPatternComponent.characterLiteral(c));
+    }
+
+    @Test
+    public void testZero() {
+        final char c = DecimalFormat.ZERO;
+        this.parseAndCheck("" + c,
                 DecimalFormatPatternComponent.characterLiteral(c));
     }
 

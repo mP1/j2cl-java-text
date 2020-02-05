@@ -64,20 +64,6 @@ abstract class DecimalFormatPatternComponent {
     }
 
     /**
-     * {@see DecimalFormatPatternComponentDigit}
-     */
-    static DecimalFormatPatternComponent digit() {
-        return DecimalFormatPatternComponentDigit.INSTANCE;
-    }
-
-    /**
-     * {@see DecimalFormatPatternComponentDigitZero}
-     */
-    static DecimalFormatPatternComponent digitZero() {
-        return DecimalFormatPatternComponentDigitZero.INSTANCE;
-    }
-
-    /**
      * {@see DecimalFormatPatternComponentExponent}
      */
     static DecimalFormatPatternComponent exponent() {
@@ -89,6 +75,13 @@ abstract class DecimalFormatPatternComponent {
      */
     static DecimalFormatPatternComponent groupingSeparator() {
         return DecimalFormatPatternComponentGroupingSeparator.INSTANCE;
+    }
+
+    /**
+     * {@see DecimalFormatPatternComponentHash}
+     */
+    static DecimalFormatPatternComponent hash() {
+        return DecimalFormatPatternComponentHash.INSTANCE;
     }
 
     /**
@@ -110,6 +103,13 @@ abstract class DecimalFormatPatternComponent {
      */
     static DecimalFormatPatternComponent perMille() {
         return DecimalFormatPatternComponentPerMille.INSTANCE;
+    }
+    
+    /**
+     * {@see DecimalFormatPatternComponentZero}
+     */
+    static DecimalFormatPatternComponent zero() {
+        return DecimalFormatPatternComponentZero.INSTANCE;
     }
 
     /**

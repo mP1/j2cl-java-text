@@ -73,13 +73,13 @@ final class DecimalFormatPatternComponentCharacterLiteral extends DecimalFormatP
                 break;
             case DecimalFormat.CURRENCY:
             case DecimalFormat.DECIMAL_SEPARATOR:
-            case DecimalFormat.DIGIT:
-            case DecimalFormat.DIGIT_ZERO:
             case DecimalFormat.EXPONENT:
             case DecimalFormat.GROUPING_SEPARATOR:
+            case DecimalFormat.HASH:
             case DecimalFormat.MINUS_SIGN:
             case DecimalFormat.PERCENT:
             case DecimalFormat.PER_MILLE:
+            case DecimalFormat.ZERO:
                 toString = "'" + value + "'";
                 break;
             default:
