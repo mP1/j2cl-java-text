@@ -161,6 +161,16 @@ public final class DecimalFormatPatternParserPrefixSuffixTest extends DecimalFor
                 DecimalFormatPatternComponent.characterLiteral('D'));
     }
 
+    // toString.........................................................................................................
+
+    @Test
+    public void testToString() {
+        final DecimalFormatPatternParserPrefixSuffix parser = this.createParser("prefix 123");
+        parser.parse();
+
+        this.toStringAndCheck(parser, "10 p, r, e, f, i, x,  , 1, 2, 3");
+    }
+
     // helpers..........................................................................................................
 
     @Override

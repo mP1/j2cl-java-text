@@ -17,6 +17,7 @@
 
 package walkingkooka.javatextj2cl.java.text;
 
+import walkingkooka.ToStringBuilder;
 import walkingkooka.collect.list.Lists;
 
 import java.util.List;
@@ -82,6 +83,9 @@ final class DecimalFormatPatternParserPrefixSuffix extends DecimalFormatPatternP
 
     @Override
     public String toString() {
-        return this.pattern + " " + this.components.toString();
+        return ToStringBuilder.empty()
+                .value(this.position)
+                .value(this.components)
+                .build();
     }
 }
