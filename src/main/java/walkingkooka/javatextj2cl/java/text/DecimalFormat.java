@@ -31,13 +31,11 @@ public class DecimalFormat extends NumberFormat {
 
     final static char DECIMAL_SEPARATOR = '.';
 
-    final static char DIGIT = '#';
-
-    final static char DIGIT_ZERO = '0';
-
     final static char EXPONENT = 'E';
 
     final static char GROUPING_SEPARATOR = ',';
+
+    final static char HASH = '#';
 
     final static char MINUS_SIGN = '-';
 
@@ -48,6 +46,8 @@ public class DecimalFormat extends NumberFormat {
     final static char QUOTE = '\'';
 
     final static char SUB_PATTERN_SEPARATOR = ';';
+
+    final static char ZERO = '0';
 
     /**
      * Language tag to an array of {@link DecimalFormat}, this is used internally to "get" the symbols for a given Locale.

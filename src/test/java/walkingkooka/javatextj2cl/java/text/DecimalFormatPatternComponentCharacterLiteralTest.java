@@ -49,16 +49,6 @@ public final class DecimalFormatPatternComponentCharacterLiteralTest extends Dec
     }
 
     @Test
-    public void testToStringDigit() {
-        this.toStringAndCheck('#', "'#'");
-    }
-
-    @Test
-    public void testToStringDigitZero() {
-        this.toStringAndCheck('0', "'0'");
-    }
-
-    @Test
     public void testToStringExponent() {
         this.toStringAndCheck('E', "'E'");
     }
@@ -66,6 +56,11 @@ public final class DecimalFormatPatternComponentCharacterLiteralTest extends Dec
     @Test
     public void testToStringGroupingSeparator() {
         this.toStringAndCheck(',', "','");
+    }
+
+    @Test
+    public void testToStringHash() {
+        this.toStringAndCheck('#', "'#'");
     }
 
     @Test
@@ -81,6 +76,11 @@ public final class DecimalFormatPatternComponentCharacterLiteralTest extends Dec
     @Test
     public void testToStringPerMille() {
         this.toStringAndCheck('\u2030', "'\u2030'");
+    }
+    
+    @Test
+    public void testToStringZero() {
+        this.toStringAndCheck('0', "'0'");
     }
 
     private void toStringAndCheck(final char value,
