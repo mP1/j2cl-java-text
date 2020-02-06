@@ -50,12 +50,18 @@ public abstract class DecimalFormatPatternParserTestCase<P extends DecimalFormat
 
     final void parseFails(final P parser,
                           final int position) {
+        final String pattern = parser.pattern;
+
         assertThrows(IllegalArgumentException.class,
-                () -> new java.text.DecimalFormat());
+                () -> new java.text.DecimalFormat(pattern),
+                () -> "pattern " + CharSequences.quoteAndEscape(pattern) + " by java.text.DecimalFormat");
+
         final InvalidCharacterException thrown = assertThrows(InvalidCharacterException.class,
-                () -> parser.parse());
-        assertEquals(position, thrown.position(), "position");
-        assertEquals(parser.pattern, thrown.text(), "text");
+                () -> parser.parse(),
+                () -> "pattern "+ CharSequences.quoteAndEscape(pattern) + " by " + DecimalFormat.class.getName() + " " + parser);
+
+        assertEquals(position, thrown.position(), () -> "position in " + CharSequences.quoteAndEscape(pattern));
+        assertEquals(pattern, thrown.text(), () -> "text in " + CharSequences.quoteAndEscape(pattern));
     }
 
     // helpers..........................................................................................................

@@ -67,8 +67,12 @@ abstract class DecimalFormatPatternParser {
                 default:
                     NeverError.unhandledCase(escapedMode, MODE_NORMAL, MODE_ESCAPED, MODE_CLOSING_QUOTE);
             }
+            if (this.isFinished()) {
+                break;
+            }
             this.position++;
         }
+        this.onComplete();
     }
 
     private final static int MODE_NORMAL = 1;
@@ -81,29 +85,40 @@ abstract class DecimalFormatPatternParser {
     abstract void handle(final char c);
 
     /**
+     * Provides a way for sub pattern separators to terminate parsing early.
+     */
+    abstract boolean isFinished();
+
+    /**
+     * Called when parsing is complete.
+     */
+    abstract void onComplete();
+
+    /**
      * Handles currency symbols in a pattern, including detection of double currency symbol and transforming that into the international sign.
      */
     final void currency() {
-        final List<DecimalFormatPatternComponent> components = this.components();
+        final List<DecimalFormatPatternComponent> components = this.nonNumberComponents();
         final int last = components.size() - 1;
 
         final boolean currency;
         if (last >= 0) {
             currency = components.get(last) instanceof DecimalFormatPatternComponentCurrencySign;
             if (currency) {
-                components.remove(last); // will be replaced by currencyInternationalSign in #addComponent
+                components.remove(last); // will be replaced by currencyInternationalSign in #addNonNumberComponent
             }
         } else {
             currency = false;
         }
 
-        this.addComponent(currency ?
+        this.addNonNumberComponent(currency ?
                 DecimalFormatPatternComponent.currencyInternationalSign() :
                 DecimalFormatPatternComponent.currencySign());
+        this.currency = true;
     }
 
     final void minusSign() {
-        this.addComponent(DecimalFormatPatternComponent.minusSign());
+        this.addNonNumberComponent(DecimalFormatPatternComponent.minusSign());
     }
 
     // multipliers......................................................................................................
@@ -122,28 +137,35 @@ abstract class DecimalFormatPatternParser {
             this.failInvalidCharacter();
         }
         this.multiplier = multiplier;
-        this.addComponent(component);
+        this.addNonNumberComponent(component);
     }
 
-    private int multiplier = DecimalFormatPatternComponent.DEFAULT_MULTIPLIER;
+    int multiplier = DecimalFormatPatternComponent.DEFAULT_MULTIPLIER;
 
     // text literal.....................................................................................................
 
+    /**
+     * Adds a character literal to the components being captured.
+     */
     final void addCharacterLiteral(final char c) {
-        this.addComponent(DecimalFormatPatternComponent.characterLiteral(c));
+        this.addNonNumberComponent(DecimalFormatPatternComponent.characterLiteral(c));
     }
 
     // component........................................................................................................
 
-    abstract void addComponent(final DecimalFormatPatternComponent component);
+    abstract void addNonNumberComponent(final DecimalFormatPatternComponent component);
 
-    abstract List<DecimalFormatPatternComponent> components();
+    abstract List<DecimalFormatPatternComponent> nonNumberComponents();
 
     /**
      * Used to report an invalid pattern character.
      */
     final void failInvalidCharacter() {
-        throw new InvalidCharacterException(this.pattern, this.position);
+        this.failInvalidCharacter(this.position);
+    }
+
+    final void failInvalidCharacter(final int position) {
+        throw new InvalidCharacterException(this.pattern, position);
     }
 
     /**
@@ -155,4 +177,9 @@ abstract class DecimalFormatPatternParser {
      * Points to the current character in the pattern. This is used to build fail messages.
      */
     int position;
+
+    /**
+     * Becomes true when a currency symbol is encountered. This will trigger replacing decimalSeparator with currencySeparator.
+     */
+    boolean currency;
 }
