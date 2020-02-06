@@ -66,10 +66,13 @@ final class DecimalFormatPatternParserNumber extends DecimalFormatPatternParser 
         if (-1 != this.decimalSeparator) {
             this.failInvalidCharacter();
         }
-        this.decimalSeparator = this.position;
+        this.decimalSeparator = this.number.size();
         this.addNumberComponent(DecimalFormatPatternComponent.decimalSeparator());
     }
 
+    /**
+     * An index into {@link #number} holding the position of any decimal separator.
+     */
     private int decimalSeparator = -1;
 
     /**
@@ -221,7 +224,8 @@ final class DecimalFormatPatternParserNumber extends DecimalFormatPatternParser 
     }
 
     private void currencySeparatorFix() {
-        if (-1 != this.decimalSeparator) {
+        final int decimalSeparator = this.decimalSeparator;
+        if (-1 != decimalSeparator) {
             if (this.currency) {
                 this.number.set(decimalSeparator, DecimalFormatPatternComponent.currencySeparator());
             }

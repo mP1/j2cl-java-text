@@ -97,6 +97,36 @@ public final class DecimalFormatPatternParserNumberTest extends DecimalFormatPat
     }
 
     @Test
+    public void testDecimalSeparatorCurrency2() {
+        final DecimalFormatPatternParserNumber parser = this.createParser("" + DecimalFormat.HASH + DecimalFormat.DECIMAL_SEPARATOR + DecimalFormat.CURRENCY);
+        this.parseNumberAndCheck(parser,
+                NO_COMPONENTS,
+                list(DecimalFormatPatternComponent.hash(), DecimalFormatPatternComponent.currencySeparator()),
+                list(DecimalFormatPatternComponent.currencySign()));
+        this.checkMode(parser, DecimalFormatPatternParserNumberMode.FRACTION);
+    }
+
+    @Test
+    public void testDecimalSeparatorCurrencyWithPrefix() {
+        final DecimalFormatPatternParserNumber parser = this.createParser("A" + DecimalFormat.DECIMAL_SEPARATOR + DecimalFormat.CURRENCY);
+        this.parseNumberAndCheck(parser,
+                list(DecimalFormatPatternComponent.characterLiteral('A')),
+                list(DecimalFormatPatternComponent.currencySeparator()),
+                list(DecimalFormatPatternComponent.currencySign()));
+        this.checkMode(parser, DecimalFormatPatternParserNumberMode.FRACTION);
+    }
+
+    @Test
+    public void testDecimalSeparatorCurrencyWithPrefix2() {
+        final DecimalFormatPatternParserNumber parser = this.createParser("ABC" + DecimalFormat.DECIMAL_SEPARATOR + DecimalFormat.CURRENCY);
+        this.parseNumberAndCheck(parser,
+                list(DecimalFormatPatternComponent.characterLiteral('A'), DecimalFormatPatternComponent.characterLiteral('B'), DecimalFormatPatternComponent.characterLiteral('C')),
+                list(DecimalFormatPatternComponent.currencySeparator()),
+                list(DecimalFormatPatternComponent.currencySign()));
+        this.checkMode(parser, DecimalFormatPatternParserNumberMode.FRACTION);
+    }
+
+    @Test
     public void testDecimalSeparatorExponentFails() {
         this.parseFails("" + DecimalFormat.DECIMAL_SEPARATOR + DecimalFormat.EXPONENT, 1);
     }
