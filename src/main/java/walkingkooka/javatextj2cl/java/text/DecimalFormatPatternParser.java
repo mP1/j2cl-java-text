@@ -72,6 +72,11 @@ abstract class DecimalFormatPatternParser {
             }
             this.position++;
         }
+
+        if(MODE_CLOSING_QUOTE == escapedMode) {
+            this.failInvalidCharacter(this.position -1);
+        }
+
         this.onComplete();
     }
 

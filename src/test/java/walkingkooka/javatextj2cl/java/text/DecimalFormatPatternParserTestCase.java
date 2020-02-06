@@ -17,12 +17,10 @@
 
 package walkingkooka.javatextj2cl.java.text;
 
+import org.junit.jupiter.api.Test;
 import walkingkooka.InvalidCharacterException;
 import walkingkooka.ToStringTesting;
-import walkingkooka.collect.list.Lists;
 import walkingkooka.text.CharSequences;
-
-import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -32,6 +30,21 @@ public abstract class DecimalFormatPatternParserTestCase<P extends DecimalFormat
 
     DecimalFormatPatternParserTestCase() {
         super();
+    }
+
+    @Test
+    public final void testUnclosedQuoteFails() {
+        this.parseFails("'A", 1);
+    }
+
+    @Test
+    public final void testUnclosedQuoteFails2() {
+        this.parseFails("AB'C", 3);
+    }
+
+    @Test
+    public final void testUnclosedQuoteFails3() {
+        this.parseFails("#'A#", 3);
     }
 
     final void parseFails(final String pattern,
