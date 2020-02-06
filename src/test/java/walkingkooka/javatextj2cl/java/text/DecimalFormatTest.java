@@ -884,22 +884,22 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
                        final Locale locale) {
         // the commented out tests will fail because the pattern is not parsed and the tested values not correctly set.
 
-        assertEquals(jdk.getCurrency(), emul.getCurrency(), () -> "currency " + locale);
-//        assertEquals(jdk.getGroupingSize(), emul.getGroupingSize(), () -> "groupingSize " + locale);
-//        assertEquals(jdk.isGroupingUsed(), emul.isGroupingUsed(), () -> "groupingUsed " + locale);
-//        assertEquals(jdk.getMaximumFractionDigits(), emul.getMaximumFractionDigits(), () -> "maximumFractionDigits " + locale);
-        assertEquals(jdk.getMinimumFractionDigits(), emul.getMinimumFractionDigits(), () -> "minimumFractionDigits " + locale);
-//        assertEquals(jdk.getMaximumIntegerDigits(), emul.getMaximumIntegerDigits(), () -> "maximumIntegerDigits " + locale);
-        assertEquals(jdk.getMinimumIntegerDigits(), emul.getMinimumIntegerDigits(), () -> "minimumIntegerDigits " + locale);
-        assertEquals(jdk.getMultiplier(), emul.getMultiplier(), () -> "multiplier " + locale);
-        assertEquals(jdk.getNegativePrefix(), emul.getNegativePrefix(), () -> "negativePrefix " + locale);
-        assertEquals(jdk.getNegativeSuffix(), emul.getNegativeSuffix(), () -> "negativeSuffix " + locale);
-        assertEquals(jdk.isParseBigDecimal(), emul.isParseBigDecimal(), () -> "parseBigDecimal " + locale);
-        assertEquals(jdk.isParseIntegerOnly(), emul.isParseIntegerOnly(), () -> "parseIntegerOnly " + locale);
-//        assertEquals(jdk.toPattern(), emul.toPattern(), () -> "pattern " + locale);
-        assertEquals(jdk.getPositivePrefix(), emul.getPositivePrefix(), () -> "positivePrefix " + locale);
-        assertEquals(jdk.getPositiveSuffix(), emul.getPositiveSuffix(), () -> "positiveSuffix " + locale);
-        assertEquals(jdk.getRoundingMode(), emul.getRoundingMode(), () -> "roundingMode " + locale);
+        assertEquals(jdk.getCurrency(), emul.getCurrency(), () -> "currency " + locale + " " + emul);
+//        assertEquals(jdk.getGroupingSize(), emul.getGroupingSize(), () -> "groupingSize " + locale + " " + emul);
+//        assertEquals(jdk.isGroupingUsed(), emul.isGroupingUsed(), () -> "groupingUsed " + locale + " " + emul);
+//        assertEquals(jdk.getMaximumFractionDigits(), emul.getMaximumFractionDigits(), () -> "maximumFractionDigits " + locale + " " + emul);
+        assertEquals(jdk.getMinimumFractionDigits(), emul.getMinimumFractionDigits(), () -> "minimumFractionDigits " + locale + " " + emul);
+        assertEquals(jdk.getMaximumIntegerDigits(), emul.getMaximumIntegerDigits(), () -> "maximumIntegerDigits " + locale + " " + emul);
+        assertEquals(jdk.getMinimumIntegerDigits(), emul.getMinimumIntegerDigits(), () -> "minimumIntegerDigits " + locale + " " + emul);
+        assertEquals(jdk.getMultiplier(), emul.getMultiplier(), () -> "multiplier " + locale + " " + emul);
+        assertEquals(jdk.getNegativePrefix(), emul.getNegativePrefix(), () -> "negativePrefix " + locale + " " + emul);
+        assertEquals(jdk.getNegativeSuffix(), emul.getNegativeSuffix(), () -> "negativeSuffix " + locale + " " + emul);
+        assertEquals(jdk.isParseBigDecimal(), emul.isParseBigDecimal(), () -> "parseBigDecimal " + locale + " " + emul);
+        assertEquals(jdk.isParseIntegerOnly(), emul.isParseIntegerOnly(), () -> "parseIntegerOnly " + locale + " " + emul);
+//        assertEquals(jdk.toPattern(), emul.toPattern(), () -> "pattern " + locale + " " + emul);
+        assertEquals(jdk.getPositivePrefix(), emul.getPositivePrefix(), () -> "positivePrefix " + locale + " " + emul);
+        assertEquals(jdk.getPositiveSuffix(), emul.getPositiveSuffix(), () -> "positiveSuffix " + locale + " " + emul);
+        assertEquals(jdk.getRoundingMode(), emul.getRoundingMode(), () -> "roundingMode " + locale + " " + emul);
 
         this.check(jdk.getDecimalFormatSymbols(), emul.getDecimalFormatSymbols(), locale);
     }
@@ -1020,7 +1020,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
     @Test
     public void testToString() {
         this.toStringAndCheck(this.createObject(),
-                "currency=AUD groupingSize=10 groupingUsed=true maximumFractionDigits=8 minimumFractionDigits=4 maximumIntegerDigits=20 minimumIntegerDigits=10 multiplier=100 negativePrefix=\"NegativePrefix1\" negativeSuffix=\"NegativeSuffix2\" pattern=\"#\" positivePrefix=\"PositivePrefix1\" positiveSuffix=\"PositiveSuffix2\" roundingMode=HALF_EVEN symbols=currency=AUD currencySymbol=\"$\" decimalSeparator='.' digit='#' exponentSeparator=\"e\" groupingSeparator=',' infinity=\"∞\" internationalCurrencySymbol=\"AUD\" minusSign='-' monetaryDecimalSeparator='.' nan=\"NaN\" patternSeparator=';' percent='%' perMill='‰' zeroDigit='0'");
+                "currency=AUD groupingSize=10 groupingUsed=true maximumFractionDigits=8 minimumFractionDigits=4 maximumIntegerDigits=20 minimumIntegerDigits=10 multiplier=100 negativePrefix=\"NegativePrefix1\" negativeSuffix=\"NegativeSuffix2\" positivePrefix=\"PositivePrefix1\" positiveNumberComponents=# positiveSuffix=\"PositiveSuffix2\" roundingMode=HALF_EVEN symbols=currency=AUD currencySymbol=\"$\" decimalSeparator='.' digit='#' exponentSeparator=\"e\" groupingSeparator=',' infinity=\"∞\" internationalCurrencySymbol=\"AUD\" minusSign='-' monetaryDecimalSeparator='.' nan=\"NaN\" patternSeparator=';' percent='%' perMill='‰' zeroDigit='0'");
     }
 
     // ClassTesting.....................................................................................................

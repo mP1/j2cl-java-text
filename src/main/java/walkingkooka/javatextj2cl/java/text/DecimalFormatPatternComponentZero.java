@@ -39,6 +39,12 @@ final class DecimalFormatPatternComponentZero extends DecimalFormatPatternCompon
     }
 
     @Override
+    void toPattern(final DecimalFormat format,
+                   final StringBuilder pattern) {
+        pattern.append(DecimalFormat.ZERO);
+    }
+
+    @Override
     public String toString() {
         return "" + DecimalFormat.ZERO;
     }
