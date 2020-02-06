@@ -424,8 +424,6 @@ public class DecimalFormat extends NumberFormat {
         this.setGroupingSize(groupingSeparator);
         this.setMultiplier(multiplier);
 
-        // TODO fix up currency,grouping,minus placeholders in prefix/suffix.
-
         this.positivePrefixComponents = positivePrefixComponents;
         this.positivePrefix = this.toPattern(positivePrefixComponents);
         this.positiveNumberComponents = positiveNumberComponents;
