@@ -42,6 +42,12 @@ final class DecimalFormatPatternComponentDecimalSeparator extends DecimalFormatP
     }
 
     @Override
+    void toPattern(final DecimalFormat format,
+                   final StringBuilder pattern) {
+        pattern.append(format.symbols.getDecimalSeparator());
+    }
+
+    @Override
     public String toString() {
         return "" + DecimalFormat.DECIMAL_SEPARATOR;
     }

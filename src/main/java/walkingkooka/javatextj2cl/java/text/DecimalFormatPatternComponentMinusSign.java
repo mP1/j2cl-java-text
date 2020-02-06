@@ -42,6 +42,12 @@ final class DecimalFormatPatternComponentMinusSign extends DecimalFormatPatternC
     }
 
     @Override
+    void toPattern(final DecimalFormat format,
+                   final StringBuilder pattern) {
+        pattern.append(format.symbols.getMinusSign());
+    }
+
+    @Override
     public String toString() {
         return "" + DecimalFormat.MINUS_SIGN;
     }

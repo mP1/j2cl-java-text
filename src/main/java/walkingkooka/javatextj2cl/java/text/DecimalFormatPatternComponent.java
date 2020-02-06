@@ -129,6 +129,12 @@ abstract class DecimalFormatPatternComponent {
      */
     abstract int multiplier();
 
+    /**
+     * Used to materialise this component into the {@link String} form for a prefix or suffix.
+     */
+    abstract void toPattern(final DecimalFormat format,
+                            final StringBuilder pattern);
+
     @Override
     public abstract String toString();
 }

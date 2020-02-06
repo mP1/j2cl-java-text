@@ -42,6 +42,12 @@ final class DecimalFormatPatternComponentPercent extends DecimalFormatPatternCom
     }
 
     @Override
+    void toPattern(final DecimalFormat format,
+                   final StringBuilder pattern) {
+        pattern.append(format.symbols.getPercent());
+    }
+
+    @Override
     public String toString() {
         return "" + DecimalFormat.PERCENT;
     }

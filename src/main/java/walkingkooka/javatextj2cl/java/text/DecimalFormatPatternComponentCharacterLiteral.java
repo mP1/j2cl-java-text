@@ -46,6 +46,12 @@ final class DecimalFormatPatternComponentCharacterLiteral extends DecimalFormatP
         return 0;
     }
 
+    @Override
+    void toPattern(final DecimalFormat format,
+                   final StringBuilder pattern) {
+        pattern.append(this.value);
+    }
+
     // Object...........................................................................................................
 
     @Override

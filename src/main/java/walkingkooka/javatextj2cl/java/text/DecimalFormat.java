@@ -19,6 +19,7 @@ package walkingkooka.javatextj2cl.java.text;
 
 import walkingkooka.NeverError;
 import walkingkooka.ToStringBuilder;
+import walkingkooka.collect.list.Lists;
 
 import java.math.RoundingMode;
 import java.util.Currency;
@@ -294,8 +295,8 @@ public class DecimalFormat extends NumberFormat {
         final DecimalFormat decimalFormat = forDefaultLocale();
 
         this.copySkipPatternSkipSymbols(decimalFormat);
-        this.applyPattern(pattern); // ignore the decimalFormat.symbols
         this.symbols = decimalFormat.symbols;
+        this.applyPattern(pattern); // ignore the decimalFormat.symbols
     }
 
     /**
@@ -313,8 +314,8 @@ public class DecimalFormat extends NumberFormat {
         final DecimalFormat decimalFormat = forDefaultLocale();
 
         this.copySkipPatternSkipSymbols(decimalFormat);
-        this.applyPattern(pattern); // ignore the decimalFormat.pattern
         this.setDecimalFormatSymbols(symbols); // ignore the decimalFormat.symbols
+        this.applyPattern(pattern); // ignore the decimalFormat.pattern
     }
 
     /**
@@ -356,6 +357,12 @@ public class DecimalFormat extends NumberFormat {
 
     private void copyPattern(final DecimalFormat copy) {
         this.pattern = copy.pattern;
+
+        this.positivePrefix = copy.positivePrefix;
+        this.positivePrefixComponents = copy.positivePrefixComponents;
+        this.positiveNumberComponents = copy.positiveNumberComponents;
+        this.positiveSuffix = copy.positiveSuffix;
+        this.positiveSuffixComponents = copy.positiveSuffixComponents;
     }
 
     /**
@@ -367,7 +374,69 @@ public class DecimalFormat extends NumberFormat {
      */
     public void applyPattern(final String pattern) {
         Objects.requireNonNull(pattern, "pattern");
-        this.pattern = pattern;
+
+        final DecimalFormatPatternParserNumber positive = DecimalFormatPatternParserNumber.with(pattern, 0);
+        positive.parse();
+
+        boolean currency = positive.currency;
+
+        final int groupingSeparator = positive.groupingSeparator;
+        final int multiplier = positive.multiplier;
+
+        // String versions will be computed later.
+        final List<DecimalFormatPatternComponent> positivePrefixComponents = positive.prefix;
+        final List<DecimalFormatPatternComponent> positiveNumberComponents = positive.number;
+        final List<DecimalFormatPatternComponent> positiveSuffixComponents = positive.suffix;
+
+        final List<DecimalFormatPatternComponent> negativePrefixComponents;
+        final List<DecimalFormatPatternComponent> negativeNumberComponents;
+        final List<DecimalFormatPatternComponent> negativeSuffixComponents;
+
+        final int position = positive.position;
+        if (position < pattern.length()) {
+            final DecimalFormatPatternParserNumber negative = DecimalFormatPatternParserNumber.with(pattern, position + 1);
+            negative.parse();
+
+            // if negative pattern has its on subPatternSeparator character fail!
+            if (negative.subPatternSeparator) {
+                negative.failInvalidCharacter();
+            }
+
+            currency |= negative.currency;
+
+            negativePrefixComponents = negative.prefix;
+            negativeNumberComponents = negative.number;
+            negativeSuffixComponents = negative.suffix;
+
+            // ignore groupingSeparator, multiplier from negative.
+        } else {
+            // no negative pattern...negative prefix is minus sign + positive prefix
+            negativePrefixComponents = Lists.array();
+            negativePrefixComponents.add(DecimalFormatPatternComponent.minusSign());
+            negativePrefixComponents.addAll(positivePrefixComponents);
+
+            negativeNumberComponents = null;
+
+            negativeSuffixComponents = positiveSuffixComponents;
+        }
+
+        // commit pattern changes to this.
+        this.setGroupingSize(groupingSeparator);
+        this.setMultiplier(multiplier);
+
+        // TODO fix up currency,grouping,minus placeholders in prefix/suffix.
+
+        this.positivePrefixComponents = positivePrefixComponents;
+        this.positivePrefix = this.toPattern(positivePrefixComponents);
+        this.positiveNumberComponents = positiveNumberComponents;
+        this.positiveSuffixComponents = positiveSuffixComponents;
+        this.positiveSuffix = this.toPattern(positiveSuffixComponents);
+
+        this.negativePrefixComponents = negativePrefixComponents;
+        this.negativePrefix = this.toPattern(negativePrefixComponents);
+        this.negativeNumberComponents = negativeNumberComponents;
+        this.negativeSuffixComponents = negativeSuffixComponents;
+        this.negativeSuffix = this.toPattern(negativeSuffixComponents);
     }
 
     /**
@@ -377,8 +446,48 @@ public class DecimalFormat extends NumberFormat {
      * @return the non-localized pattern.
      */
     public String toPattern() {
-        return this.pattern.toString();
+        if (null == this.pattern) {
+            final StringBuilder b = new StringBuilder();
+
+            b.append(this.positivePrefix);
+            b.append(this.toPattern(this.positiveNumberComponents));
+            b.append(this.positiveSuffix);
+
+            final List<DecimalFormatPatternComponent> negative = negativeNumberComponents;
+            if (null != negative) {
+                b.append(this.negativePrefix);
+                b.append(this.toPattern(negative));
+                b.append(this.negativeSuffix);
+            }
+
+            this.pattern = b.toString();
+        }
+        return this.pattern;
     }
+
+    private String toPattern(final List<DecimalFormatPatternComponent> components) {
+        final DecimalFormatSymbols symbols = this.symbols;
+
+        final StringBuilder b = new StringBuilder();
+        for (final DecimalFormatPatternComponent component : components) {
+            component.toPattern(this, b);
+        }
+
+        return b.toString();
+    }
+
+    /**
+     * Forces the pattern to be rebuild because a prefix or suffix changed.
+     * If this holds a single pattern ignore any changes to negative prefix/suffix.
+     */
+    private void recomputePattern(final boolean negative) {
+        if (negative && null != this.negativeNumberComponents) {
+            this.pattern = null;
+        }
+    }
+
+    private final static boolean NEGATIVE = true;
+    private final static boolean POSITIVE = false;
 
     private String pattern;
 
@@ -401,6 +510,16 @@ public class DecimalFormat extends NumberFormat {
                         final ParsePosition position) {
         throw new UnsupportedOperationException();
     }
+
+    /**
+     * Positive ill never be null and will be updated by {@link #applyPattern(String)}.
+     */
+    private List<DecimalFormatPatternComponent> positiveNumberComponents;
+
+    /**
+     * When the initial pattern had no negative sub pattern, this will be null.
+     */
+    private List<DecimalFormatPatternComponent> negativeNumberComponents;
 
     // currency.........................................................................................................
 
@@ -447,10 +566,12 @@ public class DecimalFormat extends NumberFormat {
 
     public void setNegativePrefix(final String negativePrefix) {
         this.negativePrefix = negativePrefix;
+        this.recomputePattern(NEGATIVE);
     }
 
     private String negativePrefix;
-    
+    private List<DecimalFormatPatternComponent> negativePrefixComponents;
+
     // NegativeSuffix.....................................................................................................
 
     public String getNegativeSuffix() {
@@ -459,9 +580,11 @@ public class DecimalFormat extends NumberFormat {
 
     public void setNegativeSuffix(final String negativeSuffix) {
         this.negativeSuffix = negativeSuffix;
+        this.recomputePattern(NEGATIVE);
     }
 
     private String negativeSuffix;
+    private List<DecimalFormatPatternComponent> negativeSuffixComponents;
 
     // parseBigDecimal...................................................................................................
 
@@ -485,9 +608,11 @@ public class DecimalFormat extends NumberFormat {
 
     public void setPositivePrefix(final String positivePrefix) {
         this.positivePrefix = positivePrefix;
+        this.recomputePattern(POSITIVE);
     }
 
     private String positivePrefix;
+    private List<DecimalFormatPatternComponent> positivePrefixComponents;
 
     // PositiveSuffix.....................................................................................................
 
@@ -497,10 +622,12 @@ public class DecimalFormat extends NumberFormat {
 
     public void setPositiveSuffix(final String positiveSuffix) {
         this.positiveSuffix = positiveSuffix;
+        this.recomputePattern(POSITIVE);
     }
 
     private String positiveSuffix;
-    
+    private List<DecimalFormatPatternComponent> positiveSuffixComponents;
+
     // RoundingMode.....................................................................................................
 
     public RoundingMode getRoundingMode() {
@@ -538,7 +665,7 @@ public class DecimalFormat extends NumberFormat {
         }
     }
 
-    private DecimalFormatSymbols symbols;
+    DecimalFormatSymbols symbols;
 
     // clone...........................................................................................................
 
@@ -558,10 +685,12 @@ public class DecimalFormat extends NumberFormat {
                 this.groupingUsed,
                 this.multiplier,
                 this.negativePrefix,
+                this.negativeNumberComponents,
                 this.negativeSuffix,
                 this.parseBigDecimal,
                 this.pattern,
                 this.positivePrefix,
+                this.positiveNumberComponents,
                 this.positiveSuffix,
                 this.roundingMode,
                 this.symbols);
@@ -587,11 +716,12 @@ public class DecimalFormat extends NumberFormat {
                 this.minimumIntegerDigits == other.minimumIntegerDigits &&
                 this.multiplier == other.multiplier &&
                 this.negativePrefix.equals(other.negativePrefix) &&
+                Objects.equals(this.negativeNumberComponents, other.negativeNumberComponents) &&
                 this.negativeSuffix.equals(other.negativeSuffix) &&
                 this.parseBigDecimal == other.parseBigDecimal &&
                 this.parseIntegerOnly == other.parseIntegerOnly &&
-                this.pattern.equals(other.pattern) &&
                 this.positivePrefix.equals(other.positivePrefix) &&
+                this.positiveNumberComponents.equals(other.positiveNumberComponents) &&
                 this.positiveSuffix.equals(other.positiveSuffix) &&
                 this.roundingMode == other.roundingMode &&
                 this.symbols.equals(other.symbols);
@@ -609,11 +739,13 @@ public class DecimalFormat extends NumberFormat {
                 .label("minimumIntegerDigits").value(this.minimumIntegerDigits)
                 .label("multiplier").value(this.multiplier)
                 .label("negativePrefix").value(this.negativePrefix)
+                .label("negativePrefix").value(this.negativeNumberComponents)
                 .label("negativeSuffix").value(this.negativeSuffix)
                 .label("parseBigDecimalOnly").value(this.parseBigDecimal)
                 .label("parseIntegerOnly").value(this.parseIntegerOnly)
                 .label("pattern").value(this.pattern)
                 .label("positivePrefix").value(this.positivePrefix)
+                .label("positiveNumberComponents").value(this.positiveNumberComponents)
                 .label("positiveSuffix").value(this.positiveSuffix)
                 .label("roundingMode").value(this.roundingMode)
                 .label("symbols").value(this.symbols)

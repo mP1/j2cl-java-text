@@ -140,7 +140,7 @@ final class DecimalFormatPatternParserNumber extends DecimalFormatPatternParser 
     /**
      * Kept to help produce accurate {@link walkingkooka.InvalidCharacterException} messages.
      */
-    private int groupingSeparator = -1;
+    int groupingSeparator = -1;
 
     // hash.............................................................................................................
 

@@ -42,6 +42,12 @@ final class DecimalFormatPatternComponentPerMille extends DecimalFormatPatternCo
     }
 
     @Override
+    void toPattern(final DecimalFormat format,
+                   final StringBuilder pattern) {
+        pattern.append(format.symbols.getPerMill());
+    }
+
+    @Override
     public String toString() {
         return "" + DecimalFormat.PER_MILLE;
     }
