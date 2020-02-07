@@ -885,7 +885,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
         // the commented out tests will fail because the pattern is not parsed and the tested values not correctly set.
 
         assertEquals(jdk.getCurrency(), emul.getCurrency(), () -> "currency " + locale + " " + emul);
-//        assertEquals(jdk.getGroupingSize(), emul.getGroupingSize(), () -> "groupingSize " + locale + " " + emul);
+        assertEquals(jdk.getGroupingSize(), emul.getGroupingSize(), () -> "groupingSize " + locale + " " + emul);
         assertEquals(jdk.isGroupingUsed(), emul.isGroupingUsed(), () -> "groupingUsed " + locale + " " + emul);
         assertEquals(jdk.getMaximumFractionDigits(), emul.getMaximumFractionDigits(), () -> "maximumFractionDigits " + locale + " " + emul);
         assertEquals(jdk.getMinimumFractionDigits(), emul.getMinimumFractionDigits(), () -> "minimumFractionDigits " + locale + " " + emul);

@@ -20,6 +20,7 @@ package walkingkooka.javatextj2cl.java.text;
 import walkingkooka.ToStringBuilder;
 import walkingkooka.collect.list.Lists;
 
+import java.text.DecimalFormat;
 import java.util.List;
 
 /**
@@ -92,7 +93,6 @@ final class DecimalFormatPatternParserNumber extends DecimalFormatPatternParser 
 
         this.number.add(DecimalFormatPatternComponent.exponent());
         this.setMode(DecimalFormatPatternParserNumberMode.EXPONENT);
-        this.checkGroupingSeparator();
         this.exponent = position;
     }
 
@@ -123,24 +123,36 @@ final class DecimalFormatPatternParserNumber extends DecimalFormatPatternParser 
 
     private void checkGroupingSeparator() {
         // if number ends in grouping its a bad pattern
-        final int groupingSeparator = this.computeGroupingSeparator();
-        if (0 == groupingSeparator) {
+        if (0 == this.groupingSize()) {
             this.failInvalidCharacter(this.groupingSeparator);
         }
     }
 
-    int computeGroupingSeparator() {
-        final List<DecimalFormatPatternComponent> number = this.number;
-        final int index = number.lastIndexOf(DecimalFormatPatternComponent.groupingSeparator());
-        return -1 == index ?
-                -1 :
-                number.size() - index - 1;
+    int groupingSize() {
+        if (-1 != this.groupingSeparator && -1 == this.groupingSize) {
+            final List<DecimalFormatPatternComponent> number = this.number;
+            int decimal = this.decimalSeparator;
+            if (-1 == decimal) {
+                decimal = number.size();
+            }
+
+            final int index = number.lastIndexOf(DecimalFormatPatternComponent.groupingSeparator());
+            this.groupingSize = -1 == index ?
+                    -1 :
+                    decimal - index - 1;
+        }
+        return this.groupingSize;
     }
 
     /**
      * Kept to help produce accurate {@link walkingkooka.InvalidCharacterException} messages.
      */
-    int groupingSeparator = -1;
+    private int groupingSeparator = -1;
+
+    /**
+     * The computed groupingSeparator for {@link DecimalFormat#getGroupingSize()}
+     */
+    int groupingSize = -1;
 
     // hash.............................................................................................................
 

@@ -380,7 +380,7 @@ public class DecimalFormat extends NumberFormat {
 
         boolean currency = positive.currency;
 
-        final int groupingSeparator = positive.groupingSeparator;
+        final int groupingSize = positive.groupingSize;
         final int multiplier = positive.multiplier;
 
         // String versions will be computed later.
@@ -421,8 +421,8 @@ public class DecimalFormat extends NumberFormat {
         }
 
         // commit pattern changes to this.
-        this.setGroupingSize(groupingSeparator);
-        this.setGroupingUsed(groupingSeparator > 0);
+        this.setGroupingSize(groupingSize);
+        this.setGroupingUsed(groupingSize > 0);
         this.setMultiplier(multiplier);
 
         this.maximumFractionDigits = positive.maximumFractionDigits;

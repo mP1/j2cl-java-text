@@ -781,7 +781,7 @@ public final class DecimalFormatPatternParserNumberTest extends DecimalFormatPat
 
     private void checkGroupingSeparator(final DecimalFormatPatternParserNumber parser,
                                         final int groupingSeparator) {
-        assertEquals(groupingSeparator, parser.computeGroupingSeparator(), () -> "groupingSeparator " + parser);
+        assertEquals(groupingSeparator, parser.groupingSize(), () -> "groupingSeparator " + parser);
     }
 
     private void checkFraction(final DecimalFormatPatternParserNumber parser,
