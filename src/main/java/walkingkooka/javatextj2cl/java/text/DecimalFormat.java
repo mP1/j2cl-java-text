@@ -422,6 +422,7 @@ public class DecimalFormat extends NumberFormat {
 
         // commit pattern changes to this.
         this.setGroupingSize(groupingSeparator);
+        this.setGroupingUsed(groupingSeparator > 0);
         this.setMultiplier(multiplier);
 
         this.maximumFractionDigits = positive.maximumFractionDigits;
