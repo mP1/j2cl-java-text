@@ -735,6 +735,7 @@ public class DecimalFormat extends NumberFormat {
     @Override
     public String toString() {
         return ToStringBuilder.empty()
+                .valueSeparator("")
                 .label("currency").value(this.currency)
                 .label("groupingSize").value(this.groupingSize)
                 .label("groupingUsed").value(this.groupingUsed)
