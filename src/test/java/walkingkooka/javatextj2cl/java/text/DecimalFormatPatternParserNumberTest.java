@@ -673,7 +673,7 @@ public final class DecimalFormatPatternParserNumberTest extends DecimalFormatPat
         final DecimalFormatPatternParserNumber parser = this.createParser("P#00S");
         parser.parse();
 
-        this.toStringAndCheck(parser, "\"P#00S\" prefix=P number=#, 0, 0 suffix=S");
+        this.toStringAndCheck(parser, "\"P#00S\" prefix=P number=#00 suffix=S");
     }
 
     @Test
@@ -681,7 +681,7 @@ public final class DecimalFormatPatternParserNumberTest extends DecimalFormatPat
         final DecimalFormatPatternParserNumber parser = this.createParser("P#00");
         parser.parse();
 
-        this.toStringAndCheck(parser, "\"P#00\" prefix=P number=#, 0, 0");
+        this.toStringAndCheck(parser, "\"P#00\" prefix=P number=#00");
     }
 
     // helpers..........................................................................................................
