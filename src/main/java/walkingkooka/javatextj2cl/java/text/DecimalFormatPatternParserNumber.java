@@ -317,6 +317,7 @@ final class DecimalFormatPatternParserNumber extends DecimalFormatPatternParser 
     public String toString() {
         return ToStringBuilder.empty()
                 .value(this.pattern)
+                .valueSeparator("")
                 .label("prefix").value(this.prefix)
                 .label("number").value(this.number)
                 .label("suffix").value(this.suffix)
