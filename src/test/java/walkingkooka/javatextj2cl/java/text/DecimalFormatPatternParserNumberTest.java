@@ -28,6 +28,7 @@ import java.util.Locale;
 import java.util.stream.Collectors;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
 
 public final class DecimalFormatPatternParserNumberTest extends DecimalFormatPatternParserTestCase<DecimalFormatPatternParserNumber> {
 
@@ -150,6 +151,8 @@ public final class DecimalFormatPatternParserNumberTest extends DecimalFormatPat
         this.parseNumberAndCheck(parser,
                 DecimalFormatPatternComponent.decimalSeparator(), DecimalFormatPatternComponent.hash());
         this.checkMode(parser, DecimalFormatPatternParserNumberMode.FRACTION);
+        this.checkInteger(parser, 0);
+        this.checkFraction(parser, 0, 1); // hash is optional
     }
 
     @Test
@@ -160,6 +163,8 @@ public final class DecimalFormatPatternParserNumberTest extends DecimalFormatPat
                 list(DecimalFormatPatternComponent.currencySeparator(), DecimalFormatPatternComponent.hash()),
                 list(DecimalFormatPatternComponent.currencySign()));
         this.checkMode(parser, DecimalFormatPatternParserNumberMode.FRACTION);
+        this.checkInteger(parser, 0);
+        this.checkFraction(parser, 0, 1); // hash is optional
     }
 
     @Test
@@ -170,6 +175,8 @@ public final class DecimalFormatPatternParserNumberTest extends DecimalFormatPat
                 list(DecimalFormatPatternComponent.decimalSeparator(), DecimalFormatPatternComponent.hash()),
                 list(DecimalFormatPatternComponent.characterLiteral('A')));
         this.checkMode(parser, DecimalFormatPatternParserNumberMode.FRACTION);
+        this.checkInteger(parser, 0);
+        this.checkFraction(parser, 0, 1); // hash is optional
     }
 
     @Test
@@ -180,6 +187,8 @@ public final class DecimalFormatPatternParserNumberTest extends DecimalFormatPat
                 list(DecimalFormatPatternComponent.currencySeparator(), DecimalFormatPatternComponent.hash()),
                 list(DecimalFormatPatternComponent.characterLiteral('A'), DecimalFormatPatternComponent.currencySign()));
         this.checkMode(parser, DecimalFormatPatternParserNumberMode.FRACTION);
+        this.checkInteger(parser, 0);
+        this.checkFraction(parser, 0, 1); // hash is optional
     }
 
     @Test
@@ -190,6 +199,8 @@ public final class DecimalFormatPatternParserNumberTest extends DecimalFormatPat
                 list(DecimalFormatPatternComponent.decimalSeparator()),
                 list(DecimalFormatPatternComponent.minusSign()));
         this.checkMode(parser, DecimalFormatPatternParserNumberMode.FRACTION);
+        this.checkInteger(parser, 0);
+        this.checkFraction(parser, 0, 0);
     }
 
     @Test
@@ -200,6 +211,8 @@ public final class DecimalFormatPatternParserNumberTest extends DecimalFormatPat
                 list(DecimalFormatPatternComponent.decimalSeparator()),
                 list(DecimalFormatPatternComponent.percent()));
         this.checkMode(parser, DecimalFormatPatternParserNumberMode.FRACTION);
+        this.checkInteger(parser, 0);
+        this.checkFraction(parser, 0, 0);
     }
 
     @Test
@@ -210,6 +223,8 @@ public final class DecimalFormatPatternParserNumberTest extends DecimalFormatPat
                 list(DecimalFormatPatternComponent.decimalSeparator()),
                 list(DecimalFormatPatternComponent.perMille()));
         this.checkMode(parser, DecimalFormatPatternParserNumberMode.FRACTION);
+        this.checkInteger(parser, 0);
+        this.checkFraction(parser, 0, 0);
     }
 
     @Test
@@ -218,6 +233,38 @@ public final class DecimalFormatPatternParserNumberTest extends DecimalFormatPat
         this.parseNumberAndCheck(parser,
                 DecimalFormatPatternComponent.decimalSeparator(), DecimalFormatPatternComponent.zero());
         this.checkMode(parser, DecimalFormatPatternParserNumberMode.FRACTION);
+        this.checkInteger(parser, 0);
+        this.checkFraction(parser, 1, 1); // zero is required
+    }
+
+    @Test
+    public void testDecimalSeparatorZeroZero() {
+        final DecimalFormatPatternParserNumber parser = this.createParser("" + DecimalFormat.DECIMAL_SEPARATOR + DecimalFormat.ZERO + DecimalFormat.ZERO);
+        this.parseNumberAndCheck(parser,
+                DecimalFormatPatternComponent.decimalSeparator(), DecimalFormatPatternComponent.zero(), DecimalFormatPatternComponent.zero());
+        this.checkMode(parser, DecimalFormatPatternParserNumberMode.FRACTION);
+        this.checkInteger(parser, 0);
+        this.checkFraction(parser, 2, 2); // zero is required
+    }
+
+    @Test
+    public void testDecimalSeparatorZeroZeroHashHashHash() {
+        final DecimalFormatPatternParserNumber parser = this.createParser("" + DecimalFormat.DECIMAL_SEPARATOR + DecimalFormat.ZERO + DecimalFormat.ZERO + DecimalFormat.HASH + DecimalFormat.HASH + DecimalFormat.HASH);
+        this.parseNumberAndCheck(parser,
+                DecimalFormatPatternComponent.decimalSeparator(), DecimalFormatPatternComponent.zero(), DecimalFormatPatternComponent.zero(), DecimalFormatPatternComponent.hash(), DecimalFormatPatternComponent.hash(), DecimalFormatPatternComponent.hash());
+        this.checkMode(parser, DecimalFormatPatternParserNumberMode.FRACTION);
+        this.checkInteger(parser, 0);
+        this.checkFraction(parser, 2, 5); // zero is required
+    }
+
+    @Test
+    public void testDecimalSeparatorZeroZeroZero() {
+        final DecimalFormatPatternParserNumber parser = this.createParser("" + DecimalFormat.DECIMAL_SEPARATOR + DecimalFormat.ZERO + DecimalFormat.ZERO + DecimalFormat.ZERO);
+        this.parseNumberAndCheck(parser,
+                DecimalFormatPatternComponent.decimalSeparator(), DecimalFormatPatternComponent.zero(), DecimalFormatPatternComponent.zero(), DecimalFormatPatternComponent.zero());
+        this.checkMode(parser, DecimalFormatPatternParserNumberMode.FRACTION);
+        this.checkInteger(parser, 0);
+        this.checkFraction(parser, 3, 3); // zero is required
     }
 
     @Test
@@ -273,6 +320,8 @@ public final class DecimalFormatPatternParserNumberTest extends DecimalFormatPat
         this.parseNumberAndCheck(parser,
                 DecimalFormatPatternComponent.decimalSeparator(), DecimalFormatPatternComponent.zero(), DecimalFormatPatternComponent.exponent(), DecimalFormatPatternComponent.zero());
         this.checkMode(parser, DecimalFormatPatternParserNumberMode.EXPONENT);
+        this.checkInteger(parser, 0);
+        this.checkFraction(parser, 1, 1);
     }
 
     @Test
@@ -281,6 +330,8 @@ public final class DecimalFormatPatternParserNumberTest extends DecimalFormatPat
         this.parseNumberAndCheck(parser,
                 DecimalFormatPatternComponent.decimalSeparator(), DecimalFormatPatternComponent.zero(), DecimalFormatPatternComponent.exponent(), DecimalFormatPatternComponent.zero(), DecimalFormatPatternComponent.zero());
         this.checkMode(parser, DecimalFormatPatternParserNumberMode.EXPONENT);
+        this.checkInteger(parser, 0);
+        this.checkFraction(parser, 1, 1);
     }
 
     // grouping.........................................................................................................
@@ -313,6 +364,8 @@ public final class DecimalFormatPatternParserNumberTest extends DecimalFormatPat
         this.parseNumberAndCheck(parser,
                 DecimalFormatPatternComponent.hash());
         this.checkMode(parser, DecimalFormatPatternParserNumberMode.INTEGER);
+        this.checkInteger(parser, 0);
+        this.checkFraction(parser, 0, 0);
     }
 
     @Test
@@ -323,6 +376,8 @@ public final class DecimalFormatPatternParserNumberTest extends DecimalFormatPat
                 list(DecimalFormatPatternComponent.hash()),
                 list(DecimalFormatPatternComponent.characterLiteral('A')));
         this.checkMode(parser, DecimalFormatPatternParserNumberMode.INTEGER);
+        this.checkInteger(parser, 0);
+        this.checkFraction(parser, 0, 0);
     }
 
     @Test
@@ -331,6 +386,8 @@ public final class DecimalFormatPatternParserNumberTest extends DecimalFormatPat
         this.parseNumberAndCheck(parser,
                 DecimalFormatPatternComponent.hash(), DecimalFormatPatternComponent.hash());
         this.checkMode(parser, DecimalFormatPatternParserNumberMode.INTEGER);
+        this.checkInteger(parser, 0);
+        this.checkFraction(parser, 0, 0);
     }
 
     @Test
@@ -339,6 +396,18 @@ public final class DecimalFormatPatternParserNumberTest extends DecimalFormatPat
         this.parseNumberAndCheck(parser,
                 DecimalFormatPatternComponent.hash(), DecimalFormatPatternComponent.zero());
         this.checkMode(parser, DecimalFormatPatternParserNumberMode.INTEGER);
+        this.checkInteger(parser, 1);
+        this.checkFraction(parser, 0, 0);
+    }
+
+    @Test
+    public void testHashHashHashZeroZero() {
+        final DecimalFormatPatternParserNumber parser = this.createParser("" + DecimalFormat.HASH + DecimalFormat.HASH + DecimalFormat.ZERO + DecimalFormat.ZERO + DecimalFormat.ZERO);
+        this.parseNumberAndCheck(parser,
+                DecimalFormatPatternComponent.hash(), DecimalFormatPatternComponent.hash(), DecimalFormatPatternComponent.zero(), DecimalFormatPatternComponent.zero(), DecimalFormatPatternComponent.zero());
+        this.checkMode(parser, DecimalFormatPatternParserNumberMode.INTEGER);
+        this.checkInteger(parser, 3);
+        this.checkFraction(parser, 0, 0);
     }
 
     // minusSign.........................................................................................................
@@ -416,6 +485,8 @@ public final class DecimalFormatPatternParserNumberTest extends DecimalFormatPat
                 list(DecimalFormatPatternComponent.percent()));
         this.checkMode(parser, DecimalFormatPatternParserNumberMode.INTEGER);
         this.checkMultiplier(parser, DecimalFormatPatternComponent.PERCENT_MULTIPLIER);
+        this.checkInteger(parser, 0);
+        this.checkFraction(parser, 0, 0);
     }
 
     // perMille.........................................................................................................
@@ -429,6 +500,8 @@ public final class DecimalFormatPatternParserNumberTest extends DecimalFormatPat
                 NO_COMPONENTS);
         this.checkMode(parser, DecimalFormatPatternParserNumberMode.PREFIX);
         this.checkMultiplier(parser, DecimalFormatPatternComponent.PER_MILLE_MULTIPLIER);
+        this.checkInteger(parser, 0);
+        this.checkFraction(parser, 0, 0);
     }
 
     @Test
@@ -450,6 +523,8 @@ public final class DecimalFormatPatternParserNumberTest extends DecimalFormatPat
                 NO_COMPONENTS);
         this.checkMode(parser, DecimalFormatPatternParserNumberMode.INTEGER);
         this.checkMultiplier(parser, DecimalFormatPatternComponent.PER_MILLE_MULTIPLIER);
+        this.checkInteger(parser, 0);
+        this.checkFraction(parser, 0, 0);
     }
 
     @Test
@@ -461,6 +536,8 @@ public final class DecimalFormatPatternParserNumberTest extends DecimalFormatPat
                 list(DecimalFormatPatternComponent.perMille()));
         this.checkMode(parser, DecimalFormatPatternParserNumberMode.INTEGER);
         this.checkMultiplier(parser, DecimalFormatPatternComponent.PER_MILLE_MULTIPLIER);
+        this.checkInteger(parser, 0);
+        this.checkFraction(parser, 0, 0);
     }
 
     // zero.............................................................................................................
@@ -471,6 +548,8 @@ public final class DecimalFormatPatternParserNumberTest extends DecimalFormatPat
         this.parseNumberAndCheck(parser,
                 DecimalFormatPatternComponent.zero());
         this.checkMode(parser, DecimalFormatPatternParserNumberMode.INTEGER);
+        this.checkInteger(parser, 1);
+        this.checkFraction(parser, 0, 0);
     }
 
     @Test
@@ -481,6 +560,8 @@ public final class DecimalFormatPatternParserNumberTest extends DecimalFormatPat
                 list(DecimalFormatPatternComponent.zero()),
                 list(DecimalFormatPatternComponent.characterLiteral('A')));
         this.checkMode(parser, DecimalFormatPatternParserNumberMode.INTEGER);
+        this.checkInteger(parser, 1);
+        this.checkFraction(parser, 0, 0);
     }
 
     @Test
@@ -494,6 +575,19 @@ public final class DecimalFormatPatternParserNumberTest extends DecimalFormatPat
         this.parseNumberAndCheck(parser,
                 DecimalFormatPatternComponent.zero(), DecimalFormatPatternComponent.zero());
         this.checkMode(parser, DecimalFormatPatternParserNumberMode.INTEGER);
+        this.checkInteger(parser, 2);
+        this.checkFraction(parser, 0, 0);
+    }
+
+    @Test
+    public void testZeroZeroZeroGroupingSeparatorZeroZero() {
+        final DecimalFormatPatternParserNumber parser = this.createParser("" + DecimalFormat.ZERO + DecimalFormat.ZERO + DecimalFormat.ZERO + DecimalFormat.GROUPING_SEPARATOR + DecimalFormat.ZERO + DecimalFormat.ZERO);
+        this.parseNumberAndCheck(parser,
+                DecimalFormatPatternComponent.zero(), DecimalFormatPatternComponent.zero(), DecimalFormatPatternComponent.zero(), DecimalFormatPatternComponent.groupingSeparator(), DecimalFormatPatternComponent.zero(), DecimalFormatPatternComponent.zero());
+        this.checkMode(parser, DecimalFormatPatternParserNumberMode.INTEGER);
+        this.checkInteger(parser, 5);
+        this.checkFraction(parser, 0, 0);
+        this.checkGroupingSeparator(parser, 2);
     }
 
     @Test
@@ -502,6 +596,8 @@ public final class DecimalFormatPatternParserNumberTest extends DecimalFormatPat
         this.parseNumberAndCheck(parser,
                 DecimalFormatPatternComponent.zero(), DecimalFormatPatternComponent.decimalSeparator(), DecimalFormatPatternComponent.hash());
         this.checkMode(parser, DecimalFormatPatternParserNumberMode.FRACTION);
+        this.checkInteger(parser, 1);
+        this.checkFraction(parser, 0, 1);
     }
 
     @Test
@@ -510,6 +606,8 @@ public final class DecimalFormatPatternParserNumberTest extends DecimalFormatPat
         this.parseNumberAndCheck(parser,
                 DecimalFormatPatternComponent.zero(), DecimalFormatPatternComponent.decimalSeparator(), DecimalFormatPatternComponent.zero());
         this.checkMode(parser, DecimalFormatPatternParserNumberMode.FRACTION);
+        this.checkInteger(parser, 1);
+        this.checkFraction(parser, 1, 1);
     }
 
     @Test
@@ -528,6 +626,8 @@ public final class DecimalFormatPatternParserNumberTest extends DecimalFormatPat
         this.parseNumberAndCheck(parser,
                 DecimalFormatPatternComponent.zero(), DecimalFormatPatternComponent.exponent(), DecimalFormatPatternComponent.zero());
         this.checkMode(parser, DecimalFormatPatternParserNumberMode.EXPONENT);
+        this.checkInteger(parser, 1);
+        this.checkFraction(parser, 0, 0);
     }
 
     @Test
@@ -682,6 +782,27 @@ public final class DecimalFormatPatternParserNumberTest extends DecimalFormatPat
     private void checkGroupingSeparator(final DecimalFormatPatternParserNumber parser,
                                         final int groupingSeparator) {
         assertEquals(groupingSeparator, parser.computeGroupingSeparator(), () -> "groupingSeparator " + parser);
+    }
+
+    private void checkFraction(final DecimalFormatPatternParserNumber parser,
+                               final int min,
+                               final int max) {
+        if (min < 0) {
+            fail("minimumFractionDigits " + min + " < 0");
+        }
+        if (min > max) {
+            fail("minimumFractionDigits " + min + " > maximumFractionDigits " + max);
+        }
+        assertEquals(max, parser.maximumFractionDigits, () -> "maximumFractionDigits " + parser);
+        assertEquals(min, parser.minimumFractionDigits, () -> "minimumFractionDigits " + parser);
+    }
+
+    private void checkInteger(final DecimalFormatPatternParserNumber parser, final int min) {
+        if (min < 0) {
+            fail("minIntegerDigits " + min + " < 0");
+        }
+        assertEquals(Integer.MAX_VALUE, parser.maximumIntegerDigits, () -> "maximumIntegerDigits " + parser);
+        assertEquals(min, parser.minimumIntegerDigits, () -> "minimumIntegerDigits " + parser);
     }
 
     private void checkMultiplier(final DecimalFormatPatternParserNumber parser,

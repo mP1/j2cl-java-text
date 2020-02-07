@@ -125,6 +125,27 @@ abstract class DecimalFormatPatternComponent {
     abstract boolean isCurrency();
 
     /**
+     * Only {@link DecimalFormatPatternComponentGroupingSeparator} returns true.
+     */
+    final boolean isGroupingSeparator() {
+        return this instanceof DecimalFormatPatternComponentGroupingSeparator;
+    }
+
+    /**
+     * Only {@link DecimalFormatPatternComponentHash} returns true.
+     */
+    final boolean isHashOrZero() {
+        return this instanceof DecimalFormatPatternComponentHash || this.isZero();
+    }
+
+    /**
+     * Only {@link DecimalFormatPatternComponentZero} returns true.
+     */
+    final boolean isZero() {
+        return this instanceof DecimalFormatPatternComponentZero;
+    }
+
+    /**
      * All components except for percent and permill will return 1.
      */
     abstract int multiplier();

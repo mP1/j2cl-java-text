@@ -424,6 +424,12 @@ public class DecimalFormat extends NumberFormat {
         this.setGroupingSize(groupingSeparator);
         this.setMultiplier(multiplier);
 
+        this.maximumFractionDigits = positive.maximumFractionDigits;
+        this.minimumFractionDigits = positive.minimumFractionDigits;
+
+        this.maximumIntegerDigits = positive.maximumIntegerDigits;
+        this.minimumIntegerDigits = positive.minimumIntegerDigits;
+
         this.positivePrefixComponents = positivePrefixComponents;
         this.positivePrefix = this.toPattern(positivePrefixComponents);
         this.positiveNumberComponents = positiveNumberComponents;
