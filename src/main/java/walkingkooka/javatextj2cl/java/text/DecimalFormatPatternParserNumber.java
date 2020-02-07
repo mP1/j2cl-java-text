@@ -158,6 +158,83 @@ final class DecimalFormatPatternParserNumber extends DecimalFormatPatternParser 
      */
     boolean fractionHash;
 
+    // maximumFractionDigits............................................................................................
+
+    // TODO not sure whether exponent patterns need to be handled specially.
+
+    private void computeFractionDigits() {
+        // maximumFractionDigits: number of hash/zero AFTER the decimal point
+        // minimumFractionDigits: number of zero AFTER the decimal point
+
+        int hashOrZero = 0;
+        int zero = 0;
+
+        final int decimal = this.decimalSeparator;
+        if (-1 != decimal) {
+            final List<DecimalFormatPatternComponent> number = this.number;
+            final int numberCount = number.size();
+
+            int i = decimal + 1;
+            while (i < numberCount) {
+                if (number.get(i).isZero()) {
+                    zero++;
+                    i++;
+                    continue;
+                }
+
+                while (i < numberCount) {
+                    if (number.get(i).isHashOrZero()) {
+                        hashOrZero++;
+                        i++;
+                        continue;
+                    }
+                    break;
+                }
+                break;
+            }
+        }
+
+        this.maximumFractionDigits = hashOrZero + zero;
+        this.minimumFractionDigits = zero;
+    }
+
+    int maximumFractionDigits = 0;
+    int minimumFractionDigits = 0;
+
+    // maximumIntegerDigits..............................................................................................
+
+    private void computeIntegerDigits() {
+        // minimumIntegerDigits count zeros to the left of decimal point
+        int zero = 0;
+
+        final List<DecimalFormatPatternComponent> number = this.number;
+
+        int i = this.decimalSeparator;
+        if (-1 == i) {
+            i = number.size();
+        }
+
+        while (i > 0) {
+            i--;
+            final DecimalFormatPatternComponent component = number.get(i);
+            if (component.isGroupingSeparator()) {
+                continue;
+            }
+            if (component.isZero()) {
+                zero++;
+                continue;
+            }
+            break;
+        }
+
+        // DecimalFormat.applyPattern then getMaximumIntegerDigits always returns Integer.MAX_VALUE
+        this.maximumIntegerDigits = Integer.MAX_VALUE;
+        this.minimumIntegerDigits = zero;
+    }
+
+    int maximumIntegerDigits = 0;
+    int minimumIntegerDigits = 0;
+
     // subPatternSeparator..............................................................................................
 
     void subPatternSeparator() {
@@ -221,6 +298,8 @@ final class DecimalFormatPatternParserNumber extends DecimalFormatPatternParser 
         this.currencySeparatorFix();
         this.checkGroupingSeparator();
         this.checkExponent();
+        this.computeFractionDigits();
+        this.computeIntegerDigits();
     }
 
     private void currencySeparatorFix() {
