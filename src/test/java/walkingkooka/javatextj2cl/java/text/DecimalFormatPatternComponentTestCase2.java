@@ -27,7 +27,7 @@ public abstract class DecimalFormatPatternComponentTestCase2<C extends DecimalFo
 
     @Test
     public final void testIsCurrency() throws Exception {
-        this.isCurrencyAndCheck(this.instance(),
+        this.isCurrencyAndCheck(this.component(),
                 this.type().getSimpleName().contains("Currency"));
     }
 
@@ -47,11 +47,16 @@ public abstract class DecimalFormatPatternComponentTestCase2<C extends DecimalFo
                 break;
         }
 
-        this.multiplierAndCheck(this.instance(), multiplier);
+        this.multiplierAndCheck(this.component(), multiplier);
     }
 
-    private C instance() throws Exception {
-        return (C) this.type().getDeclaredField("INSTANCE").get(null);
+    @Override
+    final C component() {
+        try {
+            return (C) this.type().getDeclaredField("INSTANCE").get(null);
+        } catch (final Exception cause) {
+            throw new RuntimeException(cause);
+        }
     }
 
     @Test

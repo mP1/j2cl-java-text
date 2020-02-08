@@ -124,17 +124,41 @@ abstract class DecimalFormatPatternComponent {
      */
     abstract boolean isCurrency();
 
+    public final boolean isCharacterLiteral() {
+        return this instanceof DecimalFormatPatternComponentCharacterLiteral;
+    }
+
+    public final boolean isCurrencyInternationalSign() {
+        return this instanceof DecimalFormatPatternComponentCurrencyInternationalSign;
+    }
+
+    public final boolean isCurrencySeparator() {
+        return this instanceof DecimalFormatPatternComponentCurrencySeparator;
+    }
+
+    public final boolean isCurrencySign() {
+        return this instanceof DecimalFormatPatternComponentCurrencySign;
+    }
+
+    public final boolean isDecimalSeparator() {
+        return this instanceof DecimalFormatPatternComponentDecimalSeparator;
+    }
+
+    public final boolean isExponent() {
+        return this instanceof DecimalFormatPatternComponentExponent;
+    }
+
     /**
      * Only {@link DecimalFormatPatternComponentGroupingSeparator} returns true.
      */
-    final boolean isGroupingSeparator() {
+    public final boolean isGroupingSeparator() {
         return this instanceof DecimalFormatPatternComponentGroupingSeparator;
     }
 
     /**
      * Only {@link DecimalFormatPatternComponentHash} returns true.
      */
-    final boolean isHash() {
+    public final boolean isHash() {
         return this instanceof DecimalFormatPatternComponentHash;
     }
 
@@ -145,10 +169,22 @@ abstract class DecimalFormatPatternComponent {
         return this.isHash() || this.isZero();
     }
 
+    public final boolean isMinusSign() {
+        return this instanceof DecimalFormatPatternComponentMinusSign;
+    }
+
+    public final boolean isPercent() {
+        return this instanceof DecimalFormatPatternComponentPercent;
+    }
+
+    public final boolean isPerMille() {
+        return this instanceof DecimalFormatPatternComponentPerMille;
+    }
+
     /**
      * Only {@link DecimalFormatPatternComponentZero} returns true.
      */
-    final boolean isZero() {
+    public final boolean isZero() {
         return this instanceof DecimalFormatPatternComponentZero;
     }
 
