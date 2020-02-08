@@ -19,6 +19,7 @@ package walkingkooka.javatextj2cl.java.text;
 
 import org.junit.jupiter.api.Test;
 import walkingkooka.HashCodeEqualsDefinedTesting2;
+import walkingkooka.InvalidCharacterException;
 import walkingkooka.ToStringTesting;
 import walkingkooka.javautillocalej2cl.WalkingkookaLocale;
 
@@ -566,6 +567,14 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
     }
 
     // new pattern.......................................................................................................
+
+    @Test
+    public void testNewPatternExtraSubPatternSeparatorFails() {
+        final String pattern = "#;#;";
+
+        assertThrows(IllegalArgumentException.class, () -> new java.text.DecimalFormat(pattern));
+        assertThrows(InvalidCharacterException.class, () -> new DecimalFormat(pattern));
+    }
 
     @Test
     public void testNewPatternEnAu() {
