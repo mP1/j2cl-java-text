@@ -42,9 +42,14 @@ final class DecimalFormatPatternComponentPercent extends DecimalFormatPatternCom
     }
 
     @Override
-    void toPattern(final DecimalFormat format,
-                   final StringBuilder pattern) {
-        pattern.append(format.symbols.getPercent());
+    void toPattern(final StringBuilder pattern) {
+        pattern.append(DecimalFormat.PERCENT);
+    }
+
+    @Override
+    void toPatternLocalized(final DecimalFormatSymbols symbols,
+                            final StringBuilder pattern) {
+        pattern.append(symbols.getPercent());
     }
 
     @Override

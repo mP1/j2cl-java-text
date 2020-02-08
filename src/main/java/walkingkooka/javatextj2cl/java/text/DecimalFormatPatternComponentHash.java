@@ -39,9 +39,14 @@ final class DecimalFormatPatternComponentHash extends DecimalFormatPatternCompon
     }
 
     @Override
-    void toPattern(final DecimalFormat format,
-                   final StringBuilder pattern) {
-        pattern.append(DecimalFormat.ZERO);
+    void toPattern(final StringBuilder pattern) {
+        pattern.append(DecimalFormat.HASH);
+    }
+
+    @Override
+    void toPatternLocalized(final DecimalFormatSymbols symbols,
+                            final StringBuilder pattern) {
+        this.toPattern(pattern);
     }
 
     @Override

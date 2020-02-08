@@ -358,6 +358,12 @@ public class DecimalFormat extends NumberFormat {
     private void copyPattern(final DecimalFormat copy) {
         this.pattern = copy.pattern;
 
+        this.negativePrefix = copy.negativePrefix;
+        this.negativePrefixComponents = copy.negativePrefixComponents;
+        this.negativeNumberComponents = copy.negativeNumberComponents;
+        this.negativeSuffix = copy.negativeSuffix;
+        this.negativeSuffixComponents = copy.negativeSuffixComponents;
+        
         this.positivePrefix = copy.positivePrefix;
         this.positivePrefixComponents = copy.positivePrefixComponents;
         this.positiveNumberComponents = copy.positiveNumberComponents;
@@ -432,16 +438,16 @@ public class DecimalFormat extends NumberFormat {
         this.minimumIntegerDigits = positive.minimumIntegerDigits;
 
         this.positivePrefixComponents = positivePrefixComponents;
-        this.positivePrefix = this.toPattern(positivePrefixComponents);
+        this.positivePrefix = this.toPatternLocalized(positivePrefixComponents);
         this.positiveNumberComponents = positiveNumberComponents;
         this.positiveSuffixComponents = positiveSuffixComponents;
-        this.positiveSuffix = this.toPattern(positiveSuffixComponents);
+        this.positiveSuffix = this.toPatternLocalized(positiveSuffixComponents);
 
         this.negativePrefixComponents = negativePrefixComponents;
-        this.negativePrefix = this.toPattern(negativePrefixComponents);
+        this.negativePrefix = this.toPatternLocalized(negativePrefixComponents);
         this.negativeNumberComponents = negativeNumberComponents;
         this.negativeSuffixComponents = negativeSuffixComponents;
-        this.negativeSuffix = this.toPattern(negativeSuffixComponents);
+        this.negativeSuffix = this.toPatternLocalized(negativeSuffixComponents);
     }
 
     /**
@@ -454,15 +460,17 @@ public class DecimalFormat extends NumberFormat {
         if (null == this.pattern) {
             final StringBuilder b = new StringBuilder();
 
-            b.append(this.positivePrefix);
-            b.append(this.toPattern(this.positiveNumberComponents));
-            b.append(this.positiveSuffix);
+            toPattern(this.positivePrefixComponents, b);
+            toPattern(this.positiveNumberComponents, b);
+            toPattern(this.positiveSuffixComponents, b);
 
-            final List<DecimalFormatPatternComponent> negative = negativeNumberComponents;
+            final List<DecimalFormatPatternComponent> negative = this.negativeNumberComponents;
             if (null != negative) {
-                b.append(this.negativePrefix);
-                b.append(this.toPattern(negative));
-                b.append(this.negativeSuffix);
+                b.append(DecimalFormat.SUB_PATTERN_SEPARATOR);
+
+                toPattern(this.negativePrefixComponents, b);
+                toPattern(negative, b);
+                toPattern(this.negativeSuffixComponents, b);
             }
 
             this.pattern = b.toString();
@@ -470,14 +478,26 @@ public class DecimalFormat extends NumberFormat {
         return this.pattern;
     }
 
-    private String toPattern(final List<DecimalFormatPatternComponent> components) {
+    /**
+     * Converts the components into a pattern without localizing special symbols like decimal separator.
+     */
+    private static void toPattern(final List<DecimalFormatPatternComponent> components,
+                                  final StringBuilder b) {
+        for (final DecimalFormatPatternComponent component : components) {
+            component.toPattern(b);
+        }
+    }
+
+    /**
+     * Converts the components into a pattern localizing locale aware components such as currency.
+     */
+    private String toPatternLocalized(final List<DecimalFormatPatternComponent> components) {
         final DecimalFormatSymbols symbols = this.symbols;
 
         final StringBuilder b = new StringBuilder();
         for (final DecimalFormatPatternComponent component : components) {
-            component.toPattern(this, b);
+            component.toPatternLocalized(symbols, b);
         }
-
         return b.toString();
     }
 

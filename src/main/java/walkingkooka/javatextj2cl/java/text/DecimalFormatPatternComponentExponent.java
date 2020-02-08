@@ -42,9 +42,14 @@ final class DecimalFormatPatternComponentExponent extends DecimalFormatPatternCo
     }
 
     @Override
-    void toPattern(final DecimalFormat format,
-                   final StringBuilder pattern) {
-        pattern.append(format.symbols.getExponentSeparator());
+    void toPattern(final StringBuilder pattern) {
+        pattern.append(DecimalFormat.EXPONENT);
+    }
+
+    @Override
+    void toPatternLocalized(final DecimalFormatSymbols symbols,
+                            final StringBuilder pattern) {
+        pattern.append(symbols.getExponentSeparator());
     }
 
     @Override

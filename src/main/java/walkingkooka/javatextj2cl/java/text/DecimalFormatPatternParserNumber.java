@@ -307,11 +307,33 @@ final class DecimalFormatPatternParserNumber extends DecimalFormatPatternParser 
 
     @Override
     void onComplete() {
+        this.addLeadingHashIfNecessary();
+
         this.currencySeparatorFix();
         this.checkGroupingSeparator();
         this.checkExponent();
         this.computeFractionDigits();
         this.computeIntegerDigits();
+    }
+
+    /**
+     * This solves patterns starting with decimal separator or with integer pattern without a leading hash etc.
+     */
+    private void addLeadingHashIfNecessary() {
+        final List<DecimalFormatPatternComponent> number = this.number;
+        if (number.isEmpty() || false == number.get(0).isHash()) {
+            number.add(0, DecimalFormatPatternComponent.hash());
+
+            final int decimalSeparator = this.decimalSeparator;
+            if(-1 != decimalSeparator) {
+                this.decimalSeparator = decimalSeparator + 1;
+            }
+
+            final int groupingSeparator = this.groupingSeparator;
+            if(-1 != groupingSeparator) {
+                this.groupingSeparator = groupingSeparator + 1;
+            }
+        }
     }
 
     private void currencySeparatorFix() {

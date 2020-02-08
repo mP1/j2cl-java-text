@@ -68,6 +68,11 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
     }
 
     @Test
+    public void testCurrencyInstanceDefaultEsCL() {
+        this.currencyInstanceAndCheck(Locale.forLanguageTag("es-CL"));
+    }
+
+    @Test
     public void testCurrencyInstanceDefaultFr() {
         this.currencyInstanceAndCheck(FR);
     }
@@ -568,6 +573,11 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
     }
 
     @Test
+    public void testNewPatternEsCl() {
+        this.newPatternAndCheck("¤#,##0;¤-#,##0", Locale.forLanguageTag("es-CL"));
+    }
+
+    @Test
     public void testNewPatternFr() {
         this.newPatternAndCheck(PATTERN, FR);
     }
@@ -882,8 +892,6 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
     private void check(final java.text.DecimalFormat jdk,
                        final DecimalFormat emul,
                        final Locale locale) {
-        // the commented out tests will fail because the pattern is not parsed and the tested values not correctly set.
-
         assertEquals(jdk.getCurrency(), emul.getCurrency(), () -> "currency " + locale + " " + emul);
         assertEquals(jdk.getGroupingSize(), emul.getGroupingSize(), () -> "groupingSize " + locale + " " + emul);
         assertEquals(jdk.isGroupingUsed(), emul.isGroupingUsed(), () -> "groupingUsed " + locale + " " + emul);
@@ -896,7 +904,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
         assertEquals(jdk.getNegativeSuffix(), emul.getNegativeSuffix(), () -> "negativeSuffix " + locale + " " + emul);
         assertEquals(jdk.isParseBigDecimal(), emul.isParseBigDecimal(), () -> "parseBigDecimal " + locale + " " + emul);
         assertEquals(jdk.isParseIntegerOnly(), emul.isParseIntegerOnly(), () -> "parseIntegerOnly " + locale + " " + emul);
-//        assertEquals(jdk.toPattern(), emul.toPattern(), () -> "pattern " + locale + " " + emul);
+        assertEquals(jdk.toPattern(), emul.toPattern(), () -> "pattern " + locale + " " + emul);
         assertEquals(jdk.getPositivePrefix(), emul.getPositivePrefix(), () -> "positivePrefix " + locale + " " + emul);
         assertEquals(jdk.getPositiveSuffix(), emul.getPositiveSuffix(), () -> "positiveSuffix " + locale + " " + emul);
         assertEquals(jdk.getRoundingMode(), emul.getRoundingMode(), () -> "roundingMode " + locale + " " + emul);
@@ -991,7 +999,6 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
     public DecimalFormat createObject() {
         final DecimalFormat format = new DecimalFormat("#", new DecimalFormatSymbols(Locale.forLanguageTag("en-AU")));
 
-
         format.setCurrency(CURRENCY);
         format.setGroupingSize(GROUPING_SIZE);
 
@@ -1012,6 +1019,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
         format.setPositiveSuffix(POSITIVE_SUFFIX);
 
         format.setRoundingMode(ROUNDING_MODE);
+
         return format;
     }
 
@@ -1019,14 +1027,25 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
 
     @Test
     public void testToString() {
+        Locale.setDefault(Locale.forLanguageTag("en-AU"));
         this.toStringAndCheck(this.createObject(),
                 "currency=AUD groupingSize=10 maximumFractionDigits=8 minimumFractionDigits=4 maximumIntegerDigits=20 minimumIntegerDigits=10 multiplier=100 negativePrefix=\"NegativePrefix1\" negativeSuffix=\"NegativeSuffix2\" positivePrefix=\"PositivePrefix1\" positiveNumberComponents=# positiveSuffix=\"PositiveSuffix2\" roundingMode=HALF_EVEN symbols=currency=AUD currencySymbol=\"$\" decimalSeparator='.' digit='#' exponentSeparator=\"e\" groupingSeparator=',' infinity=\"∞\" internationalCurrencySymbol=\"AUD\" minusSign='-' monetaryDecimalSeparator='.' nan=\"NaN\" patternSeparator=';' percent='%' perMill='‰' zeroDigit='0'");
     }
 
     @Test
     public void testToStringLongPattern() {
+        Locale.setDefault(Locale.forLanguageTag("en-AU"));
+
         this.toStringAndCheck(new DecimalFormat("###.00", new DecimalFormatSymbols(Locale.forLanguageTag("en-AU"))),
                 "currency=AUD maximumFractionDigits=2 minimumFractionDigits=2 maximumIntegerDigits=2147483647 multiplier=1 negativePrefix=\"-\" positiveNumberComponents=###.00 roundingMode=HALF_EVEN symbols=currency=AUD currencySymbol=\"$\" decimalSeparator='.' digit='#' exponentSeparator=\"e\" groupingSeparator=',' infinity=\"∞\" internationalCurrencySymbol=\"AUD\" minusSign='-' monetaryDecimalSeparator='.' nan=\"NaN\" patternSeparator=';' percent='%' perMill='‰' zeroDigit='0'");
+    }
+
+    @Test
+    public void testToStringPositiveNegativePattern() {
+        Locale.setDefault(Locale.forLanguageTag("es-CL"));
+
+        this.toStringAndCheck(new DecimalFormat("¤#,##0;¤-#,##0"),
+                "currency=CLP groupingSize=3 groupingUsed=true maximumIntegerDigits=2147483647 minimumIntegerDigits=1 multiplier=1 negativePrefix=\"$-\" negativePrefix=#,##0 positivePrefix=\"$\" positiveNumberComponents=#,##0 roundingMode=HALF_EVEN symbols=currency=CLP currencySymbol=\"$\" decimalSeparator=',' digit='#' exponentSeparator=\"E\" groupingSeparator='.' infinity=\"∞\" internationalCurrencySymbol=\"CLP\" minusSign='-' monetaryDecimalSeparator=',' nan=\"NaN\" patternSeparator=';' percent='%' perMill='‰' zeroDigit='0'");
     }
 
     // ClassTesting.....................................................................................................

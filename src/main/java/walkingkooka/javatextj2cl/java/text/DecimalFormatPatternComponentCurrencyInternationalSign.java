@@ -42,9 +42,14 @@ final class DecimalFormatPatternComponentCurrencyInternationalSign extends Decim
     }
 
     @Override
-    void toPattern(final DecimalFormat format,
-                   final StringBuilder pattern) {
-        pattern.append(format.symbols.getInternationalCurrencySymbol());
+    void toPattern(final StringBuilder pattern) {
+        pattern.append(DecimalFormat.CURRENCY + DecimalFormat.CURRENCY);
+    }
+
+    @Override
+    void toPatternLocalized(final DecimalFormatSymbols symbols,
+                            final StringBuilder pattern) {
+        pattern.append(symbols.getInternationalCurrencySymbol());
     }
 
     @Override

@@ -42,9 +42,14 @@ final class DecimalFormatPatternComponentGroupingSeparator extends DecimalFormat
     }
 
     @Override
-    void toPattern(final DecimalFormat format,
-                   final StringBuilder pattern) {
-        pattern.append(format.symbols.getGroupingSeparator());
+    void toPattern(final StringBuilder pattern) {
+        pattern.append(DecimalFormat.GROUPING_SEPARATOR);
+    }
+
+    @Override
+    void toPatternLocalized(final DecimalFormatSymbols symbols,
+                            final StringBuilder pattern) {
+        pattern.append(symbols.getGroupingSeparator());
     }
 
     @Override
