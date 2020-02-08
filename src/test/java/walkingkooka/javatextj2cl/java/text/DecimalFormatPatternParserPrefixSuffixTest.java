@@ -29,49 +29,40 @@ public final class DecimalFormatPatternParserPrefixSuffixTest extends DecimalFor
 
     @Test
     public void testCurrency() {
-        this.parseAndCheck("" + CURRENCY,
-                DecimalFormatPatternComponent.currencySign());
+        this.parseSpecialAndCheck(DecimalFormat.CURRENCY);
     }
 
     @Test
     public void testCurrencyCurrency() {
         this.parseAndCheck("" + CURRENCY + CURRENCY,
-                DecimalFormatPatternComponent.currencyInternationalSign());
+                DecimalFormatPatternComponent.characterLiteral(DecimalFormat.QUOTE), DecimalFormatPatternComponent.characterLiteral(CURRENCY), DecimalFormatPatternComponent.characterLiteral(DecimalFormat.QUOTE),
+                DecimalFormatPatternComponent.characterLiteral(DecimalFormat.QUOTE), DecimalFormatPatternComponent.characterLiteral(CURRENCY), DecimalFormatPatternComponent.characterLiteral(DecimalFormat.QUOTE));
     }
 
     @Test
     public void testDecimalSeparator() {
-        final char c = DecimalFormat.DECIMAL_SEPARATOR;
-        this.parseAndCheck("" + c,
-                DecimalFormatPatternComponent.characterLiteral(c));
+        this.parseSpecialAndCheck(DecimalFormat.DECIMAL_SEPARATOR);
     }
 
     @Test
     public void testExponent() {
-        final char c = DecimalFormat.EXPONENT;
-        this.parseAndCheck("" + c,
-                DecimalFormatPatternComponent.characterLiteral(c));
+        this.parseAndCheck("" + DecimalFormatPatternComponent.exponent(),
+                DecimalFormatPatternComponent.exponent());
     }
 
     @Test
     public void testGroupingSeparator() {
-        final char c = DecimalFormat.GROUPING_SEPARATOR;
-        this.parseAndCheck("" + c,
-                DecimalFormatPatternComponent.characterLiteral(c));
+        this.parseSpecialAndCheck(DecimalFormat.GROUPING_SEPARATOR);
     }
 
     @Test
     public void testHash() {
-        final char c = DecimalFormat.HASH;
-        this.parseAndCheck("" + c,
-                DecimalFormatPatternComponent.characterLiteral(c));
+        this.parseSpecialAndCheck(DecimalFormat.HASH);
     }
 
     @Test
     public void testMinusSign() {
-        final char c = DecimalFormat.MINUS_SIGN;
-        this.parseAndCheck("" + c,
-                DecimalFormatPatternComponent.minusSign());
+        this.parseSpecialAndCheck(DecimalFormat.MINUS_SIGN);
     }
 
     @Test
@@ -89,16 +80,12 @@ public final class DecimalFormatPatternParserPrefixSuffixTest extends DecimalFor
 
     @Test
     public void testPercent() {
-        final char c = DecimalFormat.PERCENT;
-        this.parseAndCheck("" + c,
-                DecimalFormatPatternComponent.percent());
+        this.parseSpecialAndCheck(DecimalFormat.PERCENT);
     }
 
     @Test
     public void testPerMille() {
-        final char c = DecimalFormat.PER_MILLE;
-        this.parseAndCheck("" + c,
-                DecimalFormatPatternComponent.perMille());
+        this.parseSpecialAndCheck(DecimalFormat.PER_MILLE);
     }
 
     @Test
@@ -115,6 +102,11 @@ public final class DecimalFormatPatternParserPrefixSuffixTest extends DecimalFor
     }
 
     @Test
+    public void testSubPatternSeparator() {
+        this.parseSpecialAndCheck(DecimalFormat.SUB_PATTERN_SEPARATOR);
+    }
+
+    @Test
     public void testQuotedZero() {
         final char c = DecimalFormat.ZERO;
         this.parseAndCheck("\'" + c + "\'",
@@ -123,36 +115,20 @@ public final class DecimalFormatPatternParserPrefixSuffixTest extends DecimalFor
 
     @Test
     public void testZero() {
-        final char c = DecimalFormat.ZERO;
-        this.parseAndCheck("" + c,
-                DecimalFormatPatternComponent.characterLiteral(c));
+        this.parseSpecialAndCheck(DecimalFormat.ZERO);
     }
 
     @Test
     public void testMixed() {
-        this.parseAndCheck("ABC % ",
+        this.parseAndCheck("ABC ",
                 DecimalFormatPatternComponent.characterLiteral('A'),
                 DecimalFormatPatternComponent.characterLiteral('B'),
                 DecimalFormatPatternComponent.characterLiteral('C'),
-                DecimalFormatPatternComponent.characterLiteral(' '),
-                DecimalFormatPatternComponent.percent(),
                 DecimalFormatPatternComponent.characterLiteral(' '));
     }
 
     @Test
-    public void testMixed2() {
-        this.parseAndCheck("ABC % " + CURRENCY + CURRENCY,
-                DecimalFormatPatternComponent.characterLiteral('A'),
-                DecimalFormatPatternComponent.characterLiteral('B'),
-                DecimalFormatPatternComponent.characterLiteral('C'),
-                DecimalFormatPatternComponent.characterLiteral(' '),
-                DecimalFormatPatternComponent.percent(),
-                DecimalFormatPatternComponent.characterLiteral(' '),
-                DecimalFormatPatternComponent.currencyInternationalSign());
-    }
-
-    @Test
-    public void testMixed3IncludesQuoted() {
+    public void testMixedIncludesQuoted() {
         this.parseAndCheck("ABC 'D'",
                 DecimalFormatPatternComponent.characterLiteral('A'),
                 DecimalFormatPatternComponent.characterLiteral('B'),
@@ -177,6 +153,11 @@ public final class DecimalFormatPatternParserPrefixSuffixTest extends DecimalFor
     DecimalFormatPatternParserPrefixSuffix createParser(final String pattern,
                                                         final int position) {
         return DecimalFormatPatternParserPrefixSuffix.with(pattern, position);
+    }
+
+    private void parseSpecialAndCheck(final char c) {
+        this.parseAndCheck("" + c,
+                DecimalFormatPatternComponentCharacterLiteral.characterLiteral(DecimalFormat.QUOTE), DecimalFormatPatternComponent.characterLiteral(c), DecimalFormatPatternComponentCharacterLiteral.characterLiteral(DecimalFormat.QUOTE));
     }
 
     private void parseAndCheck(final String text,
@@ -214,6 +195,10 @@ public final class DecimalFormatPatternParserPrefixSuffixTest extends DecimalFor
         assertEquals(left,
                 pattern.substring(parser.position),
                 () -> "remaining pattern, parse " + CharSequences.quoteAndEscape(pattern) + " components: " + Arrays.toString(components));
+
+        assertEquals(Lists.of(components),
+                DecimalFormatPatternParserPrefixSuffix.parseAndGetComponents(pattern, "pattern"),
+                "parseAndGetComponents " + CharSequences.quoteAndEscape(pattern));
     }
 
     // ClassTesting.....................................................................................................
