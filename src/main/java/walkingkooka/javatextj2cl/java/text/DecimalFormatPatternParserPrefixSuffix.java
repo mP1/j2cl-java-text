@@ -21,11 +21,21 @@ import walkingkooka.ToStringBuilder;
 import walkingkooka.collect.list.Lists;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
  * A parser that handles parsing the prefix or suffix with a pattern.
  */
 final class DecimalFormatPatternParserPrefixSuffix extends DecimalFormatPatternParser {
+
+    static List<DecimalFormatPatternComponent> parseAndGetComponents(final String pattern,
+                                                                     final String label) {
+        Objects.requireNonNull(pattern, label);
+
+        final DecimalFormatPatternParserPrefixSuffix parser = new DecimalFormatPatternParserPrefixSuffix(pattern, 0);
+        parser.parse();
+        return parser.components;
+    }
 
     static DecimalFormatPatternParserPrefixSuffix with(final String pattern,
                                                        final int position) {
@@ -40,23 +50,21 @@ final class DecimalFormatPatternParserPrefixSuffix extends DecimalFormatPatternP
     @Override
     void handle(final char c) {
         switch (c) {
-            case DecimalFormat.CURRENCY:
-                this.currency();
+            case DecimalFormat.EXPONENT:
+                this.addNonNumberComponent(DecimalFormatPatternComponent.exponent());
                 break;
+            case DecimalFormat.CURRENCY:
             case DecimalFormat.DECIMAL_SEPARATOR:
             case DecimalFormat.HASH:
             case DecimalFormat.ZERO:
             case DecimalFormat.GROUPING_SEPARATOR:
-                this.addCharacterLiteral(c);
-                break;
             case DecimalFormat.MINUS_SIGN:
-                this.minusSign();
-                break;
             case DecimalFormat.PERCENT:
-                this.percent();
-                break;
             case DecimalFormat.PER_MILLE:
-                this.perMille();
+            case DecimalFormat.SUB_PATTERN_SEPARATOR:
+                this.addCharacterLiteral(DecimalFormat.QUOTE);
+                this.addCharacterLiteral(c);
+                this.addCharacterLiteral(DecimalFormat.QUOTE);
                 break;
             default:
                 this.addCharacterLiteral(c);

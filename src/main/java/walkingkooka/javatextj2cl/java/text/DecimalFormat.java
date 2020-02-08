@@ -460,17 +460,19 @@ public class DecimalFormat extends NumberFormat {
         if (null == this.pattern) {
             final StringBuilder b = new StringBuilder();
 
-            toPattern(this.positivePrefixComponents, b);
-            toPattern(this.positiveNumberComponents, b);
-            toPattern(this.positiveSuffixComponents, b);
+            final List<DecimalFormatPatternComponent> positive = this.positiveNumberComponents;
+
+            toPattern(this.positivePrefixComponents(), b);
+            toPattern(positive, b);
+            toPattern(this.positiveSuffixComponents(), b);
 
             final List<DecimalFormatPatternComponent> negative = this.negativeNumberComponents;
-            if (null != negative) {
+            if (null != negative || this.customNegativePrefixSuffix) {
                 b.append(DecimalFormat.SUB_PATTERN_SEPARATOR);
 
-                toPattern(this.negativePrefixComponents, b);
-                toPattern(negative, b);
-                toPattern(this.negativeSuffixComponents, b);
+                toPattern(this.negativePrefixComponents(), b);
+                toPattern(null == negative ? positive : negative, b);
+                toPattern(this.negativeSuffixComponents(), b);
             }
 
             this.pattern = b.toString();
@@ -502,19 +504,15 @@ public class DecimalFormat extends NumberFormat {
     }
 
     /**
-     * Forces the pattern to be rebuild because a prefix or suffix changed.
-     * If this holds a single pattern ignore any changes to negative prefix/suffix.
+     * This method should be called by all prefix/suffix setters.
      */
-    private void recomputePattern(final boolean negative) {
-        if (negative && null != this.negativeNumberComponents) {
-            this.pattern = null;
-        }
+    private void recomputePattern() {
+        this.pattern = null;
+        this.customNegativePrefixSuffix = true;
     }
 
-    private final static boolean NEGATIVE = true;
-    private final static boolean POSITIVE = false;
-
     private String pattern;
+    private boolean customNegativePrefixSuffix = false;
 
     @Override
     public StringBuffer format(final double number,
@@ -591,10 +589,19 @@ public class DecimalFormat extends NumberFormat {
 
     public void setNegativePrefix(final String negativePrefix) {
         this.negativePrefix = negativePrefix;
-        this.recomputePattern(NEGATIVE);
+        this.negativePrefixComponents = null;
+        this.recomputePattern();
     }
 
     private String negativePrefix;
+
+    private List<DecimalFormatPatternComponent> negativePrefixComponents() {
+        if (null == this.negativePrefixComponents) {
+            this.negativePrefixComponents = DecimalFormatPatternParserPrefixSuffix.parseAndGetComponents(this.negativePrefix, "negativePrefix");
+        }
+        return this.negativePrefixComponents;
+    }
+
     private List<DecimalFormatPatternComponent> negativePrefixComponents;
 
     // NegativeSuffix.....................................................................................................
@@ -605,10 +612,19 @@ public class DecimalFormat extends NumberFormat {
 
     public void setNegativeSuffix(final String negativeSuffix) {
         this.negativeSuffix = negativeSuffix;
-        this.recomputePattern(NEGATIVE);
+        this.negativeSuffixComponents = null;
+        this.recomputePattern();
     }
 
     private String negativeSuffix;
+
+    private List<DecimalFormatPatternComponent> negativeSuffixComponents() {
+        if (null == this.negativeSuffixComponents) {
+            this.negativeSuffixComponents = DecimalFormatPatternParserPrefixSuffix.parseAndGetComponents(this.negativeSuffix, "negativeSuffix");
+        }
+        return this.negativeSuffixComponents;
+    }
+
     private List<DecimalFormatPatternComponent> negativeSuffixComponents;
 
     // parseBigDecimal...................................................................................................
@@ -633,10 +649,19 @@ public class DecimalFormat extends NumberFormat {
 
     public void setPositivePrefix(final String positivePrefix) {
         this.positivePrefix = positivePrefix;
-        this.recomputePattern(POSITIVE);
+        this.positivePrefixComponents = null;
+        this.recomputePattern();
     }
 
     private String positivePrefix;
+
+    private List<DecimalFormatPatternComponent> positivePrefixComponents() {
+        if (null == this.positivePrefixComponents) {
+            this.positivePrefixComponents = DecimalFormatPatternParserPrefixSuffix.parseAndGetComponents(this.positivePrefix, "positivePrefix");
+        }
+        return this.positivePrefixComponents;
+    }
+
     private List<DecimalFormatPatternComponent> positivePrefixComponents;
 
     // PositiveSuffix.....................................................................................................
@@ -647,10 +672,19 @@ public class DecimalFormat extends NumberFormat {
 
     public void setPositiveSuffix(final String positiveSuffix) {
         this.positiveSuffix = positiveSuffix;
-        this.recomputePattern(POSITIVE);
+        this.positiveSuffixComponents = null;
+        this.recomputePattern();
     }
 
     private String positiveSuffix;
+
+    private List<DecimalFormatPatternComponent> positiveSuffixComponents() {
+        if (null == this.positiveSuffixComponents) {
+            this.positiveSuffixComponents = DecimalFormatPatternParserPrefixSuffix.parseAndGetComponents(this.positiveSuffix, "positiveSuffix");
+        }
+        return this.positiveSuffixComponents;
+    }
+
     private List<DecimalFormatPatternComponent> positiveSuffixComponents;
 
     // RoundingMode.....................................................................................................

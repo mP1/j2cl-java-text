@@ -669,49 +669,184 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
         final DecimalFormat emul = new DecimalFormat("#");
         emul.setCurrency(currency);
 
-        assertEquals(jdk.getCurrency(), emul.getCurrency(), () -> "currency AUD");;
+        assertEquals(jdk.getCurrency(), emul.getCurrency(), () -> "currency AUD");
+        ;
     }
 
     // negativePrefix.........................................................................................................
 
     @Test
-    public void testSetNegativePrefixNull() {
-        new java.text.DecimalFormat("#").setNegativePrefix(null);
-        new DecimalFormat("#").setNegativePrefix(null);
+    public void testSetNegativePrefixNullToPatternFails() {
+        final String pattern = "#";
+        final String negativePrefix = null;
+
+        final java.text.DecimalFormat jdk = new java.text.DecimalFormat(pattern);
+        jdk.setNegativePrefix(negativePrefix);
+
+        final DecimalFormat emul = new DecimalFormat(pattern);
+        emul.setNegativePrefix(negativePrefix);
+
+        assertThrows(NullPointerException.class, () -> jdk.toPattern());
+        assertThrows(NullPointerException.class, () -> emul.toPattern());
     }
 
     @Test
     public void testSetNegativePrefix() {
-        final String negativePrefix = "ABC";
+        this.setNegativePrefixAndCheck("#", "ABC");
+    }
 
-        final java.text.DecimalFormat jdk = new java.text.DecimalFormat("#");
+    @Test
+    public void testSetNegativePrefixCurrency() {
+        this.setNegativePrefixAndCheck("#0.00", "" + DecimalFormat.CURRENCY);
+    }
+
+    @Test
+    public void testSetNegativePrefixDecimalSeparator() {
+        this.setNegativePrefixAndCheck("#0.00", "" + DecimalFormat.DECIMAL_SEPARATOR);
+    }
+
+    @Test
+    public void testSetNegativePrefixExponent() {
+        this.setNegativePrefixAndCheck("#0.00", "" + DecimalFormat.EXPONENT);
+    }
+
+    @Test
+    public void testSetNegativePrefixGroupingSeparator() {
+        this.setNegativePrefixAndCheck("#0.00", "" + DecimalFormat.GROUPING_SEPARATOR);
+    }
+
+    @Test
+    public void testSetNegativePrefixHash() {
+        this.setNegativePrefixAndCheck("#0.00", "" + DecimalFormat.HASH);
+    }
+
+    @Test
+    public void testSetNegativePrefixMinusSign() {
+        this.setNegativePrefixAndCheck("#0.00", "" + DecimalFormat.MINUS_SIGN);
+    }
+
+    @Test
+    public void testSetNegativePrefixPercent() {
+        this.setNegativePrefixAndCheck("#0.00", "" + DecimalFormat.PERCENT);
+    }
+
+    @Test
+    public void testSetNegativePrefixPerMille() {
+        this.setNegativePrefixAndCheck("#0.00", "" + DecimalFormat.PER_MILLE);
+    }
+
+    @Test
+    public void testSetNegativePrefixZero() {
+        this.setNegativePrefixAndCheck("#0.00", "" + DecimalFormat.ZERO);
+    }
+
+    @Test
+    public void testSetNegativePrefixAllCharacters() {
+        for (int i = 32; i < 0x8000; i++) {
+            if (DecimalFormat.QUOTE == i) {
+                continue;
+            }
+            this.setNegativePrefixAndCheck("#0.00", "" + (char) i);
+        }
+    }
+
+    private void setNegativePrefixAndCheck(final String pattern,
+                                           final String negativePrefix) {
+        final java.text.DecimalFormat jdk = new java.text.DecimalFormat(pattern);
         jdk.setNegativePrefix(negativePrefix);
 
-        final DecimalFormat emul = new DecimalFormat("#");
+        final DecimalFormat emul = new DecimalFormat(pattern);
         emul.setNegativePrefix(negativePrefix);
 
-        assertEquals(jdk.getNegativePrefix(), emul.getNegativePrefix(), () -> "negativePrefix");
+        this.check(jdk, emul);
     }
 
     // negativeSuffix.........................................................................................................
 
     @Test
-    public void testSetNegativeSuffixNull() {
-        new java.text.DecimalFormat("#").setNegativeSuffix(null);
-        new DecimalFormat("#").setNegativeSuffix(null);
+    public void testSetNegativeSuffixNullToPatternFails() {
+        final String pattern = "#";
+        final String negativeSuffix = null;
+
+        final java.text.DecimalFormat jdk = new java.text.DecimalFormat(pattern);
+        jdk.setNegativeSuffix(negativeSuffix);
+
+        final DecimalFormat emul = new DecimalFormat(pattern);
+        emul.setNegativeSuffix(negativeSuffix);
+
+        assertThrows(NullPointerException.class, () -> jdk.toPattern());
+        assertThrows(NullPointerException.class, () -> emul.toPattern());
     }
 
     @Test
     public void testSetNegativeSuffix() {
-        final String negativeSuffix = "ABC";
+        this.setNegativeSuffixAndCheck("#", "ABC");
+    }
 
-        final java.text.DecimalFormat jdk = new java.text.DecimalFormat("#");
+    @Test
+    public void testSetNegativeSuffixCurrency() {
+        this.setNegativeSuffixAndCheck("#0.00", "" + DecimalFormat.CURRENCY);
+    }
+
+    @Test
+    public void testSetNegativeSuffixDecimalSeparator() {
+        this.setNegativeSuffixAndCheck("#0.00", "" + DecimalFormat.DECIMAL_SEPARATOR);
+    }
+
+    @Test
+    public void testSetNegativeSuffixExponent() {
+        this.setNegativeSuffixAndCheck("#0.00", "" + DecimalFormat.EXPONENT);
+    }
+
+    @Test
+    public void testSetNegativeSuffixGroupingSeparator() {
+        this.setNegativeSuffixAndCheck("#0.00", "" + DecimalFormat.GROUPING_SEPARATOR);
+    }
+
+    @Test
+    public void testSetNegativeSuffixHash() {
+        this.setNegativeSuffixAndCheck("#0.00", "" + DecimalFormat.HASH);
+    }
+
+    @Test
+    public void testSetNegativeSuffixMinusSign() {
+        this.setNegativeSuffixAndCheck("#0.00", "" + DecimalFormat.MINUS_SIGN);
+    }
+
+    @Test
+    public void testSetNegativeSuffixPercent() {
+        this.setNegativeSuffixAndCheck("#0.00", "" + DecimalFormat.PERCENT);
+    }
+
+    @Test
+    public void testSetNegativeSuffixPerMille() {
+        this.setNegativeSuffixAndCheck("#0.00", "" + DecimalFormat.PER_MILLE);
+    }
+
+    @Test
+    public void testSetNegativeSuffixZero() {
+        this.setNegativeSuffixAndCheck("#0.00", "" + DecimalFormat.ZERO);
+    }
+
+    @Test
+    public void testSetNegativeSuffixAllCharacters() {
+        for (int i = 32; i < 0x8000; i++) {
+            if (DecimalFormat.QUOTE == i) {
+                continue;
+            }
+            this.setNegativeSuffixAndCheck("#0.00", "" + (char) i);
+        }
+    }
+
+    private void setNegativeSuffixAndCheck(final String pattern,
+                                           final String negativeSuffix) {
+        final java.text.DecimalFormat jdk = new java.text.DecimalFormat(pattern);
         jdk.setNegativeSuffix(negativeSuffix);
 
-        final DecimalFormat emul = new DecimalFormat("#");
+        final DecimalFormat emul = new DecimalFormat(pattern);
         emul.setNegativeSuffix(negativeSuffix);
 
-        assertEquals(jdk.getNegativeSuffix(), emul.getNegativeSuffix(), () -> "negativeSuffix");
+        this.check(jdk, emul);
     }
 
     // parseBigDecimal, parseIntegerOnly................................................................................
@@ -812,43 +947,177 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
     // positivePrefix.........................................................................................................
 
     @Test
-    public void testSetPositivePrefixNull() {
-        new java.text.DecimalFormat("#").setPositivePrefix(null);
-        new DecimalFormat("#").setPositivePrefix(null);
+    public void testSetPositivePrefixNullToPatternFails() {
+        final String pattern = "#";
+        final String positivePrefix = null;
+
+        final java.text.DecimalFormat jdk = new java.text.DecimalFormat(pattern);
+        jdk.setPositivePrefix(positivePrefix);
+
+        final DecimalFormat emul = new DecimalFormat(pattern);
+        emul.setPositivePrefix(positivePrefix);
+
+        assertThrows(NullPointerException.class, () -> jdk.toPattern());
+        assertThrows(NullPointerException.class, () -> emul.toPattern());
     }
 
     @Test
     public void testSetPositivePrefix() {
-        final String positivePrefix = "ABC";
+        this.setPositivePrefixAndCheck("#", "ABC");
+    }
 
-        final java.text.DecimalFormat jdk = new java.text.DecimalFormat("#");
+    @Test
+    public void testSetPositivePrefixCurrency() {
+        this.setPositivePrefixAndCheck("#0.00", "" + DecimalFormat.CURRENCY);
+    }
+
+    @Test
+    public void testSetPositivePrefixDecimalSeparator() {
+        this.setPositivePrefixAndCheck("#0.00", "" + DecimalFormat.DECIMAL_SEPARATOR);
+    }
+
+    @Test
+    public void testSetPositivePrefixExponent() {
+        this.setPositivePrefixAndCheck("#0.00", "" + DecimalFormat.EXPONENT);
+    }
+
+    @Test
+    public void testSetPositivePrefixGroupingSeparator() {
+        this.setPositivePrefixAndCheck("#0.00", "" + DecimalFormat.GROUPING_SEPARATOR);
+    }
+
+    @Test
+    public void testSetPositivePrefixHash() {
+        this.setPositivePrefixAndCheck("#0.00", "" + DecimalFormat.HASH);
+    }
+
+    @Test
+    public void testSetPositivePrefixMinusSign() {
+        this.setPositivePrefixAndCheck("#0.00", "" + DecimalFormat.MINUS_SIGN);
+    }
+
+    @Test
+    public void testSetPositivePrefixPercent() {
+        this.setPositivePrefixAndCheck("#0.00", "" + DecimalFormat.PERCENT);
+    }
+
+    @Test
+    public void testSetPositivePrefixPerMille() {
+        this.setPositivePrefixAndCheck("#0.00", "" + DecimalFormat.PER_MILLE);
+    }
+
+    @Test
+    public void testSetPositivePrefixZero() {
+        this.setPositivePrefixAndCheck("#0.00", "" + DecimalFormat.ZERO);
+    }
+
+    @Test
+    public void testSetPositivePrefixAllCharacters() {
+        for (int i = 32; i < 0x8000; i++) {
+            if (DecimalFormat.QUOTE == i) {
+                continue;
+            }
+            this.setPositivePrefixAndCheck("#0.00", "" + (char) i);
+        }
+    }
+
+    private void setPositivePrefixAndCheck(final String pattern,
+                                           final String positivePrefix) {
+        final java.text.DecimalFormat jdk = new java.text.DecimalFormat(pattern);
         jdk.setPositivePrefix(positivePrefix);
 
-        final DecimalFormat emul = new DecimalFormat("#");
+        final DecimalFormat emul = new DecimalFormat(pattern);
         emul.setPositivePrefix(positivePrefix);
 
-        assertEquals(jdk.getPositivePrefix(), emul.getPositivePrefix(), () -> "positivePrefix");
+        this.check(jdk, emul);
     }
 
     // positiveSuffix.........................................................................................................
 
     @Test
-    public void testSetPositiveSuffixNull() {
-        new java.text.DecimalFormat("#").setPositiveSuffix(null);
-        new DecimalFormat("#").setPositiveSuffix(null);
+    public void testSetPositiveSuffixNullToPatternFails() {
+        final String pattern = "#";
+        final String positiveSuffix = null;
+
+        final java.text.DecimalFormat jdk = new java.text.DecimalFormat(pattern);
+        jdk.setPositiveSuffix(positiveSuffix);
+
+        final DecimalFormat emul = new DecimalFormat(pattern);
+        emul.setPositiveSuffix(positiveSuffix);
+
+        assertThrows(NullPointerException.class, () -> jdk.toPattern());
+        assertThrows(NullPointerException.class, () -> emul.toPattern());
     }
 
     @Test
     public void testSetPositiveSuffix() {
-        final String positiveSuffix = "ABC";
+        this.setPositiveSuffixAndCheck("#", "ABC");
+    }
 
-        final java.text.DecimalFormat jdk = new java.text.DecimalFormat("#");
+    @Test
+    public void testSetPositiveSuffixCurrency() {
+        this.setPositiveSuffixAndCheck("#0.00", "" + DecimalFormat.CURRENCY);
+    }
+
+    @Test
+    public void testSetPositiveSuffixDecimalSeparator() {
+        this.setPositiveSuffixAndCheck("#0.00", "" + DecimalFormat.DECIMAL_SEPARATOR);
+    }
+
+    @Test
+    public void testSetPositiveSuffixExponent() {
+        this.setPositiveSuffixAndCheck("#0.00", "" + DecimalFormat.EXPONENT);
+    }
+
+    @Test
+    public void testSetPositiveSuffixGroupingSeparator() {
+        this.setPositiveSuffixAndCheck("#0.00", "" + DecimalFormat.GROUPING_SEPARATOR);
+    }
+
+    @Test
+    public void testSetPositiveSuffixHash() {
+        this.setPositiveSuffixAndCheck("#0.00", "" + DecimalFormat.HASH);
+    }
+
+    @Test
+    public void testSetPositiveSuffixMinusSign() {
+        this.setPositiveSuffixAndCheck("#0.00", "" + DecimalFormat.MINUS_SIGN);
+    }
+
+    @Test
+    public void testSetPositiveSuffixPercent() {
+        this.setPositiveSuffixAndCheck("#0.00", "" + DecimalFormat.PERCENT);
+    }
+
+    @Test
+    public void testSetPositiveSuffixPerMille() {
+        this.setPositiveSuffixAndCheck("#0.00", "" + DecimalFormat.PER_MILLE);
+    }
+
+    @Test
+    public void testSetPositiveSuffixZero() {
+        this.setPositiveSuffixAndCheck("#0.00", "" + DecimalFormat.ZERO);
+    }
+
+    @Test
+    public void testSetPositiveSuffixAllCharacters() {
+        for (int i = 32; i < 0x8000; i++) {
+            if (DecimalFormat.QUOTE == i) {
+                continue;
+            }
+            this.setPositiveSuffixAndCheck("#0.00", "" + (char) i);
+        }
+    }
+
+    private void setPositiveSuffixAndCheck(final String pattern,
+                                           final String positiveSuffix) {
+        final java.text.DecimalFormat jdk = new java.text.DecimalFormat(pattern);
         jdk.setPositiveSuffix(positiveSuffix);
 
-        final DecimalFormat emul = new DecimalFormat("#");
+        final DecimalFormat emul = new DecimalFormat(pattern);
         emul.setPositiveSuffix(positiveSuffix);
 
-        assertEquals(jdk.getPositiveSuffix(), emul.getPositiveSuffix(), () -> "positiveSuffix");
+        this.check(jdk, emul);
     }
 
     // roundingMode.........................................................................................................
@@ -889,6 +1158,13 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
     }
 
     // check............................................................................................................
+
+    private void check(final java.text.NumberFormat jdk,
+                       final NumberFormat emul) {
+        this.check((java.text.DecimalFormat) jdk,
+                (DecimalFormat) emul,
+                Locale.getDefault());
+    }
 
     private void check(final java.text.NumberFormat jdk,
                        final NumberFormat emul,
