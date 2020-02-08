@@ -17,12 +17,19 @@
 
 package walkingkooka.javatextj2cl.java.text;
 
+import walkingkooka.HashCodeEqualsDefinedTesting2;
 import walkingkooka.ToStringTesting;
+import walkingkooka.predicate.Predicates;
+import walkingkooka.reflect.IsMethodTesting;
+
+import java.util.function.Predicate;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public abstract class DecimalFormatPatternComponentTestCase<C extends DecimalFormatPatternComponent> extends DecimalFormatPatternTestCase<C>
-        implements ToStringTesting<C> {
+        implements HashCodeEqualsDefinedTesting2<C>,
+        IsMethodTesting<C>,
+        ToStringTesting<C> {
 
     DecimalFormatPatternComponentTestCase() {
         super();
@@ -40,6 +47,37 @@ public abstract class DecimalFormatPatternComponentTestCase<C extends DecimalFor
         assertEquals(component.multiplier(),
                 multipler,
                 () -> component.toString());
+    }
+
+    abstract C component();
+
+    // HashCodeEqualsDefinedTesting2....................................................................................
+
+    @Override
+    public final C createObject() {
+        return this.component();
+    }
+
+    // IsMethodTesting..................................................................................................
+
+    @Override
+    public final C createIsMethodObject() {
+        return this.component();
+    }
+
+    @Override
+    public String isMethodTypeNamePrefix() {
+        return DecimalFormatPatternComponent.class.getSimpleName();
+    }
+
+    @Override
+    public String isMethodTypeNameSuffix() {
+        return "";
+    }
+
+    @Override
+    public Predicate<String> isMethodIgnoreMethodFilter() {
+        return Predicates.never();
     }
 
     // TypeNameTesting..................................................................................................

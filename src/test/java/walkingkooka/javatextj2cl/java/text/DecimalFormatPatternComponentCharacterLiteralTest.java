@@ -20,8 +20,7 @@ package walkingkooka.javatextj2cl.java.text;
 import org.junit.jupiter.api.Test;
 import walkingkooka.HashCodeEqualsDefinedTesting2;
 
-public final class DecimalFormatPatternComponentCharacterLiteralTest extends DecimalFormatPatternComponentTestCase<DecimalFormatPatternComponentCharacterLiteral>
-        implements HashCodeEqualsDefinedTesting2<DecimalFormatPatternComponentCharacterLiteral> {
+public final class DecimalFormatPatternComponentCharacterLiteralTest extends DecimalFormatPatternComponentTestCase<DecimalFormatPatternComponentCharacterLiteral> {
 
     @Test
     public void testIsCurrency() {
@@ -94,14 +93,12 @@ public final class DecimalFormatPatternComponentCharacterLiteralTest extends Dec
     }
 
     @Override
-    public Class<DecimalFormatPatternComponentCharacterLiteral> type() {
-        return DecimalFormatPatternComponentCharacterLiteral.class;
+    DecimalFormatPatternComponentCharacterLiteral component() {
+        return DecimalFormatPatternComponentCharacterLiteral.with('A');
     }
 
-    // HashCodeEqualsDefinedTesting2....................................................................................
-
     @Override
-    public DecimalFormatPatternComponentCharacterLiteral createObject() {
-        return DecimalFormatPatternComponentCharacterLiteral.with('A');
+    public Class<DecimalFormatPatternComponentCharacterLiteral> type() {
+        return DecimalFormatPatternComponentCharacterLiteral.class;
     }
 }
