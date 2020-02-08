@@ -17,6 +17,8 @@
 
 package walkingkooka.javatextj2cl.java.text;
 
+import java.util.stream.IntStream;
+
 /**
  * The only non singleton component and holds a single character
  */
@@ -26,7 +28,19 @@ final class DecimalFormatPatternComponentCharacterLiteral extends DecimalFormatP
      * Factory that creates a character literal.
      */
     final static DecimalFormatPatternComponentCharacterLiteral with(final char value) {
-        return new DecimalFormatPatternComponentCharacterLiteral(value);
+        return value <= CONSTANT_COUNT ?
+                CONSTANTS[value] :
+                new DecimalFormatPatternComponentCharacterLiteral(value);
+    }
+
+    static int CONSTANT_COUNT = 127;
+
+    private static DecimalFormatPatternComponentCharacterLiteral[] CONSTANTS = IntStream.rangeClosed(0, CONSTANT_COUNT)
+            .mapToObj(DecimalFormatPatternComponentCharacterLiteral::new)
+            .toArray(DecimalFormatPatternComponentCharacterLiteral[]::new);
+
+    private DecimalFormatPatternComponentCharacterLiteral(final int value) {
+        this((char) value);
     }
 
     private DecimalFormatPatternComponentCharacterLiteral(final char value) {
