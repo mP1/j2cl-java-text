@@ -18,9 +18,18 @@
 package walkingkooka.javatextj2cl.java.text;
 
 import org.junit.jupiter.api.Test;
-import walkingkooka.HashCodeEqualsDefinedTesting2;
+
+import static org.junit.jupiter.api.Assertions.assertSame;
 
 public final class DecimalFormatPatternComponentCharacterLiteralTest extends DecimalFormatPatternComponentTestCase<DecimalFormatPatternComponentCharacterLiteral> {
+
+    @Test
+    public void testConstant() {
+        for (int i = 0; i <= DecimalFormatPatternComponentCharacterLiteral.CONSTANT_COUNT; i++) {
+            final char c = (char) i;
+            assertSame(DecimalFormatPatternComponentCharacterLiteral.with(c), DecimalFormatPatternComponentCharacterLiteral.with(c));
+        }
+    }
 
     @Test
     public void testIsCurrency() {
