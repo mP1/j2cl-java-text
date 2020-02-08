@@ -134,8 +134,15 @@ abstract class DecimalFormatPatternComponent {
     /**
      * Only {@link DecimalFormatPatternComponentHash} returns true.
      */
+    final boolean isHash() {
+        return this instanceof DecimalFormatPatternComponentHash;
+    }
+
+    /**
+     * Only {@link DecimalFormatPatternComponentHash} or {@link DecimalFormatPatternComponentZero} returns true.
+     */
     final boolean isHashOrZero() {
-        return this instanceof DecimalFormatPatternComponentHash || this.isZero();
+        return this.isHash() || this.isZero();
     }
 
     /**
@@ -153,8 +160,13 @@ abstract class DecimalFormatPatternComponent {
     /**
      * Used to materialise this component into the {@link String} form for a prefix or suffix.
      */
-    abstract void toPattern(final DecimalFormat format,
-                            final StringBuilder pattern);
+    abstract void toPattern(final StringBuilder pattern);
+
+    /**
+     * Used to materialise this component into the {@link String} form for a prefix or suffix.
+     */
+    abstract void toPatternLocalized(final DecimalFormatSymbols symbols,
+                                     final StringBuilder pattern);
 
     @Override
     public abstract String toString();
