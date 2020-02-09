@@ -77,6 +77,7 @@ public class DecimalFormat extends NumberFormat {
      */
     static void register(final String languageTags,
 
+                         final boolean currencyDecimalSeparatorAlwaysShown,
                          final int currencyGroupingSize,
                          final boolean currencyGroupingUsed,
                          final int currencyMaximumFractionDigits,
@@ -92,6 +93,7 @@ public class DecimalFormat extends NumberFormat {
                          final String currencyPositiveSuffix,
                          final RoundingMode currencyRoundingMode,
 
+                         final boolean instanceDecimalSeparatorAlwaysShown,
                          final int instanceGroupingSize,
                          final boolean instanceGroupingUsed,
                          final int instanceMaximumFractionDigits,
@@ -107,6 +109,7 @@ public class DecimalFormat extends NumberFormat {
                          final String instancePositiveSuffix,
                          final RoundingMode instanceRoundingMode,
 
+                         final boolean integerDecimalSeparatorAlwaysShown,
                          final int integerGroupingSize,
                          final boolean integerGroupingUsed,
                          final int integerMaximumFractionDigits,
@@ -122,6 +125,7 @@ public class DecimalFormat extends NumberFormat {
                          final String integerPositiveSuffix,
                          final RoundingMode integerRoundingMode,
 
+                         final boolean numberDecimalSeparatorAlwaysShown,
                          final int numberGroupingSize,
                          final boolean numberGroupingUsed,
                          final int numberMaximumFractionDigits,
@@ -137,6 +141,7 @@ public class DecimalFormat extends NumberFormat {
                          final String numberPositiveSuffix,
                          final RoundingMode numberRoundingMode,
 
+                         final boolean percentDecimalSeparatorAlwaysShown,
                          final int percentGroupingSize,
                          final boolean percentGroupingUsed,
                          final int percentMaximumFractionDigits,
@@ -173,11 +178,11 @@ public class DecimalFormat extends NumberFormat {
 
             LANGUAGE_TAG_TO_FORMATS.add(languageTag,
                     new DecimalFormat[]{
-                            new DecimalFormat(currency, currencyGroupingSize, currencyGroupingUsed, currencyMaximumFractionDigits, currencyMinimumFractionDigits, currencyMaximumIntegerDigits, currencyMinimumIntegerDigits, currencyMultiplier, currencyNegativePrefix, currencyNegativeSuffix, currencyParse, currencyPattern, currencyPositivePrefix, currencyPositiveSuffix, currencyRoundingMode, symbols),
-                            new DecimalFormat(currency, instanceGroupingSize, instanceGroupingUsed, instanceMaximumFractionDigits, instanceMinimumFractionDigits, instanceMaximumIntegerDigits, instanceMinimumIntegerDigits, instanceMultiplier, instanceNegativePrefix, instanceNegativeSuffix, instanceParse, instancePattern, instancePositivePrefix, instancePositiveSuffix, instanceRoundingMode, symbols),
-                            new DecimalFormat(currency, integerGroupingSize, integerGroupingUsed, integerMaximumFractionDigits, integerMinimumFractionDigits, integerMaximumIntegerDigits, integerMinimumIntegerDigits, integerMultiplier, integerNegativePrefix, integerNegativeSuffix, integerParse, integerPattern, integerPositivePrefix, integerPositiveSuffix, integerRoundingMode, symbols),
-                            new DecimalFormat(currency, numberGroupingSize, numberGroupingUsed, numberMaximumFractionDigits, numberMinimumFractionDigits, numberMaximumIntegerDigits, numberMinimumIntegerDigits, numberMultiplier, numberNegativePrefix, numberNegativeSuffix, numberParse, numberPattern, numberPositivePrefix, numberPositiveSuffix, numberRoundingMode, symbols),
-                            new DecimalFormat(currency, percentGroupingSize, percentGroupingUsed, percentMaximumFractionDigits, percentMinimumFractionDigits, percentMaximumIntegerDigits, percentMinimumIntegerDigits, percentMultiplier, percentNegativePrefix, percentNegativeSuffix, percentParse, percentPattern, percentPositivePrefix, percentPositiveSuffix, percentRoundingMode, symbols),
+                            new DecimalFormat(currency, currencyDecimalSeparatorAlwaysShown, currencyGroupingSize, currencyGroupingUsed, currencyMaximumFractionDigits, currencyMinimumFractionDigits, currencyMaximumIntegerDigits, currencyMinimumIntegerDigits, currencyMultiplier, currencyNegativePrefix, currencyNegativeSuffix, currencyParse, currencyPattern, currencyPositivePrefix, currencyPositiveSuffix, currencyRoundingMode, symbols),
+                            new DecimalFormat(currency, instanceDecimalSeparatorAlwaysShown, instanceGroupingSize, instanceGroupingUsed, instanceMaximumFractionDigits, instanceMinimumFractionDigits, instanceMaximumIntegerDigits, instanceMinimumIntegerDigits, instanceMultiplier, instanceNegativePrefix, instanceNegativeSuffix, instanceParse, instancePattern, instancePositivePrefix, instancePositiveSuffix, instanceRoundingMode, symbols),
+                            new DecimalFormat(currency, integerDecimalSeparatorAlwaysShown, integerGroupingSize, integerGroupingUsed, integerMaximumFractionDigits, integerMinimumFractionDigits, integerMaximumIntegerDigits, integerMinimumIntegerDigits, integerMultiplier, integerNegativePrefix, integerNegativeSuffix, integerParse, integerPattern, integerPositivePrefix, integerPositiveSuffix, integerRoundingMode, symbols),
+                            new DecimalFormat(currency, numberDecimalSeparatorAlwaysShown, numberGroupingSize, numberGroupingUsed, numberMaximumFractionDigits, numberMinimumFractionDigits, numberMaximumIntegerDigits, numberMinimumIntegerDigits, numberMultiplier, numberNegativePrefix, numberNegativeSuffix, numberParse, numberPattern, numberPositivePrefix, numberPositiveSuffix, numberRoundingMode, symbols),
+                            new DecimalFormat(currency, percentDecimalSeparatorAlwaysShown, percentGroupingSize, percentGroupingUsed, percentMaximumFractionDigits, percentMinimumFractionDigits, percentMaximumIntegerDigits, percentMinimumIntegerDigits, percentMultiplier, percentNegativePrefix, percentNegativeSuffix, percentParse, percentPattern, percentPositivePrefix, percentPositiveSuffix, percentRoundingMode, symbols),
                     });
 
             // TODO symbols.setCurrency();
@@ -202,6 +207,7 @@ public class DecimalFormat extends NumberFormat {
      * Ctor used to register locale to decimal format and by {@link #cloneState()}
      */
     private DecimalFormat(final Currency currency,
+                          final boolean decimalSeparatorAlwaysShown,
                           final int groupingSize,
                           final boolean groupingUsed,
                           final int maximumFractionDigits,
@@ -220,6 +226,9 @@ public class DecimalFormat extends NumberFormat {
         super();
 
         this.currency = currency;
+
+        this.decimalSeparatorAlwaysShown = decimalSeparatorAlwaysShown;
+
         this.groupingSize = groupingSize;
         this.groupingUsed = groupingUsed;
 
@@ -557,6 +566,33 @@ public class DecimalFormat extends NumberFormat {
 
     private Currency currency;
 
+    // decimalSeparatorAlwaysShown......................................................................................
+
+    /**
+     * Indicates whether the decimal separator is shown when there are no
+     * fractional digits.
+     *
+     * @return {@code true} if the decimal separator should always be formatted;
+     * {@code false} otherwise.
+     */
+    public boolean isDecimalSeparatorAlwaysShown() {
+        return this.decimalSeparatorAlwaysShown;
+    }
+
+    /**
+     * Sets whether the decimal separator is shown when there are no fractional
+     * digits.
+     *
+     * @param value
+     *            {@code true} if the decimal separator should always be
+     *            formatted; {@code false} otherwise.
+     */
+    public synchronized void setDecimalSeparatorAlwaysShown(final boolean value) {
+        this.decimalSeparatorAlwaysShown = value;
+    }
+
+    private boolean decimalSeparatorAlwaysShown;
+
     // GroupingSize.....................................................................................................
 
     public int getGroupingSize() {
@@ -740,6 +776,7 @@ public class DecimalFormat extends NumberFormat {
     @Override
     public int hashCode() {
         return Objects.hash(super.hashCode(),
+                this.decimalSeparatorAlwaysShown,
                 this.groupingSize,
                 this.groupingUsed,
                 this.multiplier,
@@ -767,6 +804,7 @@ public class DecimalFormat extends NumberFormat {
 
     private boolean equals1(final DecimalFormat other) {
         return this.currency.equals(other.currency) &&
+                this.decimalSeparatorAlwaysShown == other.decimalSeparatorAlwaysShown &&
                 this.groupingSize == other.groupingSize &&
                 this.groupingUsed == other.groupingUsed &&
                 this.maximumFractionDigits == other.maximumFractionDigits &&
@@ -791,6 +829,7 @@ public class DecimalFormat extends NumberFormat {
         return ToStringBuilder.empty()
                 .valueSeparator("")
                 .label("currency").value(this.currency)
+                .label("decimalSeparatorAlwaysShown").value(this.decimalSeparatorAlwaysShown)
                 .label("groupingSize").value(this.groupingSize)
                 .label("groupingUsed").value(this.groupingUsed)
                 .label("maximumFractionDigits").value(this.maximumFractionDigits)

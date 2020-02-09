@@ -23,6 +23,7 @@ final class DecimalFormatProvider {
     static void register() {
         DecimalFormat.register(
                 "\tas\taz\taz-Cyrl\taz-Latn\tbo\tbrx\tcu\teo\teo-001\tfur\tha\tii\tjgo\tji\tji-001\tkkj\tkok\tlag\tlkt\tmfe\tmgh\tmgo\tmk\tmn\tmy\tne\tnnh\tor\tos\tpa\tpa-Guru\tprg\tprg-001\trw\tsah\tsmn\tta\tto\tund\tvi\tvo\tvo-001\twae\tyi\tyi-001", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -37,6 +38,7 @@ final class DecimalFormatProvider {
                 "¤ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -51,6 +53,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -65,6 +68,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -79,6 +83,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -97,6 +102,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "af\tak\tam\tbem\tbm\tcgg\tchr\tcy\tdav\tebu\tee\ten\ten-001\ten-DG\tfil\tga\tgd\tgu\tguz\tgv\thaw\thi\tid\tig\tin\tja\tjmc\tkam\tkde\tki\tkln\tkm\tkn\tko\tkw\tmas\tmer\tmg\tml\tmr\tms\tmt\tmua\tnaq\tnd\tnus\tnyn\tom\tpt\trof\tsaq\tsi\tsn\tso\tsw\tte\tteo\tth\tti\tug\tvai\tvai-Latn\tvai-Vaii\tvun\tyo\tyue\tzh\tzh-Hans\tzh-Hant\tzu", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -111,6 +117,7 @@ final class DecimalFormatProvider {
                 "¤", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -125,6 +132,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -139,6 +147,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -153,6 +162,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -171,6 +181,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "af-NA\tchr-US\ten-AG\ten-AI\ten-AS\ten-AU\ten-BB\ten-BM\ten-BS\ten-BZ\ten-CA\ten-CC\ten-CK\ten-CX\ten-DM\ten-FJ\ten-GD\ten-GU\ten-GY\ten-JM\ten-KI\ten-KN\ten-KY\ten-LC\ten-LR\ten-MH\ten-MP\ten-MS\ten-NA\ten-NF\ten-NR\ten-NU\ten-NZ\ten-PN\ten-PR\ten-SB\ten-SG\ten-TK\ten-TT\ten-TV\ten-UM\ten-US\ten-VC\ten-VI\tes-MX\thaw-US\tms-SG\tnaq-NA\tvai-LR\tvai-Latn-LR\tvai-Vaii-LR\tzh-Hans-SG\tzh-Hant-TW\tzh-SG\tzh-TW", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -185,6 +196,7 @@ final class DecimalFormatProvider {
                 "$", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -199,6 +211,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -213,6 +226,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -227,6 +241,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -245,6 +260,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "af-ZA\ten-ZA\tzu-ZA", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -259,6 +275,7 @@ final class DecimalFormatProvider {
                 "R", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -273,6 +290,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -287,6 +305,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -301,6 +320,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -319,6 +339,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "agq\tbez\tbn\tdje\tkab\tkhq\tksb\tlg\tlu\tluo\trwk\tsbp\tseh\tses\tshi\tshi-Latn\tshi-Tfng\ttwq", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -333,6 +354,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 "¤", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -347,6 +369,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -361,6 +384,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -375,6 +399,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -393,6 +418,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "agq-CM", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 0, // Currency maximumFractionDigits
@@ -407,6 +433,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 "FCFA", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -421,6 +448,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -435,6 +463,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -449,6 +478,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -467,6 +497,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ak-GH\tee-GH\ten-GH", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -481,6 +512,7 @@ final class DecimalFormatProvider {
                 "GH₵", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -495,6 +527,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -509,6 +542,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -523,6 +557,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -541,6 +576,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "am-ET", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -555,6 +591,7 @@ final class DecimalFormatProvider {
                 "ብር", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -569,6 +606,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -583,6 +621,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -597,6 +636,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -615,6 +655,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ar\tar-001\tckb", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -629,6 +670,7 @@ final class DecimalFormatProvider {
                 "¤ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -643,6 +685,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -657,6 +700,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -671,6 +715,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -689,6 +734,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ar-AE", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -703,6 +749,7 @@ final class DecimalFormatProvider {
                 "د.إ.‏ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -717,6 +764,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -731,6 +779,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -745,6 +794,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -763,6 +813,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ar-BH", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 3, // Currency maximumFractionDigits
@@ -777,6 +828,7 @@ final class DecimalFormatProvider {
                 "د.ب.‏ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -791,6 +843,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -805,6 +858,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -819,6 +873,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -837,6 +892,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ar-DJ", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 0, // Currency maximumFractionDigits
@@ -851,6 +907,7 @@ final class DecimalFormatProvider {
                 "Fdj ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -865,6 +922,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -879,6 +937,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -893,6 +952,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -911,6 +971,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ar-DZ", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -925,6 +986,7 @@ final class DecimalFormatProvider {
                 "د.ج.‏ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -939,6 +1001,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -953,6 +1016,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -967,6 +1031,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -985,6 +1050,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ar-EG", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -999,6 +1065,7 @@ final class DecimalFormatProvider {
                 "ج.م.‏ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -1013,6 +1080,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -1027,6 +1095,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -1041,6 +1110,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -1059,6 +1129,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ar-EH\tar-MA", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -1073,6 +1144,7 @@ final class DecimalFormatProvider {
                 "د.م.‏ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -1087,6 +1159,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -1101,6 +1174,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -1115,6 +1189,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -1133,6 +1208,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ar-ER", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -1147,6 +1223,7 @@ final class DecimalFormatProvider {
                 "Nfk ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -1161,6 +1238,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -1175,6 +1253,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -1189,6 +1268,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -1207,6 +1287,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ar-IL\tar-PS", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -1221,6 +1302,7 @@ final class DecimalFormatProvider {
                 "₪ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -1235,6 +1317,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -1249,6 +1332,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -1263,6 +1347,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -1281,6 +1366,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ar-IQ", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 3, // Currency maximumFractionDigits
@@ -1295,6 +1381,7 @@ final class DecimalFormatProvider {
                 "د.ع.‏ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -1309,6 +1396,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -1323,6 +1411,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -1337,6 +1426,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -1355,6 +1445,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ar-JO", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 3, // Currency maximumFractionDigits
@@ -1369,6 +1460,7 @@ final class DecimalFormatProvider {
                 "د.أ.‏ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -1383,6 +1475,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -1397,6 +1490,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -1411,6 +1505,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -1429,6 +1524,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ar-KM", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 0, // Currency maximumFractionDigits
@@ -1443,6 +1539,7 @@ final class DecimalFormatProvider {
                 "ف.ج.ق.‏ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -1457,6 +1554,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -1471,6 +1569,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -1485,6 +1584,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -1503,6 +1603,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ar-KW", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 3, // Currency maximumFractionDigits
@@ -1517,6 +1618,7 @@ final class DecimalFormatProvider {
                 "د.ك.‏ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -1531,6 +1633,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -1545,6 +1648,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -1559,6 +1663,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -1577,6 +1682,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ar-LB", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -1591,6 +1697,7 @@ final class DecimalFormatProvider {
                 "ل.ل.‏ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -1605,6 +1712,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -1619,6 +1727,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -1633,6 +1742,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -1651,6 +1761,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ar-LY", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 3, // Currency maximumFractionDigits
@@ -1665,6 +1776,7 @@ final class DecimalFormatProvider {
                 "د.ل.‏ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -1679,6 +1791,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -1693,6 +1806,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -1707,6 +1821,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -1725,6 +1840,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ar-MR", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -1739,6 +1855,7 @@ final class DecimalFormatProvider {
                 "أ.م.‏ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -1753,6 +1870,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -1767,6 +1885,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -1781,6 +1900,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -1799,6 +1919,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ar-OM", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 3, // Currency maximumFractionDigits
@@ -1813,6 +1934,7 @@ final class DecimalFormatProvider {
                 "ر.ع.‏ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -1827,6 +1949,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -1841,6 +1964,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -1855,6 +1979,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -1873,6 +1998,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ar-QA", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -1887,6 +2013,7 @@ final class DecimalFormatProvider {
                 "ر.ق.‏ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -1901,6 +2028,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -1915,6 +2043,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -1929,6 +2058,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -1947,6 +2077,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ar-SA", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -1961,6 +2092,7 @@ final class DecimalFormatProvider {
                 "ر.س.‏ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -1975,6 +2107,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -1989,6 +2122,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -2003,6 +2137,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -2021,6 +2156,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ar-SD", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -2035,6 +2171,7 @@ final class DecimalFormatProvider {
                 "ج.س.‏ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -2049,6 +2186,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -2063,6 +2201,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -2077,6 +2216,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -2095,6 +2235,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ar-SO", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -2109,6 +2250,7 @@ final class DecimalFormatProvider {
                 "S ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -2123,6 +2265,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -2137,6 +2280,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -2151,6 +2295,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -2169,6 +2314,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ar-SS", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -2183,6 +2329,7 @@ final class DecimalFormatProvider {
                 "£ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -2197,6 +2344,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -2211,6 +2359,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -2225,6 +2374,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -2243,6 +2393,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ar-SY", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -2257,6 +2408,7 @@ final class DecimalFormatProvider {
                 "ل.س.‏ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -2271,6 +2423,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -2285,6 +2438,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -2299,6 +2453,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -2317,6 +2472,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ar-TD", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 0, // Currency maximumFractionDigits
@@ -2331,6 +2487,7 @@ final class DecimalFormatProvider {
                 "FCFA ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -2345,6 +2502,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -2359,6 +2517,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -2373,6 +2532,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -2391,6 +2551,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ar-TN", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 3, // Currency maximumFractionDigits
@@ -2405,6 +2566,7 @@ final class DecimalFormatProvider {
                 "د.ت.‏ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -2419,6 +2581,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -2433,6 +2596,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -2447,6 +2611,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -2465,6 +2630,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ar-YE", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -2479,6 +2645,7 @@ final class DecimalFormatProvider {
                 "ر.ي.‏ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -2493,6 +2660,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -2507,6 +2675,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -2521,6 +2690,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -2539,6 +2709,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "as-IN\tbo-IN\tbrx-IN\tkok-IN\tne-IN\tor-IN\tpa-Guru-IN\tpa-IN\tta-IN", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -2553,6 +2724,7 @@ final class DecimalFormatProvider {
                 "₹ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -2567,6 +2739,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -2581,6 +2754,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -2595,6 +2769,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -2613,6 +2788,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "asa\tast\tbg\tbs\tbs-Cyrl\tbs-Latn\tca\tdyo\tel\ten-150\tewo\tff\tgl\thr\thu\tis\tit\tkea\tkk\tksf\tky\tln\tnmg\tpl\tsl\tsq\tsq-XK\tsr\tsr-Cyrl\tsr-Cyrl-XK\tsr-Latn\tsr-Latn-XK\ttzm\tuk\tuz\tuz-Latn\txog\tyav", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -2627,6 +2803,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " ¤", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -2641,6 +2818,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -2655,6 +2833,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -2669,6 +2848,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -2687,6 +2867,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "asa-TZ", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -2701,6 +2882,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " TSh", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -2715,6 +2897,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -2729,6 +2912,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -2743,6 +2927,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -2761,6 +2946,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ast-ES\tca-AD\tca-ES\tca-ES-VALENCIA\tca-FR\tca-IT\tel-CY\tel-GR\ten-BE\ten-SI\tgl-ES\tit-IT\tit-SM\tnl-BE\tpt-LU\tpt-PT\tsl-SI\tsr-Cyrl-ME\tsr-Latn-ME", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -2775,6 +2961,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " €", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -2789,6 +2976,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -2803,6 +2991,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -2817,6 +3006,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -2835,6 +3025,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "az-AZ\taz-Cyrl-AZ\taz-Latn-AZ", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -2849,6 +3040,7 @@ final class DecimalFormatProvider {
                 "₼ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -2863,6 +3055,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -2877,6 +3070,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -2891,6 +3085,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -2909,6 +3104,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "bas\tbe\tbr\tce\tcs\tda\tde\tdsb\tdua\tes\tes-EA\tes-IC\tfr\thsb\tka\tlb\tro\tru\tsk\ttk", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -2923,6 +3119,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " ¤", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -2937,6 +3134,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -2951,6 +3149,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -2965,6 +3164,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -2983,6 +3183,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "bas-CM\tdua-CM\tfr-CF\tfr-CG\tfr-CM\tfr-GA\tfr-GQ\tfr-TD", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 0, // Currency maximumFractionDigits
@@ -2997,6 +3198,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " FCFA", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -3011,6 +3213,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -3025,6 +3228,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -3039,6 +3243,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -3057,6 +3262,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "be-BY", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -3071,6 +3277,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " Руб", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -3085,6 +3292,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -3099,6 +3307,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -3113,6 +3322,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -3131,6 +3341,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "bem-ZM\ten-PG\ten-ZM", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -3145,6 +3356,7 @@ final class DecimalFormatProvider {
                 "K", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -3159,6 +3371,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -3173,6 +3386,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -3187,6 +3401,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -3205,6 +3420,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "bez-TZ\tksb-TZ\trwk-TZ\tsbp-TZ", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -3219,6 +3435,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 "TSh", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -3233,6 +3450,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -3247,6 +3465,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -3261,6 +3480,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -3279,6 +3499,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "bg-BG", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -3293,6 +3514,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " лв.", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -3307,6 +3529,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -3321,6 +3544,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -3335,6 +3559,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -3353,6 +3578,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "bm-ML\tee-TG\tyo-BJ", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 0, // Currency maximumFractionDigits
@@ -3367,6 +3593,7 @@ final class DecimalFormatProvider {
                 "CFA", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -3381,6 +3608,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -3395,6 +3623,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -3409,6 +3638,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -3427,6 +3657,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "bn-BD", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -3441,6 +3672,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 "৳", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -3455,6 +3687,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -3469,6 +3702,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -3483,6 +3717,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -3501,6 +3736,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "bn-IN", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -3515,6 +3751,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 "₹", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -3529,6 +3766,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -3543,6 +3781,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -3557,6 +3796,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -3575,6 +3815,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "bo-CN\tii-CN", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -3589,6 +3830,7 @@ final class DecimalFormatProvider {
                 "¥ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -3603,6 +3845,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -3617,6 +3860,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -3631,6 +3875,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -3649,6 +3894,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "br-FR\tde-BE\tde-DE\tde-LU\tdsb-DE\ten-DE\ten-FI\tes-ES\tfr-BE\tfr-BL\tfr-FR\tfr-GF\tfr-GP\tfr-LU\tfr-MC\tfr-MF\tfr-MQ\tfr-PM\tfr-RE\tfr-YT\thsb-DE\tlb-LU\tsk-SK", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -3663,6 +3909,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " €", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -3677,6 +3924,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -3691,6 +3939,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -3705,6 +3954,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -3723,6 +3973,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "bs-BA\tbs-Latn-BA\thr-BA\tsr-Latn-BA", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -3737,6 +3988,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " KM", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -3751,6 +4003,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -3765,6 +4018,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -3779,6 +4033,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -3797,6 +4052,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "bs-Cyrl-BA", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -3811,6 +4067,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " КМ", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -3825,6 +4082,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -3839,6 +4097,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -3853,6 +4112,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -3871,6 +4131,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ce-RU\tru-RU", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -3885,6 +4146,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " ₽", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -3899,6 +4161,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -3913,6 +4176,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -3927,6 +4191,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -3945,6 +4210,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "cgg-UG\ten-UG\tnyn-UG\tsw-UG\tteo-UG", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 0, // Currency maximumFractionDigits
@@ -3959,6 +4225,7 @@ final class DecimalFormatProvider {
                 "USh", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -3973,6 +4240,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -3987,6 +4255,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -4001,6 +4270,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -4019,6 +4289,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ckb-IQ", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 3, // Currency maximumFractionDigits
@@ -4033,6 +4304,7 @@ final class DecimalFormatProvider {
                 "IQD ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -4047,6 +4319,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -4061,6 +4334,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -4075,6 +4349,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -4093,6 +4368,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ckb-IR", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -4107,6 +4383,7 @@ final class DecimalFormatProvider {
                 "IRR ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -4121,6 +4398,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -4135,6 +4413,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -4149,6 +4428,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -4167,6 +4447,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "cs-CZ", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -4181,6 +4462,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " Kč", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -4195,6 +4477,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -4209,6 +4492,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -4223,6 +4507,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -4241,6 +4526,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "cu-RU\tos-RU\tsah-RU", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -4255,6 +4541,7 @@ final class DecimalFormatProvider {
                 "₽ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -4269,6 +4556,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -4283,6 +4571,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -4297,6 +4586,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -4315,6 +4605,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "cy-GB\ten-FK\ten-GB\ten-GG\ten-GI\ten-IM\ten-JE\ten-SH\ten-SS\tgd-GB\tgv-IM\tkw-GB\tnus-SS", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -4329,6 +4620,7 @@ final class DecimalFormatProvider {
                 "£", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -4343,6 +4635,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -4357,6 +4650,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -4371,6 +4665,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -4389,6 +4684,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "da-DK\tda-GL\ten-DK", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -4403,6 +4699,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " kr.", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -4417,6 +4714,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -4431,6 +4729,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -4445,6 +4744,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -4463,6 +4763,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "dav-KE\tebu-KE\ten-KE\tguz-KE\tkam-KE\tki-KE\tkln-KE\tmas-KE\tmer-KE\tom-KE\tsaq-KE\tso-KE\tsw-KE\tteo-KE", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -4477,6 +4778,7 @@ final class DecimalFormatProvider {
                 "Ksh", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -4491,6 +4793,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -4505,6 +4808,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -4519,6 +4823,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -4537,6 +4842,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "de-AT\ten-AT", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -4551,6 +4857,7 @@ final class DecimalFormatProvider {
                 "€ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -4565,6 +4872,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -4579,6 +4887,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -4593,6 +4902,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -4611,6 +4921,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "de-CH\ten-CH", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -4625,6 +4936,7 @@ final class DecimalFormatProvider {
                 "CHF ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -4639,6 +4951,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -4653,6 +4966,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -4667,6 +4981,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -4685,6 +5000,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "de-LI\twae-CH", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -4699,6 +5015,7 @@ final class DecimalFormatProvider {
                 "CHF ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -4713,6 +5030,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -4727,6 +5045,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -4741,6 +5060,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -4759,6 +5079,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "dje-NE\tkhq-ML\tses-ML\ttwq-NE", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 0, // Currency maximumFractionDigits
@@ -4773,6 +5094,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 "CFA", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -4787,6 +5109,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -4801,6 +5124,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -4815,6 +5139,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -4833,6 +5158,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "dyo-SN\tff-SN\tpt-GW", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 0, // Currency maximumFractionDigits
@@ -4847,6 +5173,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " CFA", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -4861,6 +5188,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -4875,6 +5203,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -4889,6 +5218,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -4907,6 +5237,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "dz\tes-419", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -4921,6 +5252,7 @@ final class DecimalFormatProvider {
                 "¤", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -4935,6 +5267,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -4949,6 +5282,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -4963,6 +5297,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -4981,6 +5316,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "dz-BT", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -4995,6 +5331,7 @@ final class DecimalFormatProvider {
                 "Nu.", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -5009,6 +5346,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -5023,6 +5361,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -5037,6 +5376,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -5055,6 +5395,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "en-BI", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 0, // Currency maximumFractionDigits
@@ -5069,6 +5410,7 @@ final class DecimalFormatProvider {
                 "FBu", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -5083,6 +5425,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -5097,6 +5440,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -5111,6 +5455,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -5129,6 +5474,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "en-BW", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -5143,6 +5489,7 @@ final class DecimalFormatProvider {
                 "P", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -5157,6 +5504,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -5171,6 +5519,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -5185,6 +5534,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -5203,6 +5553,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "en-CM\tmua-CM", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 0, // Currency maximumFractionDigits
@@ -5217,6 +5568,7 @@ final class DecimalFormatProvider {
                 "FCFA", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -5231,6 +5583,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -5245,6 +5598,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -5259,6 +5613,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -5277,6 +5632,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "en-CY\ten-IE\ten-MT\tga-IE\tmt-MT", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -5291,6 +5647,7 @@ final class DecimalFormatProvider {
                 "€", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -5305,6 +5662,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -5319,6 +5677,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -5333,6 +5692,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -5351,6 +5711,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "en-ER\tti-ER", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -5365,6 +5726,7 @@ final class DecimalFormatProvider {
                 "Nfk", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -5379,6 +5741,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -5393,6 +5756,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -5407,6 +5771,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -5425,6 +5790,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "en-FM\ten-IO\ten-PW\ten-TC\ten-VG", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -5439,6 +5805,7 @@ final class DecimalFormatProvider {
                 "US$", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -5453,6 +5820,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -5467,6 +5835,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -5481,6 +5850,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -5499,6 +5869,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "en-GM", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -5513,6 +5884,7 @@ final class DecimalFormatProvider {
                 "D", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -5527,6 +5899,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -5541,6 +5914,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -5555,6 +5929,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -5573,6 +5948,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "en-HK\tyue-HK\tzh-HK\tzh-Hans-HK\tzh-Hant-HK", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -5587,6 +5963,7 @@ final class DecimalFormatProvider {
                 "HK$", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -5601,6 +5978,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -5615,6 +5993,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -5629,6 +6008,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -5647,6 +6027,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "en-IL", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -5661,6 +6042,7 @@ final class DecimalFormatProvider {
                 "₪", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -5675,6 +6057,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -5689,6 +6072,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -5703,6 +6087,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -5721,6 +6106,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "en-IN\tta-LK", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -5735,6 +6121,7 @@ final class DecimalFormatProvider {
                 "Rs. ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -5749,6 +6136,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -5763,6 +6151,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -5777,6 +6166,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -5795,6 +6185,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "en-LS", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -5809,6 +6200,7 @@ final class DecimalFormatProvider {
                 "LSL", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -5823,6 +6215,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -5837,6 +6230,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -5851,6 +6245,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -5869,6 +6264,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "en-MG\tmg-MG", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -5883,6 +6279,7 @@ final class DecimalFormatProvider {
                 "Ar", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -5897,6 +6294,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -5911,6 +6309,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -5925,6 +6324,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -5943,6 +6343,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "en-MO\tzh-Hans-MO\tzh-Hant-MO", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -5957,6 +6358,7 @@ final class DecimalFormatProvider {
                 "MOP$", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -5971,6 +6373,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -5985,6 +6388,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -5999,6 +6403,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -6017,6 +6422,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "en-MU\ten-PK", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -6031,6 +6437,7 @@ final class DecimalFormatProvider {
                 "Rs", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -6045,6 +6452,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -6059,6 +6467,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -6073,6 +6482,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -6091,6 +6501,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "en-MW", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -6105,6 +6516,7 @@ final class DecimalFormatProvider {
                 "MK", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -6119,6 +6531,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -6133,6 +6546,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -6147,6 +6561,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -6165,6 +6580,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "en-MY\tms-MY", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -6179,6 +6595,7 @@ final class DecimalFormatProvider {
                 "RM", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -6193,6 +6610,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -6207,6 +6625,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -6221,6 +6640,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -6239,6 +6659,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "en-NG\tig-NG\tyo-NG", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -6253,6 +6674,7 @@ final class DecimalFormatProvider {
                 "₦", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -6267,6 +6689,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -6281,6 +6704,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -6295,6 +6719,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -6313,6 +6738,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "en-NL\tnl-NL", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -6327,6 +6753,7 @@ final class DecimalFormatProvider {
                 "€ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -6341,6 +6768,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -6355,6 +6783,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -6369,6 +6798,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -6387,6 +6817,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "en-PH\tfil-PH", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -6401,6 +6832,7 @@ final class DecimalFormatProvider {
                 "₱", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -6415,6 +6847,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -6429,6 +6862,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -6443,6 +6877,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -6461,6 +6896,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "en-RW", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 0, // Currency maximumFractionDigits
@@ -6475,6 +6911,7 @@ final class DecimalFormatProvider {
                 "RF", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -6489,6 +6926,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -6503,6 +6941,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -6517,6 +6956,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -6535,6 +6975,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "en-SC", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -6549,6 +6990,7 @@ final class DecimalFormatProvider {
                 "SR", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -6563,6 +7005,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -6577,6 +7020,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -6591,6 +7035,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -6609,6 +7054,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "en-SD", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -6623,6 +7069,7 @@ final class DecimalFormatProvider {
                 "SDG", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -6637,6 +7084,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -6651,6 +7099,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -6665,6 +7114,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -6683,6 +7133,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "en-SE", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -6697,6 +7148,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " kr", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -6711,6 +7163,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -6725,6 +7178,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -6739,6 +7193,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -6757,6 +7212,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "en-SL", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -6771,6 +7227,7 @@ final class DecimalFormatProvider {
                 "Le", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -6785,6 +7242,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -6799,6 +7257,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -6813,6 +7272,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -6831,6 +7291,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "en-SX", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -6845,6 +7306,7 @@ final class DecimalFormatProvider {
                 "NAf.", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -6859,6 +7321,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -6873,6 +7336,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -6887,6 +7351,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -6905,6 +7370,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "en-SZ", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -6919,6 +7385,7 @@ final class DecimalFormatProvider {
                 "E", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -6933,6 +7400,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -6947,6 +7415,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -6961,6 +7430,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -6979,6 +7449,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "en-TO", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -6993,6 +7464,7 @@ final class DecimalFormatProvider {
                 "T$", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -7007,6 +7479,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -7021,6 +7494,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -7035,6 +7509,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -7053,6 +7528,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "en-TZ\tjmc-TZ\tkde-TZ\tmas-TZ\trof-TZ\tsw-TZ\tvun-TZ", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -7067,6 +7543,7 @@ final class DecimalFormatProvider {
                 "TSh", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -7081,6 +7558,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -7095,6 +7573,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -7109,6 +7588,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -7127,6 +7607,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "en-US-POSIX", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 0, // Currency groupingSize
                 false, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -7141,6 +7622,7 @@ final class DecimalFormatProvider {
                 "$ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 0, // Instance groupingSize
                 false, // Instance groupingUsed
                 6, // Instance maximumFractionDigits
@@ -7155,6 +7637,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 0, // Integer groupingSize
                 false, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -7169,6 +7652,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 0, // Number groupingSize
                 false, // Number groupingUsed
                 6, // Number maximumFractionDigits
@@ -7183,6 +7667,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 0, // Percent groupingSize
                 false, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -7201,6 +7686,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "en-VU", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 0, // Currency maximumFractionDigits
@@ -7215,6 +7701,7 @@ final class DecimalFormatProvider {
                 "VT", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -7229,6 +7716,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -7243,6 +7731,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -7257,6 +7746,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -7275,6 +7765,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "en-WS", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -7289,6 +7780,7 @@ final class DecimalFormatProvider {
                 "WS$", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -7303,6 +7795,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -7317,6 +7810,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -7331,6 +7825,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -7349,6 +7844,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "en-ZW\tnd-ZW\tsn-ZW", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -7363,6 +7859,7 @@ final class DecimalFormatProvider {
                 "ZWL", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -7377,6 +7874,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -7391,6 +7889,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -7405,6 +7904,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -7423,6 +7923,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "es-AR\tes-UY\tqu-EC", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -7437,6 +7938,7 @@ final class DecimalFormatProvider {
                 "$ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -7451,6 +7953,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -7465,6 +7968,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -7479,6 +7983,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -7497,6 +8002,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "es-BO", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -7511,6 +8017,7 @@ final class DecimalFormatProvider {
                 "Bs", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -7525,6 +8032,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -7539,6 +8047,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -7553,6 +8062,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -7571,6 +8081,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "es-BR", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -7585,6 +8096,7 @@ final class DecimalFormatProvider {
                 "R$", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -7599,6 +8111,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -7613,6 +8126,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -7627,6 +8141,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -7645,6 +8160,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "es-CL", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 0, // Currency maximumFractionDigits
@@ -7659,6 +8175,7 @@ final class DecimalFormatProvider {
                 "$", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -7673,6 +8190,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -7687,6 +8205,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -7701,6 +8220,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -7719,6 +8239,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "es-CO\tlkt-US\tms-BN\tta-SG", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -7733,6 +8254,7 @@ final class DecimalFormatProvider {
                 "$ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -7747,6 +8269,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -7761,6 +8284,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -7775,6 +8299,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -7793,6 +8318,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "es-CR", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -7807,6 +8333,7 @@ final class DecimalFormatProvider {
                 "₡", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -7821,6 +8348,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -7835,6 +8363,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -7849,6 +8378,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -7867,6 +8397,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "es-CU\tes-PR\tes-US", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -7881,6 +8412,7 @@ final class DecimalFormatProvider {
                 "$", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -7895,6 +8427,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -7909,6 +8442,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -7923,6 +8457,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -7941,6 +8476,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "es-DO", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -7955,6 +8491,7 @@ final class DecimalFormatProvider {
                 "RD$", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -7969,6 +8506,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -7983,6 +8521,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -7997,6 +8536,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -8015,6 +8555,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "es-EC", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -8029,6 +8570,7 @@ final class DecimalFormatProvider {
                 "$", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -8043,6 +8585,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -8057,6 +8600,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -8071,6 +8615,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -8089,6 +8634,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "es-GQ", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 0, // Currency maximumFractionDigits
@@ -8103,6 +8649,7 @@ final class DecimalFormatProvider {
                 "FCFA", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -8117,6 +8664,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -8131,6 +8679,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -8145,6 +8694,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -8163,6 +8713,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "es-GT", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -8177,6 +8728,7 @@ final class DecimalFormatProvider {
                 "Q", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -8191,6 +8743,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -8205,6 +8758,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -8219,6 +8773,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -8237,6 +8792,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "es-HN", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -8251,6 +8807,7 @@ final class DecimalFormatProvider {
                 "L", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -8265,6 +8822,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -8279,6 +8837,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -8293,6 +8852,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -8311,6 +8871,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "es-NI", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -8325,6 +8886,7 @@ final class DecimalFormatProvider {
                 "C$", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -8339,6 +8901,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -8353,6 +8916,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -8367,6 +8931,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -8385,6 +8950,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "es-PA", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -8399,6 +8965,7 @@ final class DecimalFormatProvider {
                 "B/.", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -8413,6 +8980,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -8427,6 +8995,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -8441,6 +9010,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -8459,6 +9029,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "es-PE", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -8473,6 +9044,7 @@ final class DecimalFormatProvider {
                 "S/.", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -8487,6 +9059,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -8501,6 +9074,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -8515,6 +9089,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -8533,6 +9108,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "es-PH", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -8547,6 +9123,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " ₱", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -8561,6 +9138,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -8575,6 +9153,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -8589,6 +9168,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -8607,6 +9187,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "es-PY", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 0, // Currency maximumFractionDigits
@@ -8621,6 +9202,7 @@ final class DecimalFormatProvider {
                 "Gs. ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -8635,6 +9217,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -8649,6 +9232,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -8663,6 +9247,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -8681,6 +9266,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "es-SV", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -8695,6 +9281,7 @@ final class DecimalFormatProvider {
                 "C", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -8709,6 +9296,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -8723,6 +9311,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -8737,6 +9326,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -8755,6 +9345,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "es-VE", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -8769,6 +9360,7 @@ final class DecimalFormatProvider {
                 "Bs.", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -8783,6 +9375,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -8797,6 +9390,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -8811,6 +9405,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -8829,6 +9424,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "et", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -8843,6 +9439,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " ¤", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -8857,6 +9454,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -8871,6 +9469,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -8885,6 +9484,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -8903,6 +9503,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "et-EE", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -8917,6 +9518,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " €", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -8931,6 +9533,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -8945,6 +9548,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -8959,6 +9563,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -8977,6 +9582,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "eu", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -8991,6 +9597,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " ¤", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -9005,6 +9612,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -9019,6 +9627,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -9033,6 +9642,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -9051,6 +9661,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "eu-ES", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -9065,6 +9676,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " €", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -9079,6 +9691,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -9093,6 +9706,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -9107,6 +9721,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -9125,6 +9740,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ewo-CM\tff-CM\tksf-CM\tln-CF\tln-CG\tnmg-CM\tpt-GQ\tyav-CM", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 0, // Currency maximumFractionDigits
@@ -9139,6 +9755,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " FCFA", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -9153,6 +9770,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -9167,6 +9785,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -9181,6 +9800,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -9199,6 +9819,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "fa", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -9213,6 +9834,7 @@ final class DecimalFormatProvider {
                 "‎¤", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -9227,6 +9849,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -9241,6 +9864,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -9255,6 +9879,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -9273,6 +9898,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "fa-AF", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -9287,6 +9913,7 @@ final class DecimalFormatProvider {
                 "‎؋", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -9301,6 +9928,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -9315,6 +9943,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -9329,6 +9958,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -9347,6 +9977,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "fa-IR", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -9361,6 +9992,7 @@ final class DecimalFormatProvider {
                 "‎ریال", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -9375,6 +10007,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -9389,6 +10022,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -9403,6 +10037,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -9421,6 +10056,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ff-GN", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 0, // Currency maximumFractionDigits
@@ -9435,6 +10071,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " FG", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -9449,6 +10086,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -9463,6 +10101,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -9477,6 +10116,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -9495,6 +10135,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ff-MR", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -9509,6 +10150,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " UM", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -9523,6 +10165,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -9537,6 +10180,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -9551,6 +10195,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -9569,6 +10214,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "fi\tfo\tgsw\tksh\tlt\tnn\trm\tse\tsv", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -9583,6 +10229,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " ¤", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -9597,6 +10244,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -9611,6 +10259,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -9625,6 +10274,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -9643,6 +10293,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "fi-FI\tgsw-FR\tksh-DE\tlt-LT\tse-FI\tsv-AX\tsv-FI", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -9657,6 +10308,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " €", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -9671,6 +10323,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -9685,6 +10338,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -9699,6 +10353,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -9717,6 +10372,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "fo-DK", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -9731,6 +10387,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " kr.", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -9745,6 +10402,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -9759,6 +10417,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -9773,6 +10432,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -9791,6 +10451,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "fo-FO\tnn-NO\tse-NO\tse-SE\tsv-SE", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -9805,6 +10466,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " kr", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -9819,6 +10481,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -9833,6 +10496,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -9847,6 +10511,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -9865,6 +10530,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "fr-BF\tfr-BJ\tfr-CI\tfr-ML\tfr-NE\tfr-SN\tfr-TG", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 0, // Currency maximumFractionDigits
@@ -9879,6 +10545,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " CFA", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -9893,6 +10560,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -9907,6 +10575,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -9921,6 +10590,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -9939,6 +10609,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "fr-BI", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 0, // Currency maximumFractionDigits
@@ -9953,6 +10624,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " FBu", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -9967,6 +10639,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -9981,6 +10654,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -9995,6 +10669,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -10013,6 +10688,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "fr-CA", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -10027,6 +10703,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " $", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -10041,6 +10718,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -10055,6 +10733,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -10069,6 +10748,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -10087,6 +10767,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "fr-CD", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -10101,6 +10782,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " FC", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -10115,6 +10797,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -10129,6 +10812,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -10143,6 +10827,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -10161,6 +10846,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "fr-CH\tit-CH", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -10175,6 +10861,7 @@ final class DecimalFormatProvider {
                 "SFr. ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -10189,6 +10876,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -10203,6 +10891,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -10217,6 +10906,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -10235,6 +10925,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "fr-DJ", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 0, // Currency maximumFractionDigits
@@ -10249,6 +10940,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " Fdj", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -10263,6 +10955,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -10277,6 +10970,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -10291,6 +10985,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -10309,6 +11004,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "fr-DZ", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -10323,6 +11019,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " DA", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -10337,6 +11034,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -10351,6 +11049,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -10365,6 +11064,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -10383,6 +11083,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "fr-GN", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 0, // Currency maximumFractionDigits
@@ -10397,6 +11098,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " FG", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -10411,6 +11113,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -10425,6 +11128,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -10439,6 +11143,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -10457,6 +11162,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "fr-HT", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -10471,6 +11177,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " G", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -10485,6 +11192,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -10499,6 +11207,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -10513,6 +11222,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -10531,6 +11241,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "fr-KM", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 0, // Currency maximumFractionDigits
@@ -10545,6 +11256,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " CF", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -10559,6 +11271,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -10573,6 +11286,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -10587,6 +11301,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -10605,6 +11320,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "fr-MA", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -10619,6 +11335,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " MAD", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -10633,6 +11350,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -10647,6 +11365,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -10661,6 +11380,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -10679,6 +11399,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "fr-MG", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -10693,6 +11414,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " Ar", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -10707,6 +11429,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -10721,6 +11444,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -10735,6 +11459,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -10753,6 +11478,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "fr-MR", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -10767,6 +11493,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " UM", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -10781,6 +11508,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -10795,6 +11523,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -10809,6 +11538,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -10827,6 +11557,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "fr-MU", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -10841,6 +11572,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " Rs", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -10855,6 +11587,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -10869,6 +11602,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -10883,6 +11617,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -10901,6 +11636,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "fr-NC\tfr-PF\tfr-WF", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 0, // Currency maximumFractionDigits
@@ -10915,6 +11651,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " FCFP", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -10929,6 +11666,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -10943,6 +11681,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -10957,6 +11696,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -10975,6 +11715,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "fr-RW", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 0, // Currency maximumFractionDigits
@@ -10989,6 +11730,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " RF", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -11003,6 +11745,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -11017,6 +11760,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -11031,6 +11775,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -11049,6 +11794,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "fr-SC", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -11063,6 +11809,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " SR", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -11077,6 +11824,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -11091,6 +11839,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -11105,6 +11854,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -11123,6 +11873,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "fr-SY", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -11137,6 +11888,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " LS", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -11151,6 +11903,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -11165,6 +11918,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -11179,6 +11933,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -11197,6 +11952,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "fr-TN", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 3, // Currency maximumFractionDigits
@@ -11211,6 +11967,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " DT", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -11225,6 +11982,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -11239,6 +11997,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -11253,6 +12012,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -11271,6 +12031,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "fr-VU", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 0, // Currency maximumFractionDigits
@@ -11285,6 +12046,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " VT", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -11299,6 +12061,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -11313,6 +12076,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -11327,6 +12091,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -11345,6 +12110,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "fur-IT\tsmn-FI", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -11359,6 +12125,7 @@ final class DecimalFormatProvider {
                 "€ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -11373,6 +12140,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -11387,6 +12155,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -11401,6 +12170,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -11419,6 +12189,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "fy", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -11433,6 +12204,7 @@ final class DecimalFormatProvider {
                 "¤ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -11447,6 +12219,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -11461,6 +12234,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -11475,6 +12249,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -11493,6 +12268,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "fy-NL", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -11507,6 +12283,7 @@ final class DecimalFormatProvider {
                 "€ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -11521,6 +12298,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -11535,6 +12313,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -11549,6 +12328,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -11567,6 +12347,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "gsw-CH\tgsw-LI\trm-CH", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -11581,6 +12362,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " CHF", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -11595,6 +12377,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -11609,6 +12392,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -11623,6 +12407,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -11641,6 +12426,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "gu-IN\thi-IN\tkn-IN\tml-IN\tmr-IN\tte-IN", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -11655,6 +12441,7 @@ final class DecimalFormatProvider {
                 "₹", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -11669,6 +12456,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -11683,6 +12471,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -11697,6 +12486,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -11715,6 +12505,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ha-GH", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -11729,6 +12520,7 @@ final class DecimalFormatProvider {
                 "GH₵ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -11743,6 +12535,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -11757,6 +12550,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -11771,6 +12565,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -11789,6 +12584,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ha-NE", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 0, // Currency maximumFractionDigits
@@ -11803,6 +12599,7 @@ final class DecimalFormatProvider {
                 "CFA ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -11817,6 +12614,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -11831,6 +12629,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -11845,6 +12644,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -11863,6 +12663,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ha-NG", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -11877,6 +12678,7 @@ final class DecimalFormatProvider {
                 "₦ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -11891,6 +12693,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -11905,6 +12708,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -11919,6 +12723,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -11937,6 +12742,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "he\tiw", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -11951,6 +12757,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " ¤", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -11965,6 +12772,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -11979,6 +12787,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -11993,6 +12802,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -12011,6 +12821,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "he-IL\tiw-IL", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -12025,6 +12836,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " ₪", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -12039,6 +12851,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -12053,6 +12866,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -12067,6 +12881,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -12085,6 +12900,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "hr-HR", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -12099,6 +12915,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " HRK", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -12113,6 +12930,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -12127,6 +12945,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -12141,6 +12960,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -12159,6 +12979,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "hu-HU", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -12173,6 +12994,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " Ft", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -12187,6 +13009,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -12201,6 +13024,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -12215,6 +13039,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -12233,6 +13058,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "hy", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -12247,6 +13073,7 @@ final class DecimalFormatProvider {
                 "¤ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 0, // Instance groupingSize
                 false, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -12261,6 +13088,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 0, // Integer groupingSize
                 false, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -12275,6 +13103,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 0, // Number groupingSize
                 false, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -12289,6 +13118,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -12307,6 +13137,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "hy-AM", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -12321,6 +13152,7 @@ final class DecimalFormatProvider {
                 "֏ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 0, // Instance groupingSize
                 false, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -12335,6 +13167,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 0, // Integer groupingSize
                 false, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -12349,6 +13182,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 0, // Number groupingSize
                 false, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -12363,6 +13197,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -12381,6 +13216,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "id-ID\tin-ID", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -12395,6 +13231,7 @@ final class DecimalFormatProvider {
                 "Rp", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -12409,6 +13246,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -12423,6 +13261,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -12437,6 +13276,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -12455,6 +13295,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "is-IS", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 0, // Currency maximumFractionDigits
@@ -12469,6 +13310,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " ISK", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -12483,6 +13325,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -12497,6 +13340,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -12511,6 +13355,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -12529,6 +13374,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ja-JP", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 0, // Currency maximumFractionDigits
@@ -12543,6 +13389,7 @@ final class DecimalFormatProvider {
                 "￥", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -12557,6 +13404,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -12571,6 +13419,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -12585,6 +13434,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -12603,6 +13453,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "jgo-CM\tkkj-CM\tmgo-CM\tnnh-CM", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 0, // Currency maximumFractionDigits
@@ -12617,6 +13468,7 @@ final class DecimalFormatProvider {
                 "FCFA ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -12631,6 +13483,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -12645,6 +13498,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -12659,6 +13513,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -12677,6 +13532,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ka-GE", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -12691,6 +13547,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " ₾", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -12705,6 +13562,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -12719,6 +13577,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -12733,6 +13592,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -12751,6 +13611,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "kab-DZ", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -12765,6 +13626,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 "DA", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -12779,6 +13641,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -12793,6 +13656,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -12807,6 +13671,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -12825,6 +13690,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "kea-CV\tpt-CV", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -12839,6 +13705,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " ​", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -12853,6 +13720,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -12867,6 +13735,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -12881,6 +13750,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -12899,6 +13769,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "kk-KZ", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -12913,6 +13784,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " ₸", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -12927,6 +13799,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -12941,6 +13814,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -12955,6 +13829,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -12973,6 +13848,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "kl", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -12987,6 +13863,7 @@ final class DecimalFormatProvider {
                 "¤", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -13001,6 +13878,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -13015,6 +13893,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -13029,6 +13908,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -13047,6 +13927,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "kl-GL", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -13061,6 +13942,7 @@ final class DecimalFormatProvider {
                 "kr.", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -13075,6 +13957,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -13089,6 +13972,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -13103,6 +13987,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -13121,6 +14006,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "km-KH", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -13135,6 +14021,7 @@ final class DecimalFormatProvider {
                 "៛", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -13149,6 +14036,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -13163,6 +14051,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -13177,6 +14066,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -13195,6 +14085,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ko-KP", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -13209,6 +14100,7 @@ final class DecimalFormatProvider {
                 "KPW", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -13223,6 +14115,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -13237,6 +14130,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -13251,6 +14145,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -13269,6 +14164,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ko-KR", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 0, // Currency maximumFractionDigits
@@ -13283,6 +14179,7 @@ final class DecimalFormatProvider {
                 "₩", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -13297,6 +14194,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -13311,6 +14209,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -13325,6 +14224,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -13343,6 +14243,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ks\tlrc\tmzn\tpa-Arab\tuz-Arab", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -13357,6 +14258,7 @@ final class DecimalFormatProvider {
                 "¤ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -13371,6 +14273,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -13385,6 +14288,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -13399,6 +14303,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -13417,6 +14322,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ks-IN", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -13431,6 +14337,7 @@ final class DecimalFormatProvider {
                 "₹ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -13445,6 +14352,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -13459,6 +14367,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -13473,6 +14382,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -13491,6 +14401,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ky-KG", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -13505,6 +14416,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " сом", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -13519,6 +14431,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -13533,6 +14446,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -13547,6 +14461,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -13565,6 +14480,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "lag-TZ", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -13579,6 +14495,7 @@ final class DecimalFormatProvider {
                 "TSh ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -13593,6 +14510,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -13607,6 +14525,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -13621,6 +14540,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -13639,6 +14559,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "lg-UG", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 0, // Currency maximumFractionDigits
@@ -13653,6 +14574,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 "USh", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -13667,6 +14589,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -13681,6 +14604,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -13695,6 +14619,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -13713,6 +14638,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ln-AO\tpt-AO", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -13727,6 +14653,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " Kz", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -13741,6 +14668,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -13755,6 +14683,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -13769,6 +14698,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -13787,6 +14717,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ln-CD", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -13801,6 +14732,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " FC", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -13815,6 +14747,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -13829,6 +14762,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -13843,6 +14777,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -13861,6 +14796,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "lo\tsg", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -13875,6 +14811,7 @@ final class DecimalFormatProvider {
                 "¤", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -13889,6 +14826,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -13903,6 +14841,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -13917,6 +14856,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -13935,6 +14875,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "lo-LA", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -13949,6 +14890,7 @@ final class DecimalFormatProvider {
                 "₭", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -13963,6 +14905,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -13977,6 +14920,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -13991,6 +14935,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -14009,6 +14954,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "lrc-IQ", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 3, // Currency maximumFractionDigits
@@ -14023,6 +14969,7 @@ final class DecimalFormatProvider {
                 "IQD ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -14037,6 +14984,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -14051,6 +14999,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -14065,6 +15014,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -14083,6 +15033,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "lrc-IR\tmzn-IR", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -14097,6 +15048,7 @@ final class DecimalFormatProvider {
                 "IRR ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -14111,6 +15063,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -14125,6 +15078,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -14139,6 +15093,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -14157,6 +15112,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "lu-CD", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -14171,6 +15127,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 "FC", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -14185,6 +15142,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -14199,6 +15157,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -14213,6 +15172,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -14231,6 +15191,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "luo-KE", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -14245,6 +15206,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 "Ksh", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -14259,6 +15221,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -14273,6 +15236,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -14287,6 +15251,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -14305,6 +15270,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "luy", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -14319,6 +15285,7 @@ final class DecimalFormatProvider {
                 "¤", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -14333,6 +15300,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -14347,6 +15315,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -14361,6 +15330,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -14379,6 +15349,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "luy-KE", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -14393,6 +15364,7 @@ final class DecimalFormatProvider {
                 "Ksh", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -14407,6 +15379,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -14421,6 +15394,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -14435,6 +15409,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -14453,6 +15428,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "lv", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 0, // Currency groupingSize
                 false, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -14467,6 +15443,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " ¤", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -14481,6 +15458,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -14495,6 +15473,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -14509,6 +15488,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -14527,6 +15507,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "lv-LV", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 0, // Currency groupingSize
                 false, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -14541,6 +15522,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " €", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -14555,6 +15537,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -14569,6 +15552,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -14583,6 +15567,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -14601,6 +15586,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "mfe-MU", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -14615,6 +15601,7 @@ final class DecimalFormatProvider {
                 "Rs ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -14629,6 +15616,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -14643,6 +15631,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -14657,6 +15646,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -14675,6 +15665,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "mgh-MZ", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -14689,6 +15680,7 @@ final class DecimalFormatProvider {
                 "MTn ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -14703,6 +15695,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -14717,6 +15710,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -14731,6 +15725,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -14749,6 +15744,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "mk-MK", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -14763,6 +15759,7 @@ final class DecimalFormatProvider {
                 "ден ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -14777,6 +15774,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -14791,6 +15789,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -14805,6 +15804,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -14823,6 +15823,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "mn-MN", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -14837,6 +15838,7 @@ final class DecimalFormatProvider {
                 "₮ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -14851,6 +15853,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -14865,6 +15868,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -14879,6 +15883,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -14897,6 +15902,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "my-MM", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -14911,6 +15917,7 @@ final class DecimalFormatProvider {
                 "K ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -14925,6 +15932,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -14939,6 +15947,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -14953,6 +15962,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -14971,6 +15981,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "nb\tno", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -14985,6 +15996,7 @@ final class DecimalFormatProvider {
                 "¤ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -14999,6 +16011,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -15013,6 +16026,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -15027,6 +16041,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -15045,6 +16060,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "nb-NO\tnb-SJ\tno-NO\tno-NO-NY", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -15059,6 +16075,7 @@ final class DecimalFormatProvider {
                 "kr ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -15073,6 +16090,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -15087,6 +16105,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -15101,6 +16120,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -15119,6 +16139,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ne-NP", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -15133,6 +16154,7 @@ final class DecimalFormatProvider {
                 "नेरू ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -15147,6 +16169,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -15161,6 +16184,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -15175,6 +16199,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -15193,6 +16218,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "nl", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -15207,6 +16233,7 @@ final class DecimalFormatProvider {
                 "¤ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -15221,6 +16248,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -15235,6 +16263,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -15249,6 +16278,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -15267,6 +16297,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "nl-AW", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -15281,6 +16312,7 @@ final class DecimalFormatProvider {
                 "Afl. ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -15295,6 +16327,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -15309,6 +16342,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -15323,6 +16357,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -15341,6 +16376,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "nl-BQ\tnl-SR", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -15355,6 +16391,7 @@ final class DecimalFormatProvider {
                 "$ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -15369,6 +16406,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -15383,6 +16421,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -15397,6 +16436,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -15415,6 +16455,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "nl-CW\tnl-SX", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -15429,6 +16470,7 @@ final class DecimalFormatProvider {
                 "NAf. ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -15443,6 +16485,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -15457,6 +16500,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -15471,6 +16515,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -15489,6 +16534,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "om-ET\tso-ET\tti-ET", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -15503,6 +16549,7 @@ final class DecimalFormatProvider {
                 "Br", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -15517,6 +16564,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -15531,6 +16579,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -15545,6 +16594,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -15563,6 +16613,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "os-GE", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -15577,6 +16628,7 @@ final class DecimalFormatProvider {
                 "₾ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -15591,6 +16643,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -15605,6 +16658,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -15619,6 +16673,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -15637,6 +16692,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "pa-Arab-PK", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -15651,6 +16707,7 @@ final class DecimalFormatProvider {
                 "ر ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -15665,6 +16722,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -15679,6 +16737,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -15693,6 +16752,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -15711,6 +16771,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "pa-PK", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -15725,6 +16786,7 @@ final class DecimalFormatProvider {
                 "PKR ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -15739,6 +16801,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -15753,6 +16816,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -15767,6 +16831,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -15785,6 +16850,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "pl-PL", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -15799,6 +16865,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " zł", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -15813,6 +16880,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -15827,6 +16895,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -15841,6 +16910,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -15859,6 +16929,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ps", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -15873,6 +16944,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " ¤", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -15887,6 +16959,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -15901,6 +16974,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -15915,6 +16989,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -15933,6 +17008,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ps-AF", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -15947,6 +17023,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " ؋", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -15961,6 +17038,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -15975,6 +17053,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -15989,6 +17068,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -16007,6 +17087,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "pt-BR", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -16021,6 +17102,7 @@ final class DecimalFormatProvider {
                 "R$", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -16035,6 +17117,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -16049,6 +17132,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -16063,6 +17147,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -16081,6 +17166,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "pt-CH", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -16095,6 +17181,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " CHF", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -16109,6 +17196,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -16123,6 +17211,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -16137,6 +17226,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -16155,6 +17245,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "pt-MO", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -16169,6 +17260,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " MOP$", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -16183,6 +17275,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -16197,6 +17290,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -16211,6 +17305,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -16229,6 +17324,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "pt-MZ", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -16243,6 +17339,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " MTn", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -16257,6 +17354,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -16271,6 +17369,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -16285,6 +17384,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -16303,6 +17403,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "pt-ST", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -16317,6 +17418,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " Db", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -16331,6 +17433,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -16345,6 +17448,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -16359,6 +17463,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -16377,6 +17482,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "pt-TL", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -16391,6 +17497,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " US$", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -16405,6 +17512,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -16419,6 +17527,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -16433,6 +17542,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -16451,6 +17561,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "qu", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -16465,6 +17576,7 @@ final class DecimalFormatProvider {
                 "¤ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -16479,6 +17591,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -16493,6 +17606,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -16507,6 +17621,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -16525,6 +17640,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "qu-BO", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -16539,6 +17655,7 @@ final class DecimalFormatProvider {
                 "Bs ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -16553,6 +17670,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -16567,6 +17685,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -16581,6 +17700,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -16599,6 +17719,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "qu-PE", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -16613,6 +17734,7 @@ final class DecimalFormatProvider {
                 "S/. ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -16627,6 +17749,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -16641,6 +17764,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -16655,6 +17779,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -16673,6 +17798,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "rn\tzgh", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -16687,6 +17813,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 "¤", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -16701,6 +17828,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -16715,6 +17843,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -16729,6 +17858,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -16747,6 +17877,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "rn-BI", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 0, // Currency maximumFractionDigits
@@ -16761,6 +17892,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 "FBu", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -16775,6 +17907,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -16789,6 +17922,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -16803,6 +17937,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -16821,6 +17956,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ro-MD\tru-MD", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -16835,6 +17971,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " L", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -16849,6 +17986,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -16863,6 +18001,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -16877,6 +18016,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -16895,6 +18035,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ro-RO", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -16909,6 +18050,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " RON", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -16923,6 +18065,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -16937,6 +18080,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -16951,6 +18095,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -16969,6 +18114,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ru-BY", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -16983,6 +18129,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " BYN", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -16997,6 +18144,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -17011,6 +18159,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -17025,6 +18174,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -17043,6 +18193,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ru-KG", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -17057,6 +18208,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " сом", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -17071,6 +18223,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -17085,6 +18238,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -17099,6 +18253,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -17117,6 +18272,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ru-KZ", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -17131,6 +18287,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " ₸", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -17145,6 +18302,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -17159,6 +18317,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -17173,6 +18332,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -17191,6 +18351,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ru-UA", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -17205,6 +18366,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " ₴", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -17219,6 +18381,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -17233,6 +18396,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -17247,6 +18411,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -17265,6 +18430,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "rw-RW", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 0, // Currency maximumFractionDigits
@@ -17279,6 +18445,7 @@ final class DecimalFormatProvider {
                 "RF ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -17293,6 +18460,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -17307,6 +18475,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -17321,6 +18490,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -17339,6 +18509,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "seh-MZ", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -17353,6 +18524,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 "MTn", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -17367,6 +18539,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -17381,6 +18554,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -17395,6 +18569,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -17413,6 +18588,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "sg-CF", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 0, // Currency maximumFractionDigits
@@ -17427,6 +18603,7 @@ final class DecimalFormatProvider {
                 "FCFA", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -17441,6 +18618,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -17455,6 +18633,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -17469,6 +18648,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -17487,6 +18667,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "shi-Latn-MA\tshi-MA\tshi-Tfng-MA", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -17501,6 +18682,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 "MAD", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -17515,6 +18697,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -17529,6 +18712,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -17543,6 +18727,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -17561,6 +18746,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "si-LK", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -17575,6 +18761,7 @@ final class DecimalFormatProvider {
                 "රු.", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -17589,6 +18776,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -17603,6 +18791,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -17617,6 +18806,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -17635,6 +18825,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "so-DJ", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 0, // Currency maximumFractionDigits
@@ -17649,6 +18840,7 @@ final class DecimalFormatProvider {
                 "Fdj", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -17663,6 +18855,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -17677,6 +18870,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -17691,6 +18885,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -17709,6 +18904,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "so-SO", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -17723,6 +18919,7 @@ final class DecimalFormatProvider {
                 "S", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -17737,6 +18934,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -17751,6 +18949,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -17765,6 +18964,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -17783,6 +18983,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "sq-AL", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -17797,6 +18998,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " Lekë", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -17811,6 +19013,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -17825,6 +19028,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -17839,6 +19043,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -17857,6 +19062,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "sq-MK", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -17871,6 +19077,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " den", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -17885,6 +19092,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -17899,6 +19107,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -17913,6 +19122,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -17931,6 +19141,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "sr-BA", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -17945,6 +19156,7 @@ final class DecimalFormatProvider {
                 "КМ. ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -17959,6 +19171,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -17973,6 +19186,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -17987,6 +19201,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -18005,6 +19220,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "sr-CS", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -18019,6 +19235,7 @@ final class DecimalFormatProvider {
                 "CSD ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -18033,6 +19250,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -18047,6 +19265,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -18061,6 +19280,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -18079,6 +19299,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "sr-Cyrl-BA", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -18093,6 +19314,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " КМ.", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -18107,6 +19329,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -18121,6 +19344,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -18135,6 +19359,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -18153,6 +19378,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "sr-Cyrl-RS\tsr-RS", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -18167,6 +19393,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " RSD", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -18181,6 +19408,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -18195,6 +19423,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -18209,6 +19438,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -18227,6 +19457,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "sr-Latn-RS", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -18241,6 +19472,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " din.", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -18255,6 +19487,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -18269,6 +19502,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -18283,6 +19517,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -18301,6 +19536,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "sr-ME", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -18315,6 +19551,7 @@ final class DecimalFormatProvider {
                 "€ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -18329,6 +19566,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -18343,6 +19581,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -18357,6 +19596,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -18375,6 +19615,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "sw-CD", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -18389,6 +19630,7 @@ final class DecimalFormatProvider {
                 "FC", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -18403,6 +19645,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -18417,6 +19660,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -18431,6 +19675,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -18449,6 +19694,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ta-MY", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -18463,6 +19709,7 @@ final class DecimalFormatProvider {
                 "RM ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -18477,6 +19724,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -18491,6 +19739,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -18505,6 +19754,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -18523,6 +19773,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "th-TH", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -18537,6 +19788,7 @@ final class DecimalFormatProvider {
                 "THB", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -18551,6 +19803,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -18565,6 +19818,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -18579,6 +19833,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -18597,6 +19852,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "tk-TM", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -18611,6 +19867,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " TMT", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -18625,6 +19882,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -18639,6 +19897,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -18653,6 +19912,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -18671,6 +19931,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "to-TO", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -18685,6 +19946,7 @@ final class DecimalFormatProvider {
                 "T$ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -18699,6 +19961,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -18713,6 +19976,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -18727,6 +19991,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -18745,6 +20010,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "tr", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -18759,6 +20025,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " ¤", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -18773,6 +20040,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -18787,6 +20055,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -18801,6 +20070,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -18819,6 +20089,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "tr-CY", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -18833,6 +20104,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " €", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -18847,6 +20119,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -18861,6 +20134,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -18875,6 +20149,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -18893,6 +20168,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "tr-TR", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -18907,6 +20183,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " ₺", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -18921,6 +20198,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -18935,6 +20213,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -18949,6 +20228,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -18967,6 +20247,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "tzm-MA", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -18981,6 +20262,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " MAD", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -18995,6 +20277,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -19009,6 +20292,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -19023,6 +20307,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -19041,6 +20326,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ug-CN\tzh-CN\tzh-Hans-CN", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -19055,6 +20341,7 @@ final class DecimalFormatProvider {
                 "￥", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -19069,6 +20356,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -19083,6 +20371,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -19097,6 +20386,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -19115,6 +20405,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "uk-UA", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -19129,6 +20420,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " ₴", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -19143,6 +20435,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -19157,6 +20450,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -19171,6 +20465,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -19189,6 +20484,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ur", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -19203,6 +20499,7 @@ final class DecimalFormatProvider {
                 "¤ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -19217,6 +20514,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -19231,6 +20529,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -19245,6 +20544,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -19263,6 +20563,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ur-IN", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -19277,6 +20578,7 @@ final class DecimalFormatProvider {
                 "₹ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -19291,6 +20593,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -19305,6 +20608,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -19319,6 +20623,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -19337,6 +20642,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "ur-PK", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -19351,6 +20657,7 @@ final class DecimalFormatProvider {
                 "Rs ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -19365,6 +20672,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -19379,6 +20687,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -19393,6 +20702,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -19411,6 +20721,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "uz-AF", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -19425,6 +20736,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " AFN", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -19439,6 +20751,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -19453,6 +20766,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -19467,6 +20781,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -19485,6 +20800,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "uz-Arab-AF", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -19499,6 +20815,7 @@ final class DecimalFormatProvider {
                 "؋ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -19513,6 +20830,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -19527,6 +20845,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -19541,6 +20860,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -19559,6 +20879,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "uz-Cyrl", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -19573,6 +20894,7 @@ final class DecimalFormatProvider {
                 "¤ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -19587,6 +20909,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -19601,6 +20924,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -19615,6 +20939,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -19633,6 +20958,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "uz-Cyrl-UZ", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -19647,6 +20973,7 @@ final class DecimalFormatProvider {
                 "сўм ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -19661,6 +20988,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -19675,6 +21003,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -19689,6 +21018,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -19707,6 +21037,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "uz-Latn-UZ\tuz-UZ", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -19721,6 +21052,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " soʻm", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -19735,6 +21067,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -19749,6 +21082,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -19763,6 +21097,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -19781,6 +21116,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "vi-VN", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 0, // Currency maximumFractionDigits
@@ -19795,6 +21131,7 @@ final class DecimalFormatProvider {
                 "₫ ", // Currency positivePrefix
                 "", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -19809,6 +21146,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -19823,6 +21161,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -19837,6 +21176,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -19855,6 +21195,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "xog-UG", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 0, // Currency maximumFractionDigits
@@ -19869,6 +21210,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 " USh", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -19883,6 +21225,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -19897,6 +21240,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -19911,6 +21255,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
@@ -19929,6 +21274,7 @@ final class DecimalFormatProvider {
 
         DecimalFormat.register(
                 "zgh-MA", // locales
+                false, // Currency decimalSeparatorAlwaysShown
                 3, // Currency groupingSize
                 true, // Currency groupingUsed
                 2, // Currency maximumFractionDigits
@@ -19943,6 +21289,7 @@ final class DecimalFormatProvider {
                 "", // Currency positivePrefix
                 "MAD", // Currency positiveSuffix
                 RoundingMode.HALF_EVEN, // Currency roundingMode
+                false, // Instance decimalSeparatorAlwaysShown
                 3, // Instance groupingSize
                 true, // Instance groupingUsed
                 3, // Instance maximumFractionDigits
@@ -19957,6 +21304,7 @@ final class DecimalFormatProvider {
                 "", // Instance positivePrefix
                 "", // Instance positiveSuffix
                 RoundingMode.HALF_EVEN, // Instance roundingMode
+                false, // Integer decimalSeparatorAlwaysShown
                 3, // Integer groupingSize
                 true, // Integer groupingUsed
                 0, // Integer maximumFractionDigits
@@ -19971,6 +21319,7 @@ final class DecimalFormatProvider {
                 "", // Integer positivePrefix
                 "", // Integer positiveSuffix
                 RoundingMode.HALF_EVEN, // Integer roundingMode
+                false, // Number decimalSeparatorAlwaysShown
                 3, // Number groupingSize
                 true, // Number groupingUsed
                 3, // Number maximumFractionDigits
@@ -19985,6 +21334,7 @@ final class DecimalFormatProvider {
                 "", // Number positivePrefix
                 "", // Number positiveSuffix
                 RoundingMode.HALF_EVEN, // Number roundingMode
+                false, // Percent decimalSeparatorAlwaysShown
                 3, // Percent groupingSize
                 true, // Percent groupingUsed
                 0, // Percent maximumFractionDigits
