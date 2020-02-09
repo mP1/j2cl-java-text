@@ -106,7 +106,17 @@ final class DecimalFormatPatternParserNumber extends DecimalFormatPatternParser 
         }
     }
 
+    /**
+     * A value of zero or greater indicates an scientific format.
+     */
     private int exponent = -1;
+
+    /**
+     * Returns true if a scientific format.\
+     */
+    boolean isScientificFormat() {
+        return -1 != this.exponent;
+    }
 
     // groupingSeparator................................................................................................
 
