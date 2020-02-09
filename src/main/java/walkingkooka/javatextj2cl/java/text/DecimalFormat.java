@@ -20,7 +20,9 @@ package walkingkooka.javatextj2cl.java.text;
 import walkingkooka.NeverError;
 import walkingkooka.ToStringBuilder;
 import walkingkooka.collect.list.Lists;
+import walkingkooka.text.CharSequences;
 
+import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Currency;
 import java.util.List;
@@ -237,7 +239,7 @@ public class DecimalFormat extends NumberFormat {
         this.maximumIntegerDigits = maximumIntegerDigits;
         this.minimumIntegerDigits = minimumIntegerDigits;
 
-        this.multiplier = multiplier;
+        this.setMultiplier(multiplier);
 
         this.negativePrefix = negativePrefix;
         this.negativeSuffix = negativeSuffix;
@@ -354,6 +356,7 @@ public class DecimalFormat extends NumberFormat {
         this.minimumIntegerDigits = copy.minimumIntegerDigits;
 
         this.multiplier = copy.multiplier;
+        this.multiplierBigDecimal = copy.multiplierBigDecimal;
 
         this.negativePrefix = copy.negativePrefix;
         this.negativeSuffix = copy.negativeSuffix;
@@ -508,6 +511,7 @@ public class DecimalFormat extends NumberFormat {
         this.negativeSuffix = this.toPatternLocalized(negativeSuffixComponents);
 
         this.customNegativePrefixSuffix = custom;
+        this.scientificFormat = positive.isScientificFormat();
     }
 
     /**
@@ -585,19 +589,179 @@ public class DecimalFormat extends NumberFormat {
     private String pattern;
     private boolean customNegativePrefixSuffix = false;
 
+    /**
+     * When true the pattern contains an exponent and thus is in scientific format.
+     */
+    private boolean scientificFormat;
+
+    // format...........................................................................................................
+
     @Override
     public StringBuffer format(final double number,
                                final StringBuffer append,
                                final FieldPosition position) {
-        throw new UnsupportedOperationException();
+
+
+        return number >= 0 ?
+                this.formatBigDecimal(BigDecimal.valueOf(number), append, this.positivePrefix, this.positiveSuffix) :
+                this.formatBigDecimal(BigDecimal.valueOf(-number), append, this.negativePrefix, this.negativeSuffix);
     }
 
     @Override
     public StringBuffer format(final long number,
                                final StringBuffer append,
                                final FieldPosition position) {
+        return number >= 0 ?
+                this.formatBigDecimal(BigDecimal.valueOf(number), append, this.positivePrefix, this.positiveSuffix) :
+                this.formatBigDecimal(BigDecimal.valueOf(-number), append, this.negativePrefix, this.negativeSuffix);
+    }
+
+    /**
+     * Dispatches the given value and its associated parameters to either scientific or non scientific handling.
+     */
+    private StringBuffer formatBigDecimal(final BigDecimal value,
+                                          final StringBuffer append,
+                                          final String prefix,
+                                          final String suffix) {
+        return this.scientificFormat ?
+                this.formatBigDecimalScientific(value,
+                        append,
+                        prefix,
+                        suffix) :
+                this.formatBigDecimalDecimal(value,
+                        append,
+                        prefix,
+                        suffix);
+    }
+
+    /**
+     * Handles formatting the given absolute/positive value into characters as a decimal format.
+     */
+    private StringBuffer formatBigDecimalDecimal(final BigDecimal value,
+                                                 final StringBuffer append,
+                                                 final String prefix,
+                                                 final String suffix) {
+        final DecimalFormatSymbols symbols = this.symbols;
+
+        final int maximumFraction = this.maximumFractionDigits;
+        final int minimumFraction = this.minimumFractionDigits;
+
+        // round to $maxFractionDigits decimal places
+        final int scale = value.scale();
+        final BigDecimal value0 = value
+                .multiply(this.multiplierBigDecimal) // required might be a percent/perMille or have a custom multiplier.
+                .setScale(maximumFraction, this.roundingMode)
+                .setScale(Math.max(scale, minimumFraction))
+                .stripTrailingZeros();
+
+        // extract integer and fraction components
+        CharSequence integer;
+        CharSequence fraction;
+
+        {
+            final String digits = value0.toPlainString();
+            final int decimalPlaces = digits.lastIndexOf('.');
+            if (-1 == decimalPlaces) {
+                integer = digits;
+                fraction = "";
+            } else {
+                integer = digits.substring(0, decimalPlaces);
+                fraction = digits.substring(decimalPlaces + 1);
+            }
+        }
+
+        // integer......................................................................................................
+        {
+            final int integerDigitLength = integer.length();
+
+            // pad with leading zeroes if necessary
+            final int minIntegerDigits = this.minimumIntegerDigits;
+            if (integerDigitLength < minIntegerDigits) {
+                integer = CharSequences.padLeft(integer, minIntegerDigits, '0');
+            } else {
+                final int maxIntegerDigits = this.maximumIntegerDigits;
+
+                // keep rightmost $maxIntegerDigits
+                if (integerDigitLength > maxIntegerDigits) {
+                    integer = integer.subSequence(integerDigitLength - maxIntegerDigits, integerDigitLength);
+                }
+            }
+        }
+
+        // compose......................................................................................................
+        append.append(prefix);
+
+        final char zero = symbols.getZeroDigit();
+
+        // add integer digits with grouping separator if necessary
+        {
+            final int integerDigitCount = integer.length();
+            int i = 0;
+
+            // add the portion integer digits that will include grouping
+            if (this.isGroupingUsed()) {
+                final int groupingSize = this.groupingSize;
+                final char groupingSeparator = symbols.getGroupingSeparator();
+
+                final int stopGrouping = integerDigitCount - groupingSize;
+                while (i < stopGrouping) {
+
+                    append.append(translate(integer.charAt(i), zero));
+                    i++;
+
+                    if (0 == (integerDigitCount - i) % groupingSize) {
+                        append.append(groupingSeparator);
+                    }
+                }
+            }
+
+            // add remainder of digits without any grouping...
+            while (i < integerDigitCount) {
+                append.append(translate(integer.charAt(i), zero));
+                i++;
+            }
+        }
+
+        // add fraction digits
+        {
+            if (CharSequences.isNullOrEmpty(fraction)) {
+                if (this.decimalSeparatorAlwaysShown) {
+                    append.append(symbols.getDecimalSeparator());
+                }
+            } else {
+                append.append(symbols.getDecimalSeparator());
+
+                final int fractionDigitCount = fraction.length();
+                for (int i = 0; i < fractionDigitCount; i++) {
+                    append.append(translate(fraction.charAt(i), zero));
+                }
+            }
+        }
+
+        append.append(suffix);
+
+        return append;
+    }
+
+    /**
+     * Handles translating zero based digits to a new base.
+     */
+    private static char translate(final char digit,
+                                  final char zero) {
+        return (char) (digit - '0' + zero);
+    }
+
+    /**
+     * Handles formatting the given absolute/positive value into characters as a scientific format.
+     */
+    private StringBuffer formatBigDecimalScientific(final BigDecimal value,
+                                                    final StringBuffer append,
+                                                    final String prefix,
+                                                    final String suffix) {
         throw new UnsupportedOperationException();
     }
+
+    // parse............................................................................................................
 
     @Override
     public Number parse(final String source,
@@ -678,9 +842,11 @@ public class DecimalFormat extends NumberFormat {
 
     public void setMultiplier(final int multiplier) {
         this.multiplier = Math.max(0, multiplier);
+        this.multiplierBigDecimal = BigDecimal.valueOf(this.multiplier);
     }
 
     private int multiplier;
+    private BigDecimal multiplierBigDecimal;
 
     // NegativePrefix.....................................................................................................
 
