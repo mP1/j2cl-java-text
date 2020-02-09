@@ -41,6 +41,9 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
     private final static String PATTERN = "0";
 
     private final static Currency CURRENCY = Currency.getInstance("AUD");
+
+    private final static boolean DECIMAL_SEPARATOR_ALWAYS_SHOWN = false;
+
     private final static int GROUPING_SIZE = 10;
 
     private final static int MAX_FRACTION = 8;
@@ -670,7 +673,28 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
         emul.setCurrency(currency);
 
         assertEquals(jdk.getCurrency(), emul.getCurrency(), () -> "currency AUD");
-        ;
+    }
+
+    // decimalSeparatorAlwaysShown......................................................................................
+
+    @Test
+    public void testSetDecimalSeparatorAlwaysShownFalse() {
+        this.setDecimalSeparatorAlwaysShownAndCheck(false);
+    }
+
+    @Test
+    public void testSetDecimalSeparatorAlwaysShownTrue() {
+        this.setDecimalSeparatorAlwaysShownAndCheck(true);
+    }
+
+    private void setDecimalSeparatorAlwaysShownAndCheck(final boolean decimalSeparatorAlwaysShown) {
+        final java.text.DecimalFormat jdk = new java.text.DecimalFormat("#");
+        jdk.setDecimalSeparatorAlwaysShown(decimalSeparatorAlwaysShown);
+
+        final DecimalFormat emul = new DecimalFormat("#");
+        emul.setDecimalSeparatorAlwaysShown(decimalSeparatorAlwaysShown);
+
+        assertEquals(jdk.isDecimalSeparatorAlwaysShown(), emul.isDecimalSeparatorAlwaysShown(), () -> "decimalSeparatorAlwaysShown");
     }
 
     // negativePrefix.........................................................................................................
@@ -1178,6 +1202,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
                        final DecimalFormat emul,
                        final Locale locale) {
         assertEquals(jdk.getCurrency(), emul.getCurrency(), () -> "currency " + locale + " " + emul);
+        assertEquals(jdk.isDecimalSeparatorAlwaysShown(), emul.isDecimalSeparatorAlwaysShown(), () -> "decimalSeparatorAlwaysShown " + locale + " " + emul);
         assertEquals(jdk.getGroupingSize(), emul.getGroupingSize(), () -> "groupingSize " + locale + " " + emul);
         assertEquals(jdk.isGroupingUsed(), emul.isGroupingUsed(), () -> "groupingUsed " + locale + " " + emul);
         assertEquals(jdk.getMaximumFractionDigits(), emul.getMaximumFractionDigits(), () -> "maximumFractionDigits " + locale + " " + emul);
@@ -1224,6 +1249,13 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
     public void testDifferentCurrency() {
         final DecimalFormat format = this.createObject();
         format.setCurrency(Currency.getInstance("NZD"));
+        this.checkNotEquals(format);
+    }
+
+    @Test
+    public void testDifferentDecimalSeparatorAlwaysShown() {
+        final DecimalFormat format = this.createObject();
+        format.setDecimalSeparatorAlwaysShown(!DECIMAL_SEPARATOR_ALWAYS_SHOWN);
         this.checkNotEquals(format);
     }
 
@@ -1285,6 +1317,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
         final DecimalFormat format = new DecimalFormat("#", new DecimalFormatSymbols(Locale.forLanguageTag("en-AU")));
 
         format.setCurrency(CURRENCY);
+        format.setDecimalSeparatorAlwaysShown(DECIMAL_SEPARATOR_ALWAYS_SHOWN);
         format.setGroupingSize(GROUPING_SIZE);
 
         format.setMinimumFractionDigits(MIN_FRACTION);
@@ -1315,6 +1348,17 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
         Locale.setDefault(Locale.forLanguageTag("en-AU"));
         this.toStringAndCheck(this.createObject(),
                 "currency=AUD groupingSize=10 maximumFractionDigits=8 minimumFractionDigits=4 maximumIntegerDigits=20 minimumIntegerDigits=10 multiplier=100 negativePrefix=\"NegativePrefix1\" negativeSuffix=\"NegativeSuffix2\" positivePrefix=\"PositivePrefix1\" positiveNumberComponents=# positiveSuffix=\"PositiveSuffix2\" roundingMode=HALF_EVEN symbols=currency=AUD currencySymbol=\"$\" decimalSeparator='.' digit='#' exponentSeparator=\"e\" groupingSeparator=',' infinity=\"∞\" internationalCurrencySymbol=\"AUD\" minusSign='-' monetaryDecimalSeparator='.' nan=\"NaN\" patternSeparator=';' percent='%' perMill='‰' zeroDigit='0'");
+    }
+
+    @Test
+    public void testToStringDecimalSeparatorAlwaysShown() {
+        Locale.setDefault(Locale.forLanguageTag("en-AU"));
+
+        final DecimalFormat format = new DecimalFormat("###.00", new DecimalFormatSymbols(Locale.forLanguageTag("en-AU")));
+        format.setDecimalSeparatorAlwaysShown(true);
+
+        this.toStringAndCheck(format,
+                "currency=AUD decimalSeparatorAlwaysShown=true maximumFractionDigits=2 minimumFractionDigits=2 maximumIntegerDigits=2147483647 multiplier=1 negativePrefix=\"-\" positiveNumberComponents=###.00 roundingMode=HALF_EVEN symbols=currency=AUD currencySymbol=\"$\" decimalSeparator='.' digit='#' exponentSeparator=\"e\" groupingSeparator=',' infinity=\"∞\" internationalCurrencySymbol=\"AUD\" minusSign='-' monetaryDecimalSeparator='.' nan=\"NaN\" patternSeparator=';' percent='%' perMill='‰' zeroDigit='0'");
     }
 
     @Test

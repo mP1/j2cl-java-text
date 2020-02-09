@@ -120,6 +120,7 @@ public final class DecimalFormatProviderTool extends LocaleProviderTool {
 
     private static String toString(final DecimalFormat format) {
         return ToStringBuilder.empty()
+                .label("decimalSeparatorAlwaysShown").value(format.isDecimalSeparatorAlwaysShown())
                 .label("groupingSize").value(format.getGroupingSize())
                 .label("groupingUsed").value(format.isGroupingUsed())
                 .label("maximumFractionDigits").value(format.getMaximumFractionDigits())
@@ -149,6 +150,7 @@ public final class DecimalFormatProviderTool extends LocaleProviderTool {
             parse |= walkingkooka.javatextj2cl.java.text.DecimalFormat.PARSE_BIG_DECIMAL;
         }
 
+        this.line(format.isDecimalSeparatorAlwaysShown(), type, "decimalSeparatorAlwaysShown");
         this.line(format.getGroupingSize(), type, "groupingSize");
         this.line(format.isGroupingUsed(), type, "groupingUsed");
         this.line(format.getMaximumFractionDigits(), type, "maximumFractionDigits");
