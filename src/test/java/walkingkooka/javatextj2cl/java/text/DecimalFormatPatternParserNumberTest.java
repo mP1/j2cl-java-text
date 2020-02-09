@@ -758,6 +758,10 @@ public final class DecimalFormatPatternParserNumberTest extends DecimalFormatPat
                 parser.suffix,
                 () -> "parse " + CharSequences.quoteAndEscape(pattern) + " suffix");
 
+        assertEquals(parser.number.contains(DecimalFormatPatternComponent.exponent()),
+                parser.isScientificFormat(),
+                () -> "parse " + CharSequences.quoteAndEscape(pattern) + " scientific number, number=" + parser.number);
+
         final String parsed = pattern.substring(0, pattern.length() - left.length());
         assertEquals(parsed.endsWith("" + DecimalFormat.SUB_PATTERN_SEPARATOR),
                 parser.subPatternSeparator,
