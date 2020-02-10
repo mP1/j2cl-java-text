@@ -425,7 +425,11 @@ public class DecimalFormat extends NumberFormat {
 
             currency |= negative.currency;
 
-            negativePrefixComponents = negative.prefix;
+            final List<DecimalFormatPatternComponent> prefix = negative.prefix;
+            negativePrefixComponents = prefix.isEmpty() ?
+                    NEGATIVE_PREFIX_MINUS_SIGN :
+                    prefix;
+
             negativeNumberComponents = negative.number;
             negativeDecimalSeparator = negative.hasDecimalSeparator();
             negativeSuffixComponents = negative.suffix;
@@ -468,6 +472,11 @@ public class DecimalFormat extends NumberFormat {
         this.negativeSuffixComponents = negativeSuffixComponents;
         this.negativeSuffix = this.toPatternLocalized(negativeSuffixComponents);
     }
+
+    /**
+     * Patterns that include a negative sub pattern without a prefix defaults to prefix = minus sign.
+     */
+    private final static List<DecimalFormatPatternComponent> NEGATIVE_PREFIX_MINUS_SIGN = Lists.of(DecimalFormatPatternComponent.minusSign());
 
     /**
      * Returns the pattern of this decimal format using non-localized pattern
