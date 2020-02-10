@@ -697,6 +697,55 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
         assertEquals(jdk.isDecimalSeparatorAlwaysShown(), emul.isDecimalSeparatorAlwaysShown(), () -> "decimalSeparatorAlwaysShown");
     }
 
+    @Test
+    public void testSetDecimalSeparatorAlwaysShownFalseToPattern() {
+        Locale.setDefault(EN_AU);
+
+        this.setDecimalSeparatorAlwaysShownAndCheck("#", false);
+    }
+
+    @Test
+    public void testSetDecimalSeparatorAlwaysShownTrueToPattern() {
+        Locale.setDefault(EN_AU);
+
+        this.setDecimalSeparatorAlwaysShownAndCheck("#", true);
+    }
+
+    @Test
+    public void testSetDecimalSeparatorAlwaysShownTrueFalseToPattern() {
+        Locale.setDefault(EN_AU);
+
+        final String pattern = "#";
+        final boolean decimalSeparatorAlwaysShown = true;
+
+        final java.text.DecimalFormat jdk = new java.text.DecimalFormat(pattern);
+        jdk.setDecimalSeparatorAlwaysShown(decimalSeparatorAlwaysShown);
+
+        final DecimalFormat emul = new DecimalFormat(pattern);
+        emul.setDecimalSeparatorAlwaysShown(decimalSeparatorAlwaysShown);
+
+        this.check(jdk, emul, EN_AU);
+
+        this.setDecimalSeparatorAlwaysShownAndCheck(jdk, emul, false);
+    }
+
+    private void setDecimalSeparatorAlwaysShownAndCheck(final String pattern,
+                                                        final boolean always) {
+        this.setDecimalSeparatorAlwaysShownAndCheck(new java.text.DecimalFormat(pattern),
+                new DecimalFormat(pattern),
+                always);
+    }
+
+    private void setDecimalSeparatorAlwaysShownAndCheck(final java.text.DecimalFormat jdk,
+                                                        final DecimalFormat emul,
+                                                        final boolean always) {
+
+        jdk.setDecimalSeparatorAlwaysShown(always);
+        emul.setDecimalSeparatorAlwaysShown(always);
+
+        this.check(jdk, emul, EN_AU);
+    }
+
     // negativePrefix.........................................................................................................
 
     @Test

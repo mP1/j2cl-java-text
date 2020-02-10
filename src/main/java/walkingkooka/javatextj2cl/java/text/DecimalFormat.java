@@ -370,12 +370,14 @@ public class DecimalFormat extends NumberFormat {
         this.negativePrefix = copy.negativePrefix;
         this.negativePrefixComponents = copy.negativePrefixComponents;
         this.negativeNumberComponents = copy.negativeNumberComponents;
+        this.negativeDecimalSeparator = copy.negativeDecimalSeparator;
         this.negativeSuffix = copy.negativeSuffix;
         this.negativeSuffixComponents = copy.negativeSuffixComponents;
-        
+
         this.positivePrefix = copy.positivePrefix;
         this.positivePrefixComponents = copy.positivePrefixComponents;
         this.positiveNumberComponents = copy.positiveNumberComponents;
+        this.positiveDecimalSeparator = copy.positiveDecimalSeparator;
         this.positiveSuffix = copy.positiveSuffix;
         this.positiveSuffixComponents = copy.positiveSuffixComponents;
     }
@@ -400,11 +402,13 @@ public class DecimalFormat extends NumberFormat {
 
         // String versions will be computed later.
         final List<DecimalFormatPatternComponent> positivePrefixComponents = positive.prefix;
+        final boolean positiveDecimalSeparator = positive.hasDecimalSeparator();
         final List<DecimalFormatPatternComponent> positiveNumberComponents = positive.number;
         final List<DecimalFormatPatternComponent> positiveSuffixComponents = positive.suffix;
 
         final List<DecimalFormatPatternComponent> negativePrefixComponents;
         final List<DecimalFormatPatternComponent> negativeNumberComponents;
+        final boolean negativeDecimalSeparator;
         final List<DecimalFormatPatternComponent> negativeSuffixComponents;
 
         final int position = positive.position;
@@ -421,6 +425,7 @@ public class DecimalFormat extends NumberFormat {
 
             negativePrefixComponents = negative.prefix;
             negativeNumberComponents = negative.number;
+            negativeDecimalSeparator = negative.hasDecimalSeparator();
             negativeSuffixComponents = negative.suffix;
 
             // ignore groupingSeparator, multiplier from negative.
@@ -431,6 +436,7 @@ public class DecimalFormat extends NumberFormat {
             negativePrefixComponents.addAll(positivePrefixComponents);
 
             negativeNumberComponents = null;
+            negativeDecimalSeparator = false;
 
             negativeSuffixComponents = positiveSuffixComponents;
         }
@@ -449,12 +455,14 @@ public class DecimalFormat extends NumberFormat {
         this.positivePrefixComponents = positivePrefixComponents;
         this.positivePrefix = this.toPatternLocalized(positivePrefixComponents);
         this.positiveNumberComponents = positiveNumberComponents;
+        this.positiveDecimalSeparator = positiveDecimalSeparator;
         this.positiveSuffixComponents = positiveSuffixComponents;
         this.positiveSuffix = this.toPatternLocalized(positiveSuffixComponents);
 
         this.negativePrefixComponents = negativePrefixComponents;
         this.negativePrefix = this.toPatternLocalized(negativePrefixComponents);
         this.negativeNumberComponents = negativeNumberComponents;
+        this.negativeDecimalSeparator = negativeDecimalSeparator;
         this.negativeSuffixComponents = negativeSuffixComponents;
         this.negativeSuffix = this.toPatternLocalized(negativeSuffixComponents);
     }
@@ -473,6 +481,7 @@ public class DecimalFormat extends NumberFormat {
 
             toPattern(this.positivePrefixComponents(), b);
             toPattern(positive, b);
+            this.toPatternAppendDecimalIfNecessary(this.positiveDecimalSeparator, b);
             toPattern(this.positiveSuffixComponents(), b);
 
             final List<DecimalFormatPatternComponent> negative = this.negativeNumberComponents;
@@ -481,6 +490,7 @@ public class DecimalFormat extends NumberFormat {
 
                 toPattern(this.negativePrefixComponents(), b);
                 toPattern(null == negative ? positive : negative, b);
+                this.toPatternAppendDecimalIfNecessary(null == negative ? this.positiveDecimalSeparator : this.negativeDecimalSeparator, b);
                 toPattern(this.negativeSuffixComponents(), b);
             }
 
@@ -496,6 +506,17 @@ public class DecimalFormat extends NumberFormat {
                                   final StringBuilder b) {
         for (final DecimalFormatPatternComponent component : components) {
             component.toPattern(b);
+        }
+    }
+
+    /**
+     * if {@link #decimalSeparatorAlwaysShown} is true and the pattern being processed has no decimal separator
+     * append one, otherwise do nothing.
+     */
+    private void toPatternAppendDecimalIfNecessary(final boolean hasDecimalSeparator,
+                                                   final StringBuilder b) {
+        if (this.decimalSeparatorAlwaysShown && false == hasDecimalSeparator) {
+            b.append(DecimalFormat.DECIMAL_SEPARATOR);
         }
     }
 
@@ -549,9 +570,19 @@ public class DecimalFormat extends NumberFormat {
     private List<DecimalFormatPatternComponent> positiveNumberComponents;
 
     /**
+     * Will be true if the {@link #positiveNumberComponents} contains a {@link DecimalFormatPatternComponentDecimalSeparator}
+     */
+    private boolean positiveDecimalSeparator;
+
+    /**
      * When the initial pattern had no negative sub pattern, this will be null.
      */
     private List<DecimalFormatPatternComponent> negativeNumberComponents;
+
+    /**
+     * Will be true if the {@link #negativeNumberComponents} contains a {@link DecimalFormatPatternComponentDecimalSeparator}
+     */
+    private boolean negativeDecimalSeparator;
 
     // currency.........................................................................................................
 
@@ -587,7 +618,10 @@ public class DecimalFormat extends NumberFormat {
      *            {@code true} if the decimal separator should always be
      *            formatted; {@code false} otherwise.
      */
-    public synchronized void setDecimalSeparatorAlwaysShown(final boolean value) {
+    public void setDecimalSeparatorAlwaysShown(final boolean value) {
+        if (this.decimalSeparatorAlwaysShown != value) {
+            this.pattern = null; // the change in decimalSeparatorAlwaysShown affects the cached pattern in String form.
+        }
         this.decimalSeparatorAlwaysShown = value;
     }
 
