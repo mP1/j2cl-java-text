@@ -71,6 +71,10 @@ final class DecimalFormatPatternParserNumber extends DecimalFormatPatternParser 
         this.addNumberComponent(DecimalFormatPatternComponent.decimalSeparator());
     }
 
+    boolean hasDecimalSeparator() {
+        return -1 != this.decimalSeparator;
+    }
+
     /**
      * An index into {@link #number} holding the position of any decimal separator.
      */

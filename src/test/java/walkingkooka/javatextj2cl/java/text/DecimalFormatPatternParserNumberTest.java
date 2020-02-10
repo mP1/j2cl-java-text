@@ -766,6 +766,10 @@ public final class DecimalFormatPatternParserNumberTest extends DecimalFormatPat
         assertEquals(parsed.endsWith("" + DecimalFormat.SUB_PATTERN_SEPARATOR),
                 parser.subPatternSeparator,
                 () -> " subPatternSeparator " + parser);
+
+        assertEquals(parser.number.contains(DecimalFormatPatternComponent.decimalSeparator()) || parser.number.contains(DecimalFormatPatternComponent.currencySeparator()),
+                parser.hasDecimalSeparator(),
+                () -> "parser.hasDecimalSeparator " + parser);
     }
 
     private static String join(final List<DecimalFormatPatternComponent> prefix) {
