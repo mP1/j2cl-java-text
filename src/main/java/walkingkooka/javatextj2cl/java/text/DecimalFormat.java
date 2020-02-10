@@ -380,6 +380,8 @@ public class DecimalFormat extends NumberFormat {
         this.positiveDecimalSeparator = copy.positiveDecimalSeparator;
         this.positiveSuffix = copy.positiveSuffix;
         this.positiveSuffixComponents = copy.positiveSuffixComponents;
+
+        this.customNegativePrefixSuffix = copy.customNegativePrefixSuffix;
     }
 
     /**
