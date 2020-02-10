@@ -342,6 +342,9 @@ public class DecimalFormat extends NumberFormat {
      */
     private void copySkipPatternSkipSymbols(final DecimalFormat copy) {
         this.currency = copy.currency;
+
+        this.decimalSeparator = copy.decimalSeparator;
+
         this.groupingSize = copy.groupingSize;
         this.groupingUsed = copy.groupingUsed;
 
@@ -367,17 +370,15 @@ public class DecimalFormat extends NumberFormat {
     private void copyPattern(final DecimalFormat copy) {
         this.pattern = copy.pattern;
 
+        this.numberComponents = copy.numberComponents;
+
         this.negativePrefix = copy.negativePrefix;
         this.negativePrefixComponents = copy.negativePrefixComponents;
-        this.negativeNumberComponents = copy.negativeNumberComponents;
-        this.negativeDecimalSeparator = copy.negativeDecimalSeparator;
         this.negativeSuffix = copy.negativeSuffix;
         this.negativeSuffixComponents = copy.negativeSuffixComponents;
 
         this.positivePrefix = copy.positivePrefix;
         this.positivePrefixComponents = copy.positivePrefixComponents;
-        this.positiveNumberComponents = copy.positiveNumberComponents;
-        this.positiveDecimalSeparator = copy.positiveDecimalSeparator;
         this.positiveSuffix = copy.positiveSuffix;
         this.positiveSuffixComponents = copy.positiveSuffixComponents;
 
@@ -404,14 +405,12 @@ public class DecimalFormat extends NumberFormat {
 
         // String versions will be computed later.
         final List<DecimalFormatPatternComponent> positivePrefixComponents = positive.prefix;
-        final boolean positiveDecimalSeparator = positive.hasDecimalSeparator();
-        final List<DecimalFormatPatternComponent> positiveNumberComponents = positive.number;
         final List<DecimalFormatPatternComponent> positiveSuffixComponents = positive.suffix;
 
         final List<DecimalFormatPatternComponent> negativePrefixComponents;
-        final List<DecimalFormatPatternComponent> negativeNumberComponents;
-        final boolean negativeDecimalSeparator;
         final List<DecimalFormatPatternComponent> negativeSuffixComponents;
+
+        final boolean custom;
 
         final int position = positive.position;
         if (position < pattern.length()) {
@@ -430,9 +429,9 @@ public class DecimalFormat extends NumberFormat {
                     NEGATIVE_PREFIX_MINUS_SIGN :
                     prefix;
 
-            negativeNumberComponents = negative.number;
-            negativeDecimalSeparator = negative.hasDecimalSeparator();
             negativeSuffixComponents = negative.suffix;
+
+            custom = true;
 
             // ignore groupingSeparator, multiplier from negative.
         } else {
@@ -441,10 +440,9 @@ public class DecimalFormat extends NumberFormat {
             negativePrefixComponents.add(DecimalFormatPatternComponent.minusSign());
             negativePrefixComponents.addAll(positivePrefixComponents);
 
-            negativeNumberComponents = null;
-            negativeDecimalSeparator = false;
-
             negativeSuffixComponents = positiveSuffixComponents;
+
+            custom = false;
         }
 
         // commit pattern changes to this.
@@ -458,19 +456,20 @@ public class DecimalFormat extends NumberFormat {
         this.maximumIntegerDigits = positive.maximumIntegerDigits;
         this.minimumIntegerDigits = positive.minimumIntegerDigits;
 
+        this.numberComponents = positive.number;
+        this.decimalSeparator = positive.hasDecimalSeparator();
+
         this.positivePrefixComponents = positivePrefixComponents;
         this.positivePrefix = this.toPatternLocalized(positivePrefixComponents);
-        this.positiveNumberComponents = positiveNumberComponents;
-        this.positiveDecimalSeparator = positiveDecimalSeparator;
         this.positiveSuffixComponents = positiveSuffixComponents;
         this.positiveSuffix = this.toPatternLocalized(positiveSuffixComponents);
 
         this.negativePrefixComponents = negativePrefixComponents;
         this.negativePrefix = this.toPatternLocalized(negativePrefixComponents);
-        this.negativeNumberComponents = negativeNumberComponents;
-        this.negativeDecimalSeparator = negativeDecimalSeparator;
         this.negativeSuffixComponents = negativeSuffixComponents;
         this.negativeSuffix = this.toPatternLocalized(negativeSuffixComponents);
+
+        this.customNegativePrefixSuffix = custom;
     }
 
     /**
@@ -488,20 +487,24 @@ public class DecimalFormat extends NumberFormat {
         if (null == this.pattern) {
             final StringBuilder b = new StringBuilder();
 
-            final List<DecimalFormatPatternComponent> positive = this.positiveNumberComponents;
+            final List<DecimalFormatPatternComponent> number = this.numberComponents;
+            final boolean addDecimal = this.decimalSeparatorAlwaysShown && false == this.decimalSeparator;
 
             toPattern(this.positivePrefixComponents(), b);
-            toPattern(positive, b);
-            this.toPatternAppendDecimalIfNecessary(this.positiveDecimalSeparator, b);
+            toPattern(number, b);
+            if (addDecimal) {
+                b.append(DecimalFormat.DECIMAL_SEPARATOR);
+            }
             toPattern(this.positiveSuffixComponents(), b);
 
-            final List<DecimalFormatPatternComponent> negative = this.negativeNumberComponents;
-            if (null != negative || this.customNegativePrefixSuffix) {
+            if (this.customNegativePrefixSuffix) {
                 b.append(DecimalFormat.SUB_PATTERN_SEPARATOR);
 
                 toPattern(this.negativePrefixComponents(), b);
-                toPattern(null == negative ? positive : negative, b);
-                this.toPatternAppendDecimalIfNecessary(null == negative ? this.positiveDecimalSeparator : this.negativeDecimalSeparator, b);
+                toPattern(number, b);
+                if (addDecimal) {
+                    b.append(DecimalFormat.DECIMAL_SEPARATOR);
+                }
                 toPattern(this.negativeSuffixComponents(), b);
             }
 
@@ -517,17 +520,6 @@ public class DecimalFormat extends NumberFormat {
                                   final StringBuilder b) {
         for (final DecimalFormatPatternComponent component : components) {
             component.toPattern(b);
-        }
-    }
-
-    /**
-     * if {@link #decimalSeparatorAlwaysShown} is true and the pattern being processed has no decimal separator
-     * append one, otherwise do nothing.
-     */
-    private void toPatternAppendDecimalIfNecessary(final boolean hasDecimalSeparator,
-                                                   final StringBuilder b) {
-        if (this.decimalSeparatorAlwaysShown && false == hasDecimalSeparator) {
-            b.append(DecimalFormat.DECIMAL_SEPARATOR);
         }
     }
 
@@ -578,22 +570,12 @@ public class DecimalFormat extends NumberFormat {
     /**
      * Positive ill never be null and will be updated by {@link #applyPattern(String)}.
      */
-    private List<DecimalFormatPatternComponent> positiveNumberComponents;
+    private List<DecimalFormatPatternComponent> numberComponents;
 
     /**
-     * Will be true if the {@link #positiveNumberComponents} contains a {@link DecimalFormatPatternComponentDecimalSeparator}
+     * Will be true if the {@link #numberComponents} contains a {@link DecimalFormatPatternComponentDecimalSeparator}
      */
-    private boolean positiveDecimalSeparator;
-
-    /**
-     * When the initial pattern had no negative sub pattern, this will be null.
-     */
-    private List<DecimalFormatPatternComponent> negativeNumberComponents;
-
-    /**
-     * Will be true if the {@link #negativeNumberComponents} contains a {@link DecimalFormatPatternComponentDecimalSeparator}
-     */
-    private boolean negativeDecimalSeparator;
+    private boolean decimalSeparator;
 
     // currency.........................................................................................................
 
@@ -826,12 +808,11 @@ public class DecimalFormat extends NumberFormat {
                 this.groupingUsed,
                 this.multiplier,
                 this.negativePrefix,
-                this.negativeNumberComponents,
                 this.negativeSuffix,
+                this.numberComponents,
                 this.parseBigDecimal,
                 this.pattern,
                 this.positivePrefix,
-                this.positiveNumberComponents,
                 this.positiveSuffix,
                 this.roundingMode,
                 this.symbols);
@@ -858,12 +839,11 @@ public class DecimalFormat extends NumberFormat {
                 this.minimumIntegerDigits == other.minimumIntegerDigits &&
                 this.multiplier == other.multiplier &&
                 this.negativePrefix.equals(other.negativePrefix) &&
-                Objects.equals(this.negativeNumberComponents, other.negativeNumberComponents) &&
                 this.negativeSuffix.equals(other.negativeSuffix) &&
+                this.numberComponents.equals(other.numberComponents) &&
                 this.parseBigDecimal == other.parseBigDecimal &&
                 this.parseIntegerOnly == other.parseIntegerOnly &&
                 this.positivePrefix.equals(other.positivePrefix) &&
-                this.positiveNumberComponents.equals(other.positiveNumberComponents) &&
                 this.positiveSuffix.equals(other.positiveSuffix) &&
                 this.roundingMode == other.roundingMode &&
                 this.symbols.equals(other.symbols);
@@ -883,13 +863,12 @@ public class DecimalFormat extends NumberFormat {
                 .label("minimumIntegerDigits").value(this.minimumIntegerDigits)
                 .label("multiplier").value(this.multiplier)
                 .label("negativePrefix").value(this.negativePrefix)
-                .label("negativePrefix").value(this.negativeNumberComponents)
                 .label("negativeSuffix").value(this.negativeSuffix)
+                .label("numberComponents").value(this.numberComponents)
                 .label("parseBigDecimalOnly").value(this.parseBigDecimal)
                 .label("parseIntegerOnly").value(this.parseIntegerOnly)
                 .label("pattern").value(this.pattern)
                 .label("positivePrefix").value(this.positivePrefix)
-                .label("positiveNumberComponents").value(this.positiveNumberComponents)
                 .label("positiveSuffix").value(this.positiveSuffix)
                 .label("roundingMode").value(this.roundingMode)
                 .label("symbols").value(this.symbols)

@@ -1432,7 +1432,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
     public void testToString() {
         Locale.setDefault(Locale.forLanguageTag("en-AU"));
         this.toStringAndCheck(this.createObject(),
-                "currency=AUD groupingSize=10 maximumFractionDigits=8 minimumFractionDigits=4 maximumIntegerDigits=20 minimumIntegerDigits=10 multiplier=100 negativePrefix=\"NegativePrefix1\" negativeSuffix=\"NegativeSuffix2\" positivePrefix=\"PositivePrefix1\" positiveNumberComponents=# positiveSuffix=\"PositiveSuffix2\" roundingMode=HALF_EVEN symbols=currency=AUD currencySymbol=\"$\" decimalSeparator='.' digit='#' exponentSeparator=\"e\" groupingSeparator=',' infinity=\"∞\" internationalCurrencySymbol=\"AUD\" minusSign='-' monetaryDecimalSeparator='.' nan=\"NaN\" patternSeparator=';' percent='%' perMill='‰' zeroDigit='0'");
+                "currency=AUD groupingSize=10 maximumFractionDigits=8 minimumFractionDigits=4 maximumIntegerDigits=20 minimumIntegerDigits=10 multiplier=100 negativePrefix=\"NegativePrefix1\" negativeSuffix=\"NegativeSuffix2\" numberComponents=# positivePrefix=\"PositivePrefix1\" positiveSuffix=\"PositiveSuffix2\" roundingMode=HALF_EVEN symbols=currency=AUD currencySymbol=\"$\" decimalSeparator='.' digit='#' exponentSeparator=\"e\" groupingSeparator=',' infinity=\"∞\" internationalCurrencySymbol=\"AUD\" minusSign='-' monetaryDecimalSeparator='.' nan=\"NaN\" patternSeparator=';' percent='%' perMill='‰' zeroDigit='0'");
     }
 
     @Test
@@ -1443,7 +1443,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
         format.setDecimalSeparatorAlwaysShown(true);
 
         this.toStringAndCheck(format,
-                "currency=AUD decimalSeparatorAlwaysShown=true maximumFractionDigits=2 minimumFractionDigits=2 maximumIntegerDigits=2147483647 multiplier=1 negativePrefix=\"-\" positiveNumberComponents=###.00 roundingMode=HALF_EVEN symbols=currency=AUD currencySymbol=\"$\" decimalSeparator='.' digit='#' exponentSeparator=\"e\" groupingSeparator=',' infinity=\"∞\" internationalCurrencySymbol=\"AUD\" minusSign='-' monetaryDecimalSeparator='.' nan=\"NaN\" patternSeparator=';' percent='%' perMill='‰' zeroDigit='0'");
+                "currency=AUD decimalSeparatorAlwaysShown=true maximumFractionDigits=2 minimumFractionDigits=2 maximumIntegerDigits=2147483647 multiplier=1 negativePrefix=\"-\" numberComponents=###.00 roundingMode=HALF_EVEN symbols=currency=AUD currencySymbol=\"$\" decimalSeparator='.' digit='#' exponentSeparator=\"e\" groupingSeparator=',' infinity=\"∞\" internationalCurrencySymbol=\"AUD\" minusSign='-' monetaryDecimalSeparator='.' nan=\"NaN\" patternSeparator=';' percent='%' perMill='‰' zeroDigit='0'");
     }
 
     @Test
@@ -1451,7 +1451,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
         Locale.setDefault(Locale.forLanguageTag("en-AU"));
 
         this.toStringAndCheck(new DecimalFormat("###.00", new DecimalFormatSymbols(Locale.forLanguageTag("en-AU"))),
-                "currency=AUD maximumFractionDigits=2 minimumFractionDigits=2 maximumIntegerDigits=2147483647 multiplier=1 negativePrefix=\"-\" positiveNumberComponents=###.00 roundingMode=HALF_EVEN symbols=currency=AUD currencySymbol=\"$\" decimalSeparator='.' digit='#' exponentSeparator=\"e\" groupingSeparator=',' infinity=\"∞\" internationalCurrencySymbol=\"AUD\" minusSign='-' monetaryDecimalSeparator='.' nan=\"NaN\" patternSeparator=';' percent='%' perMill='‰' zeroDigit='0'");
+                "currency=AUD maximumFractionDigits=2 minimumFractionDigits=2 maximumIntegerDigits=2147483647 multiplier=1 negativePrefix=\"-\" numberComponents=###.00 roundingMode=HALF_EVEN symbols=currency=AUD currencySymbol=\"$\" decimalSeparator='.' digit='#' exponentSeparator=\"e\" groupingSeparator=',' infinity=\"∞\" internationalCurrencySymbol=\"AUD\" minusSign='-' monetaryDecimalSeparator='.' nan=\"NaN\" patternSeparator=';' percent='%' perMill='‰' zeroDigit='0'");
     }
 
     @Test
@@ -1459,7 +1459,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
         Locale.setDefault(Locale.forLanguageTag("es-CL"));
 
         this.toStringAndCheck(new DecimalFormat("¤#,##0;¤-#,##0"),
-                "currency=CLP groupingSize=3 groupingUsed=true maximumIntegerDigits=2147483647 minimumIntegerDigits=1 multiplier=1 negativePrefix=\"$-\" negativePrefix=#,##0 positivePrefix=\"$\" positiveNumberComponents=#,##0 roundingMode=HALF_EVEN symbols=currency=CLP currencySymbol=\"$\" decimalSeparator=',' digit='#' exponentSeparator=\"E\" groupingSeparator='.' infinity=\"∞\" internationalCurrencySymbol=\"CLP\" minusSign='-' monetaryDecimalSeparator=',' nan=\"NaN\" patternSeparator=';' percent='%' perMill='‰' zeroDigit='0'");
+                "currency=CLP groupingSize=3 groupingUsed=true maximumIntegerDigits=2147483647 minimumIntegerDigits=1 multiplier=1 negativePrefix=\"$-\" numberComponents=#,##0 positivePrefix=\"$\" roundingMode=HALF_EVEN symbols=currency=CLP currencySymbol=\"$\" decimalSeparator=',' digit='#' exponentSeparator=\"E\" groupingSeparator='.' infinity=\"∞\" internationalCurrencySymbol=\"CLP\" minusSign='-' monetaryDecimalSeparator=',' nan=\"NaN\" patternSeparator=';' percent='%' perMill='‰' zeroDigit='0'");
     }
 
     // ClassTesting.....................................................................................................
