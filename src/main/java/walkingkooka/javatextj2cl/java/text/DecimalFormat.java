@@ -424,8 +424,9 @@ public class DecimalFormat extends NumberFormat {
 
             currency |= negative.currency;
 
+            // if negative prefix is empty make it minus only if there was no +ve/-ve prefix
             final List<DecimalFormatPatternComponent> prefix = negative.prefix;
-            negativePrefixComponents = prefix.isEmpty() ?
+            negativePrefixComponents = prefix.isEmpty() && positivePrefixComponents.isEmpty() && positiveSuffixComponents.isEmpty() ?
                     NEGATIVE_PREFIX_MINUS_SIGN :
                     prefix;
 
