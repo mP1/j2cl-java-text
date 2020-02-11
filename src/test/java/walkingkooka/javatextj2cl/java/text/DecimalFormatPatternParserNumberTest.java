@@ -192,6 +192,16 @@ public final class DecimalFormatPatternParserNumberTest extends DecimalFormatPat
     }
 
     @Test
+    public void testDecimalSeparatorHashHash() {
+        final DecimalFormatPatternParserNumber parser = this.createParser("" + DecimalFormat.DECIMAL_SEPARATOR + DecimalFormat.HASH + DecimalFormat.HASH);
+        this.parseNumberAndCheck(parser,
+                DecimalFormatPatternComponent.hash(), DecimalFormatPatternComponent.decimalSeparator(), DecimalFormatPatternComponent.hash(), DecimalFormatPatternComponent.hash());
+        this.checkMode(parser, DecimalFormatPatternParserNumberMode.FRACTION);
+        this.checkInteger(parser, 0);
+        this.checkFraction(parser, 0, 2);
+    }
+
+    @Test
     public void testDecimalSeparatorMinus() {
         final DecimalFormatPatternParserNumber parser = this.createParser("" + DecimalFormat.DECIMAL_SEPARATOR + DecimalFormat.MINUS_SIGN);
         this.parseNumberAndCheck(parser,
@@ -384,7 +394,7 @@ public final class DecimalFormatPatternParserNumberTest extends DecimalFormatPat
     public void testHashHash() {
         final DecimalFormatPatternParserNumber parser = this.createParser("" + DecimalFormat.HASH + DecimalFormat.HASH);
         this.parseNumberAndCheck(parser,
-                DecimalFormatPatternComponent.hash(), DecimalFormatPatternComponent.hash());
+                DecimalFormatPatternComponent.hash());
         this.checkMode(parser, DecimalFormatPatternParserNumberMode.INTEGER);
         this.checkInteger(parser, 0);
         this.checkFraction(parser, 0, 0);
@@ -404,7 +414,7 @@ public final class DecimalFormatPatternParserNumberTest extends DecimalFormatPat
     public void testHashHashHashZeroZero() {
         final DecimalFormatPatternParserNumber parser = this.createParser("" + DecimalFormat.HASH + DecimalFormat.HASH + DecimalFormat.ZERO + DecimalFormat.ZERO + DecimalFormat.ZERO);
         this.parseNumberAndCheck(parser,
-                DecimalFormatPatternComponent.hash(), DecimalFormatPatternComponent.hash(), DecimalFormatPatternComponent.zero(), DecimalFormatPatternComponent.zero(), DecimalFormatPatternComponent.zero());
+                DecimalFormatPatternComponent.hash(), DecimalFormatPatternComponent.zero(), DecimalFormatPatternComponent.zero(), DecimalFormatPatternComponent.zero());
         this.checkMode(parser, DecimalFormatPatternParserNumberMode.INTEGER);
         this.checkInteger(parser, 3);
         this.checkFraction(parser, 0, 0);
