@@ -572,6 +572,11 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
     // new pattern.......................................................................................................
 
     @Test
+    public void testNewEmptyPattern() {
+        this.newPatternAndCheck("", EN_AU);
+    }
+
+    @Test
     public void testNewPatternPositiveWithPrefixNegativeNumberOnly() {
         this.newPatternAndCheck("P#;#", EN_AU);
     }
