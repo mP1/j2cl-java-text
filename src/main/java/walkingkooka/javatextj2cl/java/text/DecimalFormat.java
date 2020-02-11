@@ -395,6 +395,43 @@ public class DecimalFormat extends NumberFormat {
     public void applyPattern(final String pattern) {
         Objects.requireNonNull(pattern, "pattern");
 
+        if (pattern.isEmpty()) {
+            this.applyPatternEmpty();
+        } else {
+            this.applyPatternNotEmpty(pattern);
+        }
+    }
+
+    private void applyPatternEmpty() {
+        this.numberComponents = EMPTY_PATTERN_COMPONENTS;
+
+        this.positivePrefix = "";
+        this.positivePrefixComponents = Lists.empty();
+
+        this.negativeSuffix = "";
+        this.negativeSuffixComponents = Lists.empty();
+
+        this.setMinimumIntegerDigits(0);
+        this.setMaximumIntegerDigits(MAXIMUM_INTEGER_DIGITS);
+        this.setMinimumFractionDigits(0);
+        this.setMaximumFractionDigits(MAXIMUM_FRACTION_DIGITS);
+
+        this.setGroupingSize(DEFAULT_GROUPING_SIZE);
+        this.setGroupingUsed(true);
+
+        this.setMultiplier(1);
+
+        this.decimalSeparator = false;
+        this.customNegativePrefixSuffix = false;
+    }
+
+    private static final List<DecimalFormatPatternComponent> EMPTY_PATTERN_COMPONENTS = Lists.of(DecimalFormatPatternComponent.zero());
+
+    private static final int DEFAULT_GROUPING_SIZE = 3;
+    private static final int MAXIMUM_INTEGER_DIGITS  = Integer.MAX_VALUE;
+    private static final int MAXIMUM_FRACTION_DIGITS = Integer.MAX_VALUE;
+
+    private void applyPatternNotEmpty(final String pattern) {
         final DecimalFormatPatternParserNumber positive = DecimalFormatPatternParserNumber.with(pattern, 0);
         positive.parse();
 
