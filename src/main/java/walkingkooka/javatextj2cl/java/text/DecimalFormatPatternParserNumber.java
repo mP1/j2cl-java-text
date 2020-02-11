@@ -21,6 +21,7 @@ import walkingkooka.ToStringBuilder;
 import walkingkooka.collect.list.Lists;
 
 import java.text.DecimalFormat;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -328,6 +329,8 @@ final class DecimalFormatPatternParserNumber extends DecimalFormatPatternParser 
         this.checkExponent();
         this.computeFractionDigits();
         this.computeIntegerDigits();
+
+        this.compressIntegerHashes();
     }
 
     /**
@@ -355,6 +358,33 @@ final class DecimalFormatPatternParserNumber extends DecimalFormatPatternParser 
         if (-1 != decimalSeparator) {
             if (this.currency) {
                 this.number.set(decimalSeparator, DecimalFormatPatternComponent.currencySeparator());
+            }
+        }
+    }
+
+    /**
+     * Multiple integer hash must be compressed into one. Multiple hashes after in the fraction area must be left alone.
+     */
+    private void compressIntegerHashes() {
+        if (-1 == this.groupingSeparator) {
+            boolean previousHash = false;
+
+            for (final Iterator<DecimalFormatPatternComponent> iterator = this.number.iterator();
+                 iterator.hasNext(); ) {
+                final DecimalFormatPatternComponent component = iterator.next();
+
+                if (component.isZero() || component.isDecimalSeparator() || component.isCurrencySeparator()) {
+                    break;
+                }
+                if (component.isGroupingSeparator()) {
+                    continue;
+                }
+                if (component.isHash()) {
+                    if (previousHash) {
+                        iterator.remove();
+                    }
+                    previousHash = true;
+                }
             }
         }
     }
