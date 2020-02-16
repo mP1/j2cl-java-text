@@ -233,12 +233,14 @@ final class DecimalFormatPatternParserNumber extends DecimalFormatPatternParser 
     private void computeIntegerDigits() {
         // minimumIntegerDigits count zeros to the left of decimal point
         int zero = 0;
+        int min = 1;
 
         final List<DecimalFormatPatternComponent> number = this.number;
 
         int i = this.decimalSeparator;
         if (-1 == i) {
             i = number.size();
+            min = 0; // necessary because # is actually #0
         }
 
         while (i > 0) {
@@ -256,7 +258,7 @@ final class DecimalFormatPatternParserNumber extends DecimalFormatPatternParser 
 
         // DecimalFormat.applyPattern then getMaximumIntegerDigits always returns Integer.MAX_VALUE
         this.maximumIntegerDigits = Integer.MAX_VALUE;
-        this.minimumIntegerDigits = zero;
+        this.minimumIntegerDigits = Math.max(zero, min);
     }
 
     int maximumIntegerDigits = 0;
