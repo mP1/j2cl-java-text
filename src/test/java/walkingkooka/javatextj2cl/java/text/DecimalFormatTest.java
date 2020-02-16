@@ -22,7 +22,9 @@ import walkingkooka.HashCodeEqualsDefinedTesting2;
 import walkingkooka.InvalidCharacterException;
 import walkingkooka.ToStringTesting;
 import walkingkooka.javautillocalej2cl.WalkingkookaLocale;
+import walkingkooka.text.CharSequences;
 
+import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Currency;
 import java.util.Locale;
@@ -1356,6 +1358,313 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
         assertEquals(expected.getPercent(), emulated.getPercent(), () -> "percent " + locale.toLanguageTag());
         assertEquals(expected.getPerMill(), emulated.getPerMill(), () -> "perMill " + locale.toLanguageTag());
         assertEquals(expected.getZeroDigit(), emulated.getZeroDigit(), () -> "zeroDigit " + locale.toLanguageTag());
+    }
+
+    // parse............................................................................................................
+
+    @Test
+    public void testFormatZero() {
+        this.formatAndCheck("#", 0);
+    }
+
+    @Test
+    public void testFormatPositiveInteger() {
+        this.formatAndCheck("#;NP#####", 1);
+    }
+
+    @Test
+    public void testFormatPositiveInteger2() {
+        this.formatAndCheck("#;NP#####", 1234);
+    }
+
+    @Test
+    public void testFormatPositiveInteger3() {
+        this.formatAndCheck("#;NP#####", 1234567890);
+    }
+
+    @Test
+    public void testFormatNegativeInteger() {
+        this.formatAndCheck("PP#PS;#", -1);
+    }
+
+    @Test
+    public void testFormatNegativeInteger2() {
+        this.formatAndCheck("PP#PS;#", -1234);
+    }
+
+    @Test
+    public void testFormatNegativeInteger3() {
+        this.formatAndCheck("PP#PS;#", -1234567890);
+    }
+
+    @Test
+    public void testFormatPositiveIntegerZeroPadded() {
+        this.formatAndCheck("0000", 1);
+    }
+
+    @Test
+    public void testFormatPrefix() {
+        this.formatAndCheck("P#", 1);
+    }
+
+    @Test
+    public void testFormatSuffix() {
+        this.formatAndCheck("#S", 1);
+    }
+
+    @Test
+    public void testFormatPrefixAndSuffix() {
+        this.formatAndCheck("PP#SS", 1);
+    }
+
+    @Test
+    public void testFormatPositiveIntegerAlwaysDecimalShown() {
+        final String pattern = "#";
+        final boolean always = true;
+
+        final java.text.DecimalFormat jdk = new java.text.DecimalFormat(pattern);
+        jdk.setDecimalSeparatorAlwaysShown(always);
+
+        final DecimalFormat emul = new DecimalFormat(pattern);
+        emul.setDecimalSeparatorAlwaysShown(always);
+
+        this.formatAndCheck(jdk, emul, 1);
+    }
+
+    @Test
+    public void testFormatIntegerFractionRounding() {
+        this.formatAndCheck("#",
+                RoundingMode.HALF_UP,
+                1.25);
+    }
+
+    @Test
+    public void testFormatIntegerFractionRounding2() {
+        this.formatAndCheck("#",
+                RoundingMode.HALF_UP,
+                1.5);
+    }
+
+    @Test
+    public void testFormatIntegerCustomZero() {
+        final String pattern = "#0";
+
+        final java.text.DecimalFormatSymbols jdkSymbols = new java.text.DecimalFormatSymbols(EN_AU);
+        jdkSymbols.setZeroDigit('A');
+        final java.text.DecimalFormat jdk = new java.text.DecimalFormat(pattern, jdkSymbols);
+
+        final DecimalFormatSymbols emulSymbols = new DecimalFormatSymbols(EN_AU);
+        emulSymbols.setZeroDigit('A');
+        final DecimalFormat emul = new DecimalFormat(pattern, emulSymbols);
+
+        this.formatAndCheck(jdk,
+                emul,
+                1234567);
+    }
+
+    @Test
+    public void testFormatIntegerMaximumIntegerDigits() {
+        final String pattern = "#0";
+        final int max = 2;
+
+        final java.text.DecimalFormat jdk = new java.text.DecimalFormat(pattern);
+        jdk.setMaximumIntegerDigits(max);
+
+        final DecimalFormat emul = new DecimalFormat(pattern);
+        emul.setMaximumIntegerDigits(max);
+
+        this.formatAndCheck(jdk,
+                emul,
+                1);
+    }
+
+    @Test
+    public void testFormatIntegerMaximumIntegerDigits2() {
+        final String pattern = "#0";
+        final int max = 2;
+
+        final java.text.DecimalFormat jdk = new java.text.DecimalFormat(pattern);
+        jdk.setMaximumIntegerDigits(max);
+
+        final DecimalFormat emul = new DecimalFormat(pattern);
+        emul.setMaximumIntegerDigits(max);
+
+        this.formatAndCheck(jdk,
+                emul,
+                1234567);
+    }
+
+    @Test
+    public void testFormatFraction() {
+        this.formatAndCheck("#",
+                RoundingMode.HALF_UP,
+                1.5);
+    }
+
+    @Test
+    public void testFormatFractionNegative() {
+        this.formatAndCheck("#",
+                RoundingMode.HALF_UP,
+                -1.5);
+    }
+
+    @Test
+    public void testFormatFractionCustomZero() {
+        final String pattern = "#.#";
+
+        final java.text.DecimalFormatSymbols jdkSymbols = new java.text.DecimalFormatSymbols(EN_AU);
+        jdkSymbols.setZeroDigit('A');
+        final java.text.DecimalFormat jdk = new java.text.DecimalFormat(pattern, jdkSymbols);
+
+        final DecimalFormatSymbols emulSymbols = new DecimalFormatSymbols(EN_AU);
+        emulSymbols.setZeroDigit('A');
+        final DecimalFormat emul = new DecimalFormat(pattern, emulSymbols);
+
+        this.formatAndCheck(jdk,
+                emul,
+                123.5);
+    }
+
+    @Test
+    public void testFormatGroupingValueLessThanGrouping() {
+        this.formatAndCheck("#,000",
+                1);
+    }
+
+    @Test
+    public void testFormatGroupingValueLessThanGrouping2() {
+        this.formatAndCheck("#,000",
+                12);
+    }
+
+    @Test
+    public void testFormatGroupingValueLessThanGrouping3() {
+        this.formatAndCheck("#,000",
+                123);
+    }
+
+    @Test
+    public void testFormatGrouping() {
+        this.formatAndCheck("#,000",
+                1234);
+    }
+
+    @Test
+    public void testFormatGroupingTwoGroups() {
+        this.formatAndCheck("#,000",
+                12345678);
+    }
+
+    @Test
+    public void testFormatGroupingWithFraction() {
+        this.formatAndCheck("#,000.0",
+                1234.5);
+    }
+
+    @Test
+    public void testFormatCurrency() {
+        Locale.setDefault(EN_AU);
+
+        final String pattern = CURRENCY + "#";
+
+        final java.text.DecimalFormat jdk = new java.text.DecimalFormat(pattern);
+        final DecimalFormat emul = new DecimalFormat(pattern);
+
+        this.formatAndCheck(jdk,
+                emul,
+                123.5);
+    }
+
+    @Test
+    public void testFormatInternationalCurrency() {
+        Locale.setDefault(EN_AU);
+
+        final String pattern = "" + CURRENCY + CURRENCY + "#";
+
+        final java.text.DecimalFormat jdk = new java.text.DecimalFormat(pattern);
+        final DecimalFormat emul = new DecimalFormat(pattern);
+
+        this.formatAndCheck(jdk,
+                emul,
+                123.5);
+    }
+
+    @Test
+    public void testFormatPercent() {
+        Locale.setDefault(EN_AU);
+
+        final String pattern = "%#";
+
+        final java.text.DecimalFormat jdk = new java.text.DecimalFormat(pattern);
+        final DecimalFormat emul = new DecimalFormat(pattern);
+
+        this.formatAndCheck(jdk,
+                emul,
+                123.5);
+    }
+
+    @Test
+    public void testFormatPerMille() {
+        Locale.setDefault(EN_AU);
+
+        final String pattern = DecimalFormat.PER_MILLE + "#";
+
+        final java.text.DecimalFormat jdk = new java.text.DecimalFormat(pattern);
+        final DecimalFormat emul = new DecimalFormat(pattern);
+
+        this.formatAndCheck(jdk,
+                emul,
+                123.5);
+    }
+
+    // helpers..........................................................................................................
+
+    private void formatAndCheck(final String pattern,
+                                final Object value) {
+        this.formatAndCheck(pattern,
+                RoundingMode.UNNECESSARY,
+                value);
+    }
+
+    private void formatAndCheck(final String pattern,
+                                final RoundingMode roundingMode,
+                                final Object value) {
+        this.formatAndCheck(pattern,
+                roundingMode,
+                value,
+                EN_AU);
+    }
+
+    private void formatAndCheck(final String pattern,
+                                final RoundingMode roundingMode,
+                                final Object value,
+                                final Locale locale) {
+        Locale.setDefault(locale);
+
+        final java.text.DecimalFormat jdk = new java.text.DecimalFormat(pattern);
+        jdk.setRoundingMode(roundingMode);
+
+        final DecimalFormat emul = new DecimalFormat(pattern);
+        emul.setRoundingMode(roundingMode);
+
+        this.formatAndCheck(jdk, emul, value, locale);
+    }
+
+    private void formatAndCheck(final java.text.DecimalFormat jdk,
+                                final DecimalFormat emul,
+                                final Object value) {
+        this.formatAndCheck(jdk, emul, value, EN_AU);
+    }
+
+    private void formatAndCheck(final java.text.DecimalFormat jdk,
+                                final DecimalFormat emul,
+                                final Object value,
+                                final Locale locale) {
+        this.check(jdk, emul, locale, true);
+
+        assertEquals(jdk.format(value),
+                emul.format(value),
+                () -> "value " + value + " locale " + locale + " decimalFormat: " + emul);
     }
 
     // equals............................................................................................................
