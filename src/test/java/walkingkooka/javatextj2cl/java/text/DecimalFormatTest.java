@@ -577,6 +577,16 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
     }
 
     @Test
+    public void testNewPatternHash() {
+        this.newPatternAndCheck("#", EN_AU);
+    }
+
+    @Test
+    public void testNewPatternZero() {
+        this.newPatternAndCheck("#", EN_AU);
+    }
+
+    @Test
     public void testNewPatternPositiveWithPrefixNegativeNumberOnly() {
         this.newPatternAndCheck("P#;#", EN_AU);
     }
@@ -1463,7 +1473,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
         format.setDecimalSeparatorAlwaysShown(true);
 
         this.toStringAndCheck(format,
-                "currency=AUD decimalSeparatorAlwaysShown=true maximumFractionDigits=2 minimumFractionDigits=2 maximumIntegerDigits=2147483647 multiplier=1 negativePrefix=\"-\" numberComponents=#.00 roundingMode=HALF_EVEN symbols=currency=AUD currencySymbol=\"$\" decimalSeparator='.' digit='#' exponentSeparator=\"e\" groupingSeparator=',' infinity=\"∞\" internationalCurrencySymbol=\"AUD\" minusSign='-' monetaryDecimalSeparator='.' nan=\"NaN\" patternSeparator=';' percent='%' perMill='‰' zeroDigit='0'");
+                "currency=AUD decimalSeparatorAlwaysShown=true maximumFractionDigits=2 minimumFractionDigits=2 maximumIntegerDigits=2147483647 minimumIntegerDigits=1 multiplier=1 negativePrefix=\"-\" numberComponents=#.00 roundingMode=HALF_EVEN symbols=currency=AUD currencySymbol=\"$\" decimalSeparator='.' digit='#' exponentSeparator=\"e\" groupingSeparator=',' infinity=\"∞\" internationalCurrencySymbol=\"AUD\" minusSign='-' monetaryDecimalSeparator='.' nan=\"NaN\" patternSeparator=';' percent='%' perMill='‰' zeroDigit='0'");
     }
 
     @Test
@@ -1471,7 +1481,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
         Locale.setDefault(Locale.forLanguageTag("en-AU"));
 
         this.toStringAndCheck(new DecimalFormat("###.00", new DecimalFormatSymbols(Locale.forLanguageTag("en-AU"))),
-                "currency=AUD maximumFractionDigits=2 minimumFractionDigits=2 maximumIntegerDigits=2147483647 multiplier=1 negativePrefix=\"-\" numberComponents=#.00 roundingMode=HALF_EVEN symbols=currency=AUD currencySymbol=\"$\" decimalSeparator='.' digit='#' exponentSeparator=\"e\" groupingSeparator=',' infinity=\"∞\" internationalCurrencySymbol=\"AUD\" minusSign='-' monetaryDecimalSeparator='.' nan=\"NaN\" patternSeparator=';' percent='%' perMill='‰' zeroDigit='0'");
+                "currency=AUD maximumFractionDigits=2 minimumFractionDigits=2 maximumIntegerDigits=2147483647 minimumIntegerDigits=1 multiplier=1 negativePrefix=\"-\" numberComponents=#.00 roundingMode=HALF_EVEN symbols=currency=AUD currencySymbol=\"$\" decimalSeparator='.' digit='#' exponentSeparator=\"e\" groupingSeparator=',' infinity=\"∞\" internationalCurrencySymbol=\"AUD\" minusSign='-' monetaryDecimalSeparator='.' nan=\"NaN\" patternSeparator=';' percent='%' perMill='‰' zeroDigit='0'");
     }
 
     @Test
