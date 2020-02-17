@@ -623,24 +623,20 @@ public class DecimalFormat extends NumberFormat {
                                           final StringBuffer append,
                                           final String prefix,
                                           final String suffix) {
-        return this.scientificFormat ?
-                this.formatBigDecimalScientific(value,
-                        append,
-                        prefix,
-                        suffix) :
-                this.formatBigDecimalDecimal(value,
-                        append,
-                        prefix,
-                        suffix);
+        append.append(prefix);
+        if (this.scientificFormat) {
+            this.formatBigDecimalScientific(value, append);
+        } else {
+            this.formatBigDecimalDecimal(value, append);
+        }
+        return append.append(suffix);
     }
 
     /**
      * Handles formatting the given absolute/positive value into characters as a decimal format.
      */
-    private StringBuffer formatBigDecimalDecimal(final BigDecimal value,
-                                                 final StringBuffer append,
-                                                 final String prefix,
-                                                 final String suffix) {
+    private void formatBigDecimalDecimal(final BigDecimal value,
+                                         final StringBuffer append) {
         final DecimalFormatSymbols symbols = this.symbols;
 
         // round to $maxFractionDigits decimal places
@@ -686,8 +682,6 @@ public class DecimalFormat extends NumberFormat {
         }
 
         // compose......................................................................................................
-        append.append(prefix);
-
         final char zero = symbols.getZeroDigit();
 
         // add integer digits with grouping separator if necessary
@@ -734,10 +728,14 @@ public class DecimalFormat extends NumberFormat {
                 }
             }
         }
+    }
 
-        append.append(suffix);
-
-        return append;
+    /**
+     * Handles formatting the given absolute/positive value into characters as a scientific format.
+     */
+    private void formatBigDecimalScientific(final BigDecimal value,
+                                            final StringBuffer append) {
+        throw new UnsupportedOperationException();
     }
 
     /**
@@ -746,16 +744,6 @@ public class DecimalFormat extends NumberFormat {
     private static char translate(final char digit,
                                   final char zero) {
         return (char) (digit - '0' + zero);
-    }
-
-    /**
-     * Handles formatting the given absolute/positive value into characters as a scientific format.
-     */
-    private StringBuffer formatBigDecimalScientific(final BigDecimal value,
-                                                    final StringBuffer append,
-                                                    final String prefix,
-                                                    final String suffix) {
-        throw new UnsupportedOperationException();
     }
 
     // parse............................................................................................................
