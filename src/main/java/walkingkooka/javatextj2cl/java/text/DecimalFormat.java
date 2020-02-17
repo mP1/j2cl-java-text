@@ -643,15 +643,12 @@ public class DecimalFormat extends NumberFormat {
                                                  final String suffix) {
         final DecimalFormatSymbols symbols = this.symbols;
 
-        final int maximumFraction = this.maximumFractionDigits;
-        final int minimumFraction = this.minimumFractionDigits;
-
         // round to $maxFractionDigits decimal places
         final int scale = value.scale();
         final BigDecimal value0 = value
                 .multiply(this.multiplierBigDecimal) // required might be a percent/perMille or have a custom multiplier.
-                .setScale(maximumFraction, this.roundingMode)
-                .setScale(Math.max(scale, minimumFraction))
+                .setScale(this.maximumFractionDigits, this.roundingMode)
+                .setScale(Math.max(scale, this.minimumFractionDigits))
                 .stripTrailingZeros();
 
         // extract integer and fraction components
