@@ -22,9 +22,7 @@ import walkingkooka.HashCodeEqualsDefinedTesting2;
 import walkingkooka.InvalidCharacterException;
 import walkingkooka.ToStringTesting;
 import walkingkooka.javautillocalej2cl.WalkingkookaLocale;
-import walkingkooka.text.CharSequences;
 
-import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Currency;
 import java.util.Locale;
@@ -621,6 +619,61 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
     @Test
     public void testNewPatternNegativeWithPrefixAndSuffix() {
         this.newPatternAndCheck("#;P#S", EN_AU);
+    }
+
+    @Test
+    public void testNewScientificPatternHash() {
+        this.newPatternAndCheck("#E0", EN_AU);
+    }
+
+    @Test
+    public void testNewScientificPatternHashHash() {
+        this.newPatternAndCheck("##E0", EN_AU);
+    }
+
+    @Test
+    public void testNewScientificPatternHashHashHash() {
+        this.newPatternAndCheck("###E0", EN_AU);
+    }
+
+    @Test
+    public void testNewScientificPatternZero() {
+        this.newPatternAndCheck("0E0", EN_AU);
+    }
+
+    @Test
+    public void testNewScientificPatternZeroZero() {
+        this.newPatternAndCheck("00E0", EN_AU);
+    }
+
+    @Test
+    public void testNewScientificPatternZeroZeroZero() {
+        this.newPatternAndCheck("000.0E0", EN_AU);
+    }
+
+    @Test
+    public void testNewScientificPatternZeroDecimalZero() {
+        this.newPatternAndCheck("0.0E0", EN_AU);
+    }
+
+    @Test
+    public void testNewScientificPatternZeroDecimalZeroZero() {
+        this.newPatternAndCheck("0.00E0", EN_AU);
+    }
+
+    @Test
+    public void testNewScientificPatternZeroDecimalHash() {
+        this.newPatternAndCheck("0.#E0", EN_AU);
+    }
+
+    @Test
+    public void testNewScientificPatternZeroDecimalHashHash() {
+        this.newPatternAndCheck("0.##E0", EN_AU);
+    }
+
+    @Test
+    public void testNewScientificPatternZeroDecimalZeroHashHash() {
+        this.newPatternAndCheck("0.0##E0", EN_AU);
     }
 
     @Test
