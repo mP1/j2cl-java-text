@@ -257,8 +257,23 @@ final class DecimalFormatPatternParserNumber extends DecimalFormatPatternParser 
     // onCompleteScientific.............................................................................................
 
     private void onCompleteScientific() {
+        this.translateHashDecimalSeparatorToZero();
         this.computeMaximumMinimumFractionDigits();
         this.computeMaximumMinimumIntegerDigitsScientificFormat();
+    }
+
+    /**
+     * Translates any hash immediately before the decimal separator into a zero.
+     */
+    private void translateHashDecimalSeparatorToZero() {
+        final int decimalSeparator = this.decimalSeparator;
+        if (-1 != decimalSeparator && 0 != decimalSeparator) {
+            final List<DecimalFormatPatternComponent> number = this.number;
+            final int i = decimalSeparator - 1;
+            if (number.get(i).isHash()) {
+                number.set(i, DecimalFormatPatternComponent.zero());
+            }
+        }
     }
 
     // onCompleteNonScientific..........................................................................................
