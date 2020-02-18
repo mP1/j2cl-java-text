@@ -104,7 +104,7 @@ final class DecimalFormatPatternParserNumber extends DecimalFormatPatternParser 
     /**
      * The number portion of the pattern cannot end with E
      */
-    private void checkExponent() {
+    private void checkTrailingExponent() {
         final List<DecimalFormatPatternComponent> number = this.number;
         if (number.size() > 0 && number.get(number.size() - 1) instanceof DecimalFormatPatternComponentExponent) {
             this.failInvalidCharacter(this.exponent);
@@ -185,85 +185,6 @@ final class DecimalFormatPatternParserNumber extends DecimalFormatPatternParser 
      */
     boolean fractionHash;
 
-    // maximumFractionDigits............................................................................................
-
-    // TODO not sure whether exponent patterns need to be handled specially.
-
-    private void computeFractionDigits() {
-        // maximumFractionDigits: number of hash/zero AFTER the decimal point
-        // minimumFractionDigits: number of zero AFTER the decimal point
-
-        int hashOrZero = 0;
-        int zero = 0;
-
-        final int decimal = this.decimalSeparator;
-        if (-1 != decimal) {
-            final List<DecimalFormatPatternComponent> number = this.number;
-            final int numberCount = number.size();
-
-            int i = decimal + 1;
-            while (i < numberCount) {
-                if (number.get(i).isZero()) {
-                    zero++;
-                    i++;
-                    continue;
-                }
-
-                while (i < numberCount) {
-                    if (number.get(i).isHashOrZero()) {
-                        hashOrZero++;
-                        i++;
-                        continue;
-                    }
-                    break;
-                }
-                break;
-            }
-        }
-
-        this.maximumFractionDigits = hashOrZero + zero;
-        this.minimumFractionDigits = zero;
-    }
-
-    int maximumFractionDigits = 0;
-    int minimumFractionDigits = 0;
-
-    // maximumIntegerDigits..............................................................................................
-
-    private void computeIntegerDigits() {
-        // minimumIntegerDigits count zeros to the left of decimal point
-        int zero = 0;
-        int min = 1;
-
-        final List<DecimalFormatPatternComponent> number = this.number;
-
-        int i = this.decimalSeparator;
-        if (-1 == i) {
-            i = number.size();
-            min = 0; // necessary because # is actually #0
-        }
-
-        while (i > 0) {
-            i--;
-            final DecimalFormatPatternComponent component = number.get(i);
-            if (component.isGroupingSeparator()) {
-                continue;
-            }
-            if (component.isZero()) {
-                zero++;
-                continue;
-            }
-            break;
-        }
-
-        // DecimalFormat.applyPattern then getMaximumIntegerDigits always returns Integer.MAX_VALUE
-        this.maximumIntegerDigits = Integer.MAX_VALUE;
-        this.minimumIntegerDigits = Math.max(zero, min);
-    }
-
-    int maximumIntegerDigits = 0;
-    int minimumIntegerDigits = 0;
-
     // subPatternSeparator..............................................................................................
 
     void subPatternSeparator() {
@@ -324,13 +245,31 @@ final class DecimalFormatPatternParserNumber extends DecimalFormatPatternParser 
 
     @Override
     void onComplete() {
-        this.addLeadingHashIfNecessary();
+        this.checkTrailingExponent();
 
-        this.currencySeparatorFix();
+        if(this.isScientificFormat()) {
+            this.onCompleteScientific();
+        } else {
+            this.onCompleteNonScientific();
+        }
+    }
+
+    // onCompleteScientific.............................................................................................
+
+    private void onCompleteScientific() {
+        this.computeMaximumMinimumFractionDigits();
+        this.computeMaximumMinimumIntegerDigitsScientificFormat();
+    }
+
+    // onCompleteNonScientific..........................................................................................
+
+    private void onCompleteNonScientific() {
+        this.addLeadingIntegerHashIfNecessary();
+
+        this.decimalSeparatorCurrencySeparatorFix();
         this.checkGroupingSeparator();
-        this.checkExponent();
-        this.computeFractionDigits();
-        this.computeIntegerDigits();
+        this.computeMaximumMinimumFractionDigits();
+        this.computeMaximumMinimumIntegerDigitsNonScientificFormat();
 
         this.compressIntegerHashes();
     }
@@ -338,24 +277,27 @@ final class DecimalFormatPatternParserNumber extends DecimalFormatPatternParser 
     /**
      * This solves patterns starting with decimal separator or with integer pattern without a leading hash etc.
      */
-    private void addLeadingHashIfNecessary() {
+    private void addLeadingIntegerHashIfNecessary() {
         final List<DecimalFormatPatternComponent> number = this.number;
         if (number.isEmpty() || false == number.get(0).isHash()) {
             number.add(0, DecimalFormatPatternComponent.hash());
 
             final int decimalSeparator = this.decimalSeparator;
-            if(-1 != decimalSeparator) {
+            if (-1 != decimalSeparator) {
                 this.decimalSeparator = decimalSeparator + 1;
             }
 
             final int groupingSeparator = this.groupingSeparator;
-            if(-1 != groupingSeparator) {
+            if (-1 != groupingSeparator) {
                 this.groupingSeparator = groupingSeparator + 1;
             }
         }
     }
 
-    private void currencySeparatorFix() {
+    /**
+     * Replaces the decimal separator with currency separator.
+     */
+    private void decimalSeparatorCurrencySeparatorFix() {
         final int decimalSeparator = this.decimalSeparator;
         if (-1 != decimalSeparator) {
             if (this.currency) {
@@ -363,6 +305,118 @@ final class DecimalFormatPatternParserNumber extends DecimalFormatPatternParser 
             }
         }
     }
+
+    // maximumFractionDigits............................................................................................
+
+    private void computeMaximumMinimumFractionDigits() {
+        // maximumFractionDigits: number of hash/zero AFTER the decimal point
+        // minimumFractionDigits: number of zero AFTER the decimal point
+
+        int hashOrZero = 0;
+        int zero = 0;
+
+        final int decimal = this.decimalSeparator;
+        if (-1 != decimal) {
+            final List<DecimalFormatPatternComponent> number = this.number;
+            final int numberCount = number.size();
+
+            int i = decimal + 1;
+            while (i < numberCount) {
+                if (number.get(i).isZero()) {
+                    zero++;
+                    i++;
+                    continue;
+                }
+
+                while (i < numberCount) {
+                    if (number.get(i).isHashOrZero()) {
+                        hashOrZero++;
+                        i++;
+                        continue;
+                    }
+                    break;
+                }
+                break;
+            }
+        }
+
+        this.maximumFractionDigits = hashOrZero + zero;
+        this.minimumFractionDigits = zero;
+    }
+
+    int maximumFractionDigits = 0;
+    int minimumFractionDigits = 0;
+
+    // maximumIntegerDigits..............................................................................................
+
+    private void computeMaximumMinimumIntegerDigitsNonScientificFormat() {
+        // minimumIntegerDigits count zeros to the left of decimal point
+        int zero = 0;
+        int min = 1;
+
+        final List<DecimalFormatPatternComponent> number = this.number;
+
+        int i = this.decimalSeparator;
+        if (-1 == i) {
+            i = number.size();
+            min = 0; // necessary because # is actually #0
+        }
+
+        while (i > 0) {
+            i--;
+            final DecimalFormatPatternComponent component = number.get(i);
+            if (component.isGroupingSeparator()) {
+                continue;
+            }
+            if (component.isZero()) {
+                zero++;
+                continue;
+            }
+        }
+
+        // DecimalFormat.applyPattern then getMaximumIntegerDigits always returns Integer.MAX_VALUE
+        this.maximumIntegerDigits = Integer.MAX_VALUE;
+        this.minimumIntegerDigits = Math.max(zero, min);
+    }
+
+    private void computeMaximumMinimumIntegerDigitsScientificFormat() {
+        // minimumIntegerDigits count zeros to the left of decimal point
+        int zero = 0;
+        int hashOrZero = 0;
+
+        final List<DecimalFormatPatternComponent> number = this.number;
+
+        int i = this.decimalSeparator;
+        if (-1 == i) {
+            i = this.exponent;
+        }
+
+        while (i > 0) {
+            i--;
+            final DecimalFormatPatternComponent component = number.get(i);
+            if (component.isZero()) {
+                zero++;
+                continue;
+            }
+            i++;
+
+            while (i > 0) {
+                i--;
+                if (number.get(i).isHashOrZero()) {
+                    hashOrZero++;
+                    continue;
+                }
+                break;
+            }
+            break;
+        }
+
+        this.maximumIntegerDigits = zero + hashOrZero;
+        this.minimumIntegerDigits = zero;
+    }
+
+    int maximumIntegerDigits = 0;
+    int minimumIntegerDigits = 0;
 
     /**
      * Multiple integer hash must be compressed into one. Multiple hashes after in the fraction area must be left alone.
