@@ -1670,6 +1670,123 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
                 123.5);
     }
 
+    // formatScientific.................................................................................................
+
+    @Test
+    public void testFormatScientificZeroOneSignificant() {
+        this.formatAndCheck("#.#E0",
+                RoundingMode.HALF_UP,
+                0);
+    }
+
+    @Test
+    public void testFormatScientificZeroTwoSignificant() {
+        this.formatAndCheck("##.#E0",
+                RoundingMode.HALF_UP,
+                0);
+    }
+
+    @Test
+    public void testFormatScientificOneSignificantLarge() {
+        this.formatAndCheck("#.#E0",
+                RoundingMode.HALF_UP,
+                12);
+    }
+
+    @Test
+    public void testFormatScientificOneSignificant() {
+        this.formatAndCheck("#.#E0",
+                RoundingMode.HALF_UP,
+                1.2);
+    }
+
+    @Test
+    public void testFormatScientificOneSignificant2() {
+        this.formatAndCheck("#.#E0",
+                RoundingMode.HALF_UP,
+                1.5);
+    }
+
+    @Test
+    public void testFormatScientificOneSignificantSmall() {
+        this.formatAndCheck("#.#E0",
+                RoundingMode.HALF_UP,
+                0.23);
+    }
+
+    @Test
+    public void testFormatScientificOneSignificantSmall2() {
+        this.formatAndCheck("#.#E0",
+                RoundingMode.HALF_UP,
+                0.25);
+    }
+
+    @Test
+    public void testFormatScientificTwoSignificantLarge() {
+        this.formatAndCheck("##.#E0",
+                RoundingMode.HALF_UP,
+                12);
+    }
+
+    @Test
+    public void testFormatScientificTwoSignificantLarge2() {
+        this.formatAndCheck("##.#E0",
+                RoundingMode.HALF_UP,
+                15);
+    }
+
+    @Test
+    public void testFormatScientificTwoSignificant() {
+        this.formatAndCheck("##.#E0",
+                RoundingMode.HALF_UP,
+                1.23,
+                "12.3e-1");
+    }
+
+    @Test
+    public void testFormatScientificTwoSignificant2() {
+        this.formatAndCheck("##.#E0",
+                RoundingMode.HALF_UP,
+                1.53,
+                "15.3e-1");
+    }
+
+    @Test
+    public void testFormatScientificTwoSignificant3() {
+        this.formatAndCheck("00.0E0",
+                RoundingMode.HALF_UP,
+                1.2,
+                "12.0e-1");
+    }
+
+    @Test
+    public void testFormatScientificTwoSignificant4() {
+        this.formatAndCheck("00.0E0",
+                RoundingMode.HALF_UP,
+                1.23);
+    }
+
+    @Test
+    public void testFormatScientificTwoSignificant4Rounding() {
+        this.formatAndCheck("00.0E0",
+                RoundingMode.HALF_UP,
+                1.234);
+    }
+
+    @Test
+    public void testFormatScientificTwoSignificantSmall() {
+        this.formatAndCheck("##.#E0",
+                RoundingMode.HALF_UP,
+                0.23);
+    }
+
+    @Test
+    public void testFormatScientificTwoSignificantSmall2() {
+        this.formatAndCheck("##.#E0",
+                RoundingMode.HALF_UP,
+                0.25);
+    }
+
     // helpers..........................................................................................................
 
     private void formatAndCheck(final String pattern,
@@ -1715,9 +1832,29 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
                                 final Locale locale) {
         this.check(jdk, emul, locale, true);
 
-        assertEquals(jdk.format(value),
+        this.formatAndCheck(emul, value, locale, jdk.format(value));
+    }
+
+    private void formatAndCheck(final String pattern,
+                                final RoundingMode roundingMode,
+                                final Object value,
+                                final String expected) {
+        final Locale locale = EN_AU;
+        Locale.setDefault(locale);
+
+        final DecimalFormat emul = new DecimalFormat(pattern);
+        emul.setRoundingMode(roundingMode);
+
+        this.formatAndCheck(emul, value, locale, expected);
+    }
+
+    private void formatAndCheck(final DecimalFormat emul,
+                                final Object value,
+                                final Locale locale,
+                                final String expected) {
+        assertEquals(expected,
                 emul.format(value),
-                () -> "value " + value + " locale " + locale + " decimalFormat: " + emul);
+                () -> emul.toPattern() + " value " + value + " locale " + locale + " decimalFormat: " + emul);
     }
 
     // equals............................................................................................................
