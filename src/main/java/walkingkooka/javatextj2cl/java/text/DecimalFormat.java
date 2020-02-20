@@ -639,55 +639,32 @@ public class DecimalFormat extends NumberFormat {
                                          final StringBuffer append) {
         final DecimalFormatSymbols symbols = this.symbols;
 
+        final int maxInteger = this.maximumIntegerDigits;
+        final int minInteger = this.minimumIntegerDigits;
+
+        final int maxFraction = this.maximumFractionDigits;
+
         // round to $maxFractionDigits decimal places
-        final int scale = value.scale();
-        final BigDecimal value0 = value
+        final BigDecimal rounded = value
                 .multiply(this.multiplierBigDecimal) // required might be a percent/perMille or have a custom multiplier.
-                .setScale(this.maximumFractionDigits, this.roundingMode)
-                .setScale(Math.max(scale, this.minimumFractionDigits))
-                .stripTrailingZeros();
+                .setScale(maxFraction, this.roundingMode);
 
-        // extract integer and fraction components
-        CharSequence integer;
-        CharSequence fraction;
+        final String digits = rounded.abs().unscaledValue().toString();
 
-        {
-            final String digits = value0.toPlainString();
-            final int decimalPlaces = digits.lastIndexOf('.');
-            if (-1 == decimalPlaces) {
-                integer = digits;
-                fraction = "";
-            } else {
-                integer = digits.substring(0, decimalPlaces);
-                fraction = digits.substring(decimalPlaces + 1);
-            }
-        }
-
-        // integer......................................................................................................
-        {
-            final int integerDigitLength = integer.length();
-
-            // pad with leading zeroes if necessary
-            final int minIntegerDigits = this.minimumIntegerDigits;
-            if (integerDigitLength < minIntegerDigits) {
-                integer = CharSequences.padLeft(integer, minIntegerDigits, '0');
-            } else {
-                final int maxIntegerDigits = this.maximumIntegerDigits;
-
-                // keep rightmost $maxIntegerDigits
-                if (integerDigitLength > maxIntegerDigits) {
-                    integer = integer.subSequence(integerDigitLength - maxIntegerDigits, integerDigitLength);
-                }
-            }
-        }
-
-        // compose......................................................................................................
+        final int precision = rounded.precision();
+        final int scale = rounded.scale();
         final char zero = symbols.getZeroDigit();
 
-        // add integer digits with grouping separator if necessary
+        // add integer digits with grouping separator if necessary......................................................
         {
+            CharSequence integer = digits.substring(0, precision - scale);
+            if (integer.length() < minInteger) {
+                integer = CharSequences.padLeft(integer, minInteger, '0');
+            }
             final int integerDigitCount = integer.length();
-            int i = 0;
+            int i = maxInteger < integerDigitCount ?
+                    integerDigitCount - maxInteger :
+                    0;
 
             // add the portion integer digits that will include grouping
             if (this.isGroupingUsed()) {
@@ -713,8 +690,9 @@ public class DecimalFormat extends NumberFormat {
             }
         }
 
-        // add fraction digits
+        // add fraction digits..........................................................................................
         {
+            CharSequence fraction = digits.substring(precision - scale);
             if (CharSequences.isNullOrEmpty(fraction)) {
                 if (this.decimalSeparatorAlwaysShown) {
                     append.append(symbols.getDecimalSeparator());
@@ -722,9 +700,8 @@ public class DecimalFormat extends NumberFormat {
             } else {
                 append.append(symbols.getDecimalSeparator());
 
-                final int fractionDigitCount = fraction.length();
-                for (int i = 0; i < fractionDigitCount; i++) {
-                    append.append(translate(fraction.charAt(i), zero));
+                for (final char c : fraction.toString().toCharArray()) {
+                    append.append(translate(c, zero));
                 }
             }
         }
