@@ -735,7 +735,88 @@ public class DecimalFormat extends NumberFormat {
      */
     private void formatBigDecimalScientific(final BigDecimal value,
                                             final StringBuffer append) {
-        throw new UnsupportedOperationException();
+        final DecimalFormatSymbols symbols = this.symbols;
+
+        final int maxInteger = this.maximumIntegerDigits;
+        final int maxFraction = this.maximumFractionDigits;
+        final int minFraction = this.minimumFractionDigits;
+
+        final BigDecimal rounded = value.multiply(this.multiplierBigDecimal)// required might be a percent/perMille or have a custom multiplier.
+                .movePointLeft(-maxInteger - maxFraction)
+                .setScale(0, this.roundingMode)
+                .stripTrailingZeros();
+
+        int powerOfTen = value.precision() - value.scale();
+
+        final int integerDigitCount;
+        final int minFractionDigitCount;
+        final int maxFractionDigitCount;
+
+        if (maxInteger > 1) {
+            integerDigitCount = ((maxInteger - 1) % maxInteger) + 1;
+
+            final int delta = maxInteger - integerDigitCount;
+            minFractionDigitCount = minFraction + delta;
+            maxFractionDigitCount = maxFraction + delta;
+        } else {
+            integerDigitCount = 1;
+            final int delta = maxInteger - integerDigitCount;
+            minFractionDigitCount = minFraction + delta;
+            maxFractionDigitCount = maxFraction + delta;
+        }
+
+        // mantissa......................................................................................................
+        final char zero = symbols.getZeroDigit();
+
+        final String digits = rounded.unscaledValue().toString();
+        final int digitCount = digits.length();
+        int next = 0;
+
+        // integer......................................................................................................
+        {
+            int i = 0;
+
+            while (next < digitCount && i < integerDigitCount) {
+                append.append(translate(digits.charAt(next), zero));
+                next++;
+                i++;
+                powerOfTen--;
+            }
+        }
+
+        // fraction......................................................................................................
+        {
+            int i = 0;
+
+            if ((next < digitCount && i < maxFractionDigitCount) ||
+                    i < minFractionDigitCount ||
+                    this.decimalSeparatorAlwaysShown) {
+                append.append(symbols.getDecimalSeparator());
+            }
+
+            while (next < digitCount && i < maxFractionDigitCount) {
+                append.append(translate(digits.charAt(next), zero));
+
+                next++;
+                i++;
+            }
+
+            while (i < minFractionDigitCount) {
+                append.append(zero);
+                i++;
+            }
+        }
+
+        // exponent......................................................................................................
+        append.append(symbols.getExponentSeparator());
+
+        if (powerOfTen < 0) {
+            append.append(symbols.getMinusSign());
+        }
+
+        for (final char c : String.valueOf(Math.abs(powerOfTen)).toCharArray()) {
+            append.append(translate(c, zero));
+        }
     }
 
     /**
