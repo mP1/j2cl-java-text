@@ -809,8 +809,221 @@ public class DecimalFormat extends NumberFormat {
     @Override
     public Number parse(final String source,
                         final ParsePosition position) {
-        throw new UnsupportedOperationException();
+        final int index = position.getIndex();
+        Number result = this.parsePrefixNumberSuffix(source, position, this.positivePrefix, this.positiveSuffix, new StringBuilder());
+        if (null == result) {
+            position.setIndex(index);
+            result = this.parsePrefixNumberSuffix(source, position, this.negativePrefix, this.negativeSuffix, new StringBuilder("-"));
+
+            // if no Number parsed and no error set error.
+            if( null == result && position.getErrorIndex() == -1) {
+                position.setErrorIndex(index);
+            }
+        }
+        return result;
     }
+
+    private Number parsePrefixNumberSuffix(final String text,
+                                           final ParsePosition position,
+                                           final String prefix,
+                                           final String suffix,
+                                           final StringBuilder digits) {
+        Number result = null;
+
+        if (subTextEquals(text, position, prefix)) {
+            position.setIndex(position.getIndex() + prefix.length());
+
+            result = this.parseNumber(text, position, digits);
+
+            if (null != result) {
+                if (subTextEquals(text, position, suffix)) {
+                    position.setIndex(position.getIndex() + suffix.length());
+                }
+            }
+        }
+
+        return result;
+    }
+
+    /**
+     * Only returns true if the source contains text at {@link ParsePosition}.
+     */
+    private static boolean subTextEquals(final String text,
+                                         final ParsePosition position,
+                                         final String subText) {
+        return subTextEquals(text, position.getIndex(), subText);
+    }
+
+    private static boolean subTextEquals(final String text,
+                                         final int index,
+                                         final String subText) {
+        return index < text.length() && text.substring(index).startsWith(subText);
+    }
+
+    /**
+     * Parses the given text into a {@link Number} honouring {@link #isParseBigDecimal()} and {@link #isParseIntegerOnly()}.
+     * Note both {@link #getMinimumIntegerDigits()} and {@link #getMinimumFractionDigits()} are ignored to match
+     * behaviour with the real {@link java.text.DecimalFormat}.
+     */
+    private Number parseNumber(final String text,
+                               final ParsePosition position,
+                               final StringBuilder digits) {
+        final DecimalFormatSymbols symbols = this.getDecimalFormatSymbols();
+
+        final char decimalSeparator = symbols.getDecimalSeparator();
+        final char zero = symbols.getZeroDigit();
+        final String exponent = symbols.getExponentSeparator();
+        final char minus = symbols.getMinusSign();
+
+        final boolean groupingUsed = this.isGroupingUsed();
+        final char grouping = symbols.getGroupingSeparator();
+
+        final int maxInt = this.getMaximumIntegerDigits();
+
+        int integerDigitCount = 0;
+        int fractionDigitCount = 0;
+
+        boolean exponentSign = false;
+        final boolean parseIntegerOnly = this.isParseIntegerOnly();
+
+        final int textLength = text.length();
+
+        int mode = MODE_INTEGER;
+
+        int index = position.getIndex();
+        int errorIndex = position.getErrorIndex();
+
+        Exit:
+        //
+        while (index < textLength) {
+            final char c = text.charAt(index);
+
+            switch (mode) {
+                case MODE_INTEGER: {
+                    if (groupingUsed && grouping == c) {
+                        index++;
+                        break;
+                    }
+                    final int digitValue = c - zero;
+                    if (digitValue >= 0 && digitValue <= 9) {
+                        integerDigitCount++;
+                        if (integerDigitCount > maxInt) {
+                            errorIndex = index;
+                            break Exit;
+                        }
+                        digits.append(digitValue);
+                        index++;
+                        break;
+                    }
+
+                    // stop parsing the remainder of the text
+                    if (parseIntegerOnly) {
+                        break Exit;
+                    }
+
+                    if (decimalSeparator == c) {
+                        digits.append('.');
+                        index++;
+                        mode = MODE_FRACTION;
+                        break;
+                    }
+
+                    // invalid digit, could be exponent
+                    if (subTextEquals(text, index, exponent)) {
+                        digits.append('E');
+                        index += exponent.length();
+                        mode = MODE_EXPONENT;
+                        break;
+                    }
+
+                    // invalid character give up
+                    break Exit;
+                }
+                case MODE_FRACTION: {
+                    final int digitValue = c - zero;
+                    if (digitValue >= 0 && digitValue <= 9) {
+                        fractionDigitCount++;
+                        digits.append(digitValue);
+                        index++;
+                        break;
+                    }
+
+                    // invalid digit, could be exponent
+                    if (subTextEquals(text, index, exponent)) {
+                        digits.append('E');
+                        index += exponent.length();
+                        mode = MODE_EXPONENT;
+                        break;
+                    }
+                    // invalid character give up
+                    break Exit;
+                }
+                case MODE_EXPONENT:
+                    if (minus == c) {
+                        if (exponentSign) {
+                            break Exit;
+                        }
+                        digits.append('-');
+                        exponentSign = true;
+                        index++;
+                        break;
+                    }
+                    final int digitValue = c - zero;
+                    if (digitValue >= 0 && digitValue <= 9) {
+                        digits.append(digitValue);
+                        index++;
+                        break;
+                    }
+                    // invalid character give up
+                    break Exit;
+                default:
+                    NeverError.unhandledCase(mode, MODE_INTEGER, MODE_FRACTION, MODE_EXPONENT);
+            }
+        }
+
+        position.setIndex(index);
+        position.setErrorIndex(errorIndex);
+
+        Number result = null;
+
+        // if no error and some digits were found, convert to the desired Number type...................................
+        if (errorIndex == -1 && integerDigitCount + fractionDigitCount > 0) {
+            final BigDecimal bigDecimal = integerDigitCount + fractionDigitCount > 0 ?
+                    new BigDecimal(digits.toString()).divide(this.multiplierBigDecimal) :
+                    BigDecimal.ZERO;
+            if (this.isParseBigDecimal()) {
+                result = bigDecimal;
+            } else {
+                if (parseIntegerOnly) {
+                    result = bigDecimal.longValue();
+                } else {
+                    try {
+                        result = bigDecimal.setScale(0, RoundingMode.UNNECESSARY)
+                                .longValue();
+                    } catch (final ArithmeticException ignore) {
+                        result = bigDecimal.doubleValue();
+                    }
+                }
+            }
+        }
+
+        return result;
+    }
+
+    /**
+     * Processing digits before the decimal separator or exponent.
+     */
+    private final static int MODE_INTEGER = 1;
+
+    /**
+     * Consuming digits after the decimal separator and before the exponent.
+     */
+    private final static int MODE_FRACTION = 2;
+
+    /**
+     * Consuming the exponent
+     */
+    private final static int MODE_EXPONENT = 3;
 
     /**
      * Positive ill never be null and will be updated by {@link #applyPattern(String)}.

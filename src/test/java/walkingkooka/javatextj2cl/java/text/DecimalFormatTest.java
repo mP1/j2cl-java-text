@@ -22,8 +22,10 @@ import walkingkooka.HashCodeEqualsDefinedTesting2;
 import walkingkooka.InvalidCharacterException;
 import walkingkooka.ToStringTesting;
 import walkingkooka.javautillocalej2cl.WalkingkookaLocale;
+import walkingkooka.text.CharSequences;
 
 import java.math.RoundingMode;
+import java.text.ParseException;
 import java.util.Currency;
 import java.util.Locale;
 
@@ -1855,6 +1857,232 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
         assertEquals(expected,
                 emul.format(value),
                 () -> emul.toPattern() + " value " + value + " locale " + locale + " decimalFormat: " + emul);
+    }
+
+    // parse............................................................................................................
+
+    @Test
+    public void testParseIntegerTooFewDigits() {
+        this.parseBigDecimalOnlyAndCheck("00", "1");
+    }
+
+    @Test
+    public void testParseIntegerTooFewDigits2() {
+        this.parseBigDecimalOnlyAndCheck("0000", "123");
+    }
+
+    @Test
+    public void testParseIntegerTooManyDigits() {
+        this.parseBigDecimalOnlyAndCheck("0", "12");
+    }
+
+    @Test
+    public void testParseIntegerTooManyDigits2() {
+        this.parseBigDecimalOnlyAndCheck("00", "123");
+    }
+
+    @Test
+    public void testParseFractionTooFewDigits() {
+        this.parseBigDecimalOnlyAndCheck("0.00", "1");
+    }
+
+    @Test
+    public void testParseFractionTooFewDigits2() {
+        this.parseBigDecimalOnlyAndCheck("0.000", "1.23");
+    }
+
+    @Test
+    public void testParseFractionTooManyDigits() {
+        this.parseBigDecimalOnlyAndCheck("0", "1.2");
+    }
+
+    @Test
+    public void testParseFractionTooManyDigits2() {
+        this.parseBigDecimalOnlyAndCheck("0.0", "1.23");
+    }
+
+    @Test
+    public void testParseZeroBigDecimalOnly() {
+        this.parseBigDecimalOnlyAndCheck("#", "0");
+    }
+
+    @Test
+    public void testParseZeroIntegerOnly() {
+        this.parseIntegerOnlyAndCheck("#", "0");
+    }
+
+    @Test
+    public void testParseZero() {
+        this.parseAndCheck("#", "0");
+    }
+
+    @Test
+    public void testParseOneBigDecimalOnly() {
+        this.parseBigDecimalOnlyAndCheck("#", "1");
+    }
+
+    @Test
+    public void testParseOneIntegerOnly() {
+        this.parseIntegerOnlyAndCheck("#", "1");
+    }
+
+    @Test
+    public void testParseOne() {
+        this.parseAndCheck("#", "1");
+    }
+
+    @Test
+    public void testParseMinusOneBigDecimalOnly() {
+        this.parseBigDecimalOnlyAndCheck("#", "-1");
+    }
+
+    @Test
+    public void testParseMinusOneIntegerOnly() {
+        this.parseIntegerOnlyAndCheck("#", "-1");
+    }
+
+    @Test
+    public void testParseMinusOne() {
+        this.parseAndCheck("#", "-1");
+    }
+
+    @Test
+    public void testParseZeroHalfBigDecimalOnly() {
+        this.parseBigDecimalOnlyAndCheck("#.#", "0.5");
+    }
+
+    @Test
+    public void testParseZeroHalfIntegerOnly() {
+        this.parseIntegerOnlyAndCheck("#.#", "0.5");
+    }
+
+    @Test
+    public void testParseZeroHalf() {
+        this.parseAndCheck("#.#", "0.5");
+    }
+
+    @Test
+    public void testParseHalfBigDecimalOnly() {
+        this.parseBigDecimalOnlyAndCheck("#.#", ".5");
+    }
+
+    @Test
+    public void testParseHalfIntegerOnly() {
+        this.parseIntegerOnlyAndCheck("#.#", ".5");
+    }
+
+    @Test
+    public void testParseHalf() {
+        this.parseAndCheck("#.#", ".5");
+    }
+
+    @Test
+    public void testParseGroupingSeparators() {
+        this.parseAndCheck("#,###.#", "1,234.5");
+    }
+
+    @Test
+    public void testParseIntegerExponent() {
+        this.parseAndCheck("#E0", "1e5");
+    }
+
+    @Test
+    public void testParseIntegerExponentNegative() {
+        this.parseAndCheck("#E0", "1e-5");
+    }
+
+    @Test
+    public void testParseIntegerFractionExponent() {
+        this.parseAndCheck("#.#E0", "1.2e5");
+    }
+
+    @Test
+    public void testParseIntegerFractionExponentNegative() {
+        this.parseAndCheck("#.#E0", "1.2e-5");
+    }
+
+    @Test
+    public void testParsePercentage() {
+        this.parseAndCheck("#%", "123%");
+    }
+
+    @Test
+    public void testParsePercentage2() {
+        this.parseAndCheck("#.#%", "12.34%");
+    }
+
+    @Test
+    public void testParsePerMille() {
+        this.parseAndCheck("#" + DecimalFormat.PER_MILLE, "123" + DecimalFormat.PER_MILLE);
+    }
+
+    @Test
+    public void testParsePerMille2() {
+        this.parseAndCheck("#" + DecimalFormat.PER_MILLE, "12.34" + DecimalFormat.PER_MILLE);
+    }
+
+    @Test
+    public void testParseCurrency() {
+        this.parseAndCheck(DecimalFormat.CURRENCY + "#.00", "$1.25");
+    }
+
+    private void parseBigDecimalOnlyAndCheck(final String pattern,
+                                             final String value) {
+        final Locale locale = EN_AU;
+        Locale.setDefault(locale);
+
+        final java.text.DecimalFormat jdk = new java.text.DecimalFormat(pattern);
+        jdk.setParseBigDecimal(true);
+
+        final DecimalFormat emul = new DecimalFormat(pattern);
+        emul.setParseBigDecimal(true);
+
+        this.parseAndCheck(jdk,
+                emul,
+                value);
+    }
+
+    private void parseIntegerOnlyAndCheck(final String pattern,
+                                          final String value) {
+        final Locale locale = EN_AU;
+        Locale.setDefault(locale);
+
+        final java.text.DecimalFormat jdk = new java.text.DecimalFormat(pattern);
+        jdk.setParseIntegerOnly(true);
+
+        final DecimalFormat emul = new DecimalFormat(pattern);
+        emul.setParseIntegerOnly(true);
+
+        this.parseAndCheck(jdk,
+                emul,
+                value);
+    }
+
+    private void parseAndCheck(final String pattern,
+                               final String value) {
+        final Locale locale = EN_AU;
+        Locale.setDefault(locale);
+
+        this.parseAndCheck(new java.text.DecimalFormat(pattern),
+                new DecimalFormat(pattern),
+                value);
+    }
+
+    private void parseAndCheck(final java.text.DecimalFormat jdk,
+                               final DecimalFormat emul,
+                               final String value) {
+        final java.text.ParsePosition jdkPosition = new java.text.ParsePosition(0);
+        final ParsePosition emulPosition = new ParsePosition(0);
+
+        assertEquals(jdk.parse(value, jdkPosition),
+                emul.parse(value, emulPosition),
+                () -> jdk.toPattern() + " parse " + CharSequences.quoteAndEscape(value) + " jdk: " + jdk + " emul: " + emul);
+        assertEquals(jdkPosition.getIndex(),
+                emulPosition.getIndex(),
+                () -> "index, " + jdk.toPattern() + " parse " + CharSequences.quoteAndEscape(value) + " jdk: " + jdk + " emul: " + emul);
+        assertEquals(jdkPosition.getErrorIndex(),
+                emulPosition.getErrorIndex(),
+                () -> "error index, " + jdk.toPattern() + " parse " + CharSequences.quoteAndEscape(value) + " jdk: " + jdk + " emul: " + emul);
     }
 
     // equals............................................................................................................
