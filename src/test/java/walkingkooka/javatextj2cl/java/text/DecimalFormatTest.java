@@ -39,6 +39,8 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
     private final static Locale EN_AU = Locale.forLanguageTag("en-AU");
     private final static Locale FR = Locale.forLanguageTag("fr");
 
+    private final static Locale DEFAULT_LOCALE = EN_AU;
+
     private final static String PATTERN = "0";
 
     private final static Currency CURRENCY = Currency.getInstance("AUD");
@@ -1891,6 +1893,36 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
     // parse............................................................................................................
 
     @Test
+    public void testParseDoubleNan() {
+        Locale.setDefault(DEFAULT_LOCALE);
+        this.parseAndCheck("0", "" + new DecimalFormatSymbols().getNaN());
+    }
+
+    @Test
+    public void testParseDoublePositiveInfinity() {
+        Locale.setDefault(DEFAULT_LOCALE);
+        this.parseAndCheck("0", "" + new DecimalFormatSymbols().getInfinity());
+    }
+
+    @Test
+    public void testParseDoublePositiveInfinityWithPrefixAndSuffix() {
+        Locale.setDefault(DEFAULT_LOCALE);
+        this.parseAndCheck("P0S;Q0Z", "" + new DecimalFormatSymbols().getInfinity());
+    }
+
+    @Test
+    public void testParseDoubleNegativeInfinity() {
+        Locale.setDefault(DEFAULT_LOCALE);
+        this.parseAndCheck("0", "" + new DecimalFormatSymbols().getInfinity());
+    }
+
+    @Test
+    public void testParseDoubleNegativeInfinityWithPrefixAndSuffix() {
+        Locale.setDefault(DEFAULT_LOCALE);
+        this.parseAndCheck("P0S;Q0Z", "" + new DecimalFormatSymbols().getInfinity());
+    }
+
+    @Test
     public void testParseIntegerTooFewDigits() {
         this.parseBigDecimalOnlyAndCheck("00", "1");
     }
@@ -2089,7 +2121,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
 
     private void parseAndCheck(final String pattern,
                                final String value) {
-        final Locale locale = EN_AU;
+        final Locale locale = DEFAULT_LOCALE;
         Locale.setDefault(locale);
 
         this.parseAndCheck(new java.text.DecimalFormat(pattern),
