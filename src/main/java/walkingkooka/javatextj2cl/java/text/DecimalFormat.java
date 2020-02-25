@@ -602,9 +602,45 @@ public class DecimalFormat extends NumberFormat {
                                final FieldPosition position) {
 
 
-        return number >= 0 ?
-                this.formatBigDecimal(BigDecimal.valueOf(number), append, this.positivePrefix, this.positiveSuffix) :
-                this.formatBigDecimal(BigDecimal.valueOf(-number), append, this.negativePrefix, this.negativeSuffix);
+        return Double.isNaN(number) ?
+                this.formatDoubleNan(number, append, position) :
+                Double.isInfinite(number) ?
+                        this.formatDoubleInfinite(number, append, position) :
+                        number >= 0 ?
+                                this.formatBigDecimal(BigDecimal.valueOf(number), append, this.positivePrefix, this.positiveSuffix) :
+                                this.formatBigDecimal(BigDecimal.valueOf(-number), append, this.negativePrefix, this.negativeSuffix);
+    }
+
+    private StringBuffer formatDoubleInfinite(final double value,
+                                              final StringBuffer append,
+                                              final FieldPosition position) {
+        final String prefix;
+        final String suffix;
+
+        if (value > 0) {
+            prefix = this.positivePrefix;
+            suffix = this.positiveSuffix;
+        } else {
+            prefix = this.negativePrefix;
+            suffix = this.negativeSuffix;
+        }
+
+        append.append(prefix);
+        append.append(this.getDecimalFormatSymbols().getInfinity());
+        append.append(suffix);
+
+        return append;
+    }
+
+    /**
+     * To match the behaviour of {@link java.text.DecimalFormat#format(double)}, no prefix or suffix is included in the
+     * formatted output.
+     */
+    private StringBuffer formatDoubleNan(final double value,
+                                         final StringBuffer append,
+                                         final FieldPosition position) {
+        append.append(this.getDecimalFormatSymbols().getNaN());
+        return append;
     }
 
     @Override
