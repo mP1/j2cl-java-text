@@ -25,7 +25,6 @@ import walkingkooka.javautillocalej2cl.WalkingkookaLocale;
 import walkingkooka.text.CharSequences;
 
 import java.math.RoundingMode;
-import java.text.ParseException;
 import java.util.Currency;
 import java.util.Locale;
 
@@ -1415,7 +1414,37 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
         assertEquals(expected.getZeroDigit(), emulated.getZeroDigit(), () -> "zeroDigit " + locale.toLanguageTag());
     }
 
-    // parse............................................................................................................
+    // format...........................................................................................................
+
+    @Test
+    public void testFormatDoublePositiveInfinity() {
+        this.formatAndCheck("#", Double.POSITIVE_INFINITY);
+    }
+
+    @Test
+    public void testFormatDoublePositiveInfinityWithPrefixAndSuffix() {
+        this.formatAndCheck("P#N;PP#NN", Double.POSITIVE_INFINITY);
+    }
+
+    @Test
+    public void testFormatDoubleNegativeInfinity() {
+        this.formatAndCheck("#", Double.NEGATIVE_INFINITY);
+    }
+
+    @Test
+    public void testFormatDoubleNegativeInfinityWithPrefixAndSuffix() {
+        this.formatAndCheck("P#N;PP#NN", Double.NEGATIVE_INFINITY);
+    }
+
+    @Test
+    public void testFormatDoubleNan() {
+        this.formatAndCheck("#", Double.NaN);
+    }
+
+    @Test
+    public void testFormatDoubleNanWithPrefixAndSuffix() {
+        this.formatAndCheck("P#N;Q#Z", Double.NaN);
+    }
 
     @Test
     public void testFormatZero() {
