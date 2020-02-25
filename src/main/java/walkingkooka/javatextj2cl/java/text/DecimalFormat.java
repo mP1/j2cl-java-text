@@ -846,16 +846,39 @@ public class DecimalFormat extends NumberFormat {
     public Number parse(final String source,
                         final ParsePosition position) {
         final int index = position.getIndex();
-        Number result = this.parsePrefixNumberSuffix(source, position, this.positivePrefix, this.positiveSuffix, new StringBuilder());
-        if (null == result) {
-            position.setIndex(index);
-            result = this.parsePrefixNumberSuffix(source, position, this.negativePrefix, this.negativeSuffix, new StringBuilder("-"));
 
-            // if no Number parsed and no error set error.
-            if( null == result && position.getErrorIndex() == -1) {
-                position.setErrorIndex(index);
+        Number result = this.parseNan(source, position);
+        if (null == result) {
+            result = this.parsePrefixNumberSuffix(source, position, this.positivePrefix, this.positiveSuffix, new StringBuilder());
+            if (null == result) {
+                position.setIndex(index);
+                result = this.parsePrefixNumberSuffix(source, position, this.negativePrefix, this.negativeSuffix, new StringBuilder("-"));
+
+                // if no Number parsed and no error set error.
+                if (null == result && position.getErrorIndex() == -1) {
+                    position.setErrorIndex(index);
+                }
             }
         }
+
+        return result;
+    }
+
+    /**
+     * If the text matches the NAN without prefix or suffix return {@link Double#NaN}.
+     */
+    private Number parseNan(final String text,
+                            final ParsePosition position) {
+        final Number result;
+
+        final String nan = this.getDecimalFormatSymbols().getNaN();
+        if(text.equals(nan)) {
+            result = Double.NaN;
+            position.setIndex(nan.length());
+        } else {
+            result = null;
+        }
+
         return result;
     }
 
@@ -869,13 +892,35 @@ public class DecimalFormat extends NumberFormat {
         if (subTextEquals(text, position, prefix)) {
             position.setIndex(position.getIndex() + prefix.length());
 
-            result = this.parseNumber(text, position, digits);
+            result = this.parseInfinityOrNumber(text, position, digits);
 
             if (null != result) {
                 if (subTextEquals(text, position, suffix)) {
                     position.setIndex(position.getIndex() + suffix.length());
                 }
             }
+        }
+
+        return result;
+    }
+
+    /**
+     * Tests if the text contains infinity otherwise tries to {@link #parseNumber(String, ParsePosition, StringBuilder)}
+     */
+    private Number parseInfinityOrNumber(final String text,
+                                         final ParsePosition position,
+                                         final StringBuilder digits) {
+        final Number result;
+
+        final String infinity = this.getDecimalFormatSymbols().getInfinity();
+        if (subTextEquals(text, position, infinity)) {
+            position.setIndex(position.getIndex() + infinity.length());
+
+            result = digits.length() == 0 ?
+                    Double.POSITIVE_INFINITY :
+                    Double.NEGATIVE_INFINITY;
+        } else {
+            result = this.parseNumber(text, position, digits);
         }
 
         return result;
