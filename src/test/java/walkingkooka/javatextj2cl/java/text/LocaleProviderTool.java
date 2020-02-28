@@ -17,16 +17,12 @@
 
 package walkingkooka.javatextj2cl.java.text;
 
-import walkingkooka.collect.list.Lists;
 import walkingkooka.javautillocalej2cl.WalkingkookaLanguageTagTool;
-import walkingkooka.javautillocalej2cl.WalkingkookaLocale;
 import walkingkooka.text.CharSequences;
 import walkingkooka.text.printer.IndentingPrinter;
 
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.List;
-import java.util.Locale;
 import java.util.Set;
 import java.util.stream.Collectors;
 
