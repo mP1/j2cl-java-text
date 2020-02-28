@@ -19,19 +19,15 @@ package walkingkooka.javatextj2cl.java.text;
 
 import walkingkooka.collect.map.Maps;
 import walkingkooka.collect.set.Sets;
-import walkingkooka.javautillocalej2cl.WalkingkookaLocale;
 import walkingkooka.text.Indentation;
 import walkingkooka.text.printer.IndentingPrinter;
 import walkingkooka.text.printer.Printers;
 
 import java.text.DateFormatSymbols;
 import java.util.Arrays;
-import java.util.List;
-import java.util.Locale;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 /**
  * This tool prints to sysout, that prints a {@link DateFormatSymbolsProvider#register()}
