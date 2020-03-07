@@ -1,1 +1,0 @@
-walkingkooka.javatextj2cl.java
