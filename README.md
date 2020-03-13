@@ -119,7 +119,7 @@ Some of these might need to be supported particularly to allow java.time to be c
 
 ### Transpiling
 
-The `j2cl-maven-plugin` will repackage the source during the transpile phase, so `walkingkooka.javatextj2cl.java.text`
+The `j2cl-maven-plugin` will shade the source during the transpile phase, so `walkingkooka.javatextj2cl.java.text`
 is available to the runtime as `java.text`. 
 
 
