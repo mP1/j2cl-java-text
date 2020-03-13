@@ -29,6 +29,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
 
+@SuppressWarnings("lgtm[java/inconsistent-equals-and-hashcode]")
 public class DecimalFormat extends NumberFormat {
 
     final static char CURRENCY = '\u00A4';
