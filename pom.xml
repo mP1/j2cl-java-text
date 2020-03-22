@@ -107,52 +107,6 @@
     </repositories>
 
     <dependencies>
-
-        <!-- j2cl compile dependencies -->
-        <dependency>
-            <groupId>com.google.jsinterop</groupId>
-            <artifactId>jsinterop-annotations</artifactId>
-            <version>2.0.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.vertispan.j2cl</groupId>
-            <artifactId>bootstrap</artifactId>
-            <version>0.5-SNAPSHOT</version>
-            <type>zip</type>
-            <classifier>jszip</classifier>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>com.vertispan.j2cl</groupId>
-            <artifactId>javac-bootstrap-classpath</artifactId>
-            <version>0.5-SNAPSHOT</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>com.vertispan.j2cl</groupId>
-            <artifactId>jre</artifactId>
-            <version>0.5-SNAPSHOT</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>com.vertispan.j2cl</groupId>
-            <artifactId>jre</artifactId>
-            <version>0.5-SNAPSHOT</version>
-            <type>zip</type>
-            <classifier>jszip</classifier>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>javax.annotation</groupId>
-            <artifactId>jsr250-api</artifactId>
-            <version>1.0</version>
-        </dependency>
-
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
@@ -164,7 +118,6 @@
             <artifactId>java-util-Locale-j2cl</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-
     </dependencies>
 
     <!-- ==================================================================== -->
