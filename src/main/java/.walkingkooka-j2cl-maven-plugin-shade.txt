@@ -1,2 +1,2 @@
-walkingkooka.javatextj2cl.java.text=java.text
+walkingkooka.j2cl.java.text=java.text
 

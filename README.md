@@ -1,8 +1,8 @@
-[![Build Status](https://travis-ci.com/mP1/java-text-j2cl.svg?branch=master)](https://travis-ci.com/mP1/java-text-j2cl.svg?branch=master)
-[![Coverage Status](https://coveralls.io/repos/github/mP1/java-text-j2cl/badge.svg?branch=master)](https://coveralls.io/github/mP1/java-text-j2cl?branch=master)
+[![Build Status](https://travis-ci.com/mP1/j2cl-java-text.svg?branch=master)](https://travis-ci.com/mP1/j2cl-java-text.svg?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/mP1/j2cl-java-text/badge.svg?branch=master)](https://coveralls.io/github/mP1/j2cl-java-text?branch=master)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Language grade: Java](https://img.shields.io/lgtm/grade/java/g/mP1/java-text-j2cl.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/mP1/java-text-j2cl/context:java)
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/mP1/java-text-j2cl.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/mP1/java-text-j2cl/alerts/)
+[![Language grade: Java](https://img.shields.io/lgtm/grade/java/g/mP1/j2cl-java-text.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/mP1/j2cl-java-text/context:java)
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/mP1/j2cl-java-text.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/mP1/j2cl-java-text/alerts/)
 
 
 
@@ -119,7 +119,7 @@ Some of these might need to be supported particularly to allow java.time to be c
 
 ### Transpiling
 
-The `j2cl-maven-plugin` will shade the source during the transpile phase, so `walkingkooka.javatextj2cl.java.text`
+The `j2cl-maven-plugin` will shade the source during the transpile phase, so `walkingkooka.j2cl.java.text`
 is available to the runtime as `java.text`. 
 
 
@@ -136,5 +136,5 @@ You can either download the source using the "ZIP" button at the top
 of the github page, or you can make a clone using git:
 
 ```
-git clone git://github.com/mP1/java-text-j2cl.git
+git clone git://github.com/mP1/j2cl-java-text.git
 ```
