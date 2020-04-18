@@ -22,7 +22,7 @@ import org.junit.jupiter.api.Test;
 import walkingkooka.HashCodeEqualsDefinedTesting2;
 import walkingkooka.ToStringTesting;
 import walkingkooka.collect.set.Sets;
-import walkingkooka.javautillocalej2cl.WalkingkookaLocale;
+import walkingkooka.j2cl.WalkingkookaLanguageTag;
 import walkingkooka.reflect.ClassTesting;
 import walkingkooka.reflect.JavaVisibility;
 
@@ -127,7 +127,7 @@ public final class DecimalFormatSymbolsTest implements ClassTesting<DecimalForma
     @Test
     public void testGetInstanceLocaleAllLocales() {
         for (final Locale locale : Locale.getAvailableLocales()) {
-            if(WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+            if(WalkingkookaLanguageTag.isUnsupported(locale.toLanguageTag())) {
                 continue;
             }
             this.check(DecimalFormatSymbols.getInstance(locale),
@@ -198,7 +198,7 @@ public final class DecimalFormatSymbolsTest implements ClassTesting<DecimalForma
     @Test
     public void testCurrencyAllLocales() {
         for (final Locale locale : java.text.DecimalFormatSymbols.getAvailableLocales()) {
-            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+            if (WalkingkookaLanguageTag.isUnsupported(locale.toLanguageTag())) {
                 continue;
             }
             this.getCurrencyAndCheck(locale);
@@ -257,7 +257,7 @@ public final class DecimalFormatSymbolsTest implements ClassTesting<DecimalForma
     @Test
     public void testSetCurrencyAllLocalesAUD() {
         for (final Locale locale : Locale.getAvailableLocales()) {
-            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+            if (WalkingkookaLanguageTag.isUnsupported(locale.toLanguageTag())) {
                 continue;
             }
             this.setCurrencyAndCheck(locale,
@@ -268,7 +268,7 @@ public final class DecimalFormatSymbolsTest implements ClassTesting<DecimalForma
     @Test
     public void testSetCurrencyAllLocalesAllCurrencies() {
         for (final Locale locale : Locale.getAvailableLocales()) {
-            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+            if (WalkingkookaLanguageTag.isUnsupported(locale.toLanguageTag())) {
                 continue;
             }
             for (final Currency currency : Currency.getAvailableCurrencies()) {
@@ -299,7 +299,7 @@ public final class DecimalFormatSymbolsTest implements ClassTesting<DecimalForma
     @Test
     public void testSetCurrencySymbolAllLocalesAUD() {
         for (final Locale locale : Locale.getAvailableLocales()) {
-            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+            if (WalkingkookaLanguageTag.isUnsupported(locale.toLanguageTag())) {
                 continue;
             }
             this.setCurrencySymbolAndCheck(locale, "AUD");
@@ -309,7 +309,7 @@ public final class DecimalFormatSymbolsTest implements ClassTesting<DecimalForma
     @Test
     public void testSetCurrencySymbolAllLocalesAllCurrencySymbols() {
         for (final Locale locale : Locale.getAvailableLocales()) {
-            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+            if (WalkingkookaLanguageTag.isUnsupported(locale.toLanguageTag())) {
                 continue;
             }
 
