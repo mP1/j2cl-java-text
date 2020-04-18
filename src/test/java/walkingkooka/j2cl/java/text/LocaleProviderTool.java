@@ -17,7 +17,7 @@
 
 package walkingkooka.j2cl.java.text;
 
-import walkingkooka.javautillocalej2cl.WalkingkookaLanguageTagTool;
+import walkingkooka.j2cl.WalkingkookaLanguageTagTool;
 import walkingkooka.text.CharSequences;
 import walkingkooka.text.printer.IndentingPrinter;
 

@@ -21,7 +21,7 @@ import org.junit.jupiter.api.Test;
 import walkingkooka.HashCodeEqualsDefinedTesting2;
 import walkingkooka.InvalidCharacterException;
 import walkingkooka.ToStringTesting;
-import walkingkooka.javautillocalej2cl.WalkingkookaLocale;
+import walkingkooka.j2cl.WalkingkookaLanguageTag;
 import walkingkooka.text.CharSequences;
 
 import java.math.RoundingMode;
@@ -87,7 +87,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
     @Test
     public void testCurrencyInstanceDefaultAllLocales() {
         for (final Locale locale : java.text.DecimalFormat.getAvailableLocales()) {
-            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+            if (WalkingkookaLanguageTag.isUnsupported(locale.toLanguageTag())) {
                 continue;
             }
             this.currencyInstanceAndCheck(locale);
@@ -105,7 +105,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
     @Test
     public void testCurrencyInstanceCloned() {
         for (final Locale locale : java.text.DecimalFormat.getAvailableLocales()) {
-            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+            if (WalkingkookaLanguageTag.isUnsupported(locale.toLanguageTag())) {
                 continue;
             }
 
@@ -136,7 +136,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
     @Test
     public void testCurrencyInstanceLocaleDefaultAllLocales() {
         for (final Locale locale : java.text.DecimalFormat.getAvailableLocales()) {
-            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+            if (WalkingkookaLanguageTag.isUnsupported(locale.toLanguageTag())) {
                 continue;
             }
             this.currencyInstanceLocaleAndCheck(locale);
@@ -152,7 +152,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
     @Test
     public void testCurrencyInstanceLocaleCloned() {
         for (final Locale locale : java.text.DecimalFormat.getAvailableLocales()) {
-            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+            if (WalkingkookaLanguageTag.isUnsupported(locale.toLanguageTag())) {
                 continue;
             }
 
@@ -181,7 +181,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
     @Test
     public void testIntegerInstanceDefaultAllLocales() {
         for (final Locale locale : java.text.DecimalFormat.getAvailableLocales()) {
-            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+            if (WalkingkookaLanguageTag.isUnsupported(locale.toLanguageTag())) {
                 continue;
             }
             this.integerInstanceAndCheck(locale);
@@ -199,7 +199,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
     @Test
     public void testIntegerInstanceCloned() {
         for (final Locale locale : java.text.DecimalFormat.getAvailableLocales()) {
-            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+            if (WalkingkookaLanguageTag.isUnsupported(locale.toLanguageTag())) {
                 continue;
             }
 
@@ -230,7 +230,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
     @Test
     public void testIntegerInstanceLocaleDefaultAllLocales() {
         for (final Locale locale : java.text.DecimalFormat.getAvailableLocales()) {
-            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+            if (WalkingkookaLanguageTag.isUnsupported(locale.toLanguageTag())) {
                 continue;
             }
             this.integerInstanceLocaleAndCheck(locale);
@@ -246,7 +246,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
     @Test
     public void testIntegerInstanceLocaleCloned() {
         for (final Locale locale : java.text.DecimalFormat.getAvailableLocales()) {
-            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+            if (WalkingkookaLanguageTag.isUnsupported(locale.toLanguageTag())) {
                 continue;
             }
 
@@ -275,7 +275,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
     @Test
     public void testInstanceDefaultAllLocales() {
         for (final Locale locale : java.text.DecimalFormat.getAvailableLocales()) {
-            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+            if (WalkingkookaLanguageTag.isUnsupported(locale.toLanguageTag())) {
                 continue;
             }
             this.instanceAndCheck(locale);
@@ -293,7 +293,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
     @Test
     public void testInstanceCloned() {
         for (final Locale locale : java.text.DecimalFormat.getAvailableLocales()) {
-            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+            if (WalkingkookaLanguageTag.isUnsupported(locale.toLanguageTag())) {
                 continue;
             }
 
@@ -324,7 +324,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
     @Test
     public void testInstanceLocaleDefaultAllLocales() {
         for (final Locale locale : java.text.DecimalFormat.getAvailableLocales()) {
-            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+            if (WalkingkookaLanguageTag.isUnsupported(locale.toLanguageTag())) {
                 continue;
             }
             this.instanceLocaleAndCheck(locale);
@@ -340,7 +340,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
     @Test
     public void testInstanceLocaleCloned() {
         for (final Locale locale : java.text.DecimalFormat.getAvailableLocales()) {
-            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+            if (WalkingkookaLanguageTag.isUnsupported(locale.toLanguageTag())) {
                 continue;
             }
 
@@ -369,7 +369,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
     @Test
     public void testNumberInstanceDefaultAllLocales() {
         for (final Locale locale : java.text.DecimalFormat.getAvailableLocales()) {
-            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+            if (WalkingkookaLanguageTag.isUnsupported(locale.toLanguageTag())) {
                 continue;
             }
             this.numberInstanceAndCheck(locale);
@@ -387,7 +387,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
     @Test
     public void testNumberInstanceCloned() {
         for (final Locale locale : java.text.DecimalFormat.getAvailableLocales()) {
-            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+            if (WalkingkookaLanguageTag.isUnsupported(locale.toLanguageTag())) {
                 continue;
             }
 
@@ -418,7 +418,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
     @Test
     public void testNumberInstanceLocaleDefaultAllLocales() {
         for (final Locale locale : java.text.DecimalFormat.getAvailableLocales()) {
-            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+            if (WalkingkookaLanguageTag.isUnsupported(locale.toLanguageTag())) {
                 continue;
             }
             this.numberInstanceLocaleAndCheck(locale);
@@ -434,7 +434,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
     @Test
     public void testNumberInstanceLocaleCloned() {
         for (final Locale locale : java.text.DecimalFormat.getAvailableLocales()) {
-            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+            if (WalkingkookaLanguageTag.isUnsupported(locale.toLanguageTag())) {
                 continue;
             }
 
@@ -463,7 +463,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
     @Test
     public void testPercentInstanceDefaultAllLocales() {
         for (final Locale locale : java.text.DecimalFormat.getAvailableLocales()) {
-            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+            if (WalkingkookaLanguageTag.isUnsupported(locale.toLanguageTag())) {
                 continue;
             }
             this.percentInstanceAndCheck(locale);
@@ -481,7 +481,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
     @Test
     public void testPercentInstanceCloned() {
         for (final Locale locale : java.text.DecimalFormat.getAvailableLocales()) {
-            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+            if (WalkingkookaLanguageTag.isUnsupported(locale.toLanguageTag())) {
                 continue;
             }
 
@@ -512,7 +512,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
     @Test
     public void testPercentInstanceLocaleDefaultAllLocales() {
         for (final Locale locale : java.text.DecimalFormat.getAvailableLocales()) {
-            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+            if (WalkingkookaLanguageTag.isUnsupported(locale.toLanguageTag())) {
                 continue;
             }
             this.percentInstanceLocaleAndCheck(locale);
@@ -528,7 +528,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
     @Test
     public void testPercentInstanceLocaleCloned() {
         for (final Locale locale : java.text.DecimalFormat.getAvailableLocales()) {
-            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+            if (WalkingkookaLanguageTag.isUnsupported(locale.toLanguageTag())) {
                 continue;
             }
 
@@ -557,7 +557,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
     @Test
     public void testNewDefaultAllLocales() {
         for (final Locale locale : java.text.DecimalFormat.getAvailableLocales()) {
-            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+            if (WalkingkookaLanguageTag.isUnsupported(locale.toLanguageTag())) {
                 continue;
             }
             this.newAndCheck(locale);
@@ -705,7 +705,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
     @Test
     public void testNewPatternAllLocales() {
         for (final Locale locale : java.text.DecimalFormat.getAvailableLocales()) {
-            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+            if (WalkingkookaLanguageTag.isUnsupported(locale.toLanguageTag())) {
                 continue;
             }
 
@@ -747,7 +747,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
     @Test
     public void testNewPatternSymbolsAllLocales() {
         for (final Locale locale : java.text.DecimalFormat.getAvailableLocales()) {
-            if (WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+            if (WalkingkookaLanguageTag.isUnsupported(locale.toLanguageTag())) {
                 continue;
             }
 

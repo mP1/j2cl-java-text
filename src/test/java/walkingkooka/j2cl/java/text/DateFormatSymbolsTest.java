@@ -22,7 +22,7 @@ import org.junit.jupiter.api.Test;
 import walkingkooka.HashCodeEqualsDefinedTesting2;
 import walkingkooka.ToStringTesting;
 import walkingkooka.collect.set.Sets;
-import walkingkooka.javautillocalej2cl.WalkingkookaLocale;
+import walkingkooka.j2cl.WalkingkookaLanguageTag;
 import walkingkooka.reflect.ClassTesting;
 import walkingkooka.reflect.JavaVisibility;
 
@@ -115,7 +115,7 @@ public final class DateFormatSymbolsTest implements ClassTesting<DateFormatSymbo
     @Test
     public void testGetInstanceLocaleAllLocales() {
         for (final Locale locale : Locale.getAvailableLocales()) {
-            if(WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+            if(WalkingkookaLanguageTag.isUnsupported(locale.toLanguageTag())) {
                 continue;
             }
             this.check(DateFormatSymbols.getInstance(locale), java.text.DateFormatSymbols.getInstance(locale));
@@ -154,7 +154,7 @@ public final class DateFormatSymbolsTest implements ClassTesting<DateFormatSymbo
     @Test
     public void testNewLocaleAllLocales() {
         for (final Locale locale : Locale.getAvailableLocales()) {
-            if(WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+            if(WalkingkookaLanguageTag.isUnsupported(locale.toLanguageTag())) {
                 continue;
             }
             this.check(new DateFormatSymbols(locale), new java.text.DateFormatSymbols(locale));
@@ -186,7 +186,7 @@ public final class DateFormatSymbolsTest implements ClassTesting<DateFormatSymbo
     @Test
     public void testCloneState2() {
         for (final Locale locale : Locale.getAvailableLocales()) {
-            if(WalkingkookaLocale.isUnsupported(locale.toLanguageTag())) {
+            if(WalkingkookaLanguageTag.isUnsupported(locale.toLanguageTag())) {
                 continue;
             }
             final DateFormatSymbols symbols = new DateFormatSymbols(locale);
