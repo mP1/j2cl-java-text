@@ -17,7 +17,7 @@
 
 package walkingkooka.j2cl.java.text;
 
-import walkingkooka.j2cl.WalkingkookaLanguageTagTool;
+import walkingkooka.j2cl.WalkingkookaLanguageTag;
 import walkingkooka.text.CharSequences;
 import walkingkooka.text.printer.IndentingPrinter;
 
@@ -34,7 +34,7 @@ abstract class LocaleProviderTool {
     }
 
     final void print() {
-        this.printLocales(WalkingkookaLanguageTagTool.all());
+        this.printLocales(WalkingkookaLanguageTag.all());
     }
 
     abstract void printLocales(final Set<String> languageTags);
