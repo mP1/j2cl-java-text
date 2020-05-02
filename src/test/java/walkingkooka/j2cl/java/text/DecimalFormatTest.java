@@ -21,7 +21,7 @@ import org.junit.jupiter.api.Test;
 import walkingkooka.HashCodeEqualsDefinedTesting2;
 import walkingkooka.InvalidCharacterException;
 import walkingkooka.ToStringTesting;
-import walkingkooka.j2cl.WalkingkookaLanguageTag;
+import walkingkooka.j2cl.locale.WalkingkookaLanguageTag;
 import walkingkooka.text.CharSequences;
 
 import java.math.RoundingMode;
