@@ -18,6 +18,7 @@
 package walkingkooka.j2cl.java.text;
 
 import walkingkooka.ToStringBuilder;
+import walkingkooka.j2cl.locale.LocaleAware;
 
 import java.util.Arrays;
 import java.util.Locale;
@@ -26,6 +27,7 @@ import java.util.Objects;
 /**
  * A very much simplified {@link java.text.DateFormatSymbols}.
  */
+@LocaleAware
 public class DateFormatSymbols {
 
     /**
@@ -33,30 +35,22 @@ public class DateFormatSymbols {
      */
     private final static LanguageTagLookup<DateFormatSymbols> LANGUAGE_TAG_TO_SYMBOLS = LanguageTagLookup.empty();
 
-    static {
-        DateFormatSymbolsProvider.register();
-    }
-
     /**
-     * Used by {@link DateFormatSymbolsProvider#register()} to register individual symbols
+     * Requests the DateFormatSymbolsProvider to provide records which will be used to create {@link Currency} singleton instances.
      */
-    static void register(final String locales,
-                         final String ampms,
-                         final String eras,
-                         final String months,
-                         final String shortMonths,
-                         final String shortWeekdays,
-                         final String weekdays) {
-        final DateFormatSymbols symbols = new DateFormatSymbols(ampms,
-                eras,
-                months,
-                shortMonths,
-                shortWeekdays,
-                weekdays);
+    static {
+        DateFormatSymbolsProvider.register((provider) -> {
+            final DateFormatSymbols symbols = new DateFormatSymbols(provider.ampms,
+                    provider.eras,
+                    provider.months,
+                    provider.shortMonths,
+                    provider.shortWeekdays,
+                    provider.weekdays);
 
-        for(final String locale : extractTokens(locales)) {
-            LANGUAGE_TAG_TO_SYMBOLS.add(locale, symbols);
-        }
+            for(final String locale : extractTokens(provider.locales)) {
+                LANGUAGE_TAG_TO_SYMBOLS.add(locale, symbols);
+            }
+        });
     }
 
     private DateFormatSymbols(final String ampms,
