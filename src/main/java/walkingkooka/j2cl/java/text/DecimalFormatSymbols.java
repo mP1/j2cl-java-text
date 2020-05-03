@@ -18,11 +18,13 @@
 package walkingkooka.j2cl.java.text;
 
 import walkingkooka.ToStringBuilder;
+import walkingkooka.j2cl.locale.LocaleAware;
 
 import java.util.Currency;
 import java.util.Locale;
 import java.util.Objects;
 
+@LocaleAware
 public class DecimalFormatSymbols {
 
     /**
@@ -30,27 +32,42 @@ public class DecimalFormatSymbols {
      */
     private final static LanguageTagLookup<DecimalFormatSymbols> LANGUAGE_TAG_TO_SYMBOLS = LanguageTagLookup.empty();
 
+    /**
+     * Loads all the {@link DecimalFormatSymbols} constants.
+     */
     static {
-        DecimalFormatSymbolProvider.register();
+        walkingkooka.j2cl.java.text.DecimalFormatSymbolsProvider.register((provider) -> {
+            register0(provider.locales,
+                    provider.decimalSeparator,
+                    provider.digit,
+                    provider.exponentSeparator,
+                    provider.groupingSeparator,
+                    provider.infinity,
+                    provider.internationalCurrencySymbol,
+                    provider.minusSign,
+                    provider.monetaryDecimalSeparator,
+                    provider.nan,
+                    provider.patternSeparator,
+                    provider.percent,
+                    provider.perMill,
+                    provider.zeroDigit);
+        });
     }
 
-    /**
-     * Used by {@link DecimalFormatSymbolProvider#register()} to register individual symbols
-     */
-    static void register(final String locales,
-                         final char decimalSeparator,
-                         final char digit,
-                         final String exponentSeparator,
-                         final char groupingSeparator,
-                         final String infinity,
-                         final String internationalCurrencySymbol,
-                         final char minusSign,
-                         final char monetaryDecimalSeparator,
-                         final String nan,
-                         final char patternSeparator,
-                         final char percent,
-                         final char perMill,
-                         final char zeroDigit) {
+    private static void register0(final String locales,
+                                  final char decimalSeparator,
+                                  final char digit,
+                                  final String exponentSeparator,
+                                  final char groupingSeparator,
+                                  final String infinity,
+                                  final String internationalCurrencySymbol,
+                                  final char minusSign,
+                                  final char monetaryDecimalSeparator,
+                                  final String nan,
+                                  final char patternSeparator,
+                                  final char percent,
+                                  final char perMill,
+                                  final char zeroDigit) {
         for (final String languageTag : locales.split("\t")) {
             Locale locale = Locale.forLanguageTag(languageTag);
 
