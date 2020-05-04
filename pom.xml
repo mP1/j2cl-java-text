@@ -234,6 +234,7 @@
                 <configuration>
                     <excludes>
                         <exclude>walkingkooka/j2cl/java/text/DateFormatSymbolsProvider*</exclude>
+                        <exclude>walkingkooka/j2cl/java/text/DecimalFormatProvider*</exclude>
                         <exclude>walkingkooka/j2cl/java/text/DecimalFormatSymbolsProvider*</exclude>
                         <exclude>walkingkooka/j2cl/java/util/currency/**</exclude>
                         <exclude>walkingkooka/j2cl/java/util/locale/**</exclude>
@@ -247,6 +248,7 @@
                 <configuration>
                     <excludes>
                         <exclude>walkingkooka/j2cl/java/text/DateFormatSymbolsProvider*</exclude>
+                        <exclude>walkingkooka/j2cl/java/text/DecimalFormatProvider*</exclude>
                         <exclude>walkingkooka/j2cl/java/text/DecimalFormatSymbolsProvider*</exclude>
                         <exclude>walkingkooka/j2cl/java/util/currency/**</exclude>
                         <exclude>walkingkooka/j2cl/java/util/locale/**</exclude>
@@ -263,7 +265,6 @@
                     </execution>
                 </executions>
             </plugin>
-
         </plugins>
         <!-- Manage plugin versions -->
         <pluginManagement>

@@ -59,13 +59,6 @@ public class DecimalFormat extends NumberFormat {
      */
     final static LanguageTagLookup<DecimalFormat[]> LANGUAGE_TAG_TO_FORMATS = LanguageTagLookup.empty();
 
-    /**
-     * Registers all locale and their formats.
-     */
-    static {
-        DecimalFormatProvider.register();
-    }
-
     // indices into the LANGUAGE_TAG_TO_FORMATS array.
 
     final static int INDEX_CURRENCY = 0;
@@ -75,90 +68,178 @@ public class DecimalFormat extends NumberFormat {
     final static int INDEX_PERCENT = 4;
 
     /**
-     * Factory called by {@link DecimalFormatProvider#register()}, recording a DecimalFormat for currency,
-     * instance, integer, number and percent for one or more {@link Locale}.
+     * Loads all the {@link DecimalFormatSymbols} constants.
      */
-    static void register(final String languageTags,
+    static {
+        walkingkooka.j2cl.java.text.DecimalFormatProvider.register((provider) -> {
+            register0(provider.languageTags,
+                    provider.currencyDecimalSeparatorAlwaysShown,
+                    provider.currencyGroupingSize,
+                    provider.currencyGroupingUsed,
+                    provider.currencyMaximumFractionDigits,
+                    provider.currencyMinimumFractionDigits,
+                    provider.currencyMaximumIntegerDigits,
+                    provider.currencyMinimumIntegerDigits,
+                    provider.currencyMultiplier,
+                    provider.currencyNegativePrefix,
+                    provider.currencyNegativeSuffix,
+                    provider.currencyParse,
+                    provider.currencyPattern,
+                    provider.currencyPositivePrefix,
+                    provider.currencyPositiveSuffix,
+                    provider.currencyRoundingMode,
 
-                         final boolean currencyDecimalSeparatorAlwaysShown,
-                         final int currencyGroupingSize,
-                         final boolean currencyGroupingUsed,
-                         final int currencyMaximumFractionDigits,
-                         final int currencyMinimumFractionDigits,
-                         final int currencyMaximumIntegerDigits,
-                         final int currencyMinimumIntegerDigits,
-                         final int currencyMultiplier,
-                         final String currencyNegativePrefix,
-                         final String currencyNegativeSuffix,
-                         final int currencyParse,
-                         final String currencyPattern,
-                         final String currencyPositivePrefix,
-                         final String currencyPositiveSuffix,
-                         final RoundingMode currencyRoundingMode,
+                    provider.instanceDecimalSeparatorAlwaysShown,
+                    provider.instanceGroupingSize,
+                    provider.instanceGroupingUsed,
+                    provider.instanceMaximumFractionDigits,
+                    provider.instanceMinimumFractionDigits,
+                    provider.instanceMaximumIntegerDigits,
+                    provider.instanceMinimumIntegerDigits,
+                    provider.instanceMultiplier,
+                    provider.instanceNegativePrefix,
+                    provider.instanceNegativeSuffix,
+                    provider.instanceParse,
+                    provider.instancePattern,
+                    provider.instancePositivePrefix,
+                    provider.instancePositiveSuffix,
+                    provider.instanceRoundingMode,
 
-                         final boolean instanceDecimalSeparatorAlwaysShown,
-                         final int instanceGroupingSize,
-                         final boolean instanceGroupingUsed,
-                         final int instanceMaximumFractionDigits,
-                         final int instanceMinimumFractionDigits,
-                         final int instanceMaximumIntegerDigits,
-                         final int instanceMinimumIntegerDigits,
-                         final int instanceMultiplier,
-                         final String instanceNegativePrefix,
-                         final String instanceNegativeSuffix,
-                         final int instanceParse,
-                         final String instancePattern,
-                         final String instancePositivePrefix,
-                         final String instancePositiveSuffix,
-                         final RoundingMode instanceRoundingMode,
+                    provider.integerDecimalSeparatorAlwaysShown,
+                    provider.integerGroupingSize,
+                    provider.integerGroupingUsed,
+                    provider.integerMaximumFractionDigits,
+                    provider.integerMinimumFractionDigits,
+                    provider.integerMaximumIntegerDigits,
+                    provider.integerMinimumIntegerDigits,
+                    provider.integerMultiplier,
+                    provider.integerNegativePrefix,
+                    provider.integerNegativeSuffix,
+                    provider.integerParse,
+                    provider.integerPattern,
+                    provider.integerPositivePrefix,
+                    provider.integerPositiveSuffix,
+                    provider.integerRoundingMode,
 
-                         final boolean integerDecimalSeparatorAlwaysShown,
-                         final int integerGroupingSize,
-                         final boolean integerGroupingUsed,
-                         final int integerMaximumFractionDigits,
-                         final int integerMinimumFractionDigits,
-                         final int integerMaximumIntegerDigits,
-                         final int integerMinimumIntegerDigits,
-                         final int integerMultiplier,
-                         final String integerNegativePrefix,
-                         final String integerNegativeSuffix,
-                         final int integerParse,
-                         final String integerPattern,
-                         final String integerPositivePrefix,
-                         final String integerPositiveSuffix,
-                         final RoundingMode integerRoundingMode,
+                    provider.numberDecimalSeparatorAlwaysShown,
+                    provider.numberGroupingSize,
+                    provider.numberGroupingUsed,
+                    provider.numberMaximumFractionDigits,
+                    provider.numberMinimumFractionDigits,
+                    provider.numberMaximumIntegerDigits,
+                    provider.numberMinimumIntegerDigits,
+                    provider.numberMultiplier,
+                    provider.numberNegativePrefix,
+                    provider.numberNegativeSuffix,
+                    provider.numberParse,
+                    provider.numberPattern,
+                    provider.numberPositivePrefix,
+                    provider.numberPositiveSuffix,
+                    provider.numberRoundingMode,
 
-                         final boolean numberDecimalSeparatorAlwaysShown,
-                         final int numberGroupingSize,
-                         final boolean numberGroupingUsed,
-                         final int numberMaximumFractionDigits,
-                         final int numberMinimumFractionDigits,
-                         final int numberMaximumIntegerDigits,
-                         final int numberMinimumIntegerDigits,
-                         final int numberMultiplier,
-                         final String numberNegativePrefix,
-                         final String numberNegativeSuffix,
-                         final int numberParse,
-                         final String numberPattern,
-                         final String numberPositivePrefix,
-                         final String numberPositiveSuffix,
-                         final RoundingMode numberRoundingMode,
+                    provider.percentDecimalSeparatorAlwaysShown,
+                    provider.percentGroupingSize,
+                    provider.percentGroupingUsed,
+                    provider.percentMaximumFractionDigits,
+                    provider.percentMinimumFractionDigits,
+                    provider.percentMaximumIntegerDigits,
+                    provider.percentMinimumIntegerDigits,
+                    provider.percentMultiplier,
+                    provider.percentNegativePrefix,
+                    provider.percentNegativeSuffix,
+                    provider.percentParse,
+                    provider.percentPattern,
+                    provider.percentPositivePrefix,
+                    provider.percentPositiveSuffix,
+                    provider.percentRoundingMode
+            );
+        });
+    }
 
-                         final boolean percentDecimalSeparatorAlwaysShown,
-                         final int percentGroupingSize,
-                         final boolean percentGroupingUsed,
-                         final int percentMaximumFractionDigits,
-                         final int percentMinimumFractionDigits,
-                         final int percentMaximumIntegerDigits,
-                         final int percentMinimumIntegerDigits,
-                         final int percentMultiplier,
-                         final String percentNegativePrefix,
-                         final String percentNegativeSuffix,
-                         final int percentParse,
-                         final String percentPattern,
-                         final String percentPositivePrefix,
-                         final String percentPositiveSuffix,
-                         final RoundingMode percentRoundingMode
+    /**
+     * Factory called by the static init above.
+     */
+    private static void register0(final String languageTags,
+
+                                  final boolean currencyDecimalSeparatorAlwaysShown,
+                                  final int currencyGroupingSize,
+                                  final boolean currencyGroupingUsed,
+                                  final int currencyMaximumFractionDigits,
+                                  final int currencyMinimumFractionDigits,
+                                  final int currencyMaximumIntegerDigits,
+                                  final int currencyMinimumIntegerDigits,
+                                  final int currencyMultiplier,
+                                  final String currencyNegativePrefix,
+                                  final String currencyNegativeSuffix,
+                                  final int currencyParse,
+                                  final String currencyPattern,
+                                  final String currencyPositivePrefix,
+                                  final String currencyPositiveSuffix,
+                                  final RoundingMode currencyRoundingMode,
+                                  
+                                  final boolean instanceDecimalSeparatorAlwaysShown,
+                                  final int instanceGroupingSize,
+                                  final boolean instanceGroupingUsed,
+                                  final int instanceMaximumFractionDigits,
+                                  final int instanceMinimumFractionDigits,
+                                  final int instanceMaximumIntegerDigits,
+                                  final int instanceMinimumIntegerDigits,
+                                  final int instanceMultiplier,
+                                  final String instanceNegativePrefix,
+                                  final String instanceNegativeSuffix,
+                                  final int instanceParse,
+                                  final String instancePattern,
+                                  final String instancePositivePrefix,
+                                  final String instancePositiveSuffix,
+                                  final RoundingMode instanceRoundingMode,
+                                  
+                                  final boolean integerDecimalSeparatorAlwaysShown,
+                                  final int integerGroupingSize,
+                                  final boolean integerGroupingUsed,
+                                  final int integerMaximumFractionDigits,
+                                  final int integerMinimumFractionDigits,
+                                  final int integerMaximumIntegerDigits,
+                                  final int integerMinimumIntegerDigits,
+                                  final int integerMultiplier,
+                                  final String integerNegativePrefix,
+                                  final String integerNegativeSuffix,
+                                  final int integerParse,
+                                  final String integerPattern,
+                                  final String integerPositivePrefix,
+                                  final String integerPositiveSuffix,
+                                  final RoundingMode integerRoundingMode,
+                                  
+                                  final boolean numberDecimalSeparatorAlwaysShown,
+                                  final int numberGroupingSize,
+                                  final boolean numberGroupingUsed,
+                                  final int numberMaximumFractionDigits,
+                                  final int numberMinimumFractionDigits,
+                                  final int numberMaximumIntegerDigits,
+                                  final int numberMinimumIntegerDigits,
+                                  final int numberMultiplier,
+                                  final String numberNegativePrefix,
+                                  final String numberNegativeSuffix,
+                                  final int numberParse,
+                                  final String numberPattern,
+                                  final String numberPositivePrefix,
+                                  final String numberPositiveSuffix,
+                                  final RoundingMode numberRoundingMode,
+                                  
+                                  final boolean percentDecimalSeparatorAlwaysShown,
+                                  final int percentGroupingSize,
+                                  final boolean percentGroupingUsed,
+                                  final int percentMaximumFractionDigits,
+                                  final int percentMinimumFractionDigits,
+                                  final int percentMaximumIntegerDigits,
+                                  final int percentMinimumIntegerDigits,
+                                  final int percentMultiplier,
+                                  final String percentNegativePrefix,
+                                  final String percentNegativeSuffix,
+                                  final int percentParse,
+                                  final String percentPattern,
+                                  final String percentPositivePrefix,
+                                  final String percentPositiveSuffix,
+                                  final RoundingMode percentRoundingMode
 
     ) {
         final Currency defaultCurrency = Currency.getInstance("XXX");
@@ -202,7 +283,7 @@ public class DecimalFormat extends NumberFormat {
     }
 
     private static DecimalFormat forLocale(final String locale,
-                                           final int selectorIndex) {
+                                         final int selectorIndex) {
         return LANGUAGE_TAG_TO_FORMATS.getOrFail(locale)[selectorIndex];
     }
 
@@ -246,20 +327,19 @@ public class DecimalFormat extends NumberFormat {
         this.negativeSuffix = negativeSuffix;
 
         switch (parse) {
-            case PARSE_NONE:
+            case DecimalFormatProvider.PARSE_NONE:
                 this.parseBigDecimal = false;
                 this.parseIntegerOnly = false;
                 break;
-            case PARSE_INTEGER_ONLY:
+            case DecimalFormatProvider.PARSE_INTEGER_ONLY:
                 this.parseBigDecimal = false;
                 this.parseIntegerOnly = true;
                 break;
-            case PARSE_BIG_DECIMAL:
+            case DecimalFormatProvider.PARSE_BIG_DECIMAL:
                 this.parseBigDecimal = true;
                 this.parseIntegerOnly = false;
                 break;
             default:
-                NeverError.unhandledCase(parse, PARSE_NONE, PARSE_INTEGER_ONLY, PARSE_BIG_DECIMAL);
                 this.parseBigDecimal = false;
                 this.parseIntegerOnly = false;
                 break;
@@ -273,12 +353,6 @@ public class DecimalFormat extends NumberFormat {
 
         this.applyPattern(pattern);
     }
-
-    // constants used by parse.
-
-    final static int PARSE_NONE = 0;
-    final static int PARSE_INTEGER_ONLY = 1;
-    final static int PARSE_BIG_DECIMAL = 2;
 
     /**
      * Constructs a new {@code DecimalFormat} for formatting and parsing numbers
@@ -613,8 +687,8 @@ public class DecimalFormat extends NumberFormat {
     }
 
     private StringBuffer formatDoubleInfinite(final double value,
-                                              final StringBuffer append,
-                                              final FieldPosition position) {
+                                            final StringBuffer append,
+                                            final FieldPosition position) {
         final String prefix;
         final String suffix;
 
@@ -638,8 +712,8 @@ public class DecimalFormat extends NumberFormat {
      * formatted output.
      */
     private StringBuffer formatDoubleNan(final double value,
-                                         final StringBuffer append,
-                                         final FieldPosition position) {
+                                       final StringBuffer append,
+                                       final FieldPosition position) {
         append.append(this.getDecimalFormatSymbols().getNaN());
         return append;
     }
@@ -657,9 +731,9 @@ public class DecimalFormat extends NumberFormat {
      * Dispatches the given value and its associated parameters to either scientific or non scientific handling.
      */
     private StringBuffer formatBigDecimal(final BigDecimal value,
-                                          final StringBuffer append,
-                                          final String prefix,
-                                          final String suffix) {
+                                        final StringBuffer append,
+                                        final String prefix,
+                                        final String suffix) {
         append.append(prefix);
         if (this.scientificFormat) {
             this.formatBigDecimalScientific(value, append);
@@ -673,7 +747,7 @@ public class DecimalFormat extends NumberFormat {
      * Handles formatting the given absolute/positive value into characters as a decimal format.
      */
     private void formatBigDecimalDecimal(final BigDecimal value,
-                                         final StringBuffer append) {
+                                       final StringBuffer append) {
         final DecimalFormatSymbols symbols = this.symbols;
 
         final int maxInteger = this.maximumIntegerDigits;
@@ -748,7 +822,7 @@ public class DecimalFormat extends NumberFormat {
      * Handles formatting the given absolute/positive value into characters as a scientific format.
      */
     private void formatBigDecimalScientific(final BigDecimal value,
-                                            final StringBuffer append) {
+                                          final StringBuffer append) {
         final DecimalFormatSymbols symbols = this.symbols;
 
         final int maxInteger = this.maximumIntegerDigits;
@@ -884,10 +958,10 @@ public class DecimalFormat extends NumberFormat {
     }
 
     private Number parsePrefixNumberSuffix(final String text,
-                                           final ParsePosition position,
-                                           final String prefix,
-                                           final String suffix,
-                                           final StringBuilder digits) {
+                                         final ParsePosition position,
+                                         final String prefix,
+                                         final String suffix,
+                                         final StringBuilder digits) {
         Number result = null;
 
         if (subTextEquals(text, position, prefix)) {
@@ -909,8 +983,8 @@ public class DecimalFormat extends NumberFormat {
      * Tests if the text contains infinity otherwise tries to {@link #parseNumber(String, ParsePosition, StringBuilder)}
      */
     private Number parseInfinityOrNumber(final String text,
-                                         final ParsePosition position,
-                                         final StringBuilder digits) {
+                                       final ParsePosition position,
+                                       final StringBuilder digits) {
         final Number result;
 
         final String infinity = this.getDecimalFormatSymbols().getInfinity();
@@ -931,14 +1005,14 @@ public class DecimalFormat extends NumberFormat {
      * Only returns true if the source contains text at {@link ParsePosition}.
      */
     private static boolean subTextEquals(final String text,
-                                         final ParsePosition position,
-                                         final String subText) {
+                                       final ParsePosition position,
+                                       final String subText) {
         return subTextEquals(text, position.getIndex(), subText);
     }
 
     private static boolean subTextEquals(final String text,
-                                         final int index,
-                                         final String subText) {
+                                       final int index,
+                                       final String subText) {
         return index < text.length() && text.substring(index).startsWith(subText);
     }
 
