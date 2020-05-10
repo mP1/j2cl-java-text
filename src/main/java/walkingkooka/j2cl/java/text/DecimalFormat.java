@@ -20,14 +20,19 @@ package walkingkooka.j2cl.java.text;
 import walkingkooka.NeverError;
 import walkingkooka.ToStringBuilder;
 import walkingkooka.collect.list.Lists;
+import walkingkooka.collect.set.Sets;
+import walkingkooka.j2cl.java.io.string.StringDataInputDataOutput;
 import walkingkooka.text.CharSequences;
 
+import java.io.DataInput;
+import java.io.IOException;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Currency;
 import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
+import java.util.Set;
 
 @SuppressWarnings("lgtm[java/inconsistent-equals-and-hashcode]")
 public class DecimalFormat extends NumberFormat {
@@ -68,98 +73,122 @@ public class DecimalFormat extends NumberFormat {
     final static int INDEX_PERCENT = 4;
 
     /**
-     * Loads all the {@link DecimalFormatSymbols} constants.
+     * Loads all the {@link DecimalFormatSymbols} data and creates constants.
      */
     static {
-        walkingkooka.j2cl.java.text.DecimalFormatProvider.register((provider) -> {
-            register0(provider.languageTags,
-                    provider.currencyDecimalSeparatorAlwaysShown,
-                    provider.currencyGroupingSize,
-                    provider.currencyGroupingUsed,
-                    provider.currencyMaximumFractionDigits,
-                    provider.currencyMinimumFractionDigits,
-                    provider.currencyMaximumIntegerDigits,
-                    provider.currencyMinimumIntegerDigits,
-                    provider.currencyMultiplier,
-                    provider.currencyNegativePrefix,
-                    provider.currencyNegativeSuffix,
-                    provider.currencyParse,
-                    provider.currencyPattern,
-                    provider.currencyPositivePrefix,
-                    provider.currencyPositiveSuffix,
-                    provider.currencyRoundingMode,
+        try {
+            register(StringDataInputDataOutput.input(DecimalFormatProvider.DATA));
+        } catch (final IOException cause) {
+            throw new Error(cause);
+        }
+    }
 
-                    provider.instanceDecimalSeparatorAlwaysShown,
-                    provider.instanceGroupingSize,
-                    provider.instanceGroupingUsed,
-                    provider.instanceMaximumFractionDigits,
-                    provider.instanceMinimumFractionDigits,
-                    provider.instanceMaximumIntegerDigits,
-                    provider.instanceMinimumIntegerDigits,
-                    provider.instanceMultiplier,
-                    provider.instanceNegativePrefix,
-                    provider.instanceNegativeSuffix,
-                    provider.instanceParse,
-                    provider.instancePattern,
-                    provider.instancePositivePrefix,
-                    provider.instancePositiveSuffix,
-                    provider.instanceRoundingMode,
+    /**
+     * Intended to only be called by the static init above. A test exists to verify the {@link DataInput} is consumed
+     * and further operations will fail with an {@link java.io.EOFException}.
+     */
+    static void register(final DataInput data) throws IOException {
+        final int count = data.readInt();
 
-                    provider.integerDecimalSeparatorAlwaysShown,
-                    provider.integerGroupingSize,
-                    provider.integerGroupingUsed,
-                    provider.integerMaximumFractionDigits,
-                    provider.integerMinimumFractionDigits,
-                    provider.integerMaximumIntegerDigits,
-                    provider.integerMinimumIntegerDigits,
-                    provider.integerMultiplier,
-                    provider.integerNegativePrefix,
-                    provider.integerNegativeSuffix,
-                    provider.integerParse,
-                    provider.integerPattern,
-                    provider.integerPositivePrefix,
-                    provider.integerPositiveSuffix,
-                    provider.integerRoundingMode,
+        for (int i = 0; i < count; i++) {
+            final int languageTagCount = data.readInt();
+            final Set<String> languageTags = Sets.ordered();
+            for(int j = 0; j < languageTagCount; j++) {
+                languageTags.add(data.readUTF());
+            }
 
-                    provider.numberDecimalSeparatorAlwaysShown,
-                    provider.numberGroupingSize,
-                    provider.numberGroupingUsed,
-                    provider.numberMaximumFractionDigits,
-                    provider.numberMinimumFractionDigits,
-                    provider.numberMaximumIntegerDigits,
-                    provider.numberMinimumIntegerDigits,
-                    provider.numberMultiplier,
-                    provider.numberNegativePrefix,
-                    provider.numberNegativeSuffix,
-                    provider.numberParse,
-                    provider.numberPattern,
-                    provider.numberPositivePrefix,
-                    provider.numberPositiveSuffix,
-                    provider.numberRoundingMode,
+            register0(languageTags, // languageTags
+                    data.readBoolean(), // currencyDecimalSeparatorAlwaysShown,
+                    data.readInt(), // currencyGroupingSize,
+                    data.readBoolean(), // currencyGroupingUsed,
+                    data.readInt(), // currencyMaximumFractionDigits,
+                    data.readInt(), // currencyMinimumFractionDigits,
+                    data.readInt(), // currencyMaximumIntegerDigits,
+                    data.readInt(), // currencyMinimumIntegerDigits,
+                    data.readInt(), // currencyMultiplier,
+                    data.readUTF(), // currencyNegativePrefix,
+                    data.readUTF(), // currencyNegativeSuffix,
+                    data.readInt(), // currencyParse,
+                    data.readUTF(), // currencyPattern,
+                    data.readUTF(), // currencyPositivePrefix,
+                    data.readUTF(), // currencyPositiveSuffix,
+                    readRoundingMode(data), // currencyRoundingMode,
 
-                    provider.percentDecimalSeparatorAlwaysShown,
-                    provider.percentGroupingSize,
-                    provider.percentGroupingUsed,
-                    provider.percentMaximumFractionDigits,
-                    provider.percentMinimumFractionDigits,
-                    provider.percentMaximumIntegerDigits,
-                    provider.percentMinimumIntegerDigits,
-                    provider.percentMultiplier,
-                    provider.percentNegativePrefix,
-                    provider.percentNegativeSuffix,
-                    provider.percentParse,
-                    provider.percentPattern,
-                    provider.percentPositivePrefix,
-                    provider.percentPositiveSuffix,
-                    provider.percentRoundingMode
+                    data.readBoolean(), // currencyDecimalSeparatorAlwaysShown,
+                    data.readInt(), // currencyGroupingSize,
+                    data.readBoolean(), // currencyGroupingUsed,
+                    data.readInt(), // currencyMaximumFractionDigits,
+                    data.readInt(), // currencyMinimumFractionDigits,
+                    data.readInt(), // currencyMaximumIntegerDigits,
+                    data.readInt(), // currencyMinimumIntegerDigits,
+                    data.readInt(), // currencyMultiplier,
+                    data.readUTF(), // currencyNegativePrefix,
+                    data.readUTF(), // currencyNegativeSuffix,
+                    data.readInt(), // currencyParse,
+                    data.readUTF(), // currencyPattern,
+                    data.readUTF(), // currencyPositivePrefix,
+                    data.readUTF(), // currencyPositiveSuffix,
+                    readRoundingMode(data), // currencyRoundingMode,
+
+                    data.readBoolean(), // currencyDecimalSeparatorAlwaysShown,
+                    data.readInt(), // currencyGroupingSize,
+                    data.readBoolean(), // currencyGroupingUsed,
+                    data.readInt(), // currencyMaximumFractionDigits,
+                    data.readInt(), // currencyMinimumFractionDigits,
+                    data.readInt(), // currencyMaximumIntegerDigits,
+                    data.readInt(), // currencyMinimumIntegerDigits,
+                    data.readInt(), // currencyMultiplier,
+                    data.readUTF(), // currencyNegativePrefix,
+                    data.readUTF(), // currencyNegativeSuffix,
+                    data.readInt(), // currencyParse,
+                    data.readUTF(), // currencyPattern,
+                    data.readUTF(), // currencyPositivePrefix,
+                    data.readUTF(), // currencyPositiveSuffix,
+                    readRoundingMode(data), // currencyRoundingMode,
+
+                    data.readBoolean(), // currencyDecimalSeparatorAlwaysShown,
+                    data.readInt(), // currencyGroupingSize,
+                    data.readBoolean(), // currencyGroupingUsed,
+                    data.readInt(), // currencyMaximumFractionDigits,
+                    data.readInt(), // currencyMinimumFractionDigits,
+                    data.readInt(), // currencyMaximumIntegerDigits,
+                    data.readInt(), // currencyMinimumIntegerDigits,
+                    data.readInt(), // currencyMultiplier,
+                    data.readUTF(), // currencyNegativePrefix,
+                    data.readUTF(), // currencyNegativeSuffix,
+                    data.readInt(), // currencyParse,
+                    data.readUTF(), // currencyPattern,
+                    data.readUTF(), // currencyPositivePrefix,
+                    data.readUTF(), // currencyPositiveSuffix,
+                    readRoundingMode(data), // currencyRoundingMode,
+
+                    data.readBoolean(), // currencyDecimalSeparatorAlwaysShown,
+                    data.readInt(), // currencyGroupingSize,
+                    data.readBoolean(), // currencyGroupingUsed,
+                    data.readInt(), // currencyMaximumFractionDigits,
+                    data.readInt(), // currencyMinimumFractionDigits,
+                    data.readInt(), // currencyMaximumIntegerDigits,
+                    data.readInt(), // currencyMinimumIntegerDigits,
+                    data.readInt(), // currencyMultiplier,
+                    data.readUTF(), // currencyNegativePrefix,
+                    data.readUTF(), // currencyNegativeSuffix,
+                    data.readInt(), // currencyParse,
+                    data.readUTF(), // currencyPattern,
+                    data.readUTF(), // currencyPositivePrefix,
+                    data.readUTF(), // currencyPositiveSuffix,
+                    readRoundingMode(data) // currencyRoundingMode,
             );
-        });
+        }
+    }
+
+    private static RoundingMode readRoundingMode(final DataInput data) throws IOException {
+        return RoundingMode.valueOf(data.readUTF());
     }
 
     /**
      * Factory called by the static init above.
      */
-    private static void register0(final String languageTags,
+    private static void register0(final Set<String> languageTags,
 
                                   final boolean currencyDecimalSeparatorAlwaysShown,
                                   final int currencyGroupingSize,
@@ -244,7 +273,7 @@ public class DecimalFormat extends NumberFormat {
     ) {
         final Currency defaultCurrency = Currency.getInstance("XXX");
 
-        for (final String languageTag : languageTags.split("\t")) {
+        for (final String languageTag : languageTags) {
             final Locale locale = Locale.forLanguageTag(languageTag);
 
             String country = locale.getCountry();

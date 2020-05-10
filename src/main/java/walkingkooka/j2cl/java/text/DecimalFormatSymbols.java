@@ -18,11 +18,16 @@
 package walkingkooka.j2cl.java.text;
 
 import walkingkooka.ToStringBuilder;
+import walkingkooka.collect.set.Sets;
+import walkingkooka.j2cl.java.io.string.StringDataInputDataOutput;
 import walkingkooka.j2cl.locale.LocaleAware;
 
+import java.io.DataInput;
+import java.io.IOException;
 import java.util.Currency;
 import java.util.Locale;
 import java.util.Objects;
+import java.util.Set;
 
 @LocaleAware
 public class DecimalFormatSymbols {
@@ -36,25 +41,49 @@ public class DecimalFormatSymbols {
      * Loads all the {@link DecimalFormatSymbols} constants.
      */
     static {
-        walkingkooka.j2cl.java.text.DecimalFormatSymbolsProvider.register((provider) -> {
-            register0(provider.locales,
-                    provider.decimalSeparator,
-                    provider.digit,
-                    provider.exponentSeparator,
-                    provider.groupingSeparator,
-                    provider.infinity,
-                    provider.internationalCurrencySymbol,
-                    provider.minusSign,
-                    provider.monetaryDecimalSeparator,
-                    provider.nan,
-                    provider.patternSeparator,
-                    provider.percent,
-                    provider.perMill,
-                    provider.zeroDigit);
-        });
+        try {
+            register(StringDataInputDataOutput.input(DecimalFormatSymbolsProvider.DATA));
+        } catch (final IOException cause) {
+            throw new Error(cause);
+        }
     }
 
-    private static void register0(final String locales,
+    /**
+     * Intended to only be called by the static init above. A test exists to verify the {@link DataInput} is consumed
+     * and further operations will fail with an {@link java.io.EOFException}.
+     */
+    static void register(final DataInput data) throws IOException {
+        final int count = data.readInt();
+
+        for (int i = 0; i < count; i++) {
+            register0(readLocales(data), // locales
+                    data.readChar(), // decimalSeparator
+                    data.readChar(), // digit
+                    data.readUTF(), // exponentSeparator
+                    data.readChar(), // groupingSeparator
+                    data.readUTF(), // infinity
+                    data.readUTF(), // internationalCurrencySymbol
+                    data.readChar(), // minusSign
+                    data.readChar(), // monetaryDecimalSeparator
+                    data.readUTF(), // nan
+                    data.readChar(), // patternSeparator
+                    data.readChar(), // percent
+                    data.readChar(), // perMill
+                    data.readChar()// zeroDigit
+            );
+        }
+    }
+
+    private static Set<String> readLocales(final DataInput data) throws IOException {
+        final int count = data.readInt();
+        final Set<String> locales = Sets.ordered();
+        for (int j = 0; j < count; j++) {
+            locales.add(data.readUTF());
+        }
+        return locales;
+    }
+
+    private static void register0(final Set<String> locales,
                                   final char decimalSeparator,
                                   final char digit,
                                   final String exponentSeparator,
@@ -68,8 +97,8 @@ public class DecimalFormatSymbols {
                                   final char percent,
                                   final char perMill,
                                   final char zeroDigit) {
-        for (final String languageTag : locales.split("\t")) {
-            Locale locale = Locale.forLanguageTag(languageTag);
+        for (final String languageTag : locales) {
+            final Locale locale = Locale.forLanguageTag(languageTag);
 
             Currency currency = null;
             String currencySymbol = null;

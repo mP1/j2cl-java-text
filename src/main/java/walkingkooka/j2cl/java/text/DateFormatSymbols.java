@@ -18,9 +18,14 @@
 package walkingkooka.j2cl.java.text;
 
 import walkingkooka.ToStringBuilder;
+import walkingkooka.collect.list.Lists;
+import walkingkooka.j2cl.java.io.string.StringDataInputDataOutput;
 import walkingkooka.j2cl.locale.LocaleAware;
 
+import java.io.DataInput;
+import java.io.IOException;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
 
@@ -36,56 +41,69 @@ public class DateFormatSymbols {
     private final static LanguageTagLookup<DateFormatSymbols> LANGUAGE_TAG_TO_SYMBOLS = LanguageTagLookup.empty();
 
     /**
-     * Requests the DateFormatSymbolsProvider to provide records which will be used to create {@link Currency} singleton instances.
+     * Loads all the {@link DateFormatSymbols} data and creates constants.
      */
     static {
-        DateFormatSymbolsProvider.register((provider) -> {
-            final DateFormatSymbols symbols = new DateFormatSymbols(provider.ampms,
-                    provider.eras,
-                    provider.months,
-                    provider.shortMonths,
-                    provider.shortWeekdays,
-                    provider.weekdays);
+        try {
+            register(StringDataInputDataOutput.input(DateFormatSymbolsProvider.DATA));
+        } catch (final IOException cause) {
+            throw new Error(cause);
+        }
+    }
 
-            for(final String locale : extractTokens(provider.locales)) {
+    /**
+     * Intended to only be called by the static init above. A test exists to verify the {@link DataInput} is consumed
+     * and further operations will fail with an {@link java.io.EOFException}.
+     */
+    static void register(final DataInput data) throws IOException {
+        final int count = data.readInt();
+
+        for (int i = 0; i < count; i++) {
+            final int localeCount = data.readInt();
+            final List<String> locales = Lists.array();
+            for (int j = 0; j < localeCount; j++) {
+                locales.add(data.readUTF());
+            }
+
+            final DateFormatSymbols symbols = new DateFormatSymbols(readStringArray(data, 0),
+                    readStringArray(data, 0),
+                    readStringArray(data, 0),
+                    readStringArray(data, 0),
+                    readStringArray(data, 1),
+                    readStringArray(data, 1));
+
+            for (final String locale : locales) {
                 LANGUAGE_TAG_TO_SYMBOLS.add(locale, symbols);
             }
-        });
+        }
     }
 
-    private DateFormatSymbols(final String ampms,
-                              final String eras,
-                              final String months,
-                              final String shortMonths,
-                              final String shortWeekdays,
-                              final String weekdays) {
+    private static String[] readStringArray(final DataInput data,
+                                            final int leadingEmpty) throws IOException {
+        final int count = data.readInt();
+
+        final String[] array = new String[leadingEmpty + count];
+        Arrays.fill(array, 0, leadingEmpty, "");
+
+        for(int i = 0; i < count; i++) {
+            array[leadingEmpty + i] = data.readUTF();
+        }
+        return array;
+    }
+
+    private DateFormatSymbols(final String[] ampms,
+                              final String[] eras,
+                              final String[] months,
+                              final String[] shortMonths,
+                              final String[] shortWeekdays,
+                              final String[] weekdays) {
         super();
-        this.ampm = extractTokens(ampms);
-        this.eras = extractTokens(eras);
-        this.months = extractMonths(months);
-        this.shortMonths = extractMonths(shortMonths);
-        this.shortWeekdays = extractWeekdays(shortWeekdays);
-        this.weekdays = extractWeekdays(weekdays);
-    }
-
-    private static String[] extractTokens(final String text) {
-        return text.split("\t");
-    }
-
-    private static String[] extractMonths(final String text) {
-        final String[] months = extractTokens(text);
-        final String[] array = new String[13];
-        array[12] = ""; // restore empty string in slot 12
-        System.arraycopy(months, 0, array, 0, months.length);
-        return array;
-    }
-
-    private static String[] extractWeekdays(final String text) {
-        final String[] weekdays = extractTokens(text);
-        final String[] array = new String[weekdays.length + 1];
-        array[0] = ""; // restore the empty String at slot zero
-        System.arraycopy(weekdays, 0, array, 1, weekdays.length);
-        return array;
+        this.ampm = ampms;
+        this.eras = eras;
+        this.months = months;
+        this.shortMonths = shortMonths;
+        this.shortWeekdays = shortWeekdays;
+        this.weekdays = weekdays;
     }
 
     /**

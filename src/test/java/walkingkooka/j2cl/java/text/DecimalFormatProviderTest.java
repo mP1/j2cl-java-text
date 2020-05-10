@@ -17,10 +17,30 @@
 
 package walkingkooka.j2cl.java.text;
 
+import org.junit.jupiter.api.Test;
+import walkingkooka.j2cl.java.io.string.StringDataInputDataOutput;
 import walkingkooka.reflect.ClassTesting;
 import walkingkooka.reflect.JavaVisibility;
 
+import java.io.DataInput;
+import java.io.EOFException;
+
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 public final class DecimalFormatProviderTest implements ClassTesting<DecimalFormatProvider> {
+
+    @Test
+    public void testRegisterThenDataInputThrowsEOF() throws Exception {
+        final String dataString = DecimalFormatProvider.DATA;
+        try {
+            final DataInput data = StringDataInputDataOutput.input(dataString);
+            DecimalFormat.register(data);
+            assertThrows(EOFException.class, () -> data.readBoolean(), dataString);
+        } catch (final Exception rethrow) {
+            System.err.println(dataString);
+            throw rethrow;
+        }
+    }
 
     @Override
     public Class<DecimalFormatProvider> type() {
