@@ -18,14 +18,31 @@
 package walkingkooka.j2cl.java.text;
 
 import org.junit.jupiter.api.Test;
+import walkingkooka.j2cl.java.io.string.StringDataInputDataOutput;
 import walkingkooka.reflect.ClassTesting;
 import walkingkooka.reflect.JavaVisibility;
 
+import java.io.DataInput;
+import java.io.EOFException;
 import java.util.Locale;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public final class DecimalFormatSymbolsProviderTest implements ClassTesting<DecimalFormatSymbolsProvider> {
+
+    @Test
+    public void testRegisterThenDataInputThrowsEOF() throws Exception {
+        final String dataString = DecimalFormatSymbolsProvider.DATA;
+        try {
+            final DataInput data = StringDataInputDataOutput.input(dataString);
+            DecimalFormatSymbols.register(data);
+            assertThrows(EOFException.class, () -> data.readBoolean(), dataString);
+        } catch (final Exception rethrow) {
+            System.err.println(dataString);
+            throw rethrow;
+        }
+    }
 
     @Test
     public void testENAUCurrencySymbol() {
