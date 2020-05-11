@@ -93,10 +93,12 @@ To match compatibility the behaviour of ignoring the counts are ignored.
 
 
 
-## Currency
+## Annotation processor arguments
+
+- See [j2cl-java-util-currency-annotation-processor](https://github.com/mP1/j2cl-java-util-currency-annotation-processor)
+- See [j2cl-java-util-locale-annotation-processor](https://github.com/mP1/j2cl-java-util-locale-annotation-processor)
 
 The currency code `XXX` must be selected as it is used by various `java.text` classes as a source of defaults.
-
 
 
 
