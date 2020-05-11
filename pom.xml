@@ -147,6 +147,7 @@
                     <target>9</target>
                     <compilerArgs>
                         <arg>-Awalkingkooka.j2cl.java.util.Locale=*</arg>
+                        <arg>-Awalkingkooka.j2cl.java.util.Currency=XXX</arg>
                     </compilerArgs>
                 </configuration>
             </plugin>

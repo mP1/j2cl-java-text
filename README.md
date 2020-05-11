@@ -93,6 +93,12 @@ To match compatibility the behaviour of ignoring the counts are ignored.
 
 
 
+## Currency
+
+The currency code `XXX` must be selected as it is used by various `java.text` classes as a source of defaults.
+
+
+
 
 ## Missing functionality
 
