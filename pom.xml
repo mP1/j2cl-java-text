@@ -232,6 +232,7 @@
             </plugin>
             <plugin>
                 <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.0</version>
                 <configuration>
                     <excludes>
                         <exclude>walkingkooka/j2cl/java/text/DateFormatSymbolsProvider*</exclude>
