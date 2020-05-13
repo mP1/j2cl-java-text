@@ -202,6 +202,7 @@
                             <java-compiler-arguments>
                                 <param>-Awalkingkooka.j2cl.java.util.Locale=EN*,FR*</param>
                                 <param>-Awalkingkooka.j2cl.java.util.Currency=XXX</param>
+                                <param>-Awalkingkooka.j2cl.locale.Logging=SLASH_SLASH_COMMENTS</param>
                             </java-compiler-arguments>
                             <language-out>ECMASCRIPT_2016</language-out>
                             <!-- dont want to parallelize -->
