@@ -92,11 +92,11 @@ To match compatibility the behaviour of ignoring the counts are ignored.
 
 
 
-
 ## Annotation processor arguments
 
-- See [j2cl-java-util-currency-annotation-processor](https://github.com/mP1/j2cl-java-util-currency-annotation-processor)
-- See [j2cl-java-util-locale-annotation-processor](https://github.com/mP1/j2cl-java-util-locale-annotation-processor)
+- See [j2cl-java-util-currency-annotation-processor](https://github.com/mP1/j2cl-java-util-locale-annotation-processor) for more info about selecting which currencies get bundled.
+- See [j2cl-java-util-locale-annotation-processor](https://github.com/mP1/j2cl-java-util-locale-annotation-processor) for more info about selecting which locales get bundled.
+- See [j2cl-locale](https://github.com/mP1/j2cl-locale) for more info about logging.
 
 The currency code `XXX` must be selected as it is used by various `java.text` classes as a source of defaults.
 
