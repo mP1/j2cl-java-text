@@ -109,6 +109,12 @@
     <dependencies>
         <dependency>
             <groupId>walkingkooka</groupId>
+            <artifactId>j2cl-java-util-Calendar</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>walkingkooka</groupId>
             <artifactId>j2cl-java-util-Currency</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
@@ -146,8 +152,9 @@
                     <source>9</source>
                     <target>9</target>
                     <compilerArgs>
-                        <arg>-Awalkingkooka.j2cl.java.util.Locale=*</arg>
                         <arg>-Awalkingkooka.j2cl.java.util.Currency=XXX</arg>
+                        <arg>-Awalkingkooka.j2cl.java.util.Locale=*</arg>
+                        <arg>-Awalkingkooka.j2cl.java.util.TimeZone=EN-*</arg>
                         <arg>-Awalkingkooka.j2cl.locale.Logging=SLASH_SLASH_COMMENTS</arg>
                     </compilerArgs>
                 </configuration>
