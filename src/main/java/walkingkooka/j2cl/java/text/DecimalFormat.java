@@ -20,8 +20,8 @@ package walkingkooka.j2cl.java.text;
 import walkingkooka.NeverError;
 import walkingkooka.ToStringBuilder;
 import walkingkooka.collect.list.Lists;
-import walkingkooka.collect.set.Sets;
 import walkingkooka.j2cl.java.io.string.StringDataInputDataOutput;
+import walkingkooka.j2cl.java.util.locale.support.LocaleSupport;
 import walkingkooka.text.CharSequences;
 
 import java.io.DataInput;
@@ -91,13 +91,7 @@ public class DecimalFormat extends NumberFormat {
         final int count = data.readInt();
 
         for (int i = 0; i < count; i++) {
-            final int languageTagCount = data.readInt();
-            final Set<String> languageTags = Sets.ordered();
-            for(int j = 0; j < languageTagCount; j++) {
-                languageTags.add(data.readUTF());
-            }
-
-            register0(languageTags, // languageTags
+            register0(LocaleSupport.readLocales(data), // locales
                     data.readBoolean(), // currencyDecimalSeparatorAlwaysShown,
                     data.readInt(), // currencyGroupingSize,
                     data.readBoolean(), // currencyGroupingUsed,
@@ -188,7 +182,7 @@ public class DecimalFormat extends NumberFormat {
     /**
      * Factory called by the static init above.
      */
-    private static void register0(final Set<String> languageTags,
+    private static void register0(final Set<Locale> locales,
 
                                   final boolean currencyDecimalSeparatorAlwaysShown,
                                   final int currencyGroupingSize,
@@ -273,9 +267,7 @@ public class DecimalFormat extends NumberFormat {
     ) {
         final Currency defaultCurrency = Currency.getInstance("XXX");
 
-        for (final String languageTag : languageTags) {
-            final Locale locale = Locale.forLanguageTag(languageTag);
-
+        for (final Locale locale : locales) {
             String country = locale.getCountry();
             Currency currency;
 
@@ -289,7 +281,7 @@ public class DecimalFormat extends NumberFormat {
 
             final DecimalFormatSymbols symbols = new DecimalFormatSymbols(locale);
 
-            LANGUAGE_TAG_TO_FORMATS.add(languageTag,
+            LANGUAGE_TAG_TO_FORMATS.add(locale.toLanguageTag(),
                     new DecimalFormat[]{
                             new DecimalFormat(currency, currencyDecimalSeparatorAlwaysShown, currencyGroupingSize, currencyGroupingUsed, currencyMaximumFractionDigits, currencyMinimumFractionDigits, currencyMaximumIntegerDigits, currencyMinimumIntegerDigits, currencyMultiplier, currencyNegativePrefix, currencyNegativeSuffix, currencyParse, currencyPattern, currencyPositivePrefix, currencyPositiveSuffix, currencyRoundingMode, symbols),
                             new DecimalFormat(currency, instanceDecimalSeparatorAlwaysShown, instanceGroupingSize, instanceGroupingUsed, instanceMaximumFractionDigits, instanceMinimumFractionDigits, instanceMaximumIntegerDigits, instanceMinimumIntegerDigits, instanceMultiplier, instanceNegativePrefix, instanceNegativeSuffix, instanceParse, instancePattern, instancePositivePrefix, instancePositiveSuffix, instanceRoundingMode, symbols),
@@ -297,8 +289,6 @@ public class DecimalFormat extends NumberFormat {
                             new DecimalFormat(currency, numberDecimalSeparatorAlwaysShown, numberGroupingSize, numberGroupingUsed, numberMaximumFractionDigits, numberMinimumFractionDigits, numberMaximumIntegerDigits, numberMinimumIntegerDigits, numberMultiplier, numberNegativePrefix, numberNegativeSuffix, numberParse, numberPattern, numberPositivePrefix, numberPositiveSuffix, numberRoundingMode, symbols),
                             new DecimalFormat(currency, percentDecimalSeparatorAlwaysShown, percentGroupingSize, percentGroupingUsed, percentMaximumFractionDigits, percentMinimumFractionDigits, percentMaximumIntegerDigits, percentMinimumIntegerDigits, percentMultiplier, percentNegativePrefix, percentNegativeSuffix, percentParse, percentPattern, percentPositivePrefix, percentPositiveSuffix, percentRoundingMode, symbols),
                     });
-
-            // TODO symbols.setCurrency();
         }
     }
 
@@ -312,7 +302,7 @@ public class DecimalFormat extends NumberFormat {
     }
 
     private static DecimalFormat forLocale(final String locale,
-                                         final int selectorIndex) {
+                                           final int selectorIndex) {
         return LANGUAGE_TAG_TO_FORMATS.getOrFail(locale)[selectorIndex];
     }
 
