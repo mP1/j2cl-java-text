@@ -154,7 +154,7 @@ public class DateFormatSymbols {
         this.ampm = copyOf(ampm);
     }
 
-    private String[] ampm;
+    String[] ampm;
 
     public String[] getEras() {
         return copyOf(this.eras);
@@ -164,7 +164,7 @@ public class DateFormatSymbols {
         this.eras = copyOf(eras);
     }
 
-    private String[] eras;
+    String[] eras;
 
     public String[] getMonths() {
         return copyOf(this.months);
@@ -174,7 +174,7 @@ public class DateFormatSymbols {
         this.months = copyOf(months);
     }
 
-    private String[] months;
+    String[] months;
 
     public String[] getShortMonths() {
         return copyOf(this.shortMonths);
@@ -184,7 +184,7 @@ public class DateFormatSymbols {
         this.shortMonths = copyOf(shortMonths);
     }
 
-    private String[] shortMonths;
+    String[] shortMonths;
 
     public String[] getShortWeekdays() {
         return copyOf(this.shortWeekdays);
@@ -194,7 +194,7 @@ public class DateFormatSymbols {
         this.shortWeekdays = copyOf(shortWeekdays);
     }
 
-    private String[] shortWeekdays;
+    String[] shortWeekdays;
 
     public String[] getWeekdays() {
         return copyOf(this.weekdays);
@@ -204,7 +204,7 @@ public class DateFormatSymbols {
         this.weekdays = copyOf(weekdays);
     }
 
-    private String[] weekdays;
+    String[] weekdays;
 
     private static String[] copyOf(final String[] array) {
         return Arrays.copyOf(array, array.length);
