@@ -154,7 +154,7 @@
                     <compilerArgs>
                         <arg>-Awalkingkooka.j2cl.java.util.Currency=XXX</arg>
                         <arg>-Awalkingkooka.j2cl.java.util.Locale=*</arg>
-                        <arg>-Awalkingkooka.j2cl.java.util.TimeZone=EN-*</arg>
+                        <arg>-Awalkingkooka.j2cl.java.util.TimeZone=Australia/Sydney</arg>
                         <arg>-Awalkingkooka.j2cl.locale.Logging=SLASH_SLASH_COMMENTS</arg>
                     </compilerArgs>
                 </configuration>
@@ -243,11 +243,13 @@
                 <version>3.2.0</version>
                 <configuration>
                     <excludes>
+                        <exclude>walkingkooka/j2cl/java/text/DateFormatProvider*</exclude>
                         <exclude>walkingkooka/j2cl/java/text/DateFormatSymbolsProvider*</exclude>
                         <exclude>walkingkooka/j2cl/java/text/DecimalFormatProvider*</exclude>
                         <exclude>walkingkooka/j2cl/java/text/DecimalFormatSymbolsProvider*</exclude>
                         <exclude>walkingkooka/j2cl/java/util/currency/**</exclude>
                         <exclude>walkingkooka/j2cl/java/util/locale/**</exclude>
+                        <exclude>walkingkooka/j2cl/java/util/timezone/**</exclude>
                     </excludes>
                 </configuration>
             </plugin>
@@ -257,11 +259,13 @@
                 <version>3.0.1</version>
                 <configuration>
                     <excludes>
+                        <exclude>walkingkooka/j2cl/java/text/DateFormatProvider*</exclude>
                         <exclude>walkingkooka/j2cl/java/text/DateFormatSymbolsProvider*</exclude>
                         <exclude>walkingkooka/j2cl/java/text/DecimalFormatProvider*</exclude>
                         <exclude>walkingkooka/j2cl/java/text/DecimalFormatSymbolsProvider*</exclude>
                         <exclude>walkingkooka/j2cl/java/util/currency/**</exclude>
                         <exclude>walkingkooka/j2cl/java/util/locale/**</exclude>
+                        <exclude>walkingkooka/j2cl/java/util/timezone/**</exclude>
                     </excludes>
                     <excludeResources>true</excludeResources>
                 </configuration>

@@ -466,7 +466,7 @@ public abstract class DateFormat extends Format {
         checkDateStyle(style);
 //        com.ibm.icu.text.DateFormat icuFormat = com.ibm.icu.text.DateFormat.getDateInstance(style, locale);
 //        return new SimpleDateFormat(locale, (com.ibm.icu.text.SimpleDateFormat)icuFormat);
-        throw new UnsupportedOperationException();
+        return SimpleDateFormat.getDateInstance0(style, locale);
     }
 
     /**
@@ -522,7 +522,9 @@ public abstract class DateFormat extends Format {
         checkDateStyle(dateStyle);
 //        com.ibm.icu.text.DateFormat icuFormat = com.ibm.icu.text.DateFormat.getDateTimeInstance(dateStyle, timeStyle, locale);
 //        return new SimpleDateFormat(locale, (com.ibm.icu.text.SimpleDateFormat)icuFormat);
-        throw new UnsupportedOperationException();
+        return SimpleDateFormat.getDateTimeInstance0(dateStyle,
+                timeStyle,
+                locale);
     }
 
     /**
@@ -611,7 +613,7 @@ public abstract class DateFormat extends Format {
         checkTimeStyle(style);
 //        com.ibm.icu.text.DateFormat icuFormat = com.ibm.icu.text.DateFormat.getTimeInstance(style, locale);
 //        return new SimpleDateFormat(locale, (com.ibm.icu.text.SimpleDateFormat)icuFormat);
-        throw new UnsupportedOperationException();
+        return SimpleDateFormat.getTimeInstance0(style, locale);
     }
 
     /**
