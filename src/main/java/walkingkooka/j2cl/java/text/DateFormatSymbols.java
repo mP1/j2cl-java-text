@@ -18,16 +18,16 @@
 package walkingkooka.j2cl.java.text;
 
 import walkingkooka.ToStringBuilder;
-import walkingkooka.collect.list.Lists;
 import walkingkooka.j2cl.java.io.string.StringDataInputDataOutput;
+import walkingkooka.j2cl.java.util.locale.support.LocaleSupport;
 import walkingkooka.j2cl.locale.LocaleAware;
 
 import java.io.DataInput;
 import java.io.IOException;
 import java.util.Arrays;
-import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
+import java.util.Set;
 
 /**
  * A very much simplified {@link java.text.DateFormatSymbols}.
@@ -36,9 +36,9 @@ import java.util.Objects;
 public class DateFormatSymbols {
 
     /**
-     * Language tag to symbols, this is used internally to "get" the symbols for a given Locale.
+     * Locale to symbols, this is used internally to "get" the symbols for a given Locale.
      */
-    private final static LanguageTagLookup<DateFormatSymbols> LANGUAGE_TAG_TO_SYMBOLS = LanguageTagLookup.empty();
+    private final static LocaleLookup<DateFormatSymbols> LOCALE_TO_SYMBOLS = LocaleLookup.empty();
 
     /**
      * Loads all the {@link DateFormatSymbols} data and creates constants.
@@ -59,11 +59,7 @@ public class DateFormatSymbols {
         final int count = data.readInt();
 
         for (int i = 0; i < count; i++) {
-            final int localeCount = data.readInt();
-            final List<String> locales = Lists.array();
-            for (int j = 0; j < localeCount; j++) {
-                locales.add(data.readUTF());
-            }
+            final Set<Locale> locales = LocaleSupport.readLocales(data);
 
             final DateFormatSymbols symbols = new DateFormatSymbols(readStringArray(data, 0),
                     readStringArray(data, 0),
@@ -72,8 +68,8 @@ public class DateFormatSymbols {
                     readStringArray(data, 1),
                     readStringArray(data, 1));
 
-            for (final String locale : locales) {
-                LANGUAGE_TAG_TO_SYMBOLS.add(locale, symbols);
+            for (final Locale locale : locales) {
+                LOCALE_TO_SYMBOLS.add(locale, symbols);
             }
         }
     }
@@ -110,7 +106,7 @@ public class DateFormatSymbols {
      * All available {@link Locale locales} also provide date format symbols.
      */
     public static Locale[] getAvailableLocales() {
-        return LANGUAGE_TAG_TO_SYMBOLS.availableLocales();
+        return LOCALE_TO_SYMBOLS.availableLocales();
     }
 
     public static DateFormatSymbols getInstance() {
@@ -132,7 +128,7 @@ public class DateFormatSymbols {
     }
 
     public DateFormatSymbols(final Locale locale) {
-        this(LANGUAGE_TAG_TO_SYMBOLS.getOrFail(locale));
+        this(LOCALE_TO_SYMBOLS.getOrFail(locale));
     }
 
     private DateFormatSymbols(final DateFormatSymbols source) {

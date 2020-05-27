@@ -52,9 +52,16 @@ public final class DecimalFormatSymbolsTest implements ClassTesting<DecimalForma
         final Comparator<Locale> comparator = (l, r) -> l.toLanguageTag().compareTo(r.toLanguageTag());
 
         final Set<Locale> jdk = Sets.sorted(comparator);
-        jdk.addAll(Arrays.asList(java.text.DecimalFormatSymbols.getAvailableLocales()));
-        jdk.removeIf(l -> l.toString().equals("th_TH_TH_#u-nu-thai"));
-        jdk.removeIf(l -> l.toString().equals("ja_JP_JP_#u-ca-japanese"));
+        for(final Locale locale : java.text.DateFormatSymbols.getAvailableLocales()) {
+            switch(locale.toString()) {
+                case "th_TH_TH_#u-nu-thai":
+                case "ja_JP_JP_#u-ca-japanese":
+                case "no_NO_NY":
+                    break;
+                default:
+                    jdk.add(locale);
+            }
+        }
 
         final Set<Locale> emulated = Sets.sorted(comparator);
         emulated.addAll(Arrays.asList(DecimalFormatSymbols.getAvailableLocales()));

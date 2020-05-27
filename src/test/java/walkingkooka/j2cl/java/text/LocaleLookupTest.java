@@ -23,31 +23,63 @@ import walkingkooka.ToStringTesting;
 import walkingkooka.reflect.ClassTesting2;
 import walkingkooka.reflect.JavaVisibility;
 
+import java.util.Locale;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public final class LanguageTagLookupTest implements ClassTesting2<LanguageTagLookup<Integer>>,
-        ToStringTesting<LanguageTagLookup<Integer>> {
+public final class LocaleLookupTest implements ClassTesting2<LocaleLookup<Integer>>,
+        ToStringTesting<LocaleLookup<Integer>> {
 
-    private final static String EN = "en";
-    private final static String FR = "fr";
+    private final static Locale EN = Locale.forLanguageTag("en");
+    private final static Locale FR = Locale.forLanguageTag("fr");
     private final static Integer VALUE1 = 1;
 
     @Test
+    public void testAddHeAndIw() {
+        final LocaleLookup<Integer> lookup = LocaleLookup.empty();
+
+        final Locale he = Locale.forLanguageTag("HE");
+        lookup.add(he, VALUE1);
+        assertEquals(VALUE1, lookup.getOrFail(he));
+        assertEquals(VALUE1, lookup.getOrFail(Locale.forLanguageTag("iw")));
+    }
+
+    @Test
+    public void testAddHeAndIw2() {
+        final LocaleLookup<Integer> lookup = LocaleLookup.empty();
+
+        final Locale he = Locale.forLanguageTag("HE-IL");
+        lookup.add(he, VALUE1);
+        assertEquals(VALUE1, lookup.getOrFail(he));
+        assertEquals(VALUE1, lookup.getOrFail(Locale.forLanguageTag("iw-IL")));
+    }
+
+    @Test
+    public void testAddNoNo() {
+        final LocaleLookup<Integer> lookup = LocaleLookup.empty();
+
+        final Locale noNo = Locale.forLanguageTag("no_NO");
+        lookup.add(noNo, VALUE1);
+        assertEquals(VALUE1, lookup.getOrFail(noNo));
+        assertEquals(VALUE1, lookup.getOrFail(Locale.forLanguageTag("no_NO")));
+    }
+
+    @Test
     public void testGetStringOrFailFails() {
-        assertThrows(IllegalArgumentException.class, () -> LanguageTagLookup.empty().getOrFail(EN));
+        assertThrows(IllegalArgumentException.class, () -> LocaleLookup.empty().getOrFail(EN));
     }
 
     @Test
     public void testGetStringOrFailFails2() {
-        final LanguageTagLookup<Integer> lookup = LanguageTagLookup.empty();
+        final LocaleLookup<Integer> lookup = LocaleLookup.empty();
         lookup.add(EN, VALUE1);
-        assertThrows(IllegalArgumentException.class, () -> LanguageTagLookup.empty().getOrFail(FR));
+        assertThrows(IllegalArgumentException.class, () -> LocaleLookup.empty().getOrFail(FR));
     }
 
     @Test
     public void testGetStringOrFail() {
-        final LanguageTagLookup<Integer> lookup = LanguageTagLookup.empty();
+        final LocaleLookup<Integer> lookup = LocaleLookup.empty();
         lookup.add(EN, VALUE1);
 
         assertEquals(VALUE1,
@@ -59,16 +91,16 @@ public final class LanguageTagLookupTest implements ClassTesting2<LanguageTagLoo
 
     @Test
     public void testToString() {
-        final LanguageTagLookup<Integer> lookup = LanguageTagLookup.empty();
-        lookup.add("en", 1);
+        final LocaleLookup<Integer> lookup = LocaleLookup.empty();
+        lookup.add(EN, 1);
         this.toStringAndCheck(lookup, "{en=1}");
     }
 
     // ClassTesting.....................................................................................................
 
     @Override
-    public Class<LanguageTagLookup<Integer>> type() {
-        return Cast.to(LanguageTagLookup.class);
+    public Class<LocaleLookup<Integer>> type() {
+        return Cast.to(LocaleLookup.class);
     }
 
     @Override

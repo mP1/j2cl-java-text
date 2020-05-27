@@ -42,7 +42,7 @@ public abstract class NumberFormat extends Format {
      * All available {@link Locale locales} also provide number format symbols.
      */
     public static Locale[] getAvailableLocales() {
-        return DecimalFormat.LANGUAGE_TAG_TO_FORMATS.availableLocales();
+        return DecimalFormat.LOCALE_TO_FORMATS.availableLocales();
     }
 
     // factory..........................................................................................................

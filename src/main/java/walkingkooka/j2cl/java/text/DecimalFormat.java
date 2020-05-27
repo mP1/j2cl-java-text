@@ -60,9 +60,9 @@ public class DecimalFormat extends NumberFormat {
     final static char ZERO = '0';
 
     /**
-     * Language tag to an array of {@link DecimalFormat}, this is used internally to "get" the symbols for a given Locale.
+     * Locale to an array of {@link DecimalFormat}, this is used internally to "get" the symbols for a given Locale.
      */
-    final static LanguageTagLookup<DecimalFormat[]> LANGUAGE_TAG_TO_FORMATS = LanguageTagLookup.empty();
+    final static LocaleLookup<DecimalFormat[]> LOCALE_TO_FORMATS = LocaleLookup.empty();
 
     // indices into the LANGUAGE_TAG_TO_FORMATS array.
 
@@ -281,7 +281,7 @@ public class DecimalFormat extends NumberFormat {
 
             final DecimalFormatSymbols symbols = new DecimalFormatSymbols(locale);
 
-            LANGUAGE_TAG_TO_FORMATS.add(locale.toLanguageTag(),
+            LOCALE_TO_FORMATS.add(locale,
                     new DecimalFormat[]{
                             new DecimalFormat(currency, currencyDecimalSeparatorAlwaysShown, currencyGroupingSize, currencyGroupingUsed, currencyMaximumFractionDigits, currencyMinimumFractionDigits, currencyMaximumIntegerDigits, currencyMinimumIntegerDigits, currencyMultiplier, currencyNegativePrefix, currencyNegativeSuffix, currencyParse, currencyPattern, currencyPositivePrefix, currencyPositiveSuffix, currencyRoundingMode, symbols),
                             new DecimalFormat(currency, instanceDecimalSeparatorAlwaysShown, instanceGroupingSize, instanceGroupingUsed, instanceMaximumFractionDigits, instanceMinimumFractionDigits, instanceMaximumIntegerDigits, instanceMinimumIntegerDigits, instanceMultiplier, instanceNegativePrefix, instanceNegativeSuffix, instanceParse, instancePattern, instancePositivePrefix, instancePositiveSuffix, instanceRoundingMode, symbols),
@@ -298,12 +298,7 @@ public class DecimalFormat extends NumberFormat {
 
     static DecimalFormat forLocale(final Locale locale,
                                    final int selectorIndex) {
-        return forLocale(locale.toLanguageTag(), selectorIndex);
-    }
-
-    private static DecimalFormat forLocale(final String locale,
-                                           final int selectorIndex) {
-        return LANGUAGE_TAG_TO_FORMATS.getOrFail(locale)[selectorIndex];
+        return LOCALE_TO_FORMATS.getOrFail(locale)[selectorIndex];
     }
 
     /**
