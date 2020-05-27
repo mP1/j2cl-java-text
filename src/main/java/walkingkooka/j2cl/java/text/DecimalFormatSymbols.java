@@ -20,6 +20,7 @@ package walkingkooka.j2cl.java.text;
 import walkingkooka.ToStringBuilder;
 import walkingkooka.collect.set.Sets;
 import walkingkooka.j2cl.java.io.string.StringDataInputDataOutput;
+import walkingkooka.j2cl.java.util.locale.support.LocaleSupport;
 import walkingkooka.j2cl.locale.LocaleAware;
 
 import java.io.DataInput;
@@ -33,9 +34,9 @@ import java.util.Set;
 public class DecimalFormatSymbols {
 
     /**
-     * Language tag to symbols, this is used internally to "get" the symbols for a given Locale.
+     * Locale to symbols, this is used internally to "get" the symbols for a given Locale.
      */
-    private final static LanguageTagLookup<DecimalFormatSymbols> LANGUAGE_TAG_TO_SYMBOLS = LanguageTagLookup.empty();
+    private final static LocaleLookup<DecimalFormatSymbols> LOCALE_TO_SYMBOLS = LocaleLookup.empty();
 
     /**
      * Loads all the {@link DecimalFormatSymbols} constants.
@@ -56,7 +57,7 @@ public class DecimalFormatSymbols {
         final int count = data.readInt();
 
         for (int i = 0; i < count; i++) {
-            register0(readLocales(data), // locales
+            register0(LocaleSupport.readLocales(data), // locales
                     data.readChar(), // decimalSeparator
                     data.readChar(), // digit
                     data.readUTF(), // exponentSeparator
@@ -74,16 +75,7 @@ public class DecimalFormatSymbols {
         }
     }
 
-    private static Set<String> readLocales(final DataInput data) throws IOException {
-        final int count = data.readInt();
-        final Set<String> locales = Sets.ordered();
-        for (int j = 0; j < count; j++) {
-            locales.add(data.readUTF());
-        }
-        return locales;
-    }
-
-    private static void register0(final Set<String> locales,
+    private static void register0(final Set<Locale> locales,
                                   final char decimalSeparator,
                                   final char digit,
                                   final String exponentSeparator,
@@ -97,9 +89,7 @@ public class DecimalFormatSymbols {
                                   final char percent,
                                   final char perMill,
                                   final char zeroDigit) {
-        for (final String languageTag : locales) {
-            final Locale locale = Locale.forLanguageTag(languageTag);
-
+        for (final Locale locale : locales) {
             Currency currency = null;
             String currencySymbol = null;
 
@@ -117,7 +107,7 @@ public class DecimalFormatSymbols {
                 currencySymbol = "\u00A4";
             }
 
-            LANGUAGE_TAG_TO_SYMBOLS.add(languageTag,
+            LOCALE_TO_SYMBOLS.add(locale,
                     new DecimalFormatSymbols(currency,
                             currencySymbol,
                             decimalSeparator,
@@ -177,7 +167,7 @@ public class DecimalFormatSymbols {
      * All available {@link Locale locales} also provide decimal format symbols.
      */
     public static Locale[] getAvailableLocales() {
-        return LANGUAGE_TAG_TO_SYMBOLS.availableLocales();
+        return LOCALE_TO_SYMBOLS.availableLocales();
     }
 
     public static DecimalFormatSymbols getInstance() {
@@ -199,7 +189,7 @@ public class DecimalFormatSymbols {
     }
 
     public DecimalFormatSymbols(final Locale locale) {
-        this(LANGUAGE_TAG_TO_SYMBOLS.getOrFail(locale), locale);
+        this(LOCALE_TO_SYMBOLS.getOrFail(locale), locale);
     }
 
     private DecimalFormatSymbols(final DecimalFormatSymbols source,
