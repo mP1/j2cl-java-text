@@ -18,12 +18,21 @@
 package walkingkooka.j2cl.java.text;
 
 import javaemul.internal.annotations.GwtIncompatible;
+import walkingkooka.NeverError;
+import walkingkooka.collect.map.Maps;
+import walkingkooka.j2cl.java.io.string.StringDataInputDataOutput;
+import walkingkooka.j2cl.java.util.locale.support.LocaleSupport;
+import walkingkooka.j2cl.locale.LocaleAware;
 import walkingkooka.text.CharSequences;
 
+import java.io.DataInput;
+import java.io.IOException;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.Locale;
+import java.util.Map;
+import java.util.Set;
 import java.util.Vector;
 
 /**
@@ -299,7 +308,120 @@ import java.util.Vector;
  * @see DateFormatSymbols
  * @see DecimalFormat
  */
+@LocaleAware
 public class SimpleDateFormat extends DateFormat {
+
+    private final static LocaleLookup<SimpleDateFormat[]> localeToInstances = LocaleLookup.empty();
+
+    /**
+     * Loads all the {@link DecimalFormatSymbols} data and creates constants.
+     */
+    static {
+        try {
+            register(StringDataInputDataOutput.input(walkingkooka.j2cl.java.text.DateFormatProvider.DATA));
+        } catch (final IOException cause) {
+            throw new Error(cause);
+        }
+    }
+
+    /**
+     * Intended to only be called by the static init above. A test exists to verify the {@link DataInput} is consumed
+     * and further operations will fail with an {@link java.io.EOFException}.
+     */
+    static void register(final DataInput data) throws IOException {
+        final int count = data.readInt();
+
+        for (int i = 0; i < count; i++) {
+            final Set<Locale> locales = LocaleSupport.readLocales(data);
+
+            final String[] patterns = new String[STYLE_COUNT + STYLE_COUNT * STYLE_COUNT + STYLE_COUNT];
+            for(int p = 0; p < patterns.length; p++) {
+                patterns[p] = data.readUTF();
+            }
+
+            for(final Locale locale : locales) {
+                final SimpleDateFormat[] instances = new SimpleDateFormat[STYLE_COUNT + STYLE_COUNT * STYLE_COUNT + STYLE_COUNT];
+
+                for(int p = 0; p < patterns.length; p++) {
+                    instances[p] = new SimpleDateFormat(patterns[p], locale);
+                }
+
+                localeToInstances.add(locale, instances);
+            }
+        }
+    }
+
+    /**
+     * There are four styles.
+     */
+    private final static int STYLE_COUNT = 4; // SHORT, MEDIUM, LONG, FULL
+
+    private final static int DATE_INSTANCE_INDEX = 0;
+    private final static int DATETIME_INSTANCE_INDEX = DATE_INSTANCE_INDEX + STYLE_COUNT;
+    private final static int TIME_INSTANCE_INDEX = DATETIME_INSTANCE_INDEX + STYLE_COUNT * STYLE_COUNT;
+
+    private final static int SHORT_INDEX = 0;
+    private final static int MEDIUM_INDEX = 1;
+    private final static int LONG_INDEX = 2;
+    private final static int FULL_INDEX = 3;
+
+    // support methods for the public static methods of the same name (without the trailing 0) on DateFormat.
+
+    static SimpleDateFormat getDateInstance0(final int style,
+                                             final Locale locale) {
+        return instance(locale,
+                DATE_INSTANCE_INDEX,
+                style);
+    }
+
+    static SimpleDateFormat getDateTimeInstance0(final int dateStyle,
+                                                 final int timeStyle,
+                                                 final Locale locale) {
+        return instance(locale,
+                DATETIME_INSTANCE_INDEX + styleToIndex(dateStyle) * STYLE_COUNT,
+                timeStyle);
+    }
+
+    static SimpleDateFormat getTimeInstance0(final int style,
+                                             final Locale locale) {
+        return instance(locale,
+                TIME_INSTANCE_INDEX,
+                style);
+    }
+
+    private static SimpleDateFormat instance(final Locale locale,
+                                             final int base,
+                                             final int style) {
+        return localeToInstances.getOrFail(locale)
+                [base + styleToIndex(style)].cloneState();
+    }
+
+    /**
+     * Translates the style value into an index matching the order present in the {@link #localeToInstances} values array
+     */
+    static int styleToIndex(final int style) {
+        final int styleIndex;
+
+        switch (style) {
+            case DateFormat.SHORT:
+                styleIndex = SHORT_INDEX;
+                break;
+            case DateFormat.MEDIUM:
+                styleIndex = MEDIUM_INDEX;
+                break;
+            case DateFormat.LONG:
+                styleIndex = LONG_INDEX;
+                break;
+            case DateFormat.FULL:
+                styleIndex = FULL_INDEX;
+                break;
+            default:
+                NeverError.unhandledCase(style, DateFormat.SHORT, DateFormat.MEDIUM, DateFormat.LONG, DateFormat.FULL);
+                styleIndex = -1;
+                break;
+        }
+        return styleIndex;
+    }
 
     @GwtIncompatible
     private static final long serialVersionUID = 4774881970558875024L;
@@ -328,7 +450,6 @@ public class SimpleDateFormat extends DateFormat {
 //        icuFormat.setTimeZone(com.ibm.icu.util.TimeZone.getTimeZone(tzId));
 //        pattern = (String)getInternalField("pattern", icuFormat); //$NON-NLS-1$
 //        formatData = new DateFormatSymbols(Locale.getDefault());
-        throw new UnsupportedOperationException();
     }
 
     /**
@@ -451,7 +572,6 @@ public class SimpleDateFormat extends DateFormat {
         pattern = template;
 //        formatData = (DateFormatSymbols) value.clone();
         this.formatData = value.cloneState();
-        throw new UnsupportedOperationException();
     }
 
 //    private void copySymbols(DateFormatSymbols value, com.ibm.icu.text.DateFormatSymbols icuSymbols) {
@@ -486,7 +606,7 @@ public class SimpleDateFormat extends DateFormat {
 //        icuFormat.setTimeZone(com.ibm.icu.util.TimeZone.getTimeZone(tzId));
         pattern = template;
 //        formatData = new DateFormatSymbols(locale, icuFormat.getDateFormatSymbols());
-        throw new UnsupportedOperationException();
+        this.formatData = DateFormatSymbols.getInstance(locale);
     }
 
 //    SimpleDateFormat(Locale locale, com.ibm.icu.text.SimpleDateFormat icuFormat){
@@ -541,40 +661,40 @@ public class SimpleDateFormat extends DateFormat {
          */
 //        String templateForICU = patternForICU(template);
 //        icuFormat.applyPattern(templateForICU);
-//        pattern = template;
+        pattern = template;
         throw new UnsupportedOperationException();
     }
 
-    /**
-     * Converts the Java-spec pattern into an equivalent pattern used by ICU.
-     * 
-     * @param p
-     *            the Java-spec style pattern.
-     * @return the ICU-style pattern.
-     */
-    @SuppressWarnings("nls")
-    private String patternForICU(String p) {
-        String[] subPatterns = p.split("'");
-        boolean quote = false;
-        boolean first = true;
-        StringBuilder result = new StringBuilder();
-        for (String subPattern : subPatterns) {
-            if (!quote) {
-                // replace 'y' with 'yy' for ICU to follow Java spec
-                result.append((first ? "" : "'")
-                        + subPattern.replaceAll("(?<!y)y(?!y)", "yy"));
-                first = false;
-            } else {
-                result.append("'" + subPattern);
-            }
-            quote = !quote;
-        }
-        if (p.endsWith("'")) {
-            result.append("'");
-        }
-        return result.toString();
-    }
-
+//    /**
+//     * Converts the Java-spec pattern into an equivalent pattern used by ICU.
+//     *
+//     * @param p
+//     *            the Java-spec style pattern.
+//     * @return the ICU-style pattern.
+//     */
+//    @SuppressWarnings("nls")
+//    private String patternForICU(String p) {
+//        String[] subPatterns = p.split("'");
+//        boolean quote = false;
+//        boolean first = true;
+//        StringBuilder result = new StringBuilder();
+//        for (String subPattern : subPatterns) {
+//            if (!quote) {
+//                // replace 'y' with 'yy' for ICU to follow Java spec
+//                result.append((first ? "" : "'")
+//                        + subPattern.replaceAll("(?<!y)y(?!y)", "yy"));
+//                first = false;
+//            } else {
+//                result.append("'" + subPattern);
+//            }
+//            quote = !quote;
+//        }
+//        if (p.endsWith("'")) {
+//            result.append("'");
+//        }
+//        return result.toString();
+//    }
+//
 //    /**
 //     * Returns a new {@code SimpleDateFormat} with the same pattern and
 //     * properties as this simple date format.
@@ -590,6 +710,23 @@ public class SimpleDateFormat extends DateFormat {
 //        clone.tzId = tzId;
 //        return clone;
 //    }
+
+    /**
+     * Same idea as {@link #clone()} performing the same operation.
+     */
+    SimpleDateFormat cloneState() {
+        final SimpleDateFormat clone = new SimpleDateFormat();
+
+        clone.calendar = (Calendar)this.calendar.clone();
+        clone.creationYear = this.creationYear;
+        clone.defaultCenturyStart = (Date)this.defaultCenturyStart.clone();
+        clone.formatData = this.formatData.cloneState();
+        clone.numberFormat = this.numberFormat.cloneState();
+        clone.pattern = this.pattern;
+        clone.tzId = this.tzId;
+
+        return clone;
+    }
 
     /**
      * Compares the specified object with this simple date format and indicates
@@ -1185,4 +1322,9 @@ public class SimpleDateFormat extends DateFormat {
 //        formatData = (DateFormatSymbols) fields.get("formatData", null); //$NON-NLS-1$
 //        pattern = (String) fields.get("pattern", ""); //$NON-NLS-1$ //$NON-NLS-2$
 //    }
+
+    @Override
+    public String toString() {
+        return this.toPattern();
+    }
 }
