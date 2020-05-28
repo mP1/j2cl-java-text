@@ -10,8 +10,8 @@
 
 This aims to provide most of the basics of the package.
 
-- DateFormat
-- DateFormat.Field
+- DateFormat TODO [parse text](https://github.com/mP1/j2cl-java-text/issues/183), [format date](https://github.com/mP1/j2cl-java-text/issues/184)
+- DateFormat.Field (DONE)
 - DateFormatSymbols (DONE)
 
 - DecimalFormat (DONE)
@@ -27,7 +27,9 @@ This aims to provide most of the basics of the package.
 
 - ParsePosition (DONE)
 
-- SimpleDateFormat
+- SimpleDateFormat [parse pattern](https://github.com/mP1/j2cl-java-text/issues/192)
+
+
 
 ## DecimalFormat
 
@@ -118,12 +120,17 @@ For the moment the following classes will not be supported:
 - CollationKey
 - Collator
 
+- DateFormat TODO [parse text](https://github.com/mP1/j2cl-java-text/issues/183), [format date](https://github.com/mP1/j2cl-java-text/issues/184)
+- DateFormat.Field (DONE)
+
 - MessageFormat
 - MessageFormat.Field
 
 - RuleBasedCollator
 
 Some of these might need to be supported particularly to allow java.time to be completed emulated.
+
+
 
 ### Transpiling
 
