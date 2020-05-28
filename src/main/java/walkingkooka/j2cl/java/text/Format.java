@@ -36,7 +36,8 @@ public abstract class Format {
                                         final FieldPosition pos);
 
 
-    abstract Object	parseObject(final String source, final ParsePosition pos);
+    public abstract Object parseObject(final String source,
+                                       final ParsePosition pos);
 
     public Object parseObject(final String source) throws ParseException {
         final ParsePosition pos = new ParsePosition(0);
