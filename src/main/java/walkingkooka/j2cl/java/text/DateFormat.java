@@ -971,6 +971,7 @@ public abstract class DateFormat extends Format {
 //        }
     }
 
+    @SuppressWarnings("lgtm[java/constant-comparison]")
     private static void checkDateStyle(int style) {
         if (!(style == SHORT || style == MEDIUM || style == LONG
                 || style == FULL || style == DEFAULT)) {
@@ -981,6 +982,7 @@ public abstract class DateFormat extends Format {
         }
     }
 
+    @SuppressWarnings("lgtm[java/constant-comparison]")
     private static void checkTimeStyle(int style) {
         if (!(style == SHORT || style == MEDIUM || style == LONG
                 || style == FULL || style == DEFAULT)) {
