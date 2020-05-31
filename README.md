@@ -8,26 +8,9 @@
 
 # java.text j2cl
 
-This aims to provide most of the basics of the package.
-
-- DateFormat TODO [parse text](https://github.com/mP1/j2cl-java-text/issues/183), [format date](https://github.com/mP1/j2cl-java-text/issues/184)
-- DateFormat.Field (DONE)
-- DateFormatSymbols (DONE)
-
-- DecimalFormat (DONE)
-- DecimalFormatSymbols (DONE)
-
-- FieldPosition (DONE)
-
-- Format (DONE)
-- Format.Field (DONE)
-
-- NumberFormat (DONE)
-- NumberFormat.Field
-
-- ParsePosition (DONE)
-
-- SimpleDateFormat [parse pattern](https://github.com/mP1/j2cl-java-text/issues/192)
+This aims to provide most of the basics of the `java.text` package. Note while most of the core functionality is present,
+some parts are methods are missing. Care should be taken when selecting locales and other extracted data to avoid
+very large amounts of data being extracted resulting in javascript with huge strings holding this data.
 
 
 
@@ -121,27 +104,19 @@ For the moment the following classes will not be supported:
 - Collator
 
 - DateFormat TODO [parse text](https://github.com/mP1/j2cl-java-text/issues/183), [format date](https://github.com/mP1/j2cl-java-text/issues/184)
-- DateFormat.Field (DONE)
 
 - MessageFormat
 - MessageFormat.Field
 
 - RuleBasedCollator
 
-Some of these might need to be supported particularly to allow java.time to be completed emulated.
-
+- Serialization is not supported, and all support classes and forms including magic methods such as `writeReplace` are removed.
 
 
 ### Transpiling
 
 The `j2cl-maven-plugin` will shade the source during the transpile phase, so `walkingkooka.j2cl.java.text`
 is available to the runtime as `java.text`. 
-
-
-
-### Serialization
-
-Serialization is not supported, and all support classes and forms including magic methods such as `writeReplace` are removed.
 
 
 
