@@ -19,7 +19,7 @@ package walkingkooka.j2cl.java.text;
 
 import javaemul.internal.annotations.GwtIncompatible;
 import walkingkooka.NeverError;
-import walkingkooka.collect.map.Maps;
+import walkingkooka.collect.list.Lists;
 import walkingkooka.j2cl.java.io.string.StringDataInputDataOutput;
 import walkingkooka.j2cl.java.util.locale.support.LocaleSupport;
 import walkingkooka.j2cl.locale.LocaleAware;
@@ -30,10 +30,11 @@ import java.io.IOException;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import java.util.List;
 import java.util.Locale;
-import java.util.Map;
 import java.util.Set;
 import java.util.Vector;
+import java.util.function.IntFunction;
 
 /**
  * A concrete class for formatting and parsing dates in a locale-sensitive
@@ -469,86 +470,86 @@ public class SimpleDateFormat extends DateFormat {
         this(pattern, Locale.getDefault());
     }
     
-    /**
-     * Validates the format character.
-     *
-     * @param format
-     *            the format character
-     *
-     * @throws IllegalArgumentException
-     *             when the format character is invalid
-     */
-    private void validateFormat(char format) {
-        int index = patternChars.indexOf(format);
-        if (index == -1) {
+//    /**
+//     * Validates the format character.
+//     *
+//     * @param format
+//     *            the format character
+//     *
+//     * @throws IllegalArgumentException
+//     *             when the format character is invalid
+//     */
+//    private void validateFormat(char format) {
+//        int index = patternChars.indexOf(format);
+//        if (index == -1) {
 //            // text.03=Unknown pattern character - '{0}'
 //            throw new IllegalArgumentException(Messages.getString(
 //                    "text.03", format)); //$NON-NLS-1$
-            throw new IllegalArgumentException("Unknown pattern character - " + CharSequences.quoteIfChars(format));
-        }
-    }
-
-    /**
-     * Validates the pattern.
-     *
-     * @param template
-     *            the pattern to validate.
-     *
-     * @throws NullPointerException
-     *             if the pattern is null
-     * @throws IllegalArgumentException
-     *             if the pattern is invalid
-     */
-    private void validatePattern(String template) {
-        boolean quote = false;
-        int next, last = -1, count = 0;
-
-        final int patternLength = template.length();
-        for (int i = 0; i < patternLength; i++) {
-            next = (template.charAt(i));
-            if (next == '\'') {
-                if (count > 0) {
-                    validateFormat((char) last);
-                    count = 0;
-                }
-                if (last == next) {
-                    last = -1;
-                } else {
-                    last = next;
-                }
-                quote = !quote;
-                continue;
-            }
-            if (!quote
-                    && (last == next || (next >= 'a' && next <= 'z') || (next >= 'A' && next <= 'Z'))) {
-                if (last == next) {
-                    count++;
-                } else {
-                    if (count > 0) {
-                        validateFormat((char) last);
-                    }
-                    last = next;
-                    count = 1;
-                }
-            } else {
-                if (count > 0) {
-                    validateFormat((char) last);
-                    count = 0;
-                }
-                last = -1;
-            }
-        }
-        if (count > 0) {
-            validateFormat((char) last);
-        }
-
-        if (quote) {
-            // text.04=Unterminated quote {0}
-//            throw new IllegalArgumentException(Messages.getString("text.04")); //$NON-NLS-1$
-            throw new IllegalArgumentException("Unterminated quote");
-        }
-
-    }
+//            throw new IllegalArgumentException("Unknown pattern character - " + CharSequences.quoteIfChars(format));
+//        }
+//    }
+//
+//    /**
+//     * Validates the pattern.
+//     *
+//     * @param template
+//     *            the pattern to validate.
+//     *
+//     * @throws NullPointerException
+//     *             if the pattern is null
+//     * @throws IllegalArgumentException
+//     *             if the pattern is invalid
+//     */
+//    private void validatePattern(String template) {
+//        boolean quote = false;
+//        int next, last = -1, count = 0;
+//
+//        final int patternLength = template.length();
+//        for (int i = 0; i < patternLength; i++) {
+//            next = (template.charAt(i));
+//            if (next == '\'') {
+//                if (count > 0) {
+//                    validateFormat((char) last);
+//                    count = 0;
+//                }
+//                if (last == next) {
+//                    last = -1;
+//                } else {
+//                    last = next;
+//                }
+//                quote = !quote;
+//                continue;
+//            }
+//            if (!quote
+//                    && (last == next || (next >= 'a' && next <= 'z') || (next >= 'A' && next <= 'Z'))) {
+//                if (last == next) {
+//                    count++;
+//                } else {
+//                    if (count > 0) {
+//                        validateFormat((char) last);
+//                    }
+//                    last = next;
+//                    count = 1;
+//                }
+//            } else {
+//                if (count > 0) {
+//                    validateFormat((char) last);
+//                    count = 0;
+//                }
+//                last = -1;
+//            }
+//        }
+//        if (count > 0) {
+//            validateFormat((char) last);
+//        }
+//
+//        if (quote) {
+//            // text.04=Unterminated quote {0}
+////            throw new IllegalArgumentException(Messages.getString("text.04")); //$NON-NLS-1$
+//            throw new IllegalArgumentException("Unterminated quote");
+//        }
+//
+//    }
     
     /**
      * Constructs a new {@code SimpleDateFormat} using the specified
@@ -566,11 +567,12 @@ public class SimpleDateFormat extends DateFormat {
      */
     public SimpleDateFormat(String template, DateFormatSymbols value) {
         this(Locale.getDefault());
-        validatePattern(template);
+//        acceptPattern(template);
 //        icuFormat = new com.ibm.icu.text.SimpleDateFormat(template, Locale.getDefault());
 //        icuFormat.setTimeZone(com.ibm.icu.util.TimeZone.getTimeZone(tzId));
-        pattern = template;
+//        pattern = template;
 //        formatData = (DateFormatSymbols) value.clone();
+        this.applyPattern(template);
         this.formatData = value.cloneState();
     }
 
@@ -601,10 +603,11 @@ public class SimpleDateFormat extends DateFormat {
      */
     public SimpleDateFormat(String template, Locale locale) {
         this(locale);
-        validatePattern(template);
+//        acceptPattern(template);
 //        icuFormat = new com.ibm.icu.text.SimpleDateFormat(template, locale);
 //        icuFormat.setTimeZone(com.ibm.icu.util.TimeZone.getTimeZone(tzId));
-        pattern = template;
+//        pattern = template;
+        this.applyPattern(template);
 //        formatData = new DateFormatSymbols(locale, icuFormat.getDateFormatSymbols());
         this.formatData = DateFormatSymbols.getInstance(locale);
     }
@@ -653,7 +656,8 @@ public class SimpleDateFormat extends DateFormat {
      *                if the pattern is invalid.
      */
     public void applyPattern(String template) {
-        validatePattern(template);
+        this.components = SimpleDateFormatComponent.parsePattern(template);
+        this.pattern = template;
         /*
          * ICU spec explicitly mentions that "ICU interprets a single 'y'
          * differently than Java." We need to do a trick here to follow Java
@@ -661,9 +665,9 @@ public class SimpleDateFormat extends DateFormat {
          */
 //        String templateForICU = patternForICU(template);
 //        icuFormat.applyPattern(templateForICU);
-        pattern = template;
-        throw new UnsupportedOperationException();
     }
+
+    private List<SimpleDateFormatComponent> components;
 
 //    /**
 //     * Converts the Java-spec pattern into an equivalent pattern used by ICU.
@@ -723,6 +727,7 @@ public class SimpleDateFormat extends DateFormat {
         clone.formatData = this.formatData.cloneState();
         clone.numberFormat = this.numberFormat.cloneState();
         clone.pattern = this.pattern;
+        clone.components = this.components; // sharing is ok, list never modified
         clone.tzId = this.tzId;
 
         return clone;
