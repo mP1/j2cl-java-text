@@ -313,7 +313,7 @@ public class SimpleDateFormat extends DateFormat {
     private final static LocaleLookup<SimpleDateFormat[]> localeToInstances = LocaleLookup.empty();
 
     /**
-     * Loads all the {@link DecimalFormatSymbols} data and creates constants.
+     * Loads all the {@link DateFormatSymbols} data and creates constants.
      */
     static {
         try {
