@@ -21,9 +21,19 @@ import org.junit.jupiter.api.Test;
 import walkingkooka.HashCodeEqualsDefinedTesting2;
 import walkingkooka.ToStringTesting;
 
+import java.util.Date;
+
 public class SimpleDateFormatComponentLiteralTest extends SimpleDateFormatComponentTestCase<SimpleDateFormatComponentLiteral>
         implements HashCodeEqualsDefinedTesting2<SimpleDateFormatComponentLiteral>,
         ToStringTesting<SimpleDateFormatComponentLiteral> {
+
+    @Test
+    public void testFormat() {
+        this.formatDateAndCheck(SimpleDateFormatComponentLiteral.with('!'),
+             new Date(),
+             false,
+             "!");
+    }
 
     @Test
     public void testDifferentLiteral() {

@@ -17,10 +17,12 @@
 
 package walkingkooka.j2cl.java.text;
 
+import java.util.Calendar;
+
 /**
  * Hour in day pattern code <code>H</code> where hour values are between 0 and 23.
  */
-final class SimpleDateFormatComponentHourInDay023 extends SimpleDateFormatComponent2 {
+final class SimpleDateFormatComponentHourInDay023 extends SimpleDateFormatComponentNumber {
 
     final static char LETTER = HOUR_IN_DAY_0_23;
 
@@ -31,6 +33,20 @@ final class SimpleDateFormatComponentHourInDay023 extends SimpleDateFormatCompon
     private SimpleDateFormatComponentHourInDay023(final int length) {
         super(length);
     }
+
+    // format...........................................................................................................
+
+    @Override
+    int calendarField() {
+        return Calendar.HOUR_OF_DAY;
+    }
+
+    @Override
+    int adjustValue() {
+        return 0;
+    }
+
+    // SimpleDateFormatComponent2.......................................................................................
 
     @Override
     char letter() {

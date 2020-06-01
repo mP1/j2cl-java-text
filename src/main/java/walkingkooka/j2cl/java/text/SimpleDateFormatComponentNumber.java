@@ -17,17 +17,15 @@
 
 package walkingkooka.j2cl.java.text;
 
-import java.util.Calendar;
+/**
+ * Base class for most {@link SimpleDateFormatComponent} holding a run count for the length of that pattern.
+ */
+abstract class SimpleDateFormatComponentNumber extends SimpleDateFormatComponent2 {
 
-final class SimpleDateFormatComponentWeekYear extends SimpleDateFormatComponent2 {
-
-    final static char LETTER = WEEK_YEAR;
-
-    static SimpleDateFormatComponentWeekYear with(final int length) {
-        return new SimpleDateFormatComponentWeekYear(length);
-    }
-
-    private SimpleDateFormatComponentWeekYear(final int length) {
+    /**
+     * Package private to limit sub classing.
+     */
+    SimpleDateFormatComponentNumber(final int length) {
         super(length);
     }
 
@@ -35,20 +33,10 @@ final class SimpleDateFormatComponentWeekYear extends SimpleDateFormatComponent2
 
     @Override
     final void formatDate(final SimpleDateFormatRequest request) {
-        final int year = request.calendar.get(Calendar.YEAR);
-        final int length = this.length;
-
-        this.formatNumericValue(request,
-                2 == length ?
-                        year % 100 : // length = 2 then two digits year
-                        year,
-                length);
+        this.formatCalendarFieldNumericValue(request, this.calendarField(), this.adjustValue(), this.length);
     }
 
-    // SimpleDateFormatComponent2.......................................................................................
+    abstract int calendarField();
 
-    @Override
-    char letter() {
-        return LETTER;
-    }
+    abstract int adjustValue();
 }

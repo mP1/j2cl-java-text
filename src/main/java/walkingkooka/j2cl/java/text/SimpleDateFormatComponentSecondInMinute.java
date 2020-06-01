@@ -17,7 +17,9 @@
 
 package walkingkooka.j2cl.java.text;
 
-final class SimpleDateFormatComponentSecondInMinute extends SimpleDateFormatComponent2 {
+import java.util.Calendar;
+
+final class SimpleDateFormatComponentSecondInMinute extends SimpleDateFormatComponentNumber {
 
     final static char LETTER = SECOND_IN_MINUTE;
 
@@ -28,6 +30,20 @@ final class SimpleDateFormatComponentSecondInMinute extends SimpleDateFormatComp
     private SimpleDateFormatComponentSecondInMinute(final int length) {
         super(length);
     }
+
+    // format...........................................................................................................
+
+    @Override
+    int calendarField() {
+        return Calendar.SECOND;
+    }
+
+    @Override
+    int adjustValue() {
+        return 0;
+    }
+
+    // SimpleDateFormatComponent2.......................................................................................
 
     @Override
     char letter() {

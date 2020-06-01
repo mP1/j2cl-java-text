@@ -17,6 +17,8 @@
 
 package walkingkooka.j2cl.java.text;
 
+import java.util.Calendar;
+
 final class SimpleDateFormatComponentDayNameInWeek extends SimpleDateFormatComponent2 {
 
     final static char LETTER = DAY_NAME_IN_WEEK;
@@ -28,6 +30,27 @@ final class SimpleDateFormatComponentDayNameInWeek extends SimpleDateFormatCompo
     private SimpleDateFormatComponentDayNameInWeek(final int length) {
         super(length);
     }
+
+    // format...........................................................................................................
+
+    @Override
+    void formatDate(final SimpleDateFormatRequest request) {
+        final int day = request.calendar.get(Calendar.DAY_OF_WEEK);
+        final int length = this.length;
+        final DateFormatSymbols symbols = request.symbols;
+
+        switch(length) {
+            case 1:
+            case 2:
+            case 3:
+                this.formatName(request, day, symbols.getShortWeekdays());
+                break;
+            default:
+                this.formatName(request, day, symbols.getWeekdays());
+                break;
+        }
+    }
+    // SimpleDateFormatComponent........................................................................................
 
     @Override
     char letter() {

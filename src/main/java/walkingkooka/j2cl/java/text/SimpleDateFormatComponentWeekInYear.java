@@ -17,7 +17,9 @@
 
 package walkingkooka.j2cl.java.text;
 
-final class SimpleDateFormatComponentWeekInYear extends SimpleDateFormatComponent2 {
+import java.util.Calendar;
+
+final class SimpleDateFormatComponentWeekInYear extends SimpleDateFormatComponentNumber {
 
     final static char LETTER = WEEK_IN_YEAR;
 
@@ -28,6 +30,20 @@ final class SimpleDateFormatComponentWeekInYear extends SimpleDateFormatComponen
     private SimpleDateFormatComponentWeekInYear(final int length) {
         super(length);
     }
+
+    // format...........................................................................................................
+
+    @Override
+    int calendarField() {
+        return Calendar.WEEK_OF_YEAR;
+    }
+
+    @Override
+    int adjustValue() {
+        return 0;
+    }
+
+    // SimpleDateFormatComponent2.......................................................................................
 
     @Override
     char letter() {

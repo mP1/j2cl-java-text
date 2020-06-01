@@ -17,7 +17,17 @@
 
 package walkingkooka.j2cl.java.text;
 
+import org.junit.jupiter.api.Test;
+
+import java.util.Locale;
+
 public final class SimpleDateFormatComponentTimeZoneGeneralTest extends SimpleDateFormatComponentTestCase2<SimpleDateFormatComponentTimeZoneGeneral> {
+
+    @Test
+    public final void testFormatDateAdelaide() {
+        this.formatDateAndCheck(1, DATE, Locale.forLanguageTag("Australia/Adelaide"));
+    }
+
     @Override
     SimpleDateFormatComponentTimeZoneGeneral createComponent(final int length) {
         return SimpleDateFormatComponentTimeZoneGeneral.with(length);

@@ -20,11 +20,47 @@ package walkingkooka.j2cl.java.text;
 import walkingkooka.reflect.ClassTesting;
 import walkingkooka.reflect.JavaVisibility;
 
-public abstract class SimpleDateFormatComponentTestCase<C> implements ClassTesting<C> {
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
+import java.util.TimeZone;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public abstract class SimpleDateFormatComponentTestCase<C extends SimpleDateFormatComponent> implements ClassTesting<C> {
 
     SimpleDateFormatComponentTestCase() {
         super();
     }
+
+    final void formatDateAndCheck(final C component,
+                                  final Date date,
+                                  final boolean daylightSavingTime,
+                                  final String expected) {
+        this.formatDateAndCheck(component,
+                date,
+                new DateFormatSymbols(Locale.forLanguageTag("EN-AU")),
+                daylightSavingTime,
+                expected);
+    }
+
+
+    final void formatDateAndCheck(final C component,
+                                  final Date date,
+                                  final DateFormatSymbols symbols,
+                                  final boolean daylightSavingTime,
+                                  final String expected) {
+        final Calendar calendar = Calendar.getInstance(TimeZone.getTimeZone("Australia/Sydney"), Locale.forLanguageTag("EN-AU"));
+        calendar.setTime(date);
+
+        final StringBuffer text = new StringBuffer();
+        component.formatDate(SimpleDateFormatRequest.with(calendar, text, symbols, daylightSavingTime));
+        assertEquals(expected,
+                text.toString(),
+                () -> component + " format " + date + " symbols=" + symbols + " daylightSavingTime: " + daylightSavingTime);
+    }
+
+    // ClassTesting.....................................................................................................
 
     @Override
     public final JavaVisibility typeVisibility() {

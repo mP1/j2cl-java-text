@@ -19,7 +19,6 @@ package walkingkooka.j2cl.java.text;
 
 import javaemul.internal.annotations.GwtIncompatible;
 import walkingkooka.NeverError;
-import walkingkooka.collect.list.Lists;
 import walkingkooka.j2cl.java.io.string.StringDataInputDataOutput;
 import walkingkooka.j2cl.java.util.locale.support.LocaleSupport;
 import walkingkooka.j2cl.locale.LocaleAware;
@@ -34,7 +33,6 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Set;
 import java.util.Vector;
-import java.util.function.IntFunction;
 
 /**
  * A concrete class for formatting and parsing dates in a locale-sensitive

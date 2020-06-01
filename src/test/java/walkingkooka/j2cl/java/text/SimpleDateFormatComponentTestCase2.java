@@ -22,12 +22,81 @@ import walkingkooka.HashCodeEqualsDefinedTesting2;
 import walkingkooka.ToStringTesting;
 import walkingkooka.text.CharSequences;
 
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public abstract class SimpleDateFormatComponentTestCase2<C extends SimpleDateFormatComponent2> extends SimpleDateFormatComponentTestCase<C>
         implements HashCodeEqualsDefinedTesting2<C>,
         ToStringTesting<C> {
 
     SimpleDateFormatComponentTestCase2() {
         super();
+    }
+
+    final static int YEAR = 2020;
+    final static int MONTH = Calendar.JUNE;
+    final static int DAY = 30;
+    final static int HOURS = 12;
+    final static int MINUTES = 58;
+    final static int SECONDS = 59;
+    final static int MILLI = 987654321;
+
+    final static Date DATE = new Date(Date.UTC(YEAR - 1900, MONTH, DAY, HOURS, MINUTES, SECONDS) + MILLI);
+
+    // formatCalendarFieldNumericValue.......................................................................................................
+
+    @Test
+    public final void testFormatDate1() {
+        this.formatDateAndCheck(1, DATE);
+    }
+
+    @Test
+    public final void testFormatDate2() {
+        this.formatDateAndCheck(2, DATE);
+    }
+
+    @Test
+    public final void testFormatDate3() {
+        this.formatDateAndCheck(3, DATE);
+    }
+
+    @Test
+    public final void testFormatDate4() {
+        // YUCK!!!
+        if(false == this instanceof SimpleDateFormatComponentTimeZoneIso8601Test) {
+            this.formatDateAndCheck(4, DATE);
+        }
+    }
+
+    final void formatDateAndCheck(final int length,
+                                  final Date date) {
+        this.formatDateAndCheck(length,
+                date,
+                Locale.forLanguageTag("EN-AU"),
+                false);
+    }
+
+    final void formatDateAndCheck(final int length,
+                                  final Date date,
+                                  final Locale locale) {
+        this.formatDateAndCheck(length,
+                date,
+                locale,
+                false);
+    }
+
+    final void formatDateAndCheck(final int length,
+                                  final Date date,
+                                  final Locale locale,
+                                  final boolean daylightSavingTime) {
+        final C component = this.createComponent(length);
+        this.formatDateAndCheck(component,
+                date,
+                daylightSavingTime,
+                new java.text.SimpleDateFormat(CharSequences.repeating(component.letter(), length).toString(), locale).format(date));
     }
 
     @Test

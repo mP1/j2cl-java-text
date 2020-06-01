@@ -17,6 +17,8 @@
 
 package walkingkooka.j2cl.java.text;
 
+import java.util.Calendar;
+
 final class SimpleDateFormatComponentMonthInYear extends SimpleDateFormatComponent2 {
 
     final static char LETTER = MONTH_IN_YEAR;
@@ -28,6 +30,29 @@ final class SimpleDateFormatComponentMonthInYear extends SimpleDateFormatCompone
     private SimpleDateFormatComponentMonthInYear(final int length) {
         super(length);
     }
+
+    // format...........................................................................................................
+
+    @Override
+    void formatDate(final SimpleDateFormatRequest request) {
+        final int month = request.calendar.get(Calendar.MONTH);
+        final int length = this.length;
+
+        switch(length) {
+            case 1:
+            case 2:
+                this.formatNumericValue(request, month + 1, length);
+                break;
+            case 3:
+                this.formatName(request, month, request.symbols.getShortMonths());
+                break;
+            default:
+                this.formatName(request, month, request.symbols.getMonths());
+                break;
+        }
+    }
+
+    // SimpleDateFormatComponent2.......................................................................................
 
     @Override
     char letter() {
