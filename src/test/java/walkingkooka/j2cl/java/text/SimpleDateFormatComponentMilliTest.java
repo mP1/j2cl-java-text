@@ -17,7 +17,10 @@
 
 package walkingkooka.j2cl.java.text;
 
-public final class SimpleDateFormatComponentMilliTest extends SimpleDateFormatComponentTestCase2<SimpleDateFormatComponentMilli> {
+import org.junit.jupiter.api.Test;
+
+public final class SimpleDateFormatComponentMilliTest extends SimpleDateFormatComponentNumberTestCase<SimpleDateFormatComponentMilli> {
+
     @Override
     SimpleDateFormatComponentMilli createComponent(final int length) {
         return SimpleDateFormatComponentMilli.with(length);

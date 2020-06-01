@@ -17,7 +17,9 @@
 
 package walkingkooka.j2cl.java.text;
 
-final class SimpleDateFormatComponentDayOfWeekInMonth extends SimpleDateFormatComponent2 {
+import java.util.Calendar;
+
+final class SimpleDateFormatComponentDayOfWeekInMonth extends SimpleDateFormatComponentNumber {
 
     final static char LETTER = DAY_OF_WEEK_IN_MONTH;
 
@@ -28,6 +30,20 @@ final class SimpleDateFormatComponentDayOfWeekInMonth extends SimpleDateFormatCo
     private SimpleDateFormatComponentDayOfWeekInMonth(final int length) {
         super(length);
     }
+
+    // format...........................................................................................................
+
+    @Override
+    int calendarField() {
+        return Calendar.DAY_OF_WEEK_IN_MONTH;
+    }
+
+    @Override
+    int adjustValue() {
+        return 0;
+    }
+
+    // SimpleDateFormatComponent2.......................................................................................
 
     @Override
     char letter() {

@@ -17,7 +17,50 @@
 
 package walkingkooka.j2cl.java.text;
 
-public final class SimpleDateFormatComponentDayNumberOfWeekTest extends SimpleDateFormatComponentTestCase2<SimpleDateFormatComponentDayNumberOfWeek> {
+import org.junit.jupiter.api.Test;
+
+import java.sql.Date;
+import java.util.Calendar;
+import java.util.Locale;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+public final class SimpleDateFormatComponentDayNumberOfWeekTest extends SimpleDateFormatComponentNumberTestCase<SimpleDateFormatComponentDayNumberOfWeek> {
+
+    @Test
+    public void testFormatSunday() {
+        this.formatDateAndCheck0(7, "Sun");
+    }
+
+    @Test
+    public void testFormatMonday() {
+        this.formatDateAndCheck0(1, "Mon");
+    }
+
+    @Test
+    public void testFormatThursday() {
+        this.formatDateAndCheck0(4, "Thu");
+    }
+
+    @Test
+    public void testFormatFriday() {
+        this.formatDateAndCheck0(5, "Fri");
+    }
+
+    @Test
+    public void testFormatSaturday() {
+        this.formatDateAndCheck0(6, "Sat");
+    }
+
+    private void formatDateAndCheck0(final int day, final String dowName) {
+        final Date date = new Date(Date.UTC(2020 - 1900, Calendar.JUNE, day, 12, 58, 59));
+        final String dateToString = new java.text.SimpleDateFormat("EEE yyyy/MMM/dd", Locale.ENGLISH)
+                .format(date);
+        assertTrue(dateToString.contains(dowName), dateToString + " missing " + dowName);
+
+        this.formatDateAndCheck(1, date);
+    }
+
     @Override
     SimpleDateFormatComponentDayNumberOfWeek createComponent(final int length) {
         return SimpleDateFormatComponentDayNumberOfWeek.with(length);

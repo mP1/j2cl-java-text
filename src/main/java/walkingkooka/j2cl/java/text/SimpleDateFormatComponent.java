@@ -20,6 +20,7 @@ package walkingkooka.j2cl.java.text;
 import walkingkooka.collect.list.Lists;
 import walkingkooka.text.CharSequences;
 
+import java.util.Date;
 import java.util.List;
 import java.util.function.IntFunction;
 
@@ -395,4 +396,9 @@ abstract class SimpleDateFormatComponent {
     SimpleDateFormatComponent() {
         super();
     }
+
+    /**
+     * Formats a component of the given {@link Date} to the {@link StringBuilder}.
+     */
+    abstract void formatDate(final SimpleDateFormatRequest request);
 }

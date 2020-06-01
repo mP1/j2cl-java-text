@@ -17,6 +17,8 @@
 
 package walkingkooka.j2cl.java.text;
 
+import java.util.Calendar;
+
 final class SimpleDateFormatComponentEra extends SimpleDateFormatComponent2 {
 
     final static char LETTER = ERA;
@@ -28,6 +30,17 @@ final class SimpleDateFormatComponentEra extends SimpleDateFormatComponent2 {
     private SimpleDateFormatComponentEra(final int length) {
         super(length);
     }
+
+    // format...........................................................................................................
+
+    @Override
+    void formatDate(final SimpleDateFormatRequest request) {
+        this.formatCalendarFieldName(request,
+                Calendar.ERA,
+                request.symbols.getEras());
+    }
+
+    // SimpleDateFormatComponent2.......................................................................................
 
     @Override
     char letter() {

@@ -17,10 +17,12 @@
 
 package walkingkooka.j2cl.java.text;
 
+import java.util.Calendar;
+
 /**
  * Hour in day pattern code <code>m</code> where minute in hour.
  */
-final class SimpleDateFormatComponentMinuteInHour extends SimpleDateFormatComponent2 {
+final class SimpleDateFormatComponentMinuteInHour extends SimpleDateFormatComponentNumber {
 
     final static char LETTER = MINUTE_IN_HOUR;
 
@@ -31,6 +33,20 @@ final class SimpleDateFormatComponentMinuteInHour extends SimpleDateFormatCompon
     private SimpleDateFormatComponentMinuteInHour(final int length) {
         super(length);
     }
+
+    // format...........................................................................................................
+
+    @Override
+    int calendarField() {
+        return Calendar.MINUTE;
+    }
+
+    @Override
+    int adjustValue() {
+        return 0;
+    }
+
+    // SimpleDateFormatComponent2.......................................................................................
 
     @Override
     char letter() {

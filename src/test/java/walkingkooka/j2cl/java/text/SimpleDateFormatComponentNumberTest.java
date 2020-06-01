@@ -17,24 +17,9 @@
 
 package walkingkooka.j2cl.java.text;
 
-import org.junit.jupiter.api.Test;
-
-import java.util.Locale;
-
-public final class SimpleDateFormatComponentTimeZoneIso8601Test extends SimpleDateFormatComponentTestCase2<SimpleDateFormatComponentTimeZoneIso8601> {
-
-    @Test
-    public final void testFormatDateAdelaide() {
-        this.formatDateAndCheck(1, DATE, Locale.forLanguageTag("Australia/Adelaide"));
-    }
-
+public class SimpleDateFormatComponentNumberTest extends SimpleDateFormatComponentTestCase<SimpleDateFormatComponentNumber> {
     @Override
-    SimpleDateFormatComponentTimeZoneIso8601 createComponent(final int length) {
-        return SimpleDateFormatComponentTimeZoneIso8601.with(length);
-    }
-
-    @Override
-    public Class<SimpleDateFormatComponentTimeZoneIso8601> type() {
-        return SimpleDateFormatComponentTimeZoneIso8601.class;
+    public Class<SimpleDateFormatComponentNumber> type() {
+        return SimpleDateFormatComponentNumber.class;
     }
 }

@@ -27,12 +27,52 @@ import java.util.Objects;
 abstract class SimpleDateFormatComponent2 extends SimpleDateFormatComponent {
 
     /**
-     * Package private to limi sub classing.
+     * Package private to limit sub classing.
      */
     SimpleDateFormatComponent2(final int length) {
         super();
         this.length = length;
     }
+
+    // Object...........................................................................................................
+
+    final void formatCalendarFieldNumericValue(final SimpleDateFormatRequest request,
+                                               final int calendarField,
+                                               final int adjustValue,
+                                               final int maxLength) {
+        final int value = request.calendar.get(calendarField);
+        this.formatNumericValue(request,
+                value + adjustValue,
+                maxLength);
+    }
+
+    final void formatNumericValue(final SimpleDateFormatRequest request,
+                                  final int value,
+                                  final int maxLength) {
+        final String text = String.valueOf(value);
+
+        // pad as necessary
+        request.text.append(text.length() >= maxLength ?
+                text :
+                CharSequences.padLeft(text, maxLength, '0'));
+    }
+
+    final void formatCalendarFieldName(final SimpleDateFormatRequest request,
+                                       final int calendarField,
+                                       final String[] names) {
+        this.formatName(request,
+                request.calendar.get(calendarField),
+                names);
+    }
+
+    final void formatName(final SimpleDateFormatRequest request,
+                          final int value,
+                          final String[] names) {
+        request.text.append(names[value]);
+    }
+
+    // SimpleDateFormatComponent2.......................................................................................
+
 
     final int length;
 

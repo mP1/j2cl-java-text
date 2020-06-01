@@ -17,6 +17,8 @@
 
 package walkingkooka.j2cl.java.text;
 
+import java.util.Calendar;
+
 /**
  * <code>a</code> within a pattern holding the am or pm.
  */
@@ -30,6 +32,14 @@ final class SimpleDateFormatComponentAmPm extends SimpleDateFormatComponent2 {
 
     private SimpleDateFormatComponentAmPm(final int length) {
         super(length);
+    }
+
+    // format...........................................................................................................
+
+    @Override
+    void formatDate(final SimpleDateFormatRequest request) {
+        final int ampm = request.calendar.get(Calendar.AM_PM);
+        request.text.append(request.symbols.getAmPmStrings()[ampm]);
     }
 
     @Override

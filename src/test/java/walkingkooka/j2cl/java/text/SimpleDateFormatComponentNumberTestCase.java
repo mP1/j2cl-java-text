@@ -17,22 +17,31 @@
 
 package walkingkooka.j2cl.java.text;
 
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import walkingkooka.HashCodeEqualsDefinedTesting2;
+import walkingkooka.ToStringTesting;
+import walkingkooka.text.CharSequences;
 
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Locale;
 
-public final class SimpleDateFormatComponentAmPmTest extends SimpleDateFormatComponentTestCase2<SimpleDateFormatComponentAmPm> {
+public abstract class SimpleDateFormatComponentNumberTestCase<C extends SimpleDateFormatComponent2> extends SimpleDateFormatComponentTestCase2<C> {
 
-    // SimpleDateFormatComponentTestCase2...............................................................................
-
-    @Override
-    SimpleDateFormatComponentAmPm createComponent(final int length) {
-        return SimpleDateFormatComponentAmPm.with(length);
+    SimpleDateFormatComponentNumberTestCase() {
+        super();
     }
 
-    @Override
-    public Class<SimpleDateFormatComponentAmPm> type() {
-        return SimpleDateFormatComponentAmPm.class;
+    // formatCalendarFieldNumericValue.......................................................................................................
+
+    @Test
+    public final void testFormatDate5() {
+        this.formatDateAndCheck(5, DATE);
+    }
+
+    @Test
+    public final void testFormatDate6() {
+        this.formatDateAndCheck(6, DATE);
     }
 }

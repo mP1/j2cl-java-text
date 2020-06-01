@@ -17,10 +17,12 @@
 
 package walkingkooka.j2cl.java.text;
 
+import java.util.Calendar;
+
 /**
  * Hour am pm pattern code <code>h</code> where hour values are between 1 and 12 with AM/PM.
  */
-final class SimpleDateFormatComponentHourAmPm112 extends SimpleDateFormatComponent2 {
+final class SimpleDateFormatComponentHourAmPm112 extends SimpleDateFormatComponentNumber {
 
     final static char LETTER = HOUR_AM_PM_1_12;
 
@@ -31,6 +33,20 @@ final class SimpleDateFormatComponentHourAmPm112 extends SimpleDateFormatCompone
     private SimpleDateFormatComponentHourAmPm112(final int length) {
         super(length);
     }
+
+    // format...........................................................................................................
+
+    @Override
+    int calendarField() {
+        return Calendar.HOUR;
+    }
+
+    @Override
+    int adjustValue() {
+        return 0;
+    }
+
+    // SimpleDateFormatComponent2.......................................................................................
 
     @Override
     char letter() {

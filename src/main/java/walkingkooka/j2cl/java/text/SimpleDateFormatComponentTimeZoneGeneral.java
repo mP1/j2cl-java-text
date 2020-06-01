@@ -17,6 +17,9 @@
 
 package walkingkooka.j2cl.java.text;
 
+import java.util.Calendar;
+import java.util.TimeZone;
+
 final class SimpleDateFormatComponentTimeZoneGeneral extends SimpleDateFormatComponent2 {
 
     final static char LETTER = TIME_ZONE_GENERAL;
@@ -28,6 +31,17 @@ final class SimpleDateFormatComponentTimeZoneGeneral extends SimpleDateFormatCom
     private SimpleDateFormatComponentTimeZoneGeneral(final int length) {
         super(length);
     }
+
+    // format...........................................................................................................
+
+    @Override
+    void formatDate(final SimpleDateFormatRequest request) {
+        request.text.append(request.calendar.getTimeZone()
+                .getDisplayName(request.daylightSavingTime,
+                        this.length < 4 ? TimeZone.SHORT : TimeZone.LONG));
+    }
+
+    // SimpleDateFormatComponent........................................................................................
 
     @Override
     char letter() {

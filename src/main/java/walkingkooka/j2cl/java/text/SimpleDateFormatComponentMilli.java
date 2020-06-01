@@ -17,10 +17,12 @@
 
 package walkingkooka.j2cl.java.text;
 
+import java.util.Calendar;
+
 /**
  * A millisecond with a pattern letter of <code>S</code>
  */
-final class SimpleDateFormatComponentMilli extends SimpleDateFormatComponent2 {
+final class SimpleDateFormatComponentMilli extends SimpleDateFormatComponentNumber {
 
     final static char LETTER = MILLI;
 
@@ -31,6 +33,20 @@ final class SimpleDateFormatComponentMilli extends SimpleDateFormatComponent2 {
     private SimpleDateFormatComponentMilli(final int length) {
         super(length);
     }
+
+    // format...........................................................................................................
+
+    @Override
+    int calendarField() {
+        return Calendar.MILLISECOND;
+    }
+
+    @Override
+    int adjustValue() {
+        return 0;
+    }
+
+    // SimpleDateFormatComponent2.......................................................................................
 
     @Override
     char letter() {

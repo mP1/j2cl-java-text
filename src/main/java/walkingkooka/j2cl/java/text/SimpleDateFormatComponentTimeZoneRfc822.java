@@ -17,6 +17,8 @@
 
 package walkingkooka.j2cl.java.text;
 
+import walkingkooka.j2cl.locale.Calendar;
+
 final class SimpleDateFormatComponentTimeZoneRfc822 extends SimpleDateFormatComponent2 {
 
     final static char LETTER = TIME_ZONE_RFC822;
@@ -28,6 +30,20 @@ final class SimpleDateFormatComponentTimeZoneRfc822 extends SimpleDateFormatComp
     private SimpleDateFormatComponentTimeZoneRfc822(final int length) {
         super(length);
     }
+
+    // format...........................................................................................................
+
+    @Override
+    void formatDate(final SimpleDateFormatRequest request) {
+        final int offset = request.calendar.get(Calendar.ZONE_OFFSET) / 36000;
+        request.text.append(offset < 0 ? '-' : '+');
+
+        this.formatNumericValue(request,
+                offset,
+                4);
+    }
+
+    // SimpleDateFormatComponent........................................................................................
 
     @Override
     char letter() {
