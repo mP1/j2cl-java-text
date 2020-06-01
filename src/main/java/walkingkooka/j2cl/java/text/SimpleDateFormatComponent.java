@@ -150,7 +150,7 @@ abstract class SimpleDateFormatComponent {
     /**
      * Returns a factory that accepts the length of the character.
      */
-    static IntFunction<SimpleDateFormatComponent> factory(final char c) {
+    private static IntFunction<SimpleDateFormatComponent> factory(final char c) {
         final IntFunction<SimpleDateFormatComponent> created;
 
         switch (c) {
