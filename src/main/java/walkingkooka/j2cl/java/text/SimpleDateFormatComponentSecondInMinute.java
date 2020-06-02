@@ -39,8 +39,8 @@ final class SimpleDateFormatComponentSecondInMinute extends SimpleDateFormatComp
     }
 
     @Override
-    int adjustValue() {
-        return 0;
+    int adjustValue(final int value) {
+        return value;
     }
 
     // SimpleDateFormatComponent2.......................................................................................

@@ -42,8 +42,8 @@ final class SimpleDateFormatComponentHourInDay124 extends SimpleDateFormatCompon
     }
 
     @Override
-    int adjustValue() {
-        return 0;
+    int adjustValue(final int value) {
+        return 0 == value ? 24 : value;
     }
 
     // SimpleDateFormatComponent2.......................................................................................

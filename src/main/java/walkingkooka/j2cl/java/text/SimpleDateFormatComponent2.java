@@ -20,6 +20,8 @@ package walkingkooka.j2cl.java.text;
 import walkingkooka.text.CharSequences;
 
 import java.util.Objects;
+import java.util.function.IntBinaryOperator;
+import java.util.function.IntUnaryOperator;
 
 /**
  * Base class for most {@link SimpleDateFormatComponent} holding a run count for the length of that pattern.
@@ -38,11 +40,11 @@ abstract class SimpleDateFormatComponent2 extends SimpleDateFormatComponent {
 
     final void formatCalendarFieldNumericValue(final SimpleDateFormatRequest request,
                                                final int calendarField,
-                                               final int adjustValue,
+                                               final IntUnaryOperator adjustValue,
                                                final int maxLength) {
         final int value = request.calendar.get(calendarField);
         this.formatNumericValue(request,
-                value + adjustValue,
+                adjustValue.applyAsInt(value),
                 maxLength);
     }
 
