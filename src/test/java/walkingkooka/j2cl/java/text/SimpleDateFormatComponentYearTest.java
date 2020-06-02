@@ -17,7 +17,38 @@
 
 package walkingkooka.j2cl.java.text;
 
+import org.junit.jupiter.api.Test;
+
+import java.util.Date;
+
 public final class SimpleDateFormatComponentYearTest extends SimpleDateFormatComponentNumberTestCase<SimpleDateFormatComponentYear> {
+
+    @Test
+    public void testFormatYearAll1() {
+        this.formatYearAndCheck(1);
+    }
+
+    @Test
+    public void testFormatYearAll2() {
+        this.formatYearAndCheck(2);
+    }
+
+    @Test
+    public void testFormatYearAll3() {
+        this.formatYearAndCheck(3);
+    }
+
+    @Test
+    public void testFormatYearAll4() {
+        this.formatYearAndCheck(4);
+    }
+
+    private void formatYearAndCheck(final int length) {
+        for (int year = 1800; year < 2050; year++) {
+            this.formatDateAndCheck(length, new Date(DATE.UTC(year - 1900, 1, 2, 3, 4, 5)));
+        }
+    }
+
     @Override
     SimpleDateFormatComponentYear createComponent(final int length) {
         return SimpleDateFormatComponentYear.with(length);

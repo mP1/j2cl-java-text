@@ -26,7 +26,6 @@ import walkingkooka.text.CharSequences;
 
 import java.time.LocalDateTime;
 import java.time.ZoneId;
-import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.Locale;
 import java.util.function.BiConsumer;
@@ -285,6 +284,33 @@ public final class SimpleDateFormatTest extends FormatTestCase<SimpleDateFormat>
     }
 
     // format...........................................................................................................
+
+    @Test
+    public void testFormatYearAll1() {
+        this.formatYearAndCheck(1);
+    }
+
+    @Test
+    public void testFormatYearAll2() {
+        this.formatYearAndCheck(2);
+    }
+
+    @Test
+    public void testFormatYearAll3() {
+        this.formatYearAndCheck(3);
+    }
+
+    @Test
+    public void testFormatYearAll4() {
+        this.formatYearAndCheck(4);
+    }
+
+    private void formatYearAndCheck(final int length) {
+        for (int year = 1800; year < 2050; year++) {
+            this.formatAndCheck(CharSequences.repeating('y', length).toString(),
+                    new Date(Date.UTC(year - 1900, 1, 2, 3, 4, 5)));
+        }
+    }
 
     @Test
     public void testFormat24Hour() {
