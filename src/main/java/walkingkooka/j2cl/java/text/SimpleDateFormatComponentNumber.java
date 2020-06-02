@@ -33,10 +33,10 @@ abstract class SimpleDateFormatComponentNumber extends SimpleDateFormatComponent
 
     @Override
     final void formatDate(final SimpleDateFormatRequest request) {
-        this.formatCalendarFieldNumericValue(request, this.calendarField(), this.adjustValue(), this.length);
+        this.formatCalendarFieldNumericValue(request, this.calendarField(), this::adjustValue, this.length);
     }
 
     abstract int calendarField();
 
-    abstract int adjustValue();
+    abstract int adjustValue(final int value);
 }
