@@ -22,7 +22,12 @@ import walkingkooka.HashCodeEqualsDefinedTesting2;
 import walkingkooka.NeverError;
 import walkingkooka.ToStringTesting;
 import walkingkooka.j2cl.locale.WalkingkookaLanguageTag;
+import walkingkooka.text.CharSequences;
 
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 import java.util.Locale;
 import java.util.function.BiConsumer;
 import java.util.function.BiFunction;
@@ -277,6 +282,199 @@ public final class SimpleDateFormatTest extends FormatTestCase<SimpleDateFormat>
         }
 
         return toString;
+    }
+
+    // format...........................................................................................................
+
+    @Test
+    public void testFormat24Hour() {
+        this.formatHourAndCheck("kk");
+    }
+
+    @Test
+    public void testFormat23Hour() {
+        this.formatHourAndCheck("HH");
+    }
+
+    @Test
+    public void testFormat11Hour() {
+        this.formatHourAndCheck("KK");
+    }
+
+    @Test
+    public void testFormat12Hour() {
+        this.formatHourAndCheck("hh");
+    }
+
+    private void formatHourAndCheck(final String pattern) {
+        for (int i = 0; i < 23; i++) {
+            this.formatAndCheck(pattern,
+                    LocalDateTime.of(2020, 6, 2, i, 58, 59, 123));
+        }
+    }
+
+    @Test
+    public void testFormatMinute0() {
+        this.formatMinuteAndCheck("m", 0);
+    }
+
+    @Test
+    public void testFormatMinuteMinute0() {
+        this.formatMinuteAndCheck("mm", 0);
+    }
+
+    @Test
+    public void testFormatMinuteMinute10() {
+        this.formatMinuteAndCheck("mm", 10);
+    }
+
+    @Test
+    public void testFormatMinuteMinute59() {
+        this.formatMinuteAndCheck("mm", 59);
+    }
+
+    @Test
+    public void testFormatMinutesAll() {
+        this.formatMinuteAndCheck("mm");
+    }
+
+    private void formatMinuteAndCheck(final String pattern) {
+        for (int i = 0; i < 59; i++) {
+            this.formatMinuteAndCheck(pattern, i);
+        }
+    }
+
+    private void formatMinuteAndCheck(final String pattern,
+                                      final int minute) {
+        this.formatAndCheck(pattern,
+                LocalDateTime.of(2020, 6, 2, 12, minute, 59, 123));
+    }
+
+    @Test
+    public void testFormatSecond0() {
+        this.formatSecondAndCheck("s", 0);
+    }
+
+    @Test
+    public void testFormatSecondSecond0() {
+        this.formatSecondAndCheck("ss", 0);
+    }
+
+    @Test
+    public void testFormatSecondSecond10() {
+        this.formatSecondAndCheck("ss", 10);
+    }
+
+    @Test
+    public void testFormatSecondSecond59() {
+        this.formatSecondAndCheck("ss", 59);
+    }
+
+    @Test
+    public void testFormatSecondsAll() {
+        this.formatSecondAndCheck("ss");
+    }
+
+    private void formatSecondAndCheck(final String pattern) {
+        for (int i = 0; i < 59; i++) {
+            this.formatSecondAndCheck(pattern, i);
+        }
+    }
+
+    private void formatSecondAndCheck(final String pattern,
+                                      final int second) {
+        this.formatAndCheck(pattern,
+                LocalDateTime.of(2020, 6, 2, 12, 1, second, 999));
+    }
+
+    @Test
+    public void testFormatMilli0() {
+        this.formatMilliAndCheck("S", 0);
+    }
+
+    @Test
+    public void testFormatMilliMilli0() {
+        this.formatMilliAndCheck("SS", 0);
+    }
+
+    @Test
+    public void testFormatMilliMilli10() {
+        this.formatMilliAndCheck("SS", 10);
+    }
+
+    @Test
+    public void testFormatMilliMilli59() {
+        this.formatMilliAndCheck("SS", 59);
+    }
+
+    @Test
+    public void testFormatMillisAll() {
+        this.formatMilliAndCheck("SS");
+    }
+
+    private void formatMilliAndCheck(final String pattern) {
+        for (int i = 0; i < 59; i++) {
+            this.formatMilliAndCheck(pattern, i);
+        }
+    }
+
+    private void formatMilliAndCheck(final String pattern,
+                                      final int millis) {
+        this.formatAndCheck(pattern,
+                LocalDateTime.of(2020, 6, 2, 0, 1, 59, millis));
+    }
+
+    @Test
+    public void testFormat23HourMinute() {
+        this.formatAndCheck("HHmm", LocalDateTime.of(2020,6,2,12,58,59));
+    }
+
+    @Test
+    public void testFormat24HourMinute() {
+        this.formatAndCheck("kkmm", LocalDateTime.of(2020,6,2,12,58,59));
+    }
+
+    @Test
+    public void testFormat11HourMinute() {
+        this.formatAndCheck("KKKmm", LocalDateTime.of(2020,6,2,12,58,59));
+    }
+
+    @Test
+    public void testFormat12HourMinute() {
+        this.formatAndCheck("hhmm", LocalDateTime.of(2020,6,2,12,58,59));
+    }
+
+    @Test
+    public void testFormatYearMonthDay() {
+        this.formatAndCheck("yyyyMMdd", LocalDateTime.of(2020, 6, 2, 12, 58, 59));
+    }
+
+    @Test
+    public void testFormatYearSlashMonthSlashDay() {
+        this.formatAndCheck("yyyy/MM/dd", LocalDateTime.of(2020, 6, 2, 12, 58, 59));
+    }
+
+    @Test
+    public void testFormatYearMonthDayHourMinuteSecMilli() {
+        this.formatAndCheck("yyyyMMddHHmmssSS", LocalDateTime.of(2020,6,2,12,58,59, 123));
+    }
+
+    private void formatAndCheck(final String pattern,
+                                final java.time.LocalDateTime localDateTime) {
+        this.formatAndCheck(pattern,
+                java.util.Date.from(localDateTime
+                        .atZone(ZoneId.of("Australia/Sydney"))
+                        .toInstant()));
+    }
+
+    private void formatAndCheck(final String pattern,
+                                final Date date) {
+        final java.text.SimpleDateFormat jre = new java.text.SimpleDateFormat(pattern);
+        final SimpleDateFormat emul = new SimpleDateFormat(pattern);
+
+        assertEquals(jre.format(date),
+                emul.format(date),
+                () -> "pattern=" + CharSequences.quoteAndEscape(emul.toPattern()) + " date=" + new java.text.SimpleDateFormat("yyyy/MM/dd kk:mm:ss:SSS aaa").format(date));
     }
 
     // ClassTesting.....................................................................................................

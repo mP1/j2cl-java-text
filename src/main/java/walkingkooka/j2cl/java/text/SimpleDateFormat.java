@@ -22,7 +22,6 @@ import walkingkooka.NeverError;
 import walkingkooka.j2cl.java.io.string.StringDataInputDataOutput;
 import walkingkooka.j2cl.java.util.locale.support.LocaleSupport;
 import walkingkooka.j2cl.locale.LocaleAware;
-import walkingkooka.text.CharSequences;
 
 import java.io.DataInput;
 import java.io.IOException;
@@ -32,7 +31,7 @@ import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.Locale;
 import java.util.Set;
-import java.util.Vector;
+import java.util.TimeZone;
 
 /**
  * A concrete class for formatting and parsing dates in a locale-sensitive
@@ -627,7 +626,11 @@ public class SimpleDateFormat extends DateFormat {
         tzId = calendar.getTimeZone().getID();
         creationYear = calendar.get(Calendar.YEAR);
         defaultCenturyStart = calendar.getTime();
+
+        this.locale = locale;
     }
+
+    private Locale locale;
 
     /**
      * Changes the pattern of this simple date format to the specified pattern
@@ -727,6 +730,7 @@ public class SimpleDateFormat extends DateFormat {
         clone.pattern = this.pattern;
         clone.components = this.components; // sharing is ok, list never modified
         clone.tzId = this.tzId;
+        clone.locale = this.locale;
 
         return clone;
     }
@@ -808,279 +812,279 @@ public class SimpleDateFormat extends DateFormat {
 //        // return the CharacterIterator from AttributedString
 //        return as.getIterator();
 //    }
-
-    /**
-     * Formats the date.
-     * <p>
-     * If the FieldPosition {@code field} is not null, and the field
-     * specified by this FieldPosition is formatted, set the begin and end index
-     * of the formatted field in the FieldPosition.
-     * <p>
-     * If the Vector {@code fields} is not null, find fields of this
-     * date, set FieldPositions with these fields, and add them to the fields
-     * vector.
-     * 
-     * @param date
-     *            Date to Format
-     * @param buffer
-     *            StringBuffer to store the resulting formatted String
-     * @param field
-     *            FieldPosition to set begin and end index of the field
-     *            specified, if it is part of the format for this date
-     * @param fields
-     *            Vector used to store the FieldPositions for each field in this
-     *            date
-     * @return the formatted Date
-     * @throws IllegalArgumentException
-     *            if the object cannot be formatted by this Format.
-     */
-    private StringBuffer formatImpl(Date date, StringBuffer buffer,
-                                    FieldPosition field, Vector<FieldPosition> fields) {
-
-        boolean quote = false;
-        int next, last = -1, count = 0;
-        calendar.setTime(date);
-        if (field != null) {
-            //field.clear();
-            throw new UnsupportedOperationException();
-        }
-
-        final int patternLength = pattern.length();
-        for (int i = 0; i < patternLength; i++) {
-            next = (pattern.charAt(i));
-            if (next == '\'') {
-                if (count > 0) {
-                    append(buffer, field, fields, (char) last, count);
-                    count = 0;
-                }
-                if (last == next) {
-                    buffer.append('\'');
-                    last = -1;
-                } else {
-                    last = next;
-                }
-                quote = !quote;
-                continue;
-            }
-            if (!quote
-                    && (last == next || (next >= 'a' && next <= 'z') || (next >= 'A' && next <= 'Z'))) {
-                if (last == next) {
-                    count++;
-                } else {
-                    if (count > 0) {
-                        append(buffer, field, fields, (char) last, count);
-                    }
-                    last = next;
-                    count = 1;
-                }
-            } else {
-                if (count > 0) {
-                    append(buffer, field, fields, (char) last, count);
-                    count = 0;
-                }
-                last = -1;
-                buffer.append((char) next);
-            }
-        }
-        if (count > 0) {
-            append(buffer, field, fields, (char) last, count);
-        }
-        return buffer;
-    }
-    
-    private void append(StringBuffer buffer, FieldPosition position,
-                        Vector<FieldPosition> fields, char format, int count) {
-        int field = -1;
-        int index = patternChars.indexOf(format);
-        if (index == -1) {
-            // text.03=Unknown pattern character - '{0}'
-//            throw new IllegalArgumentException(Messages.getString(
-//                    "text.03", format)); //$NON-NLS-1$
-            throw new IllegalArgumentException("Unknown pattern character - " + CharSequences.quoteIfChars(format));
-        }
-
-        int beginPosition = buffer.length();
-        Field dateFormatField = null;
-        switch (index) {
-            case ERA_FIELD:
-                dateFormatField = Field.ERA;
-                buffer.append(formatData.eras[calendar.get(Calendar.ERA)]);
-                break;
-            case YEAR_FIELD:
-                dateFormatField = Field.YEAR;
-                int year = calendar.get(Calendar.YEAR);
-                if (count < 4) {
-                    appendNumber(buffer, 2, year % 100);
-                } else {
-                    appendNumber(buffer, count, year);
-                }
-                break;
-            case MONTH_FIELD:
-                dateFormatField = Field.MONTH;
-                int month = calendar.get(Calendar.MONTH);
-                if (count <= 2) {
-                    appendNumber(buffer, count, month + 1);
-                } else if (count == 3) {
-                    buffer.append(formatData.shortMonths[month]);
-                } else {
-                    buffer.append(formatData.months[month]);
-                }
-                break;
-            case DATE_FIELD:
-                dateFormatField = Field.DAY_OF_MONTH;
-                field = Calendar.DATE;
-                break;
-            case HOUR_OF_DAY1_FIELD: // k
-                dateFormatField = Field.HOUR_OF_DAY1;
-                int hour = calendar.get(Calendar.HOUR_OF_DAY);
-                appendNumber(buffer, count, hour == 0 ? 24 : hour);
-                break;
-            case HOUR_OF_DAY0_FIELD: // H
-                dateFormatField = Field.HOUR_OF_DAY0;
-                field = Calendar.HOUR_OF_DAY;
-                break;
-            case MINUTE_FIELD:
-                dateFormatField = Field.MINUTE;
-                field = Calendar.MINUTE;
-                break;
-            case SECOND_FIELD:
-                dateFormatField = Field.SECOND;
-                field = Calendar.SECOND;
-                break;
-            case MILLISECOND_FIELD:
-                dateFormatField = Field.MILLISECOND;
-                int value = calendar.get(Calendar.MILLISECOND);
-                appendNumber(buffer, count, value);
-                break;
-            case DAY_OF_WEEK_FIELD:
-                dateFormatField = Field.DAY_OF_WEEK;
-                int day = calendar.get(Calendar.DAY_OF_WEEK);
-                if (count < 4) {
-                    buffer.append(formatData.shortWeekdays[day]);
-                } else {
-                    buffer.append(formatData.weekdays[day]);
-                }
-                break;
-            case DAY_OF_YEAR_FIELD:
-                dateFormatField = Field.DAY_OF_YEAR;
-                field = Calendar.DAY_OF_YEAR;
-                break;
-            case DAY_OF_WEEK_IN_MONTH_FIELD:
-                dateFormatField = Field.DAY_OF_WEEK_IN_MONTH;
-                field = Calendar.DAY_OF_WEEK_IN_MONTH;
-                break;
-            case WEEK_OF_YEAR_FIELD:
-                dateFormatField = Field.WEEK_OF_YEAR;
-                field = Calendar.WEEK_OF_YEAR;
-                break;
-            case WEEK_OF_MONTH_FIELD:
-                dateFormatField = Field.WEEK_OF_MONTH;
-                field = Calendar.WEEK_OF_MONTH;
-                break;
-            case AM_PM_FIELD:
-                dateFormatField = Field.AM_PM;
-//                buffer.append(formatData.ampms[calendar.get(Calendar.AM_PM)]);
-                buffer.append(formatData.ampm[calendar.get(Calendar.AM_PM)]);
-                break;
-            case HOUR1_FIELD: // h
-                dateFormatField = Field.HOUR1;
-                hour = calendar.get(Calendar.HOUR);
-                appendNumber(buffer, count, hour == 0 ? 12 : hour);
-                break;
-            case HOUR0_FIELD: // K
-                dateFormatField = Field.HOUR0;
-                field = Calendar.HOUR;
-                break;
-            case TIMEZONE_FIELD: // z
-                dateFormatField = Field.TIME_ZONE;
-                appendTimeZone(buffer, count, true);
-                break;
-//            case com.ibm.icu.text.DateFormat.TIMEZONE_RFC_FIELD: // Z
-//                dateFormatField = Field.TIME_ZONE;
-//                appendTimeZone(buffer, count, false);
+//
+//    /**
+//     * Formats the date.
+//     * <p>
+//     * If the FieldPosition {@code field} is not null, and the field
+//     * specified by this FieldPosition is formatted, set the begin and end index
+//     * of the formatted field in the FieldPosition.
+//     * <p>
+//     * If the Vector {@code fields} is not null, find fields of this
+//     * date, set FieldPositions with these fields, and add them to the fields
+//     * vector.
+//     *
+//     * @param date
+//     *            Date to Format
+//     * @param buffer
+//     *            StringBuffer to store the resulting formatted String
+//     * @param field
+//     *            FieldPosition to set begin and end index of the field
+//     *            specified, if it is part of the format for this date
+//     * @param fields
+//     *            Vector used to store the FieldPositions for each field in this
+//     *            date
+//     * @return the formatted Date
+//     * @throws IllegalArgumentException
+//     *            if the object cannot be formatted by this Format.
+//     */
+//    private StringBuffer formatImpl(Date date, StringBuffer buffer,
+//                                    FieldPosition field, Vector<FieldPosition> fields) {
+//
+//        boolean quote = false;
+//        int next, last = -1, count = 0;
+//        calendar.setTime(date);
+//        if (field != null) {
+//            //field.clear();
+//            throw new UnsupportedOperationException();
+//        }
+//
+//        final int patternLength = pattern.length();
+//        for (int i = 0; i < patternLength; i++) {
+//            next = (pattern.charAt(i));
+//            if (next == '\'') {
+//                if (count > 0) {
+//                    append(buffer, field, fields, (char) last, count);
+//                    count = 0;
+//                }
+//                if (last == next) {
+//                    buffer.append('\'');
+//                    last = -1;
+//                } else {
+//                    last = next;
+//                }
+//                quote = !quote;
+//                continue;
+//            }
+//            if (!quote
+//                    && (last == next || (next >= 'a' && next <= 'z') || (next >= 'A' && next <= 'Z'))) {
+//                if (last == next) {
+//                    count++;
+//                } else {
+//                    if (count > 0) {
+//                        append(buffer, field, fields, (char) last, count);
+//                    }
+//                    last = next;
+//                    count = 1;
+//                }
+//            } else {
+//                if (count > 0) {
+//                    append(buffer, field, fields, (char) last, count);
+//                    count = 0;
+//                }
+//                last = -1;
+//                buffer.append((char) next);
+//            }
+//        }
+//        if (count > 0) {
+//            append(buffer, field, fields, (char) last, count);
+//        }
+//        return buffer;
+//    }
+//
+//    private void append(StringBuffer buffer, FieldPosition position,
+//                        Vector<FieldPosition> fields, char format, int count) {
+//        int field = -1;
+//        int index = patternChars.indexOf(format);
+//        if (index == -1) {
+//            // text.03=Unknown pattern character - '{0}'
+////            throw new IllegalArgumentException(Messages.getString(
+////                    "text.03", format)); //$NON-NLS-1$
+//            throw new IllegalArgumentException("Unknown pattern character - " + CharSequences.quoteIfChars(format));
+//        }
+//
+//        int beginPosition = buffer.length();
+//        Field dateFormatField = null;
+//        switch (index) {
+//            case ERA_FIELD:
+//                dateFormatField = Field.ERA;
+//                buffer.append(formatData.eras[calendar.get(Calendar.ERA)]);
 //                break;
-        }
-        if (field != -1) {
-            appendNumber(buffer, count, calendar.get(field));
-        }
-
-        if (fields != null) {
-            position = new FieldPosition(dateFormatField);
-            position.setBeginIndex(beginPosition);
-            position.setEndIndex(buffer.length());
-            fields.add(position);
-        } else {
-            // Set to the first occurrence
-            if ((position.getFieldAttribute() == dateFormatField || (position
-                    .getFieldAttribute() == null && position.getField() == index))
-                    && position.getEndIndex() == 0) {
-                position.setBeginIndex(beginPosition);
-                position.setEndIndex(buffer.length());
-            }
-        }
-    }
-    
-    private void appendTimeZone(StringBuffer buffer, int count,
-            boolean generalTimezone) {
-        // cannot call TimeZone.getDisplayName() because it would not use
-        // the DateFormatSymbols of this SimpleDateFormat
-
-        if (generalTimezone) {
-            String id = calendar.getTimeZone().getID();
-            //String[][] zones = formatData.getZoneStrings();
-            String[][] zones = this.getZoneStrings();
-            String[] zone = null;
-            for (String[] element : zones) {
-                if (id.equals(element[0])) {
-                    zone = element;
-                    break;
-                }
-            }
-            if (zone == null) {
-                int offset = calendar.get(Calendar.ZONE_OFFSET)
-                        + calendar.get(Calendar.DST_OFFSET);
-                char sign = '+';
-                if (offset < 0) {
-                    sign = '-';
-                    offset = -offset;
-                }
-                buffer.append("GMT"); //$NON-NLS-1$
-                buffer.append(sign);
-                appendNumber(buffer, 2, offset / 3600000);
-                buffer.append(':');
-                appendNumber(buffer, 2, (offset % 3600000) / 60000);
-            } else {
-                int daylight = calendar.get(Calendar.DST_OFFSET) == 0 ? 0 : 2;
-                if (count < 4) {
-                    buffer.append(zone[2 + daylight]);
-                } else {
-                    buffer.append(zone[1 + daylight]);
-                }
-            }
-        } else {
-            int offset = calendar.get(Calendar.ZONE_OFFSET)
-                    + calendar.get(Calendar.DST_OFFSET);
-            char sign = '+';
-            if (offset < 0) {
-                sign = '-';
-                offset = -offset;
-            }
-            buffer.append(sign);
-            appendNumber(buffer, 2, offset / 3600000);
-            appendNumber(buffer, 2, (offset % 3600000) / 60000);
-        }
-    }
-
-    private String[][] getZoneStrings() {
-        throw new UnsupportedOperationException();
-    }
-
-    private void appendNumber(StringBuffer buffer, int count, int value) {
-        int minimumIntegerDigits = numberFormat.getMinimumIntegerDigits();
-        numberFormat.setMinimumIntegerDigits(count);
-        numberFormat.format(new Integer(value), buffer, new FieldPosition(0));
-        numberFormat.setMinimumIntegerDigits(minimumIntegerDigits);
-    }
+//            case YEAR_FIELD:
+//                dateFormatField = Field.YEAR;
+//                int year = calendar.get(Calendar.YEAR);
+//                if (count < 4) {
+//                    appendNumber(buffer, 2, year % 100);
+//                } else {
+//                    appendNumber(buffer, count, year);
+//                }
+//                break;
+//            case MONTH_FIELD:
+//                dateFormatField = Field.MONTH;
+//                int month = calendar.get(Calendar.MONTH);
+//                if (count <= 2) {
+//                    appendNumber(buffer, count, month + 1);
+//                } else if (count == 3) {
+//                    buffer.append(formatData.shortMonths[month]);
+//                } else {
+//                    buffer.append(formatData.months[month]);
+//                }
+//                break;
+//            case DATE_FIELD:
+//                dateFormatField = Field.DAY_OF_MONTH;
+//                field = Calendar.DATE;
+//                break;
+//            case HOUR_OF_DAY1_FIELD: // k
+//                dateFormatField = Field.HOUR_OF_DAY1;
+//                int hour = calendar.get(Calendar.HOUR_OF_DAY);
+//                appendNumber(buffer, count, hour == 0 ? 24 : hour);
+//                break;
+//            case HOUR_OF_DAY0_FIELD: // H
+//                dateFormatField = Field.HOUR_OF_DAY0;
+//                field = Calendar.HOUR_OF_DAY;
+//                break;
+//            case MINUTE_FIELD:
+//                dateFormatField = Field.MINUTE;
+//                field = Calendar.MINUTE;
+//                break;
+//            case SECOND_FIELD:
+//                dateFormatField = Field.SECOND;
+//                field = Calendar.SECOND;
+//                break;
+//            case MILLISECOND_FIELD:
+//                dateFormatField = Field.MILLISECOND;
+//                int value = calendar.get(Calendar.MILLISECOND);
+//                appendNumber(buffer, count, value);
+//                break;
+//            case DAY_OF_WEEK_FIELD:
+//                dateFormatField = Field.DAY_OF_WEEK;
+//                int day = calendar.get(Calendar.DAY_OF_WEEK);
+//                if (count < 4) {
+//                    buffer.append(formatData.shortWeekdays[day]);
+//                } else {
+//                    buffer.append(formatData.weekdays[day]);
+//                }
+//                break;
+//            case DAY_OF_YEAR_FIELD:
+//                dateFormatField = Field.DAY_OF_YEAR;
+//                field = Calendar.DAY_OF_YEAR;
+//                break;
+//            case DAY_OF_WEEK_IN_MONTH_FIELD:
+//                dateFormatField = Field.DAY_OF_WEEK_IN_MONTH;
+//                field = Calendar.DAY_OF_WEEK_IN_MONTH;
+//                break;
+//            case WEEK_OF_YEAR_FIELD:
+//                dateFormatField = Field.WEEK_OF_YEAR;
+//                field = Calendar.WEEK_OF_YEAR;
+//                break;
+//            case WEEK_OF_MONTH_FIELD:
+//                dateFormatField = Field.WEEK_OF_MONTH;
+//                field = Calendar.WEEK_OF_MONTH;
+//                break;
+//            case AM_PM_FIELD:
+//                dateFormatField = Field.AM_PM;
+////                buffer.append(formatData.ampms[calendar.get(Calendar.AM_PM)]);
+//                buffer.append(formatData.ampm[calendar.get(Calendar.AM_PM)]);
+//                break;
+//            case HOUR1_FIELD: // h
+//                dateFormatField = Field.HOUR1;
+//                hour = calendar.get(Calendar.HOUR);
+//                appendNumber(buffer, count, hour == 0 ? 12 : hour);
+//                break;
+//            case HOUR0_FIELD: // K
+//                dateFormatField = Field.HOUR0;
+//                field = Calendar.HOUR;
+//                break;
+//            case TIMEZONE_FIELD: // z
+//                dateFormatField = Field.TIME_ZONE;
+//                appendTimeZone(buffer, count, true);
+//                break;
+////            case com.ibm.icu.text.DateFormat.TIMEZONE_RFC_FIELD: // Z
+////                dateFormatField = Field.TIME_ZONE;
+////                appendTimeZone(buffer, count, false);
+////                break;
+//        }
+//        if (field != -1) {
+//            appendNumber(buffer, count, calendar.get(field));
+//        }
+//
+//        if (fields != null) {
+//            position = new FieldPosition(dateFormatField);
+//            position.setBeginIndex(beginPosition);
+//            position.setEndIndex(buffer.length());
+//            fields.add(position);
+//        } else {
+//            // Set to the first occurrence
+//            if ((position.getFieldAttribute() == dateFormatField || (position
+//                    .getFieldAttribute() == null && position.getField() == index))
+//                    && position.getEndIndex() == 0) {
+//                position.setBeginIndex(beginPosition);
+//                position.setEndIndex(buffer.length());
+//            }
+//        }
+//    }
+//
+//    private void appendTimeZone(StringBuffer buffer, int count,
+//            boolean generalTimezone) {
+//        // cannot call TimeZone.getDisplayName() because it would not use
+//        // the DateFormatSymbols of this SimpleDateFormat
+//
+//        if (generalTimezone) {
+//            String id = calendar.getTimeZone().getID();
+//            //String[][] zones = formatData.getZoneStrings();
+//            String[][] zones = this.getZoneStrings();
+//            String[] zone = null;
+//            for (String[] element : zones) {
+//                if (id.equals(element[0])) {
+//                    zone = element;
+//                    break;
+//                }
+//            }
+//            if (zone == null) {
+//                int offset = calendar.get(Calendar.ZONE_OFFSET)
+//                        + calendar.get(Calendar.DST_OFFSET);
+//                char sign = '+';
+//                if (offset < 0) {
+//                    sign = '-';
+//                    offset = -offset;
+//                }
+//                buffer.append("GMT"); //$NON-NLS-1$
+//                buffer.append(sign);
+//                appendNumber(buffer, 2, offset / 3600000);
+//                buffer.append(':');
+//                appendNumber(buffer, 2, (offset % 3600000) / 60000);
+//            } else {
+//                int daylight = calendar.get(Calendar.DST_OFFSET) == 0 ? 0 : 2;
+//                if (count < 4) {
+//                    buffer.append(zone[2 + daylight]);
+//                } else {
+//                    buffer.append(zone[1 + daylight]);
+//                }
+//            }
+//        } else {
+//            int offset = calendar.get(Calendar.ZONE_OFFSET)
+//                    + calendar.get(Calendar.DST_OFFSET);
+//            char sign = '+';
+//            if (offset < 0) {
+//                sign = '-';
+//                offset = -offset;
+//            }
+//            buffer.append(sign);
+//            appendNumber(buffer, 2, offset / 3600000);
+//            appendNumber(buffer, 2, (offset % 3600000) / 60000);
+//        }
+//    }
+//
+//    private String[][] getZoneStrings() {
+//        throw new UnsupportedOperationException();
+//    }
+//
+//    private void appendNumber(StringBuffer buffer, int count, int value) {
+//        int minimumIntegerDigits = numberFormat.getMinimumIntegerDigits();
+//        numberFormat.setMinimumIntegerDigits(count);
+//        numberFormat.format(new Integer(value), buffer, new FieldPosition(0));
+//        numberFormat.setMinimumIntegerDigits(minimumIntegerDigits);
+//    }
     
 
     /**
@@ -1126,7 +1130,20 @@ public class SimpleDateFormat extends DateFormat {
 //            return result;
 //        }
 //        return icuFormat.format(date, buffer, fieldPos);
-        throw new UnsupportedOperationException();
+
+        final TimeZone timeZone = this.getTimeZone();
+        final Calendar calendar = Calendar.getInstance(timeZone, this.locale);
+        calendar.setTime(date);
+        final SimpleDateFormatRequest request = SimpleDateFormatRequest.with(calendar,
+                buffer,
+                this.getDateFormatSymbols(),
+                timeZone.inDaylightTime(date));
+
+        for (final SimpleDateFormatComponent component : this.components) {
+            component.formatDate(request);
+        }
+
+        return buffer;
     }
 
 //    /**
