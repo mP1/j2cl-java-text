@@ -17,6 +17,7 @@
 
 package walkingkooka.j2cl.java.text;
 
+import org.junit.jupiter.api.BeforeAll;
 import walkingkooka.reflect.ClassTesting;
 import walkingkooka.reflect.JavaVisibility;
 
@@ -29,8 +30,28 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public abstract class SimpleDateFormatComponentTestCase<C extends SimpleDateFormatComponent> implements ClassTesting<C> {
 
+    final static Locale LOCALE = Locale.forLanguageTag("EN-AU");
+    final static TimeZone TIMEZONE = TimeZone.getTimeZone("UTC");
+
+    final static int YEAR = 2020;
+    final static int MONTH = Calendar.JUNE;
+    final static int DAY = 30;
+    final static int HOURS = 12;
+    final static int MINUTES = 58;
+    final static int SECONDS = 59;
+    final static int MILLI = 98765;
+
+    static Date DATE;
+
     SimpleDateFormatComponentTestCase() {
         super();
+    }
+
+    @BeforeAll
+    public static void beforeAll() {
+        Locale.setDefault(LOCALE);
+        TimeZone.setDefault(TIMEZONE);
+        DATE = new Date(Date.UTC(YEAR - 1900, MONTH, DAY, HOURS, MINUTES, SECONDS) + MILLI);
     }
 
     final void formatDateAndCheck(final C component,
@@ -39,25 +60,36 @@ public abstract class SimpleDateFormatComponentTestCase<C extends SimpleDateForm
                                   final String expected) {
         this.formatDateAndCheck(component,
                 date,
-                new DateFormatSymbols(Locale.forLanguageTag("EN-AU")),
+                new DateFormatSymbols(LOCALE),
                 daylightSavingTime,
                 expected);
     }
-
 
     final void formatDateAndCheck(final C component,
                                   final Date date,
                                   final DateFormatSymbols symbols,
                                   final boolean daylightSavingTime,
                                   final String expected) {
-        final Calendar calendar = Calendar.getInstance(TimeZone.getTimeZone("Australia/Sydney"), Locale.forLanguageTag("EN-AU"));
+        final Calendar calendar = Calendar.getInstance(TIMEZONE, LOCALE);
         calendar.setTime(date);
 
+        this.formatDateAndCheck(component,
+                calendar,
+                symbols,
+                daylightSavingTime,
+                expected);
+    }
+
+    final void formatDateAndCheck(final C component,
+                                  final Calendar calendar,
+                                  final DateFormatSymbols symbols,
+                                  final boolean daylightSavingTime,
+                                  final String expected) {
         final StringBuffer text = new StringBuffer();
         component.formatDate(SimpleDateFormatRequest.with(calendar, text, symbols, daylightSavingTime));
         assertEquals(expected,
                 text.toString(),
-                () -> component + " format " + date + " symbols=" + symbols + " daylightSavingTime: " + daylightSavingTime);
+                () -> component + " format " + calendar.getTime() + " symbols=" + symbols + " daylightSavingTime: " + daylightSavingTime + " tz " + TimeZone.getDefault());
     }
 
     // ClassTesting.....................................................................................................

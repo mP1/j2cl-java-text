@@ -18,14 +18,49 @@
 package walkingkooka.j2cl.java.text;
 
 import org.junit.jupiter.api.Test;
+import walkingkooka.text.CharSequences;
 
+import java.util.Calendar;
 import java.util.Locale;
+import java.util.TimeZone;
 
 public final class SimpleDateFormatComponentTimeZoneIso8601Test extends SimpleDateFormatComponentTestCase2<SimpleDateFormatComponentTimeZoneIso8601> {
 
     @Test
     public final void testFormatDateAdelaide() {
         this.formatDateAndCheck(1, DATE, Locale.forLanguageTag("Australia/Adelaide"));
+    }
+
+    @Test
+    public void testAllTimeOffset1() {
+        this.allTimeZoneOffsetsAndCheck(1);
+    }
+
+    @Test
+    public void testAllTimeOffset2() {
+        this.allTimeZoneOffsetsAndCheck(2);
+    }
+
+    @Test
+    public void testAllTimeOffset3() {
+        this.allTimeZoneOffsetsAndCheck(3);
+    }
+
+    private void allTimeZoneOffsetsAndCheck(final int length) {
+        for (final String zoneId : TimeZone.getAvailableIDs()) {
+            final TimeZone timeZone = TimeZone.getTimeZone(zoneId);
+            final Calendar calendar = Calendar.getInstance(timeZone, LOCALE);
+            calendar.setTime(DATE);
+            calendar.setTimeZone(timeZone);
+
+            TimeZone.setDefault(timeZone);
+
+            this.formatDateAndCheck(SimpleDateFormatComponentTimeZoneIso8601.with(length),
+                    calendar,
+                    new DateFormatSymbols(LOCALE),
+                    false,
+                    new java.text.SimpleDateFormat(CharSequences.repeating('X', length).toString(), LOCALE).format(calendar.getTime()));
+        }
     }
 
     @Override

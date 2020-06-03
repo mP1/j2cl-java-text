@@ -17,9 +17,7 @@
 
 package walkingkooka.j2cl.java.text;
 
-import walkingkooka.j2cl.locale.Calendar;
-import walkingkooka.text.CharSequences;
-
+import java.util.Calendar;
 import java.util.TimeZone;
 
 final class SimpleDateFormatComponentTimeZoneIso8601 extends SimpleDateFormatComponent2 {
@@ -38,36 +36,45 @@ final class SimpleDateFormatComponentTimeZoneIso8601 extends SimpleDateFormatCom
 
     @Override
     void formatDate(final SimpleDateFormatRequest request) {
-        final int offset = request.calendar.get(Calendar.ZONE_OFFSET) / 36000;
-        final int hours = offset / 100;
-        final int minutes = offset - hours * 100;
+        final Calendar calendar = request.calendar;
+        final TimeZone timeZone = calendar.getTimeZone();
+
+        final int daylightSaving = timeZone.inDaylightTime(calendar.getTime()) ?
+                calendar.get(Calendar.DST_OFFSET) :
+                0;
+        final int offset = (calendar.get(Calendar.ZONE_OFFSET) + daylightSaving) / 36000;
+        final int absolute = Math.abs(offset);
 
         final StringBuffer text = request.text;
-        text.append(offset < 0 ? '-' : '+');
 
-        switch(this.length) {
-            case 1:
-                addDoubleDigit(hours, text);
-                if(0 != minutes) {
+        if (0 == offset) {
+            text.append('Z');
+        } else {
+            text.append(offset < 0 ? '-' : '+');
+            final int hours = absolute / 100;
+            final int minutes = (int)(((absolute - hours * 100f)/ 100f) * 60);
+
+            switch (this.length) {
+                case 1:
+                    addDoubleDigit(hours, text); // ignore minutes component
+                    break;
+                case 2:
+                    addDoubleDigit(hours, text);
                     addDoubleDigit(minutes, text);
-                }
-                break;
-            case 2:
-                addDoubleDigit(hours, text);
-                addDoubleDigit(minutes, text);
-                break;
-            case 3:
-                addDoubleDigit(hours, text);
-                text.append(':');
-                addDoubleDigit(minutes, text);
-                break;
-            default:
-                break;
+                    break;
+                case 3:
+                    addDoubleDigit(hours, text);
+                    text.append(':');
+                    addDoubleDigit(minutes, text);
+                    break;
+                default:
+                    break;
+            }
         }
     }
 
     private void addDoubleDigit(final int value, final StringBuffer text) {
-        if(value < 9) {
+        if(value < 10) {
             text.append('0');
         }
         text.append(value);
