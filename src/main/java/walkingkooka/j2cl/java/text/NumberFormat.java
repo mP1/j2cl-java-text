@@ -66,7 +66,7 @@ public abstract class NumberFormat extends Format {
      */
     public static NumberFormat getCurrencyInstance(final Locale locale) {
         return DecimalFormat.forLocale(locale, DecimalFormat.INDEX_CURRENCY)
-                .cloneState();
+                .clone();
     }
 
     /**
@@ -88,7 +88,7 @@ public abstract class NumberFormat extends Format {
      */
     public static NumberFormat getInstance(final Locale locale) {
         return DecimalFormat.forLocale(locale, DecimalFormat.INDEX_INSTANCE)
-                .cloneState();
+                .clone();
     }
 
     /**
@@ -110,7 +110,7 @@ public abstract class NumberFormat extends Format {
      */
     public static NumberFormat getNumberInstance(final Locale locale) {
         return DecimalFormat.forLocale(locale, DecimalFormat.INDEX_NUMBER)
-                .cloneState();
+                .clone();
     }
 
     /**
@@ -132,7 +132,7 @@ public abstract class NumberFormat extends Format {
      */
     public static NumberFormat getIntegerInstance(final Locale locale) {
         return DecimalFormat.forLocale(locale, DecimalFormat.INDEX_INTEGER)
-                .cloneState();
+                .clone();
     }
 
     /**
@@ -154,7 +154,7 @@ public abstract class NumberFormat extends Format {
      */
     public static NumberFormat getPercentInstance(Locale locale) {
         return DecimalFormat.forLocale(locale, DecimalFormat.INDEX_PERCENT)
-                .cloneState();
+                .clone();
     }
 
     protected NumberFormat() {
@@ -443,7 +443,7 @@ public abstract class NumberFormat extends Format {
     /**
      * This will be overridden by {@link DecimalFormat} and used by the static getXXXInstance methods to clone the constant.
      */
-    DecimalFormat cloneState() {
+    public NumberFormat clone() {
         throw new UnsupportedOperationException();
     }
 

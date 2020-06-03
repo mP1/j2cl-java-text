@@ -37,7 +37,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 
-public final class NumberFormatTest extends FormatTestCase<NumberFormat> implements HashCodeEqualsDefinedTesting2<NumberFormat> {
+public final class NumberFormatTest extends FormatTestCase2<NumberFormat> {
 
     @Test
     public void testFractionField() {

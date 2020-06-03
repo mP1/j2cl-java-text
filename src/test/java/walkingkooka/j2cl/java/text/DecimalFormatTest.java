@@ -33,8 +33,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertNotSame;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> implements HashCodeEqualsDefinedTesting2<DecimalFormat>,
-        ToStringTesting<DecimalFormat> {
+public final class DecimalFormatTest extends FormatTestCase2<DecimalFormat> implements ToStringTesting<DecimalFormat> {
 
     private final static Locale EN_AU = Locale.forLanguageTag("en-AU");
     private final static Locale FR = Locale.forLanguageTag("fr");
