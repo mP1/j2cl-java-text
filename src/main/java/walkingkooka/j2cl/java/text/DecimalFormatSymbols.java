@@ -174,7 +174,7 @@ public class DecimalFormatSymbols {
         if (null == DEFAULT) {
             DEFAULT = new DecimalFormatSymbols();
         }
-        return DEFAULT.cloneState();
+        return DEFAULT.clone();
     }
 
     // @VisibleForTestin
@@ -381,7 +381,7 @@ public class DecimalFormatSymbols {
     /**
      * Used internally to make a defensive copy
      */
-    final DecimalFormatSymbols cloneState() {
+    public DecimalFormatSymbols clone() {
         return new DecimalFormatSymbols(this, this.locale);
     }
 

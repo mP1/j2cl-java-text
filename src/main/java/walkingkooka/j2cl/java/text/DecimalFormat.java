@@ -1402,7 +1402,7 @@ public class DecimalFormat extends NumberFormat {
      *         format.
      */
     public DecimalFormatSymbols getDecimalFormatSymbols() {
-        return this.symbols.cloneState();
+        return this.symbols.clone();
     }
 
     /**
@@ -1413,7 +1413,7 @@ public class DecimalFormat extends NumberFormat {
      */
     public void setDecimalFormatSymbols(final DecimalFormatSymbols symbols) {
         if (symbols != null) {
-            this.symbols = symbols.cloneState();
+            this.symbols = symbols.clone();
         }
     }
 

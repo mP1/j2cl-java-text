@@ -350,12 +350,12 @@ public final class DecimalFormatSymbolsTest implements ClassTesting<DecimalForma
     // clone............................................................................................................
 
     @Test
-    public void testCloneState() {
-        this.cloneStateAndCheck(new DecimalFormatSymbols());
+    public void testClone() {
+        this.cloneAndCheck(new DecimalFormatSymbols());
     }
 
     @Test
-    public void testCloneState2() {
+    public void testClone2() {
         Locale.setDefault(Locale.forLanguageTag("EN-AU"));
 
         final DecimalFormatSymbols symbols = new DecimalFormatSymbols();
@@ -375,11 +375,11 @@ public final class DecimalFormatSymbolsTest implements ClassTesting<DecimalForma
         symbols.setPerMill('T');
         symbols.setZeroDigit('Z');
 
-        this.cloneStateAndCheck(symbols);
+        this.cloneAndCheck(symbols);
     }
 
-    private void cloneStateAndCheck(final DecimalFormatSymbols symbols) {
-        this.checkEquals(symbols, symbols.cloneState());
+    private void cloneAndCheck(final DecimalFormatSymbols symbols) {
+        this.checkEquals(symbols, symbols.clone());
     }
 
     // equals...........................................................................................................
