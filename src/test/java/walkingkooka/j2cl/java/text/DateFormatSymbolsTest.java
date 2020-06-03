@@ -179,25 +179,25 @@ public final class DateFormatSymbolsTest implements ClassTesting<DateFormatSymbo
         Assertions.assertArrayEquals(expected.getWeekdays(), emulated.getWeekdays(), "weekdays");
     }
 
-    // cloneState........................................................................................................
+    // clone............................................................................................................
 
     @Test
-    public void testCloneState() {
+    public void testClone() {
         final DateFormatSymbols symbols = new DateFormatSymbols(Locale.FRANCE);
-        final DateFormatSymbols clone = symbols.cloneState();
+        final DateFormatSymbols clone = symbols.clone();
 
         assertNotSame(symbols, clone);
         this.checkEquals(symbols, clone);
     }
 
     @Test
-    public void testCloneState2() {
+    public void testClone2() {
         for (final Locale locale : Locale.getAvailableLocales()) {
             if(WalkingkookaLanguageTag.isUnsupported(locale.toLanguageTag())) {
                 continue;
             }
             final DateFormatSymbols symbols = new DateFormatSymbols(locale);
-            final DateFormatSymbols clone = symbols.cloneState();
+            final DateFormatSymbols clone = symbols.clone();
 
             assertNotSame(symbols, clone);
             this.checkEquals(symbols, clone);

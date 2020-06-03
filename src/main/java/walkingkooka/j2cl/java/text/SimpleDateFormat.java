@@ -570,7 +570,7 @@ public class SimpleDateFormat extends DateFormat {
 //        pattern = template;
 //        formatData = (DateFormatSymbols) value.clone();
         this.applyPattern(template);
-        this.formatData = value.cloneState();
+        this.formatData = value.clone();
     }
 
 //    private void copySymbols(DateFormatSymbols value, com.ibm.icu.text.DateFormatSymbols icuSymbols) {
@@ -726,7 +726,7 @@ public class SimpleDateFormat extends DateFormat {
         clone.calendar = (Calendar)this.calendar.clone();
         clone.creationYear = this.creationYear;
         clone.defaultCenturyStart = (Date)this.defaultCenturyStart.clone();
-        clone.formatData = this.formatData.cloneState();
+        clone.formatData = this.formatData.clone();
         clone.numberFormat = this.numberFormat.clone();
         clone.pattern = this.pattern;
         clone.components = this.components; // sharing is ok, list never modified
@@ -1217,7 +1217,7 @@ public class SimpleDateFormat extends DateFormat {
     public DateFormatSymbols getDateFormatSymbols() {
         // Return a clone so the arrays in the ResourceBundle are not modified
 //        return (DateFormatSymbols) formatData.clone();
-        return this.formatData.cloneState();
+        return this.formatData.clone();
     }
 
     @Override
@@ -1287,7 +1287,7 @@ public class SimpleDateFormat extends DateFormat {
 //        copySymbols(value, icuSymbols);
 //        icuFormat.setDateFormatSymbols(icuSymbols);
 //        formatData = (DateFormatSymbols) value.clone();
-        this.formatData = value.cloneState();
+        this.formatData = value.clone();
     }
 
     /**
