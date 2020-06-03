@@ -113,7 +113,7 @@ public class DateFormatSymbols {
         if (null == DEFAULT) {
             DEFAULT = new DateFormatSymbols();
         }
-        return DEFAULT.cloneState();
+        return DEFAULT.clone(); // must clone because is mutable
     }
 
     // @VisibleForTestin
@@ -208,7 +208,7 @@ public class DateFormatSymbols {
 
     // clone...........................................................................................................
 
-    final DateFormatSymbols cloneState() {
+    public final DateFormatSymbols clone() {
         return new DateFormatSymbols(this);
     }
 
