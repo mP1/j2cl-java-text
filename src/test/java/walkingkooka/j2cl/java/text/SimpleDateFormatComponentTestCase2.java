@@ -25,6 +25,7 @@ import walkingkooka.text.CharSequences;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
+import java.util.TimeZone;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -35,16 +36,6 @@ public abstract class SimpleDateFormatComponentTestCase2<C extends SimpleDateFor
     SimpleDateFormatComponentTestCase2() {
         super();
     }
-
-    final static int YEAR = 2020;
-    final static int MONTH = Calendar.JUNE;
-    final static int DAY = 30;
-    final static int HOURS = 12;
-    final static int MINUTES = 58;
-    final static int SECONDS = 59;
-    final static int MILLI = 987654321;
-
-    final static Date DATE = new Date(Date.UTC(YEAR - 1900, MONTH, DAY, HOURS, MINUTES, SECONDS) + MILLI);
 
     // formatCalendarFieldNumericValue.......................................................................................................
 
@@ -75,7 +66,7 @@ public abstract class SimpleDateFormatComponentTestCase2<C extends SimpleDateFor
                                   final Date date) {
         this.formatDateAndCheck(length,
                 date,
-                Locale.forLanguageTag("EN-AU"),
+                LOCALE,
                 false);
     }
 
