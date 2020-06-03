@@ -48,6 +48,10 @@ public abstract class Format {
         return result;
     }
 
+    public Object clone() {
+        throw new UnsupportedOperationException();
+    }
+
     public static class Field {
 
         protected Field(final String name) {

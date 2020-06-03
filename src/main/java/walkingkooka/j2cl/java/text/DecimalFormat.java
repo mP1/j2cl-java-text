@@ -302,7 +302,7 @@ public class DecimalFormat extends NumberFormat {
     }
 
     /**
-     * Ctor used to register locale to decimal format and by {@link #cloneState()}
+     * Ctor used to register locale to decimal format and by {@link #clone()}
      */
     private DecimalFormat(final Currency currency,
                           final boolean decimalSeparatorAlwaysShown,
@@ -419,7 +419,7 @@ public class DecimalFormat extends NumberFormat {
     }
 
     /**
-     * Copy constructor for internal use by {@link #cloneState()}.
+     * Copy constructor for internal use by {@link #clone()}.
      */
     private DecimalFormat(final DecimalFormat copy) {
         super();
@@ -1424,7 +1424,7 @@ public class DecimalFormat extends NumberFormat {
     /**
      * Because {@link DecimalFormat} is mutable clones must be made by the various static getters.
      */
-    DecimalFormat cloneState() {
+    public DecimalFormat clone() {
         return new DecimalFormat(this);
     }
 

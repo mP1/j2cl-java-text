@@ -22,16 +22,14 @@ import walkingkooka.HashCodeEqualsDefinedTesting2;
 import walkingkooka.reflect.ClassTesting;
 import walkingkooka.reflect.JavaVisibility;
 
-public abstract class FormatTestCase<F extends Format> implements ClassTesting<F> {
+public abstract class FormatTestCase2<F extends Format> extends FormatTestCase<F> implements HashCodeEqualsDefinedTesting2<F> {
 
-    FormatTestCase() {
+    FormatTestCase2() {
         super();
     }
 
-    // ClassTesting.....................................................................................................
-
-    @Override
-    public final JavaVisibility typeVisibility() {
-        return JavaVisibility.PUBLIC;
+    @Test
+    public final void testClone() {
+        this.checkEquals(this.createObject());
     }
 }

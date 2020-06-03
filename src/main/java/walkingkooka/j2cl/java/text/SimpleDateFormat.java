@@ -391,7 +391,7 @@ public class SimpleDateFormat extends DateFormat {
                                              final int base,
                                              final int style) {
         return localeToInstances.getOrFail(locale)
-                [base + styleToIndex(style)].cloneState();
+                [base + styleToIndex(style)].clone();
     }
 
     /**
@@ -719,14 +719,15 @@ public class SimpleDateFormat extends DateFormat {
     /**
      * Same idea as {@link #clone()} performing the same operation.
      */
-    SimpleDateFormat cloneState() {
+    @Override
+    public SimpleDateFormat clone() {
         final SimpleDateFormat clone = new SimpleDateFormat();
 
         clone.calendar = (Calendar)this.calendar.clone();
         clone.creationYear = this.creationYear;
         clone.defaultCenturyStart = (Date)this.defaultCenturyStart.clone();
         clone.formatData = this.formatData.cloneState();
-        clone.numberFormat = this.numberFormat.cloneState();
+        clone.numberFormat = this.numberFormat.clone();
         clone.pattern = this.pattern;
         clone.components = this.components; // sharing is ok, list never modified
         clone.tzId = this.tzId;

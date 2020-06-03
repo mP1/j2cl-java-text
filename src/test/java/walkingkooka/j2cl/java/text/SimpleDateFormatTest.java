@@ -34,8 +34,7 @@ import java.util.function.Consumer;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public final class SimpleDateFormatTest extends FormatTestCase<SimpleDateFormat> implements HashCodeEqualsDefinedTesting2<SimpleDateFormat>,
-        ToStringTesting<SimpleDateFormat> {
+public final class SimpleDateFormatTest extends FormatTestCase2<SimpleDateFormat> implements ToStringTesting<SimpleDateFormat> {
 
     private final static Locale EN_AU = Locale.forLanguageTag("en-AU");
 
