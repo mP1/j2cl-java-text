@@ -103,7 +103,7 @@ For the moment the following classes will not be supported:
 - CollationKey
 - Collator
 
-- DateFormat TODO [parse text](https://github.com/mP1/j2cl-java-text/issues/183), [format date](https://github.com/mP1/j2cl-java-text/issues/184)
+- DateFormat TODO [parse text](https://github.com/mP1/j2cl-java-text/issues/183)
 
 - MessageFormat
 - MessageFormat.Field
