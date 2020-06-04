@@ -19,7 +19,7 @@ package walkingkooka.j2cl.java.text;
 
 import java.util.Calendar;
 
-final class SimpleDateFormatComponentDayNumberOfWeek extends SimpleDateFormatComponent2 {
+final class SimpleDateFormatComponentDayNumberOfWeek extends SimpleDateFormatComponentNumber {
 
     final static char LETTER = DAY_NUMBER_OF_WEEK;
 
@@ -34,12 +34,15 @@ final class SimpleDateFormatComponentDayNumberOfWeek extends SimpleDateFormatCom
     // format...........................................................................................................
 
     @Override
-    final void formatDate(final SimpleDateFormatRequest request) {
-        final int day = request.calendar.get(Calendar.DAY_OF_WEEK);
+    int calendarField() {
+        return Calendar.DAY_OF_WEEK;
+    }
 
+    @Override
+    int adjustValue(int day) {
         final int number;
 
-        switch(day) {
+        switch (day) {
             case 0:
                 number = 7;
                 break;
@@ -51,9 +54,7 @@ final class SimpleDateFormatComponentDayNumberOfWeek extends SimpleDateFormatCom
                 break;
         }
 
-        this.formatNumericValue(request,
-                number,
-                this.length);
+        return number;
     }
 
     // SimpleDateFormatComponent2.......................................................................................

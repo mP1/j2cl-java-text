@@ -19,7 +19,7 @@ package walkingkooka.j2cl.java.text;
 
 import java.util.Calendar;
 
-final class SimpleDateFormatComponentYear extends SimpleDateFormatComponent2 {
+final class SimpleDateFormatComponentYear extends SimpleDateFormatComponentNumber {
 
     final static char LETTER = YEAR;
 
@@ -34,15 +34,15 @@ final class SimpleDateFormatComponentYear extends SimpleDateFormatComponent2 {
     // formatDate.......................................................................................................
 
     @Override
-    final void formatDate(final SimpleDateFormatRequest request) {
-        final int year = request.calendar.get(Calendar.YEAR);
-        final int length = this.length;
+    int calendarField() {
+        return Calendar.YEAR;
+    }
 
-        this.formatNumericValue(request,
-                2 == length ?
-                        year % 100 : // length = 2 then two digits year
-                        year,
-                length);
+    @Override
+    int adjustValue(final int value) {
+        return 2 == this.length ?
+                value % 100 : // length = 2 then two digits year
+                value;
     }
 
     // SimpleDateFormatComponent........................................................................................
