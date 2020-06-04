@@ -1272,8 +1272,6 @@ public class SimpleDateFormat extends DateFormat {
         Calendar cal = new GregorianCalendar();
         cal.setTime(date);
         creationYear = cal.get(Calendar.YEAR);
-
-        throw new UnsupportedOperationException();
     }
 
     /**
