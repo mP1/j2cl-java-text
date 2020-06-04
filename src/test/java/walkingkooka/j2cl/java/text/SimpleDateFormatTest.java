@@ -18,7 +18,6 @@
 package walkingkooka.j2cl.java.text;
 
 import org.junit.jupiter.api.Test;
-import walkingkooka.HashCodeEqualsDefinedTesting2;
 import walkingkooka.NeverError;
 import walkingkooka.ToStringTesting;
 import walkingkooka.j2cl.locale.WalkingkookaLanguageTag;
@@ -37,6 +36,16 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public final class SimpleDateFormatTest extends FormatTestCase2<SimpleDateFormat> implements ToStringTesting<SimpleDateFormat> {
 
     private final static Locale EN_AU = Locale.forLanguageTag("en-AU");
+
+    // 2DigitYearStart..................................................................................................
+
+    @Test
+    public void testSet2DigitYearStart() {
+        final SimpleDateFormat format = new SimpleDateFormat();
+        final Date date = new Date();
+        format.set2DigitYearStart(date);
+        assertEquals(date, format.get2DigitYearStart());
+    }
 
     // getDateInstance..................................................................................................
 
