@@ -17,7 +17,67 @@
 
 package walkingkooka.j2cl.java.text;
 
-public final class SimpleDateFormatComponentMonthInYearTest extends SimpleDateFormatComponentNumberTestCase<SimpleDateFormatComponentMonthInYear> {
+import org.junit.jupiter.api.Test;
+
+public final class SimpleDateFormatComponentMonthInYearTest extends SimpleDateFormatComponentTestCase2<SimpleDateFormatComponentMonthInYear> {
+
+    @Test
+    public void testParseFails() {
+        this.parseTextAndCheck(this.createComponent(3), "XYZ");
+    }
+
+    @Test
+    public void testParseIncompleteFails() {
+        this.parseTextAndCheck(this.createComponent(3), "J");
+    }
+
+    @Test
+    public void testParseIncompleteFails2() {
+        this.parseTextAndCheck(this.createComponent(3), "Ja");
+    }
+
+    @Test
+    public void testParse1Number() {
+        this.parseTextAndCheck(this.createComponent(1),
+                "10");
+    }
+
+    @Test
+    public void testParse1NumberLeadingZero() {
+        this.parseTextAndCheck(this.createComponent(1),
+                "00010");
+    }
+
+    @Test
+    public void testParse2Number() {
+        this.parseTextAndCheck(this.createComponent(2),
+                "10");
+    }
+
+    @Test
+    public void testParse3Short() {
+        this.parseTextAndCheck(this.createComponent(3),
+                "Oct.");
+    }
+
+    @Test
+    public void testParse3Long() {
+        this.parseTextAndCheck(this.createComponent(3),
+                "October");
+    }
+
+    @Test
+    public void testParse4Short() {
+        this.parseTextAndCheck(this.createComponent(4),
+                "Oct.");
+    }
+
+    @Test
+    public void testParse4Long() {
+        this.parseTextAndCheck(this.createComponent(4),
+                "October");
+    }
+    
     @Override
     SimpleDateFormatComponentMonthInYear createComponent(final int length) {
         return SimpleDateFormatComponentMonthInYear.with(length);

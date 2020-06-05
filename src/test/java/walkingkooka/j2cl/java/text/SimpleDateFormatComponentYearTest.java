@@ -17,6 +17,7 @@
 
 package walkingkooka.j2cl.java.text;
 
+import javaemul.internal.annotations.GwtIncompatible;
 import org.junit.jupiter.api.Test;
 
 import java.util.Date;
@@ -57,5 +58,26 @@ public final class SimpleDateFormatComponentYearTest extends SimpleDateFormatCom
     @Override
     public Class<SimpleDateFormatComponentYear> type() {
         return SimpleDateFormatComponentYear.class;
+    }
+
+    @GwtIncompatible
+    public static void main(final String[] a) throws Exception {
+        final Date twoDigit = new Date(Date.UTC(1905-1900, 0, 0,0, 0, 0));
+
+        final java.text.SimpleDateFormat sdf1 = new java.text.SimpleDateFormat("y");
+        sdf1.set2DigitYearStart(twoDigit);
+
+        final java.text.SimpleDateFormat sdf2 = new java.text.SimpleDateFormat("yy");
+        sdf2.set2DigitYearStart(twoDigit);
+
+        final java.text.SimpleDateFormat sdf3 = new java.text.SimpleDateFormat("yyy");
+        sdf3.set2DigitYearStart(twoDigit);
+
+        final java.text.SimpleDateFormat sdf4 = new java.text.SimpleDateFormat("yyyy");
+        sdf4.set2DigitYearStart(twoDigit);
+
+        for (int i = 0; i < 120; i++) {
+            System.out.println(i + " \ty: " + sdf1.parse(String.valueOf(i)) +  " \tyy: " + sdf2.parse(String.valueOf(i)) + " \tyyy: " + sdf3.parse(String.valueOf(i)) + " \tyyyy: " + sdf4.parse(String.valueOf(i))  );
+        }
     }
 }

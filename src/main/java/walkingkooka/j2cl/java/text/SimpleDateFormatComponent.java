@@ -401,4 +401,9 @@ abstract class SimpleDateFormatComponent {
      * Formats a component of the given {@link Date} to the {@link StringBuilder}.
      */
     abstract void formatDate(final SimpleDateFormatFormatRequest request);
+
+    /**
+     * Consumes part of the text updating the calendar, position and error index as necessary
+     */
+    abstract void parseText(final SimpleDateFormatParseRequest request);
 }

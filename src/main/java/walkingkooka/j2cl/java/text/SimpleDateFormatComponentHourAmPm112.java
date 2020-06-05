@@ -42,8 +42,18 @@ final class SimpleDateFormatComponentHourAmPm112 extends SimpleDateFormatCompone
     }
 
     @Override
-    int adjustValue(final int value) {
+    int adjustReadValue(final int value) {
         return 0 == value ? 12 : value;
+    }
+
+    // parse............................................................................................................
+
+    @Override
+    int adjustWriteValue(final int value,
+                         final SimpleDateFormatParseRequest parse) {
+        return 12 == value ?
+                0:
+                value;
     }
 
     // SimpleDateFormatComponent2.......................................................................................

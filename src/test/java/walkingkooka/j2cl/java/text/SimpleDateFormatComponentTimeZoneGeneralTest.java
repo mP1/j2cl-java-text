@@ -21,7 +21,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Locale;
 
-public final class SimpleDateFormatComponentTimeZoneGeneralTest extends SimpleDateFormatComponentTestCase2<SimpleDateFormatComponentTimeZoneGeneral> {
+public final class SimpleDateFormatComponentTimeZoneGeneralTest extends SimpleDateFormatComponentTimeZoneGeneralRfc822TestCase<SimpleDateFormatComponentTimeZoneGeneral> {
 
     @Test
     public final void testFormatDateAdelaide() {

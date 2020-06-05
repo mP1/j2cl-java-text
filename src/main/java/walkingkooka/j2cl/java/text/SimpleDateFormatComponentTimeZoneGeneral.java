@@ -19,7 +19,7 @@ package walkingkooka.j2cl.java.text;
 
 import java.util.TimeZone;
 
-final class SimpleDateFormatComponentTimeZoneGeneral extends SimpleDateFormatComponent2 {
+final class SimpleDateFormatComponentTimeZoneGeneral extends SimpleDateFormatComponentTimeZoneGeneralRfc822 {
 
     final static char LETTER = TIME_ZONE_GENERAL;
 

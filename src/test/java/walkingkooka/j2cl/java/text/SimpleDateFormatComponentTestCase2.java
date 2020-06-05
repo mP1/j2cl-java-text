@@ -37,7 +37,7 @@ public abstract class SimpleDateFormatComponentTestCase2<C extends SimpleDateFor
         super();
     }
 
-    // formatCalendarFieldNumericValue.......................................................................................................
+    // format...........................................................................................................
 
     @Test
     public final void testFormatDate1() {
@@ -89,6 +89,8 @@ public abstract class SimpleDateFormatComponentTestCase2<C extends SimpleDateFor
                 daylightSavingTime,
                 new java.text.SimpleDateFormat(CharSequences.repeating(component.letter(), length).toString(), locale).format(date));
     }
+
+    // Object...........................................................................................................
 
     @Test
     public final void testDifferentLength() {

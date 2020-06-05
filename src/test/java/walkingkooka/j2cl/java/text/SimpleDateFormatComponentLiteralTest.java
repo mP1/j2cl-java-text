@@ -23,7 +23,7 @@ import walkingkooka.ToStringTesting;
 
 import java.util.Date;
 
-public class SimpleDateFormatComponentLiteralTest extends SimpleDateFormatComponentTestCase<SimpleDateFormatComponentLiteral>
+public final class SimpleDateFormatComponentLiteralTest extends SimpleDateFormatComponentTestCase<SimpleDateFormatComponentLiteral>
         implements HashCodeEqualsDefinedTesting2<SimpleDateFormatComponentLiteral>,
         ToStringTesting<SimpleDateFormatComponentLiteral> {
 
@@ -33,6 +33,26 @@ public class SimpleDateFormatComponentLiteralTest extends SimpleDateFormatCompon
              new Date(),
              false,
              "!");
+    }
+
+    @Test
+    public void testParseFails() {
+        this.parseTextAndCheck(SimpleDateFormatComponentLiteral.with('A'), "Z");
+    }
+
+    @Test
+    public void testParseFails2() {
+        this.parseTextAndCheck(SimpleDateFormatComponentLiteral.with('A'), "a");
+    }
+
+    @Test
+    public void testParse() {
+        this.parseTextAndCheck(SimpleDateFormatComponentLiteral.with('!'), "!");
+    }
+
+    @Test
+    public void testParse2() {
+        this.parseTextAndCheck(SimpleDateFormatComponentLiteral.with('A'), "A");
     }
 
     @Test

@@ -21,10 +21,10 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Locale;
 
-public final class SimpleDateFormatComponentTimeZoneRfc822Test extends SimpleDateFormatComponentTestCase2<SimpleDateFormatComponentTimeZoneRfc822> {
+public final class SimpleDateFormatComponentTimeZoneRfc822Test extends SimpleDateFormatComponentTimeZoneGeneralRfc822TestCase<SimpleDateFormatComponentTimeZoneRfc822> {
 
     @Test
-    public final void testFormatDateAdelaide() {
+    public void testFormatDateAdelaide() {
         this.formatDateAndCheck(1, DATE, Locale.forLanguageTag("Australia/Adelaide"));
     }
 

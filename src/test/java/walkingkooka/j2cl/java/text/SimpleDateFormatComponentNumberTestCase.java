@@ -17,15 +17,7 @@
 
 package walkingkooka.j2cl.java.text;
 
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import walkingkooka.HashCodeEqualsDefinedTesting2;
-import walkingkooka.ToStringTesting;
-import walkingkooka.text.CharSequences;
-
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Locale;
 
 public abstract class SimpleDateFormatComponentNumberTestCase<C extends SimpleDateFormatComponent2> extends SimpleDateFormatComponentTestCase2<C> {
 
@@ -43,5 +35,122 @@ public abstract class SimpleDateFormatComponentNumberTestCase<C extends SimpleDa
     @Test
     public final void testFormatDate6() {
         this.formatDateAndCheck(6, DATE);
+    }
+
+    // parseText........................................................................................................
+
+    @Test
+    public final void testParse1Zero() {
+        this.parseTextAndCheck(1, "0");
+    }
+
+    @Test
+    public final void testParse1Five() {
+        this.parseTextAndCheck(1, "5");
+    }
+
+    @Test
+    public final void testParse1Six() {
+        this.parseTextAndCheck(1, "6");
+    }
+
+    @Test
+    public final void testParse1Seven() {
+        this.parseTextAndCheck(1, "7");
+    }
+
+    @Test
+    public final void testParse1Eight() {
+        this.parseTextAndCheck(1, "8");
+    }
+
+    @Test
+    public final void testParse1Nine() {
+        this.parseTextAndCheck(1, "9");
+    }
+
+    @Test
+    public final void testParse1TwoDigits() {
+        this.parseTextAndCheck(1, 9, 20);
+    }
+
+    @Test
+    public final void testParse1ThreeDigits() {
+        this.parseTextAndCheck(1, 9, 200);
+    }
+
+    @Test
+    public final void testParse2() {
+        this.parseTextAndCheck(2, "1");
+    }
+
+    @Test
+    public final void testParse2TwoDigits() {
+        this.parseTextAndCheck(2, 9, 20);
+    }
+
+    @Test
+    public final void testParse2ThreeDigits() {
+        this.parseTextAndCheck(2, 9, 200);
+    }
+
+    @Test
+    public final void testParse3ZeroOne() {
+        this.parseTextAndCheck(3, "01");
+    }
+
+    @Test
+    public final void testParse3ZeroThree() {
+        this.parseTextAndCheck(3, "03");
+    }
+
+    @Test
+    public final void testParse3TwoDigits() {
+        this.parseTextAndCheck(3, 10, 20);
+    }
+
+    @Test
+    public final void testParse3ThreeDigits() {
+        this.parseTextAndCheck(3, 10, 200);
+    }
+
+    @Test
+    public final void testParse4() {
+        this.parseTextAndCheck(4, "1");
+    }
+
+    @Test
+    public final void testParse4TwoDigits() {
+        this.parseTextAndCheck(4, 0, 20);
+    }
+
+    @Test
+    public final void testParse4ThreeDigits() {
+        this.parseTextAndCheck(4, 9, 200);
+    }
+
+    @Test
+    public final void testParse4FourDigits() {
+        this.parseTextAndCheck(4, 9, 2000);
+    }
+
+    final void parseTextAndCheck(final int length,
+                                 final int minValue,
+                                 final int maxValue) {
+        this.parseTextAndCheck(length, minValue, maxValue, "");
+    }
+
+    final void parseTextAndCheck(final int length,
+                                 final int minValue,
+                                 final int maxValue,
+                                 final String after) {
+        for(int i = minValue; i < maxValue; i++) {
+            this.parseTextAndCheck(length, String.valueOf(i));
+        }
+    }
+
+    final void parseTextAndCheck(final int length,
+                                 final String text) {
+        this.parseTextAndCheck(this.createComponent(length), text);
     }
 }

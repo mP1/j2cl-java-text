@@ -80,6 +80,115 @@ final class SimpleDateFormatComponentTimeZoneIso8601 extends SimpleDateFormatCom
         text.append(value);
     }
 
+    // parse............................................................................................................
+
+    @Override
+    void parseText(final SimpleDateFormatParseRequest request) {
+        final ParsePosition position = request.position;
+        final int start = position.getIndex();
+
+        final int errorStep;
+
+        switch (this.length) {
+            case 1:
+                errorStep = 1 + 2;
+                break;
+            case 2:
+                errorStep = 1 + 2 + 2;
+                break;
+            case 3:
+                errorStep = 1 + 2 + 1 + 2;
+                break;
+            default:
+                errorStep = 0;
+                break;
+        }
+        final int errorIndex = Math.min(start + errorStep, request.text.length());
+
+        switch (request.parsePlusOrMinusSign()) {
+            case SimpleDateFormatParseRequest.PARSE_PLUS:
+                this.parseAndUpdateCalendar(request,
+                        1,
+                        errorIndex);
+                break;
+            case SimpleDateFormatParseRequest.PARSE_MINUS:
+                this.parseAndUpdateCalendar(request,
+                        -1,
+                        errorIndex);
+                break;
+            default:
+                //position.setErrorIndex(position.getIndex());
+                position.setErrorIndex(errorIndex);
+                break;
+        }
+
+        if (request.isError()) {
+            position.setIndex(start);
+            //position.setErrorIndex(Math.min(start + errorStep, request.text.length()));
+            //position.setErrorIndex(Math.min(start + errorIndex, request.text.length() - 1));
+        }
+    }
+
+    private void parseAndUpdateCalendar(final SimpleDateFormatParseRequest request,
+                                        final int multiplier,
+                                        final int errorIndex) {
+        final int value;
+
+        switch (this.length) {
+            case 1:
+                value = parseHours(request, errorIndex);
+                break;
+            case 2:
+                value = parseHoursMinutes(request, errorIndex);
+                break;
+            case 3:
+                value = parseHoursColonMinutes(request, errorIndex);
+                break;
+            default:
+                value = 0;
+                break;
+        }
+
+        if(false == request.isError()) {
+            request.calendar.set(CALENDAR_FIELD, value * multiplier);
+        }
+    }
+
+    private static int parseHours(final SimpleDateFormatParseRequest request,
+                                  final int errorIndex) {
+        return hoursMinutesToMillis(request.parseTwoDigitHoursOrError(errorIndex), 0);
+    }
+
+    private static int parseHoursMinutes(final SimpleDateFormatParseRequest request,
+                                         final int errorIndex) {
+        final int value;
+        final int hours = request.parseTwoDigitHoursOrError(errorIndex);
+        if (request.isError()) {
+            value = 0;
+        } else {
+            value = hoursMinutesToMillis(hours, request.parseTwoDigitMinutesOrError(errorIndex));
+        }
+        return value;
+    }
+
+    private static int parseHoursColonMinutes(final SimpleDateFormatParseRequest request,
+                                              final int errorIndex) {
+        final int value;
+        final int hours = request.parseTwoDigitHoursOrError(errorIndex);
+        if (request.isError()) {
+            value = 0;
+        } else {
+            if (request.parseColonOrError()) {
+                value = hoursMinutesToMillis(hours, request.parseTwoDigitMinutesOrError(errorIndex));
+            } else {
+                value = 0;
+            }
+        }
+        return value;
+    }
+
+    private final static int CALENDAR_FIELD = walkingkooka.j2cl.locale.Calendar.ZONE_OFFSET;
+
     // SimpleDateFormatComponent........................................................................................
 
     @Override

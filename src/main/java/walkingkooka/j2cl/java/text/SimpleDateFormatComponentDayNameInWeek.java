@@ -17,6 +17,8 @@
 
 package walkingkooka.j2cl.java.text;
 
+import javaemul.internal.annotations.GwtIncompatible;
+
 import java.util.Calendar;
 
 final class SimpleDateFormatComponentDayNameInWeek extends SimpleDateFormatComponent2 {
@@ -35,7 +37,7 @@ final class SimpleDateFormatComponentDayNameInWeek extends SimpleDateFormatCompo
 
     @Override
     void formatDate(final SimpleDateFormatFormatRequest request) {
-        final int day = request.calendar.get(Calendar.DAY_OF_WEEK);
+        final int day = request.calendar.get(CALENDAR_FIELD);
         final int length = this.length;
         final DateFormatSymbols symbols = request.symbols;
 
@@ -50,10 +52,33 @@ final class SimpleDateFormatComponentDayNameInWeek extends SimpleDateFormatCompo
                 break;
         }
     }
+
+    // parse...........................................................................................................
+
+    @Override
+    void parseText(final SimpleDateFormatParseRequest request) {
+        final DateFormatSymbols symbols = request.symbols;
+        this.parseFromOptionsAndUpdateCalendar(request,
+                CALENDAR_FIELD,
+                1,
+                symbols.getWeekdays(), symbols.getShortWeekdays());
+    }
+
+    private final static int CALENDAR_FIELD = Calendar.DAY_OF_WEEK;
+
     // SimpleDateFormatComponent........................................................................................
 
     @Override
     char letter() {
         return LETTER;
+    }
+
+    @GwtIncompatible
+    public static void main(final String[] args) throws Exception{
+        System.out.println(new java.text.SimpleDateFormat("dd/MM/yyyy E").parse("6/6/2000 Saturday"));
+        System.out.println(new java.text.SimpleDateFormat("dd/MM/yyyy EE").parse("6/6/2000 Sat."));
+        System.out.println(new java.text.SimpleDateFormat("dd/MM/yyyy EEE").parse("6/6/2000 Sat."));
+        System.out.println(new java.text.SimpleDateFormat("dd/MM/yyyy EEEE").parse("6/6/2000 Saturday"));
+        System.out.println(new java.text.SimpleDateFormat("dd/MM/yyyy EEEE").parse("6/6/2000 Sat."));
     }
 }
