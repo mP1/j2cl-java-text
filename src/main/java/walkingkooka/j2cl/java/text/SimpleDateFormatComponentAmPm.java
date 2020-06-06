@@ -37,7 +37,7 @@ final class SimpleDateFormatComponentAmPm extends SimpleDateFormatComponent2 {
     // format...........................................................................................................
 
     @Override
-    void formatDate(final SimpleDateFormatRequest request) {
+    void formatDate(final SimpleDateFormatFormatRequest request) {
         final int ampm = request.calendar.get(Calendar.AM_PM);
         request.text.append(request.symbols.getAmPmStrings()[ampm]);
     }

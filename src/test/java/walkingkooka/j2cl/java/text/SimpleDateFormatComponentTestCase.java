@@ -86,7 +86,7 @@ public abstract class SimpleDateFormatComponentTestCase<C extends SimpleDateForm
                                   final boolean daylightSavingTime,
                                   final String expected) {
         final StringBuffer text = new StringBuffer();
-        component.formatDate(SimpleDateFormatRequest.with(calendar, text, symbols, daylightSavingTime));
+        component.formatDate(SimpleDateFormatFormatRequest.with(calendar, text, symbols, daylightSavingTime));
         assertEquals(expected,
                 text.toString(),
                 () -> component + " format " + calendar.getTime() + " symbols=" + symbols + " daylightSavingTime: " + daylightSavingTime + " tz " + TimeZone.getDefault());

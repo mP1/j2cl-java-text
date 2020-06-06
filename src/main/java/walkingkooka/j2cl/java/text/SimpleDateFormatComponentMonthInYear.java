@@ -34,7 +34,7 @@ final class SimpleDateFormatComponentMonthInYear extends SimpleDateFormatCompone
     // format...........................................................................................................
 
     @Override
-    void formatDate(final SimpleDateFormatRequest request) {
+    void formatDate(final SimpleDateFormatFormatRequest request) {
         final int month = request.calendar.get(Calendar.MONTH);
         final int length = this.length;
 

@@ -400,5 +400,5 @@ abstract class SimpleDateFormatComponent {
     /**
      * Formats a component of the given {@link Date} to the {@link StringBuilder}.
      */
-    abstract void formatDate(final SimpleDateFormatRequest request);
+    abstract void formatDate(final SimpleDateFormatFormatRequest request);
 }

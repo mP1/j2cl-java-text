@@ -17,7 +17,6 @@
 
 package walkingkooka.j2cl.java.text;
 
-import java.util.Calendar;
 import java.util.TimeZone;
 
 final class SimpleDateFormatComponentTimeZoneGeneral extends SimpleDateFormatComponent2 {
@@ -35,7 +34,7 @@ final class SimpleDateFormatComponentTimeZoneGeneral extends SimpleDateFormatCom
     // format...........................................................................................................
 
     @Override
-    void formatDate(final SimpleDateFormatRequest request) {
+    void formatDate(final SimpleDateFormatFormatRequest request) {
         request.text.append(request.calendar.getTimeZone()
                 .getDisplayName(request.daylightSavingTime,
                         this.length < 4 ? TimeZone.SHORT : TimeZone.LONG));

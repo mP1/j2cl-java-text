@@ -20,7 +20,6 @@ package walkingkooka.j2cl.java.text;
 import walkingkooka.text.CharSequences;
 
 import java.util.Objects;
-import java.util.function.IntBinaryOperator;
 import java.util.function.IntUnaryOperator;
 
 /**
@@ -38,7 +37,7 @@ abstract class SimpleDateFormatComponent2 extends SimpleDateFormatComponent {
 
     // Object...........................................................................................................
 
-    final void formatCalendarFieldNumericValue(final SimpleDateFormatRequest request,
+    final void formatCalendarFieldNumericValue(final SimpleDateFormatFormatRequest request,
                                                final int calendarField,
                                                final IntUnaryOperator adjustValue,
                                                final int maxLength) {
@@ -48,7 +47,7 @@ abstract class SimpleDateFormatComponent2 extends SimpleDateFormatComponent {
                 maxLength);
     }
 
-    final void formatNumericValue(final SimpleDateFormatRequest request,
+    final void formatNumericValue(final SimpleDateFormatFormatRequest request,
                                   final int value,
                                   final int maxLength) {
         final String text = String.valueOf(value);
@@ -59,7 +58,7 @@ abstract class SimpleDateFormatComponent2 extends SimpleDateFormatComponent {
                 CharSequences.padLeft(text, maxLength, '0'));
     }
 
-    final void formatCalendarFieldName(final SimpleDateFormatRequest request,
+    final void formatCalendarFieldName(final SimpleDateFormatFormatRequest request,
                                        final int calendarField,
                                        final String[] names) {
         this.formatName(request,
@@ -67,7 +66,7 @@ abstract class SimpleDateFormatComponent2 extends SimpleDateFormatComponent {
                 names);
     }
 
-    final void formatName(final SimpleDateFormatRequest request,
+    final void formatName(final SimpleDateFormatFormatRequest request,
                           final int value,
                           final String[] names) {
         request.text.append(names[value]);

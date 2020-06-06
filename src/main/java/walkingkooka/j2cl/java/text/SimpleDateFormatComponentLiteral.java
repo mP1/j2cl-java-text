@@ -34,7 +34,7 @@ final class SimpleDateFormatComponentLiteral extends SimpleDateFormatComponent {
     }
 
     @Override
-    void formatDate(final SimpleDateFormatRequest request) {
+    void formatDate(final SimpleDateFormatFormatRequest request) {
         request.text.append(this.c);
     }
 

@@ -21,19 +21,22 @@ import walkingkooka.text.CharSequences;
 
 import java.util.Calendar;
 
-final class SimpleDateFormatRequest {
+/**
+ * Captures the state and some values related to a {@link SimpleDateFormat} request.
+ */
+final class SimpleDateFormatFormatRequest {
 
-    static SimpleDateFormatRequest with(final Calendar calendar,
-                                        final StringBuffer text,
-                                        final DateFormatSymbols symbols,
-                                        final boolean daylightSavingTime) {
-        return new SimpleDateFormatRequest(calendar, text, symbols, daylightSavingTime);
+    static SimpleDateFormatFormatRequest with(final Calendar calendar,
+                                              final StringBuffer text,
+                                              final DateFormatSymbols symbols,
+                                              final boolean daylightSavingTime) {
+        return new SimpleDateFormatFormatRequest(calendar, text, symbols, daylightSavingTime);
     }
 
-    private SimpleDateFormatRequest(final Calendar calendar,
-                                    final StringBuffer text,
-                                    final DateFormatSymbols symbols,
-                                    final boolean daylightSavingTime) {
+    private SimpleDateFormatFormatRequest(final Calendar calendar,
+                                          final StringBuffer text,
+                                          final DateFormatSymbols symbols,
+                                          final boolean daylightSavingTime) {
         super();
         this.calendar = calendar;
         this.text = text;
