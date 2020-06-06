@@ -1135,7 +1135,7 @@ public class SimpleDateFormat extends DateFormat {
         final TimeZone timeZone = this.getTimeZone();
         final Calendar calendar = Calendar.getInstance(timeZone, this.locale);
         calendar.setTime(date);
-        final SimpleDateFormatRequest request = SimpleDateFormatRequest.with(calendar,
+        final SimpleDateFormatFormatRequest request = SimpleDateFormatFormatRequest.with(calendar,
                 buffer,
                 this.getDateFormatSymbols(),
                 timeZone.inDaylightTime(date));

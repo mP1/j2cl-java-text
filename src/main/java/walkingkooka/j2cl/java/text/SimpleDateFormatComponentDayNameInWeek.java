@@ -34,7 +34,7 @@ final class SimpleDateFormatComponentDayNameInWeek extends SimpleDateFormatCompo
     // format...........................................................................................................
 
     @Override
-    void formatDate(final SimpleDateFormatRequest request) {
+    void formatDate(final SimpleDateFormatFormatRequest request) {
         final int day = request.calendar.get(Calendar.DAY_OF_WEEK);
         final int length = this.length;
         final DateFormatSymbols symbols = request.symbols;

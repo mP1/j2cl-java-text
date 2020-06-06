@@ -34,7 +34,7 @@ final class SimpleDateFormatComponentTimeZoneRfc822 extends SimpleDateFormatComp
     // format...........................................................................................................
 
     @Override
-    void formatDate(final SimpleDateFormatRequest request) {
+    void formatDate(final SimpleDateFormatFormatRequest request) {
         final int offset = request.calendar.get(Calendar.ZONE_OFFSET) / 36000;
         request.text.append(offset < 0 ? '-' : '+');
 

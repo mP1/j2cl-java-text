@@ -34,7 +34,7 @@ final class SimpleDateFormatComponentEra extends SimpleDateFormatComponent2 {
     // format...........................................................................................................
 
     @Override
-    void formatDate(final SimpleDateFormatRequest request) {
+    void formatDate(final SimpleDateFormatFormatRequest request) {
         this.formatCalendarFieldName(request,
                 Calendar.ERA,
                 request.symbols.getEras());

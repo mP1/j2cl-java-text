@@ -27,8 +27,8 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.TimeZone;
 
-public final class SimpleDateFormatRequestTest implements ClassTesting2<SimpleDateFormatRequest>,
-        ToStringTesting<SimpleDateFormatRequest> {
+public final class SimpleDateFormatFormatRequestTest implements ClassTesting2<SimpleDateFormatFormatRequest>,
+        ToStringTesting<SimpleDateFormatFormatRequest> {
 
     private final static Date DATE = new Date(Date.UTC(2000-1900, 1, 31, 12, 58, 59));
 
@@ -37,7 +37,7 @@ public final class SimpleDateFormatRequestTest implements ClassTesting2<SimpleDa
         final Calendar calendar = Calendar.getInstance(TimeZone.getTimeZone("Australia/Sydney"), Locale.forLanguageTag("EN-AU"));
         calendar.setTime(DATE);
 
-        this.toStringAndCheck(SimpleDateFormatRequest.with(calendar,
+        this.toStringAndCheck(SimpleDateFormatFormatRequest.with(calendar,
                 new StringBuffer(),
                 new DateFormatSymbols(Locale.forLanguageTag("EN-AU")),
                 false),
@@ -45,8 +45,8 @@ public final class SimpleDateFormatRequestTest implements ClassTesting2<SimpleDa
     }
 
     @Override
-    public Class<SimpleDateFormatRequest> type() {
-        return SimpleDateFormatRequest.class;
+    public Class<SimpleDateFormatFormatRequest> type() {
+        return SimpleDateFormatFormatRequest.class;
     }
 
     @Override

@@ -35,7 +35,7 @@ final class SimpleDateFormatComponentTimeZoneIso8601 extends SimpleDateFormatCom
     // format...........................................................................................................
 
     @Override
-    void formatDate(final SimpleDateFormatRequest request) {
+    void formatDate(final SimpleDateFormatFormatRequest request) {
         final Calendar calendar = request.calendar;
         final TimeZone timeZone = calendar.getTimeZone();
 
