@@ -228,7 +228,7 @@ final class SimpleDateFormatParseRequest {
         for(;;) {
             if (abort || pos == end) {
                 if(pos - startPos < minLength) {
-                    position.setErrorIndex(/*startPos*/errorIndex);
+                    position.setErrorIndex(errorIndex);
                 } else {
                     position.setIndex(pos);
                 }

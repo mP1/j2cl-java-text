@@ -84,7 +84,7 @@ abstract class SimpleDateFormatComponent2 extends SimpleDateFormatComponent {
                                             final int calendarField,
                                             final int maxLength,
                                             final BiFunction<Integer, SimpleDateFormatParseRequest, Integer> adjustWriteValue) {
-        final int value = request.parseNumberOrError(1, maxLength, 9999);
+        final int value = request.parseNumberOrError(1, maxLength, request.position.getIndex());
         if (false == request.isError()) {
             request.calendar.set(calendarField, adjustWriteValue.apply(value, request));
         }

@@ -145,7 +145,7 @@ public abstract class SimpleDateFormatComponentNumberTestCase<C extends SimpleDa
                                  final int maxValue,
                                  final String after) {
         for(int i = minValue; i < maxValue; i++) {
-            this.parseTextAndCheck(length, String.valueOf(i));
+            this.parseTextAndCheck(length, i + after);
         }
     }
 

@@ -44,7 +44,7 @@ abstract class SimpleDateFormatComponentTimeZoneGeneralRfc822 extends SimpleDate
         final int start = position.getIndex();
         int index = start;
 
-        // try GMT, GMT sign hours colon minutes, RFC 822
+        // try GMT, GMT sign 1-or-2-digit-hours colon 2-digit-minutes, RFC 822
 
         if (0 == request.bestMatch(GMT, 0)) {
             index += 3; // GMT.length
@@ -72,11 +72,12 @@ abstract class SimpleDateFormatComponentTimeZoneGeneralRfc822 extends SimpleDate
                         position.setIndex(gmt);
                         break;
                 }
+
             } else {
                 position.setIndex(gmt);
             }
         } else {
-            // RFC822
+            // RFC822 = SIGN TWO-DIGIT-HOURS TWO-DIGIT-MINUTES
             switch (request.parsePlusOrMinusSign()) {
                 case SimpleDateFormatParseRequest.PARSE_PLUS:
                     this.parseHoursMinutesAndUpdateCalendar(request,
@@ -93,7 +94,7 @@ abstract class SimpleDateFormatComponentTimeZoneGeneralRfc822 extends SimpleDate
         }
 
         if(request.isError()) {
-            position.setErrorIndex(start);
+            position.setIndex(start);
         }
     }
 
@@ -101,12 +102,15 @@ abstract class SimpleDateFormatComponentTimeZoneGeneralRfc822 extends SimpleDate
 
     private void parseHoursColonMinutesAndUpdateCalendar(final SimpleDateFormatParseRequest request,
                                                          final int multiplier) {
-        final int failErrorIndex = request.position.getIndex() + 1 + 2 + 1 + 2;
+        final ParsePosition position = request.position;
+        final int textLength = request.text.length();
 
-        final int hours = request.parseNumberWithMaxValueOrError(1, 23, failErrorIndex);
+        final int hours = request.parseNumberWithMaxValueOrError(1,
+                24,
+                Math.min(position.getIndex(), textLength));
         if (false == request.isError()) {
             if(request.parseColonOrError()){
-                final int minutes = request.parseTwoDigitMinutesOrError(failErrorIndex);
+                final int minutes = request.parseTwoDigitMinutesOrError(Math.min(position.getIndex() + 2, textLength));
                 if (false == request.isError()) {
                     request.calendar.set(CALENDAR_FIELD, hoursMinutesToMillis(hours, minutes) * multiplier);
                 }
@@ -116,7 +120,7 @@ abstract class SimpleDateFormatComponentTimeZoneGeneralRfc822 extends SimpleDate
 
     private void parseHoursMinutesAndUpdateCalendar(final SimpleDateFormatParseRequest request,
                                                     final int multiplier) {
-        final int failErrorIndex = request.position.getIndex() + 1 + 2 + 2;
+        final int failErrorIndex = Math.min(request.position.getIndex() + 1 + 2 + 2, request.text.length());
 
         final int hours = request.parseTwoDigitHoursOrError(failErrorIndex);
         if (false == request.isError()) {

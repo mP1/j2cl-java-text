@@ -32,6 +32,11 @@ public abstract class SimpleDateFormatComponentTimeZoneGeneralRfc822TestCase<C e
     }
 
     @Test
+    public final void testParseTextZoneId() {
+        this.parseTextAndCheck("Australia/Sydney");
+    }
+
+    @Test
     public final void testParseTextMissingHours() {
         this.parseTextAndCheck("-");
     }
@@ -87,6 +92,11 @@ public abstract class SimpleDateFormatComponentTimeZoneGeneralRfc822TestCase<C e
     }
 
     @Test
+    public final void testParseTextGMTMinusSignMissingHoursFails3() {
+        this.parseTextAndCheck("GMT-!123");
+    }
+
+    @Test
     public final void testParseTextGMTMissingColonFails() {
         this.parseTextAndCheck("GMT+1");
     }
@@ -108,7 +118,7 @@ public abstract class SimpleDateFormatComponentTimeZoneGeneralRfc822TestCase<C e
 
     @Test
     public final void testParseTextGMTIncompleteMinutesFails() {
-        this.parseTextAndCheck("GMT+1:1");
+        this.parseTextAndCheck("GMT+1:2");
     }
 
     @Test
