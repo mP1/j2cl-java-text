@@ -126,15 +126,26 @@ public final class ParsePositionTest implements ClassTesting<ParsePosition>,
 
     @Test
     public void testToString() {
-        this.toStringAndCheck(new ParsePosition(INDEX), "index=" + INDEX + " errorIndex=" + -1);
+        this.toStringAndCheck2(INDEX, -1);
     }
 
     @Test
     public void testToStringErrorIndex() {
-        final ParsePosition position = new ParsePosition(INDEX);
-        position.setErrorIndex(ERROR_INDEX);
-        this.toStringAndCheck(position, "index=" + INDEX + " errorIndex=" + ERROR_INDEX);
+        this.toStringAndCheck2(1, 2);
     }
+
+    @Test
+    public void testToStringErrorIndex0() {
+        this.toStringAndCheck2(0, 0);
+    }
+
+    private void toStringAndCheck2(final int index,
+                                   final int errorIndex) {
+        final ParsePosition position = new ParsePosition(index);
+        position.setErrorIndex(errorIndex);
+        this.toStringAndCheck(position, "index=" + index + " errorIndex=" + errorIndex);
+    }
+
     // ClassTesting.....................................................................................................
 
     @Override
