@@ -18,6 +18,7 @@
 package walkingkooka.j2cl.java.text;
 
 import walkingkooka.ToStringBuilder;
+import walkingkooka.ToStringBuilderOption;
 
 import java.util.Objects;
 
@@ -67,6 +68,7 @@ public class ParsePosition {
     @Override
     public String toString() {
         return ToStringBuilder.empty()
+                .disable(ToStringBuilderOption.SKIP_IF_DEFAULT_VALUE)
                 .label("index").value(this.index)
                 .label("errorIndex").value(this.errorIndex)
                 .build();
