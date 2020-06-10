@@ -62,6 +62,18 @@ public final class SimpleDateFormatComponentDayNumberOfWeekTest extends SimpleDa
     }
 
     @Test
+    public void testFormatManyYearsMonthsDays() {
+        for (int year = 1980; year < 2020; year++) {
+            for (int month = Calendar.JANUARY; month <= Calendar.DECEMBER; month++) {
+                for (int dow = 0; dow < 50; dow++) {
+                    final Date date = new Date(Date.UTC(year - 1900, month, dow, 12, 58, 59));
+                    this.formatDateAndCheck(1, date);
+                }
+            }
+        }
+    }
+
+    @Test
     public void testParseZeroToFifty() {
         for(int i = 0; i < 50; i++) {
             this.parseTextAndCheck(1, "" + i);
