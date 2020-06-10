@@ -511,6 +511,96 @@ public final class SimpleDateFormatTest extends FormatTestCase2<SimpleDateFormat
                 () -> "pattern=" + CharSequences.quoteAndEscape(emul.toPattern()) + " date=" + new java.text.SimpleDateFormat("yyyy/MM/dd kk:mm:ss:SSS aaa").format(date));
     }
 
+    // parse............................................................................................................
+
+    @Test
+    public void testParseYear2000() {
+        this.parseAndCheck("yyyy", "2000");
+    }
+
+    @Test
+    public void testParseYearMonth2000Slash12() {
+        this.parseAndCheck("yyyy/MM", "2000/12");
+    }
+
+    @Test
+    public void testParseYearMonthName2001SlashJanuary() {
+        this.parseAndCheck("yyyy/MMM", "2001/January");
+    }
+
+    @Test
+    public void testParseYearMonthName2000SlashDecember() {
+        this.parseAndCheck("yyyy/MMM", "2000/December");
+    }
+
+    @Test
+    public void testParseDaySlashMonthSlashYear() {
+        this.parseAndCheck("dd/MM/yyyy", "31/1/2000");
+    }
+
+    @Test
+    public void testParseDaySlashMonthSlashYear2() {
+        this.parseAndCheck("dd/MM/yyyy", "31/12/1999");
+    }
+
+    @Test
+    public void testParseHourColonMinuteColonSec() {
+        this.parseAndCheck("HH:mm:ss", "23:58:59");
+    }
+
+    @Test
+    public void testParseHourColonMinuteColonSecAmpm() {
+        this.parseAndCheck("hh:mm:ssa", "1:58:59Pm");
+    }
+
+    @Test
+    public void testParseHourColonMinuteColonSecMilli() {
+        this.parseAndCheck("HH:mm:ss SSS", "23:58:59 789");
+    }
+
+    @Test
+    public void testParseHourColonMinuteTimeZoneIso8601() {
+        this.parseAndCheck("HH:mmX", "23:57+06");
+    }
+
+    @Test
+    public void testParseHourColonMinuteTimeZoneGeneral() {
+        this.parseAndCheck("HH:mmz", "23:57GMT+06:45");
+    }
+
+//    @Test
+//    public void testParseHourMinute() {
+//        this.parseAndCheck("HHmm", "2357");
+//    }
+
+    private void parseAndCheck(final String pattern,
+                               final String text) {
+        this.parseAndCheck0(pattern, text, 0);
+        this.parseAndCheck0(pattern, " " + text, 1);
+        this.parseAndCheck0(pattern, "ZZ" + text, 2);
+
+    }
+
+    private void parseAndCheck0(final String pattern,
+                                final String text,
+                                final int position) {
+        final java.text.SimpleDateFormat jre = new java.text.SimpleDateFormat(pattern);
+        final java.text.ParsePosition jrePosition = new java.text.ParsePosition(position);
+
+        final SimpleDateFormat emul = new SimpleDateFormat(pattern);
+        final ParsePosition emulPosition = new ParsePosition(position);
+
+        assertEquals(jre.parse(text, jrePosition),
+                emul.parse(text, emulPosition),
+                () -> "pattern " + CharSequences.quoteAndEscape(pattern) + " parse " + CharSequences.quoteAndEscape(text)+ " parsePosition: " + jrePosition);
+        assertEquals(jrePosition.getIndex(),
+                emulPosition.getIndex(),
+                () -> "index, " + "pattern " + CharSequences.quoteAndEscape(pattern) + " parse " + CharSequences.quoteAndEscape(text) + " parsePosition: " + jrePosition);
+        assertEquals(jrePosition.getErrorIndex(),
+                emulPosition.getErrorIndex(),
+                () -> "errorIndex, " + "pattern " + CharSequences.quoteAndEscape(pattern) + " parse " + CharSequences.quoteAndEscape(text) + " parsePosition: " + jrePosition);
+    }
+
     // ClassTesting.....................................................................................................
 
     @Override

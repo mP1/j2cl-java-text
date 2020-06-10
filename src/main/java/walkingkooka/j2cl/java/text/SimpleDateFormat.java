@@ -1257,26 +1257,30 @@ public class SimpleDateFormat extends DateFormat {
 //        icuFormat.setLenient(calendar.isLenient());
 //        return icuFormat.parse(string,position);
 
-        final SimpleDateFormatParseRequest parse = SimpleDateFormatParseRequest.with(string,
+        final Calendar calendar = (Calendar) this.calendar.clone();
+        calendar.clear();
+        final SimpleDateFormatParseRequest request = SimpleDateFormatParseRequest.with(string,
                 position,
-                (Calendar) this.calendar.clone(),
+                calendar,
                 this.creationYear,
                 this.formatData);
 
         final int length = string.length();
-        for (final SimpleDateFormatComponent component : components) {
-            while (position.getIndex() >= length) {
+        for (final SimpleDateFormatComponent component : this.components) {
+            if (position.getIndex() >= length) {
                 position.setErrorIndex(length);
                 break;
             }
 
-            component.parseText(parse);
-            if(position.getErrorIndex() >= 0) {
+            component.parseText(request);
+            if (request.isError()) {
                 break;
             }
         }
 
-        return this.calendar.getTime();
+        return request.isError() ?
+                null:
+                calendar.getTime();
     }
 
     /**
