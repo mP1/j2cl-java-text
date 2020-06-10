@@ -17,7 +17,35 @@
 
 package walkingkooka.j2cl.java.text;
 
-public class SimpleDateFormatComponent2Test extends SimpleDateFormatComponentTestCase<SimpleDateFormatComponent2> {
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public final class SimpleDateFormatComponent2Test extends SimpleDateFormatComponentTestCase<SimpleDateFormatComponent2> {
+
+    @Test
+    public void testHoursMinutesToMillis0() {
+        this.hoursMinutesToMillisAndCheck(0, 0, 0);
+    }
+
+    @Test
+    public void testHoursMinutesToMillis1Hour() {
+        this.hoursMinutesToMillisAndCheck(1, 0, 1 * 60 * 60 * 1000);
+    }
+
+    @Test
+    public void testHoursMinutesToMillis1TwoHourThirtyMinutes() {
+        this.hoursMinutesToMillisAndCheck(2, 30, 5 * 60 * 60 * 1000 / 2);
+    }
+
+    private void hoursMinutesToMillisAndCheck(final int hours,
+                                              final int minutes,
+                                              final int expected) {
+        assertEquals(expected,
+                SimpleDateFormatComponent2.hoursMinutesToMillis(hours, minutes),
+                () -> "hoursMinutesToMillis " + hours + ":" + minutes);
+    }
+
     @Override
     public Class<SimpleDateFormatComponent2> type() {
         return SimpleDateFormatComponent2.class;

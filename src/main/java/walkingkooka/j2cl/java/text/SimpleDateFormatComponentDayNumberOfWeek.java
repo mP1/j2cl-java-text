@@ -39,7 +39,7 @@ final class SimpleDateFormatComponentDayNumberOfWeek extends SimpleDateFormatCom
     }
 
     @Override
-    int adjustValue(int day) {
+    int adjustReadValue(int day) {
         final int number;
 
         switch (day) {
@@ -55,6 +55,30 @@ final class SimpleDateFormatComponentDayNumberOfWeek extends SimpleDateFormatCom
         }
 
         return number;
+    }
+
+    // parse............................................................................................................
+
+    @Override
+    int adjustWriteValue(final int value,
+                         final SimpleDateFormatParseRequest parse) {
+        final int day;
+
+        switch(value) {
+            case 0:
+                day = 7;
+                break;
+             case 8:
+                day = 8;
+                break;
+            default:
+                day = value < 8 ?
+                        value + 1:
+                        (value % 7);
+                break;
+        }
+
+        return day;
     }
 
     // SimpleDateFormatComponent2.......................................................................................

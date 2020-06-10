@@ -35,7 +35,7 @@ final class SimpleDateFormatComponentMonthInYear extends SimpleDateFormatCompone
 
     @Override
     void formatDate(final SimpleDateFormatFormatRequest request) {
-        final int month = request.calendar.get(Calendar.MONTH);
+        final int month = request.calendar.get(CALENDAR_FIELD);
         final int length = this.length;
 
         switch(length) {
@@ -51,6 +51,36 @@ final class SimpleDateFormatComponentMonthInYear extends SimpleDateFormatCompone
                 break;
         }
     }
+
+    @Override
+    void parseText(final SimpleDateFormatParseRequest request) {
+        final int length = this.length;
+
+        switch (length) {
+            case 1:
+            case 2:
+                this.parseNumberAndUpdateCalendar(request,
+                        CALENDAR_FIELD,
+                        Integer.MAX_VALUE,
+                        SimpleDateFormatComponentMonthInYear::adjustWriteValue);
+                break;
+            default:
+                final DateFormatSymbols symbols = request.symbols;
+                this.parseFromOptionsAndUpdateCalendar(request,
+                        CALENDAR_FIELD,
+                        0,
+                        symbols.getMonths(),
+                        symbols.getShortMonths());
+                break;
+        }
+    }
+
+    private static Integer adjustWriteValue(final Integer month,
+                                            final SimpleDateFormatParseRequest request) {
+        return Math.max(0, month -1);
+    }
+
+    private final static int CALENDAR_FIELD = Calendar.MONTH;
 
     // SimpleDateFormatComponent2.......................................................................................
 

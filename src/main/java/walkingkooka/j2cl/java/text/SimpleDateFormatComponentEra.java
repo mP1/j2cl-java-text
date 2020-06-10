@@ -36,9 +36,22 @@ final class SimpleDateFormatComponentEra extends SimpleDateFormatComponent2 {
     @Override
     void formatDate(final SimpleDateFormatFormatRequest request) {
         this.formatCalendarFieldName(request,
-                Calendar.ERA,
+                CALENDAR_FIELD,
                 request.symbols.getEras());
     }
+
+    // parse...........................................................................................................
+
+    @Override
+    void parseText(final SimpleDateFormatParseRequest request) {
+        final DateFormatSymbols symbols = request.symbols;
+        this.parseFromOptionsAndUpdateCalendar(request,
+                CALENDAR_FIELD,
+                0,
+                symbols.getEras());
+    }
+
+    private final static int CALENDAR_FIELD = Calendar.ERA;
 
     // SimpleDateFormatComponent2.......................................................................................
 
@@ -46,4 +59,12 @@ final class SimpleDateFormatComponentEra extends SimpleDateFormatComponent2 {
     char letter() {
         return LETTER;
     }
+
+//    @GwtIncompatible
+//    public static void main(final String[] args) throws Exception{
+//        //System.out.println(new java.text.SimpleDateFormat("dd/MM/yyyy G").parse("1/12/2000 A"));
+//        System.out.println(new java.text.SimpleDateFormat("dd/MM/yyyy GG").parse("1/12/2000 AD"));
+//        //System.out.println(new java.text.SimpleDateFormat("dd/MM/yyyy GG").parse("1/12/2000 A")); <- fails must be complete match
+//        System.out.println(new java.text.SimpleDateFormat("dd/MM/yyyy GG").parse("1/12/2000 AD"));
+//    }
 }

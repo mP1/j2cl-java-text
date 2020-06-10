@@ -42,7 +42,15 @@ final class SimpleDateFormatComponentHourInDay023 extends SimpleDateFormatCompon
     }
 
     @Override
-    int adjustValue(final int value) {
+    int adjustReadValue(final int value) {
+        return value;
+    }
+
+    // parse............................................................................................................
+
+    @Override
+    int adjustWriteValue(final int value,
+                         final SimpleDateFormatParseRequest parse) {
         return value;
     }
 

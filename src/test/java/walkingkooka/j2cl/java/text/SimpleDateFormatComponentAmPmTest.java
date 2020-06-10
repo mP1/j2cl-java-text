@@ -19,10 +19,76 @@ package walkingkooka.j2cl.java.text;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.Calendar;
-import java.util.Date;
-
 public final class SimpleDateFormatComponentAmPmTest extends SimpleDateFormatComponentTestCase2<SimpleDateFormatComponentAmPm> {
+
+    @Test
+    public void testParseFails() {
+        this.parseTextAndCheck(this.createComponent(1), "XYZ");
+    }
+
+    @Test
+    public void testParseIncompleteFails() {
+        this.parseTextAndCheck(this.createComponent(1), "A");
+    }
+
+    @Test
+    public void testParseIncompleteFails2() {
+        this.parseTextAndCheck(this.createComponent(1), "P");
+    }
+
+    @Test
+    public void testParse1AM() {
+        this.parseTextAndCheck(this.createComponent(1),
+                "am");
+    }
+
+    @Test
+    public void testParse1AMCaseInsensitive() {
+        this.parseTextAndCheck(this.createComponent(1),
+                "AM");
+    }
+
+    @Test
+    public void testParse1PM() {
+        this.parseTextAndCheck(this.createComponent(1),
+                "PM");
+    }
+
+    @Test
+    public void testParse2AM() {
+        this.parseTextAndCheck(this.createComponent(2),
+                "am");
+    }
+
+    @Test
+    public void testParse2PM() {
+        this.parseTextAndCheck(this.createComponent(2),
+                "pm");
+    }
+
+    @Test
+    public void testParse3AM() {
+        this.parseTextAndCheck(this.createComponent(3),
+                "am");
+    }
+
+    @Test
+    public void testParse3PM() {
+        this.parseTextAndCheck(this.createComponent(3),
+                "pm");
+    }
+
+    @Test
+    public void testParse4AM() {
+        this.parseTextAndCheck(this.createComponent(4),
+                "am");
+    }
+
+    @Test
+    public void testParse4PM() {
+        this.parseTextAndCheck(this.createComponent(4),
+                "pm");
+    }
 
     // SimpleDateFormatComponentTestCase2...............................................................................
 

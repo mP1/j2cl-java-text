@@ -33,10 +33,33 @@ abstract class SimpleDateFormatComponentNumber extends SimpleDateFormatComponent
 
     @Override
     final void formatDate(final SimpleDateFormatFormatRequest request) {
-        this.formatCalendarFieldNumericValue(request, this.calendarField(), this::adjustValue, this.length);
+        this.formatCalendarFieldNumericValue(request, this.calendarField(), this::adjustReadValue, this.length);
     }
 
     abstract int calendarField();
 
-    abstract int adjustValue(final int value);
+    abstract int adjustReadValue(final int value);
+
+    // parseText........................................................................................................
+
+    @Override
+    final void parseText(final SimpleDateFormatParseRequest request) {
+        this.parseNumberAndUpdateCalendar(request,
+                this.calendarField(),
+                Integer.MAX_VALUE,
+                this::adjustWriteValue);
+    }
+
+    /**
+     * Some fields such as year need special support for the value that is about to be set.
+     */
+    abstract int adjustWriteValue(final int value,
+                                  final SimpleDateFormatParseRequest parse);
+
+    final int adjustWriteYearValue(final int value,
+                                   final SimpleDateFormatParseRequest parse) {
+        return value >= 10 && value < 100 && this.length <= 2 ?
+                parse.adjustTwoDigitYear(value) :
+                value;
+    }
 }

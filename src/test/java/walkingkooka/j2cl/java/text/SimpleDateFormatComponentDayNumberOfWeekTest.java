@@ -61,6 +61,15 @@ public final class SimpleDateFormatComponentDayNumberOfWeekTest extends SimpleDa
         this.formatDateAndCheck(1, date);
     }
 
+    @Test
+    public void testParseZeroToFifty() {
+        for(int i = 0; i < 50; i++) {
+            this.parseTextAndCheck(1, "" + i);
+            this.parseTextAndCheck(2, "" + i);
+            this.parseTextAndCheck(3, "" + i);
+        }
+    }
+
     @Override
     SimpleDateFormatComponentDayNumberOfWeek createComponent(final int length) {
         return SimpleDateFormatComponentDayNumberOfWeek.with(length);

@@ -39,10 +39,18 @@ final class SimpleDateFormatComponentWeekYear extends SimpleDateFormatComponentN
     }
 
     @Override
-    int adjustValue(final int value) {
+    int adjustReadValue(final int value) {
         return 2 == this.length ?
                 value % 100 : // length = 2 then two digits year
                 value;
+    }
+
+    // parse............................................................................................................
+
+    @Override
+    int adjustWriteValue(final int value,
+                         final SimpleDateFormatParseRequest parse) {
+        return this.adjustWriteYearValue(value, parse);
     }
 
     // SimpleDateFormatComponent2.......................................................................................

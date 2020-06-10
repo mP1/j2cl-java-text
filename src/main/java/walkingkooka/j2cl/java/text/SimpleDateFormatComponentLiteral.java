@@ -38,6 +38,18 @@ final class SimpleDateFormatComponentLiteral extends SimpleDateFormatComponent {
         request.text.append(this.c);
     }
 
+    @Override
+    void parseText(final SimpleDateFormatParseRequest request) {
+        final int position = request.position.getIndex();
+
+        // check enought text left to match literal
+        if (position <= request.text.length() && this.c == request.text.charAt(position)) {
+            request.position.setIndex(position + 1);
+        } else {
+            request.position.setErrorIndex(position);
+        }
+    }
+
     // Object...........................................................................................................
 
     @Override

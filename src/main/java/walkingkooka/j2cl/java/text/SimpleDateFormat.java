@@ -1256,7 +1256,27 @@ public class SimpleDateFormat extends DateFormat {
 //        }
 //        icuFormat.setLenient(calendar.isLenient());
 //        return icuFormat.parse(string,position);
-        throw new UnsupportedOperationException();
+
+        final SimpleDateFormatParseRequest parse = SimpleDateFormatParseRequest.with(string,
+                position,
+                (Calendar) this.calendar.clone(),
+                this.creationYear,
+                this.formatData);
+
+        final int length = string.length();
+        for (final SimpleDateFormatComponent component : components) {
+            while (position.getIndex() >= length) {
+                position.setErrorIndex(length);
+                break;
+            }
+
+            component.parseText(parse);
+            if(position.getErrorIndex() >= 0) {
+                break;
+            }
+        }
+
+        return this.calendar.getTime();
     }
 
     /**
