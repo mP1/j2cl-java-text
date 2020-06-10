@@ -23,12 +23,20 @@ final class SimpleDateFormatComponentDayInYear extends SimpleDateFormatComponent
 
     final static char LETTER = DAY_IN_YEAR;
 
-    static SimpleDateFormatComponentDayInYear with(final int length) {
-        return new SimpleDateFormatComponentDayInYear(length);
+    static SimpleDateFormatComponentDayInYear with(final int patternLength,
+                                                   final int maxDigitLength) {
+        return new SimpleDateFormatComponentDayInYear(patternLength,
+                maxDigitLength);
     }
 
-    private SimpleDateFormatComponentDayInYear(final int length) {
-        super(length);
+    private SimpleDateFormatComponentDayInYear(final int patternLength,
+                                               final int maxDigitLength) {
+        super(patternLength, maxDigitLength);
+    }
+
+    @Override
+    SimpleDateFormatComponentDayInYear setNumberNext() {
+        return new SimpleDateFormatComponentDayInYear(this.length, 3);
     }
 
     // format...........................................................................................................

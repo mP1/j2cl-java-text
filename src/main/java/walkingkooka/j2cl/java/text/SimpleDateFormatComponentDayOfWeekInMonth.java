@@ -23,12 +23,20 @@ final class SimpleDateFormatComponentDayOfWeekInMonth extends SimpleDateFormatCo
 
     final static char LETTER = DAY_OF_WEEK_IN_MONTH;
 
-    static SimpleDateFormatComponentDayOfWeekInMonth with(final int length) {
-        return new SimpleDateFormatComponentDayOfWeekInMonth(length);
+    static SimpleDateFormatComponentDayOfWeekInMonth with(final int patternLength,
+                                                          final int maxDigitLength) {
+        return new SimpleDateFormatComponentDayOfWeekInMonth(patternLength,
+                maxDigitLength);
     }
 
-    private SimpleDateFormatComponentDayOfWeekInMonth(final int length) {
-        super(length);
+    private SimpleDateFormatComponentDayOfWeekInMonth(final int patternLength,
+                                                      final int maxDigitLength) {
+        super(patternLength, maxDigitLength);
+    }
+
+    @Override
+    SimpleDateFormatComponentDayOfWeekInMonth setNumberNext() {
+        return new SimpleDateFormatComponentDayOfWeekInMonth(this.length, 1);
     }
 
     // format...........................................................................................................

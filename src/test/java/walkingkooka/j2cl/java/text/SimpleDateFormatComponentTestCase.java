@@ -121,29 +121,43 @@ public abstract class SimpleDateFormatComponentTestCase<C extends SimpleDateForm
                                  final int twoDigitYear,
                                  final TimeZone timeZone,
                                  final Locale locale) {
+        this.parseTextAndCheck(component,
+                text,
+                text,
+                twoDigitYear,
+                timeZone,
+                locale);
+    }
+
+    final void parseTextAndCheck(final C component,
+                                 final String jreText,
+                                 final String emulText,
+                                 final int twoDigitYear,
+                                 final TimeZone timeZone,
+                                 final Locale locale) {
         final ParsePosition position = new ParsePosition(0);
         final Calendar calendar = Calendar.getInstance(timeZone, locale);
         calendar.clear();
-        component.parseText(SimpleDateFormatParseRequest.with(text, position, calendar, twoDigitYear, DateFormatSymbols.getInstance(LOCALE)));
+        component.parseText(SimpleDateFormatParseRequest.with(emulText, position, calendar, twoDigitYear, DateFormatSymbols.getInstance(LOCALE)));
 
         final java.text.ParsePosition jrePosition = new java.text.ParsePosition(0);
         final java.text.SimpleDateFormat simpleDateFormat = new java.text.SimpleDateFormat(component.toString(), locale);
         simpleDateFormat.set2DigitYearStart(new Date(Date.UTC(twoDigitYear - 1900, Calendar.JANUARY, 1, 0, 0, 0)));
         simpleDateFormat.setLenient(true);
-        final Date expected = simpleDateFormat.parse(text, jrePosition);
+        final Date expected = simpleDateFormat.parse(jreText, jrePosition);
 
         assertEquals(jrePosition.getIndex(),
                 position.getIndex(),
-                () -> "index, " + component + " text=" + CharSequences.quoteAndEscape(text) + " errorIndex: " + jrePosition.getErrorIndex() + " expected date: " + expected);
+                () -> "index, " + component + " text=" + CharSequences.quoteAndEscape(emulText) + " errorIndex: " + jrePosition.getErrorIndex() + " expected date: " + expected);
         assertEquals(jrePosition.getErrorIndex(),
                 position.getErrorIndex(),
-                () -> "errorIndex, " + component + " text=" + CharSequences.quoteAndEscape(text) + " index: " + position.getIndex() + " expected date: " + expected);
+                () -> "errorIndex, " + component + " text=" + CharSequences.quoteAndEscape(emulText) + " index: " + position.getIndex() + " expected date: " + expected);
 
         // TODO https://github.com/mP1/j2cl-java-text/issues/219
         if(false == this instanceof SimpleDateFormatComponentWeekYearTest) {
             assertEquals(null != expected ?
                     expected :
-                    new Date(0), calendar.getTime(), () -> "date, " + component + " text=" + CharSequences.quoteAndEscape(text) + " jre pattern: " + simpleDateFormat.toPattern() + " 2digitYear: " + simpleDateFormat.get2DigitYearStart() + " pattern: " + component + " twoDigitYear: " + twoDigitYear);
+                    new Date(0), calendar.getTime(), () -> "date, " + component + " text=" + CharSequences.quoteAndEscape(emulText) + " jre pattern: " + simpleDateFormat.toPattern() + " 2digitYear: " + simpleDateFormat.get2DigitYearStart() + " pattern: " + component + " twoDigitYear: " + twoDigitYear);
         }
     }
 

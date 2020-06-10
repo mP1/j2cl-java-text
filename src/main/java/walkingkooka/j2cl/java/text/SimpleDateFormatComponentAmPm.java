@@ -34,6 +34,16 @@ final class SimpleDateFormatComponentAmPm extends SimpleDateFormatComponent2 {
         super(length);
     }
 
+    @Override
+    boolean isNumber() {
+        return false;
+    }
+
+    @Override
+    SimpleDateFormatComponent setNumberNext() {
+        return this; // dont care if followed by a number.
+    }
+
     // format...........................................................................................................
 
     @Override
@@ -60,5 +70,10 @@ final class SimpleDateFormatComponentAmPm extends SimpleDateFormatComponent2 {
     @Override
     char letter() {
         return LETTER;
+    }
+
+    @Override
+    int maxDigitLength() {
+        return 0;
     }
 }

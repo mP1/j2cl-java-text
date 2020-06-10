@@ -568,10 +568,25 @@ public final class SimpleDateFormatTest extends FormatTestCase2<SimpleDateFormat
         this.parseAndCheck("HH:mmz", "23:57GMT+06:45");
     }
 
-//    @Test
-//    public void testParseHourMinute() {
-//        this.parseAndCheck("HHmm", "2357");
-//    }
+    @Test
+    public void testParseHourMinute() {
+        this.parseAndCheck("HHmm", "2357");
+    }
+
+    @Test
+    public void testParseHourMinuteSecond() {
+        this.parseAndCheck("HHmmss", "235799");
+    }
+
+    @Test
+    public void testParseHourMinuteSecondMillis() {
+        this.parseAndCheck("HHmmssSSS", "235758999");
+    }
+
+    @Test
+    public void testParseDayMonthYear() {
+        this.parseAndCheck("ddMMyyyy", "31122000");
+    }
 
     private void parseAndCheck(final String pattern,
                                final String text) {

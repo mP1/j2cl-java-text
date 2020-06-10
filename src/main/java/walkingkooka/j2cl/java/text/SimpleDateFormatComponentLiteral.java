@@ -34,6 +34,16 @@ final class SimpleDateFormatComponentLiteral extends SimpleDateFormatComponent {
     }
 
     @Override
+    final boolean isNumber() {
+        return false;// false because is a literal.
+    }
+
+    @Override
+    SimpleDateFormatComponent setNumberNext() {
+        return this; // dont care if followed by a number.
+    }
+
+    @Override
     void formatDate(final SimpleDateFormatFormatRequest request) {
         request.text.append(this.c);
     }

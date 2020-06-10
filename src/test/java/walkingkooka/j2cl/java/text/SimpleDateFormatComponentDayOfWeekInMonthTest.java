@@ -19,8 +19,10 @@ package walkingkooka.j2cl.java.text;
 
 public final class SimpleDateFormatComponentDayOfWeekInMonthTest extends SimpleDateFormatComponentNumberTestCase<SimpleDateFormatComponentDayOfWeekInMonth> {
     @Override
-    SimpleDateFormatComponentDayOfWeekInMonth createComponent(final int length) {
-        return SimpleDateFormatComponentDayOfWeekInMonth.with(length);
+    SimpleDateFormatComponentDayOfWeekInMonth createComponent(final int patternLength,
+                                                              final int maxDigitLength) {
+        return SimpleDateFormatComponentDayOfWeekInMonth.with(patternLength,
+                maxDigitLength);
     }
 
     @Override

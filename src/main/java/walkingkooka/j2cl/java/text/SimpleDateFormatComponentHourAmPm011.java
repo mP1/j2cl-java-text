@@ -26,12 +26,20 @@ final class SimpleDateFormatComponentHourAmPm011 extends SimpleDateFormatCompone
 
     final static char LETTER = HOUR_AM_PM_0_11;
 
-    static SimpleDateFormatComponentHourAmPm011 with(final int length) {
-        return new SimpleDateFormatComponentHourAmPm011(length);
+    static SimpleDateFormatComponentHourAmPm011 with(final int patternLength,
+                                                     final int maxDigitLength) {
+        return new SimpleDateFormatComponentHourAmPm011(patternLength,
+                maxDigitLength);
     }
 
-    private SimpleDateFormatComponentHourAmPm011(final int length) {
-        super(length);
+    private SimpleDateFormatComponentHourAmPm011(final int patternLength,
+                                                 final int maxDigitLength) {
+        super(patternLength, maxDigitLength);
+    }
+
+    @Override
+    SimpleDateFormatComponentHourAmPm011 setNumberNext() {
+        return new SimpleDateFormatComponentHourAmPm011(this.length, 2);
     }
 
     // format...........................................................................................................

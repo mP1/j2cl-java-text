@@ -83,7 +83,8 @@ Is an almost complete replacement for `java.text.SimpleDateFormat` supporting fo
  
 - `java.text.ParsePosition` index and errorIndex is supported and matches the behaviour or the JRE class.
 - WEEK_YEAR which is represented by the pattern letter "Y" [TODO format](https://github.com/mP1/j2cl-java-text/issues/216) [TODO parse](https://github.com/mP1/j2cl-java-text/issues/219)
-- Parsing patterns that involve consecutive digits such as hours followed by minutes without a separator will fail [TODO](https://github.com/mP1/j2cl-java-text/issues/223)
+
+
 
 ```java
 SimpleDateFormat f = new SimpleDateFormat("dd/MM/yyyy");

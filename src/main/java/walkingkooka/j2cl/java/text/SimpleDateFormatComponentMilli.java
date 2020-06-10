@@ -26,12 +26,20 @@ final class SimpleDateFormatComponentMilli extends SimpleDateFormatComponentNumb
 
     final static char LETTER = MILLI;
 
-    static SimpleDateFormatComponentMilli with(final int length) {
-        return new SimpleDateFormatComponentMilli(length);
+    static SimpleDateFormatComponentMilli with(final int patternLength,
+                                               final int maxDigitLength) {
+        return new SimpleDateFormatComponentMilli(patternLength,
+                maxDigitLength);
     }
 
-    private SimpleDateFormatComponentMilli(final int length) {
-        super(length);
+    private SimpleDateFormatComponentMilli(final int patternLength,
+                                           final int maxDigitLength) {
+        super(patternLength, maxDigitLength);
+    }
+
+    @Override
+    SimpleDateFormatComponentMilli setNumberNext() {
+        return this; // parsing will fail if a number follows a milli, maybe should honour $maxDigitLength
     }
 
     // format...........................................................................................................

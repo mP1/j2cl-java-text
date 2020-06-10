@@ -23,12 +23,20 @@ final class SimpleDateFormatComponentDayNumberOfWeek extends SimpleDateFormatCom
 
     final static char LETTER = DAY_NUMBER_OF_WEEK;
 
-    static SimpleDateFormatComponentDayNumberOfWeek with(final int length) {
-        return new SimpleDateFormatComponentDayNumberOfWeek(length);
+    static SimpleDateFormatComponentDayNumberOfWeek with(final int patternLength,
+                                                         final int maxDigitLength) {
+        return new SimpleDateFormatComponentDayNumberOfWeek(patternLength,
+                maxDigitLength);
     }
 
-    private SimpleDateFormatComponentDayNumberOfWeek(final int length) {
-        super(length);
+    private SimpleDateFormatComponentDayNumberOfWeek(final int patternLength,
+                                                     final int maxDigitLength) {
+        super(patternLength, maxDigitLength);
+    }
+
+    @Override
+    SimpleDateFormatComponentDayNumberOfWeek setNumberNext() {
+        return new SimpleDateFormatComponentDayNumberOfWeek(this.length, 1);
     }
 
     // format...........................................................................................................
@@ -64,16 +72,16 @@ final class SimpleDateFormatComponentDayNumberOfWeek extends SimpleDateFormatCom
                          final SimpleDateFormatParseRequest parse) {
         final int day;
 
-        switch(value) {
+        switch (value) {
             case 0:
                 day = 7;
                 break;
-             case 8:
+            case 8:
                 day = 8;
                 break;
             default:
                 day = value < 8 ?
-                        value + 1:
+                        value + 1 :
                         (value % 7);
                 break;
         }

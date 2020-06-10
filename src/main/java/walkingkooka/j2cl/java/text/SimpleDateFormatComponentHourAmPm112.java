@@ -26,12 +26,20 @@ final class SimpleDateFormatComponentHourAmPm112 extends SimpleDateFormatCompone
 
     final static char LETTER = HOUR_AM_PM_1_12;
 
-    static SimpleDateFormatComponentHourAmPm112 with(final int length) {
-        return new SimpleDateFormatComponentHourAmPm112(length);
+    static SimpleDateFormatComponentHourAmPm112 with(final int patternLength,
+                                                     final int maxDigitLength) {
+        return new SimpleDateFormatComponentHourAmPm112(patternLength,
+                maxDigitLength);
     }
 
-    private SimpleDateFormatComponentHourAmPm112(final int length) {
-        super(length);
+    private SimpleDateFormatComponentHourAmPm112(final int patternLength,
+                                                 final int maxDigitLength) {
+        super(patternLength, maxDigitLength);
+    }
+
+    @Override
+    SimpleDateFormatComponentHourAmPm112 setNumberNext() {
+        return new SimpleDateFormatComponentHourAmPm112(this.length, 2);
     }
 
     // format...........................................................................................................
@@ -52,7 +60,7 @@ final class SimpleDateFormatComponentHourAmPm112 extends SimpleDateFormatCompone
     int adjustWriteValue(final int value,
                          final SimpleDateFormatParseRequest parse) {
         return 12 == value ?
-                0:
+                0 :
                 value;
     }
 
