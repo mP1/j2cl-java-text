@@ -23,12 +23,21 @@ final class SimpleDateFormatComponentYear extends SimpleDateFormatComponentNumbe
 
     final static char LETTER = YEAR;
 
-    static SimpleDateFormatComponentYear with(final int length) {
-        return new SimpleDateFormatComponentYear(length);
+    static SimpleDateFormatComponentYear with(final int patternLength,
+                                              final int maxDigitLength) {
+        return new SimpleDateFormatComponentYear(patternLength,
+                maxDigitLength);
     }
 
-    private SimpleDateFormatComponentYear(final int length) {
-        super(length);
+    private SimpleDateFormatComponentYear(final int patternLength,
+                                          final int maxDigitLength) {
+        super(patternLength, maxDigitLength);
+    }
+
+    @Override
+    SimpleDateFormatComponentYear setNumberNext() {
+        final int length = this.length;
+        return new SimpleDateFormatComponentYear(length, 2 == length ? 2 : 4);
     }
 
     // formatDate.......................................................................................................

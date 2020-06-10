@@ -23,12 +23,20 @@ final class SimpleDateFormatComponentSecondInMinute extends SimpleDateFormatComp
 
     final static char LETTER = SECOND_IN_MINUTE;
 
-    static SimpleDateFormatComponentSecondInMinute with(final int length) {
-        return new SimpleDateFormatComponentSecondInMinute(length);
+    static SimpleDateFormatComponentSecondInMinute with(final int patternLength,
+                                                        final int maxDigitLength) {
+        return new SimpleDateFormatComponentSecondInMinute(patternLength,
+                maxDigitLength);
     }
 
-    private SimpleDateFormatComponentSecondInMinute(final int length) {
-        super(length);
+    private SimpleDateFormatComponentSecondInMinute(final int patternLength,
+                                                    final int maxDigitLength) {
+        super(patternLength, maxDigitLength);
+    }
+
+    @Override
+    SimpleDateFormatComponentSecondInMinute setNumberNext() {
+        return new SimpleDateFormatComponentSecondInMinute(this.length, 2);
     }
 
     // format...........................................................................................................

@@ -227,7 +227,10 @@ public class SimpleDateFormatComponentTest extends SimpleDateFormatComponentTest
 
     @Test
     public void testParseYearMonthDay() {
-        this.parseAndCheck("yyyyMMdd", SimpleDateFormatComponent.year(4), SimpleDateFormatComponent.monthInYear(2), SimpleDateFormatComponent.dayInMonth(2));
+        this.parseAndCheck("yyyyMMdd",
+                SimpleDateFormatComponent.year(4).setNumberNext(),
+                SimpleDateFormatComponent.monthInYear(2).setNumberNext(),
+                SimpleDateFormatComponent.dayInMonth(2));
     }
 
     @Test
@@ -237,22 +240,36 @@ public class SimpleDateFormatComponentTest extends SimpleDateFormatComponentTest
 
     @Test
     public void testParseHourMinuteSecond() {
-        this.parseAndCheck("Kms", SimpleDateFormatComponent.hourAmPm011(1), SimpleDateFormatComponent.minuteInHour(1), SimpleDateFormatComponent.secondInMinute(1));
+        this.parseAndCheck("Kms",
+                SimpleDateFormatComponent.hourAmPm011(1).setNumberNext(),
+                SimpleDateFormatComponent.minuteInHour(1).setNumberNext(),
+                SimpleDateFormatComponent.secondInMinute(1));
     }
 
     @Test
     public void testParseHourMinuteSecond2() {
-        this.parseAndCheck("KKmss", SimpleDateFormatComponent.hourAmPm011(2), SimpleDateFormatComponent.minuteInHour(1), SimpleDateFormatComponent.secondInMinute(2));
+        this.parseAndCheck("KKmss",
+                SimpleDateFormatComponent.hourAmPm011(2).setNumberNext(),
+                SimpleDateFormatComponent.minuteInHour(1).setNumberNext(),
+                SimpleDateFormatComponent.secondInMinute(2));
     }
 
     @Test
     public void testParseHourMinuteSecondMilli() {
-        this.parseAndCheck("KKmssSSS", SimpleDateFormatComponent.hourAmPm011(2), SimpleDateFormatComponent.minuteInHour(1), SimpleDateFormatComponent.secondInMinute(2), SimpleDateFormatComponent.milli(3));
+        this.parseAndCheck("KKmssSSS",
+                SimpleDateFormatComponent.hourAmPm011(2).setNumberNext(),
+                SimpleDateFormatComponent.minuteInHour(1).setNumberNext(),
+                SimpleDateFormatComponent.secondInMinute(2).setNumberNext(),
+                SimpleDateFormatComponent.milli(3));
     }
 
     @Test
     public void testParseHourMinuteSecondAmpm() {
-        this.parseAndCheck("Kmsaa", SimpleDateFormatComponent.hourAmPm011(1), SimpleDateFormatComponent.minuteInHour(1), SimpleDateFormatComponent.secondInMinute(1), SimpleDateFormatComponent.ampm(2));
+        this.parseAndCheck("Kmsaa",
+                SimpleDateFormatComponent.hourAmPm011(1).setNumberNext(),
+                SimpleDateFormatComponent.minuteInHour(1).setNumberNext(),
+                SimpleDateFormatComponent.secondInMinute(1),
+                SimpleDateFormatComponent.ampm(2));
     }
 
     @Test

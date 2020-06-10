@@ -33,6 +33,16 @@ final class SimpleDateFormatComponentDayNameInWeek extends SimpleDateFormatCompo
         super(length);
     }
 
+    @Override
+    boolean isNumber() {
+        return false;
+    }
+
+    @Override
+    SimpleDateFormatComponent setNumberNext() {
+        return this; // dont care if followed by a number.
+    }
+
     // format...........................................................................................................
 
     @Override
@@ -71,6 +81,11 @@ final class SimpleDateFormatComponentDayNameInWeek extends SimpleDateFormatCompo
     @Override
     char letter() {
         return LETTER;
+    }
+
+    @Override
+    int maxDigitLength() {
+        return 0;
     }
 
     @GwtIncompatible

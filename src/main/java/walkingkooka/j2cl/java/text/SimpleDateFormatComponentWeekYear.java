@@ -23,12 +23,21 @@ final class SimpleDateFormatComponentWeekYear extends SimpleDateFormatComponentN
 
     final static char LETTER = WEEK_YEAR;
 
-    static SimpleDateFormatComponentWeekYear with(final int length) {
-        return new SimpleDateFormatComponentWeekYear(length);
+    static SimpleDateFormatComponentWeekYear with(final int patternLength,
+                                                  final int maxDigitLength) {
+        return new SimpleDateFormatComponentWeekYear(patternLength,
+                maxDigitLength);
     }
 
-    private SimpleDateFormatComponentWeekYear(final int length) {
-        super(length);
+    private SimpleDateFormatComponentWeekYear(final int patternLength,
+                                              final int maxDigitLength) {
+        super(patternLength, maxDigitLength);
+    }
+
+    @Override
+    SimpleDateFormatComponentWeekYear setNumberNext() {
+        final int length = this.length;
+        return new SimpleDateFormatComponentWeekYear(length, 2 == length ? 2 : 4);
     }
 
     // formatDate.......................................................................................................

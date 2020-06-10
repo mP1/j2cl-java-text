@@ -28,6 +28,15 @@ abstract class SimpleDateFormatComponentTimeZoneGeneralRfc822 extends SimpleDate
         super(length);
     }
 
+    @Override
+    final boolean isNumber() {
+        return false; // isnt number only will start with a letter or sign
+    }
+
+    @Override
+    final SimpleDateFormatComponent setNumberNext() {
+        return this; // dont care if followed by a number.
+    }
 
     // parse............................................................................................................
 
@@ -135,4 +144,9 @@ abstract class SimpleDateFormatComponentTimeZoneGeneralRfc822 extends SimpleDate
      * The calendar field being read and updated.
      */
     final static int CALENDAR_FIELD = Calendar.ZONE_OFFSET;
+
+    @Override
+    final int maxDigitLength() {
+        return 0;
+    }
 }

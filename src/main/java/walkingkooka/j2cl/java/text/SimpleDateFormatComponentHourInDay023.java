@@ -26,12 +26,20 @@ final class SimpleDateFormatComponentHourInDay023 extends SimpleDateFormatCompon
 
     final static char LETTER = HOUR_IN_DAY_0_23;
 
-    static SimpleDateFormatComponentHourInDay023 with(final int length) {
-        return new SimpleDateFormatComponentHourInDay023(length);
+    static SimpleDateFormatComponentHourInDay023 with(final int patternLength,
+                                                      final int maxDigitLength) {
+        return new SimpleDateFormatComponentHourInDay023(patternLength,
+                maxDigitLength);
     }
 
-    private SimpleDateFormatComponentHourInDay023(final int length) {
-        super(length);
+    private SimpleDateFormatComponentHourInDay023(final int patternLength,
+                                                  final int maxDigitLength) {
+        super(patternLength, maxDigitLength);
+    }
+
+    @Override
+    SimpleDateFormatComponentHourInDay023 setNumberNext() {
+        return new SimpleDateFormatComponentHourInDay023(this.length, 2);
     }
 
     // format...........................................................................................................

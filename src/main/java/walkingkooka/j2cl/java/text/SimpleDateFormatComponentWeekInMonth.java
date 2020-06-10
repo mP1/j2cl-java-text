@@ -23,12 +23,20 @@ final class SimpleDateFormatComponentWeekInMonth extends SimpleDateFormatCompone
 
     final static char LETTER = WEEK_IN_MONTH;
 
-    static SimpleDateFormatComponentWeekInMonth with(final int length) {
-        return new SimpleDateFormatComponentWeekInMonth(length);
+    static SimpleDateFormatComponentWeekInMonth with(final int patternLength,
+                                                     final int maxDigitLength) {
+        return new SimpleDateFormatComponentWeekInMonth(patternLength,
+                maxDigitLength);
     }
 
-    private SimpleDateFormatComponentWeekInMonth(final int length) {
-        super(length);
+    private SimpleDateFormatComponentWeekInMonth(final int patternLength,
+                                                 final int maxDigitLength) {
+        super(patternLength, maxDigitLength);
+    }
+
+    @Override
+    SimpleDateFormatComponentWeekInMonth setNumberNext() {
+        return new SimpleDateFormatComponentWeekInMonth(this.length, 1);
     }
 
     // format...........................................................................................................

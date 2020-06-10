@@ -145,7 +145,26 @@ abstract class SimpleDateFormatComponent {
             components.add(factory.apply(count));
         }
 
+        prepareComponents(components);
+
         return components;
+    }
+
+    private static void prepareComponents(final List<SimpleDateFormatComponent> components) {
+        // this helps support parsing of digit only patterns such as HOURS followed immediaately by MINUTES. In this case
+        // HOURS will no longer be greedy and consume all digits but limit itself to 2.
+        final int componentCount = components.size();
+        if (componentCount > 1) {
+            SimpleDateFormatComponent next = components.get(componentCount - 1); // last
+
+            for (int i = componentCount - 2; i >= 0; i--) {
+                final SimpleDateFormatComponent current = components.get(i);
+                if (next.isNumber()) {
+                    components.set(i, current.setNumberNext());
+                }
+                next = current; // walking list backwards
+            }
+        }
     }
 
     /**
@@ -240,14 +259,14 @@ abstract class SimpleDateFormatComponent {
      * {@see SimpleDateFormatComponentDayInMonth}
      */
     static SimpleDateFormatComponent dayInMonth(final int length) {
-        return SimpleDateFormatComponentDayInMonth.with(length);
+        return SimpleDateFormatComponentDayInMonth.with(length,SimpleDateFormatComponent2.UNLIMITED_MAX_DIGIT_LENGTH);
     }
 
     /**
      * {@see SimpleDateFormatComponentDayInYear}
      */
     static SimpleDateFormatComponent dayInYear(final int length) {
-        return SimpleDateFormatComponentDayInYear.with(length);
+        return SimpleDateFormatComponentDayInYear.with(length, SimpleDateFormatComponent2.UNLIMITED_MAX_DIGIT_LENGTH);
     }
 
     /**
@@ -261,14 +280,14 @@ abstract class SimpleDateFormatComponent {
      * {@see SimpleDateFormatComponentDayNumberOfWeek}
      */
     static SimpleDateFormatComponent dayNumberOfWeek(final int length) {
-        return SimpleDateFormatComponentDayNumberOfWeek.with(length);
+        return SimpleDateFormatComponentDayNumberOfWeek.with(length, SimpleDateFormatComponent2.UNLIMITED_MAX_DIGIT_LENGTH);
     }
 
     /**
      * {@see SimpleDateFormatComponentDayOfWeekInMonth}
      */
     static SimpleDateFormatComponent dayOfWeekInMonth(final int length) {
-        return SimpleDateFormatComponentDayOfWeekInMonth.with(length);
+        return SimpleDateFormatComponentDayOfWeekInMonth.with(length, SimpleDateFormatComponent2.UNLIMITED_MAX_DIGIT_LENGTH);
     }
 
     /**
@@ -282,28 +301,28 @@ abstract class SimpleDateFormatComponent {
      * {@see SimpleDateFormatComponentHourAmPm011}
      */
     static SimpleDateFormatComponent hourAmPm011(final int length) {
-        return SimpleDateFormatComponentHourAmPm011.with(length);
+        return SimpleDateFormatComponentHourAmPm011.with(length, SimpleDateFormatComponent2.UNLIMITED_MAX_DIGIT_LENGTH);
     }
 
     /**
      * {@see SimpleDateFormatComponentHourAmPm112}
      */
     static SimpleDateFormatComponent hourAmPm112(final int length) {
-        return SimpleDateFormatComponentHourAmPm112.with(length);
+        return SimpleDateFormatComponentHourAmPm112.with(length, SimpleDateFormatComponent2.UNLIMITED_MAX_DIGIT_LENGTH);
     }
 
     /**
      * {@see SimpleDateFormatComponentHourInDay023}
      */
     static SimpleDateFormatComponent hourInDay023(final int length) {
-        return SimpleDateFormatComponentHourInDay023.with(length);
+        return SimpleDateFormatComponentHourInDay023.with(length, SimpleDateFormatComponent2.UNLIMITED_MAX_DIGIT_LENGTH);
     }
 
     /**
      * {@see SimpleDateFormatComponentHourInDay124}
      */
     static SimpleDateFormatComponent hourInDay124(final int length) {
-        return SimpleDateFormatComponentHourInDay124.with(length);
+        return SimpleDateFormatComponentHourInDay124.with(length, SimpleDateFormatComponent2.UNLIMITED_MAX_DIGIT_LENGTH);
     }
 
     /**
@@ -317,56 +336,56 @@ abstract class SimpleDateFormatComponent {
      * {@see SimpleDateFormatComponentMinuteInHour}
      */
     static SimpleDateFormatComponent minuteInHour(final int length) {
-        return SimpleDateFormatComponentMinuteInHour.with(length);
+        return SimpleDateFormatComponentMinuteInHour.with(length, SimpleDateFormatComponent2.UNLIMITED_MAX_DIGIT_LENGTH);
     }
 
     /**
      * {@see SimpleDateFormatComponentMilli}
      */
     static SimpleDateFormatComponent milli(final int length) {
-        return SimpleDateFormatComponentMilli.with(length);
+        return SimpleDateFormatComponentMilli.with(length, SimpleDateFormatComponent2.UNLIMITED_MAX_DIGIT_LENGTH);
     }
 
     /**
      * {@see SimpleDateFormatComponentMonthInYear}
      */
     static SimpleDateFormatComponent monthInYear(final int length) {
-        return SimpleDateFormatComponentMonthInYear.with(length);
+        return SimpleDateFormatComponentMonthInYear.with(length, SimpleDateFormatComponent2.UNLIMITED_MAX_DIGIT_LENGTH);
     }
 
     /**
      * {@see SimpleDateFormatComponentSecondInMinute}
      */
     static SimpleDateFormatComponent secondInMinute(final int length) {
-        return SimpleDateFormatComponentSecondInMinute.with(length);
+        return SimpleDateFormatComponentSecondInMinute.with(length, SimpleDateFormatComponent2.UNLIMITED_MAX_DIGIT_LENGTH);
     }
 
     /**
      * {@see SimpleDateFormatComponentWeekInMonth}
      */
     static SimpleDateFormatComponent weekInMonth(final int length) {
-        return SimpleDateFormatComponentWeekInMonth.with(length);
+        return SimpleDateFormatComponentWeekInMonth.with(length, SimpleDateFormatComponent2.UNLIMITED_MAX_DIGIT_LENGTH);
     }
 
     /**
      * {@see SimpleDateFormatComponentWeekInYear}
      */
     static SimpleDateFormatComponent weekInYear(final int length) {
-        return SimpleDateFormatComponentWeekInYear.with(length);
+        return SimpleDateFormatComponentWeekInYear.with(length, SimpleDateFormatComponent2.UNLIMITED_MAX_DIGIT_LENGTH);
     }
 
     /**
      * {@see SimpleDateFormatComponentWeekYear}
      */
     static SimpleDateFormatComponent weekYear(final int length) {
-        return SimpleDateFormatComponentWeekYear.with(length);
+        return SimpleDateFormatComponentWeekYear.with(length, SimpleDateFormatComponent2.UNLIMITED_MAX_DIGIT_LENGTH);
     }
 
     /**
      * {@see SimpleDateFormatComponentYear}
      */
     static SimpleDateFormatComponent year(final int length) {
-        return SimpleDateFormatComponentYear.with(length);
+        return SimpleDateFormatComponentYear.with(length, SimpleDateFormatComponent2.UNLIMITED_MAX_DIGIT_LENGTH);
     }
 
     /**
@@ -396,6 +415,16 @@ abstract class SimpleDateFormatComponent {
     SimpleDateFormatComponent() {
         super();
     }
+
+    /**
+     * Returns true if this component is represented when parsing as a sequence of digits, eg seconds is a number.
+     */
+    abstract boolean isNumber();
+
+    /**
+     * Notifies this component if it a number field, such as {@link SimpleDateFormatComponentNumber} following it.
+     */
+    abstract SimpleDateFormatComponent setNumberNext();
 
     /**
      * Formats a component of the given {@link Date} to the {@link StringBuilder}.

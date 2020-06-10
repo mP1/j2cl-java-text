@@ -32,6 +32,16 @@ final class SimpleDateFormatComponentTimeZoneIso8601 extends SimpleDateFormatCom
         super(length);
     }
 
+    @Override
+    boolean isNumber() {
+        return false; // isnt number only will start with a letter or sign
+    }
+
+    @Override
+    SimpleDateFormatComponent setNumberNext() {
+        return this; // dont care if followed by a number.
+    }
+
     // format...........................................................................................................
 
     @Override
@@ -194,5 +204,10 @@ final class SimpleDateFormatComponentTimeZoneIso8601 extends SimpleDateFormatCom
     @Override
     char letter() {
         return LETTER;
+    }
+
+    @Override
+    int maxDigitLength() {
+        return 0;
     }
 }

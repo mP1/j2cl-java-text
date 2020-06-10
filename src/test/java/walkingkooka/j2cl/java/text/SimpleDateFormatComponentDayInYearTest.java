@@ -19,8 +19,10 @@ package walkingkooka.j2cl.java.text;
 
 public final class SimpleDateFormatComponentDayInYearTest extends SimpleDateFormatComponentNumberTestCase<SimpleDateFormatComponentDayInYear> {
     @Override
-    SimpleDateFormatComponentDayInYear createComponent(final int length) {
-        return SimpleDateFormatComponentDayInYear.with(length);
+    SimpleDateFormatComponentDayInYear createComponent(final int patternLength,
+                                                       final int maxDigitLength) {
+        return SimpleDateFormatComponentDayInYear.with(patternLength,
+                maxDigitLength);
     }
 
     @Override

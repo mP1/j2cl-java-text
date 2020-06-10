@@ -23,12 +23,41 @@ final class SimpleDateFormatComponentMonthInYear extends SimpleDateFormatCompone
 
     final static char LETTER = MONTH_IN_YEAR;
 
-    static SimpleDateFormatComponentMonthInYear with(final int length) {
-        return new SimpleDateFormatComponentMonthInYear(length);
+    static SimpleDateFormatComponentMonthInYear with(final int patternLength,
+                                                     final int maxDigitLength) {
+        return new SimpleDateFormatComponentMonthInYear(patternLength,
+                maxDigitLength);
     }
 
-    private SimpleDateFormatComponentMonthInYear(final int length) {
-        super(length);
+    private SimpleDateFormatComponentMonthInYear(final int patternLength,
+                                                 final int maxDigitLength) {
+        super(patternLength);
+        this.maxDigitLength = maxDigitLength;
+    }
+
+    @Override
+    boolean isNumber() {
+        final boolean is;
+
+        switch (this.length) {
+            case 1:
+            case 2:
+                is = true;
+                break;
+            case 3:
+            default:
+                is = false;
+                break;
+        }
+
+        return is;
+    }
+
+    @Override
+    SimpleDateFormatComponentMonthInYear setNumberNext() {
+        return this.isNumber() ?
+                new SimpleDateFormatComponentMonthInYear(this.length, 2) :
+                this;
     }
 
     // format...........................................................................................................
@@ -61,7 +90,7 @@ final class SimpleDateFormatComponentMonthInYear extends SimpleDateFormatCompone
             case 2:
                 this.parseNumberAndUpdateCalendar(request,
                         CALENDAR_FIELD,
-                        Integer.MAX_VALUE,
+                        this.maxDigitLength,
                         SimpleDateFormatComponentMonthInYear::adjustWriteValue);
                 break;
             default:
@@ -88,4 +117,11 @@ final class SimpleDateFormatComponentMonthInYear extends SimpleDateFormatCompone
     char letter() {
         return LETTER;
     }
+
+    @Override
+    int maxDigitLength() {
+        return this.maxDigitLength;
+    }
+
+    private final int maxDigitLength;
 }

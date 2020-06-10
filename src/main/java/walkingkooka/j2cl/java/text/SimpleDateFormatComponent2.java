@@ -133,7 +133,9 @@ abstract class SimpleDateFormatComponent2 extends SimpleDateFormatComponent {
 
     @Override
     public final int hashCode() {
-        return Objects.hash(this.letter(), this.length);
+        return Objects.hash(this.letter(),
+                this.length,
+                this.maxDigitLength());
     }
 
     @Override
@@ -143,8 +145,17 @@ abstract class SimpleDateFormatComponent2 extends SimpleDateFormatComponent {
 
     private boolean equals0(final SimpleDateFormatComponent2 other) {
         return this.length == other.length &&
-                this.letter() == other.letter();
+                this.letter() == other.letter() &&
+                this.maxDigitLength() == other.maxDigitLength();
     }
+
+    /**
+     * If a number field returns the max digit length. A limit will be present to enable sequences such as HOURS
+     * followed by MINUTES to parse otherwise the HOURS pattern will consume the entire digit run.
+     */
+    abstract int maxDigitLength();
+
+    final static int UNLIMITED_MAX_DIGIT_LENGTH = Integer.MAX_VALUE;
 
     @Override
     public final String toString() {

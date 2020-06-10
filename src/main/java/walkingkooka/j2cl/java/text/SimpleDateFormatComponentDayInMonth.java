@@ -23,12 +23,20 @@ final class SimpleDateFormatComponentDayInMonth extends SimpleDateFormatComponen
 
     final static char LETTER = DAY_IN_MONTH;
 
-    static SimpleDateFormatComponentDayInMonth with(final int length) {
-        return new SimpleDateFormatComponentDayInMonth(length);
+    static SimpleDateFormatComponentDayInMonth with(final int patternLength,
+                                                    final int maxDigitLength) {
+        return new SimpleDateFormatComponentDayInMonth(patternLength,
+                maxDigitLength);
     }
 
-    private SimpleDateFormatComponentDayInMonth(final int length) {
-        super(length);
+    private SimpleDateFormatComponentDayInMonth(final int patternLength,
+                                                final int maxDigitLength) {
+        super(patternLength, maxDigitLength);
+    }
+
+    @Override
+    SimpleDateFormatComponentDayInMonth setNumberNext() {
+        return new SimpleDateFormatComponentDayInMonth(this.length, 2);
     }
 
     // format...........................................................................................................

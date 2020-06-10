@@ -77,10 +77,10 @@ public final class SimpleDateFormatComponentMonthInYearTest extends SimpleDateFo
         this.parseTextAndCheck(this.createComponent(4),
                 "October");
     }
-    
+
     @Override
     SimpleDateFormatComponentMonthInYear createComponent(final int length) {
-        return SimpleDateFormatComponentMonthInYear.with(length);
+        return SimpleDateFormatComponentMonthInYear.with(length, SimpleDateFormatComponent2.UNLIMITED_MAX_DIGIT_LENGTH);
     }
 
     @Override

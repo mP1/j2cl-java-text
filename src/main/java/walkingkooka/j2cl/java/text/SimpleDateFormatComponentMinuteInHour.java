@@ -26,12 +26,20 @@ final class SimpleDateFormatComponentMinuteInHour extends SimpleDateFormatCompon
 
     final static char LETTER = MINUTE_IN_HOUR;
 
-    static SimpleDateFormatComponentMinuteInHour with(final int length) {
-        return new SimpleDateFormatComponentMinuteInHour(length);
+    static SimpleDateFormatComponentMinuteInHour with(final int patternLength,
+                                                      final int maxDigitLength) {
+        return new SimpleDateFormatComponentMinuteInHour(patternLength,
+                maxDigitLength);
     }
 
-    private SimpleDateFormatComponentMinuteInHour(final int length) {
-        super(length);
+    private SimpleDateFormatComponentMinuteInHour(final int patternLength,
+                                                  final int maxDigitLength) {
+        super(patternLength, maxDigitLength);
+    }
+
+    @Override
+    SimpleDateFormatComponentMinuteInHour setNumberNext() {
+        return new SimpleDateFormatComponentMinuteInHour(this.length, 2);
     }
 
     // format...........................................................................................................

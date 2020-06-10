@@ -19,8 +19,10 @@ package walkingkooka.j2cl.java.text;
 
 public final class SimpleDateFormatComponentHourAmPm112Test extends SimpleDateFormatComponentNumberHoursTestCase<SimpleDateFormatComponentHourAmPm112> {
     @Override
-    SimpleDateFormatComponentHourAmPm112 createComponent(final int length) {
-        return SimpleDateFormatComponentHourAmPm112.with(length);
+    SimpleDateFormatComponentHourAmPm112 createComponent(final int patternLength,
+                                                         final int maxDigitLength) {
+        return SimpleDateFormatComponentHourAmPm112.with(patternLength,
+                maxDigitLength);
     }
 
     @Override

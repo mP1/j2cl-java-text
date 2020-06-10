@@ -51,8 +51,10 @@ public final class SimpleDateFormatComponentYearTest extends SimpleDateFormatCom
     }
 
     @Override
-    SimpleDateFormatComponentYear createComponent(final int length) {
-        return SimpleDateFormatComponentYear.with(length);
+    SimpleDateFormatComponentYear createComponent(final int patternLength,
+                                                  final int maxDigitLength) {
+        return SimpleDateFormatComponentYear.with(patternLength,
+                maxDigitLength);
     }
 
     @Override
