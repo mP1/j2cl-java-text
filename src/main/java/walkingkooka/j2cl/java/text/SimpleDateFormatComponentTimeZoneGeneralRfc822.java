@@ -17,7 +17,7 @@
 
 package walkingkooka.j2cl.java.text;
 
-import walkingkooka.j2cl.locale.Calendar;
+import java.util.Calendar;
 
 /**
  * Base class for both General and RFC822 timezones, holding a common/shared parseText.

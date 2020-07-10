@@ -197,7 +197,7 @@ final class SimpleDateFormatComponentTimeZoneIso8601 extends SimpleDateFormatCom
         return value;
     }
 
-    private final static int CALENDAR_FIELD = walkingkooka.j2cl.locale.Calendar.ZONE_OFFSET;
+    private final static int CALENDAR_FIELD = Calendar.ZONE_OFFSET;
 
     // SimpleDateFormatComponent........................................................................................
 
