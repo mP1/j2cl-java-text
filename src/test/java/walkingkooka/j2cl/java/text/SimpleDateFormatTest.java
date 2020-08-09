@@ -21,8 +21,11 @@ import org.junit.jupiter.api.Test;
 import walkingkooka.NeverError;
 import walkingkooka.ToStringTesting;
 import walkingkooka.j2cl.locale.WalkingkookaLanguageTag;
+import walkingkooka.predicate.Predicates;
 import walkingkooka.text.CharSequences;
 
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Date;
@@ -30,10 +33,11 @@ import java.util.Locale;
 import java.util.function.BiConsumer;
 import java.util.function.BiFunction;
 import java.util.function.Consumer;
+import java.util.function.Predicate;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public final class SimpleDateFormatTest extends FormatTestCase2<SimpleDateFormat> implements ToStringTesting<SimpleDateFormat> {
+public final class SimpleDateFormatTest extends FormatTestCase<SimpleDateFormat> implements ToStringTesting<SimpleDateFormat> {
 
     private final static Locale EN_AU = Locale.forLanguageTag("en-AU");
 
@@ -616,11 +620,48 @@ public final class SimpleDateFormatTest extends FormatTestCase2<SimpleDateFormat
                 () -> "errorIndex, " + "pattern " + CharSequences.quoteAndEscape(pattern) + " parse " + CharSequences.quoteAndEscape(text) + " parsePosition: " + jrePosition);
     }
 
-    // ClassTesting.....................................................................................................
+    // ShadedClassTesting...............................................................................................
 
     @Override
     public Class<SimpleDateFormat> type() {
         return SimpleDateFormat.class;
+    }
+
+    @Override
+    public Predicate<Method> requiredMethods() {
+        return (m)-> {
+            final boolean required;
+
+            switch(m.getName()) {
+                case "clone":
+                case "toString":
+                    required = false;
+                    break;
+                default:
+                    required = false;
+                    break;
+            }
+
+            return required;
+        };
+    }
+
+    @Override
+    public Predicate<Field> requiredFields() {
+        return (f)-> {
+            final boolean required;
+
+            switch(f.getName()) {
+                case "serialVersionUID":
+                    required = false;
+                    break;
+                default:
+                    required = true;
+                    break;
+            }
+
+            return required;
+        };
     }
 
     // HashCodeEquals...................................................................................................

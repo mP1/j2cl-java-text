@@ -18,9 +18,10 @@
 package walkingkooka.j2cl.java.text;
 
 import org.junit.jupiter.api.Test;
-import walkingkooka.HashCodeEqualsDefinedTesting2;
 import walkingkooka.collect.set.Sets;
 
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.math.RoundingMode;
@@ -32,12 +33,13 @@ import java.util.Locale;
 import java.util.Set;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicLong;
+import java.util.function.Predicate;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 
-public final class NumberFormatTest extends FormatTestCase2<NumberFormat> {
+public final class NumberFormatTest extends FormatTestCase<NumberFormat> {
 
     @Test
     public void testFractionField() {
@@ -698,6 +700,47 @@ public final class NumberFormatTest extends FormatTestCase2<NumberFormat> {
     @Override
     public Class<NumberFormat> type() {
         return NumberFormat.class;
+    }
+
+    @Override
+    public Predicate<Method> requiredMethods() {
+        return (m)-> {
+            final boolean required;
+
+            switch(m.getName()) {
+                case "clone":
+                    required = false;
+                    break;
+                default:
+                    required = false;
+                    break;
+            }
+
+            return required;
+        };
+    }
+
+    @Override
+    public Predicate<Field> requiredFields() {
+        return (f) -> {
+            final boolean required;
+
+            switch (f.getName()) {
+                case "groupingUsed":
+                case "maximumFractionDigits":
+                case "maximumIntegerDigits":
+                case "minimumFractionDigits":
+                case "minimumIntegerDigits":
+                case "parseIntegerOnly":
+                    required = false;
+                    break;
+                default:
+                    required = true;
+                    break;
+            }
+
+            return required;
+        };
     }
 
     @Override

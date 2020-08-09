@@ -18,10 +18,15 @@
 package walkingkooka.j2cl.java.text;
 
 import org.junit.jupiter.api.Test;
+import walkingkooka.predicate.Predicates;
+
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+import java.util.function.Predicate;
 
 import static org.junit.jupiter.api.Assertions.assertSame;
 
-public final class DateFormatTest extends FormatTestCase<DateFormat> {
+public final class DateFormatTest extends JavaTextTestCase<DateFormat> {
 
     @Test
     public void testShortConstants() {
@@ -48,5 +53,15 @@ public final class DateFormatTest extends FormatTestCase<DateFormat> {
     @Override
     public Class<DateFormat> type() {
         return DateFormat.class;
+    }
+
+    @Override
+    public Predicate<Method> requiredMethods() {
+        return Predicates.always();
+    }
+
+    @Override
+    public Predicate<Field> requiredFields() {
+        return Predicates.always();
     }
 }

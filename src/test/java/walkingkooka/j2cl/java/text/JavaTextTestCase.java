@@ -17,28 +17,32 @@
 
 package walkingkooka.j2cl.java.text;
 
+import walkingkooka.javashader.ShadedClassTesting;
 import walkingkooka.predicate.Predicates;
+import walkingkooka.reflect.PackageName;
 
+import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.function.Predicate;
+import java.util.function.UnaryOperator;
 
-public final class FormatTest extends JavaTextTestCase<Format> {
+public abstract class JavaTextTestCase<T> implements ShadedClassTesting<T> {
 
-    // ClassTesting.....................................................................................................
-
-    @Override
-    public Class<Format> type() {
-        return Format.class;
+    JavaTextTestCase() {
+        super();
     }
 
+    // ShadedClassTesting................................................................................................
+
     @Override
-    public Predicate<Method> requiredMethods() {
+    public final Predicate<Constructor> requiredConstructors() {
         return Predicates.always();
     }
 
     @Override
-    public Predicate<Field> requiredFields() {
-        return Predicates.always();
+    public final UnaryOperator<Class<?>> typeMapper() {
+        return ShadedClassTesting.typeMapper(PackageName.from(this.type().getPackage()),
+                PackageName.with("java.text"));
     }
 }

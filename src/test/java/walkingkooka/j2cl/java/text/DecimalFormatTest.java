@@ -18,22 +18,25 @@
 package walkingkooka.j2cl.java.text;
 
 import org.junit.jupiter.api.Test;
-import walkingkooka.HashCodeEqualsDefinedTesting2;
 import walkingkooka.InvalidCharacterException;
 import walkingkooka.ToStringTesting;
 import walkingkooka.j2cl.locale.WalkingkookaLanguageTag;
+import walkingkooka.predicate.Predicates;
 import walkingkooka.text.CharSequences;
 
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.math.RoundingMode;
 import java.util.Currency;
 import java.util.Locale;
+import java.util.function.Predicate;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertNotSame;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public final class DecimalFormatTest extends FormatTestCase2<DecimalFormat> implements ToStringTesting<DecimalFormat> {
+public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> implements ToStringTesting<DecimalFormat> {
 
     private final static Locale EN_AU = Locale.forLanguageTag("en-AU");
     private final static Locale FR = Locale.forLanguageTag("fr");
@@ -2279,10 +2282,51 @@ public final class DecimalFormatTest extends FormatTestCase2<DecimalFormat> impl
                 "currency=CLP groupingSize=3 groupingUsed=true maximumIntegerDigits=2147483647 minimumIntegerDigits=1 multiplier=1 negativePrefix=\"$-\" numberComponents=#,##0 positivePrefix=\"$\" roundingMode=HALF_EVEN symbols=currency=CLP currencySymbol=\"$\" decimalSeparator=',' digit='#' exponentSeparator=\"E\" groupingSeparator='.' infinity=\"∞\" internationalCurrencySymbol=\"CLP\" minusSign='-' monetaryDecimalSeparator=',' nan=\"NaN\" patternSeparator=';' percent='%' perMill='‰' zeroDigit='0'");
     }
 
-    // ClassTesting.....................................................................................................
+    // ShadedClassTesting...............................................................................................
 
     @Override
     public Class<DecimalFormat> type() {
         return DecimalFormat.class;
+    }
+
+    @Override
+    public Predicate<Method> requiredMethods() {
+        return (m)-> {
+            final boolean required;
+
+            switch(m.getName()) {
+                case "clone":
+                case "toString":
+                    required = false;
+                    break;
+                default:
+                    required = true;
+                    break;
+            }
+
+            return required;
+        };
+    }
+
+    @Override
+    public Predicate<Field> requiredFields() {
+        return (f) -> {
+            final boolean required;
+
+            switch (f.getName()) {
+                case "MAXIMUM_FRACTION_DIGITS":
+                case "MAXIMUM_INTEGER_DIGITS":
+                case "QUOTE":
+                case "groupingSize":
+                case "symbols":
+                    required = false;
+                    break;
+                default:
+                    required = true;
+                    break;
+            }
+
+            return required;
+        };
     }
 }
