@@ -1,0 +1,6 @@
+#
+# Filter all the classes (tests) in this package from j2cl-maven-plugin.
+#
+
+*
+

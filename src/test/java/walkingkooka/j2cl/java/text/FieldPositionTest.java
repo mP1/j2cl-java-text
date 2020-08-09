@@ -21,12 +21,16 @@ import org.junit.jupiter.api.Test;
 import walkingkooka.HashCodeEqualsDefinedTesting2;
 import walkingkooka.ToStringTesting;
 import walkingkooka.j2cl.java.text.Format.Field;
-import walkingkooka.reflect.ClassTesting;
+import walkingkooka.predicate.Predicates;
 import walkingkooka.reflect.JavaVisibility;
+
+import java.lang.reflect.Method;
+import java.util.function.Predicate;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public final class FieldPositionTest implements ClassTesting<FieldPosition>,
+public final class FieldPositionTest extends JavaTextTestCase<FieldPosition>
+        implements
         HashCodeEqualsDefinedTesting2<FieldPosition>,
         ToStringTesting<FieldPosition> {
 
@@ -157,7 +161,8 @@ public final class FieldPositionTest implements ClassTesting<FieldPosition>,
         position.setEndIndex(END_INDEX);
         this.toStringAndCheck(position, "field=" + FIELD + " beginIndex=" + BEGIN_INDEX + " endIndex=" + END_INDEX);
     }
-    // ClassTesting.....................................................................................................
+
+    // ShadedClassTesting...............................................................................................
 
     @Override
     public Class<FieldPosition> type() {
@@ -165,8 +170,29 @@ public final class FieldPositionTest implements ClassTesting<FieldPosition>,
     }
 
     @Override
-    public JavaVisibility typeVisibility() {
-        return JavaVisibility.PUBLIC;
+    public Predicate<Method> requiredMethods() {
+        return Predicates.always();
+    }
+
+    @Override
+    public Predicate<java.lang.reflect.Field> requiredFields() {
+        return (f) -> {
+            final boolean required;
+
+            switch (f.getName()) {
+                case "attribute":
+                case "beginIndex":
+                case "endIndex":
+                case "field":
+                    required = false;
+                    break;
+                default:
+                    required = true;
+                    break;
+            }
+
+            return required;
+        };
     }
 
     // HashCodeEqualsDefinedTesting2....................................................................................

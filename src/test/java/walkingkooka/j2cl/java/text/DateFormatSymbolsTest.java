@@ -23,19 +23,22 @@ import walkingkooka.HashCodeEqualsDefinedTesting2;
 import walkingkooka.ToStringTesting;
 import walkingkooka.collect.set.Sets;
 import walkingkooka.j2cl.locale.WalkingkookaLanguageTag;
-import walkingkooka.reflect.ClassTesting;
-import walkingkooka.reflect.JavaVisibility;
+import walkingkooka.predicate.Predicates;
 
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Locale;
 import java.util.Set;
+import java.util.function.Predicate;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertNotSame;
 
-public final class DateFormatSymbolsTest implements ClassTesting<DateFormatSymbols>,
+public final class DateFormatSymbolsTest extends JavaTextTestCase<DateFormatSymbols>
+        implements
         HashCodeEqualsDefinedTesting2<DateFormatSymbols>,
         ToStringTesting<DateFormatSymbols> {
 
@@ -261,7 +264,7 @@ public final class DateFormatSymbolsTest implements ClassTesting<DateFormatSymbo
                 "ampm=\"AM\", \"PM\" eras=\"BC\", \"AD\" months=\"January\", \"February\", \"March\", \"April\", \"May\", \"June\", \"July\", \"August\", \"September\", \"October\", \"November\", \"December\", \"\" shortMonths=\"Jan\", \"Feb\", \"Mar\", \"Apr\", \"May\", \"Jun\", \"Jul\", \"Aug\", \"Sep\", \"Oct\", \"Nov\", \"Dec\", \"\" shortWeekdays=\"\", \"Sun\", \"Mon\", \"Tue\", \"Wed\", \"Thu\", \"Fri\", \"Sat\" weekdays=\"\", \"Sunday\", \"Monday\", \"Tuesday\", \"Wednesday\", \"Thursday\", \"Friday\", \"Saturday\"");
     }
 
-    // ClassTesting.....................................................................................................
+    // ShadedClassTesting...............................................................................................
 
     @Override
     public Class<DateFormatSymbols> type() {
@@ -269,8 +272,27 @@ public final class DateFormatSymbolsTest implements ClassTesting<DateFormatSymbo
     }
 
     @Override
-    public JavaVisibility typeVisibility() {
-        return JavaVisibility.PUBLIC;
+    public Predicate<Method> requiredMethods() {
+        return (m) -> {
+            final boolean required;
+
+            switch (m.getName()) {
+                case "clone":
+                case "toString":
+                    required = false;
+                    break;
+                default:
+                    required = true;
+                    break;
+            }
+
+            return required;
+        };
+    }
+
+    @Override
+    public Predicate<Field> requiredFields() {
+        return Predicates.always();
     }
 
     // HashCodeEqualsDefinedTesting2....................................................................................
