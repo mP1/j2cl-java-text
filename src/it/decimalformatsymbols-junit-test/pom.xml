@@ -144,7 +144,6 @@
                                 <param>org.junit.jupiter:junit-jupiter-engine:*</param>
                                 <param>org.junit.platform:junit-platform-commons:*</param>
                                 <param>org.junit.jupiter:junit-jupiter-api:*</param>
-                                <param>walkingkooka:walkingkooka-text-printer:*</param>
                             </ignored-dependencies>
                             <javascript-source-required/>
 
