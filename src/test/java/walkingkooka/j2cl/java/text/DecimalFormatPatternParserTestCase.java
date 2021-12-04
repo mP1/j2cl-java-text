@@ -22,7 +22,6 @@ import walkingkooka.InvalidCharacterException;
 import walkingkooka.ToStringTesting;
 import walkingkooka.text.CharSequences;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public abstract class DecimalFormatPatternParserTestCase<P extends DecimalFormatPatternParser> extends DecimalFormatPatternTestCase<P>
@@ -71,10 +70,10 @@ public abstract class DecimalFormatPatternParserTestCase<P extends DecimalFormat
 
         final InvalidCharacterException thrown = assertThrows(InvalidCharacterException.class,
                 () -> parser.parse(),
-                () -> "pattern "+ CharSequences.quoteAndEscape(pattern) + " by " + DecimalFormat.class.getName() + " " + parser);
+                () -> "pattern " + CharSequences.quoteAndEscape(pattern) + " by " + DecimalFormat.class.getName() + " " + parser);
 
-        assertEquals(position, thrown.position(), () -> "position in " + CharSequences.quoteAndEscape(pattern));
-        assertEquals(pattern, thrown.text(), () -> "text in " + CharSequences.quoteAndEscape(pattern));
+        this.checkEquals(position, thrown.position(), () -> "position in " + CharSequences.quoteAndEscape(pattern));
+        this.checkEquals(pattern, thrown.text(), () -> "text in " + CharSequences.quoteAndEscape(pattern));
     }
 
     // helpers..........................................................................................................
@@ -105,14 +104,14 @@ public abstract class DecimalFormatPatternParserTestCase<P extends DecimalFormat
                                    final String positivePrefix) {
         final java.text.DecimalFormat jdk = new java.text.DecimalFormat(pattern);
 
-        assertEquals(positivePrefix, jdk.getPositivePrefix(), "positivePrefix");
+        this.checkEquals(positivePrefix, jdk.getPositivePrefix(), "positivePrefix");
     }
 
     final void checkPositiveSuffix(final String pattern,
                                    final String positiveSuffix) {
         final java.text.DecimalFormat jdk = new java.text.DecimalFormat(pattern);
 
-        assertEquals(positiveSuffix, jdk.getPositiveSuffix(), "positiveSuffix");
+        this.checkEquals(positiveSuffix, jdk.getPositiveSuffix(), "positiveSuffix");
     }
 
     final void checkNegativePrefixAndSuffix(final String pattern,
@@ -126,14 +125,14 @@ public abstract class DecimalFormatPatternParserTestCase<P extends DecimalFormat
                                    final String negativePrefix) {
         final java.text.DecimalFormat jdk = new java.text.DecimalFormat(pattern);
 
-        assertEquals(negativePrefix, jdk.getNegativePrefix(), "negativePrefix");
+        this.checkEquals(negativePrefix, jdk.getNegativePrefix(), "negativePrefix");
     }
 
     final void checkNegativeSuffix(final String pattern,
                                    final String negativeSuffix) {
         final java.text.DecimalFormat jdk = new java.text.DecimalFormat(pattern);
 
-        assertEquals(negativeSuffix, jdk.getNegativeSuffix(), "negativeSuffix");
+        this.checkEquals(negativeSuffix, jdk.getNegativeSuffix(), "negativeSuffix");
     }
 
     // TypeNameTesting..................................................................................................

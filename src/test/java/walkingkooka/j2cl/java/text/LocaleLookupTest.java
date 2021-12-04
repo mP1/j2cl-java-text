@@ -25,7 +25,6 @@ import walkingkooka.reflect.JavaVisibility;
 
 import java.util.Locale;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public final class LocaleLookupTest implements ClassTesting2<LocaleLookup<Integer>>,
@@ -41,8 +40,8 @@ public final class LocaleLookupTest implements ClassTesting2<LocaleLookup<Intege
 
         final Locale he = Locale.forLanguageTag("HE");
         lookup.add(he, VALUE1);
-        assertEquals(VALUE1, lookup.getOrFail(he));
-        assertEquals(VALUE1, lookup.getOrFail(Locale.forLanguageTag("iw")));
+        this.checkEquals(VALUE1, lookup.getOrFail(he));
+        this.checkEquals(VALUE1, lookup.getOrFail(Locale.forLanguageTag("iw")));
     }
 
     @Test
@@ -51,8 +50,8 @@ public final class LocaleLookupTest implements ClassTesting2<LocaleLookup<Intege
 
         final Locale he = Locale.forLanguageTag("HE-IL");
         lookup.add(he, VALUE1);
-        assertEquals(VALUE1, lookup.getOrFail(he));
-        assertEquals(VALUE1, lookup.getOrFail(Locale.forLanguageTag("iw-IL")));
+        this.checkEquals(VALUE1, lookup.getOrFail(he));
+        this.checkEquals(VALUE1, lookup.getOrFail(Locale.forLanguageTag("iw-IL")));
     }
 
     @Test
@@ -61,8 +60,8 @@ public final class LocaleLookupTest implements ClassTesting2<LocaleLookup<Intege
 
         final Locale noNo = Locale.forLanguageTag("no_NO");
         lookup.add(noNo, VALUE1);
-        assertEquals(VALUE1, lookup.getOrFail(noNo));
-        assertEquals(VALUE1, lookup.getOrFail(Locale.forLanguageTag("no_NO")));
+        this.checkEquals(VALUE1, lookup.getOrFail(noNo));
+        this.checkEquals(VALUE1, lookup.getOrFail(Locale.forLanguageTag("no_NO")));
     }
 
     @Test
@@ -82,7 +81,7 @@ public final class LocaleLookupTest implements ClassTesting2<LocaleLookup<Intege
         final LocaleLookup<Integer> lookup = LocaleLookup.empty();
         lookup.add(EN, VALUE1);
 
-        assertEquals(VALUE1,
+        this.checkEquals(VALUE1,
                 lookup.getOrFail(EN),
                 () -> lookup + " getOrFail " + EN);
     }

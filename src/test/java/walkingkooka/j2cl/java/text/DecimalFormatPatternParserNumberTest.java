@@ -27,7 +27,6 @@ import java.util.List;
 import java.util.Locale;
 import java.util.stream.Collectors;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
 
 public final class DecimalFormatPatternParserNumberTest extends DecimalFormatPatternParserTestCase<DecimalFormatPatternParserNumber> {
@@ -797,26 +796,26 @@ public final class DecimalFormatPatternParserNumberTest extends DecimalFormatPat
 
         parser.parse();
 
-        assertEquals(prefix,
+        this.checkEquals(prefix,
                 parser.prefix,
                 () -> "parse " + CharSequences.quoteAndEscape(pattern) + " prefix, number=" + parser.number + ", suffix: " + parser.suffix);
-        assertEquals(number,
+        this.checkEquals(number,
                 parser.number,
                 () -> "parse " + CharSequences.quoteAndEscape(pattern) + " number, suffix: " + parser.suffix);
-        assertEquals(suffix,
+        this.checkEquals(suffix,
                 parser.suffix,
                 () -> "parse " + CharSequences.quoteAndEscape(pattern) + " suffix");
 
-        assertEquals(parser.number.contains(DecimalFormatPatternComponent.exponent()),
+        this.checkEquals(parser.number.contains(DecimalFormatPatternComponent.exponent()),
                 parser.isScientificFormat(),
                 () -> "parse " + CharSequences.quoteAndEscape(pattern) + " scientific number, number=" + parser.number);
 
         final String parsed = pattern.substring(0, pattern.length() - left.length());
-        assertEquals(parsed.endsWith("" + DecimalFormat.SUB_PATTERN_SEPARATOR),
+        this.checkEquals(parsed.endsWith("" + DecimalFormat.SUB_PATTERN_SEPARATOR),
                 parser.subPatternSeparator,
                 () -> " subPatternSeparator " + parser);
 
-        assertEquals(parser.number.contains(DecimalFormatPatternComponent.decimalSeparator()) || parser.number.contains(DecimalFormatPatternComponent.currencySeparator()),
+        this.checkEquals(parser.number.contains(DecimalFormatPatternComponent.decimalSeparator()) || parser.number.contains(DecimalFormatPatternComponent.currencySeparator()),
                 parser.hasDecimalSeparator(),
                 () -> "parser.hasDecimalSeparator " + parser);
     }
@@ -840,12 +839,12 @@ public final class DecimalFormatPatternParserNumberTest extends DecimalFormatPat
 
     private void checkMode(final DecimalFormatPatternParserNumber parser,
                            final DecimalFormatPatternParserNumberMode mode) {
-        assertEquals(mode, parser.mode, () -> "mode " + parser);
+        this.checkEquals(mode, parser.mode, () -> "mode " + parser);
     }
 
     private void checkGroupingSeparator(final DecimalFormatPatternParserNumber parser,
                                         final int groupingSeparator) {
-        assertEquals(groupingSeparator, parser.groupingSize(), () -> "groupingSeparator " + parser);
+        this.checkEquals(groupingSeparator, parser.groupingSize(), () -> "groupingSeparator " + parser);
     }
 
     private void checkFraction(final DecimalFormatPatternParserNumber parser,
@@ -857,8 +856,8 @@ public final class DecimalFormatPatternParserNumberTest extends DecimalFormatPat
         if (min > max) {
             fail("minimumFractionDigits " + min + " > maximumFractionDigits " + max);
         }
-        assertEquals(max, parser.maximumFractionDigits, () -> "maximumFractionDigits " + parser);
-        assertEquals(min, parser.minimumFractionDigits, () -> "minimumFractionDigits " + parser);
+        this.checkEquals(max, parser.maximumFractionDigits, () -> "maximumFractionDigits " + parser);
+        this.checkEquals(min, parser.minimumFractionDigits, () -> "minimumFractionDigits " + parser);
     }
 
     private void checkInteger(final DecimalFormatPatternParserNumber parser,
@@ -870,13 +869,13 @@ public final class DecimalFormatPatternParserNumberTest extends DecimalFormatPat
         if (min < 0) {
             fail("minIntegerDigits " + min + " < 0");
         }
-        assertEquals(max, parser.maximumIntegerDigits, () -> "maximumIntegerDigits " + parser);
-        assertEquals(min, parser.minimumIntegerDigits, () -> "minimumIntegerDigits " + parser);
+        this.checkEquals(max, parser.maximumIntegerDigits, () -> "maximumIntegerDigits " + parser);
+        this.checkEquals(min, parser.minimumIntegerDigits, () -> "minimumIntegerDigits " + parser);
     }
 
     private void checkMultiplier(final DecimalFormatPatternParserNumber parser,
                                  final int multipier) {
-        assertEquals(multipier, parser.multiplier, () -> "multiplier " + parser);
+        this.checkEquals(multipier, parser.multiplier, () -> "multiplier " + parser);
     }
 
     @Override

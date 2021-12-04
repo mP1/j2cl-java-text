@@ -22,12 +22,9 @@ import walkingkooka.HashCodeEqualsDefinedTesting2;
 import walkingkooka.ToStringTesting;
 import walkingkooka.j2cl.java.text.Format.Field;
 import walkingkooka.predicate.Predicates;
-import walkingkooka.reflect.JavaVisibility;
 
 import java.lang.reflect.Method;
 import java.util.function.Predicate;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public final class FieldPositionTest extends JavaTextTestCase<FieldPosition>
         implements
@@ -125,15 +122,15 @@ public final class FieldPositionTest extends JavaTextTestCase<FieldPosition>
     private void check(final FieldPosition emulated,
                        final java.text.FieldPosition expected) {
 
-        assertEquals(expected.getField(), emulated.getField(), "field");
+        this.checkEquals(expected.getField(), emulated.getField(), "field");
         checkFieldAttribute(expected.getFieldAttribute(), emulated.getFieldAttribute());
-        assertEquals(expected.getBeginIndex(), emulated.getBeginIndex(), "beginIndex");
-        assertEquals(expected.getEndIndex(), emulated.getEndIndex(), "endIndex");
+        this.checkEquals(expected.getBeginIndex(), emulated.getBeginIndex(), "beginIndex");
+        this.checkEquals(expected.getEndIndex(), emulated.getEndIndex(), "endIndex");
     }
 
     private void checkFieldAttribute(final java.text.Format.Field jre, final Field emulated) {
         if (null == jre) {
-            assertEquals(jre, emulated, "fieldAttribute");
+            this.checkEquals(jre, emulated, "fieldAttribute");
         }
     }
 

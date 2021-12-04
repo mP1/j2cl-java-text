@@ -26,8 +26,6 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.function.Predicate;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 public final class ParsePositionTest extends JavaTextTestCase<ParsePosition>
         implements HashCodeEqualsDefinedTesting2<ParsePosition>,
         ToStringTesting<ParsePosition> {
@@ -111,8 +109,8 @@ public final class ParsePositionTest extends JavaTextTestCase<ParsePosition>
     private void check(final ParsePosition emulated,
                        final java.text.ParsePosition expected) {
 
-        assertEquals(expected.getIndex(), emulated.getIndex(), "index");
-        assertEquals(expected.getErrorIndex(), emulated.getErrorIndex(), "errorIndex");
+        this.checkEquals(expected.getIndex(), emulated.getIndex(), "index");
+        this.checkEquals(expected.getErrorIndex(), emulated.getErrorIndex(), "errorIndex");
     }
 
     @Test

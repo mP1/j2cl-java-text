@@ -24,8 +24,6 @@ import walkingkooka.reflect.IsMethodTesting;
 
 import java.util.function.Predicate;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 public abstract class DecimalFormatPatternComponentTestCase<C extends DecimalFormatPatternComponent> extends DecimalFormatPatternTestCase<C>
         implements HashCodeEqualsDefinedTesting2<C>,
         IsMethodTesting<C>,
@@ -37,14 +35,14 @@ public abstract class DecimalFormatPatternComponentTestCase<C extends DecimalFor
 
     final void isCurrencyAndCheck(final C component,
                                   final boolean currency) {
-        assertEquals(currency,
+        this.checkEquals(currency,
                 component.isCurrency(),
                 () -> component.toString());
     }
 
     final void multiplierAndCheck(final C component,
                                   final int multipler) {
-        assertEquals(component.multiplier(),
+        this.checkEquals(component.multiplier(),
                 multipler,
                 () -> component.toString());
     }
