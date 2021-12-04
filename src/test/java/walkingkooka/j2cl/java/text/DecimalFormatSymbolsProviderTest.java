@@ -26,7 +26,6 @@ import java.io.DataInput;
 import java.io.EOFException;
 import java.util.Locale;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public final class DecimalFormatSymbolsProviderTest implements ClassTesting<DecimalFormatSymbolsProvider> {
@@ -54,8 +53,8 @@ public final class DecimalFormatSymbolsProviderTest implements ClassTesting<Deci
         getCurrencySymbolAndCheck("FR-FR", "€");
     }
 
-    private static void getCurrencySymbolAndCheck(final String locale, final String expected) {
-        assertEquals(expected, symbols(locale).getCurrencySymbol());
+    private void getCurrencySymbolAndCheck(final String locale, final String expected) {
+        this.checkEquals(expected, symbols(locale).getCurrencySymbol());
     }
 
     @Test
@@ -68,8 +67,8 @@ public final class DecimalFormatSymbolsProviderTest implements ClassTesting<Deci
         getDecimalSeparatorAndCheck("FR-FR", ',');
     }
 
-    private static void getDecimalSeparatorAndCheck(final String locale, final char expected) {
-        assertEquals(expected, symbols(locale).getDecimalSeparator());
+    private void getDecimalSeparatorAndCheck(final String locale, final char expected) {
+        this.checkEquals(expected, symbols(locale).getDecimalSeparator());
     }
 
     private static DecimalFormatSymbols symbols(final String locale) {

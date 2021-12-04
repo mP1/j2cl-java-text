@@ -19,8 +19,6 @@ package walkingkooka.j2cl.java.text;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 public final class SimpleDateFormatComponent2Test extends SimpleDateFormatComponentTestCase<SimpleDateFormatComponent2> {
 
     @Test
@@ -41,7 +39,7 @@ public final class SimpleDateFormatComponent2Test extends SimpleDateFormatCompon
     private void hoursMinutesToMillisAndCheck(final int hours,
                                               final int minutes,
                                               final int expected) {
-        assertEquals(expected,
+        this.checkEquals(expected,
                 SimpleDateFormatComponent2.hoursMinutesToMillis(hours, minutes),
                 () -> "hoursMinutesToMillis " + hours + ":" + minutes);
     }

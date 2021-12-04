@@ -21,8 +21,6 @@ import org.junit.jupiter.api.Test;
 import walkingkooka.collect.list.Lists;
 import walkingkooka.text.CharSequences;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 public final class DecimalFormatPatternParserPrefixSuffixTest extends DecimalFormatPatternParserTestCase<DecimalFormatPatternParserPrefixSuffix> {
 
     @Test
@@ -169,11 +167,11 @@ public final class DecimalFormatPatternParserPrefixSuffixTest extends DecimalFor
         parser.parse();
 
         final String pattern = parser.pattern;
-        assertEquals(Lists.of(components),
+        this.checkEquals(Lists.of(components),
                 parser.components,
                 "components parse " + CharSequences.quoteAndEscape(pattern));
 
-        assertEquals(Lists.of(components),
+        this.checkEquals(Lists.of(components),
                 DecimalFormatPatternParserPrefixSuffix.parseAndGetComponents(pattern, "pattern"),
                 "parseAndGetComponents " + CharSequences.quoteAndEscape(pattern));
     }

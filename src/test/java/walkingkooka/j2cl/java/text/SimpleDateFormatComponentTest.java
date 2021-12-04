@@ -25,7 +25,6 @@ import walkingkooka.text.CharSequences;
 
 import java.util.Set;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class SimpleDateFormatComponentTest extends SimpleDateFormatComponentTestCase<SimpleDateFormatComponent>
@@ -299,7 +298,7 @@ public class SimpleDateFormatComponentTest extends SimpleDateFormatComponentTest
     private void parseAndCheck(final String pattern, final SimpleDateFormatComponent... components) {
         new java.text.SimpleDateFormat(pattern); // verify pattern is valid.
 
-        assertEquals(Lists.of(components),
+        this.checkEquals(Lists.of(components),
                 SimpleDateFormatComponent.parsePattern(pattern),
                 () -> "parsePattern " + CharSequences.quoteAndEscape(pattern));
     }

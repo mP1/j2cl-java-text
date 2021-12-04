@@ -21,7 +21,6 @@ import org.junit.jupiter.api.Test;
 import walkingkooka.InvalidCharacterException;
 import walkingkooka.ToStringTesting;
 import walkingkooka.j2cl.locale.WalkingkookaLanguageTag;
-import walkingkooka.predicate.Predicates;
 import walkingkooka.text.CharSequences;
 
 import java.lang.reflect.Field;
@@ -31,8 +30,6 @@ import java.util.Currency;
 import java.util.Locale;
 import java.util.function.Predicate;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertNotSame;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
@@ -119,7 +116,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
             format.setMaximumIntegerDigits(88);
             format.setMinimumIntegerDigits(99);
 
-            assertNotEquals(format, DecimalFormat.getCurrencyInstance());
+            this.checkNotEquals(format, DecimalFormat.getCurrencyInstance());
         }
     }
 
@@ -164,7 +161,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
             format.setMaximumIntegerDigits(88);
             format.setMinimumIntegerDigits(99);
 
-            assertNotEquals(format, DecimalFormat.getCurrencyInstance(locale));
+            this.checkNotEquals(format, DecimalFormat.getCurrencyInstance(locale));
         }
     }
 
@@ -213,7 +210,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
             format.setMaximumIntegerDigits(88);
             format.setMinimumIntegerDigits(99);
 
-            assertNotEquals(format, DecimalFormat.getCurrencyInstance());
+            this.checkNotEquals(format, DecimalFormat.getCurrencyInstance());
         }
     }
 
@@ -258,7 +255,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
             format.setMaximumIntegerDigits(88);
             format.setMinimumIntegerDigits(99);
 
-            assertNotEquals(format, DecimalFormat.getCurrencyInstance(locale));
+            this.checkNotEquals(format, DecimalFormat.getCurrencyInstance(locale));
         }
     }
 
@@ -307,7 +304,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
             format.setMaximumIntegerDigits(88);
             format.setMinimumIntegerDigits(99);
 
-            assertNotEquals(format, DecimalFormat.getCurrencyInstance());
+            this.checkNotEquals(format, DecimalFormat.getCurrencyInstance());
         }
     }
 
@@ -352,7 +349,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
             format.setMaximumIntegerDigits(88);
             format.setMinimumIntegerDigits(99);
 
-            assertNotEquals(format, DecimalFormat.getCurrencyInstance(locale));
+            this.checkNotEquals(format, DecimalFormat.getCurrencyInstance(locale));
         }
     }
 
@@ -401,7 +398,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
             format.setMaximumIntegerDigits(88);
             format.setMinimumIntegerDigits(99);
 
-            assertNotEquals(format, DecimalFormat.getCurrencyInstance());
+            this.checkNotEquals(format, DecimalFormat.getCurrencyInstance());
         }
     }
 
@@ -446,7 +443,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
             format.setMaximumIntegerDigits(88);
             format.setMinimumIntegerDigits(99);
 
-            assertNotEquals(format, DecimalFormat.getCurrencyInstance(locale));
+            this.checkNotEquals(format, DecimalFormat.getCurrencyInstance(locale));
         }
     }
 
@@ -495,7 +492,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
             format.setMaximumIntegerDigits(88);
             format.setMinimumIntegerDigits(99);
 
-            assertNotEquals(format, DecimalFormat.getPercentInstance());
+            this.checkNotEquals(format, DecimalFormat.getPercentInstance());
         }
     }
 
@@ -540,7 +537,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
             format.setMaximumIntegerDigits(88);
             format.setMinimumIntegerDigits(99);
 
-            assertNotEquals(format, DecimalFormat.getPercentInstance(locale));
+            this.checkNotEquals(format, DecimalFormat.getPercentInstance(locale));
         }
     }
 
@@ -784,7 +781,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
         final DecimalFormat emul = new DecimalFormat("#");
         emul.setCurrency(currency);
 
-        assertEquals(jdk.getCurrency(), emul.getCurrency(), () -> "currency AUD");
+        this.checkEquals(jdk.getCurrency(), emul.getCurrency(), () -> "currency AUD");
     }
 
     // decimalSeparatorAlwaysShown......................................................................................
@@ -806,7 +803,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
         final DecimalFormat emul = new DecimalFormat("#");
         emul.setDecimalSeparatorAlwaysShown(decimalSeparatorAlwaysShown);
 
-        assertEquals(jdk.isDecimalSeparatorAlwaysShown(), emul.isDecimalSeparatorAlwaysShown(), () -> "decimalSeparatorAlwaysShown");
+        this.checkEquals(jdk.isDecimalSeparatorAlwaysShown(), emul.isDecimalSeparatorAlwaysShown(), () -> "decimalSeparatorAlwaysShown");
     }
 
     @Test
@@ -1124,9 +1121,9 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
 
     private void checkParseBigDecimalParseIntegerOnly(final java.text.DecimalFormat jdk,
                                                       final DecimalFormat emul) {
-        assertEquals(jdk.isParseBigDecimal(), emul.isParseBigDecimal(), () -> "parseBigDecimal");
+        this.checkEquals(jdk.isParseBigDecimal(), emul.isParseBigDecimal(), () -> "parseBigDecimal");
         ;
-        assertEquals(jdk.isParseIntegerOnly(), emul.isParseIntegerOnly(), () -> "parseIntegerOnly");
+        this.checkEquals(jdk.isParseIntegerOnly(), emul.isParseIntegerOnly(), () -> "parseIntegerOnly");
     }
 
     // positivePrefix.........................................................................................................
@@ -1323,8 +1320,8 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
         final DecimalFormat emul = new DecimalFormat("#");
         emul.setRoundingMode(roundingMode);
 
-        assertEquals(jdk.getRoundingMode(), emul.getRoundingMode(), () -> "roundingMode");
-        assertEquals(jdk.getRoundingMode(), emul.getRoundingMode(), () -> "roundingMode");
+        this.checkEquals(jdk.getRoundingMode(), emul.getRoundingMode(), () -> "roundingMode");
+        this.checkEquals(jdk.getRoundingMode(), emul.getRoundingMode(), () -> "roundingMode");
     }
 
     @Test
@@ -1337,8 +1334,8 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
             final DecimalFormat emul = new DecimalFormat("#");
             emul.setRoundingMode(roundingMode);
 
-            assertEquals(jdk.getRoundingMode(), emul.getRoundingMode(), () -> "roundingMode");
-            assertEquals(jdk.getRoundingMode(), emul.getRoundingMode(), () -> "roundingMode");
+            this.checkEquals(jdk.getRoundingMode(), emul.getRoundingMode(), () -> "roundingMode");
+            this.checkEquals(jdk.getRoundingMode(), emul.getRoundingMode(), () -> "roundingMode");
         }
     }
 
@@ -1372,27 +1369,27 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
                        final DecimalFormat emul,
                        final Locale locale,
                        final boolean skipPatternCheck) {
-        assertEquals(jdk.getCurrency(), emul.getCurrency(), () -> "currency " + locale + " " + emul);
-        assertEquals(jdk.isDecimalSeparatorAlwaysShown(), emul.isDecimalSeparatorAlwaysShown(), () -> "decimalSeparatorAlwaysShown " + locale + " " + emul);
-        assertEquals(jdk.getGroupingSize(), emul.getGroupingSize(), () -> "groupingSize " + locale + " " + emul);
-        assertEquals(jdk.isGroupingUsed(), emul.isGroupingUsed(), () -> "groupingUsed " + locale + " " + emul);
-        assertEquals(jdk.getMaximumFractionDigits(), emul.getMaximumFractionDigits(), () -> "maximumFractionDigits " + locale + " " + emul);
-        assertEquals(jdk.getMinimumFractionDigits(), emul.getMinimumFractionDigits(), () -> "minimumFractionDigits " + locale + " " + emul);
-        assertEquals(jdk.getMaximumIntegerDigits(), emul.getMaximumIntegerDigits(), () -> "maximumIntegerDigits " + locale + " " + emul);
-        assertEquals(jdk.getMinimumIntegerDigits(), emul.getMinimumIntegerDigits(), () -> "minimumIntegerDigits " + locale + " " + emul);
-        assertEquals(jdk.getMultiplier(), emul.getMultiplier(), () -> "multiplier " + locale + " " + emul);
-        assertEquals(jdk.getNegativePrefix(), emul.getNegativePrefix(), () -> "negativePrefix " + locale + " " + emul);
-        assertEquals(jdk.getNegativeSuffix(), emul.getNegativeSuffix(), () -> "negativeSuffix " + locale + " " + emul);
-        assertEquals(jdk.isParseBigDecimal(), emul.isParseBigDecimal(), () -> "parseBigDecimal " + locale + " " + emul);
-        assertEquals(jdk.isParseIntegerOnly(), emul.isParseIntegerOnly(), () -> "parseIntegerOnly " + locale + " " + emul);
+        this.checkEquals(jdk.getCurrency(), emul.getCurrency(), () -> "currency " + locale + " " + emul);
+        this.checkEquals(jdk.isDecimalSeparatorAlwaysShown(), emul.isDecimalSeparatorAlwaysShown(), () -> "decimalSeparatorAlwaysShown " + locale + " " + emul);
+        this.checkEquals(jdk.getGroupingSize(), emul.getGroupingSize(), () -> "groupingSize " + locale + " " + emul);
+        this.checkEquals(jdk.isGroupingUsed(), emul.isGroupingUsed(), () -> "groupingUsed " + locale + " " + emul);
+        this.checkEquals(jdk.getMaximumFractionDigits(), emul.getMaximumFractionDigits(), () -> "maximumFractionDigits " + locale + " " + emul);
+        this.checkEquals(jdk.getMinimumFractionDigits(), emul.getMinimumFractionDigits(), () -> "minimumFractionDigits " + locale + " " + emul);
+        this.checkEquals(jdk.getMaximumIntegerDigits(), emul.getMaximumIntegerDigits(), () -> "maximumIntegerDigits " + locale + " " + emul);
+        this.checkEquals(jdk.getMinimumIntegerDigits(), emul.getMinimumIntegerDigits(), () -> "minimumIntegerDigits " + locale + " " + emul);
+        this.checkEquals(jdk.getMultiplier(), emul.getMultiplier(), () -> "multiplier " + locale + " " + emul);
+        this.checkEquals(jdk.getNegativePrefix(), emul.getNegativePrefix(), () -> "negativePrefix " + locale + " " + emul);
+        this.checkEquals(jdk.getNegativeSuffix(), emul.getNegativeSuffix(), () -> "negativeSuffix " + locale + " " + emul);
+        this.checkEquals(jdk.isParseBigDecimal(), emul.isParseBigDecimal(), () -> "parseBigDecimal " + locale + " " + emul);
+        this.checkEquals(jdk.isParseIntegerOnly(), emul.isParseIntegerOnly(), () -> "parseIntegerOnly " + locale + " " + emul);
 
         if (false == skipPatternCheck) {
-            assertEquals(jdk.toPattern(), emul.toPattern(), () -> "pattern " + locale + " " + emul);
+            this.checkEquals(jdk.toPattern(), emul.toPattern(), () -> "pattern " + locale + " " + emul);
         }
 
-        assertEquals(jdk.getPositivePrefix(), emul.getPositivePrefix(), () -> "positivePrefix " + locale + " " + emul);
-        assertEquals(jdk.getPositiveSuffix(), emul.getPositiveSuffix(), () -> "positiveSuffix " + locale + " " + emul);
-        assertEquals(jdk.getRoundingMode(), emul.getRoundingMode(), () -> "roundingMode " + locale + " " + emul);
+        this.checkEquals(jdk.getPositivePrefix(), emul.getPositivePrefix(), () -> "positivePrefix " + locale + " " + emul);
+        this.checkEquals(jdk.getPositiveSuffix(), emul.getPositiveSuffix(), () -> "positiveSuffix " + locale + " " + emul);
+        this.checkEquals(jdk.getRoundingMode(), emul.getRoundingMode(), () -> "roundingMode " + locale + " " + emul);
 
         this.check(jdk.getDecimalFormatSymbols(), emul.getDecimalFormatSymbols(), locale);
     }
@@ -1401,21 +1398,21 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
                        final DecimalFormatSymbols emulated,
                        final Locale locale) {
 
-        assertEquals(expected.getCurrency(), emulated.getCurrency(), () -> "currency " + locale.toLanguageTag());
-        assertEquals(expected.getCurrencySymbol(), emulated.getCurrencySymbol(), () -> "currencySymbol " + locale.toLanguageTag());
-        assertEquals(expected.getDecimalSeparator(), emulated.getDecimalSeparator(), () -> "decimalSeparator " + locale.toLanguageTag());
-        assertEquals(expected.getDigit(), emulated.getDigit(), () -> "digit " + locale.toLanguageTag());
-        assertEquals(expected.getExponentSeparator(), emulated.getExponentSeparator(), () -> "exponentSeparator " + locale.toLanguageTag());
-        assertEquals(expected.getGroupingSeparator(), emulated.getGroupingSeparator(), () -> "groupingSeparator " + locale.toLanguageTag());
-        assertEquals(expected.getInfinity(), emulated.getInfinity(), "infinity " + locale.toLanguageTag());
-        assertEquals(expected.getInternationalCurrencySymbol(), emulated.getInternationalCurrencySymbol(), () -> "internationalCurrencySymbol " + locale.toLanguageTag());
-        assertEquals(expected.getMinusSign(), emulated.getMinusSign(), () -> "minusSign " + locale.toLanguageTag());
-        assertEquals(expected.getMonetaryDecimalSeparator(), emulated.getMonetaryDecimalSeparator(), () -> "monetaryDecimalSeparator " + locale.toLanguageTag());
-        assertEquals(expected.getNaN(), emulated.getNaN(), () -> "nan " + locale.toLanguageTag());
-        assertEquals(expected.getPatternSeparator(), emulated.getPatternSeparator(), () -> "patternSeparator " + locale.toLanguageTag());
-        assertEquals(expected.getPercent(), emulated.getPercent(), () -> "percent " + locale.toLanguageTag());
-        assertEquals(expected.getPerMill(), emulated.getPerMill(), () -> "perMill " + locale.toLanguageTag());
-        assertEquals(expected.getZeroDigit(), emulated.getZeroDigit(), () -> "zeroDigit " + locale.toLanguageTag());
+        this.checkEquals(expected.getCurrency(), emulated.getCurrency(), () -> "currency " + locale.toLanguageTag());
+        this.checkEquals(expected.getCurrencySymbol(), emulated.getCurrencySymbol(), () -> "currencySymbol " + locale.toLanguageTag());
+        this.checkEquals(expected.getDecimalSeparator(), emulated.getDecimalSeparator(), () -> "decimalSeparator " + locale.toLanguageTag());
+        this.checkEquals(expected.getDigit(), emulated.getDigit(), () -> "digit " + locale.toLanguageTag());
+        this.checkEquals(expected.getExponentSeparator(), emulated.getExponentSeparator(), () -> "exponentSeparator " + locale.toLanguageTag());
+        this.checkEquals(expected.getGroupingSeparator(), emulated.getGroupingSeparator(), () -> "groupingSeparator " + locale.toLanguageTag());
+        this.checkEquals(expected.getInfinity(), emulated.getInfinity(), "infinity " + locale.toLanguageTag());
+        this.checkEquals(expected.getInternationalCurrencySymbol(), emulated.getInternationalCurrencySymbol(), () -> "internationalCurrencySymbol " + locale.toLanguageTag());
+        this.checkEquals(expected.getMinusSign(), emulated.getMinusSign(), () -> "minusSign " + locale.toLanguageTag());
+        this.checkEquals(expected.getMonetaryDecimalSeparator(), emulated.getMonetaryDecimalSeparator(), () -> "monetaryDecimalSeparator " + locale.toLanguageTag());
+        this.checkEquals(expected.getNaN(), emulated.getNaN(), () -> "nan " + locale.toLanguageTag());
+        this.checkEquals(expected.getPatternSeparator(), emulated.getPatternSeparator(), () -> "patternSeparator " + locale.toLanguageTag());
+        this.checkEquals(expected.getPercent(), emulated.getPercent(), () -> "percent " + locale.toLanguageTag());
+        this.checkEquals(expected.getPerMill(), emulated.getPerMill(), () -> "perMill " + locale.toLanguageTag());
+        this.checkEquals(expected.getZeroDigit(), emulated.getZeroDigit(), () -> "zeroDigit " + locale.toLanguageTag());
     }
 
     // format...........................................................................................................
@@ -1887,7 +1884,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
                                 final Object value,
                                 final Locale locale,
                                 final String expected) {
-        assertEquals(expected,
+        this.checkEquals(expected,
                 emul.format(value),
                 () -> emul.toPattern() + " value " + value + " locale " + locale + " decimalFormat: " + emul);
     }
@@ -2137,13 +2134,13 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
         final java.text.ParsePosition jdkPosition = new java.text.ParsePosition(0);
         final ParsePosition emulPosition = new ParsePosition(0);
 
-        assertEquals(jdk.parse(value, jdkPosition),
+        this.checkEquals(jdk.parse(value, jdkPosition),
                 emul.parse(value, emulPosition),
                 () -> jdk.toPattern() + " parse " + CharSequences.quoteAndEscape(value) + " jdk: " + jdk + " emul: " + emul);
-        assertEquals(jdkPosition.getIndex(),
+        this.checkEquals(jdkPosition.getIndex(),
                 emulPosition.getIndex(),
                 () -> "index, " + jdk.toPattern() + " parse " + CharSequences.quoteAndEscape(value) + " jdk: " + jdk + " emul: " + emul);
-        assertEquals(jdkPosition.getErrorIndex(),
+        this.checkEquals(jdkPosition.getErrorIndex(),
                 emulPosition.getErrorIndex(),
                 () -> "error index, " + jdk.toPattern() + " parse " + CharSequences.quoteAndEscape(value) + " jdk: " + jdk + " emul: " + emul);
     }

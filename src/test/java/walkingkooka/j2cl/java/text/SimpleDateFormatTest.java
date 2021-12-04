@@ -21,7 +21,6 @@ import org.junit.jupiter.api.Test;
 import walkingkooka.NeverError;
 import walkingkooka.ToStringTesting;
 import walkingkooka.j2cl.locale.WalkingkookaLanguageTag;
-import walkingkooka.predicate.Predicates;
 import walkingkooka.text.CharSequences;
 
 import java.lang.reflect.Field;
@@ -35,8 +34,6 @@ import java.util.function.BiFunction;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 public final class SimpleDateFormatTest extends FormatTestCase<SimpleDateFormat> implements ToStringTesting<SimpleDateFormat> {
 
     private final static Locale EN_AU = Locale.forLanguageTag("en-AU");
@@ -48,7 +45,7 @@ public final class SimpleDateFormatTest extends FormatTestCase<SimpleDateFormat>
         final SimpleDateFormat format = new SimpleDateFormat();
         final Date date = new Date();
         format.set2DigitYearStart(date);
-        assertEquals(date, format.get2DigitYearStart());
+        this.checkEquals(date, format.get2DigitYearStart());
     }
 
     // getDateInstance..................................................................................................
@@ -177,7 +174,7 @@ public final class SimpleDateFormatTest extends FormatTestCase<SimpleDateFormat>
                                      final Locale locale,
                                      final java.text.SimpleDateFormat jre,
                                      final SimpleDateFormat emulated) {
-        assertEquals(jre.toPattern(),
+        this.checkEquals(jre.toPattern(),
                 emulated.toPattern(),
                 () -> "pattern for style=" + toStringStyle(style) + " locale=" + locale);
     }
@@ -248,7 +245,7 @@ public final class SimpleDateFormatTest extends FormatTestCase<SimpleDateFormat>
                                              final Locale locale,
                                              final java.text.SimpleDateFormat jre,
                                              final SimpleDateFormat emulated) {
-        assertEquals(jre.toPattern(),
+        this.checkEquals(jre.toPattern(),
                 emulated.toPattern(),
                 () -> "pattern for dateStyle=" + toStringStyle(dateStyle) + " timeStyle=" + toStringStyle(timeStyle) + " locale=" + locale);
     }
@@ -510,7 +507,7 @@ public final class SimpleDateFormatTest extends FormatTestCase<SimpleDateFormat>
         final java.text.SimpleDateFormat jre = new java.text.SimpleDateFormat(pattern);
         final SimpleDateFormat emul = new SimpleDateFormat(pattern);
 
-        assertEquals(jre.format(date),
+        this.checkEquals(jre.format(date),
                 emul.format(date),
                 () -> "pattern=" + CharSequences.quoteAndEscape(emul.toPattern()) + " date=" + new java.text.SimpleDateFormat("yyyy/MM/dd kk:mm:ss:SSS aaa").format(date));
     }
@@ -609,13 +606,13 @@ public final class SimpleDateFormatTest extends FormatTestCase<SimpleDateFormat>
         final SimpleDateFormat emul = new SimpleDateFormat(pattern);
         final ParsePosition emulPosition = new ParsePosition(position);
 
-        assertEquals(jre.parse(text, jrePosition),
+        this.checkEquals(jre.parse(text, jrePosition),
                 emul.parse(text, emulPosition),
-                () -> "pattern " + CharSequences.quoteAndEscape(pattern) + " parse " + CharSequences.quoteAndEscape(text)+ " parsePosition: " + jrePosition);
-        assertEquals(jrePosition.getIndex(),
+                () -> "pattern " + CharSequences.quoteAndEscape(pattern) + " parse " + CharSequences.quoteAndEscape(text) + " parsePosition: " + jrePosition);
+        this.checkEquals(jrePosition.getIndex(),
                 emulPosition.getIndex(),
                 () -> "index, " + "pattern " + CharSequences.quoteAndEscape(pattern) + " parse " + CharSequences.quoteAndEscape(text) + " parsePosition: " + jrePosition);
-        assertEquals(jrePosition.getErrorIndex(),
+        this.checkEquals(jrePosition.getErrorIndex(),
                 emulPosition.getErrorIndex(),
                 () -> "errorIndex, " + "pattern " + CharSequences.quoteAndEscape(pattern) + " parse " + CharSequences.quoteAndEscape(text) + " parsePosition: " + jrePosition);
     }

@@ -33,8 +33,6 @@ import java.util.Locale;
 import java.util.Set;
 import java.util.function.Predicate;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertNotSame;
 
 public final class DateFormatSymbolsTest extends JavaTextTestCase<DateFormatSymbols>
@@ -63,7 +61,7 @@ public final class DateFormatSymbolsTest extends JavaTextTestCase<DateFormatSymb
         final Set<Locale> emulated = Sets.sorted(comparator);
         emulated.addAll(Arrays.asList(DateFormatSymbols.getAvailableLocales()));
 
-        assertEquals(jdk, emulated);
+        this.checkEquals(jdk, emulated);
     }
 
     // getInstance......................................................................................................
@@ -95,7 +93,7 @@ public final class DateFormatSymbolsTest extends JavaTextTestCase<DateFormatSymb
         final java.util.Locale locale = Locale.GERMAN;
         java.util.Locale.setDefault(locale);
 
-        assertEquals(java.text.DateFormatSymbols.getInstance(), java.text.DateFormatSymbols.getInstance());
+        this.checkEquals(java.text.DateFormatSymbols.getInstance(), java.text.DateFormatSymbols.getInstance());
     }
 
     @Test
@@ -108,7 +106,7 @@ public final class DateFormatSymbolsTest extends JavaTextTestCase<DateFormatSymb
         final DateFormatSymbols symbols = DateFormatSymbols.getInstance();
         symbols.setAmPmStrings(new String[]{ "XXX", "YYYY"});
 
-        assertNotEquals(symbols, DateFormatSymbols.getInstance());
+        this.checkNotEquals(symbols, DateFormatSymbols.getInstance());
     }
 
     // getInstance(Locale)...............................................................................................

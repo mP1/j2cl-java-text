@@ -27,8 +27,6 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.TimeZone;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 public abstract class SimpleDateFormatComponentTestCase<C extends SimpleDateFormatComponent> implements ClassTesting<C> {
 
     final static Locale LOCALE = Locale.forLanguageTag("EN-AU");
@@ -90,7 +88,7 @@ public abstract class SimpleDateFormatComponentTestCase<C extends SimpleDateForm
                                   final String expected) {
         final StringBuffer text = new StringBuffer();
         component.formatDate(SimpleDateFormatFormatRequest.with(calendar, text, symbols, daylightSavingTime));
-        assertEquals(expected,
+        this.checkEquals(expected,
                 text.toString(),
                 () -> component + " format " + calendar.getTime() + " symbols=" + symbols + " daylightSavingTime: " + daylightSavingTime + " tz " + TimeZone.getDefault());
     }
@@ -146,16 +144,16 @@ public abstract class SimpleDateFormatComponentTestCase<C extends SimpleDateForm
         simpleDateFormat.setLenient(true);
         final Date expected = simpleDateFormat.parse(jreText, jrePosition);
 
-        assertEquals(jrePosition.getIndex(),
+        this.checkEquals(jrePosition.getIndex(),
                 position.getIndex(),
                 () -> "index, " + component + " text=" + CharSequences.quoteAndEscape(emulText) + " errorIndex: " + jrePosition.getErrorIndex() + " expected date: " + expected);
-        assertEquals(jrePosition.getErrorIndex(),
+        this.checkEquals(jrePosition.getErrorIndex(),
                 position.getErrorIndex(),
                 () -> "errorIndex, " + component + " text=" + CharSequences.quoteAndEscape(emulText) + " index: " + position.getIndex() + " expected date: " + expected);
 
         // TODO https://github.com/mP1/j2cl-java-text/issues/219
         if(false == this instanceof SimpleDateFormatComponentWeekYearTest) {
-            assertEquals(null != expected ?
+            this.checkEquals(null != expected ?
                     expected :
                     new Date(0), calendar.getTime(), () -> "date, " + component + " text=" + CharSequences.quoteAndEscape(emulText) + " jre pattern: " + simpleDateFormat.toPattern() + " 2digitYear: " + simpleDateFormat.get2DigitYearStart() + " pattern: " + component + " twoDigitYear: " + twoDigitYear);
         }

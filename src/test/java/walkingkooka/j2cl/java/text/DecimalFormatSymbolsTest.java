@@ -32,8 +32,6 @@ import java.util.Currency;
 import java.util.Locale;
 import java.util.Set;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public final class DecimalFormatSymbolsTest implements ClassTesting<DecimalFormatSymbols>,
@@ -66,7 +64,7 @@ public final class DecimalFormatSymbolsTest implements ClassTesting<DecimalForma
         final Set<Locale> emulated = Sets.sorted(comparator);
         emulated.addAll(Arrays.asList(DecimalFormatSymbols.getAvailableLocales()));
 
-        assertEquals(jdk, emulated);
+        this.checkEquals(jdk, emulated);
     }
 
     // getInstance......................................................................................................
@@ -102,7 +100,7 @@ public final class DecimalFormatSymbolsTest implements ClassTesting<DecimalForma
         final java.util.Locale locale = Locale.GERMAN;
         java.util.Locale.setDefault(locale);
 
-        assertEquals(java.text.DecimalFormatSymbols.getInstance(), java.text.DecimalFormatSymbols.getInstance());
+        this.checkEquals(java.text.DecimalFormatSymbols.getInstance(), java.text.DecimalFormatSymbols.getInstance());
     }
 
     @Test
@@ -115,7 +113,7 @@ public final class DecimalFormatSymbolsTest implements ClassTesting<DecimalForma
         final DecimalFormatSymbols symbols = DecimalFormatSymbols.getInstance();
         symbols.setInfinity("symbols was not cloned if this property value is present!!!");
 
-        assertNotEquals(symbols, DecimalFormatSymbols.getInstance());
+        this.checkNotEquals(symbols, DecimalFormatSymbols.getInstance());
     }
 
     // getInstance(Locale)...............................................................................................
@@ -173,21 +171,21 @@ public final class DecimalFormatSymbolsTest implements ClassTesting<DecimalForma
                        final java.text.DecimalFormatSymbols expected,
                        final Locale locale) {
 
-        assertEquals(expected.getCurrency(), emulated.getCurrency(), () -> "currency " + locale.toLanguageTag());
-        assertEquals(expected.getCurrencySymbol(), emulated.getCurrencySymbol(), () -> "currencySymbol " + locale.toLanguageTag());
-        assertEquals(expected.getDecimalSeparator(), emulated.getDecimalSeparator(), () -> "decimalSeparator " + locale.toLanguageTag());
-        assertEquals(expected.getDigit(), emulated.getDigit(), () -> "digit " + locale.toLanguageTag());
-        assertEquals(expected.getExponentSeparator(), emulated.getExponentSeparator(), () -> "exponentSeparator " + locale.toLanguageTag());
-        assertEquals(expected.getGroupingSeparator(), emulated.getGroupingSeparator(), () -> "groupingSeparator " + locale.toLanguageTag());
-        assertEquals(expected.getInfinity(), emulated.getInfinity(), "infinity " + locale.toLanguageTag());
-        assertEquals(expected.getInternationalCurrencySymbol(), emulated.getInternationalCurrencySymbol(), () -> "internationalCurrencySymbol " + locale.toLanguageTag());
-        assertEquals(expected.getMinusSign(), emulated.getMinusSign(), () -> "minusSign " + locale.toLanguageTag());
-        assertEquals(expected.getMonetaryDecimalSeparator(), emulated.getMonetaryDecimalSeparator(), () -> "monetaryDecimalSeparator " + locale.toLanguageTag());
-        assertEquals(expected.getNaN(), emulated.getNaN(), () -> "nan " + locale.toLanguageTag());
-        assertEquals(expected.getPatternSeparator(), emulated.getPatternSeparator(), () -> "patternSeparator " + locale.toLanguageTag());
-        assertEquals(expected.getPercent(), emulated.getPercent(), () -> "percent " + locale.toLanguageTag());
-        assertEquals(expected.getPerMill(), emulated.getPerMill(), () -> "perMill " + locale.toLanguageTag());
-        assertEquals(expected.getZeroDigit(), emulated.getZeroDigit(), () -> "zeroDigit " + locale.toLanguageTag());
+        this.checkEquals(expected.getCurrency(), emulated.getCurrency(), () -> "currency " + locale.toLanguageTag());
+        this.checkEquals(expected.getCurrencySymbol(), emulated.getCurrencySymbol(), () -> "currencySymbol " + locale.toLanguageTag());
+        this.checkEquals(expected.getDecimalSeparator(), emulated.getDecimalSeparator(), () -> "decimalSeparator " + locale.toLanguageTag());
+        this.checkEquals(expected.getDigit(), emulated.getDigit(), () -> "digit " + locale.toLanguageTag());
+        this.checkEquals(expected.getExponentSeparator(), emulated.getExponentSeparator(), () -> "exponentSeparator " + locale.toLanguageTag());
+        this.checkEquals(expected.getGroupingSeparator(), emulated.getGroupingSeparator(), () -> "groupingSeparator " + locale.toLanguageTag());
+        this.checkEquals(expected.getInfinity(), emulated.getInfinity(), "infinity " + locale.toLanguageTag());
+        this.checkEquals(expected.getInternationalCurrencySymbol(), emulated.getInternationalCurrencySymbol(), () -> "internationalCurrencySymbol " + locale.toLanguageTag());
+        this.checkEquals(expected.getMinusSign(), emulated.getMinusSign(), () -> "minusSign " + locale.toLanguageTag());
+        this.checkEquals(expected.getMonetaryDecimalSeparator(), emulated.getMonetaryDecimalSeparator(), () -> "monetaryDecimalSeparator " + locale.toLanguageTag());
+        this.checkEquals(expected.getNaN(), emulated.getNaN(), () -> "nan " + locale.toLanguageTag());
+        this.checkEquals(expected.getPatternSeparator(), emulated.getPatternSeparator(), () -> "patternSeparator " + locale.toLanguageTag());
+        this.checkEquals(expected.getPercent(), emulated.getPercent(), () -> "percent " + locale.toLanguageTag());
+        this.checkEquals(expected.getPerMill(), emulated.getPerMill(), () -> "perMill " + locale.toLanguageTag());
+        this.checkEquals(expected.getZeroDigit(), emulated.getZeroDigit(), () -> "zeroDigit " + locale.toLanguageTag());
     }
 
     // currency.........................................................................................................
@@ -223,7 +221,7 @@ public final class DecimalFormatSymbolsTest implements ClassTesting<DecimalForma
                                      final DecimalFormatSymbols emul,
                                      final Locale locale) {
 
-        assertEquals(jdk.getCurrency(),
+        this.checkEquals(jdk.getCurrency(),
                 emul.getCurrency(),
                 () -> "currency " + locale);
         this.getCurrencySymbolAndCheck(jdk, emul, locale);
@@ -233,7 +231,7 @@ public final class DecimalFormatSymbolsTest implements ClassTesting<DecimalForma
                                            final DecimalFormatSymbols emul,
                                            final Locale locale) {
 
-        assertEquals(jdk.getCurrencySymbol(),
+        this.checkEquals(jdk.getCurrencySymbol(),
                 emul.getCurrencySymbol(),
                 () -> "currencySymbol " + locale);
     }
