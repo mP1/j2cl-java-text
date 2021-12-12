@@ -35,7 +35,7 @@ final class DecimalFormatPatternComponentCharacterLiteral extends DecimalFormatP
 
     static int CONSTANT_COUNT = 127;
 
-    private static DecimalFormatPatternComponentCharacterLiteral[] CONSTANTS = IntStream.rangeClosed(0, CONSTANT_COUNT)
+    private static final DecimalFormatPatternComponentCharacterLiteral[] CONSTANTS = IntStream.rangeClosed(0, CONSTANT_COUNT)
             .mapToObj(DecimalFormatPatternComponentCharacterLiteral::new)
             .toArray(DecimalFormatPatternComponentCharacterLiteral[]::new);
 
