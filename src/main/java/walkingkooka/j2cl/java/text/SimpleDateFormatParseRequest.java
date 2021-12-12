@@ -63,7 +63,7 @@ final class SimpleDateFormatParseRequest {
 
     final Calendar calendar;
 
-    final int adjustTwoDigitYear(final int value) {
+    int adjustTwoDigitYear(final int value) {
         return value +
                 this.twoDigitCentury +
                 (value < this.twoDigitRollOver ?
@@ -168,22 +168,22 @@ final class SimpleDateFormatParseRequest {
     /**
      * Parses a two digit hours or fails and sets the error index
      */
-    final int parseTwoDigitHoursOrError(final int errorIndex) {
+    int parseTwoDigitHoursOrError(final int errorIndex) {
         return this.parseTwoDigitNumberOrError(24, errorIndex);
     }
 
     /**
      * Parses a two digit minutes or fails and sets the error index
      */
-    final int parseTwoDigitMinutesOrError(final int errorIndex) {
+    int parseTwoDigitMinutesOrError(final int errorIndex) {
         return this.parseTwoDigitNumberOrError(60, errorIndex);
     }
 
     /**
      * Parses a two digit value between 0 and the maxValue or fails and sets the error index
      */
-    final int parseTwoDigitNumberOrError(final int maxValue,
-                                         final int errorIndex) {
+    int parseTwoDigitNumberOrError(final int maxValue,
+                                   final int errorIndex) {
         return this.parseNumberWithMaxValueOrError(2,
                 maxValue,
                 errorIndex);
@@ -192,9 +192,9 @@ final class SimpleDateFormatParseRequest {
     /**
      * Parses a two digit value between 0 and the maxValue or fails and sets the error index
      */
-    final int parseNumberWithMaxValueOrError(final int minLength,
-                                             final int maxValue,
-                                             final int errorIndex) {
+    int parseNumberWithMaxValueOrError(final int minLength,
+                                       final int maxValue,
+                                       final int errorIndex) {
         final ParsePosition position = this.position;
         final int start = position.getIndex();
 
@@ -210,9 +210,9 @@ final class SimpleDateFormatParseRequest {
     /**
      * Attempts to parse the given text at the position for a maximum number of characters only updating the position.
      */
-    final int parseNumberOrError(final int minLength,
-                                 final int maxLength,
-                                 final int errorIndex) {
+    int parseNumberOrError(final int minLength,
+                           final int maxLength,
+                           final int errorIndex) {
         final ParsePosition position = this.position;
         final int startPos = position.getIndex();
 
@@ -249,8 +249,8 @@ final class SimpleDateFormatParseRequest {
     /**
      * Tries all the given possible text to get the best longest match.
      */
-    final int bestMatch(final String[] possibles,
-                        final int possibleStartIndex) {
+    int bestMatch(final String[] possibles,
+                  final int possibleStartIndex) {
         final String text = this.text;
         final int textLength = text.length();
 
