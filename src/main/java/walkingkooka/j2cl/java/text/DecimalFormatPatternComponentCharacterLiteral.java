@@ -27,7 +27,7 @@ final class DecimalFormatPatternComponentCharacterLiteral extends DecimalFormatP
     /**
      * Factory that creates a character literal.
      */
-    final static DecimalFormatPatternComponentCharacterLiteral with(final char value) {
+    static DecimalFormatPatternComponentCharacterLiteral with(final char value) {
         return value <= CONSTANT_COUNT ?
                 CONSTANTS[value] :
                 new DecimalFormatPatternComponentCharacterLiteral(value);

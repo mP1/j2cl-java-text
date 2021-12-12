@@ -27,7 +27,7 @@ import java.util.TimeZone;
 public final class SimpleDateFormatComponentTimeZoneIso8601Test extends SimpleDateFormatComponentTestCase2<SimpleDateFormatComponentTimeZoneIso8601> {
 
     @Test
-    public final void testFormatDateAdelaide() {
+    public void testFormatDateAdelaide() {
         this.formatDateAndCheck(1, DATE, Locale.forLanguageTag("Australia/Adelaide"));
     }
 

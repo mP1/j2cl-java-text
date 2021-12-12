@@ -33,8 +33,7 @@ final class SimpleDateFormatComponentLiteral extends SimpleDateFormatComponent {
         this.c = c;
     }
 
-    @Override
-    final boolean isNumber() {
+    @Override boolean isNumber() {
         return false;// false because is a literal.
     }
 
