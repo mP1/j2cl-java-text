@@ -50,7 +50,7 @@ final class SimpleDateFormatFormatRequest {
 
     final DateFormatSymbols symbols;
 
-    boolean daylightSavingTime;
+    final boolean daylightSavingTime;
 
     @Override
     public String toString() {
