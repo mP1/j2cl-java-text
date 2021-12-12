@@ -1122,7 +1122,6 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
     private void checkParseBigDecimalParseIntegerOnly(final java.text.DecimalFormat jdk,
                                                       final DecimalFormat emul) {
         this.checkEquals(jdk.isParseBigDecimal(), emul.isParseBigDecimal(), () -> "parseBigDecimal");
-        ;
         this.checkEquals(jdk.isParseIntegerOnly(), emul.isParseIntegerOnly(), () -> "parseIntegerOnly");
     }
 
