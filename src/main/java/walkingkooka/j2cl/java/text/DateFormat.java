@@ -20,6 +20,7 @@ package walkingkooka.j2cl.java.text;
 import javaemul.internal.annotations.GwtIncompatible;
 import walkingkooka.text.CharSequences;
 
+import java.io.InvalidObjectException;
 import java.text.ParseException;
 import java.util.Calendar;
 import java.util.Date;
@@ -775,7 +776,7 @@ public abstract class DateFormat extends Format {
         @GwtIncompatible
         private static final long serialVersionUID = 7441350119349544720L;
 
-        private static HashMap<Integer, Field> table = new HashMap<Integer, Field>();
+        private static final HashMap<Integer, Field> table = new HashMap<Integer, Field>();
 
         /**
          * Marks the era part of a date.

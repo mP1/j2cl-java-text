@@ -831,7 +831,7 @@ public final class DecimalFormatPatternParserNumberTest extends DecimalFormatPat
                 .replace("" + CURRENCY, "$");
     }
 
-    private List<DecimalFormatPatternComponent> NO_COMPONENTS = Lists.empty();
+    private final List<DecimalFormatPatternComponent> NO_COMPONENTS = Lists.empty();
 
     private List<DecimalFormatPatternComponent> list(final DecimalFormatPatternComponent... components) {
         return Lists.of(components);
