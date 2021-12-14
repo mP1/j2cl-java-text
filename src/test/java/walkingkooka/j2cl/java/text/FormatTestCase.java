@@ -19,8 +19,6 @@ package walkingkooka.j2cl.java.text;
 
 import org.junit.jupiter.api.Test;
 import walkingkooka.HashCodeEqualsDefinedTesting2;
-import walkingkooka.reflect.ClassTesting;
-import walkingkooka.reflect.JavaVisibility;
 
 public abstract class FormatTestCase<F extends Format> extends JavaTextTestCase<F> implements HashCodeEqualsDefinedTesting2<F> {
 
