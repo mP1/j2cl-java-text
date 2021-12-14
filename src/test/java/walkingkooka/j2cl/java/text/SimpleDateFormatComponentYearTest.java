@@ -46,7 +46,7 @@ public final class SimpleDateFormatComponentYearTest extends SimpleDateFormatCom
 
     private void formatYearAndCheck(final int length) {
         for (int year = 1800; year < 2050; year++) {
-            this.formatDateAndCheck(length, new Date(DATE.UTC(year - 1900, 1, 2, 3, 4, 5)));
+            this.formatDateAndCheck(length, new Date(Date.UTC(year - 1900, 1, 2, 3, 4, 5)));
         }
     }
 
