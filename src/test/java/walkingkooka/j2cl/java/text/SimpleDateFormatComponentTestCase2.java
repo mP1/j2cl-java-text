@@ -22,12 +22,8 @@ import walkingkooka.HashCodeEqualsDefinedTesting2;
 import walkingkooka.ToStringTesting;
 import walkingkooka.text.CharSequences;
 
-import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
-import java.util.TimeZone;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public abstract class SimpleDateFormatComponentTestCase2<C extends SimpleDateFormatComponent2> extends SimpleDateFormatComponentTestCase<C>
         implements HashCodeEqualsDefinedTesting2<C>,

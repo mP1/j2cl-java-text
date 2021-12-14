@@ -17,10 +17,6 @@
 
 package walkingkooka.j2cl.java.text;
 
-import walkingkooka.j2cl.locale.Calendar;
-
-import java.sql.Date;
-
 final class SimpleDateFormatComponentTimeZoneRfc822 extends SimpleDateFormatComponentTimeZoneGeneralRfc822 {
 
     final static char LETTER = TIME_ZONE_RFC822;
