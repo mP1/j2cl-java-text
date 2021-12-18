@@ -526,7 +526,7 @@ public final class NumberFormatTest extends FormatTestCase<NumberFormat> {
     }
 
     private void parseStringAndCheck(final String parse,
-                                     final java.text.ParsePosition jdkPosition) throws ParseException {
+                                     final java.text.ParsePosition jdkPosition) {
         final TestJdkNumberFormat jdk = new TestJdkNumberFormat();
         final TestNumberFormat format = new TestNumberFormat();
 
@@ -540,7 +540,7 @@ public final class NumberFormatTest extends FormatTestCase<NumberFormat> {
     }
 
     private void parseObjectAndCheck(final String parse,
-                                     final java.text.ParsePosition jdkPosition) throws ParseException {
+                                     final java.text.ParsePosition jdkPosition) {
         final TestJdkNumberFormat jdk = new TestJdkNumberFormat();
         final TestNumberFormat format = new TestNumberFormat();
 
