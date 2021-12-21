@@ -502,12 +502,12 @@ public final class NumberFormatTest extends FormatTestCase<NumberFormat> {
     }
 
     @Test
-    public void testParseStringParsePosition() throws ParseException {
+    public void testParseStringParsePosition() {
         this.parseStringAndCheck("10.5", new java.text.ParsePosition(1));
     }
 
     @Test
-    public void testParseObjectParsePosition() throws ParseException {
+    public void testParseObjectParsePosition() {
         this.parseObjectAndCheck("10.5", new java.text.ParsePosition(1));
     }
 
