@@ -26,13 +26,13 @@ public abstract class DecimalFormatPatternComponentTestCase2<C extends DecimalFo
     }
 
     @Test
-    public final void testIsCurrency() throws Exception {
+    public final void testIsCurrency() {
         this.isCurrencyAndCheck(this.component(),
                 this.type().getSimpleName().contains("Currency"));
     }
 
     @Test
-    public final void testMultiplier() throws Exception {
+    public final void testMultiplier() {
         final int multiplier;
 
         switch (this.type().getSimpleName()) {
