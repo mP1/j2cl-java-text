@@ -62,23 +62,23 @@ abstract class LocaleProviderTool {
 
     final IndentingPrinter printer;
 
-    final static CharSequence type(final Class<?> type) {
+    static CharSequence type(final Class<?> type) {
         return type.getSimpleName();
     }
 
-    final static CharSequence quote(final char value) {
+    static CharSequence quote(final char value) {
         return CharSequences.quoteAndEscape(value);
     }
 
-    final static CharSequence quote(final String value) {
+    static CharSequence quote(final String value) {
         return CharSequences.quoteAndEscape(value);
     }
 
-    final static CharSequence tabbed(final Collection<String> values) {
+    static CharSequence tabbed(final Collection<String> values) {
         return tabbed(values.toArray(new String[0]));
     }
 
-    final static CharSequence tabbed(final String[] values) {
+    static CharSequence tabbed(final String[] values) {
         return null == values ?
                 "" :
                 quote(Arrays.stream(values).collect(Collectors.joining("\t", "", "")));
