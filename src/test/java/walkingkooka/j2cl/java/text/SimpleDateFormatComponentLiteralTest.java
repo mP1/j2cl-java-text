@@ -62,7 +62,7 @@ public final class SimpleDateFormatComponentLiteralTest extends SimpleDateFormat
 
     @Test
     public void testToString() {
-        this.toStringAndCheck(SimpleDateFormatComponentLiteral.with('!'), "\'!\'");
+        this.toStringAndCheck(SimpleDateFormatComponentLiteral.with('!'), "'!'");
     }
 
     @Override
