@@ -93,7 +93,7 @@ public final class DecimalFormatPatternParserPrefixSuffixTest extends DecimalFor
     @Test
     public void testQuotedHash() {
         final char c = DecimalFormat.HASH;
-        this.parseAndCheck("\'" + c + "\'",
+        this.parseAndCheck("'" + c + "'",
                 DecimalFormatPatternComponent.characterLiteral(c));
     }
 
@@ -105,7 +105,7 @@ public final class DecimalFormatPatternParserPrefixSuffixTest extends DecimalFor
     @Test
     public void testQuotedZero() {
         final char c = DecimalFormat.ZERO;
-        this.parseAndCheck("\'" + c + "\'",
+        this.parseAndCheck("'" + c + "'",
                 DecimalFormatPatternComponent.characterLiteral(c));
     }
 
