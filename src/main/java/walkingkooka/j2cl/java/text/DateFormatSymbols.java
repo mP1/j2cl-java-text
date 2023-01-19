@@ -19,6 +19,7 @@ package walkingkooka.j2cl.java.text;
 
 import walkingkooka.ToStringBuilder;
 import walkingkooka.j2cl.java.io.string.StringDataInputDataOutput;
+import walkingkooka.j2cl.java.text.generated.DateFormatSymbolsProvider;
 import walkingkooka.j2cl.java.util.locale.support.LocaleSupport;
 import walkingkooka.j2cl.locale.LocaleAware;
 
