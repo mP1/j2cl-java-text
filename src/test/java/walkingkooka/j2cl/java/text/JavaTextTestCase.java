@@ -34,7 +34,7 @@ public abstract class JavaTextTestCase<T> implements ShadedClassTesting<T> {
     // ShadedClassTesting................................................................................................
 
     @Override
-    public final Predicate<Constructor> requiredConstructors() {
+    public final Predicate<Constructor<?>> requiredConstructors() {
         return Predicates.always();
     }
 
