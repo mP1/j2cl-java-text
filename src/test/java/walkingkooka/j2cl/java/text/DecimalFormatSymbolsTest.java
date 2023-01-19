@@ -22,10 +22,14 @@ import org.junit.jupiter.api.Test;
 import walkingkooka.HashCodeEqualsDefinedTesting2;
 import walkingkooka.ToStringTesting;
 import walkingkooka.collect.set.Sets;
+import walkingkooka.j2cl.java.io.string.StringDataInputDataOutput;
+import walkingkooka.j2cl.java.text.generated.DateFormatSymbolsProvider;
 import walkingkooka.j2cl.locale.WalkingkookaLanguageTag;
 import walkingkooka.reflect.ClassTesting;
 import walkingkooka.reflect.JavaVisibility;
 
+import java.io.DataInput;
+import java.io.EOFException;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Currency;
@@ -43,6 +47,19 @@ public final class DecimalFormatSymbolsTest implements ClassTesting<DecimalForma
         DateFormatSymbols.DEFAULT = null;
     }
 
+    @Test
+    public void testRegisterThenDataInputThrowsEOF() throws Exception {
+        final String dataString = DateFormatSymbolsProvider.DATA;
+        try {
+            final DataInput data = StringDataInputDataOutput.input(dataString);
+            DateFormatSymbols.register(data);
+            assertThrows(EOFException.class, () -> data.readBoolean(), dataString);
+        } catch (final Exception rethrow) {
+            System.err.println(dataString);
+            throw rethrow;
+        }
+    }
+
     // getAvailableLocales..............................................................................................
 
     @Test
@@ -50,8 +67,8 @@ public final class DecimalFormatSymbolsTest implements ClassTesting<DecimalForma
         final Comparator<Locale> comparator = (l, r) -> l.toLanguageTag().compareTo(r.toLanguageTag());
 
         final Set<Locale> jdk = Sets.sorted(comparator);
-        for(final Locale locale : java.text.DateFormatSymbols.getAvailableLocales()) {
-            switch(locale.toString()) {
+        for (final Locale locale : java.text.DateFormatSymbols.getAvailableLocales()) {
+            switch (locale.toString()) {
                 case "th_TH_TH_#u-nu-thai":
                 case "ja_JP_JP_#u-ca-japanese":
                 case "no_NO_NY":

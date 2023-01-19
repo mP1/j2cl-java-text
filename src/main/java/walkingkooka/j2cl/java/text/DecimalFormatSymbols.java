@@ -53,7 +53,7 @@ public class DecimalFormatSymbols {
      * Intended to only be called by the static init above. A test exists to verify the {@link DataInput} is consumed
      * and further operations will fail with an {@link java.io.EOFException}.
      */
-    static void register(final DataInput data) throws IOException {
+    public static void register(final DataInput data) throws IOException {
         final int count = data.readInt();
 
         for (int i = 0; i < count; i++) {
