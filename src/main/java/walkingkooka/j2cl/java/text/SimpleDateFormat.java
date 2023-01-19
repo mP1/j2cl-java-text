@@ -316,7 +316,7 @@ public class SimpleDateFormat extends DateFormat {
      */
     static {
         try {
-            register(StringDataInputDataOutput.input(walkingkooka.j2cl.java.text.DateFormatProvider.DATA));
+            register(StringDataInputDataOutput.input(walkingkooka.j2cl.java.text.generated.DateFormatProvider.DATA));
         } catch (final IOException cause) {
             throw new Error(cause);
         }

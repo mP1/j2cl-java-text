@@ -21,6 +21,7 @@ import walkingkooka.NeverError;
 import walkingkooka.ToStringBuilder;
 import walkingkooka.collect.list.Lists;
 import walkingkooka.j2cl.java.io.string.StringDataInputDataOutput;
+import walkingkooka.j2cl.java.text.generated.DecimalFormatProvider;
 import walkingkooka.j2cl.java.util.locale.support.LocaleSupport;
 import walkingkooka.text.CharSequences;
 
