@@ -18,15 +18,34 @@
 package walkingkooka.j2cl.java.text;
 
 import org.junit.jupiter.api.Test;
+import walkingkooka.j2cl.java.io.string.StringDataInputDataOutput;
+import walkingkooka.j2cl.java.text.generated.DecimalFormatProvider;
 import walkingkooka.predicate.Predicates;
 
+import java.io.DataInput;
+import java.io.EOFException;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.function.Predicate;
 
 import static org.junit.jupiter.api.Assertions.assertSame;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public final class DateFormatTest extends JavaTextTestCase<DateFormat> {
+
+    @Test
+    public void testRegisterThenDataInputThrowsEOF() throws Exception {
+        final String dataString = DecimalFormatProvider.DATA;
+        try {
+            final DataInput data = StringDataInputDataOutput.input(dataString);
+            DecimalFormat.register(data);
+            assertThrows(EOFException.class, () -> data.readBoolean(), dataString);
+        } catch (final Exception rethrow) {
+            System.err.println(dataString);
+            throw rethrow;
+        }
+    }
+
 
     @Test
     public void testShortConstants() {

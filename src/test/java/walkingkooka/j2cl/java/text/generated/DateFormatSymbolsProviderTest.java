@@ -15,32 +15,12 @@
  *
  */
 
-package walkingkooka.j2cl.java.text;
+package walkingkooka.j2cl.java.text.generated;
 
-import org.junit.jupiter.api.Test;
-import walkingkooka.j2cl.java.io.string.StringDataInputDataOutput;
 import walkingkooka.reflect.ClassTesting;
 import walkingkooka.reflect.JavaVisibility;
 
-import java.io.DataInput;
-import java.io.EOFException;
-
-import static org.junit.jupiter.api.Assertions.assertThrows;
-
 public final class DateFormatSymbolsProviderTest implements ClassTesting<DateFormatSymbolsProvider> {
-
-    @Test
-    public void testRegisterThenDataInputThrowsEOF() throws Exception {
-        final String dataString = DateFormatSymbolsProvider.DATA;
-        try {
-            final DataInput data = StringDataInputDataOutput.input(dataString);
-            DateFormatSymbols.register(data);
-            assertThrows(EOFException.class, () -> data.readBoolean(), dataString);
-        } catch (final Exception rethrow) {
-            System.err.println(dataString);
-            throw rethrow;
-        }
-    }
 
     @Override
     public Class<DateFormatSymbolsProvider> type() {
@@ -49,6 +29,6 @@ public final class DateFormatSymbolsProviderTest implements ClassTesting<DateFor
 
     @Override
     public JavaVisibility typeVisibility() {
-        return JavaVisibility.PACKAGE_PRIVATE;
+        return JavaVisibility.PUBLIC;
     }
 }

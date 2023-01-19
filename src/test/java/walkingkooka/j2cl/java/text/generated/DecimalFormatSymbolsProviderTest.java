@@ -15,10 +15,11 @@
  *
  */
 
-package walkingkooka.j2cl.java.text;
+package walkingkooka.j2cl.java.text.generated;
 
 import org.junit.jupiter.api.Test;
 import walkingkooka.j2cl.java.io.string.StringDataInputDataOutput;
+import walkingkooka.j2cl.java.text.DecimalFormatSymbols;
 import walkingkooka.reflect.ClassTesting;
 import walkingkooka.reflect.JavaVisibility;
 
@@ -82,6 +83,6 @@ public final class DecimalFormatSymbolsProviderTest implements ClassTesting<Deci
 
     @Override
     public JavaVisibility typeVisibility() {
-        return JavaVisibility.PACKAGE_PRIVATE;
+        return JavaVisibility.PUBLIC;
     }
 }
