@@ -169,6 +169,7 @@
                     <showWarnings>true</showWarnings>
                 </configuration>
             </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -180,7 +181,87 @@
                         <version>1.1.0</version>
                     </dependency>
                 </dependencies>
+                <configuration>
+                    <trimStackTrace>false</trimStackTrace>
+                    <useFile>false</useFile>
+                </configuration>
             </plugin>
+
+            <plugin>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <excludes>
+                        <exclude>**/generated/**</exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.3.0</version>
+                <executions>
+                    <execution>
+                        <id>create j2cl-java-text-jar/temp</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                        <configuration>
+                            <classifier>temp</classifier>
+                            <excludes>
+                                <exclude>java/**</exclude>
+                                <exclude>**/generated/**</exclude>
+                            </excludes>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>walkingkooka</groupId>
+                <artifactId>walkingkooka-gwt-archive-maker-maven-plugin</artifactId>
+                <version>1.0-SNAPSHOT</version>
+                <executions>
+                    <execution>
+                        <id>build gwt-java-text JAR</id>
+                        <phase>integration-test</phase>
+                        <goals>
+                            <goal>build</goal>
+                        </goals>
+                        <configuration>
+                            <input>target/j2cl-java-text-1.0-SNAPSHOT-temp.jar</input>
+                            <output>target/gwt-java-text-1.0-SNAPSHOT.jar</output>
+                            <pom-file>gwt-pom.xml</pom-file>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-install-plugin</artifactId>
+                <version>3.1.0</version>
+                <executions>
+                    <execution>
+                        <id>install walkingkooka:gwt-java-text</id>
+                        <phase>integration-test</phase>
+                        <goals>
+                            <goal>install-file</goal>
+                        </goals>
+                        <configuration>
+                            <groupId>walkingkooka</groupId>
+                            <artifactId>gwt-java-text</artifactId>
+                            <version>1.0-SNAPSHOT</version>
+                            <packaging>jar</packaging>
+                            <file>target/gwt-java-text-1.0-SNAPSHOT.jar</file>
+                            <localRepositoryPath>${project.build.directory}/it-repo</localRepositoryPath>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-invoker-plugin</artifactId>
@@ -203,67 +284,78 @@
                     <streamLogs>false</streamLogs>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.jacoco</groupId>
-                <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.4</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>prepare-agent</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>report</id>
-                        <phase>prepare-package</phase>
-                        <goals>
-                            <goal>report</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>prepare-integration-test-agent</id>
-                        <goals>
-                            <goal>prepare-agent-integration</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>generate-integration-test-report</id>
-                        <goals>
-                            <goal>report-integration</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.eluder.coveralls</groupId>
-                <artifactId>coveralls-maven-plugin</artifactId>
-                <version>4.3.0</version>
 
-                <dependencies>
-                    <dependency>
-                        <groupId>javax.xml.bind</groupId>
-                        <artifactId>jaxb-api</artifactId>
-                        <version>2.3.1</version>
-                        <scope>compile</scope>
-                    </dependency>
-                </dependencies>
-            </plugin>
-            <plugin>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.2.0</version>
-                <configuration>
-                    <excludes>
-                        <exclude>walkingkooka/j2cl/java/text/DateFormatProvider*</exclude>
-                        <exclude>walkingkooka/j2cl/java/text/DateFormatSymbolsProvider*</exclude>
-                        <exclude>walkingkooka/j2cl/java/text/DecimalFormatProvider*</exclude>
-                        <exclude>walkingkooka/j2cl/java/text/DecimalFormatSymbolsProvider*</exclude>
-                        <exclude>walkingkooka/j2cl/java/util/currency/**</exclude>
-                        <exclude>walkingkooka/j2cl/java/util/locale/**</exclude>
-                        <exclude>walkingkooka/j2cl/java/util/timezone/**</exclude>
-                    </excludes>
-                </configuration>
-            </plugin>
+            <!--            <plugin>-->
+            <!--                <groupId>org.jacoco</groupId>-->
+            <!--                <artifactId>jacoco-maven-plugin</artifactId>-->
+            <!--                <version>0.8.4</version>-->
+            <!--                <executions>-->
+            <!--                    <execution>-->
+            <!--                        <goals>-->
+            <!--                            <goal>prepare-agent</goal>-->
+            <!--                        </goals>-->
+            <!--                    </execution>-->
+            <!--                    <execution>-->
+            <!--                        <id>report</id>-->
+            <!--                        <phase>prepare-package</phase>-->
+            <!--                        <goals>-->
+            <!--                            <goal>report</goal>-->
+            <!--                        </goals>-->
+            <!--                    </execution>-->
+            <!--                    <execution>-->
+            <!--                        <id>prepare-integration-test-agent</id>-->
+            <!--                        <goals>-->
+            <!--                            <goal>prepare-agent-integration</goal>-->
+            <!--                        </goals>-->
+            <!--                    </execution>-->
+            <!--                    <execution>-->
+            <!--                        <id>generate-integration-test-report</id>-->
+            <!--                        <goals>-->
+            <!--                            <goal>report-integration</goal>-->
+            <!--                        </goals>-->
+            <!--                    </execution>-->
+            <!--                </executions>-->
+            <!--            </plugin>-->
+            <!--            <plugin>-->
+            <!--                <groupId>org.eluder.coveralls</groupId>-->
+            <!--                <artifactId>coveralls-maven-plugin</artifactId>-->
+            <!--                <version>4.3.0</version>-->
+
+            <!--                <dependencies>-->
+            <!--                    <dependency>-->
+            <!--                        <groupId>javax.xml.bind</groupId>-->
+            <!--                        <artifactId>jaxb-api</artifactId>-->
+            <!--                        <version>2.3.1</version>-->
+            <!--                        <scope>compile</scope>-->
+            <!--                    </dependency>-->
+            <!--                </dependencies>-->
+            <!--            </plugin>-->
+
+            <!--            <plugin>-->
+            <!--                <groupId>org.apache.maven.plugins</groupId>-->
+            <!--                <artifactId>maven-deploy-plugin</artifactId>-->
+            <!--                <version>3.0.0</version>-->
+            <!--                <executions>-->
+            <!--                    <execution>-->
+            <!--                        <id>deploy walkingkooka:gwt-java-text</id>-->
+            <!--                        <phase>deploy</phase>-->
+            <!--                        <goals>-->
+            <!--                            <goal>deploy-file</goal>-->
+            <!--                        </goals>-->
+            <!--                        <configuration>-->
+            <!--                            <groupId>walkingkooka</groupId>-->
+            <!--                            <artifactId>gwt-java-text</artifactId>-->
+            <!--                            <version>1.0-SNAPSHOT</version>-->
+            <!--                            <packaging>jar</packaging>-->
+            <!--                            <file>target/gwt-java-text-1.0-SNAPSHOT.jar</file>-->
+            <!--                            <url>https://maven-repo-254709.appspot.com</url>-->
+            <!--                            <repositoryId>github-mp1-appengine-repo</repositoryId>-->
+            <!--                        </configuration>-->
+            <!--                    </execution>-->
+            <!--                </executions>-->
+            <!--            </plugin>-->
         </plugins>
+
         <!-- Manage plugin versions -->
         <pluginManagement>
             <plugins>
