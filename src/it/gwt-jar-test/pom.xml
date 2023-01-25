@@ -53,8 +53,11 @@
                     <source>1.8</source>
                     <target>1.8</target>
                     <compilerArgs>
-                        <arg>-Awalkingkooka.j2cl.java.util.Currency=AUD,XXX</arg>
-                        <arg>-Awalkingkooka.j2cl.java.util.Locale=EN-AU</arg>
+                        <arg>-Awalkingkooka.j2cl.java.util.Currency=XXX</arg>
+                        <arg>-Awalkingkooka.j2cl.java.util.Locale=*</arg>
+                        <arg>-Awalkingkooka.j2cl.java.util.Locale.DEFAULT=en-AU</arg>
+                        <arg>-Awalkingkooka.j2cl.java.util.TimeZone=Australia/Sydney</arg>
+                        <arg>-Awalkingkooka.j2cl.java.util.TimeZone.DEFAULT=Australia/Sydney</arg>
                         <arg>-Awalkingkooka.j2cl.locale.Logging=SLASH_SLASH_COMMENTS</arg>
                     </compilerArgs>
                     <showWarnings>true</showWarnings>

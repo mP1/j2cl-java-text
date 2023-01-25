@@ -53,26 +53,15 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${maven.compiler.plugin}</version>
                 <configuration>
-                    <encoding>${project.build.sourceEncoding}</encoding>
-                    <source>${maven.compiler.source}</source>
-                    <target>${maven.compiler.target}</target>
+                    <compilerArgs>
+                        <param>-Awalkingkooka.j2cl.java.util.Currency=XXX</param>
+                        <param>-Awalkingkooka.j2cl.java.util.Locale=EN*</param>
+                        <param>-Awalkingkooka.j2cl.java.util.Locale.DEFAULT=en-AU</param>
+                        <param>-Awalkingkooka.j2cl.java.util.TimeZone=Australia/*</param>
+                        <param>-Awalkingkooka.j2cl.java.util.TimeZone.DEFAULT=Australia/Sydney</param>
+                        <param>-Awalkingkooka.j2cl.locale.Logging=SLASH_SLASH_COMMENTS</param>
+                    </compilerArgs>
                 </configuration>
-                <executions>
-                    <execution>
-                        <id>default-Compile</id>
-                        <goals>
-                            <goal>compile</goal>
-                        </goals>
-                        <phase>compile</phase>
-                    </execution>
-                    <execution>
-                        <id>default-testCompile</id>
-                        <goals>
-                            <goal>testCompile</goal>
-                        </goals>
-                        <phase>test-compile</phase>
-                    </execution>
-                </executions>
             </plugin>
 
             <plugin>
@@ -116,10 +105,12 @@
                                 <param>PRETTY_PRINT</param>
                             </formatting>
                             <java-compiler-arguments>
-                                <param>-Awalkingkooka.j2cl.java.util.Currency=XXX</param>
-                                <param>-Awalkingkooka.j2cl.java.util.Locale=und,EN*,FR*</param>
-                                <param>-Awalkingkooka.j2cl.java.util.TimeZone=Australia/*</param>
-                                <param>-Awalkingkooka.j2cl.locale.Logging=SLASH_SLASH_COMMENTS</param>
+                                <arg>-Awalkingkooka.j2cl.java.util.Currency=XXX</arg>
+                                <arg>-Awalkingkooka.j2cl.java.util.Locale=und,EN*,FR*</arg>
+                                <arg>-Awalkingkooka.j2cl.java.util.Locale.DEFAULT=en-AU</arg>
+                                <arg>-Awalkingkooka.j2cl.java.util.TimeZone=Australia/Sydney</arg>
+                                <arg>-Awalkingkooka.j2cl.java.util.TimeZone.DEFAULT=Australia/Sydney</arg>
+                                <arg>-Awalkingkooka.j2cl.locale.Logging=SLASH_SLASH_COMMENTS</arg>
                             </java-compiler-arguments>
                             <language-out>ECMASCRIPT_2016</language-out>
                             <thread-pool-size>0</thread-pool-size>
