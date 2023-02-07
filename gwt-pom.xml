@@ -87,19 +87,6 @@
     <dependencies>
         <dependency>
             <groupId>walkingkooka</groupId>
-            <artifactId>j2cl-java-text-annotation-processor</artifactId>
-            <version>1.0-SNAPSHOT</version>
-
-            <exclusions>
-                <exclusion>
-                    <groupId>walkingkooka</groupId>
-                    <artifactId>j2cl-java-text</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>walkingkooka</groupId>
             <artifactId>gwt-java-util-Calendar</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>

@@ -24,6 +24,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+import walkingkooka.j2cl.locale.LocaleAware;
+
+@LocaleAware
 public class TestGwtTest extends GWTTestCase {
     @Override
     public String getModuleName() {
@@ -43,7 +46,7 @@ public class TestGwtTest extends GWTTestCase {
         );
 
         assertEquals(
-                12.5,
+                "12.490",
                 decimalFormat.format(12.49)
         );
     }
@@ -57,8 +60,18 @@ public class TestGwtTest extends GWTTestCase {
         Date date = simpleDateFormat.parse("2022-01-22");
 
         assertEquals(
-                new Date(1922, 1, 22),
-                date
+                2022- 1900,
+                date.getYear()
+        );
+
+        assertEquals(
+                1 - 1,
+                date.getMonth()
+        );
+
+        assertEquals(
+                22,
+                date.getDate()
         );
     }
 }
