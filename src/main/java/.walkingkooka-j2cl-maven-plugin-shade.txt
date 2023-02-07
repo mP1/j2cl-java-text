@@ -1,2 +1,3 @@
+walkingkooka.j2cl.java.text.generated=walkingkooka.j2cl.java.text.generated
 walkingkooka.j2cl.java.text=java.text
 
