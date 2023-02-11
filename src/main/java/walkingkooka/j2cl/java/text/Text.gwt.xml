@@ -3,5 +3,9 @@
   <inherits name="walkingkooka.j2cl.java.util.calendar.Calendar"/>
   <inherits name="walkingkooka.j2cl.java.util.currency.Currency"/>
 
+  <source path="">
+    <exclude name="super/**"/>
+  </source>
+
   <super-source path="super"/>
 </module>
