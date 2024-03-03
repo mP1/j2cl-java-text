@@ -33,6 +33,7 @@ jobs:
           tail -n 500 target/it-tests/dateformatsymbols-junit-test/build.log
           tail -n 500 target/it-tests/decimalformat-junit-test/build.log
           tail -n 500 target/it-tests/decimalformatsymbols-junit-test/build.log
+          tail -n 500 target/it-tests/gwt-jar-test/build.log
           tail -n 500 output.txt
 
       - uses: actions/upload-artifact@v2
