@@ -57,20 +57,20 @@ public class TestGwtTest extends GWTTestCase {
                 Locale.forLanguageTag("EN-AU")
         );
 
-        Date date = simpleDateFormat.parse("2022-01-22");
+        Date date = simpleDateFormat.parse("1999-12-31");
 
         assertEquals(
-                2022- 1900,
+                1999- 1900,
                 date.getYear()
         );
 
         assertEquals(
-                1 - 1,
+                12 - 1,
                 date.getMonth()
         );
 
         assertEquals(
-                22,
+                31,
                 date.getDate()
         );
     }
