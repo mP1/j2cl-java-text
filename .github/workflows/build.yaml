@@ -63,5 +63,11 @@ jobs:
       - uses: actions/upload-artifact@v2
         if: failure()
         with:
+          name: decimalformatsymbols-junit-test-build.log
+          path: target/it-tests/gwt-jar-test/build.log
+
+      - uses: actions/upload-artifact@v2
+        if: failure()
+        with:
           name: it-output.txt
           path: it-output.txt
