@@ -21,7 +21,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import walkingkooka.HashCodeEqualsDefinedTesting2;
 import walkingkooka.ToStringTesting;
-import walkingkooka.collect.set.Sets;
+import walkingkooka.collect.set.SortedSets;
 import walkingkooka.j2cl.locale.WalkingkookaLanguageTag;
 import walkingkooka.predicate.Predicates;
 
@@ -46,7 +46,7 @@ public final class DateFormatSymbolsTest extends JavaTextTestCase<DateFormatSymb
     public void testGetAvailableLocales() {
         final Comparator<Locale> comparator = (l, r) -> l.toLanguageTag().compareTo(r.toLanguageTag());
 
-        final Set<Locale> jdk = Sets.sorted(comparator);
+        final Set<Locale> jdk = SortedSets.tree(comparator);
         for(final Locale locale : java.text.DateFormatSymbols.getAvailableLocales()) {
             switch(locale.toString()) {
                 case "th_TH_TH_#u-nu-thai":
@@ -58,7 +58,7 @@ public final class DateFormatSymbolsTest extends JavaTextTestCase<DateFormatSymb
             }
         }
 
-        final Set<Locale> emulated = Sets.sorted(comparator);
+        final Set<Locale> emulated = SortedSets.tree(comparator);
         emulated.addAll(Arrays.asList(DateFormatSymbols.getAvailableLocales()));
 
         this.checkEquals(jdk, emulated);

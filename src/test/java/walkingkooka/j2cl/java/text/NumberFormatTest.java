@@ -18,7 +18,7 @@
 package walkingkooka.j2cl.java.text;
 
 import org.junit.jupiter.api.Test;
-import walkingkooka.collect.set.Sets;
+import walkingkooka.collect.set.SortedSets;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -54,7 +54,7 @@ public final class NumberFormatTest extends FormatTestCase<NumberFormat> {
     public void testGetAvailableLocales() {
         final Comparator<Locale> comparator = (l, r) -> l.toLanguageTag().compareTo(r.toLanguageTag());
 
-        final Set<Locale> jdk = Sets.sorted(comparator);
+        final Set<Locale> jdk = SortedSets.tree(comparator);
         for(final Locale locale : java.text.DateFormatSymbols.getAvailableLocales()) {
             switch(locale.toString()) {
                 case "th_TH_TH_#u-nu-thai":
@@ -66,7 +66,7 @@ public final class NumberFormatTest extends FormatTestCase<NumberFormat> {
             }
         }
 
-        final Set<Locale> emulated = Sets.sorted(comparator);
+        final Set<Locale> emulated = SortedSets.tree(comparator);
         emulated.addAll(Arrays.asList(NumberFormat.getAvailableLocales()));
 
         this.checkEquals(jdk, emulated);
