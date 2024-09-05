@@ -36,37 +36,37 @@ jobs:
           tail -n 500 target/it-tests/gwt-jar-test/build.log
           tail -n 500 output.txt
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         if: failure()
         with:
           name: dateformats-junit-test-build.log
           path: target/it-tests/dateformats-junit-test/build.log
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         if: failure()
         with:
           name: dateformatsymbols-junit-test-build.log
           path: target/it-tests/dateformatsymbols-junit-test/build.log
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         if: failure()
         with:
           name: decimalformat-junit-test-build.log
           path: target/it-tests/decimalformat-junit-test/build.log
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         if: failure()
         with:
           name: decimalformatsymbols-junit-test-build.log
           path: target/it-tests/decimalformatsymbols-junit-test/build.log
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         if: failure()
         with:
           name: decimalformatsymbols-junit-test-build.log
           path: target/it-tests/gwt-jar-test/build.log
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         if: failure()
         with:
           name: it-output.txt
