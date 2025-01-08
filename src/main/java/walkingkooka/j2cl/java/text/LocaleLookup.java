@@ -52,7 +52,7 @@ final class LocaleLookup<T> {
 
         final String language = locale.getLanguage();
         final String newLanguage = WalkingkookaLanguageTag.oldToNewLanguage(language);
-        if(false == language.isEmpty() && false == language.equals(newLanguage)) {
+        if (false == language.isEmpty() && false == language.equals(newLanguage)) {
             try {
                 final String tag = locale.toLanguageTag();
                 final Locale newLocale = Locale.forLanguageTag(newLanguage + tag.substring(language.length())); // replace $oldLanguage with $newLanguage
@@ -68,7 +68,7 @@ final class LocaleLookup<T> {
     T getOrFail(final Locale locale) {
         T value = this.mappings.get(locale);
         if (null == value) {
-            switch(locale.toString()) {
+            switch (locale.toString()) {
                 case "no_NO_NY":
                     try {
                         value = this.mappings.get(Locale.forLanguageTag("nn-NO"));
@@ -79,7 +79,7 @@ final class LocaleLookup<T> {
                     break;
             }
         }
-        if(null==value) {
+        if (null == value) {
             throw new IllegalArgumentException("Unknown locale " + CharSequences.quote(locale.toString()));
         }
         return value;
@@ -87,9 +87,9 @@ final class LocaleLookup<T> {
 
     Locale[] availableLocales() {
         return this.mappings.keySet()
-                .stream()
-                .sorted((l, r) -> l.toString().compareTo(r.toString()))
-                .toArray(Locale[]::new);
+            .stream()
+            .sorted((l, r) -> l.toString().compareTo(r.toString()))
+            .toArray(Locale[]::new);
     }
 
     @Override

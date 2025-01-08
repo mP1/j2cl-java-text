@@ -26,7 +26,7 @@ final class SimpleDateFormatComponentWeekYear extends SimpleDateFormatComponentN
     static SimpleDateFormatComponentWeekYear with(final int patternLength,
                                                   final int maxDigitLength) {
         return new SimpleDateFormatComponentWeekYear(patternLength,
-                maxDigitLength);
+            maxDigitLength);
     }
 
     private SimpleDateFormatComponentWeekYear(final int patternLength,
@@ -50,8 +50,8 @@ final class SimpleDateFormatComponentWeekYear extends SimpleDateFormatComponentN
     @Override
     int adjustReadValue(final int value) {
         return 2 == this.length ?
-                value % 100 : // length = 2 then two digits year
-                value;
+            value % 100 : // length = 2 then two digits year
+            value;
     }
 
     // parse............................................................................................................

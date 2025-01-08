@@ -26,7 +26,7 @@ final class SimpleDateFormatComponentDayInYear extends SimpleDateFormatComponent
     static SimpleDateFormatComponentDayInYear with(final int patternLength,
                                                    final int maxDigitLength) {
         return new SimpleDateFormatComponentDayInYear(patternLength,
-                maxDigitLength);
+            maxDigitLength);
     }
 
     private SimpleDateFormatComponentDayInYear(final int patternLength,

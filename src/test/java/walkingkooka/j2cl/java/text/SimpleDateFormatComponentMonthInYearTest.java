@@ -39,43 +39,43 @@ public final class SimpleDateFormatComponentMonthInYearTest extends SimpleDateFo
     @Test
     public void testParse1Number() {
         this.parseTextAndCheck(this.createComponent(1),
-                "10");
+            "10");
     }
 
     @Test
     public void testParse1NumberLeadingZero() {
         this.parseTextAndCheck(this.createComponent(1),
-                "00010");
+            "00010");
     }
 
     @Test
     public void testParse2Number() {
         this.parseTextAndCheck(this.createComponent(2),
-                "10");
+            "10");
     }
 
     @Test
     public void testParse3Short() {
         this.parseTextAndCheck(this.createComponent(3),
-                "Oct.");
+            "Oct.");
     }
 
     @Test
     public void testParse3Long() {
         this.parseTextAndCheck(this.createComponent(3),
-                "October");
+            "October");
     }
 
     @Test
     public void testParse4Short() {
         this.parseTextAndCheck(this.createComponent(4),
-                "Oct.");
+            "Oct.");
     }
 
     @Test
     public void testParse4Long() {
         this.parseTextAndCheck(this.createComponent(4),
-                "October");
+            "October");
     }
 
     @Override

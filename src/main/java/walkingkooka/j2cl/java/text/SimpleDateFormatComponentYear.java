@@ -26,7 +26,7 @@ final class SimpleDateFormatComponentYear extends SimpleDateFormatComponentNumbe
     static SimpleDateFormatComponentYear with(final int patternLength,
                                               final int maxDigitLength) {
         return new SimpleDateFormatComponentYear(patternLength,
-                maxDigitLength);
+            maxDigitLength);
     }
 
     private SimpleDateFormatComponentYear(final int patternLength,
@@ -50,8 +50,8 @@ final class SimpleDateFormatComponentYear extends SimpleDateFormatComponentNumbe
     @Override
     int adjustReadValue(final int value) {
         return 2 == this.length ?
-                value % 100 : // length = 2 then two digits year
-                value;
+            value % 100 : // length = 2 then two digits year
+            value;
     }
 
     // parse............................................................................................................

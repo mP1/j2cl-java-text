@@ -36,9 +36,9 @@ import java.util.function.Predicate;
 import static org.junit.jupiter.api.Assertions.assertNotSame;
 
 public final class DateFormatSymbolsTest extends JavaTextTestCase<DateFormatSymbols>
-        implements
-        HashCodeEqualsDefinedTesting2<DateFormatSymbols>,
-        ToStringTesting<DateFormatSymbols> {
+    implements
+    HashCodeEqualsDefinedTesting2<DateFormatSymbols>,
+    ToStringTesting<DateFormatSymbols> {
 
     // getAvailableLocales..............................................................................................
 
@@ -47,8 +47,8 @@ public final class DateFormatSymbolsTest extends JavaTextTestCase<DateFormatSymb
         final Comparator<Locale> comparator = (l, r) -> l.toLanguageTag().compareTo(r.toLanguageTag());
 
         final Set<Locale> jdk = SortedSets.tree(comparator);
-        for(final Locale locale : java.text.DateFormatSymbols.getAvailableLocales()) {
-            switch(locale.toString()) {
+        for (final Locale locale : java.text.DateFormatSymbols.getAvailableLocales()) {
+            switch (locale.toString()) {
                 case "th_TH_TH_#u-nu-thai":
                 case "ja_JP_JP_#u-ca-japanese":
                 case "no_NO_NY":
@@ -104,7 +104,7 @@ public final class DateFormatSymbolsTest extends JavaTextTestCase<DateFormatSymb
         java.util.Locale.setDefault(locale);
 
         final DateFormatSymbols symbols = DateFormatSymbols.getInstance();
-        symbols.setAmPmStrings(new String[]{ "XXX", "YYYY"});
+        symbols.setAmPmStrings(new String[]{"XXX", "YYYY"});
 
         this.checkNotEquals(symbols, DateFormatSymbols.getInstance());
     }
@@ -123,7 +123,7 @@ public final class DateFormatSymbolsTest extends JavaTextTestCase<DateFormatSymb
     @Test
     public void testGetInstanceLocaleAllLocales() {
         for (final Locale locale : Locale.getAvailableLocales()) {
-            if(WalkingkookaLanguageTag.isUnsupported(locale.toLanguageTag())) {
+            if (WalkingkookaLanguageTag.isUnsupported(locale.toLanguageTag())) {
                 continue;
             }
             this.check(DateFormatSymbols.getInstance(locale), java.text.DateFormatSymbols.getInstance(locale));
@@ -131,7 +131,7 @@ public final class DateFormatSymbolsTest extends JavaTextTestCase<DateFormatSymb
     }
 
     // new..............................................................................................................
-    
+
     @Test
     public void testNew() {
         final java.util.Locale locale = Locale.FRENCH;
@@ -162,7 +162,7 @@ public final class DateFormatSymbolsTest extends JavaTextTestCase<DateFormatSymb
     @Test
     public void testNewLocaleAllLocales() {
         for (final Locale locale : Locale.getAvailableLocales()) {
-            if(WalkingkookaLanguageTag.isUnsupported(locale.toLanguageTag())) {
+            if (WalkingkookaLanguageTag.isUnsupported(locale.toLanguageTag())) {
                 continue;
             }
             this.check(new DateFormatSymbols(locale), new java.text.DateFormatSymbols(locale));
@@ -194,7 +194,7 @@ public final class DateFormatSymbolsTest extends JavaTextTestCase<DateFormatSymb
     @Test
     public void testClone2() {
         for (final Locale locale : Locale.getAvailableLocales()) {
-            if(WalkingkookaLanguageTag.isUnsupported(locale.toLanguageTag())) {
+            if (WalkingkookaLanguageTag.isUnsupported(locale.toLanguageTag())) {
                 continue;
             }
             final DateFormatSymbols symbols = new DateFormatSymbols(locale);
@@ -259,7 +259,7 @@ public final class DateFormatSymbolsTest extends JavaTextTestCase<DateFormatSymb
     @Test
     public void testToString() {
         this.toStringAndCheck(this.createObject(),
-                "ampm=\"AM\", \"PM\" eras=\"BC\", \"AD\" months=\"January\", \"February\", \"March\", \"April\", \"May\", \"June\", \"July\", \"August\", \"September\", \"October\", \"November\", \"December\", \"\" shortMonths=\"Jan\", \"Feb\", \"Mar\", \"Apr\", \"May\", \"Jun\", \"Jul\", \"Aug\", \"Sep\", \"Oct\", \"Nov\", \"Dec\", \"\" shortWeekdays=\"\", \"Sun\", \"Mon\", \"Tue\", \"Wed\", \"Thu\", \"Fri\", \"Sat\" weekdays=\"\", \"Sunday\", \"Monday\", \"Tuesday\", \"Wednesday\", \"Thursday\", \"Friday\", \"Saturday\"");
+            "ampm=\"AM\", \"PM\" eras=\"BC\", \"AD\" months=\"January\", \"February\", \"March\", \"April\", \"May\", \"June\", \"July\", \"August\", \"September\", \"October\", \"November\", \"December\", \"\" shortMonths=\"Jan\", \"Feb\", \"Mar\", \"Apr\", \"May\", \"Jun\", \"Jul\", \"Aug\", \"Sep\", \"Oct\", \"Nov\", \"Dec\", \"\" shortWeekdays=\"\", \"Sun\", \"Mon\", \"Tue\", \"Wed\", \"Thu\", \"Fri\", \"Sat\" weekdays=\"\", \"Sunday\", \"Monday\", \"Tuesday\", \"Wednesday\", \"Thursday\", \"Friday\", \"Saturday\"");
     }
 
     // ShadedClassTesting...............................................................................................

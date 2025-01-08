@@ -29,7 +29,7 @@ final class SimpleDateFormatComponentMinuteInHour extends SimpleDateFormatCompon
     static SimpleDateFormatComponentMinuteInHour with(final int patternLength,
                                                       final int maxDigitLength) {
         return new SimpleDateFormatComponentMinuteInHour(patternLength,
-                maxDigitLength);
+            maxDigitLength);
     }
 
     private SimpleDateFormatComponentMinuteInHour(final int patternLength,

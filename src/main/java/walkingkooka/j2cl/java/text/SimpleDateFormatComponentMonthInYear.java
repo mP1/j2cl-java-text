@@ -26,7 +26,7 @@ final class SimpleDateFormatComponentMonthInYear extends SimpleDateFormatCompone
     static SimpleDateFormatComponentMonthInYear with(final int patternLength,
                                                      final int maxDigitLength) {
         return new SimpleDateFormatComponentMonthInYear(patternLength,
-                maxDigitLength);
+            maxDigitLength);
     }
 
     private SimpleDateFormatComponentMonthInYear(final int patternLength,
@@ -56,8 +56,8 @@ final class SimpleDateFormatComponentMonthInYear extends SimpleDateFormatCompone
     @Override
     SimpleDateFormatComponentMonthInYear setNumberNext() {
         return this.isNumber() ?
-                new SimpleDateFormatComponentMonthInYear(this.length, 2) :
-                this;
+            new SimpleDateFormatComponentMonthInYear(this.length, 2) :
+            this;
     }
 
     // format...........................................................................................................
@@ -67,7 +67,7 @@ final class SimpleDateFormatComponentMonthInYear extends SimpleDateFormatCompone
         final int month = request.calendar.get(CALENDAR_FIELD);
         final int length = this.length;
 
-        switch(length) {
+        switch (length) {
             case 1:
             case 2:
                 this.formatNumericValue(request, month + 1, length);
@@ -89,24 +89,24 @@ final class SimpleDateFormatComponentMonthInYear extends SimpleDateFormatCompone
             case 1:
             case 2:
                 this.parseNumberAndUpdateCalendar(request,
-                        CALENDAR_FIELD,
-                        this.maxDigitLength,
-                        SimpleDateFormatComponentMonthInYear::adjustWriteValue);
+                    CALENDAR_FIELD,
+                    this.maxDigitLength,
+                    SimpleDateFormatComponentMonthInYear::adjustWriteValue);
                 break;
             default:
                 final DateFormatSymbols symbols = request.symbols;
                 this.parseFromOptionsAndUpdateCalendar(request,
-                        CALENDAR_FIELD,
-                        0,
-                        symbols.getMonths(),
-                        symbols.getShortMonths());
+                    CALENDAR_FIELD,
+                    0,
+                    symbols.getMonths(),
+                    symbols.getShortMonths());
                 break;
         }
     }
 
     private static Integer adjustWriteValue(final Integer month,
                                             final SimpleDateFormatParseRequest request) {
-        return Math.max(0, month -1);
+        return Math.max(0, month - 1);
     }
 
     private final static int CALENDAR_FIELD = Calendar.MONTH;

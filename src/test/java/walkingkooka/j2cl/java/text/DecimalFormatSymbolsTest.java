@@ -39,8 +39,8 @@ import java.util.Set;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public final class DecimalFormatSymbolsTest implements ClassTesting<DecimalFormatSymbols>,
-        HashCodeEqualsDefinedTesting2<DecimalFormatSymbols>,
-        ToStringTesting<DecimalFormatSymbols> {
+    HashCodeEqualsDefinedTesting2<DecimalFormatSymbols>,
+    ToStringTesting<DecimalFormatSymbols> {
 
     @BeforeEach
     public void beforeEach() {
@@ -94,8 +94,8 @@ public final class DecimalFormatSymbolsTest implements ClassTesting<DecimalForma
         java.util.Locale.setDefault(locale);
 
         this.check(DecimalFormatSymbols.getInstance(),
-                java.text.DecimalFormatSymbols.getInstance(),
-                locale);
+            java.text.DecimalFormatSymbols.getInstance(),
+            locale);
     }
 
     @Test
@@ -106,8 +106,8 @@ public final class DecimalFormatSymbolsTest implements ClassTesting<DecimalForma
         java.util.Locale.setDefault(locale);
 
         this.check(DecimalFormatSymbols.getInstance(),
-                java.text.DecimalFormatSymbols.getInstance(),
-                locale);
+            java.text.DecimalFormatSymbols.getInstance(),
+            locale);
     }
 
     @Test
@@ -142,19 +142,19 @@ public final class DecimalFormatSymbolsTest implements ClassTesting<DecimalForma
         Locale.setDefault(Locale.forLanguageTag(locale.toLanguageTag()));
 
         this.check(DecimalFormatSymbols.getInstance(locale),
-                new java.text.DecimalFormatSymbols(locale),
-                locale);
+            new java.text.DecimalFormatSymbols(locale),
+            locale);
     }
 
     @Test
     public void testGetInstanceLocaleAllLocales() {
         for (final Locale locale : Locale.getAvailableLocales()) {
-            if(WalkingkookaLanguageTag.isUnsupported(locale.toLanguageTag())) {
+            if (WalkingkookaLanguageTag.isUnsupported(locale.toLanguageTag())) {
                 continue;
             }
             this.check(DecimalFormatSymbols.getInstance(locale),
-                    java.text.DecimalFormatSymbols.getInstance(locale),
-                    locale);
+                java.text.DecimalFormatSymbols.getInstance(locale),
+                locale);
         }
     }
 
@@ -167,8 +167,8 @@ public final class DecimalFormatSymbolsTest implements ClassTesting<DecimalForma
         Locale.setDefault(Locale.forLanguageTag(locale.toLanguageTag()));
 
         this.check(new DecimalFormatSymbols(),
-                new java.text.DecimalFormatSymbols(),
-                locale);
+            new java.text.DecimalFormatSymbols(),
+            locale);
     }
 
     @Test
@@ -180,8 +180,8 @@ public final class DecimalFormatSymbolsTest implements ClassTesting<DecimalForma
         DecimalFormatSymbols.getAvailableLocales();
 
         this.check(new DecimalFormatSymbols(locale),
-                new java.text.DecimalFormatSymbols(locale),
-                locale);
+            new java.text.DecimalFormatSymbols(locale),
+            locale);
     }
 
     private void check(final DecimalFormatSymbols emulated,
@@ -230,8 +230,8 @@ public final class DecimalFormatSymbolsTest implements ClassTesting<DecimalForma
     private void getCurrencyAndCheck(final Locale locale) {
         Locale.setDefault(locale);
         getCurrencyAndCheck(new java.text.DecimalFormatSymbols(),
-                new DecimalFormatSymbols(),
-                locale);
+            new DecimalFormatSymbols(),
+            locale);
     }
 
     private void getCurrencyAndCheck(final java.text.DecimalFormatSymbols jdk,
@@ -239,8 +239,8 @@ public final class DecimalFormatSymbolsTest implements ClassTesting<DecimalForma
                                      final Locale locale) {
 
         this.checkEquals(jdk.getCurrency(),
-                emul.getCurrency(),
-                () -> "currency " + locale);
+            emul.getCurrency(),
+            () -> "currency " + locale);
         this.getCurrencySymbolAndCheck(jdk, emul, locale);
     }
 
@@ -249,8 +249,8 @@ public final class DecimalFormatSymbolsTest implements ClassTesting<DecimalForma
                                            final Locale locale) {
 
         this.checkEquals(jdk.getCurrencySymbol(),
-                emul.getCurrencySymbol(),
-                () -> "currencySymbol " + locale);
+            emul.getCurrencySymbol(),
+            () -> "currencySymbol " + locale);
     }
 
     @Test
@@ -267,13 +267,13 @@ public final class DecimalFormatSymbolsTest implements ClassTesting<DecimalForma
     @Test
     public void testSetCurrencyNZD() {
         this.setCurrencyAndCheck(Locale.forLanguageTag("en-au"),
-                Currency.getInstance("NZD"));
+            Currency.getInstance("NZD"));
     }
 
     @Test
     public void testSetCurrencyEuro() {
         this.setCurrencyAndCheck(Locale.forLanguageTag("en-au"),
-                Currency.getInstance("EUR"));
+            Currency.getInstance("EUR"));
     }
 
     @Test
@@ -283,7 +283,7 @@ public final class DecimalFormatSymbolsTest implements ClassTesting<DecimalForma
                 continue;
             }
             this.setCurrencyAndCheck(locale,
-                    Currency.getInstance("AUD"));
+                Currency.getInstance("AUD"));
         }
     }
 
@@ -295,7 +295,7 @@ public final class DecimalFormatSymbolsTest implements ClassTesting<DecimalForma
             }
             for (final Currency currency : Currency.getAvailableCurrencies()) {
                 this.setCurrencyAndCheck(locale,
-                        currency);
+                    currency);
             }
         }
     }
@@ -514,7 +514,7 @@ public final class DecimalFormatSymbolsTest implements ClassTesting<DecimalForma
     @Test
     public void testToString() {
         this.toStringAndCheck(this.createObject(),
-                "currency=XXX currencySymbol=\"¤\" decimalSeparator='.' digit='#' exponentSeparator=\"E\" groupingSeparator=',' infinity=\"∞\" internationalCurrencySymbol=\"XXX\" minusSign='-' monetaryDecimalSeparator='.' nan=\"NaN\" patternSeparator=';' percent='%' perMill='‰' zeroDigit='0'");
+            "currency=XXX currencySymbol=\"¤\" decimalSeparator='.' digit='#' exponentSeparator=\"E\" groupingSeparator=',' infinity=\"∞\" internationalCurrencySymbol=\"XXX\" minusSign='-' monetaryDecimalSeparator='.' nan=\"NaN\" patternSeparator=';' percent='%' perMill='‰' zeroDigit='0'");
     }
 
     // ClassTesting.....................................................................................................

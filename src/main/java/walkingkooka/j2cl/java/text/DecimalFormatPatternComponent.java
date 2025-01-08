@@ -104,7 +104,7 @@ abstract class DecimalFormatPatternComponent {
     static DecimalFormatPatternComponent perMille() {
         return DecimalFormatPatternComponentPerMille.INSTANCE;
     }
-    
+
     /**
      * {@see DecimalFormatPatternComponentZero}
      */

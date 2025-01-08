@@ -41,6 +41,6 @@ public abstract class JavaTextTestCase<T> implements ShadedClassTesting<T> {
     @Override
     public final UnaryOperator<Class<?>> typeMapper() {
         return ShadedClassTesting.typeMapper(PackageName.from(this.type().getPackage()),
-                PackageName.with("java.text"));
+            PackageName.with("java.text"));
     }
 }

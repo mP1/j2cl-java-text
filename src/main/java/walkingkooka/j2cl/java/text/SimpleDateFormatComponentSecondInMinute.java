@@ -26,7 +26,7 @@ final class SimpleDateFormatComponentSecondInMinute extends SimpleDateFormatComp
     static SimpleDateFormatComponentSecondInMinute with(final int patternLength,
                                                         final int maxDigitLength) {
         return new SimpleDateFormatComponentSecondInMinute(patternLength,
-                maxDigitLength);
+            maxDigitLength);
     }
 
     private SimpleDateFormatComponentSecondInMinute(final int patternLength,

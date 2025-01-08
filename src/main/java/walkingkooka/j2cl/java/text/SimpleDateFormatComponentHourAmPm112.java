@@ -29,7 +29,7 @@ final class SimpleDateFormatComponentHourAmPm112 extends SimpleDateFormatCompone
     static SimpleDateFormatComponentHourAmPm112 with(final int patternLength,
                                                      final int maxDigitLength) {
         return new SimpleDateFormatComponentHourAmPm112(patternLength,
-                maxDigitLength);
+            maxDigitLength);
     }
 
     private SimpleDateFormatComponentHourAmPm112(final int patternLength,
@@ -60,8 +60,8 @@ final class SimpleDateFormatComponentHourAmPm112 extends SimpleDateFormatCompone
     int adjustWriteValue(final int value,
                          final SimpleDateFormatParseRequest parse) {
         return 12 == value ?
-                0 :
-                value;
+            0 :
+            value;
     }
 
     // SimpleDateFormatComponent2.......................................................................................

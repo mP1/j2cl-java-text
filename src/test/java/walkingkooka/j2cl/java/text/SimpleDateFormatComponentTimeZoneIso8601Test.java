@@ -56,10 +56,10 @@ public final class SimpleDateFormatComponentTimeZoneIso8601Test extends SimpleDa
             TimeZone.setDefault(timeZone);
 
             this.formatDateAndCheck(SimpleDateFormatComponentTimeZoneIso8601.with(length),
-                    calendar,
-                    new DateFormatSymbols(LOCALE),
-                    false,
-                    new java.text.SimpleDateFormat(CharSequences.repeating('X', length).toString(), LOCALE).format(calendar.getTime()));
+                calendar,
+                new DateFormatSymbols(LOCALE),
+                false,
+                new java.text.SimpleDateFormat(CharSequences.repeating('X', length).toString(), LOCALE).format(calendar.getTime()));
         }
     }
 
@@ -224,7 +224,7 @@ public final class SimpleDateFormatComponentTimeZoneIso8601Test extends SimpleDa
     private void parseTextAndCheck(final int length,
                                    final String text) {
         this.parseTextAndCheck(this.createComponent(length),
-                text);
+            text);
     }
 
 

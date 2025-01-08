@@ -55,8 +55,8 @@ public final class NumberFormatTest extends FormatTestCase<NumberFormat> {
         final Comparator<Locale> comparator = (l, r) -> l.toLanguageTag().compareTo(r.toLanguageTag());
 
         final Set<Locale> jdk = SortedSets.tree(comparator);
-        for(final Locale locale : java.text.DateFormatSymbols.getAvailableLocales()) {
-            switch(locale.toString()) {
+        for (final Locale locale : java.text.DateFormatSymbols.getAvailableLocales()) {
+            switch (locale.toString()) {
                 case "th_TH_TH_#u-nu-thai":
                 case "ja_JP_JP_#u-ca-japanese":
                 case "no_NO_NY":
@@ -77,43 +77,43 @@ public final class NumberFormatTest extends FormatTestCase<NumberFormat> {
     @Test
     public void testDefaultGroupingUsed() {
         this.checkEquals(new TestJdkNumberFormat().isGroupingUsed(),
-                new TestNumberFormat().isGroupingUsed(),
-                "groupingUsed");
+            new TestNumberFormat().isGroupingUsed(),
+            "groupingUsed");
     }
 
     @Test
     public void testDefaultIsParseIntegerOnly() {
         this.checkEquals(new TestJdkNumberFormat().isParseIntegerOnly(),
-                new TestNumberFormat().isParseIntegerOnly(),
-                "parseIntegerOnly");
+            new TestNumberFormat().isParseIntegerOnly(),
+            "parseIntegerOnly");
     }
 
     @Test
     public void testDefaultMaximumFractionDigits() {
         this.checkEquals(new TestJdkNumberFormat().getMaximumFractionDigits(),
-                new TestNumberFormat().getMaximumFractionDigits(),
-                "getMaximumFractionDigits");
+            new TestNumberFormat().getMaximumFractionDigits(),
+            "getMaximumFractionDigits");
     }
 
     @Test
     public void testDefaultMaximumIntegerDigits() {
         this.checkEquals(new TestJdkNumberFormat().getMaximumIntegerDigits(),
-                new TestNumberFormat().getMaximumIntegerDigits(),
-                "getMaximumIntegerDigits");
+            new TestNumberFormat().getMaximumIntegerDigits(),
+            "getMaximumIntegerDigits");
     }
 
     @Test
     public void testDefaultMinimumFractionDigits() {
         this.checkEquals(new TestJdkNumberFormat().getMinimumFractionDigits(),
-                new TestNumberFormat().getMinimumFractionDigits(),
-                "getMinimumFractionDigits");
+            new TestNumberFormat().getMinimumFractionDigits(),
+            "getMinimumFractionDigits");
     }
 
     @Test
     public void testDefaultMinimumIntegerDigits() {
         this.checkEquals(new TestJdkNumberFormat().getMinimumIntegerDigits(),
-                new TestNumberFormat().getMinimumIntegerDigits(),
-                "getMinimumIntegerDigits");
+            new TestNumberFormat().getMinimumIntegerDigits(),
+            "getMinimumIntegerDigits");
     }
 
     // currency..........................................................................................
@@ -156,12 +156,12 @@ public final class NumberFormatTest extends FormatTestCase<NumberFormat> {
         emulated.setMaximumFractionDigits(value);
 
         this.checkEquals(jdk.getMaximumFractionDigits(),
-                emulated.getMaximumFractionDigits(),
-                () -> "setMaximumFractionDigitsAndCheck " + value);
+            emulated.getMaximumFractionDigits(),
+            () -> "setMaximumFractionDigitsAndCheck " + value);
 
         this.checkEquals(jdk.getMinimumFractionDigits(),
-                emulated.getMinimumFractionDigits(),
-                () -> "setMinimumFractionDigitsAndCheck " + value);
+            emulated.getMinimumFractionDigits(),
+            () -> "setMinimumFractionDigitsAndCheck " + value);
     }
 
     // setMaximumFractionDigits then setMinimumFractionDigits...........................................................
@@ -187,12 +187,12 @@ public final class NumberFormatTest extends FormatTestCase<NumberFormat> {
         emulated.setMinimumFractionDigits(oldMin);
 
         this.checkEquals(jdk.getMinimumFractionDigits(),
-                emulated.getMinimumFractionDigits(),
-                () -> "setMaximumFractionDigitsAndCheck " + max + " setMinimumFractionDigitsAndCheck " + oldMin);
+            emulated.getMinimumFractionDigits(),
+            () -> "setMaximumFractionDigitsAndCheck " + max + " setMinimumFractionDigitsAndCheck " + oldMin);
 
         this.checkEquals(jdk.getMaximumFractionDigits(),
-                emulated.getMaximumFractionDigits(),
-                () -> "setMaximumFractionDigitsAndCheck " + max + " setMinimumFractionDigitsAndCheck " + oldMin);
+            emulated.getMaximumFractionDigits(),
+            () -> "setMaximumFractionDigitsAndCheck " + max + " setMinimumFractionDigitsAndCheck " + oldMin);
     }
 
     // setMinimumFractionDigits then setMaximumFractionDigits...........................................................
@@ -218,12 +218,12 @@ public final class NumberFormatTest extends FormatTestCase<NumberFormat> {
         emulated.setMaximumFractionDigits(max);
 
         this.checkEquals(jdk.getMaximumFractionDigits(),
-                emulated.getMaximumFractionDigits(),
-                () -> "setMinimumFractionDigitsAndCheck " + min + " setMaximumFractionDigitsAndCheck " + max);
+            emulated.getMaximumFractionDigits(),
+            () -> "setMinimumFractionDigitsAndCheck " + min + " setMaximumFractionDigitsAndCheck " + max);
 
         this.checkEquals(jdk.getMinimumFractionDigits(),
-                emulated.getMinimumFractionDigits(),
-                () -> "setMinimumFractionDigitsAndCheck " + min + " setMaximumFractionDigitsAndCheck " + max);
+            emulated.getMinimumFractionDigits(),
+            () -> "setMinimumFractionDigitsAndCheck " + min + " setMaximumFractionDigitsAndCheck " + max);
     }
 
     // setMaximumIntegerDigits..........................................................................................
@@ -251,12 +251,12 @@ public final class NumberFormatTest extends FormatTestCase<NumberFormat> {
         emulated.setMaximumIntegerDigits(value);
 
         this.checkEquals(jdk.getMaximumIntegerDigits(),
-                emulated.getMaximumIntegerDigits(),
-                () -> "setMaximumIntegerDigitsAndCheck " + value);
+            emulated.getMaximumIntegerDigits(),
+            () -> "setMaximumIntegerDigitsAndCheck " + value);
 
         this.checkEquals(jdk.getMinimumIntegerDigits(),
-                emulated.getMinimumIntegerDigits(),
-                () -> "setMinimumIntegerDigitsAndCheck " + value);
+            emulated.getMinimumIntegerDigits(),
+            () -> "setMinimumIntegerDigitsAndCheck " + value);
     }
 
     // setMaximumIntegerDigits then setMinimumIntegerDigits...........................................................
@@ -282,12 +282,12 @@ public final class NumberFormatTest extends FormatTestCase<NumberFormat> {
         emulated.setMinimumIntegerDigits(oldMin);
 
         this.checkEquals(jdk.getMinimumIntegerDigits(),
-                emulated.getMinimumIntegerDigits(),
-                () -> "setMaximumIntegerDigitsAndCheck " + max + " setMinimumIntegerDigitsAndCheck " + oldMin);
+            emulated.getMinimumIntegerDigits(),
+            () -> "setMaximumIntegerDigitsAndCheck " + max + " setMinimumIntegerDigitsAndCheck " + oldMin);
 
         this.checkEquals(jdk.getMaximumIntegerDigits(),
-                emulated.getMaximumIntegerDigits(),
-                () -> "setMaximumIntegerDigitsAndCheck " + max + " setMinimumIntegerDigitsAndCheck " + oldMin);
+            emulated.getMaximumIntegerDigits(),
+            () -> "setMaximumIntegerDigitsAndCheck " + max + " setMinimumIntegerDigitsAndCheck " + oldMin);
     }
 
     // setMinimumIntegerDigits then setMaximumIntegerDigits...........................................................
@@ -313,12 +313,12 @@ public final class NumberFormatTest extends FormatTestCase<NumberFormat> {
         emulated.setMaximumIntegerDigits(max);
 
         this.checkEquals(jdk.getMaximumIntegerDigits(),
-                emulated.getMaximumIntegerDigits(),
-                () -> "setMinimumIntegerDigitsAndCheck " + min + " setMaximumIntegerDigitsAndCheck " + max);
+            emulated.getMaximumIntegerDigits(),
+            () -> "setMinimumIntegerDigitsAndCheck " + min + " setMaximumIntegerDigitsAndCheck " + max);
 
         this.checkEquals(jdk.getMinimumIntegerDigits(),
-                emulated.getMinimumIntegerDigits(),
-                () -> "setMinimumIntegerDigitsAndCheck " + min + " setMaximumIntegerDigitsAndCheck " + max);
+            emulated.getMinimumIntegerDigits(),
+            () -> "setMinimumIntegerDigitsAndCheck " + min + " setMaximumIntegerDigitsAndCheck " + max);
     }
 
     // roundingMode.....................................................................................................
@@ -342,7 +342,7 @@ public final class NumberFormatTest extends FormatTestCase<NumberFormat> {
     @Test
     public void testFormatNonNumberFails() {
         assertThrows(IllegalArgumentException.class,
-                () -> new TestNumberFormat().format("not a number", new StringBuffer(), new FieldPosition(0)));
+            () -> new TestNumberFormat().format("not a number", new StringBuffer(), new FieldPosition(0)));
     }
 
     @Test
@@ -441,8 +441,8 @@ public final class NumberFormatTest extends FormatTestCase<NumberFormat> {
         final FieldPosition fieldPosition = new FieldPosition(TestJdkNumberFormat.INTEGER_FIELD);
 
         this.checkEquals(jdk.format(value, jdkStringBuffer, jdkFieldPosition).toString(),
-                format.format(value, stringBuffer, fieldPosition).toString(),
-                "format(double, StringBuilder, FieldPosition) " + value);
+            format.format(value, stringBuffer, fieldPosition).toString(),
+            "format(double, StringBuilder, FieldPosition) " + value);
         this.checkFieldPosition(jdkFieldPosition, fieldPosition);
     }
 
@@ -457,8 +457,8 @@ public final class NumberFormatTest extends FormatTestCase<NumberFormat> {
         final FieldPosition fieldPosition = new FieldPosition(TestJdkNumberFormat.INTEGER_FIELD);
 
         this.checkEquals(jdk.format(value, jdkStringBuffer, jdkFieldPosition).toString(),
-                format.format(value, stringBuffer, fieldPosition).toString(),
-                "format(long, StringBuilder, FieldPosition) " + value);
+            format.format(value, stringBuffer, fieldPosition).toString(),
+            "format(long, StringBuilder, FieldPosition) " + value);
         this.checkFieldPosition(jdkFieldPosition, fieldPosition);
     }
 
@@ -473,8 +473,8 @@ public final class NumberFormatTest extends FormatTestCase<NumberFormat> {
         final FieldPosition fieldPosition = new FieldPosition(TestJdkNumberFormat.INTEGER_FIELD);
 
         this.checkEquals(jdk.format(value, jdkStringBuffer, jdkFieldPosition).toString(),
-                format.format(value, stringBuffer, fieldPosition).toString(),
-                "format(Object, StringBuilder, FieldPosition) " + value);
+            format.format(value, stringBuffer, fieldPosition).toString(),
+            "format(Object, StringBuilder, FieldPosition) " + value);
         this.checkFieldPosition(jdkFieldPosition, fieldPosition);
     }
 
@@ -516,13 +516,13 @@ public final class NumberFormatTest extends FormatTestCase<NumberFormat> {
         final TestNumberFormat format = new TestNumberFormat();
 
         this.checkEquals(jdk.parse(parse),
-                format.parse(parse),
-                () -> "parse " + parse);
+            format.parse(parse),
+            () -> "parse " + parse);
 
         this.parseStringAndCheck(parse,
-                new java.text.ParsePosition(0));
+            new java.text.ParsePosition(0));
         this.parseObjectAndCheck(parse,
-                new java.text.ParsePosition(0));
+            new java.text.ParsePosition(0));
     }
 
     private void parseStringAndCheck(final String parse,
@@ -534,8 +534,8 @@ public final class NumberFormatTest extends FormatTestCase<NumberFormat> {
         final ParsePosition position = new ParsePosition(jdkPosition.getIndex());
 
         this.checkEquals(jdk.parse(parse, jdkPosition),
-                format.parse(parse, position),
-                () -> "parse " + parse + "," + jdkPositionToString);
+            format.parse(parse, position),
+            () -> "parse " + parse + "," + jdkPositionToString);
         checkParsePosition(jdkPosition, position);
     }
 
@@ -548,8 +548,8 @@ public final class NumberFormatTest extends FormatTestCase<NumberFormat> {
         final String jdkPositionToString = jdkPosition.toString();
 
         this.checkEquals(jdk.parseObject(parse, jdkPosition),
-                format.parseObject(parse, position),
-                () -> "parseObject " + parse + ", " + jdkPositionToString);
+            format.parseObject(parse, position),
+            () -> "parseObject " + parse + ", " + jdkPositionToString);
         checkParsePosition(jdkPosition, position);
     }
 
@@ -703,10 +703,10 @@ public final class NumberFormatTest extends FormatTestCase<NumberFormat> {
 
     @Override
     public Predicate<Method> requiredMethods() {
-        return (m)-> {
+        return (m) -> {
             final boolean required;
 
-            switch(m.getName()) {
+            switch (m.getName()) {
                 case "clone":
                     required = false;
                     break;

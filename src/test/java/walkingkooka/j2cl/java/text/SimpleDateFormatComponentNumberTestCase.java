@@ -137,11 +137,11 @@ public abstract class SimpleDateFormatComponentNumberTestCase<C extends SimpleDa
     @Test
     public final void testParse4With() {
         this.parseTextAndCheck(this.createComponent(4, 1),
-                "9",
-                "999",
-                1920,
-                TIMEZONE,
-                LOCALE);
+            "9",
+            "999",
+            1920,
+            TIMEZONE,
+            LOCALE);
     }
 
     final void parseTextAndCheck(final int length,
@@ -154,7 +154,7 @@ public abstract class SimpleDateFormatComponentNumberTestCase<C extends SimpleDa
                                  final int minValue,
                                  final int maxValue,
                                  final String after) {
-        for(int i = minValue; i < maxValue; i++) {
+        for (int i = minValue; i < maxValue; i++) {
             this.parseTextAndCheck(length, i + after);
         }
     }
@@ -169,11 +169,10 @@ public abstract class SimpleDateFormatComponentNumberTestCase<C extends SimpleDa
         final int patternLength = 1;
 
         this.checkNotEquals(this.createComponent(patternLength, 2),
-                this.createComponent(patternLength, 99));
+            this.createComponent(patternLength, 99));
     }
 
-    @Override
-    final C createComponent(final int length) {
+    @Override final C createComponent(final int length) {
         return this.createComponent(length, SimpleDateFormatComponent2.UNLIMITED_MAX_DIGIT_LENGTH);
     }
 

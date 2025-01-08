@@ -26,7 +26,7 @@ final class SimpleDateFormatComponentDayInMonth extends SimpleDateFormatComponen
     static SimpleDateFormatComponentDayInMonth with(final int patternLength,
                                                     final int maxDigitLength) {
         return new SimpleDateFormatComponentDayInMonth(patternLength,
-                maxDigitLength);
+            maxDigitLength);
     }
 
     private SimpleDateFormatComponentDayInMonth(final int patternLength,

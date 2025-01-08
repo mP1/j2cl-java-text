@@ -50,8 +50,8 @@ final class SimpleDateFormatComponentTimeZoneIso8601 extends SimpleDateFormatCom
         final TimeZone timeZone = calendar.getTimeZone();
 
         final int daylightSaving = timeZone.inDaylightTime(calendar.getTime()) ?
-                calendar.get(Calendar.DST_OFFSET) :
-                0;
+            calendar.get(Calendar.DST_OFFSET) :
+            0;
         final int offset = (calendar.get(Calendar.ZONE_OFFSET) + daylightSaving) / 36000;
         final int absolute = Math.abs(offset);
 
@@ -62,7 +62,7 @@ final class SimpleDateFormatComponentTimeZoneIso8601 extends SimpleDateFormatCom
         } else {
             text.append(offset < 0 ? '-' : '+');
             final int hours = absolute / 100;
-            final int minutes = (int)(((absolute - hours * 100f)/ 100f) * 60);
+            final int minutes = (int) (((absolute - hours * 100f) / 100f) * 60);
 
             switch (this.length) {
                 case 1:
@@ -84,7 +84,7 @@ final class SimpleDateFormatComponentTimeZoneIso8601 extends SimpleDateFormatCom
     }
 
     private void addDoubleDigit(final int value, final StringBuffer text) {
-        if(value < 10) {
+        if (value < 10) {
             text.append('0');
         }
         text.append(value);
@@ -118,13 +118,13 @@ final class SimpleDateFormatComponentTimeZoneIso8601 extends SimpleDateFormatCom
         switch (request.parsePlusOrMinusSign()) {
             case SimpleDateFormatParseRequest.PARSE_PLUS:
                 this.parseAndUpdateCalendar(request,
-                        1,
-                        errorIndex);
+                    1,
+                    errorIndex);
                 break;
             case SimpleDateFormatParseRequest.PARSE_MINUS:
                 this.parseAndUpdateCalendar(request,
-                        -1,
-                        errorIndex);
+                    -1,
+                    errorIndex);
                 break;
             default:
                 //position.setErrorIndex(position.getIndex());
@@ -159,7 +159,7 @@ final class SimpleDateFormatComponentTimeZoneIso8601 extends SimpleDateFormatCom
                 break;
         }
 
-        if(false == request.isError()) {
+        if (false == request.isError()) {
             request.calendar.set(CALENDAR_FIELD, value * multiplier);
         }
     }

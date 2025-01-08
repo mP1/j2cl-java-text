@@ -29,7 +29,7 @@ final class SimpleDateFormatComponentHourAmPm011 extends SimpleDateFormatCompone
     static SimpleDateFormatComponentHourAmPm011 with(final int patternLength,
                                                      final int maxDigitLength) {
         return new SimpleDateFormatComponentHourAmPm011(patternLength,
-                maxDigitLength);
+            maxDigitLength);
     }
 
     private SimpleDateFormatComponentHourAmPm011(final int patternLength,

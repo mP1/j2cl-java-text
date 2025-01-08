@@ -22,7 +22,7 @@ public final class SimpleDateFormatComponentDayInYearTest extends SimpleDateForm
     SimpleDateFormatComponentDayInYear createComponent(final int patternLength,
                                                        final int maxDigitLength) {
         return SimpleDateFormatComponentDayInYear.with(patternLength,
-                maxDigitLength);
+            maxDigitLength);
     }
 
     @Override

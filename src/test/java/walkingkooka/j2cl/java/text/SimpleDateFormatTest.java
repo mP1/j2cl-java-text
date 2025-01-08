@@ -98,9 +98,9 @@ public final class SimpleDateFormatTest extends FormatTestCase<SimpleDateFormat>
     private void getDateInstanceAndCheck(final int style,
                                          final Locale locale) {
         this.getInstanceAndCheck(style,
-                locale,
-                java.text.DateFormat::getDateInstance,
-                DateFormat::getDateInstance);
+            locale,
+            java.text.DateFormat::getDateInstance,
+            DateFormat::getDateInstance);
     }
 
     // getTimeInstance..................................................................................................
@@ -153,9 +153,9 @@ public final class SimpleDateFormatTest extends FormatTestCase<SimpleDateFormat>
     private void getTimeInstanceAndCheck(final int style,
                                          final Locale locale) {
         this.getInstanceAndCheck(style,
-                locale,
-                java.text.DateFormat::getTimeInstance,
-                DateFormat::getTimeInstance);
+            locale,
+            java.text.DateFormat::getTimeInstance,
+            DateFormat::getTimeInstance);
     }
 
     // getInstance......................................................................................................
@@ -165,9 +165,9 @@ public final class SimpleDateFormatTest extends FormatTestCase<SimpleDateFormat>
                                      final BiFunction<Integer, Locale, java.text.DateFormat> jre,
                                      final BiFunction<Integer, Locale, DateFormat> emulated) {
         this.getInstanceAndCheck(style,
-                locale,
-                (java.text.SimpleDateFormat) jre.apply(style, locale),
-                (SimpleDateFormat) emulated.apply(style, locale));
+            locale,
+            (java.text.SimpleDateFormat) jre.apply(style, locale),
+            (SimpleDateFormat) emulated.apply(style, locale));
     }
 
     private void getInstanceAndCheck(final int style,
@@ -175,8 +175,8 @@ public final class SimpleDateFormatTest extends FormatTestCase<SimpleDateFormat>
                                      final java.text.SimpleDateFormat jre,
                                      final SimpleDateFormat emulated) {
         this.checkEquals(jre.toPattern(),
-                emulated.toPattern(),
-                () -> "pattern for style=" + toStringStyle(style) + " locale=" + locale);
+            emulated.toPattern(),
+            () -> "pattern for style=" + toStringStyle(style) + " locale=" + locale);
     }
 
     // getDateTimeInstance..................................................................................................
@@ -234,10 +234,10 @@ public final class SimpleDateFormatTest extends FormatTestCase<SimpleDateFormat>
                                              final int timeStyle,
                                              final Locale locale) {
         this.getDateTimeInstanceAndCheck(dateStyle,
-                timeStyle,
-                locale,
-                (java.text.SimpleDateFormat) java.text.DateFormat.getDateTimeInstance(dateStyle, timeStyle, locale),
-                (SimpleDateFormat) DateFormat.getDateTimeInstance(dateStyle, timeStyle, locale));
+            timeStyle,
+            locale,
+            (java.text.SimpleDateFormat) java.text.DateFormat.getDateTimeInstance(dateStyle, timeStyle, locale),
+            (SimpleDateFormat) DateFormat.getDateTimeInstance(dateStyle, timeStyle, locale));
     }
 
     private void getDateTimeInstanceAndCheck(final int dateStyle,
@@ -246,8 +246,8 @@ public final class SimpleDateFormatTest extends FormatTestCase<SimpleDateFormat>
                                              final java.text.SimpleDateFormat jre,
                                              final SimpleDateFormat emulated) {
         this.checkEquals(jre.toPattern(),
-                emulated.toPattern(),
-                () -> "pattern for dateStyle=" + toStringStyle(dateStyle) + " timeStyle=" + toStringStyle(timeStyle) + " locale=" + locale);
+            emulated.toPattern(),
+            () -> "pattern for dateStyle=" + toStringStyle(dateStyle) + " timeStyle=" + toStringStyle(timeStyle) + " locale=" + locale);
     }
 
     private void allLocalesAndCheck(final BiConsumer<Integer, Locale> test) {
@@ -317,7 +317,7 @@ public final class SimpleDateFormatTest extends FormatTestCase<SimpleDateFormat>
     private void formatYearAndCheck(final int length) {
         for (int year = 1800; year < 2050; year++) {
             this.formatAndCheck(CharSequences.repeating('y', length).toString(),
-                    new Date(Date.UTC(year - 1900, 1, 2, 3, 4, 5)));
+                new Date(Date.UTC(year - 1900, 1, 2, 3, 4, 5)));
         }
     }
 
@@ -344,7 +344,7 @@ public final class SimpleDateFormatTest extends FormatTestCase<SimpleDateFormat>
     private void formatHourAndCheck(final String pattern) {
         for (int i = 0; i < 23; i++) {
             this.formatAndCheck(pattern,
-                    LocalDateTime.of(2020, 6, 2, i, 58, 59, 123));
+                LocalDateTime.of(2020, 6, 2, i, 58, 59, 123));
         }
     }
 
@@ -382,7 +382,7 @@ public final class SimpleDateFormatTest extends FormatTestCase<SimpleDateFormat>
     private void formatMinuteAndCheck(final String pattern,
                                       final int minute) {
         this.formatAndCheck(pattern,
-                LocalDateTime.of(2020, 6, 2, 12, minute, 59, 123));
+            LocalDateTime.of(2020, 6, 2, 12, minute, 59, 123));
     }
 
     @Test
@@ -419,7 +419,7 @@ public final class SimpleDateFormatTest extends FormatTestCase<SimpleDateFormat>
     private void formatSecondAndCheck(final String pattern,
                                       final int second) {
         this.formatAndCheck(pattern,
-                LocalDateTime.of(2020, 6, 2, 12, 1, second, 999));
+            LocalDateTime.of(2020, 6, 2, 12, 1, second, 999));
     }
 
     @Test
@@ -454,29 +454,29 @@ public final class SimpleDateFormatTest extends FormatTestCase<SimpleDateFormat>
     }
 
     private void formatMilliAndCheck(final String pattern,
-                                      final int millis) {
+                                     final int millis) {
         this.formatAndCheck(pattern,
-                LocalDateTime.of(2020, 6, 2, 0, 1, 59, millis));
+            LocalDateTime.of(2020, 6, 2, 0, 1, 59, millis));
     }
 
     @Test
     public void testFormat23HourMinute() {
-        this.formatAndCheck("HHmm", LocalDateTime.of(2020,6,2,12,58,59));
+        this.formatAndCheck("HHmm", LocalDateTime.of(2020, 6, 2, 12, 58, 59));
     }
 
     @Test
     public void testFormat24HourMinute() {
-        this.formatAndCheck("kkmm", LocalDateTime.of(2020,6,2,12,58,59));
+        this.formatAndCheck("kkmm", LocalDateTime.of(2020, 6, 2, 12, 58, 59));
     }
 
     @Test
     public void testFormat11HourMinute() {
-        this.formatAndCheck("KKKmm", LocalDateTime.of(2020,6,2,12,58,59));
+        this.formatAndCheck("KKKmm", LocalDateTime.of(2020, 6, 2, 12, 58, 59));
     }
 
     @Test
     public void testFormat12HourMinute() {
-        this.formatAndCheck("hhmm", LocalDateTime.of(2020,6,2,12,58,59));
+        this.formatAndCheck("hhmm", LocalDateTime.of(2020, 6, 2, 12, 58, 59));
     }
 
     @Test
@@ -491,15 +491,15 @@ public final class SimpleDateFormatTest extends FormatTestCase<SimpleDateFormat>
 
     @Test
     public void testFormatYearMonthDayHourMinuteSecMilli() {
-        this.formatAndCheck("yyyyMMddHHmmssSS", LocalDateTime.of(2020,6,2,12,58,59, 123));
+        this.formatAndCheck("yyyyMMddHHmmssSS", LocalDateTime.of(2020, 6, 2, 12, 58, 59, 123));
     }
 
     private void formatAndCheck(final String pattern,
                                 final java.time.LocalDateTime localDateTime) {
         this.formatAndCheck(pattern,
-                java.util.Date.from(localDateTime
-                        .atZone(ZoneId.of("Australia/Sydney"))
-                        .toInstant()));
+            java.util.Date.from(localDateTime
+                .atZone(ZoneId.of("Australia/Sydney"))
+                .toInstant()));
     }
 
     private void formatAndCheck(final String pattern,
@@ -508,8 +508,8 @@ public final class SimpleDateFormatTest extends FormatTestCase<SimpleDateFormat>
         final SimpleDateFormat emul = new SimpleDateFormat(pattern);
 
         this.checkEquals(jre.format(date),
-                emul.format(date),
-                () -> "pattern=" + CharSequences.quoteAndEscape(emul.toPattern()) + " date=" + new java.text.SimpleDateFormat("yyyy/MM/dd kk:mm:ss:SSS aaa").format(date));
+            emul.format(date),
+            () -> "pattern=" + CharSequences.quoteAndEscape(emul.toPattern()) + " date=" + new java.text.SimpleDateFormat("yyyy/MM/dd kk:mm:ss:SSS aaa").format(date));
     }
 
     // parse............................................................................................................
@@ -607,14 +607,14 @@ public final class SimpleDateFormatTest extends FormatTestCase<SimpleDateFormat>
         final ParsePosition emulPosition = new ParsePosition(position);
 
         this.checkEquals(jre.parse(text, jrePosition),
-                emul.parse(text, emulPosition),
-                () -> "pattern " + CharSequences.quoteAndEscape(pattern) + " parse " + CharSequences.quoteAndEscape(text) + " parsePosition: " + jrePosition);
+            emul.parse(text, emulPosition),
+            () -> "pattern " + CharSequences.quoteAndEscape(pattern) + " parse " + CharSequences.quoteAndEscape(text) + " parsePosition: " + jrePosition);
         this.checkEquals(jrePosition.getIndex(),
-                emulPosition.getIndex(),
-                () -> "index, " + "pattern " + CharSequences.quoteAndEscape(pattern) + " parse " + CharSequences.quoteAndEscape(text) + " parsePosition: " + jrePosition);
+            emulPosition.getIndex(),
+            () -> "index, " + "pattern " + CharSequences.quoteAndEscape(pattern) + " parse " + CharSequences.quoteAndEscape(text) + " parsePosition: " + jrePosition);
         this.checkEquals(jrePosition.getErrorIndex(),
-                emulPosition.getErrorIndex(),
-                () -> "errorIndex, " + "pattern " + CharSequences.quoteAndEscape(pattern) + " parse " + CharSequences.quoteAndEscape(text) + " parsePosition: " + jrePosition);
+            emulPosition.getErrorIndex(),
+            () -> "errorIndex, " + "pattern " + CharSequences.quoteAndEscape(pattern) + " parse " + CharSequences.quoteAndEscape(text) + " parsePosition: " + jrePosition);
     }
 
     // ShadedClassTesting...............................................................................................
@@ -626,10 +626,10 @@ public final class SimpleDateFormatTest extends FormatTestCase<SimpleDateFormat>
 
     @Override
     public Predicate<Method> requiredMethods() {
-        return (m)-> {
+        return (m) -> {
             final boolean required;
 
-            switch(m.getName()) {
+            switch (m.getName()) {
                 case "clone":
                 case "toString":
                     required = false;
@@ -645,10 +645,10 @@ public final class SimpleDateFormatTest extends FormatTestCase<SimpleDateFormat>
 
     @Override
     public Predicate<Field> requiredFields() {
-        return (f)-> {
+        return (f) -> {
             final boolean required;
 
-            switch(f.getName()) {
+            switch (f.getName()) {
                 case "serialVersionUID":
                     required = false;
                     break;

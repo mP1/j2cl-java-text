@@ -27,8 +27,8 @@ import java.lang.reflect.Method;
 import java.util.function.Predicate;
 
 public final class ParsePositionTest extends JavaTextTestCase<ParsePosition>
-        implements HashCodeEqualsDefinedTesting2<ParsePosition>,
-        ToStringTesting<ParsePosition> {
+    implements HashCodeEqualsDefinedTesting2<ParsePosition>,
+    ToStringTesting<ParsePosition> {
 
     private final static int INDEX = 12;
     private final static int ERROR_INDEX = 34;

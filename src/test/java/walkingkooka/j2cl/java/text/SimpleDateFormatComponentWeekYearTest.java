@@ -22,7 +22,7 @@ public final class SimpleDateFormatComponentWeekYearTest extends SimpleDateForma
     SimpleDateFormatComponentWeekYear createComponent(final int patternLength,
                                                       final int maxDigitLength) {
         return SimpleDateFormatComponentWeekYear.with(patternLength,
-                maxDigitLength);
+            maxDigitLength);
     }
 
     @Override

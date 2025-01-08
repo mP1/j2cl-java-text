@@ -28,9 +28,9 @@ import java.util.Locale;
 import java.util.TimeZone;
 
 public final class SimpleDateFormatFormatRequestTest implements ClassTesting2<SimpleDateFormatFormatRequest>,
-        ToStringTesting<SimpleDateFormatFormatRequest> {
+    ToStringTesting<SimpleDateFormatFormatRequest> {
 
-    private final static Date DATE = new Date(Date.UTC(2000-1900, 1, 31, 12, 58, 59));
+    private final static Date DATE = new Date(Date.UTC(2000 - 1900, 1, 31, 12, 58, 59));
 
     @Test
     public void testToString() {
@@ -41,7 +41,7 @@ public final class SimpleDateFormatFormatRequestTest implements ClassTesting2<Si
                 new StringBuffer(),
                 new DateFormatSymbols(Locale.forLanguageTag("EN-AU")),
                 false),
-                "java.util.GregorianCalendar[time=952001939000,areFieldsSet=true,areAllFieldsSet=true,lenient=true,zone=sun.util.calendar.ZoneInfo[id=\"Australia/Sydney\",offset=36000000,dstSavings=3600000,useDaylight=true,transitions=142,lastRule=java.util.SimpleTimeZone[id=Australia/Sydney,offset=36000000,dstSavings=3600000,useDaylight=true,startYear=0,startMode=3,startMonth=9,startDay=1,startDayOfWeek=1,startTime=7200000,startTimeMode=1,endMode=3,endMonth=3,endDay=1,endDayOfWeek=1,endTime=7200000,endTimeMode=1]],firstDayOfWeek=1,minimalDaysInFirstWeek=1,ERA=1,YEAR=2000,MONTH=2,WEEK_OF_YEAR=10,WEEK_OF_MONTH=1,DAY_OF_MONTH=2,DAY_OF_YEAR=62,DAY_OF_WEEK=5,DAY_OF_WEEK_IN_MONTH=1,AM_PM=1,HOUR=11,HOUR_OF_DAY=23,MINUTE=58,SECOND=59,MILLISECOND=0,ZONE_OFFSET=36000000,DST_OFFSET=3600000] \"\" ampm=\"am\", \"pm\" eras=\"BC\", \"AD\" months=\"January\", \"February\", \"March\", \"April\", \"May\", \"June\", \"July\", \"August\", \"September\", \"October\", \"November\", \"December\", \"\" shortMonths=\"Jan.\", \"Feb.\", \"Mar.\", \"Apr.\", \"May\", \"Jun.\", \"Jul.\", \"Aug.\", \"Sep.\", \"Oct.\", \"Nov.\", \"Dec.\", \"\" shortWeekdays=\"\", \"Sun.\", \"Mon.\", \"Tue.\", \"Wed.\", \"Thu.\", \"Fri.\", \"Sat.\" weekdays=\"\", \"Sunday\", \"Monday\", \"Tuesday\", \"Wednesday\", \"Thursday\", \"Friday\", \"Saturday\" false");
+            "java.util.GregorianCalendar[time=952001939000,areFieldsSet=true,areAllFieldsSet=true,lenient=true,zone=sun.util.calendar.ZoneInfo[id=\"Australia/Sydney\",offset=36000000,dstSavings=3600000,useDaylight=true,transitions=142,lastRule=java.util.SimpleTimeZone[id=Australia/Sydney,offset=36000000,dstSavings=3600000,useDaylight=true,startYear=0,startMode=3,startMonth=9,startDay=1,startDayOfWeek=1,startTime=7200000,startTimeMode=1,endMode=3,endMonth=3,endDay=1,endDayOfWeek=1,endTime=7200000,endTimeMode=1]],firstDayOfWeek=1,minimalDaysInFirstWeek=1,ERA=1,YEAR=2000,MONTH=2,WEEK_OF_YEAR=10,WEEK_OF_MONTH=1,DAY_OF_MONTH=2,DAY_OF_YEAR=62,DAY_OF_WEEK=5,DAY_OF_WEEK_IN_MONTH=1,AM_PM=1,HOUR=11,HOUR_OF_DAY=23,MINUTE=58,SECOND=59,MILLISECOND=0,ZONE_OFFSET=36000000,DST_OFFSET=3600000] \"\" ampm=\"am\", \"pm\" eras=\"BC\", \"AD\" months=\"January\", \"February\", \"March\", \"April\", \"May\", \"June\", \"July\", \"August\", \"September\", \"October\", \"November\", \"December\", \"\" shortMonths=\"Jan.\", \"Feb.\", \"Mar.\", \"Apr.\", \"May\", \"Jun.\", \"Jul.\", \"Aug.\", \"Sep.\", \"Oct.\", \"Nov.\", \"Dec.\", \"\" shortWeekdays=\"\", \"Sun.\", \"Mon.\", \"Tue.\", \"Wed.\", \"Thu.\", \"Fri.\", \"Sat.\" weekdays=\"\", \"Sunday\", \"Monday\", \"Tuesday\", \"Wednesday\", \"Thursday\", \"Friday\", \"Saturday\" false");
     }
 
     @Override

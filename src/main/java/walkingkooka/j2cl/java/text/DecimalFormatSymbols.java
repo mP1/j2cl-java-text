@@ -58,19 +58,19 @@ public class DecimalFormatSymbols {
 
         for (int i = 0; i < count; i++) {
             register0(LocaleSupport.readLocales(data), // locales
-                    data.readChar(), // decimalSeparator
-                    data.readChar(), // digit
-                    data.readUTF(), // exponentSeparator
-                    data.readChar(), // groupingSeparator
-                    data.readUTF(), // infinity
-                    data.readUTF(), // internationalCurrencySymbol
-                    data.readChar(), // minusSign
-                    data.readChar(), // monetaryDecimalSeparator
-                    data.readUTF(), // nan
-                    data.readChar(), // patternSeparator
-                    data.readChar(), // percent
-                    data.readChar(), // perMill
-                    data.readChar()// zeroDigit
+                data.readChar(), // decimalSeparator
+                data.readChar(), // digit
+                data.readUTF(), // exponentSeparator
+                data.readChar(), // groupingSeparator
+                data.readUTF(), // infinity
+                data.readUTF(), // internationalCurrencySymbol
+                data.readChar(), // minusSign
+                data.readChar(), // monetaryDecimalSeparator
+                data.readUTF(), // nan
+                data.readChar(), // patternSeparator
+                data.readChar(), // percent
+                data.readChar(), // perMill
+                data.readChar()// zeroDigit
             );
         }
     }
@@ -108,22 +108,22 @@ public class DecimalFormatSymbols {
             }
 
             LOCALE_TO_SYMBOLS.add(locale,
-                    new DecimalFormatSymbols(currency,
-                            currencySymbol,
-                            decimalSeparator,
-                            digit,
-                            exponentSeparator,
-                            groupingSeparator,
-                            infinity,
-                            internationalCurrencySymbol,
-                            minusSign,
-                            monetaryDecimalSeparator,
-                            nan,
-                            patternSeparator,
-                            percent,
-                            perMill,
-                            zeroDigit,
-                            locale));
+                new DecimalFormatSymbols(currency,
+                    currencySymbol,
+                    decimalSeparator,
+                    digit,
+                    exponentSeparator,
+                    groupingSeparator,
+                    infinity,
+                    internationalCurrencySymbol,
+                    minusSign,
+                    monetaryDecimalSeparator,
+                    nan,
+                    patternSeparator,
+                    percent,
+                    perMill,
+                    zeroDigit,
+                    locale));
         }
     }
 
@@ -390,20 +390,20 @@ public class DecimalFormatSymbols {
     @Override
     public int hashCode() {
         return Objects.hash(this.currency,
-                this.currencySymbol,
-                this.decimalSeparator,
-                this.digit,
-                this.exponentSeparator,
-                this.groupingSeparator,
-                this.infinity,
-                this.internationalCurrencySymbol,
-                this.minusSign,
-                this.monetaryDecimalSeparator,
-                this.nan,
-                this.patternSeparator,
-                this.percent,
-                this.perMill,
-                this.zeroDigit);
+            this.currencySymbol,
+            this.decimalSeparator,
+            this.digit,
+            this.exponentSeparator,
+            this.groupingSeparator,
+            this.infinity,
+            this.internationalCurrencySymbol,
+            this.minusSign,
+            this.monetaryDecimalSeparator,
+            this.nan,
+            this.patternSeparator,
+            this.percent,
+            this.perMill,
+            this.zeroDigit);
     }
 
     public boolean equals(final Object other) {
@@ -412,40 +412,40 @@ public class DecimalFormatSymbols {
 
     private boolean equals0(final DecimalFormatSymbols other) {
         return Objects.equals(this.currency, other.currency) &&
-                Objects.equals(this.currencySymbol, other.currencySymbol) &&
-                this.decimalSeparator == other.decimalSeparator &&
-                this.digit == other.digit &&
-                Objects.equals(this.exponentSeparator, other.exponentSeparator) &&
-                this.groupingSeparator == other.groupingSeparator &&
-                Objects.equals(this.infinity, other.infinity) &&
-                Objects.equals(this.internationalCurrencySymbol, other.internationalCurrencySymbol) &&
-                this.minusSign == other.minusSign &&
-                this.monetaryDecimalSeparator == other.monetaryDecimalSeparator &&
-                Objects.equals(this.nan, other.nan) &&
-                this.patternSeparator == other.patternSeparator &&
-                this.percent == other.percent &&
-                this.perMill == other.perMill &&
-                this.zeroDigit == other.zeroDigit;
+            Objects.equals(this.currencySymbol, other.currencySymbol) &&
+            this.decimalSeparator == other.decimalSeparator &&
+            this.digit == other.digit &&
+            Objects.equals(this.exponentSeparator, other.exponentSeparator) &&
+            this.groupingSeparator == other.groupingSeparator &&
+            Objects.equals(this.infinity, other.infinity) &&
+            Objects.equals(this.internationalCurrencySymbol, other.internationalCurrencySymbol) &&
+            this.minusSign == other.minusSign &&
+            this.monetaryDecimalSeparator == other.monetaryDecimalSeparator &&
+            Objects.equals(this.nan, other.nan) &&
+            this.patternSeparator == other.patternSeparator &&
+            this.percent == other.percent &&
+            this.perMill == other.perMill &&
+            this.zeroDigit == other.zeroDigit;
     }
 
     @Override
     public String toString() {
         return ToStringBuilder.empty()
-                .label("currency").value(this.currency)
-                .label("currencySymbol").value(this.currencySymbol)
-                .label("decimalSeparator").value(this.decimalSeparator)
-                .label("digit").value(this.digit)
-                .label("exponentSeparator").value(this.exponentSeparator)
-                .label("groupingSeparator").value(this.groupingSeparator)
-                .label("infinity").value(this.infinity)
-                .label("internationalCurrencySymbol").value(this.internationalCurrencySymbol)
-                .label("minusSign").value(this.minusSign)
-                .label("monetaryDecimalSeparator").value(this.monetaryDecimalSeparator)
-                .label("nan").value(this.nan)
-                .label("patternSeparator").value(this.patternSeparator)
-                .label("percent").value(this.percent)
-                .label("perMill").value(this.perMill)
-                .label("zeroDigit").value(this.zeroDigit)
-                .build();
+            .label("currency").value(this.currency)
+            .label("currencySymbol").value(this.currencySymbol)
+            .label("decimalSeparator").value(this.decimalSeparator)
+            .label("digit").value(this.digit)
+            .label("exponentSeparator").value(this.exponentSeparator)
+            .label("groupingSeparator").value(this.groupingSeparator)
+            .label("infinity").value(this.infinity)
+            .label("internationalCurrencySymbol").value(this.internationalCurrencySymbol)
+            .label("minusSign").value(this.minusSign)
+            .label("monetaryDecimalSeparator").value(this.monetaryDecimalSeparator)
+            .label("nan").value(this.nan)
+            .label("patternSeparator").value(this.patternSeparator)
+            .label("percent").value(this.percent)
+            .label("perMill").value(this.perMill)
+            .label("zeroDigit").value(this.zeroDigit)
+            .build();
     }
 }

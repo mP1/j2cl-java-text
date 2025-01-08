@@ -72,7 +72,7 @@ abstract class SimpleDateFormatComponent {
                     case '\'':
                         // if next is quote dont terminate its an escaped quote
                         i++;
-                        if(i < patternLength && pattern.charAt(i) == '\'') {
+                        if (i < patternLength && pattern.charAt(i) == '\'') {
                             components.add(literal(c)); // escaped quote within quotes...
                         } else {
                             i--;
@@ -118,7 +118,7 @@ abstract class SimpleDateFormatComponent {
             }
 
             if ('\'' == c) {
-                if(previous == c) {
+                if (previous == c) {
                     components.add(literal(c));
                 }
                 previous = c;
@@ -259,7 +259,7 @@ abstract class SimpleDateFormatComponent {
      * {@see SimpleDateFormatComponentDayInMonth}
      */
     static SimpleDateFormatComponent dayInMonth(final int length) {
-        return SimpleDateFormatComponentDayInMonth.with(length,SimpleDateFormatComponent2.UNLIMITED_MAX_DIGIT_LENGTH);
+        return SimpleDateFormatComponentDayInMonth.with(length, SimpleDateFormatComponent2.UNLIMITED_MAX_DIGIT_LENGTH);
     }
 
     /**

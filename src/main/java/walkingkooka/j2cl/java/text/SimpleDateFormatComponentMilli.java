@@ -29,7 +29,7 @@ final class SimpleDateFormatComponentMilli extends SimpleDateFormatComponentNumb
     static SimpleDateFormatComponentMilli with(final int patternLength,
                                                final int maxDigitLength) {
         return new SimpleDateFormatComponentMilli(patternLength,
-                maxDigitLength);
+            maxDigitLength);
     }
 
     private SimpleDateFormatComponentMilli(final int patternLength,

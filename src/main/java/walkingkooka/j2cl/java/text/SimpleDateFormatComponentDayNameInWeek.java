@@ -51,7 +51,7 @@ final class SimpleDateFormatComponentDayNameInWeek extends SimpleDateFormatCompo
         final int length = this.length;
         final DateFormatSymbols symbols = request.symbols;
 
-        switch(length) {
+        switch (length) {
             case 1:
             case 2:
             case 3:
@@ -69,9 +69,9 @@ final class SimpleDateFormatComponentDayNameInWeek extends SimpleDateFormatCompo
     void parseText(final SimpleDateFormatParseRequest request) {
         final DateFormatSymbols symbols = request.symbols;
         this.parseFromOptionsAndUpdateCalendar(request,
-                CALENDAR_FIELD,
-                1,
-                symbols.getWeekdays(), symbols.getShortWeekdays());
+            CALENDAR_FIELD,
+            1,
+            symbols.getWeekdays(), symbols.getShortWeekdays());
     }
 
     private final static int CALENDAR_FIELD = Calendar.DAY_OF_WEEK;
@@ -89,7 +89,7 @@ final class SimpleDateFormatComponentDayNameInWeek extends SimpleDateFormatCompo
     }
 
     @GwtIncompatible
-    public static void main(final String[] args) throws Exception{
+    public static void main(final String[] args) throws Exception {
         System.out.println(new java.text.SimpleDateFormat("dd/MM/yyyy E").parse("6/6/2000 Saturday"));
         System.out.println(new java.text.SimpleDateFormat("dd/MM/yyyy EE").parse("6/6/2000 Sat."));
         System.out.println(new java.text.SimpleDateFormat("dd/MM/yyyy EEE").parse("6/6/2000 Sat."));

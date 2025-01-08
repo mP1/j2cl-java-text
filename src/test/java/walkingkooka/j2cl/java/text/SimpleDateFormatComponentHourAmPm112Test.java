@@ -22,7 +22,7 @@ public final class SimpleDateFormatComponentHourAmPm112Test extends SimpleDateFo
     SimpleDateFormatComponentHourAmPm112 createComponent(final int patternLength,
                                                          final int maxDigitLength) {
         return SimpleDateFormatComponentHourAmPm112.with(patternLength,
-                maxDigitLength);
+            maxDigitLength);
     }
 
     @Override

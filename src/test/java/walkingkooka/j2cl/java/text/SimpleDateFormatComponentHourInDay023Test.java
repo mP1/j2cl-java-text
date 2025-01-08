@@ -23,7 +23,7 @@ public final class SimpleDateFormatComponentHourInDay023Test extends SimpleDateF
     SimpleDateFormatComponentHourInDay023 createComponent(final int patternLength,
                                                           final int maxDigitLength) {
         return SimpleDateFormatComponentHourInDay023.with(patternLength,
-                maxDigitLength);
+            maxDigitLength);
     }
 
     @Override

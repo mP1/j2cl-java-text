@@ -80,7 +80,7 @@ abstract class LocaleProviderTool {
 
     static CharSequence tabbed(final String[] values) {
         return null == values ?
-                "" :
-                quote(Arrays.stream(values).collect(Collectors.joining("\t", "", "")));
+            "" :
+            quote(Arrays.stream(values).collect(Collectors.joining("\t", "", "")));
     }
 }

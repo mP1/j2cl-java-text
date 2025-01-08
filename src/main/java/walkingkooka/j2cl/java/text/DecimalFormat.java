@@ -93,85 +93,85 @@ public class DecimalFormat extends NumberFormat {
 
         for (int i = 0; i < count; i++) {
             register0(LocaleSupport.readLocales(data), // locales
-                    data.readBoolean(), // currencyDecimalSeparatorAlwaysShown,
-                    data.readInt(), // currencyGroupingSize,
-                    data.readBoolean(), // currencyGroupingUsed,
-                    data.readInt(), // currencyMaximumFractionDigits,
-                    data.readInt(), // currencyMinimumFractionDigits,
-                    data.readInt(), // currencyMaximumIntegerDigits,
-                    data.readInt(), // currencyMinimumIntegerDigits,
-                    data.readInt(), // currencyMultiplier,
-                    data.readUTF(), // currencyNegativePrefix,
-                    data.readUTF(), // currencyNegativeSuffix,
-                    data.readInt(), // currencyParse,
-                    data.readUTF(), // currencyPattern,
-                    data.readUTF(), // currencyPositivePrefix,
-                    data.readUTF(), // currencyPositiveSuffix,
-                    readRoundingMode(data), // currencyRoundingMode,
+                data.readBoolean(), // currencyDecimalSeparatorAlwaysShown,
+                data.readInt(), // currencyGroupingSize,
+                data.readBoolean(), // currencyGroupingUsed,
+                data.readInt(), // currencyMaximumFractionDigits,
+                data.readInt(), // currencyMinimumFractionDigits,
+                data.readInt(), // currencyMaximumIntegerDigits,
+                data.readInt(), // currencyMinimumIntegerDigits,
+                data.readInt(), // currencyMultiplier,
+                data.readUTF(), // currencyNegativePrefix,
+                data.readUTF(), // currencyNegativeSuffix,
+                data.readInt(), // currencyParse,
+                data.readUTF(), // currencyPattern,
+                data.readUTF(), // currencyPositivePrefix,
+                data.readUTF(), // currencyPositiveSuffix,
+                readRoundingMode(data), // currencyRoundingMode,
 
-                    data.readBoolean(), // currencyDecimalSeparatorAlwaysShown,
-                    data.readInt(), // currencyGroupingSize,
-                    data.readBoolean(), // currencyGroupingUsed,
-                    data.readInt(), // currencyMaximumFractionDigits,
-                    data.readInt(), // currencyMinimumFractionDigits,
-                    data.readInt(), // currencyMaximumIntegerDigits,
-                    data.readInt(), // currencyMinimumIntegerDigits,
-                    data.readInt(), // currencyMultiplier,
-                    data.readUTF(), // currencyNegativePrefix,
-                    data.readUTF(), // currencyNegativeSuffix,
-                    data.readInt(), // currencyParse,
-                    data.readUTF(), // currencyPattern,
-                    data.readUTF(), // currencyPositivePrefix,
-                    data.readUTF(), // currencyPositiveSuffix,
-                    readRoundingMode(data), // currencyRoundingMode,
+                data.readBoolean(), // currencyDecimalSeparatorAlwaysShown,
+                data.readInt(), // currencyGroupingSize,
+                data.readBoolean(), // currencyGroupingUsed,
+                data.readInt(), // currencyMaximumFractionDigits,
+                data.readInt(), // currencyMinimumFractionDigits,
+                data.readInt(), // currencyMaximumIntegerDigits,
+                data.readInt(), // currencyMinimumIntegerDigits,
+                data.readInt(), // currencyMultiplier,
+                data.readUTF(), // currencyNegativePrefix,
+                data.readUTF(), // currencyNegativeSuffix,
+                data.readInt(), // currencyParse,
+                data.readUTF(), // currencyPattern,
+                data.readUTF(), // currencyPositivePrefix,
+                data.readUTF(), // currencyPositiveSuffix,
+                readRoundingMode(data), // currencyRoundingMode,
 
-                    data.readBoolean(), // currencyDecimalSeparatorAlwaysShown,
-                    data.readInt(), // currencyGroupingSize,
-                    data.readBoolean(), // currencyGroupingUsed,
-                    data.readInt(), // currencyMaximumFractionDigits,
-                    data.readInt(), // currencyMinimumFractionDigits,
-                    data.readInt(), // currencyMaximumIntegerDigits,
-                    data.readInt(), // currencyMinimumIntegerDigits,
-                    data.readInt(), // currencyMultiplier,
-                    data.readUTF(), // currencyNegativePrefix,
-                    data.readUTF(), // currencyNegativeSuffix,
-                    data.readInt(), // currencyParse,
-                    data.readUTF(), // currencyPattern,
-                    data.readUTF(), // currencyPositivePrefix,
-                    data.readUTF(), // currencyPositiveSuffix,
-                    readRoundingMode(data), // currencyRoundingMode,
+                data.readBoolean(), // currencyDecimalSeparatorAlwaysShown,
+                data.readInt(), // currencyGroupingSize,
+                data.readBoolean(), // currencyGroupingUsed,
+                data.readInt(), // currencyMaximumFractionDigits,
+                data.readInt(), // currencyMinimumFractionDigits,
+                data.readInt(), // currencyMaximumIntegerDigits,
+                data.readInt(), // currencyMinimumIntegerDigits,
+                data.readInt(), // currencyMultiplier,
+                data.readUTF(), // currencyNegativePrefix,
+                data.readUTF(), // currencyNegativeSuffix,
+                data.readInt(), // currencyParse,
+                data.readUTF(), // currencyPattern,
+                data.readUTF(), // currencyPositivePrefix,
+                data.readUTF(), // currencyPositiveSuffix,
+                readRoundingMode(data), // currencyRoundingMode,
 
-                    data.readBoolean(), // currencyDecimalSeparatorAlwaysShown,
-                    data.readInt(), // currencyGroupingSize,
-                    data.readBoolean(), // currencyGroupingUsed,
-                    data.readInt(), // currencyMaximumFractionDigits,
-                    data.readInt(), // currencyMinimumFractionDigits,
-                    data.readInt(), // currencyMaximumIntegerDigits,
-                    data.readInt(), // currencyMinimumIntegerDigits,
-                    data.readInt(), // currencyMultiplier,
-                    data.readUTF(), // currencyNegativePrefix,
-                    data.readUTF(), // currencyNegativeSuffix,
-                    data.readInt(), // currencyParse,
-                    data.readUTF(), // currencyPattern,
-                    data.readUTF(), // currencyPositivePrefix,
-                    data.readUTF(), // currencyPositiveSuffix,
-                    readRoundingMode(data), // currencyRoundingMode,
+                data.readBoolean(), // currencyDecimalSeparatorAlwaysShown,
+                data.readInt(), // currencyGroupingSize,
+                data.readBoolean(), // currencyGroupingUsed,
+                data.readInt(), // currencyMaximumFractionDigits,
+                data.readInt(), // currencyMinimumFractionDigits,
+                data.readInt(), // currencyMaximumIntegerDigits,
+                data.readInt(), // currencyMinimumIntegerDigits,
+                data.readInt(), // currencyMultiplier,
+                data.readUTF(), // currencyNegativePrefix,
+                data.readUTF(), // currencyNegativeSuffix,
+                data.readInt(), // currencyParse,
+                data.readUTF(), // currencyPattern,
+                data.readUTF(), // currencyPositivePrefix,
+                data.readUTF(), // currencyPositiveSuffix,
+                readRoundingMode(data), // currencyRoundingMode,
 
-                    data.readBoolean(), // currencyDecimalSeparatorAlwaysShown,
-                    data.readInt(), // currencyGroupingSize,
-                    data.readBoolean(), // currencyGroupingUsed,
-                    data.readInt(), // currencyMaximumFractionDigits,
-                    data.readInt(), // currencyMinimumFractionDigits,
-                    data.readInt(), // currencyMaximumIntegerDigits,
-                    data.readInt(), // currencyMinimumIntegerDigits,
-                    data.readInt(), // currencyMultiplier,
-                    data.readUTF(), // currencyNegativePrefix,
-                    data.readUTF(), // currencyNegativeSuffix,
-                    data.readInt(), // currencyParse,
-                    data.readUTF(), // currencyPattern,
-                    data.readUTF(), // currencyPositivePrefix,
-                    data.readUTF(), // currencyPositiveSuffix,
-                    readRoundingMode(data) // currencyRoundingMode,
+                data.readBoolean(), // currencyDecimalSeparatorAlwaysShown,
+                data.readInt(), // currencyGroupingSize,
+                data.readBoolean(), // currencyGroupingUsed,
+                data.readInt(), // currencyMaximumFractionDigits,
+                data.readInt(), // currencyMinimumFractionDigits,
+                data.readInt(), // currencyMaximumIntegerDigits,
+                data.readInt(), // currencyMinimumIntegerDigits,
+                data.readInt(), // currencyMultiplier,
+                data.readUTF(), // currencyNegativePrefix,
+                data.readUTF(), // currencyNegativeSuffix,
+                data.readInt(), // currencyParse,
+                data.readUTF(), // currencyPattern,
+                data.readUTF(), // currencyPositivePrefix,
+                data.readUTF(), // currencyPositiveSuffix,
+                readRoundingMode(data) // currencyRoundingMode,
             );
         }
     }
@@ -200,7 +200,7 @@ public class DecimalFormat extends NumberFormat {
                                   final String currencyPositivePrefix,
                                   final String currencyPositiveSuffix,
                                   final RoundingMode currencyRoundingMode,
-                                  
+
                                   final boolean instanceDecimalSeparatorAlwaysShown,
                                   final int instanceGroupingSize,
                                   final boolean instanceGroupingUsed,
@@ -216,7 +216,7 @@ public class DecimalFormat extends NumberFormat {
                                   final String instancePositivePrefix,
                                   final String instancePositiveSuffix,
                                   final RoundingMode instanceRoundingMode,
-                                  
+
                                   final boolean integerDecimalSeparatorAlwaysShown,
                                   final int integerGroupingSize,
                                   final boolean integerGroupingUsed,
@@ -232,7 +232,7 @@ public class DecimalFormat extends NumberFormat {
                                   final String integerPositivePrefix,
                                   final String integerPositiveSuffix,
                                   final RoundingMode integerRoundingMode,
-                                  
+
                                   final boolean numberDecimalSeparatorAlwaysShown,
                                   final int numberGroupingSize,
                                   final boolean numberGroupingUsed,
@@ -248,7 +248,7 @@ public class DecimalFormat extends NumberFormat {
                                   final String numberPositivePrefix,
                                   final String numberPositiveSuffix,
                                   final RoundingMode numberRoundingMode,
-                                  
+
                                   final boolean percentDecimalSeparatorAlwaysShown,
                                   final int percentGroupingSize,
                                   final boolean percentGroupingUsed,
@@ -273,9 +273,9 @@ public class DecimalFormat extends NumberFormat {
             Currency currency;
 
             try {
-                currency = country.length()  == 2?
-                        Currency.getInstance(locale) :
-                        defaultCurrency;
+                currency = country.length() == 2 ?
+                    Currency.getInstance(locale) :
+                    defaultCurrency;
             } catch (final IllegalArgumentException cause) {
                 currency = defaultCurrency;
             }
@@ -283,13 +283,13 @@ public class DecimalFormat extends NumberFormat {
             final DecimalFormatSymbols symbols = new DecimalFormatSymbols(locale);
 
             LOCALE_TO_FORMATS.add(locale,
-                    new DecimalFormat[]{
-                            new DecimalFormat(currency, currencyDecimalSeparatorAlwaysShown, currencyGroupingSize, currencyGroupingUsed, currencyMaximumFractionDigits, currencyMinimumFractionDigits, currencyMaximumIntegerDigits, currencyMinimumIntegerDigits, currencyMultiplier, currencyNegativePrefix, currencyNegativeSuffix, currencyParse, currencyPattern, currencyPositivePrefix, currencyPositiveSuffix, currencyRoundingMode, symbols),
-                            new DecimalFormat(currency, instanceDecimalSeparatorAlwaysShown, instanceGroupingSize, instanceGroupingUsed, instanceMaximumFractionDigits, instanceMinimumFractionDigits, instanceMaximumIntegerDigits, instanceMinimumIntegerDigits, instanceMultiplier, instanceNegativePrefix, instanceNegativeSuffix, instanceParse, instancePattern, instancePositivePrefix, instancePositiveSuffix, instanceRoundingMode, symbols),
-                            new DecimalFormat(currency, integerDecimalSeparatorAlwaysShown, integerGroupingSize, integerGroupingUsed, integerMaximumFractionDigits, integerMinimumFractionDigits, integerMaximumIntegerDigits, integerMinimumIntegerDigits, integerMultiplier, integerNegativePrefix, integerNegativeSuffix, integerParse, integerPattern, integerPositivePrefix, integerPositiveSuffix, integerRoundingMode, symbols),
-                            new DecimalFormat(currency, numberDecimalSeparatorAlwaysShown, numberGroupingSize, numberGroupingUsed, numberMaximumFractionDigits, numberMinimumFractionDigits, numberMaximumIntegerDigits, numberMinimumIntegerDigits, numberMultiplier, numberNegativePrefix, numberNegativeSuffix, numberParse, numberPattern, numberPositivePrefix, numberPositiveSuffix, numberRoundingMode, symbols),
-                            new DecimalFormat(currency, percentDecimalSeparatorAlwaysShown, percentGroupingSize, percentGroupingUsed, percentMaximumFractionDigits, percentMinimumFractionDigits, percentMaximumIntegerDigits, percentMinimumIntegerDigits, percentMultiplier, percentNegativePrefix, percentNegativeSuffix, percentParse, percentPattern, percentPositivePrefix, percentPositiveSuffix, percentRoundingMode, symbols),
-                    });
+                new DecimalFormat[]{
+                    new DecimalFormat(currency, currencyDecimalSeparatorAlwaysShown, currencyGroupingSize, currencyGroupingUsed, currencyMaximumFractionDigits, currencyMinimumFractionDigits, currencyMaximumIntegerDigits, currencyMinimumIntegerDigits, currencyMultiplier, currencyNegativePrefix, currencyNegativeSuffix, currencyParse, currencyPattern, currencyPositivePrefix, currencyPositiveSuffix, currencyRoundingMode, symbols),
+                    new DecimalFormat(currency, instanceDecimalSeparatorAlwaysShown, instanceGroupingSize, instanceGroupingUsed, instanceMaximumFractionDigits, instanceMinimumFractionDigits, instanceMaximumIntegerDigits, instanceMinimumIntegerDigits, instanceMultiplier, instanceNegativePrefix, instanceNegativeSuffix, instanceParse, instancePattern, instancePositivePrefix, instancePositiveSuffix, instanceRoundingMode, symbols),
+                    new DecimalFormat(currency, integerDecimalSeparatorAlwaysShown, integerGroupingSize, integerGroupingUsed, integerMaximumFractionDigits, integerMinimumFractionDigits, integerMaximumIntegerDigits, integerMinimumIntegerDigits, integerMultiplier, integerNegativePrefix, integerNegativeSuffix, integerParse, integerPattern, integerPositivePrefix, integerPositiveSuffix, integerRoundingMode, symbols),
+                    new DecimalFormat(currency, numberDecimalSeparatorAlwaysShown, numberGroupingSize, numberGroupingUsed, numberMaximumFractionDigits, numberMinimumFractionDigits, numberMaximumIntegerDigits, numberMinimumIntegerDigits, numberMultiplier, numberNegativePrefix, numberNegativeSuffix, numberParse, numberPattern, numberPositivePrefix, numberPositiveSuffix, numberRoundingMode, symbols),
+                    new DecimalFormat(currency, percentDecimalSeparatorAlwaysShown, percentGroupingSize, percentGroupingUsed, percentMaximumFractionDigits, percentMinimumFractionDigits, percentMaximumIntegerDigits, percentMinimumIntegerDigits, percentMultiplier, percentNegativePrefix, percentNegativeSuffix, percentParse, percentPattern, percentPositivePrefix, percentPositiveSuffix, percentRoundingMode, symbols),
+                });
         }
     }
 
@@ -521,7 +521,7 @@ public class DecimalFormat extends NumberFormat {
     private static final List<DecimalFormatPatternComponent> EMPTY_PATTERN_COMPONENTS = Lists.of(DecimalFormatPatternComponent.zero());
 
     private static final int DEFAULT_GROUPING_SIZE = 3;
-    private static final int MAXIMUM_INTEGER_DIGITS  = Integer.MAX_VALUE;
+    private static final int MAXIMUM_INTEGER_DIGITS = Integer.MAX_VALUE;
     private static final int MAXIMUM_FRACTION_DIGITS = Integer.MAX_VALUE;
 
     private void applyPatternNotEmpty(final String pattern) {
@@ -557,8 +557,8 @@ public class DecimalFormat extends NumberFormat {
             // if negative prefix is empty make it minus only if there was no +ve/-ve prefix
             final List<DecimalFormatPatternComponent> prefix = negative.prefix;
             negativePrefixComponents = prefix.isEmpty() && positivePrefixComponents.isEmpty() && positiveSuffixComponents.isEmpty() ?
-                    NEGATIVE_PREFIX_MINUS_SIGN :
-                    prefix;
+                NEGATIVE_PREFIX_MINUS_SIGN :
+                prefix;
 
             negativeSuffixComponents = negative.suffix;
 
@@ -693,17 +693,17 @@ public class DecimalFormat extends NumberFormat {
 
 
         return Double.isNaN(number) ?
-                this.formatDoubleNan(number, append, position) :
-                Double.isInfinite(number) ?
-                        this.formatDoubleInfinite(number, append, position) :
-                        number >= 0 ?
-                                this.formatBigDecimal(BigDecimal.valueOf(number), append, this.positivePrefix, this.positiveSuffix) :
-                                this.formatBigDecimal(BigDecimal.valueOf(-number), append, this.negativePrefix, this.negativeSuffix);
+            this.formatDoubleNan(number, append, position) :
+            Double.isInfinite(number) ?
+                this.formatDoubleInfinite(number, append, position) :
+                number >= 0 ?
+                    this.formatBigDecimal(BigDecimal.valueOf(number), append, this.positivePrefix, this.positiveSuffix) :
+                    this.formatBigDecimal(BigDecimal.valueOf(-number), append, this.negativePrefix, this.negativeSuffix);
     }
 
     private StringBuffer formatDoubleInfinite(final double value,
-                                            final StringBuffer append,
-                                            final FieldPosition position) {
+                                              final StringBuffer append,
+                                              final FieldPosition position) {
         final String prefix;
         final String suffix;
 
@@ -727,8 +727,8 @@ public class DecimalFormat extends NumberFormat {
      * formatted output.
      */
     private StringBuffer formatDoubleNan(final double value,
-                                       final StringBuffer append,
-                                       final FieldPosition position) {
+                                         final StringBuffer append,
+                                         final FieldPosition position) {
         append.append(this.getDecimalFormatSymbols().getNaN());
         return append;
     }
@@ -738,17 +738,17 @@ public class DecimalFormat extends NumberFormat {
                                final StringBuffer append,
                                final FieldPosition position) {
         return number >= 0 ?
-                this.formatBigDecimal(BigDecimal.valueOf(number), append, this.positivePrefix, this.positiveSuffix) :
-                this.formatBigDecimal(BigDecimal.valueOf(-number), append, this.negativePrefix, this.negativeSuffix);
+            this.formatBigDecimal(BigDecimal.valueOf(number), append, this.positivePrefix, this.positiveSuffix) :
+            this.formatBigDecimal(BigDecimal.valueOf(-number), append, this.negativePrefix, this.negativeSuffix);
     }
 
     /**
      * Dispatches the given value and its associated parameters to either scientific or non scientific handling.
      */
     private StringBuffer formatBigDecimal(final BigDecimal value,
-                                        final StringBuffer append,
-                                        final String prefix,
-                                        final String suffix) {
+                                          final StringBuffer append,
+                                          final String prefix,
+                                          final String suffix) {
         append.append(prefix);
         if (this.scientificFormat) {
             this.formatBigDecimalScientific(value, append);
@@ -762,7 +762,7 @@ public class DecimalFormat extends NumberFormat {
      * Handles formatting the given absolute/positive value into characters as a decimal format.
      */
     private void formatBigDecimalDecimal(final BigDecimal value,
-                                       final StringBuffer append) {
+                                         final StringBuffer append) {
         final DecimalFormatSymbols symbols = this.symbols;
 
         final int maxInteger = this.maximumIntegerDigits;
@@ -772,8 +772,8 @@ public class DecimalFormat extends NumberFormat {
 
         // round to $maxFractionDigits decimal places
         final BigDecimal rounded = value
-                .multiply(this.multiplierBigDecimal) // required might be a percent/perMille or have a custom multiplier.
-                .setScale(maxFraction, this.roundingMode);
+            .multiply(this.multiplierBigDecimal) // required might be a percent/perMille or have a custom multiplier.
+            .setScale(maxFraction, this.roundingMode);
 
         final String digits = rounded.abs().unscaledValue().toString();
 
@@ -789,8 +789,8 @@ public class DecimalFormat extends NumberFormat {
             }
             final int integerDigitCount = integer.length();
             int i = maxInteger < integerDigitCount ?
-                    integerDigitCount - maxInteger :
-                    0;
+                integerDigitCount - maxInteger :
+                0;
 
             // add the portion integer digits that will include grouping
             if (this.isGroupingUsed()) {
@@ -837,7 +837,7 @@ public class DecimalFormat extends NumberFormat {
      * Handles formatting the given absolute/positive value into characters as a scientific format.
      */
     private void formatBigDecimalScientific(final BigDecimal value,
-                                          final StringBuffer append) {
+                                            final StringBuffer append) {
         final DecimalFormatSymbols symbols = this.symbols;
 
         final int maxInteger = this.maximumIntegerDigits;
@@ -845,9 +845,9 @@ public class DecimalFormat extends NumberFormat {
         final int minFraction = this.minimumFractionDigits;
 
         final BigDecimal rounded = value.multiply(this.multiplierBigDecimal)// required might be a percent/perMille or have a custom multiplier.
-                .movePointLeft(-maxInteger - maxFraction)
-                .setScale(0, this.roundingMode)
-                .stripTrailingZeros();
+            .movePointLeft(-maxInteger - maxFraction)
+            .setScale(0, this.roundingMode)
+            .stripTrailingZeros();
 
         int powerOfTen = value.precision() - value.scale();
 
@@ -892,8 +892,8 @@ public class DecimalFormat extends NumberFormat {
             int i = 0;
 
             if ((next < digitCount && i < maxFractionDigitCount) ||
-                    i < minFractionDigitCount ||
-                    this.decimalSeparatorAlwaysShown) {
+                i < minFractionDigitCount ||
+                this.decimalSeparatorAlwaysShown) {
                 append.append(symbols.getDecimalSeparator());
             }
 
@@ -962,7 +962,7 @@ public class DecimalFormat extends NumberFormat {
         final Number result;
 
         final String nan = this.getDecimalFormatSymbols().getNaN();
-        if(text.equals(nan)) {
+        if (text.equals(nan)) {
             result = Double.NaN;
             position.setIndex(nan.length());
         } else {
@@ -973,10 +973,10 @@ public class DecimalFormat extends NumberFormat {
     }
 
     private Number parsePrefixNumberSuffix(final String text,
-                                         final ParsePosition position,
-                                         final String prefix,
-                                         final String suffix,
-                                         final StringBuilder digits) {
+                                           final ParsePosition position,
+                                           final String prefix,
+                                           final String suffix,
+                                           final StringBuilder digits) {
         Number result = null;
 
         if (subTextEquals(text, position, prefix)) {
@@ -998,8 +998,8 @@ public class DecimalFormat extends NumberFormat {
      * Tests if the text contains infinity otherwise tries to {@link #parseNumber(String, ParsePosition, StringBuilder)}
      */
     private Number parseInfinityOrNumber(final String text,
-                                       final ParsePosition position,
-                                       final StringBuilder digits) {
+                                         final ParsePosition position,
+                                         final StringBuilder digits) {
         final Number result;
 
         final String infinity = this.getDecimalFormatSymbols().getInfinity();
@@ -1007,8 +1007,8 @@ public class DecimalFormat extends NumberFormat {
             position.setIndex(position.getIndex() + infinity.length());
 
             result = digits.length() == 0 ?
-                    Double.POSITIVE_INFINITY :
-                    Double.NEGATIVE_INFINITY;
+                Double.POSITIVE_INFINITY :
+                Double.NEGATIVE_INFINITY;
         } else {
             result = this.parseNumber(text, position, digits);
         }
@@ -1020,14 +1020,14 @@ public class DecimalFormat extends NumberFormat {
      * Only returns true if the source contains text at {@link ParsePosition}.
      */
     private static boolean subTextEquals(final String text,
-                                       final ParsePosition position,
-                                       final String subText) {
+                                         final ParsePosition position,
+                                         final String subText) {
         return subTextEquals(text, position.getIndex(), subText);
     }
 
     private static boolean subTextEquals(final String text,
-                                       final int index,
-                                       final String subText) {
+                                         final int index,
+                                         final String subText) {
         return index < text.length() && text.substring(index).startsWith(subText);
     }
 
@@ -1160,8 +1160,8 @@ public class DecimalFormat extends NumberFormat {
         // if no error and some digits were found, convert to the desired Number type...................................
         if (errorIndex == -1 && integerDigitCount + fractionDigitCount > 0) {
             final BigDecimal bigDecimal = integerDigitCount + fractionDigitCount > 0 ?
-                    new BigDecimal(digits.toString()).divide(this.multiplierBigDecimal) :
-                    BigDecimal.ZERO;
+                new BigDecimal(digits.toString()).divide(this.multiplierBigDecimal) :
+                BigDecimal.ZERO;
             if (this.isParseBigDecimal()) {
                 result = bigDecimal;
             } else {
@@ -1170,7 +1170,7 @@ public class DecimalFormat extends NumberFormat {
                 } else {
                     try {
                         result = bigDecimal.setScale(0, RoundingMode.UNNECESSARY)
-                                .longValue();
+                            .longValue();
                     } catch (final ArithmeticException ignore) {
                         result = bigDecimal.doubleValue();
                     }
@@ -1236,9 +1236,8 @@ public class DecimalFormat extends NumberFormat {
      * Sets whether the decimal separator is shown when there are no fractional
      * digits.
      *
-     * @param value
-     *            {@code true} if the decimal separator should always be
-     *            formatted; {@code false} otherwise.
+     * @param value {@code true} if the decimal separator should always be
+     *              formatted; {@code false} otherwise.
      */
     public void setDecimalSeparatorAlwaysShown(final boolean value) {
         if (this.decimalSeparatorAlwaysShown != value) {
@@ -1400,7 +1399,7 @@ public class DecimalFormat extends NumberFormat {
      * Returns the {@code DecimalFormatSymbols} used by this decimal format.
      *
      * @return a copy of the {@code DecimalFormatSymbols} used by this decimal
-     *         format.
+     * format.
      */
     public DecimalFormatSymbols getDecimalFormatSymbols() {
         return this.symbols.clone();
@@ -1409,8 +1408,7 @@ public class DecimalFormat extends NumberFormat {
     /**
      * Sets the {@code DecimalFormatSymbols} used by this decimal format.
      *
-     * @param symbols
-     *            the {@code DecimalFormatSymbols} to set.
+     * @param symbols the {@code DecimalFormatSymbols} to set.
      */
     public void setDecimalFormatSymbols(final DecimalFormatSymbols symbols) {
         if (symbols != null) {
@@ -1434,19 +1432,19 @@ public class DecimalFormat extends NumberFormat {
     @Override
     public int hashCode() {
         return Objects.hash(super.hashCode(),
-                this.decimalSeparatorAlwaysShown,
-                this.groupingSize,
-                this.groupingUsed,
-                this.multiplier,
-                this.negativePrefix,
-                this.negativeSuffix,
-                this.numberComponents,
-                this.parseBigDecimal,
-                this.pattern,
-                this.positivePrefix,
-                this.positiveSuffix,
-                this.roundingMode,
-                this.symbols);
+            this.decimalSeparatorAlwaysShown,
+            this.groupingSize,
+            this.groupingUsed,
+            this.multiplier,
+            this.negativePrefix,
+            this.negativeSuffix,
+            this.numberComponents,
+            this.parseBigDecimal,
+            this.pattern,
+            this.positivePrefix,
+            this.positiveSuffix,
+            this.roundingMode,
+            this.symbols);
     }
 
     @Override
@@ -1461,48 +1459,48 @@ public class DecimalFormat extends NumberFormat {
 
     private boolean equals1(final DecimalFormat other) {
         return this.currency.equals(other.currency) &&
-                this.decimalSeparatorAlwaysShown == other.decimalSeparatorAlwaysShown &&
-                this.groupingSize == other.groupingSize &&
-                this.groupingUsed == other.groupingUsed &&
-                this.maximumFractionDigits == other.maximumFractionDigits &&
-                this.minimumFractionDigits == other.minimumFractionDigits &&
-                this.maximumIntegerDigits == other.maximumIntegerDigits &&
-                this.minimumIntegerDigits == other.minimumIntegerDigits &&
-                this.multiplier == other.multiplier &&
-                this.negativePrefix.equals(other.negativePrefix) &&
-                this.negativeSuffix.equals(other.negativeSuffix) &&
-                this.numberComponents.equals(other.numberComponents) &&
-                this.parseBigDecimal == other.parseBigDecimal &&
-                this.parseIntegerOnly == other.parseIntegerOnly &&
-                this.positivePrefix.equals(other.positivePrefix) &&
-                this.positiveSuffix.equals(other.positiveSuffix) &&
-                this.roundingMode == other.roundingMode &&
-                this.symbols.equals(other.symbols);
+            this.decimalSeparatorAlwaysShown == other.decimalSeparatorAlwaysShown &&
+            this.groupingSize == other.groupingSize &&
+            this.groupingUsed == other.groupingUsed &&
+            this.maximumFractionDigits == other.maximumFractionDigits &&
+            this.minimumFractionDigits == other.minimumFractionDigits &&
+            this.maximumIntegerDigits == other.maximumIntegerDigits &&
+            this.minimumIntegerDigits == other.minimumIntegerDigits &&
+            this.multiplier == other.multiplier &&
+            this.negativePrefix.equals(other.negativePrefix) &&
+            this.negativeSuffix.equals(other.negativeSuffix) &&
+            this.numberComponents.equals(other.numberComponents) &&
+            this.parseBigDecimal == other.parseBigDecimal &&
+            this.parseIntegerOnly == other.parseIntegerOnly &&
+            this.positivePrefix.equals(other.positivePrefix) &&
+            this.positiveSuffix.equals(other.positiveSuffix) &&
+            this.roundingMode == other.roundingMode &&
+            this.symbols.equals(other.symbols);
     }
 
     @Override
     public String toString() {
         return ToStringBuilder.empty()
-                .valueSeparator("")
-                .label("currency").value(this.currency)
-                .label("decimalSeparatorAlwaysShown").value(this.decimalSeparatorAlwaysShown)
-                .label("groupingSize").value(this.groupingSize)
-                .label("groupingUsed").value(this.groupingUsed)
-                .label("maximumFractionDigits").value(this.maximumFractionDigits)
-                .label("minimumFractionDigits").value(this.minimumFractionDigits)
-                .label("maximumIntegerDigits").value(this.maximumIntegerDigits)
-                .label("minimumIntegerDigits").value(this.minimumIntegerDigits)
-                .label("multiplier").value(this.multiplier)
-                .label("negativePrefix").value(this.negativePrefix)
-                .label("negativeSuffix").value(this.negativeSuffix)
-                .label("numberComponents").value(this.numberComponents)
-                .label("parseBigDecimalOnly").value(this.parseBigDecimal)
-                .label("parseIntegerOnly").value(this.parseIntegerOnly)
-                .label("pattern").value(this.pattern)
-                .label("positivePrefix").value(this.positivePrefix)
-                .label("positiveSuffix").value(this.positiveSuffix)
-                .label("roundingMode").value(this.roundingMode)
-                .label("symbols").value(this.symbols)
-                .build();
+            .valueSeparator("")
+            .label("currency").value(this.currency)
+            .label("decimalSeparatorAlwaysShown").value(this.decimalSeparatorAlwaysShown)
+            .label("groupingSize").value(this.groupingSize)
+            .label("groupingUsed").value(this.groupingUsed)
+            .label("maximumFractionDigits").value(this.maximumFractionDigits)
+            .label("minimumFractionDigits").value(this.minimumFractionDigits)
+            .label("maximumIntegerDigits").value(this.maximumIntegerDigits)
+            .label("minimumIntegerDigits").value(this.minimumIntegerDigits)
+            .label("multiplier").value(this.multiplier)
+            .label("negativePrefix").value(this.negativePrefix)
+            .label("negativeSuffix").value(this.negativeSuffix)
+            .label("numberComponents").value(this.numberComponents)
+            .label("parseBigDecimalOnly").value(this.parseBigDecimal)
+            .label("parseIntegerOnly").value(this.parseIntegerOnly)
+            .label("pattern").value(this.pattern)
+            .label("positivePrefix").value(this.positivePrefix)
+            .label("positiveSuffix").value(this.positiveSuffix)
+            .label("roundingMode").value(this.roundingMode)
+            .label("symbols").value(this.symbols)
+            .build();
     }
 }

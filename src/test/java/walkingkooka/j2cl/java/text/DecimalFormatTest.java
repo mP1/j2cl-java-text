@@ -97,8 +97,8 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
         Locale.setDefault(locale);
 
         this.check(java.text.NumberFormat.getCurrencyInstance(),
-                NumberFormat.getCurrencyInstance(),
-                locale);
+            NumberFormat.getCurrencyInstance(),
+            locale);
     }
 
     @Test
@@ -144,8 +144,8 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
 
     private void currencyInstanceLocaleAndCheck(final Locale locale) {
         this.check(java.text.NumberFormat.getCurrencyInstance(locale),
-                NumberFormat.getCurrencyInstance(locale),
-                locale);
+            NumberFormat.getCurrencyInstance(locale),
+            locale);
     }
 
     @Test
@@ -191,8 +191,8 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
         Locale.setDefault(locale);
 
         this.check(java.text.NumberFormat.getIntegerInstance(),
-                NumberFormat.getIntegerInstance(),
-                locale);
+            NumberFormat.getIntegerInstance(),
+            locale);
     }
 
     @Test
@@ -238,8 +238,8 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
 
     private void integerInstanceLocaleAndCheck(final Locale locale) {
         this.check(java.text.NumberFormat.getIntegerInstance(locale),
-                NumberFormat.getIntegerInstance(locale),
-                locale);
+            NumberFormat.getIntegerInstance(locale),
+            locale);
     }
 
     @Test
@@ -285,8 +285,8 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
         Locale.setDefault(locale);
 
         this.check(java.text.NumberFormat.getInstance(),
-                NumberFormat.getInstance(),
-                locale);
+            NumberFormat.getInstance(),
+            locale);
     }
 
     @Test
@@ -332,8 +332,8 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
 
     private void instanceLocaleAndCheck(final Locale locale) {
         this.check(java.text.NumberFormat.getInstance(locale),
-                NumberFormat.getInstance(locale),
-                locale);
+            NumberFormat.getInstance(locale),
+            locale);
     }
 
     @Test
@@ -379,8 +379,8 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
         Locale.setDefault(locale);
 
         this.check(java.text.NumberFormat.getNumberInstance(),
-                NumberFormat.getNumberInstance(),
-                locale);
+            NumberFormat.getNumberInstance(),
+            locale);
     }
 
     @Test
@@ -426,8 +426,8 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
 
     private void numberInstanceLocaleAndCheck(final Locale locale) {
         this.check(java.text.NumberFormat.getNumberInstance(locale),
-                NumberFormat.getNumberInstance(locale),
-                locale);
+            NumberFormat.getNumberInstance(locale),
+            locale);
     }
 
     @Test
@@ -473,8 +473,8 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
         Locale.setDefault(locale);
 
         this.check(java.text.NumberFormat.getPercentInstance(),
-                NumberFormat.getPercentInstance(),
-                locale);
+            NumberFormat.getPercentInstance(),
+            locale);
     }
 
     @Test
@@ -520,8 +520,8 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
 
     private void percentInstanceLocaleAndCheck(final Locale locale) {
         this.check(java.text.NumberFormat.getPercentInstance(locale),
-                NumberFormat.getPercentInstance(locale),
-                locale);
+            NumberFormat.getPercentInstance(locale),
+            locale);
     }
 
     @Test
@@ -567,8 +567,8 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
         Locale.setDefault(locale);
 
         this.check(new java.text.DecimalFormat(),
-                new DecimalFormat(),
-                locale);
+            new DecimalFormat(),
+            locale);
     }
 
     // new pattern.......................................................................................................
@@ -718,9 +718,9 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
 
         // TODO toPattern with sub-patterns rules are complex.
         this.check(new java.text.DecimalFormat(pattern),
-                new DecimalFormat(pattern),
-                locale,
-                true);
+            new DecimalFormat(pattern),
+            locale,
+            true);
     }
 
     // new pattern, symbols.............................................................................................
@@ -730,8 +730,8 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
         Locale.setDefault(EN_AU);
 
         this.check(new java.text.DecimalFormat(PATTERN, new java.text.DecimalFormatSymbols(EN_AU)),
-                new DecimalFormat(PATTERN, new DecimalFormatSymbols(EN_AU)),
-                EN_AU);
+            new DecimalFormat(PATTERN, new DecimalFormatSymbols(EN_AU)),
+            EN_AU);
     }
 
     @Test
@@ -739,8 +739,8 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
         Locale.setDefault(FR);
 
         this.check(new java.text.DecimalFormat(PATTERN, new java.text.DecimalFormatSymbols(FR)),
-                new DecimalFormat(PATTERN, new DecimalFormatSymbols(FR)),
-                FR);
+            new DecimalFormat(PATTERN, new DecimalFormatSymbols(FR)),
+            FR);
     }
 
     @Test
@@ -759,8 +759,8 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
         Locale.setDefault(locale);
 
         this.check(new java.text.DecimalFormat(pattern, new java.text.DecimalFormatSymbols(locale)),
-                new DecimalFormat(pattern, new DecimalFormatSymbols(locale)),
-                locale);
+            new DecimalFormat(pattern, new DecimalFormatSymbols(locale)),
+            locale);
     }
 
     // currency.........................................................................................................
@@ -841,8 +841,8 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
     private void setDecimalSeparatorAlwaysShownAndCheck(final String pattern,
                                                         final boolean always) {
         this.setDecimalSeparatorAlwaysShownAndCheck(new java.text.DecimalFormat(pattern),
-                new DecimalFormat(pattern),
-                always);
+            new DecimalFormat(pattern),
+            always);
     }
 
     private void setDecimalSeparatorAlwaysShownAndCheck(final java.text.DecimalFormat jdk,
@@ -1343,25 +1343,25 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
     private void check(final java.text.NumberFormat jdk,
                        final NumberFormat emul) {
         this.check((java.text.DecimalFormat) jdk,
-                (DecimalFormat) emul,
-                Locale.getDefault());
+            (DecimalFormat) emul,
+            Locale.getDefault());
     }
 
     private void check(final java.text.NumberFormat jdk,
                        final NumberFormat emul,
                        final Locale locale) {
         this.check((java.text.DecimalFormat) jdk,
-                (DecimalFormat) emul,
-                locale);
+            (DecimalFormat) emul,
+            locale);
     }
 
     private void check(final java.text.DecimalFormat jdk,
                        final DecimalFormat emul,
                        final Locale locale) {
         this.check(jdk,
-                emul,
-                locale,
-                false); // skipPatternCheck=true
+            emul,
+            locale,
+            false); // skipPatternCheck=true
     }
 
     private void check(final java.text.DecimalFormat jdk,
@@ -1518,15 +1518,15 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
     @Test
     public void testFormatIntegerFractionRounding() {
         this.formatAndCheck("#",
-                RoundingMode.HALF_UP,
-                1.25);
+            RoundingMode.HALF_UP,
+            1.25);
     }
 
     @Test
     public void testFormatIntegerFractionRounding2() {
         this.formatAndCheck("#",
-                RoundingMode.HALF_UP,
-                1.5);
+            RoundingMode.HALF_UP,
+            1.5);
     }
 
     @Test
@@ -1542,8 +1542,8 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
         final DecimalFormat emul = new DecimalFormat(pattern, emulSymbols);
 
         this.formatAndCheck(jdk,
-                emul,
-                1234567);
+            emul,
+            1234567);
     }
 
     @Test
@@ -1558,8 +1558,8 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
         emul.setMaximumIntegerDigits(max);
 
         this.formatAndCheck(jdk,
-                emul,
-                1);
+            emul,
+            1);
     }
 
     @Test
@@ -1574,22 +1574,22 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
         emul.setMaximumIntegerDigits(max);
 
         this.formatAndCheck(jdk,
-                emul,
-                1234567);
+            emul,
+            1234567);
     }
 
     @Test
     public void testFormatFraction() {
         this.formatAndCheck("#",
-                RoundingMode.HALF_UP,
-                1.5);
+            RoundingMode.HALF_UP,
+            1.5);
     }
 
     @Test
     public void testFormatFractionNegative() {
         this.formatAndCheck("#",
-                RoundingMode.HALF_UP,
-                -1.5);
+            RoundingMode.HALF_UP,
+            -1.5);
     }
 
     @Test
@@ -1605,44 +1605,44 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
         final DecimalFormat emul = new DecimalFormat(pattern, emulSymbols);
 
         this.formatAndCheck(jdk,
-                emul,
-                123.5);
+            emul,
+            123.5);
     }
 
     @Test
     public void testFormatGroupingValueLessThanGrouping() {
         this.formatAndCheck("#,000",
-                1);
+            1);
     }
 
     @Test
     public void testFormatGroupingValueLessThanGrouping2() {
         this.formatAndCheck("#,000",
-                12);
+            12);
     }
 
     @Test
     public void testFormatGroupingValueLessThanGrouping3() {
         this.formatAndCheck("#,000",
-                123);
+            123);
     }
 
     @Test
     public void testFormatGrouping() {
         this.formatAndCheck("#,000",
-                1234);
+            1234);
     }
 
     @Test
     public void testFormatGroupingTwoGroups() {
         this.formatAndCheck("#,000",
-                12345678);
+            12345678);
     }
 
     @Test
     public void testFormatGroupingWithFraction() {
         this.formatAndCheck("#,000.0",
-                1234.5);
+            1234.5);
     }
 
     @Test
@@ -1655,8 +1655,8 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
         final DecimalFormat emul = new DecimalFormat(pattern);
 
         this.formatAndCheck(jdk,
-                emul,
-                123.5);
+            emul,
+            123.5);
     }
 
     @Test
@@ -1669,8 +1669,8 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
         final DecimalFormat emul = new DecimalFormat(pattern);
 
         this.formatAndCheck(jdk,
-                emul,
-                123.5);
+            emul,
+            123.5);
     }
 
     @Test
@@ -1683,8 +1683,8 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
         final DecimalFormat emul = new DecimalFormat(pattern);
 
         this.formatAndCheck(jdk,
-                emul,
-                123.5);
+            emul,
+            123.5);
     }
 
     @Test
@@ -1697,8 +1697,8 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
         final DecimalFormat emul = new DecimalFormat(pattern);
 
         this.formatAndCheck(jdk,
-                emul,
-                123.5);
+            emul,
+            123.5);
     }
 
     // formatScientific.................................................................................................
@@ -1706,116 +1706,116 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
     @Test
     public void testFormatScientificZeroOneSignificant() {
         this.formatAndCheck("#.#E0",
-                RoundingMode.HALF_UP,
-                0);
+            RoundingMode.HALF_UP,
+            0);
     }
 
     @Test
     public void testFormatScientificZeroTwoSignificant() {
         this.formatAndCheck("##.#E0",
-                RoundingMode.HALF_UP,
-                0);
+            RoundingMode.HALF_UP,
+            0);
     }
 
     @Test
     public void testFormatScientificOneSignificantLarge() {
         this.formatAndCheck("#.#E0",
-                RoundingMode.HALF_UP,
-                12);
+            RoundingMode.HALF_UP,
+            12);
     }
 
     @Test
     public void testFormatScientificOneSignificant() {
         this.formatAndCheck("#.#E0",
-                RoundingMode.HALF_UP,
-                1.2);
+            RoundingMode.HALF_UP,
+            1.2);
     }
 
     @Test
     public void testFormatScientificOneSignificant2() {
         this.formatAndCheck("#.#E0",
-                RoundingMode.HALF_UP,
-                1.5);
+            RoundingMode.HALF_UP,
+            1.5);
     }
 
     @Test
     public void testFormatScientificOneSignificantSmall() {
         this.formatAndCheck("#.#E0",
-                RoundingMode.HALF_UP,
-                0.23);
+            RoundingMode.HALF_UP,
+            0.23);
     }
 
     @Test
     public void testFormatScientificOneSignificantSmall2() {
         this.formatAndCheck("#.#E0",
-                RoundingMode.HALF_UP,
-                0.25);
+            RoundingMode.HALF_UP,
+            0.25);
     }
 
     @Test
     public void testFormatScientificTwoSignificantLarge() {
         this.formatAndCheck("##.#E0",
-                RoundingMode.HALF_UP,
-                12);
+            RoundingMode.HALF_UP,
+            12);
     }
 
     @Test
     public void testFormatScientificTwoSignificantLarge2() {
         this.formatAndCheck("##.#E0",
-                RoundingMode.HALF_UP,
-                15);
+            RoundingMode.HALF_UP,
+            15);
     }
 
     @Test
     public void testFormatScientificTwoSignificant() {
         this.formatAndCheck("##.#E0",
-                RoundingMode.HALF_UP,
-                1.23,
-                "12.3e-1");
+            RoundingMode.HALF_UP,
+            1.23,
+            "12.3e-1");
     }
 
     @Test
     public void testFormatScientificTwoSignificant2() {
         this.formatAndCheck("##.#E0",
-                RoundingMode.HALF_UP,
-                1.53,
-                "15.3e-1");
+            RoundingMode.HALF_UP,
+            1.53,
+            "15.3e-1");
     }
 
     @Test
     public void testFormatScientificTwoSignificant3() {
         this.formatAndCheck("00.0E0",
-                RoundingMode.HALF_UP,
-                1.2,
-                "12.0e-1");
+            RoundingMode.HALF_UP,
+            1.2,
+            "12.0e-1");
     }
 
     @Test
     public void testFormatScientificTwoSignificant4() {
         this.formatAndCheck("00.0E0",
-                RoundingMode.HALF_UP,
-                1.23);
+            RoundingMode.HALF_UP,
+            1.23);
     }
 
     @Test
     public void testFormatScientificTwoSignificant4Rounding() {
         this.formatAndCheck("00.0E0",
-                RoundingMode.HALF_UP,
-                1.234);
+            RoundingMode.HALF_UP,
+            1.234);
     }
 
     @Test
     public void testFormatScientificTwoSignificantSmall() {
         this.formatAndCheck("##.#E0",
-                RoundingMode.HALF_UP,
-                0.23);
+            RoundingMode.HALF_UP,
+            0.23);
     }
 
     @Test
     public void testFormatScientificTwoSignificantSmall2() {
         this.formatAndCheck("##.#E0",
-                RoundingMode.HALF_UP,
-                0.25);
+            RoundingMode.HALF_UP,
+            0.25);
     }
 
     // helpers..........................................................................................................
@@ -1823,17 +1823,17 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
     private void formatAndCheck(final String pattern,
                                 final Object value) {
         this.formatAndCheck(pattern,
-                RoundingMode.UNNECESSARY,
-                value);
+            RoundingMode.UNNECESSARY,
+            value);
     }
 
     private void formatAndCheck(final String pattern,
                                 final RoundingMode roundingMode,
                                 final Object value) {
         this.formatAndCheck(pattern,
-                roundingMode,
-                value,
-                EN_AU);
+            roundingMode,
+            value,
+            EN_AU);
     }
 
     private void formatAndCheck(final String pattern,
@@ -1884,8 +1884,8 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
                                 final Locale locale,
                                 final String expected) {
         this.checkEquals(expected,
-                emul.format(value),
-                () -> emul.toPattern() + " value " + value + " locale " + locale + " decimalFormat: " + emul);
+            emul.format(value),
+            () -> emul.toPattern() + " value " + value + " locale " + locale + " decimalFormat: " + emul);
     }
 
     // parse............................................................................................................
@@ -2097,8 +2097,8 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
         emul.setParseBigDecimal(true);
 
         this.parseAndCheck(jdk,
-                emul,
-                value);
+            emul,
+            value);
     }
 
     private void parseIntegerOnlyAndCheck(final String pattern,
@@ -2113,8 +2113,8 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
         emul.setParseIntegerOnly(true);
 
         this.parseAndCheck(jdk,
-                emul,
-                value);
+            emul,
+            value);
     }
 
     private void parseAndCheck(final String pattern,
@@ -2123,8 +2123,8 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
         Locale.setDefault(locale);
 
         this.parseAndCheck(new java.text.DecimalFormat(pattern),
-                new DecimalFormat(pattern),
-                value);
+            new DecimalFormat(pattern),
+            value);
     }
 
     private void parseAndCheck(final java.text.DecimalFormat jdk,
@@ -2134,14 +2134,14 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
         final ParsePosition emulPosition = new ParsePosition(0);
 
         this.checkEquals(jdk.parse(value, jdkPosition),
-                emul.parse(value, emulPosition),
-                () -> jdk.toPattern() + " parse " + CharSequences.quoteAndEscape(value) + " jdk: " + jdk + " emul: " + emul);
+            emul.parse(value, emulPosition),
+            () -> jdk.toPattern() + " parse " + CharSequences.quoteAndEscape(value) + " jdk: " + jdk + " emul: " + emul);
         this.checkEquals(jdkPosition.getIndex(),
-                emulPosition.getIndex(),
-                () -> "index, " + jdk.toPattern() + " parse " + CharSequences.quoteAndEscape(value) + " jdk: " + jdk + " emul: " + emul);
+            emulPosition.getIndex(),
+            () -> "index, " + jdk.toPattern() + " parse " + CharSequences.quoteAndEscape(value) + " jdk: " + jdk + " emul: " + emul);
         this.checkEquals(jdkPosition.getErrorIndex(),
-                emulPosition.getErrorIndex(),
-                () -> "error index, " + jdk.toPattern() + " parse " + CharSequences.quoteAndEscape(value) + " jdk: " + jdk + " emul: " + emul);
+            emulPosition.getErrorIndex(),
+            () -> "error index, " + jdk.toPattern() + " parse " + CharSequences.quoteAndEscape(value) + " jdk: " + jdk + " emul: " + emul);
     }
 
     // equals............................................................................................................
@@ -2248,7 +2248,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
     public void testToString() {
         Locale.setDefault(Locale.forLanguageTag("en-AU"));
         this.toStringAndCheck(this.createObject(),
-                "currency=AUD groupingSize=10 maximumFractionDigits=8 minimumFractionDigits=4 maximumIntegerDigits=20 minimumIntegerDigits=10 multiplier=100 negativePrefix=\"NegativePrefix1\" negativeSuffix=\"NegativeSuffix2\" numberComponents=# positivePrefix=\"PositivePrefix1\" positiveSuffix=\"PositiveSuffix2\" roundingMode=HALF_EVEN symbols=currency=AUD currencySymbol=\"$\" decimalSeparator='.' digit='#' exponentSeparator=\"e\" groupingSeparator=',' infinity=\"∞\" internationalCurrencySymbol=\"AUD\" minusSign='-' monetaryDecimalSeparator='.' nan=\"NaN\" patternSeparator=';' percent='%' perMill='‰' zeroDigit='0'");
+            "currency=AUD groupingSize=10 maximumFractionDigits=8 minimumFractionDigits=4 maximumIntegerDigits=20 minimumIntegerDigits=10 multiplier=100 negativePrefix=\"NegativePrefix1\" negativeSuffix=\"NegativeSuffix2\" numberComponents=# positivePrefix=\"PositivePrefix1\" positiveSuffix=\"PositiveSuffix2\" roundingMode=HALF_EVEN symbols=currency=AUD currencySymbol=\"$\" decimalSeparator='.' digit='#' exponentSeparator=\"e\" groupingSeparator=',' infinity=\"∞\" internationalCurrencySymbol=\"AUD\" minusSign='-' monetaryDecimalSeparator='.' nan=\"NaN\" patternSeparator=';' percent='%' perMill='‰' zeroDigit='0'");
     }
 
     @Test
@@ -2259,7 +2259,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
         format.setDecimalSeparatorAlwaysShown(true);
 
         this.toStringAndCheck(format,
-                "currency=AUD decimalSeparatorAlwaysShown=true maximumFractionDigits=2 minimumFractionDigits=2 maximumIntegerDigits=2147483647 minimumIntegerDigits=1 multiplier=1 negativePrefix=\"-\" numberComponents=#.00 roundingMode=HALF_EVEN symbols=currency=AUD currencySymbol=\"$\" decimalSeparator='.' digit='#' exponentSeparator=\"e\" groupingSeparator=',' infinity=\"∞\" internationalCurrencySymbol=\"AUD\" minusSign='-' monetaryDecimalSeparator='.' nan=\"NaN\" patternSeparator=';' percent='%' perMill='‰' zeroDigit='0'");
+            "currency=AUD decimalSeparatorAlwaysShown=true maximumFractionDigits=2 minimumFractionDigits=2 maximumIntegerDigits=2147483647 minimumIntegerDigits=1 multiplier=1 negativePrefix=\"-\" numberComponents=#.00 roundingMode=HALF_EVEN symbols=currency=AUD currencySymbol=\"$\" decimalSeparator='.' digit='#' exponentSeparator=\"e\" groupingSeparator=',' infinity=\"∞\" internationalCurrencySymbol=\"AUD\" minusSign='-' monetaryDecimalSeparator='.' nan=\"NaN\" patternSeparator=';' percent='%' perMill='‰' zeroDigit='0'");
     }
 
     @Test
@@ -2267,7 +2267,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
         Locale.setDefault(Locale.forLanguageTag("en-AU"));
 
         this.toStringAndCheck(new DecimalFormat("###.00", new DecimalFormatSymbols(Locale.forLanguageTag("en-AU"))),
-                "currency=AUD maximumFractionDigits=2 minimumFractionDigits=2 maximumIntegerDigits=2147483647 minimumIntegerDigits=1 multiplier=1 negativePrefix=\"-\" numberComponents=#.00 roundingMode=HALF_EVEN symbols=currency=AUD currencySymbol=\"$\" decimalSeparator='.' digit='#' exponentSeparator=\"e\" groupingSeparator=',' infinity=\"∞\" internationalCurrencySymbol=\"AUD\" minusSign='-' monetaryDecimalSeparator='.' nan=\"NaN\" patternSeparator=';' percent='%' perMill='‰' zeroDigit='0'");
+            "currency=AUD maximumFractionDigits=2 minimumFractionDigits=2 maximumIntegerDigits=2147483647 minimumIntegerDigits=1 multiplier=1 negativePrefix=\"-\" numberComponents=#.00 roundingMode=HALF_EVEN symbols=currency=AUD currencySymbol=\"$\" decimalSeparator='.' digit='#' exponentSeparator=\"e\" groupingSeparator=',' infinity=\"∞\" internationalCurrencySymbol=\"AUD\" minusSign='-' monetaryDecimalSeparator='.' nan=\"NaN\" patternSeparator=';' percent='%' perMill='‰' zeroDigit='0'");
     }
 
     @Test
@@ -2275,7 +2275,7 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
         Locale.setDefault(Locale.forLanguageTag("es-CL"));
 
         this.toStringAndCheck(new DecimalFormat("¤#,##0;¤-#,##0"),
-                "currency=CLP groupingSize=3 groupingUsed=true maximumIntegerDigits=2147483647 minimumIntegerDigits=1 multiplier=1 negativePrefix=\"$-\" numberComponents=#,##0 positivePrefix=\"$\" roundingMode=HALF_EVEN symbols=currency=CLP currencySymbol=\"$\" decimalSeparator=',' digit='#' exponentSeparator=\"E\" groupingSeparator='.' infinity=\"∞\" internationalCurrencySymbol=\"CLP\" minusSign='-' monetaryDecimalSeparator=',' nan=\"NaN\" patternSeparator=';' percent='%' perMill='‰' zeroDigit='0'");
+            "currency=CLP groupingSize=3 groupingUsed=true maximumIntegerDigits=2147483647 minimumIntegerDigits=1 multiplier=1 negativePrefix=\"$-\" numberComponents=#,##0 positivePrefix=\"$\" roundingMode=HALF_EVEN symbols=currency=CLP currencySymbol=\"$\" decimalSeparator=',' digit='#' exponentSeparator=\"E\" groupingSeparator='.' infinity=\"∞\" internationalCurrencySymbol=\"CLP\" minusSign='-' monetaryDecimalSeparator=',' nan=\"NaN\" patternSeparator=';' percent='%' perMill='‰' zeroDigit='0'");
     }
 
     // ShadedClassTesting...............................................................................................
@@ -2287,10 +2287,10 @@ public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> imple
 
     @Override
     public Predicate<Method> requiredMethods() {
-        return (m)-> {
+        return (m) -> {
             final boolean required;
 
-            switch(m.getName()) {
+            switch (m.getName()) {
                 case "clone":
                 case "toString":
                     required = false;

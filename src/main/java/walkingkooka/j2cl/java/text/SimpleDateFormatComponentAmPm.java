@@ -58,9 +58,9 @@ final class SimpleDateFormatComponentAmPm extends SimpleDateFormatComponent2 {
     void parseText(final SimpleDateFormatParseRequest request) {
         final DateFormatSymbols symbols = request.symbols;
         this.parseFromOptionsAndUpdateCalendar(request,
-                CALENDAR_FIELD,
-                0,
-                symbols.getAmPmStrings());
+            CALENDAR_FIELD,
+            0,
+            symbols.getAmPmStrings());
     }
 
     private final static int CALENDAR_FIELD = Calendar.AM_PM;

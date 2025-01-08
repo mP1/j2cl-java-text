@@ -153,8 +153,8 @@ final class DecimalFormatPatternParserNumber extends DecimalFormatPatternParser 
 
             final int index = number.lastIndexOf(DecimalFormatPatternComponent.groupingSeparator());
             this.groupingSize = -1 == index ?
-                    -1 :
-                    decimal - index - 1;
+                -1 :
+                decimal - index - 1;
         }
         return this.groupingSize;
     }
@@ -247,7 +247,7 @@ final class DecimalFormatPatternParserNumber extends DecimalFormatPatternParser 
     void onComplete() {
         this.checkTrailingExponent();
 
-        if(this.isScientificFormat()) {
+        if (this.isScientificFormat()) {
             this.onCompleteScientific();
         } else {
             this.onCompleteNonScientific();
@@ -465,11 +465,11 @@ final class DecimalFormatPatternParserNumber extends DecimalFormatPatternParser 
     @Override
     public String toString() {
         return ToStringBuilder.empty()
-                .value(this.pattern)
-                .valueSeparator("")
-                .label("prefix").value(this.prefix)
-                .label("number").value(this.number)
-                .label("suffix").value(this.suffix)
-                .build();
+            .value(this.pattern)
+            .valueSeparator("")
+            .label("prefix").value(this.prefix)
+            .label("number").value(this.number)
+            .label("suffix").value(this.suffix)
+            .build();
     }
 }

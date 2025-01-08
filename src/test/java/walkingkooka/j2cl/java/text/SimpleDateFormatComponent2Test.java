@@ -40,8 +40,8 @@ public final class SimpleDateFormatComponent2Test extends SimpleDateFormatCompon
                                               final int minutes,
                                               final int expected) {
         this.checkEquals(expected,
-                SimpleDateFormatComponent2.hoursMinutesToMillis(hours, minutes),
-                () -> "hoursMinutesToMillis " + hours + ":" + minutes);
+            SimpleDateFormatComponent2.hoursMinutesToMillis(hours, minutes),
+            () -> "hoursMinutesToMillis " + hours + ":" + minutes);
     }
 
     @Override
