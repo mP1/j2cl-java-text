@@ -48,9 +48,9 @@ public class JunitTest {
     @Test
     public void testGetAvailableLocalesAllEnglish() {
         Assert.assertNotEquals(Lists.empty(),
-                Arrays.stream(java.text.DateFormatSymbols.getAvailableLocales())
-                        .filter(l -> l.getLanguage().equalsIgnoreCase("EN"))
-                        .collect(Collectors.toList()));
+            Arrays.stream(java.text.DateFormatSymbols.getAvailableLocales())
+                .filter(l -> l.getLanguage().equalsIgnoreCase("EN"))
+                .collect(Collectors.toList()));
     }
 
     @Test

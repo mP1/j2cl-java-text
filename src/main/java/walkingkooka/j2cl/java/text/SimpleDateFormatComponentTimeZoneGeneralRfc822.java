@@ -28,13 +28,11 @@ abstract class SimpleDateFormatComponentTimeZoneGeneralRfc822 extends SimpleDate
         super(length);
     }
 
-    @Override
-    final boolean isNumber() {
+    @Override final boolean isNumber() {
         return false; // isnt number only will start with a letter or sign
     }
 
-    @Override
-    final SimpleDateFormatComponent setNumberNext() {
+    @Override final SimpleDateFormatComponent setNumberNext() {
         return this; // dont care if followed by a number.
     }
 
@@ -43,8 +41,7 @@ abstract class SimpleDateFormatComponentTimeZoneGeneralRfc822 extends SimpleDate
     /**
      * Tries a general timezone followed by a RFC822 timezone offset.
      */
-    @Override
-    final void parseText(final SimpleDateFormatParseRequest request) {
+    @Override final void parseText(final SimpleDateFormatParseRequest request) {
         final ParsePosition position = request.position;
 
         final String text = request.text;
@@ -71,11 +68,11 @@ abstract class SimpleDateFormatComponentTimeZoneGeneralRfc822 extends SimpleDate
                 switch (request.parsePlusOrMinusSign()) {
                     case SimpleDateFormatParseRequest.PARSE_PLUS:
                         this.parseHoursColonMinutesAndUpdateCalendar(request,
-                                1);
+                            1);
                         break;
                     case SimpleDateFormatParseRequest.PARSE_MINUS:
                         this.parseHoursColonMinutesAndUpdateCalendar(request,
-                                -1);
+                            -1);
                         break;
                     default:
                         position.setIndex(gmt);
@@ -90,11 +87,11 @@ abstract class SimpleDateFormatComponentTimeZoneGeneralRfc822 extends SimpleDate
             switch (request.parsePlusOrMinusSign()) {
                 case SimpleDateFormatParseRequest.PARSE_PLUS:
                     this.parseHoursMinutesAndUpdateCalendar(request,
-                            1);
+                        1);
                     break;
                 case SimpleDateFormatParseRequest.PARSE_MINUS:
                     this.parseHoursMinutesAndUpdateCalendar(request,
-                            -1);
+                        -1);
                     break;
                 default:
                     position.setErrorIndex(position.getIndex());
@@ -102,7 +99,7 @@ abstract class SimpleDateFormatComponentTimeZoneGeneralRfc822 extends SimpleDate
             }
         }
 
-        if(request.isError()) {
+        if (request.isError()) {
             position.setIndex(start);
         }
     }
@@ -115,10 +112,10 @@ abstract class SimpleDateFormatComponentTimeZoneGeneralRfc822 extends SimpleDate
         final int textLength = request.text.length();
 
         final int hours = request.parseNumberWithMaxValueOrError(1,
-                24,
-                Math.min(position.getIndex(), textLength));
+            24,
+            Math.min(position.getIndex(), textLength));
         if (false == request.isError()) {
-            if(request.parseColonOrError()){
+            if (request.parseColonOrError()) {
                 final int minutes = request.parseTwoDigitMinutesOrError(Math.min(position.getIndex() + 2, textLength));
                 if (false == request.isError()) {
                     request.calendar.set(CALENDAR_FIELD, hoursMinutesToMillis(hours, minutes) * multiplier);
@@ -145,8 +142,7 @@ abstract class SimpleDateFormatComponentTimeZoneGeneralRfc822 extends SimpleDate
      */
     final static int CALENDAR_FIELD = Calendar.ZONE_OFFSET;
 
-    @Override
-    final int maxDigitLength() {
+    @Override final int maxDigitLength() {
         return 0;
     }
 }

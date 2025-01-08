@@ -20,7 +20,7 @@ package walkingkooka.j2cl.java.text;
 import org.junit.jupiter.api.Test;
 
 public abstract class SimpleDateFormatComponentTimeZoneGeneralRfc822TestCase<C extends SimpleDateFormatComponentTimeZoneGeneralRfc822>
-        extends SimpleDateFormatComponentTestCase2<C> {
+    extends SimpleDateFormatComponentTestCase2<C> {
 
     SimpleDateFormatComponentTimeZoneGeneralRfc822TestCase() {
         super();
@@ -198,7 +198,7 @@ public abstract class SimpleDateFormatComponentTimeZoneGeneralRfc822TestCase<C e
     private void parseTextAndCheck(final String text) {
         for (int i = 1; i <= 3; i++) {
             this.parseTextAndCheck(this.createComponent(i),
-                    text);
+                text);
         }
     }
 }

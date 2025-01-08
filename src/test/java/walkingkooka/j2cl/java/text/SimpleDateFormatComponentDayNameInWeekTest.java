@@ -39,63 +39,63 @@ public final class SimpleDateFormatComponentDayNameInWeekTest extends SimpleDate
     @Test
     public void testParse1Short() {
         this.parseTextAndCheck(this.createComponent(1),
-                "Mon.");
+            "Mon.");
     }
 
     @Test
     public void testParse1Long() {
         this.parseTextAndCheck(this.createComponent(1),
-                "Monday");
+            "Monday");
     }
 
     @Test
     public void testParse1ShortCaseInsensitive() {
         this.parseTextAndCheck(this.createComponent(1),
-                "MON.");
+            "MON.");
     }
 
     @Test
     public void testParse1LongCaseInsensitive() {
         this.parseTextAndCheck(this.createComponent(1),
-                "MONDAY");
+            "MONDAY");
     }
 
     @Test
     public void testParse2Short() {
         this.parseTextAndCheck(this.createComponent(2),
-                "Mon.");
+            "Mon.");
     }
 
     @Test
     public void testParse2Long() {
         this.parseTextAndCheck(this.createComponent(2),
-                "Monday");
+            "Monday");
     }
 
     @Test
     public void testParse3Short() {
         this.parseTextAndCheck(this.createComponent(3),
-                "Mon.");
+            "Mon.");
     }
 
     @Test
     public void testParse3Long() {
         this.parseTextAndCheck(this.createComponent(3),
-                "Monday");
+            "Monday");
     }
 
     @Test
     public void testParse4Short() {
         this.parseTextAndCheck(this.createComponent(4),
-                "Mon.");
+            "Mon.");
     }
 
     @Test
     public void testParse4Long() {
         this.parseTextAndCheck(this.createComponent(4),
-                "Monday");
+            "Monday");
     }
-    
+
     @Override
     SimpleDateFormatComponentDayNameInWeek createComponent(final int length) {
         return SimpleDateFormatComponentDayNameInWeek.with(length);

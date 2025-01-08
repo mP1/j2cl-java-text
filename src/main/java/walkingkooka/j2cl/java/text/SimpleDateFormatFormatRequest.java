@@ -43,7 +43,7 @@ final class SimpleDateFormatFormatRequest {
         this.symbols = symbols;
         this.daylightSavingTime = daylightSavingTime;
     }
-    
+
     final Calendar calendar;
 
     final StringBuffer text;

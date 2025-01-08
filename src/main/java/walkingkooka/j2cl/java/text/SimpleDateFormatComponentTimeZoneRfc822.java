@@ -37,8 +37,8 @@ final class SimpleDateFormatComponentTimeZoneRfc822 extends SimpleDateFormatComp
         request.text.append(offset < 0 ? '-' : '+');
 
         this.formatNumericValue(request,
-                offset,
-                4);
+            offset,
+            4);
     }
 
     // SimpleDateFormatComponent........................................................................................

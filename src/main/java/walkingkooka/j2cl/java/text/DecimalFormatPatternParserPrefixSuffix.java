@@ -102,8 +102,8 @@ final class DecimalFormatPatternParserPrefixSuffix extends DecimalFormatPatternP
     @Override
     public String toString() {
         return ToStringBuilder.empty()
-                .value(this.position)
-                .value(this.components)
-                .build();
+            .value(this.position)
+            .value(this.components)
+            .build();
     }
 }

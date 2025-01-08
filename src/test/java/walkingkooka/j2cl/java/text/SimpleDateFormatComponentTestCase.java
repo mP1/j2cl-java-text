@@ -60,10 +60,10 @@ public abstract class SimpleDateFormatComponentTestCase<C extends SimpleDateForm
                                   final boolean daylightSavingTime,
                                   final String expected) {
         this.formatDateAndCheck(component,
-                date,
-                new DateFormatSymbols(LOCALE),
-                daylightSavingTime,
-                expected);
+            date,
+            new DateFormatSymbols(LOCALE),
+            daylightSavingTime,
+            expected);
     }
 
     final void formatDateAndCheck(final C component,
@@ -75,10 +75,10 @@ public abstract class SimpleDateFormatComponentTestCase<C extends SimpleDateForm
         calendar.setTime(date);
 
         this.formatDateAndCheck(component,
-                calendar,
-                symbols,
-                daylightSavingTime,
-                expected);
+            calendar,
+            symbols,
+            daylightSavingTime,
+            expected);
     }
 
     final void formatDateAndCheck(final C component,
@@ -89,8 +89,8 @@ public abstract class SimpleDateFormatComponentTestCase<C extends SimpleDateForm
         final StringBuffer text = new StringBuffer();
         component.formatDate(SimpleDateFormatFormatRequest.with(calendar, text, symbols, daylightSavingTime));
         this.checkEquals(expected,
-                text.toString(),
-                () -> component + " format " + calendar.getTime() + " symbols=" + symbols + " daylightSavingTime: " + daylightSavingTime + " tz " + TimeZone.getDefault());
+            text.toString(),
+            () -> component + " format " + calendar.getTime() + " symbols=" + symbols + " daylightSavingTime: " + daylightSavingTime + " tz " + TimeZone.getDefault());
     }
 
     // parse............................................................................................................
@@ -98,9 +98,9 @@ public abstract class SimpleDateFormatComponentTestCase<C extends SimpleDateForm
     final void parseTextAndCheck(final C component,
                                  final String text) {
         this.parseTextAndCheck(component,
-                text,
-                TIMEZONE,
-                LOCALE);
+            text,
+            TIMEZONE,
+            LOCALE);
     }
 
     final void parseTextAndCheck(final C component,
@@ -108,10 +108,10 @@ public abstract class SimpleDateFormatComponentTestCase<C extends SimpleDateForm
                                  final TimeZone timeZone,
                                  final Locale locale) {
         this.parseTextAndCheck(component,
-                text,
-                2000,
-                timeZone,
-                locale);
+            text,
+            2000,
+            timeZone,
+            locale);
     }
 
     final void parseTextAndCheck(final C component,
@@ -120,11 +120,11 @@ public abstract class SimpleDateFormatComponentTestCase<C extends SimpleDateForm
                                  final TimeZone timeZone,
                                  final Locale locale) {
         this.parseTextAndCheck(component,
-                text,
-                text,
-                twoDigitYear,
-                timeZone,
-                locale);
+            text,
+            text,
+            twoDigitYear,
+            timeZone,
+            locale);
     }
 
     final void parseTextAndCheck(final C component,
@@ -145,17 +145,17 @@ public abstract class SimpleDateFormatComponentTestCase<C extends SimpleDateForm
         final Date expected = simpleDateFormat.parse(jreText, jrePosition);
 
         this.checkEquals(jrePosition.getIndex(),
-                position.getIndex(),
-                () -> "index, " + component + " text=" + CharSequences.quoteAndEscape(emulText) + " errorIndex: " + jrePosition.getErrorIndex() + " expected date: " + expected);
+            position.getIndex(),
+            () -> "index, " + component + " text=" + CharSequences.quoteAndEscape(emulText) + " errorIndex: " + jrePosition.getErrorIndex() + " expected date: " + expected);
         this.checkEquals(jrePosition.getErrorIndex(),
-                position.getErrorIndex(),
-                () -> "errorIndex, " + component + " text=" + CharSequences.quoteAndEscape(emulText) + " index: " + position.getIndex() + " expected date: " + expected);
+            position.getErrorIndex(),
+            () -> "errorIndex, " + component + " text=" + CharSequences.quoteAndEscape(emulText) + " index: " + position.getIndex() + " expected date: " + expected);
 
         // TODO https://github.com/mP1/j2cl-java-text/issues/219
-        if(false == this instanceof SimpleDateFormatComponentWeekYearTest) {
+        if (false == this instanceof SimpleDateFormatComponentWeekYearTest) {
             this.checkEquals(null != expected ?
-                    expected :
-                    new Date(0), calendar.getTime(), () -> "date, " + component + " text=" + CharSequences.quoteAndEscape(emulText) + " jre pattern: " + simpleDateFormat.toPattern() + " 2digitYear: " + simpleDateFormat.get2DigitYearStart() + " pattern: " + component + " twoDigitYear: " + twoDigitYear);
+                expected :
+                new Date(0), calendar.getTime(), () -> "date, " + component + " text=" + CharSequences.quoteAndEscape(emulText) + " jre pattern: " + simpleDateFormat.toPattern() + " 2digitYear: " + simpleDateFormat.get2DigitYearStart() + " pattern: " + component + " twoDigitYear: " + twoDigitYear);
         }
     }
 

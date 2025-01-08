@@ -63,22 +63,22 @@ public class JunitTest {
     @Test
     public void testFormatBigDecimalCurrencyAuLocale() {
         this.formatAndCheck(NumberFormat.getCurrencyInstance(Locale.forLanguageTag("EN-AU")),
-                BigDecimal.valueOf(123.45),
-                "$123.45");
+            BigDecimal.valueOf(123.45),
+            "$123.45");
     }
 
     @Test
     public void testFormatBigDecimalCurrencyFRLocale() {
         this.formatAndCheck(NumberFormat.getCurrencyInstance(Locale.forLanguageTag("FR-FR")),
-                BigDecimal.valueOf(123.45),
-                "123,45 €");
+            BigDecimal.valueOf(123.45),
+            "123,45 €");
     }
 
     @Test
     public void testFormatGrouping() {
         this.formatAndCheck("#,####.00", "EN-AU",
-                BigDecimal.valueOf(12345.6),
-                "1,2345.60");
+            BigDecimal.valueOf(12345.6),
+            "1,2345.60");
     }
 
     @Test
@@ -107,16 +107,16 @@ public class JunitTest {
                                 final Number number,
                                 final String expected) {
         this.formatAndCheck(this.decimalFormat(pattern, symbolsLocale),
-                number,
-                expected);
+            number,
+            expected);
     }
 
     private void formatAndCheck(final NumberFormat format,
                                 final Number number,
                                 final String expected) {
         Assert.assertEquals("format number " + number + " with " + format,
-                expected,
-                format.format(number)
+            expected,
+            format.format(number)
         );
     }
 
@@ -156,16 +156,16 @@ public class JunitTest {
                                final String text,
                                final Number expected) throws ParseException {
         this.parseAndCheck(this.decimalFormat(pattern, locale),
-                text,
-                expected);
+            text,
+            expected);
     }
 
     private void parseAndCheck(final NumberFormat format,
                                final String text,
                                final Number expected) throws ParseException {
         Assert.assertEquals("parse " + CharSequences.quote(text) + " with format " + format,
-                expected,
-                format.parse(text)
+            expected,
+            format.parse(text)
         );
     }
 

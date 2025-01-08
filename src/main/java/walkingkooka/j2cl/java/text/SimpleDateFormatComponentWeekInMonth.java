@@ -26,7 +26,7 @@ final class SimpleDateFormatComponentWeekInMonth extends SimpleDateFormatCompone
     static SimpleDateFormatComponentWeekInMonth with(final int patternLength,
                                                      final int maxDigitLength) {
         return new SimpleDateFormatComponentWeekInMonth(patternLength,
-                maxDigitLength);
+            maxDigitLength);
     }
 
     private SimpleDateFormatComponentWeekInMonth(final int patternLength,

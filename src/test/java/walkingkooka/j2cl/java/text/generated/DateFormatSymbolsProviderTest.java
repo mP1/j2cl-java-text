@@ -20,7 +20,14 @@ package walkingkooka.j2cl.java.text.generated;
 import walkingkooka.reflect.ClassTesting;
 import walkingkooka.reflect.JavaVisibility;
 
+import java.text.spi.DateFormatSymbolsProvider;
+
 public final class DateFormatSymbolsProviderTest implements ClassTesting<DateFormatSymbolsProvider> {
+
+    @Override
+    public void testTestNaming() {
+        throw new UnsupportedOperationException();
+    }
 
     @Override
     public Class<DateFormatSymbolsProvider> type() {

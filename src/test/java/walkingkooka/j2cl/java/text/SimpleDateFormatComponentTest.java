@@ -28,7 +28,7 @@ import java.util.Set;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class SimpleDateFormatComponentTest extends SimpleDateFormatComponentTestCase<SimpleDateFormatComponent>
-        implements ConstantsTesting<SimpleDateFormatComponent> {
+    implements ConstantsTesting<SimpleDateFormatComponent> {
 
     @Test
     public void testParseInvalidFails() {
@@ -214,22 +214,22 @@ public class SimpleDateFormatComponentTest extends SimpleDateFormatComponentTest
     @Test
     public void testParsePatternWithQuotes() {
         this.parseAndCheck("d MMMM 'de' y",
-                SimpleDateFormatComponent.dayInMonth(1),
-                SimpleDateFormatComponent.literal(' '),
-                SimpleDateFormatComponent.monthInYear(4),
-                SimpleDateFormatComponent.literal(' '),
-                SimpleDateFormatComponent.literal('d'),
-                SimpleDateFormatComponent.literal('e'),
-                SimpleDateFormatComponent.literal(' '),
-                SimpleDateFormatComponent.year(1));
+            SimpleDateFormatComponent.dayInMonth(1),
+            SimpleDateFormatComponent.literal(' '),
+            SimpleDateFormatComponent.monthInYear(4),
+            SimpleDateFormatComponent.literal(' '),
+            SimpleDateFormatComponent.literal('d'),
+            SimpleDateFormatComponent.literal('e'),
+            SimpleDateFormatComponent.literal(' '),
+            SimpleDateFormatComponent.year(1));
     }
 
     @Test
     public void testParseYearMonthDay() {
         this.parseAndCheck("yyyyMMdd",
-                SimpleDateFormatComponent.year(4).setNumberNext(),
-                SimpleDateFormatComponent.monthInYear(2).setNumberNext(),
-                SimpleDateFormatComponent.dayInMonth(2));
+            SimpleDateFormatComponent.year(4).setNumberNext(),
+            SimpleDateFormatComponent.monthInYear(2).setNumberNext(),
+            SimpleDateFormatComponent.dayInMonth(2));
     }
 
     @Test
@@ -240,35 +240,35 @@ public class SimpleDateFormatComponentTest extends SimpleDateFormatComponentTest
     @Test
     public void testParseHourMinuteSecond() {
         this.parseAndCheck("Kms",
-                SimpleDateFormatComponent.hourAmPm011(1).setNumberNext(),
-                SimpleDateFormatComponent.minuteInHour(1).setNumberNext(),
-                SimpleDateFormatComponent.secondInMinute(1));
+            SimpleDateFormatComponent.hourAmPm011(1).setNumberNext(),
+            SimpleDateFormatComponent.minuteInHour(1).setNumberNext(),
+            SimpleDateFormatComponent.secondInMinute(1));
     }
 
     @Test
     public void testParseHourMinuteSecond2() {
         this.parseAndCheck("KKmss",
-                SimpleDateFormatComponent.hourAmPm011(2).setNumberNext(),
-                SimpleDateFormatComponent.minuteInHour(1).setNumberNext(),
-                SimpleDateFormatComponent.secondInMinute(2));
+            SimpleDateFormatComponent.hourAmPm011(2).setNumberNext(),
+            SimpleDateFormatComponent.minuteInHour(1).setNumberNext(),
+            SimpleDateFormatComponent.secondInMinute(2));
     }
 
     @Test
     public void testParseHourMinuteSecondMilli() {
         this.parseAndCheck("KKmssSSS",
-                SimpleDateFormatComponent.hourAmPm011(2).setNumberNext(),
-                SimpleDateFormatComponent.minuteInHour(1).setNumberNext(),
-                SimpleDateFormatComponent.secondInMinute(2).setNumberNext(),
-                SimpleDateFormatComponent.milli(3));
+            SimpleDateFormatComponent.hourAmPm011(2).setNumberNext(),
+            SimpleDateFormatComponent.minuteInHour(1).setNumberNext(),
+            SimpleDateFormatComponent.secondInMinute(2).setNumberNext(),
+            SimpleDateFormatComponent.milli(3));
     }
 
     @Test
     public void testParseHourMinuteSecondAmpm() {
         this.parseAndCheck("Kmsaa",
-                SimpleDateFormatComponent.hourAmPm011(1).setNumberNext(),
-                SimpleDateFormatComponent.minuteInHour(1).setNumberNext(),
-                SimpleDateFormatComponent.secondInMinute(1),
-                SimpleDateFormatComponent.ampm(2));
+            SimpleDateFormatComponent.hourAmPm011(1).setNumberNext(),
+            SimpleDateFormatComponent.minuteInHour(1).setNumberNext(),
+            SimpleDateFormatComponent.secondInMinute(1),
+            SimpleDateFormatComponent.ampm(2));
     }
 
     @Test
@@ -299,8 +299,8 @@ public class SimpleDateFormatComponentTest extends SimpleDateFormatComponentTest
         new java.text.SimpleDateFormat(pattern); // verify pattern is valid.
 
         this.checkEquals(Lists.of(components),
-                SimpleDateFormatComponent.parsePattern(pattern),
-                () -> "parsePattern " + CharSequences.quoteAndEscape(pattern));
+            SimpleDateFormatComponent.parsePattern(pattern),
+            () -> "parsePattern " + CharSequences.quoteAndEscape(pattern));
     }
 
     // ClassTesting.....................................................................................................

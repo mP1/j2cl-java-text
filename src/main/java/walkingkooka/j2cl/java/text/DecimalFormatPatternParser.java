@@ -55,8 +55,8 @@ abstract class DecimalFormatPatternParser {
                 case MODE_ESCAPED:
                     this.addCharacterLiteral(c);
                     escapedMode = DecimalFormat.QUOTE == c ?
-                            MODE_NORMAL :
-                            MODE_CLOSING_QUOTE;
+                        MODE_NORMAL :
+                        MODE_CLOSING_QUOTE;
                     break;
                 case MODE_CLOSING_QUOTE:
                     if (DecimalFormat.QUOTE != c) {
@@ -73,8 +73,8 @@ abstract class DecimalFormatPatternParser {
             this.position++;
         }
 
-        if(MODE_CLOSING_QUOTE == escapedMode) {
-            this.failInvalidCharacter(this.position -1);
+        if (MODE_CLOSING_QUOTE == escapedMode) {
+            this.failInvalidCharacter(this.position - 1);
         }
 
         this.onComplete();
@@ -117,8 +117,8 @@ abstract class DecimalFormatPatternParser {
         }
 
         this.addNonNumberComponent(currency ?
-                DecimalFormatPatternComponent.currencyInternationalSign() :
-                DecimalFormatPatternComponent.currencySign());
+            DecimalFormatPatternComponent.currencyInternationalSign() :
+            DecimalFormatPatternComponent.currencySign());
         this.currency = true;
     }
 

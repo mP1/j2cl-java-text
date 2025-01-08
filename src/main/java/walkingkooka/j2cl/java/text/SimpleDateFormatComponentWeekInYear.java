@@ -26,7 +26,7 @@ final class SimpleDateFormatComponentWeekInYear extends SimpleDateFormatComponen
     static SimpleDateFormatComponentWeekInYear with(final int patternLength,
                                                     final int maxDigitLength) {
         return new SimpleDateFormatComponentWeekInYear(patternLength,
-                maxDigitLength);
+            maxDigitLength);
     }
 
     private SimpleDateFormatComponentWeekInYear(final int patternLength,

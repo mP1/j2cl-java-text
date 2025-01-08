@@ -23,7 +23,7 @@ public final class SimpleDateFormatComponentMilliTest extends SimpleDateFormatCo
     SimpleDateFormatComponentMilli createComponent(final int patternLength,
                                                    final int maxDigitLength) {
         return SimpleDateFormatComponentMilli.with(patternLength,
-                maxDigitLength);
+            maxDigitLength);
     }
 
     @Override

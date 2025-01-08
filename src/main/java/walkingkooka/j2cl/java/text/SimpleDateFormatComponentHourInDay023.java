@@ -29,7 +29,7 @@ final class SimpleDateFormatComponentHourInDay023 extends SimpleDateFormatCompon
     static SimpleDateFormatComponentHourInDay023 with(final int patternLength,
                                                       final int maxDigitLength) {
         return new SimpleDateFormatComponentHourInDay023(patternLength,
-                maxDigitLength);
+            maxDigitLength);
     }
 
     private SimpleDateFormatComponentHourInDay023(final int patternLength,

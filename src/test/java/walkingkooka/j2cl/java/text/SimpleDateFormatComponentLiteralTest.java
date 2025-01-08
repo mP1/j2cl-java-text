@@ -24,15 +24,15 @@ import walkingkooka.ToStringTesting;
 import java.util.Date;
 
 public final class SimpleDateFormatComponentLiteralTest extends SimpleDateFormatComponentTestCase<SimpleDateFormatComponentLiteral>
-        implements HashCodeEqualsDefinedTesting2<SimpleDateFormatComponentLiteral>,
-        ToStringTesting<SimpleDateFormatComponentLiteral> {
+    implements HashCodeEqualsDefinedTesting2<SimpleDateFormatComponentLiteral>,
+    ToStringTesting<SimpleDateFormatComponentLiteral> {
 
     @Test
     public void testFormat() {
         this.formatDateAndCheck(SimpleDateFormatComponentLiteral.with('!'),
-             new Date(),
-             false,
-             "!");
+            new Date(),
+            false,
+            "!");
     }
 
     @Test

@@ -26,8 +26,8 @@ import java.util.Date;
 import java.util.Locale;
 
 public abstract class SimpleDateFormatComponentTestCase2<C extends SimpleDateFormatComponent2> extends SimpleDateFormatComponentTestCase<C>
-        implements HashCodeEqualsDefinedTesting2<C>,
-        ToStringTesting<C> {
+    implements HashCodeEqualsDefinedTesting2<C>,
+    ToStringTesting<C> {
 
     SimpleDateFormatComponentTestCase2() {
         super();
@@ -53,7 +53,7 @@ public abstract class SimpleDateFormatComponentTestCase2<C extends SimpleDateFor
     @Test
     public final void testFormatDate4() {
         // YUCK!!!
-        if(false == this instanceof SimpleDateFormatComponentTimeZoneIso8601Test) {
+        if (false == this instanceof SimpleDateFormatComponentTimeZoneIso8601Test) {
             this.formatDateAndCheck(4, DATE);
         }
     }
@@ -61,18 +61,18 @@ public abstract class SimpleDateFormatComponentTestCase2<C extends SimpleDateFor
     final void formatDateAndCheck(final int length,
                                   final Date date) {
         this.formatDateAndCheck(length,
-                date,
-                LOCALE,
-                false);
+            date,
+            LOCALE,
+            false);
     }
 
     final void formatDateAndCheck(final int length,
                                   final Date date,
                                   final Locale locale) {
         this.formatDateAndCheck(length,
-                date,
-                locale,
-                false);
+            date,
+            locale,
+            false);
     }
 
     final void formatDateAndCheck(final int length,
@@ -81,9 +81,9 @@ public abstract class SimpleDateFormatComponentTestCase2<C extends SimpleDateFor
                                   final boolean daylightSavingTime) {
         final C component = this.createComponent(length);
         this.formatDateAndCheck(component,
-                date,
-                daylightSavingTime,
-                new java.text.SimpleDateFormat(CharSequences.repeating(component.letter(), length).toString(), locale).format(date));
+            date,
+            daylightSavingTime,
+            new java.text.SimpleDateFormat(CharSequences.repeating(component.letter(), length).toString(), locale).format(date));
     }
 
     // Object...........................................................................................................
@@ -101,8 +101,8 @@ public abstract class SimpleDateFormatComponentTestCase2<C extends SimpleDateFor
     @Test
     public final void testToString() throws Exception {
         final Character letter = (Character) this.type()
-                .getDeclaredField("LETTER")
-                .get(null);
+            .getDeclaredField("LETTER")
+            .get(null);
         final int length = 3;
         this.toStringAndCheck(this.createComponent(length), CharSequences.repeating(letter, length).toString());
     }

@@ -55,7 +55,7 @@ public final class SimpleDateFormatComponentDayNumberOfWeekTest extends SimpleDa
     private void formatDateAndCheck0(final int day, final String dowName) {
         final Date date = new Date(Date.UTC(2020 - 1900, Calendar.JUNE, day, 12, 58, 59));
         final String dateToString = new java.text.SimpleDateFormat("EEE yyyy/MMM/dd", Locale.ENGLISH)
-                .format(date);
+            .format(date);
         assertTrue(dateToString.contains(dowName), dateToString + " missing " + dowName);
 
         this.formatDateAndCheck(1, date);
@@ -86,7 +86,7 @@ public final class SimpleDateFormatComponentDayNumberOfWeekTest extends SimpleDa
     SimpleDateFormatComponentDayNumberOfWeek createComponent(final int patternLength,
                                                              final int maxDigitLength) {
         return SimpleDateFormatComponentDayNumberOfWeek.with(patternLength,
-                maxDigitLength);
+            maxDigitLength);
     }
 
     @Override

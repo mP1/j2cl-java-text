@@ -39,55 +39,55 @@ public final class SimpleDateFormatComponentAmPmTest extends SimpleDateFormatCom
     @Test
     public void testParse1AM() {
         this.parseTextAndCheck(this.createComponent(1),
-                "am");
+            "am");
     }
 
     @Test
     public void testParse1AMCaseInsensitive() {
         this.parseTextAndCheck(this.createComponent(1),
-                "AM");
+            "AM");
     }
 
     @Test
     public void testParse1PM() {
         this.parseTextAndCheck(this.createComponent(1),
-                "PM");
+            "PM");
     }
 
     @Test
     public void testParse2AM() {
         this.parseTextAndCheck(this.createComponent(2),
-                "am");
+            "am");
     }
 
     @Test
     public void testParse2PM() {
         this.parseTextAndCheck(this.createComponent(2),
-                "pm");
+            "pm");
     }
 
     @Test
     public void testParse3AM() {
         this.parseTextAndCheck(this.createComponent(3),
-                "am");
+            "am");
     }
 
     @Test
     public void testParse3PM() {
         this.parseTextAndCheck(this.createComponent(3),
-                "pm");
+            "pm");
     }
 
     @Test
     public void testParse4AM() {
         this.parseTextAndCheck(this.createComponent(4),
-                "am");
+            "am");
     }
 
     @Test
     public void testParse4PM() {
         this.parseTextAndCheck(this.createComponent(4),
-                "pm");
+            "pm");
     }
 
     // SimpleDateFormatComponentTestCase2...............................................................................

@@ -66,8 +66,8 @@ public final class SimpleDateFormatParseRequestTest implements ClassTesting2<Sim
 
     private void adjustYearAndCheck(final int twoDigitDate, final int year, final int expected) {
         this.checkEquals(expected,
-                SimpleDateFormatParseRequest.with("123", new ParsePosition(123), Calendar.getInstance(), twoDigitDate, SYMBOLS).adjustTwoDigitYear(year),
-                () -> "adjustTwoDigitDate " + year + " twoDigitDate: " + twoDigitDate);
+            SimpleDateFormatParseRequest.with("123", new ParsePosition(123), Calendar.getInstance(), twoDigitDate, SYMBOLS).adjustTwoDigitYear(year),
+            () -> "adjustTwoDigitDate " + year + " twoDigitDate: " + twoDigitDate);
     }
 
     // parseColonOrError................................................................................................
@@ -98,19 +98,19 @@ public final class SimpleDateFormatParseRequestTest implements ClassTesting2<Sim
     }
 
     private void parseColonOrErrorAndCheck(final String text,
-                                    final int pos,
-                                    final boolean expected) {
+                                           final int pos,
+                                           final boolean expected) {
         final ParsePosition parsePosition = new ParsePosition(pos);
 
         this.checkEquals(expected,
-                this.request(text, parsePosition).parseColonOrError(),
-                () -> "parseColonOrError " + CharSequences.quoteAndEscape(text) + " pos " + pos);
+            this.request(text, parsePosition).parseColonOrError(),
+            () -> "parseColonOrError " + CharSequences.quoteAndEscape(text) + " pos " + pos);
         this.checkEquals(pos + (expected ? 1 : 0),
-                parsePosition.getIndex(),
-                "index");
+            parsePosition.getIndex(),
+            "index");
         this.checkEquals(expected ? -1 : pos,
-                parsePosition.getErrorIndex(),
-                "errorIndex");
+            parsePosition.getErrorIndex(),
+            "errorIndex");
     }
 
     // parsePlusOrMinusSign.......................................................................................................
@@ -158,14 +158,14 @@ public final class SimpleDateFormatParseRequestTest implements ClassTesting2<Sim
         parsePosition.setErrorIndex(errorIndex);
 
         this.checkEquals(expected,
-                this.request(text, parsePosition).parsePlusOrMinusSign(),
-                () -> "parsePlusOrMinusSign " + CharSequences.quoteAndEscape(text) + " pos " + pos);
+            this.request(text, parsePosition).parsePlusOrMinusSign(),
+            () -> "parsePlusOrMinusSign " + CharSequences.quoteAndEscape(text) + " pos " + pos);
         this.checkEquals(pos + (expected == Integer.MIN_VALUE ? 0 : 1),
-                parsePosition.getIndex(),
-                "index");
+            parsePosition.getIndex(),
+            "index");
         this.checkEquals(errorIndex,
-                parsePosition.getErrorIndex(),
-                "errorIndex");
+            parsePosition.getErrorIndex(),
+            "errorIndex");
     }
 
     // parseZeroOrPlusOrMinusSign.......................................................................................................
@@ -218,14 +218,14 @@ public final class SimpleDateFormatParseRequestTest implements ClassTesting2<Sim
         parsePosition.setErrorIndex(errorIndex);
 
         this.checkEquals(expected,
-                this.request(text, parsePosition).parseZeroOrPlusOrMinusSign(),
-                () -> "parseZeroOrPlusOrMinusSign " + CharSequences.quoteAndEscape(text) + " pos " + pos);
+            this.request(text, parsePosition).parseZeroOrPlusOrMinusSign(),
+            () -> "parseZeroOrPlusOrMinusSign " + CharSequences.quoteAndEscape(text) + " pos " + pos);
         this.checkEquals(pos + (expected == Integer.MIN_VALUE ? 0 : 1),
-                parsePosition.getIndex(),
-                "index");
+            parsePosition.getIndex(),
+            "index");
         this.checkEquals(errorIndex,
-                parsePosition.getErrorIndex(),
-                "errorIndex");
+            parsePosition.getErrorIndex(),
+            "errorIndex");
     }
 
     // parseTwoDigitNumber.......................................................................................................
@@ -280,14 +280,14 @@ public final class SimpleDateFormatParseRequestTest implements ClassTesting2<Sim
         final ParsePosition parsePosition = new ParsePosition(pos);
 
         this.checkEquals(expected,
-                this.request(text, parsePosition).parseTwoDigitNumberOrError(max, failErrorIndex),
-                () -> "parseTwoDigitNumber " + CharSequences.quoteAndEscape(text) + ", pos " + pos + ", max: " + max + ", errorIndex " + failErrorIndex);
+            this.request(text, parsePosition).parseTwoDigitNumberOrError(max, failErrorIndex),
+            () -> "parseTwoDigitNumber " + CharSequences.quoteAndEscape(text) + ", pos " + pos + ", max: " + max + ", errorIndex " + failErrorIndex);
         this.checkEquals(index,
-                parsePosition.getIndex(),
-                "index");
+            parsePosition.getIndex(),
+            "index");
         this.checkEquals(expectedErrorIndex,
-                parsePosition.getErrorIndex(),
-                "errorIndex");
+            parsePosition.getErrorIndex(),
+            "errorIndex");
     }
 
     // parseNumberOrError...............................................................................................
@@ -354,13 +354,13 @@ public final class SimpleDateFormatParseRequestTest implements ClassTesting2<Sim
                                             final int number,
                                             final int positionAfter) {
         this.parseNumberOrErrorAndCheck(text,
-                position,
-                minLength,
-                maxLength,
-                999,
-                number,
-                positionAfter,
-                -1);
+            position,
+            minLength,
+            maxLength,
+            999,
+            number,
+            positionAfter,
+            -1);
     }
 
     private void parseNumberOrErrorAndCheck(final String text,
@@ -373,14 +373,14 @@ public final class SimpleDateFormatParseRequestTest implements ClassTesting2<Sim
                                             final int errorIndexAfter) {
         final ParsePosition parsePosition = new ParsePosition(position);
         this.checkEquals(number,
-                request(text, parsePosition).parseNumberOrError(minLength, maxLength, failErrorIndex),
-                () -> "bad number, parseNumberOrError " + CharSequences.quoteAndEscape(text) + ", start pos " + position + ", minLength " + minLength + ", maxLength " + maxLength + ", errorIndex: " + failErrorIndex);
+            request(text, parsePosition).parseNumberOrError(minLength, maxLength, failErrorIndex),
+            () -> "bad number, parseNumberOrError " + CharSequences.quoteAndEscape(text) + ", start pos " + position + ", minLength " + minLength + ", maxLength " + maxLength + ", errorIndex: " + failErrorIndex);
         this.checkEquals(positionAfter,
-                parsePosition.getIndex(),
-                () -> "bad positionAfter, parseNumberOrError " + CharSequences.quoteAndEscape(text) + ", start pos " + position + ", minLength " + minLength + ", maxLength " + maxLength + ", number: " + number + ", errorIndex: " + failErrorIndex);
+            parsePosition.getIndex(),
+            () -> "bad positionAfter, parseNumberOrError " + CharSequences.quoteAndEscape(text) + ", start pos " + position + ", minLength " + minLength + ", maxLength " + maxLength + ", number: " + number + ", errorIndex: " + failErrorIndex);
         this.checkEquals(errorIndexAfter,
-                parsePosition.getErrorIndex(),
-                () -> "bad errorIndex, parseNumberOrError " + CharSequences.quoteAndEscape(text) + ", start pos " + position + ", minLength " + minLength + ", maxLength " + maxLength + ", number: " + number + ", errorIndex: " + failErrorIndex);
+            parsePosition.getErrorIndex(),
+            () -> "bad errorIndex, parseNumberOrError " + CharSequences.quoteAndEscape(text) + ", start pos " + position + ", minLength " + minLength + ", maxLength " + maxLength + ", number: " + number + ", errorIndex: " + failErrorIndex);
     }
 
     // bestMatch........................................................................................................
@@ -388,82 +388,82 @@ public final class SimpleDateFormatParseRequestTest implements ClassTesting2<Sim
     @Test
     public void testBestMatchFails() {
         this.bestMatchAndCheck("abc",
-                0,
-                new String[]{"hello"},
-                0,
-                -1);
+            0,
+            new String[]{"hello"},
+            0,
+            -1);
     }
 
     @Test
     public void testBestMatchStartIndexFails() {
         this.bestMatchAndCheck("abc",
-                0,
-                new String[]{"abc"},
-                1,
-                -1);
+            0,
+            new String[]{"abc"},
+            1,
+            -1);
     }
 
     @Test
     public void testBestMatchPartialFails() {
         this.bestMatchAndCheck("hel",
-                0,
-                new String[]{"hello"},
-                0,
-                -1);
+            0,
+            new String[]{"hello"},
+            0,
+            -1);
     }
 
     @Test
     public void testBestMatchOnly() {
         this.bestMatchAndCheck("abcdef",
-                0,
-                new String[]{"abc"},
-                0,
-                0);
+            0,
+            new String[]{"abc"},
+            0,
+            0);
     }
 
     @Test
     public void testBestMatchOnly2() {
         this.bestMatchAndCheck("abcdef",
-                0,
-                new String[]{"x", "abc"},
-                0,
-                1);
+            0,
+            new String[]{"x", "abc"},
+            0,
+            1);
     }
 
     @Test
     public void testBestMatchOnly3() {
         this.bestMatchAndCheck("!abcdef",
-                1,
-                new String[]{"x", "abc"},
-                0,
-                1);
+            1,
+            new String[]{"x", "abc"},
+            0,
+            1);
     }
 
     @Test
     public void testBestMatchIgnoresEmpties() {
         this.bestMatchAndCheck("!abcdef",
-                1,
-                new String[]{"", "", "abc"},
-                0,
-                2);
+            1,
+            new String[]{"", "", "abc"},
+            0,
+            2);
     }
 
     @Test
     public void testBestMatchBetter() {
         this.bestMatchAndCheck("!abcdef",
-                1,
-                new String[]{"x", "abc", "y", "abcd"},
-                0,
-                3);
+            1,
+            new String[]{"x", "abc", "y", "abcd"},
+            0,
+            3);
     }
 
     @Test
     public void testBestMatchBetter2() {
         this.bestMatchAndCheck("!abcdef",
-                1,
-                new String[]{"x", "abc", "y", "abcd"},
-                1,
-                3);
+            1,
+            new String[]{"x", "abc", "y", "abcd"},
+            1,
+            3);
     }
 
     private void bestMatchAndCheck(final String text,
@@ -472,8 +472,8 @@ public final class SimpleDateFormatParseRequestTest implements ClassTesting2<Sim
                                    final int possibleStartIndex,
                                    final int expected) {
         this.checkEquals(expected,
-                request(text, new ParsePosition(position)).bestMatch(possibles, possibleStartIndex),
-                () -> "bestMatch " + CharSequences.quoteAndEscape(text) + " position: " + position + " possibles: " + Arrays.toString(possibles) + " possibleStartIndex: " + possibleStartIndex);
+            request(text, new ParsePosition(position)).bestMatch(possibles, possibleStartIndex),
+            () -> "bestMatch " + CharSequences.quoteAndEscape(text) + " position: " + position + " possibles: " + Arrays.toString(possibles) + " possibleStartIndex: " + possibleStartIndex);
     }
 
     private SimpleDateFormatParseRequest request(final String text,
@@ -492,7 +492,7 @@ public final class SimpleDateFormatParseRequestTest implements ClassTesting2<Sim
         final int twoDigitDate = 1920;
 
         this.toStringAndCheck(SimpleDateFormatParseRequest.with(text, position, calendar, twoDigitDate, SYMBOLS),
-                "\"abc123\" index=123 errorIndex=-1 13 Feb 2009 23:31:30 GMT twoDigitCentury: 1900 twoDigitRollOver: 20");
+            "\"abc123\" index=123 errorIndex=-1 13 Feb 2009 23:31:30 GMT twoDigitCentury: 1900 twoDigitRollOver: 20");
     }
 
     @Override

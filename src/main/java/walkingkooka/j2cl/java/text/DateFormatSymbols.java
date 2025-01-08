@@ -63,11 +63,11 @@ public class DateFormatSymbols {
             final Set<Locale> locales = LocaleSupport.readLocales(data);
 
             final DateFormatSymbols symbols = new DateFormatSymbols(readStringArray(data, 0),
-                    readStringArray(data, 0),
-                    readStringArray(data, 0),
-                    readStringArray(data, 0),
-                    readStringArray(data, 1),
-                    readStringArray(data, 1));
+                readStringArray(data, 0),
+                readStringArray(data, 0),
+                readStringArray(data, 0),
+                readStringArray(data, 1),
+                readStringArray(data, 1));
 
             for (final Locale locale : locales) {
                 LOCALE_TO_SYMBOLS.add(locale, symbols);
@@ -82,7 +82,7 @@ public class DateFormatSymbols {
         final String[] array = new String[leadingEmpty + count];
         Arrays.fill(array, 0, leadingEmpty, "");
 
-        for(int i = 0; i < count; i++) {
+        for (int i = 0; i < count; i++) {
             array[leadingEmpty + i] = data.readUTF();
         }
         return array;
@@ -218,11 +218,11 @@ public class DateFormatSymbols {
     @Override
     public int hashCode() {
         return Objects.hash(Arrays.hashCode(this.ampm),
-                Arrays.hashCode(this.eras),
-                Arrays.hashCode(this.months),
-                Arrays.hashCode(this.shortMonths),
-                Arrays.hashCode(this.shortWeekdays),
-                Arrays.hashCode(this.weekdays));
+            Arrays.hashCode(this.eras),
+            Arrays.hashCode(this.months),
+            Arrays.hashCode(this.shortMonths),
+            Arrays.hashCode(this.shortWeekdays),
+            Arrays.hashCode(this.weekdays));
     }
 
     public boolean equals(final Object other) {
@@ -231,22 +231,22 @@ public class DateFormatSymbols {
 
     private boolean equals0(final DateFormatSymbols other) {
         return Arrays.equals(this.ampm, other.ampm) &&
-                Arrays.equals(this.eras, other.eras) &&
-                Arrays.equals(this.months, other.months) &&
-                Arrays.equals(this.shortMonths, other.shortMonths) &&
-                Arrays.equals(this.shortWeekdays, other.shortWeekdays) &&
-                Arrays.equals(this.weekdays, other.weekdays);
+            Arrays.equals(this.eras, other.eras) &&
+            Arrays.equals(this.months, other.months) &&
+            Arrays.equals(this.shortMonths, other.shortMonths) &&
+            Arrays.equals(this.shortWeekdays, other.shortWeekdays) &&
+            Arrays.equals(this.weekdays, other.weekdays);
     }
 
     @Override
     public String toString() {
         return ToStringBuilder.empty()
-                .label("ampm").value(this.ampm)
-                .label("eras").value(this.eras)
-                .label("months").value(this.months)
-                .label("shortMonths").value(this.shortMonths)
-                .label("shortWeekdays").value(this.shortWeekdays)
-                .label("weekdays").value(this.weekdays)
-                .build();
+            .label("ampm").value(this.ampm)
+            .label("eras").value(this.eras)
+            .label("months").value(this.months)
+            .label("shortMonths").value(this.shortMonths)
+            .label("shortWeekdays").value(this.shortWeekdays)
+            .label("weekdays").value(this.weekdays)
+            .build();
     }
 }

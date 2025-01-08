@@ -45,8 +45,8 @@ abstract class SimpleDateFormatComponent2 extends SimpleDateFormatComponent {
                                                final int maxLength) {
         final int value = request.calendar.get(calendarField);
         this.formatNumericValue(request,
-                adjustValue.applyAsInt(value),
-                maxLength);
+            adjustValue.applyAsInt(value),
+            maxLength);
     }
 
     final void formatNumericValue(final SimpleDateFormatFormatRequest request,
@@ -56,16 +56,16 @@ abstract class SimpleDateFormatComponent2 extends SimpleDateFormatComponent {
 
         // pad as necessary
         request.text.append(text.length() >= maxLength ?
-                text :
-                CharSequences.padLeft(text, maxLength, '0'));
+            text :
+            CharSequences.padLeft(text, maxLength, '0'));
     }
 
     final void formatCalendarFieldName(final SimpleDateFormatFormatRequest request,
                                        final int calendarField,
                                        final String[] names) {
         this.formatName(request,
-                request.calendar.get(calendarField),
-                names);
+            request.calendar.get(calendarField),
+            names);
     }
 
     final void formatName(final SimpleDateFormatFormatRequest request,
@@ -134,8 +134,8 @@ abstract class SimpleDateFormatComponent2 extends SimpleDateFormatComponent {
     @Override
     public final int hashCode() {
         return Objects.hash(this.letter(),
-                this.length,
-                this.maxDigitLength());
+            this.length,
+            this.maxDigitLength());
     }
 
     @Override
@@ -145,8 +145,8 @@ abstract class SimpleDateFormatComponent2 extends SimpleDateFormatComponent {
 
     private boolean equals0(final SimpleDateFormatComponent2 other) {
         return this.length == other.length &&
-                this.letter() == other.letter() &&
-                this.maxDigitLength() == other.maxDigitLength();
+            this.letter() == other.letter() &&
+            this.maxDigitLength() == other.maxDigitLength();
     }
 
     /**

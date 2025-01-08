@@ -54,7 +54,7 @@ public final class SimpleDateFormatComponentYearTest extends SimpleDateFormatCom
     SimpleDateFormatComponentYear createComponent(final int patternLength,
                                                   final int maxDigitLength) {
         return SimpleDateFormatComponentYear.with(patternLength,
-                maxDigitLength);
+            maxDigitLength);
     }
 
     @Override
@@ -64,7 +64,7 @@ public final class SimpleDateFormatComponentYearTest extends SimpleDateFormatCom
 
     @GwtIncompatible
     public static void main(final String[] a) throws Exception {
-        final Date twoDigit = new Date(Date.UTC(1905-1900, 0, 0,0, 0, 0));
+        final Date twoDigit = new Date(Date.UTC(1905 - 1900, 0, 0, 0, 0, 0));
 
         final java.text.SimpleDateFormat sdf1 = new java.text.SimpleDateFormat("y");
         sdf1.set2DigitYearStart(twoDigit);
@@ -79,7 +79,7 @@ public final class SimpleDateFormatComponentYearTest extends SimpleDateFormatCom
         sdf4.set2DigitYearStart(twoDigit);
 
         for (int i = 0; i < 120; i++) {
-            System.out.println(i + " \ty: " + sdf1.parse(String.valueOf(i)) +  " \tyy: " + sdf2.parse(String.valueOf(i)) + " \tyyy: " + sdf3.parse(String.valueOf(i)) + " \tyyyy: " + sdf4.parse(String.valueOf(i))  );
+            System.out.println(i + " \ty: " + sdf1.parse(String.valueOf(i)) + " \tyy: " + sdf2.parse(String.valueOf(i)) + " \tyyy: " + sdf3.parse(String.valueOf(i)) + " \tyyyy: " + sdf4.parse(String.valueOf(i)));
         }
     }
 }

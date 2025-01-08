@@ -31,15 +31,13 @@ abstract class SimpleDateFormatComponentNumber extends SimpleDateFormatComponent
         this.maxDigitLength = maxDigitLength;
     }
 
-    @Override
-    final boolean isNumber() {
+    @Override final boolean isNumber() {
         return true;
     }
 
     // formatDate.......................................................................................................
 
-    @Override
-    final void formatDate(final SimpleDateFormatFormatRequest request) {
+    @Override final void formatDate(final SimpleDateFormatFormatRequest request) {
         this.formatCalendarFieldNumericValue(request, this.calendarField(), this::adjustReadValue, this.length);
     }
 
@@ -49,12 +47,11 @@ abstract class SimpleDateFormatComponentNumber extends SimpleDateFormatComponent
 
     // parseText........................................................................................................
 
-    @Override
-    final void parseText(final SimpleDateFormatParseRequest request) {
+    @Override final void parseText(final SimpleDateFormatParseRequest request) {
         this.parseNumberAndUpdateCalendar(request,
-                this.calendarField(),
-                this.maxDigitLength,
-                this::adjustWriteValue);
+            this.calendarField(),
+            this.maxDigitLength,
+            this::adjustWriteValue);
     }
 
     /**
@@ -71,8 +68,8 @@ abstract class SimpleDateFormatComponentNumber extends SimpleDateFormatComponent
     final int adjustWriteYearValue(final int value,
                                    final SimpleDateFormatParseRequest parse) {
         return value >= 10 && value < 100 && this.length <= 2 ?
-                parse.adjustTwoDigitYear(value) :
-                value;
+            parse.adjustTwoDigitYear(value) :
+            value;
     }
 
     @Override

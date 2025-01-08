@@ -29,15 +29,15 @@ final class DecimalFormatPatternComponentCharacterLiteral extends DecimalFormatP
      */
     static DecimalFormatPatternComponentCharacterLiteral with(final char value) {
         return value <= CONSTANT_COUNT ?
-                CONSTANTS[value] :
-                new DecimalFormatPatternComponentCharacterLiteral(value);
+            CONSTANTS[value] :
+            new DecimalFormatPatternComponentCharacterLiteral(value);
     }
 
     static final int CONSTANT_COUNT = 127;
 
     private static final DecimalFormatPatternComponentCharacterLiteral[] CONSTANTS = IntStream.rangeClosed(0, CONSTANT_COUNT)
-            .mapToObj(DecimalFormatPatternComponentCharacterLiteral::new)
-            .toArray(DecimalFormatPatternComponentCharacterLiteral[]::new);
+        .mapToObj(DecimalFormatPatternComponentCharacterLiteral::new)
+        .toArray(DecimalFormatPatternComponentCharacterLiteral[]::new);
 
     private DecimalFormatPatternComponentCharacterLiteral(final int value) {
         this((char) value);

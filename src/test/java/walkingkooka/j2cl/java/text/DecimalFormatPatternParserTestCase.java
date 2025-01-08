@@ -25,7 +25,7 @@ import walkingkooka.text.CharSequences;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public abstract class DecimalFormatPatternParserTestCase<P extends DecimalFormatPatternParser> extends DecimalFormatPatternTestCase<P>
-        implements ToStringTesting<P> {
+    implements ToStringTesting<P> {
 
     DecimalFormatPatternParserTestCase() {
         super();
@@ -49,15 +49,15 @@ public abstract class DecimalFormatPatternParserTestCase<P extends DecimalFormat
     final void parseFails(final String pattern,
                           final int position) {
         this.parseFails(pattern,
-                0,
-                position);
+            0,
+            position);
     }
 
     final void parseFails(final String pattern,
                           final int offset,
                           final int position) {
         this.parseFails(this.createParser(pattern, offset),
-                position);
+            position);
     }
 
     final void parseFails(final P parser,
@@ -65,12 +65,12 @@ public abstract class DecimalFormatPatternParserTestCase<P extends DecimalFormat
         final String pattern = parser.pattern;
 
         assertThrows(IllegalArgumentException.class,
-                () -> new java.text.DecimalFormat(pattern),
-                () -> "pattern " + CharSequences.quoteAndEscape(pattern) + " by java.text.DecimalFormat");
+            () -> new java.text.DecimalFormat(pattern),
+            () -> "pattern " + CharSequences.quoteAndEscape(pattern) + " by java.text.DecimalFormat");
 
         final InvalidCharacterException thrown = assertThrows(InvalidCharacterException.class,
-                () -> parser.parse(),
-                () -> "pattern " + CharSequences.quoteAndEscape(pattern) + " by " + DecimalFormat.class.getName() + " " + parser);
+            () -> parser.parse(),
+            () -> "pattern " + CharSequences.quoteAndEscape(pattern) + " by " + DecimalFormat.class.getName() + " " + parser);
 
         this.checkEquals(position, thrown.position(), () -> "position in " + CharSequences.quoteAndEscape(pattern));
         this.checkEquals(pattern, thrown.text(), () -> "text in " + CharSequences.quoteAndEscape(pattern));

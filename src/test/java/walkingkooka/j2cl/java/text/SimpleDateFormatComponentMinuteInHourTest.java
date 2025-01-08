@@ -22,7 +22,7 @@ public final class SimpleDateFormatComponentMinuteInHourTest extends SimpleDateF
     SimpleDateFormatComponentMinuteInHour createComponent(final int patternLength,
                                                           final int maxDigitLength) {
         return SimpleDateFormatComponentMinuteInHour.with(patternLength,
-                maxDigitLength);
+            maxDigitLength);
     }
 
     @Override

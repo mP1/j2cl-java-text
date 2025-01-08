@@ -21,7 +21,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Date;
 
-public abstract class SimpleDateFormatComponentNumberHoursTestCase<C extends SimpleDateFormatComponent2> extends SimpleDateFormatComponentNumberTestCase<C>{
+public abstract class SimpleDateFormatComponentNumberHoursTestCase<C extends SimpleDateFormatComponent2> extends SimpleDateFormatComponentNumberTestCase<C> {
 
     SimpleDateFormatComponentNumberHoursTestCase() {
         super();
@@ -54,7 +54,7 @@ public abstract class SimpleDateFormatComponentNumberHoursTestCase<C extends Sim
 
     @Test
     public final void testFormatAll() {
-        for(int h = 0; h < 24; h++) {
+        for (int h = 0; h < 24; h++) {
             this.formatHoursAndCheck(h);
         }
     }

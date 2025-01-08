@@ -22,7 +22,7 @@ public final class SimpleDateFormatComponentDayOfWeekInMonthTest extends SimpleD
     SimpleDateFormatComponentDayOfWeekInMonth createComponent(final int patternLength,
                                                               final int maxDigitLength) {
         return SimpleDateFormatComponentDayOfWeekInMonth.with(patternLength,
-                maxDigitLength);
+            maxDigitLength);
     }
 
     @Override

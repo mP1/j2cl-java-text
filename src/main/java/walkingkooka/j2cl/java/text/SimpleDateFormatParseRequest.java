@@ -27,20 +27,20 @@ import java.util.Calendar;
 final class SimpleDateFormatParseRequest {
 
     static SimpleDateFormatParseRequest with(
-            final String text,
-            final ParsePosition position,
-            final Calendar calendar,
-            final int twoDigitDate,
-            final DateFormatSymbols symbols) {
+        final String text,
+        final ParsePosition position,
+        final Calendar calendar,
+        final int twoDigitDate,
+        final DateFormatSymbols symbols) {
         return new SimpleDateFormatParseRequest(text, position, calendar, twoDigitDate, symbols);
     }
 
     private SimpleDateFormatParseRequest(
-            final String text,
-            ParsePosition position,
-            final Calendar calendar,
-            final int twoDigitDate,
-            final DateFormatSymbols symbols) {
+        final String text,
+        ParsePosition position,
+        final Calendar calendar,
+        final int twoDigitDate,
+        final DateFormatSymbols symbols) {
         super();
         this.text = text;
         this.position = position;
@@ -65,10 +65,10 @@ final class SimpleDateFormatParseRequest {
 
     int adjustTwoDigitYear(final int value) {
         return value +
-                this.twoDigitCentury +
-                (value < this.twoDigitRollOver ?
-                        100 :
-                        0);
+            this.twoDigitCentury +
+            (value < this.twoDigitRollOver ?
+                100 :
+                0);
     }
 
     final int twoDigitCentury;
@@ -185,8 +185,8 @@ final class SimpleDateFormatParseRequest {
     int parseTwoDigitNumberOrError(final int maxValue,
                                    final int errorIndex) {
         return this.parseNumberWithMaxValueOrError(2,
-                maxValue,
-                errorIndex);
+            maxValue,
+            errorIndex);
     }
 
     /**
@@ -218,16 +218,16 @@ final class SimpleDateFormatParseRequest {
 
         final String text = this.text;
         final int end = Integer.MAX_VALUE == maxLength ?
-                text.length() :
-                Math.min(startPos + maxLength, text.length());
+            text.length() :
+            Math.min(startPos + maxLength, text.length());
 
         int pos = startPos;
         int value = 0;
         boolean abort = false;
 
-        for(;;) {
+        for (; ; ) {
             if (abort || pos == end) {
-                if(pos - startPos < minLength) {
+                if (pos - startPos < minLength) {
                     position.setErrorIndex(errorIndex);
                 } else {
                     position.setIndex(pos);
@@ -264,9 +264,9 @@ final class SimpleDateFormatParseRequest {
             final String possibleText = possibles[j];
             final int possibleTextLength = possibleText.length();
             if (possibleTextLength > 0 &&
-                    i + possibleTextLength <= textLength &&
-                    textLength > bestMatchLength &&
-                    text.regionMatches(IGNORE_CASE, i, possibleText, 0, possibleTextLength)) {
+                i + possibleTextLength <= textLength &&
+                textLength > bestMatchLength &&
+                text.regionMatches(IGNORE_CASE, i, possibleText, 0, possibleTextLength)) {
                 bestMatchIndex = j;
                 bestMatchLength = possibleTextLength;
             }

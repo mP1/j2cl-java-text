@@ -22,7 +22,7 @@ public final class SimpleDateFormatComponentDayInMonthTest extends SimpleDateFor
     SimpleDateFormatComponentDayInMonth createComponent(final int patternLength,
                                                         final int maxDigitLength) {
         return SimpleDateFormatComponentDayInMonth.with(patternLength,
-                maxDigitLength);
+            maxDigitLength);
     }
 
     @Override

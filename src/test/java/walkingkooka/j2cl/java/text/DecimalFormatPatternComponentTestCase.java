@@ -25,9 +25,9 @@ import walkingkooka.reflect.IsMethodTesting;
 import java.util.function.Predicate;
 
 public abstract class DecimalFormatPatternComponentTestCase<C extends DecimalFormatPatternComponent> extends DecimalFormatPatternTestCase<C>
-        implements HashCodeEqualsDefinedTesting2<C>,
-        IsMethodTesting<C>,
-        ToStringTesting<C> {
+    implements HashCodeEqualsDefinedTesting2<C>,
+    IsMethodTesting<C>,
+    ToStringTesting<C> {
 
     DecimalFormatPatternComponentTestCase() {
         super();
@@ -36,15 +36,15 @@ public abstract class DecimalFormatPatternComponentTestCase<C extends DecimalFor
     final void isCurrencyAndCheck(final C component,
                                   final boolean currency) {
         this.checkEquals(currency,
-                component.isCurrency(),
-                () -> component.toString());
+            component.isCurrency(),
+            () -> component.toString());
     }
 
     final void multiplierAndCheck(final C component,
                                   final int multipler) {
         this.checkEquals(component.multiplier(),
-                multipler,
-                () -> component.toString());
+            multipler,
+            () -> component.toString());
     }
 
     abstract C component();

@@ -26,7 +26,7 @@ final class SimpleDateFormatComponentDayNumberOfWeek extends SimpleDateFormatCom
     static SimpleDateFormatComponentDayNumberOfWeek with(final int patternLength,
                                                          final int maxDigitLength) {
         return new SimpleDateFormatComponentDayNumberOfWeek(patternLength,
-                maxDigitLength);
+            maxDigitLength);
     }
 
     private SimpleDateFormatComponentDayNumberOfWeek(final int patternLength,
@@ -81,8 +81,8 @@ final class SimpleDateFormatComponentDayNumberOfWeek extends SimpleDateFormatCom
                 break;
             default:
                 day = value < 8 ?
-                        value + 1 :
-                        (value % 7);
+                    value + 1 :
+                    (value % 7);
                 break;
         }
 

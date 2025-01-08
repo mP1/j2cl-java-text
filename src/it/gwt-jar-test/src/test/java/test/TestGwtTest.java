@@ -35,38 +35,38 @@ public class TestGwtTest extends GWTTestCase {
 
     public void testAssertEquals() {
         assertEquals(
-                1,
-                1
+            1,
+            1
         );
     }
 
     public void testDecimalFormat() throws Exception {
         final DecimalFormat decimalFormat = (DecimalFormat) NumberFormat.getNumberInstance(
-                Locale.forLanguageTag("EN-AU")
+            Locale.forLanguageTag("EN-AU")
         );
 
         assertEquals(
-                "12.490",
-                decimalFormat.format(12.49)
+            "12.490",
+            decimalFormat.format(12.49)
         );
     }
 
     public void testSimpleDateFormatParse() throws Exception {
         final SimpleDateFormat simpleDateFormat = new SimpleDateFormat(
-                "yyyy-MM-dd",
-                Locale.forLanguageTag("EN-AU")
+            "yyyy-MM-dd",
+            Locale.forLanguageTag("EN-AU")
         );
 
         Date date = simpleDateFormat.parse("1999-12-31");
 
         assertEquals(
-                1999- 1900,
-                date.getYear()
+            1999 - 1900,
+            date.getYear()
         );
 
         assertEquals(
-                12 - 1,
-                date.getMonth()
+            12 - 1,
+            date.getMonth()
         );
 
 //        assertEquals(

@@ -50,6 +50,6 @@ public class JunitTest {
         Locale.setDefault(Locale.forLanguageTag("EN-AU"));
         TimeZone.setDefault(TimeZone.getTimeZone("Australia/Sydney"));
         Assert.assertEquals(pattern,
-                ((SimpleDateFormat)DateFormat.getDateInstance(style, Locale.forLanguageTag(locale))).toPattern());
+            ((SimpleDateFormat) DateFormat.getDateInstance(style, Locale.forLanguageTag(locale))).toPattern());
     }
 }

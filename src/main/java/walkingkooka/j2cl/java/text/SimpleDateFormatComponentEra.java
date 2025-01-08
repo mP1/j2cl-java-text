@@ -46,8 +46,8 @@ final class SimpleDateFormatComponentEra extends SimpleDateFormatComponent2 {
     @Override
     void formatDate(final SimpleDateFormatFormatRequest request) {
         this.formatCalendarFieldName(request,
-                CALENDAR_FIELD,
-                request.symbols.getEras());
+            CALENDAR_FIELD,
+            request.symbols.getEras());
     }
 
     // parse...........................................................................................................
@@ -56,9 +56,9 @@ final class SimpleDateFormatComponentEra extends SimpleDateFormatComponent2 {
     void parseText(final SimpleDateFormatParseRequest request) {
         final DateFormatSymbols symbols = request.symbols;
         this.parseFromOptionsAndUpdateCalendar(request,
-                CALENDAR_FIELD,
-                0,
-                symbols.getEras());
+            CALENDAR_FIELD,
+            0,
+            symbols.getEras());
     }
 
     private final static int CALENDAR_FIELD = Calendar.ERA;
