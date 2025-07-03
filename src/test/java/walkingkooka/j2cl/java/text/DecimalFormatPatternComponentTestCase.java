@@ -64,13 +64,12 @@ public abstract class DecimalFormatPatternComponentTestCase<C extends DecimalFor
     }
 
     @Override
-    public String isMethodTypeNamePrefix() {
-        return DecimalFormatPatternComponent.class.getSimpleName();
-    }
-
-    @Override
-    public String isMethodTypeNameSuffix() {
-        return "";
+    public final String toIsMethodName(final String typeName) {
+        return this.toIsMethodNameWithPrefixSuffix(
+            typeName,
+            DecimalFormatPatternComponent.class.getSimpleName(),
+            ""
+        );
     }
 
     @Override
