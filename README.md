@@ -6,23 +6,17 @@
 ![](https://tokei.rs/b1/github/mP1/j2cl-java-text)
 [![J2CL compatible](https://img.shields.io/badge/J2CL-compatible-brightgreen.svg)](https://github.com/mP1/j2cl-central)
 
-
-
 # java.text j2cl
 
 This aims to provide most of the basics of the `java.text` package. Note while most of the core functionality is present,
 some parts are methods are missing. Care should be taken when selecting locales and other extracted data to avoid
 very large amounts of data being extracted resulting in javascript with huge strings holding this data.
 
-
-
 ## DecimalFormat
 
 Note there are some differences between the JDK and emulated DecimalFormat. Where possible behaviour is matched using black box approach,
 with multiple tests that perform the same operation with the same parameters and then compare state or results such as
 output from format or parse.
-
-
 
 ### pattern parsing
 
@@ -33,12 +27,9 @@ and empty string returned. An example of this counter intuitive behaviour is giv
 new java.text.DecimalFormat("P#S;PP##SS").getNegativeSuffix() // returns empty and not SS
 ```
 
-
 ### parse string with number
 
 The minimumIntegerDigits, maximumFractionDigits and minimumFractionDigits are not actually honoured by `DecimalFormat.parse`.
-
-
 
 This example demonstrates that the minimumIntegerDigit count is ignored during parsing and the number returned.
 
@@ -50,8 +41,6 @@ f.parse("1"); // returns 1
 
 ```
 
-
-
 This example demonstrates that the maximumFractionDigits count is ignored, because the string has more fraction digits
 than the pattern.
 
@@ -62,7 +51,6 @@ f.getMinimumFractionDigits(); // returns 0
 f.parse("1.25"); // returns 1.25
 
 ```
-
 
 This example demonstrates that the maximumFractionDigits count is ignored, because the string has less fraction digits
 than the pattern.
@@ -77,8 +65,6 @@ f.parse("1.5"); // returns 1.5
 
 To match compatibility the behaviour of ignoring the counts are ignored.
 
-
-
 ## SimpleDateFormat
 
 Is an almost complete replacement for `java.text.SimpleDateFormat` supporting formatting and parsing pattern letters.
@@ -86,13 +72,10 @@ Is an almost complete replacement for `java.text.SimpleDateFormat` supporting fo
 - `java.text.ParsePosition` index and errorIndex is supported and matches the behaviour or the JRE class.
 - WEEK_YEAR which is represented by the pattern letter "Y" [TODO format](https://github.com/mP1/j2cl-java-text/issues/216) [TODO parse](https://github.com/mP1/j2cl-java-text/issues/219)
 
-
-
 ```java
 SimpleDateFormat f = new SimpleDateFormat("dd/MM/yyyy");
 f.parse("31/12/1999") // gives a Date with 31 December 1999.
 ```
-
 
 ## Annotation processor arguments
 
@@ -101,8 +84,6 @@ f.parse("31/12/1999") // gives a Date with 31 December 1999.
 - See [j2cl-locale](https://github.com/mP1/j2cl-locale) for more info about logging.
 
 The currency code `XXX` must be selected as it is used by various `java.text` classes as a source of defaults.
-
-
 
 ## Missing functionality
 
@@ -127,11 +108,7 @@ For the moment the following classes will not be supported:
 
 - Serialization is not supported, and all support classes and forms including magic methods such as `writeReplace` are removed.
 
-
 ### Transpiling
 
 The `j2cl-maven-plugin` will shade the source during the transpile phase, so `walkingkooka.j2cl.java.text`
 is available to the runtime as `java.text`. 
-
-
-
