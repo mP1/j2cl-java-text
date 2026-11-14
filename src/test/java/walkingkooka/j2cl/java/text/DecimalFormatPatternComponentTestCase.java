@@ -27,7 +27,7 @@ import java.util.function.Predicate;
 public abstract class DecimalFormatPatternComponentTestCase<C extends DecimalFormatPatternComponent> extends DecimalFormatPatternTestCase<C>
     implements HashCodeEqualsDefinedTesting2<C>,
     IsMethodTesting<C>,
-    ToStringTesting<C> {
+    ToStringTesting {
 
     DecimalFormatPatternComponentTestCase() {
         super();

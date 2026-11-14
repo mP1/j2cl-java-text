@@ -28,7 +28,7 @@ import java.util.Locale;
 import java.util.TimeZone;
 
 public final class SimpleDateFormatFormatRequestTest implements ClassTesting2<SimpleDateFormatFormatRequest>,
-    ToStringTesting<SimpleDateFormatFormatRequest> {
+    ToStringTesting {
 
     private final static Date DATE = new Date(Date.UTC(2000 - 1900, 1, 31, 12, 58, 59));
 

@@ -28,7 +28,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
-public final class SimpleDateFormatParseRequestTest implements ClassTesting2<SimpleDateFormatParseRequest>, ToStringTesting<SimpleDateFormatParseRequest> {
+public final class SimpleDateFormatParseRequestTest implements ClassTesting2<SimpleDateFormatParseRequest>, ToStringTesting {
 
     private final static DateFormatSymbols SYMBOLS = DateFormatSymbols.getInstance(Locale.ENGLISH);
 

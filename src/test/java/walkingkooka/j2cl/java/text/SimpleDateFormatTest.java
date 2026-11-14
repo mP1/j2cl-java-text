@@ -34,7 +34,7 @@ import java.util.function.BiFunction;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
-public final class SimpleDateFormatTest extends FormatTestCase<SimpleDateFormat> implements ToStringTesting<SimpleDateFormat> {
+public final class SimpleDateFormatTest extends FormatTestCase<SimpleDateFormat> implements ToStringTesting {
 
     private final static Locale EN_AU = Locale.forLanguageTag("en-AU");
 

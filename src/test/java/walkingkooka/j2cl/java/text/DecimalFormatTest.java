@@ -33,7 +33,7 @@ import java.util.function.Predicate;
 import static org.junit.jupiter.api.Assertions.assertNotSame;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> implements ToStringTesting<DecimalFormat> {
+public final class DecimalFormatTest extends FormatTestCase<DecimalFormat> implements ToStringTesting {
 
     private final static Locale EN_AU = Locale.forLanguageTag("en-AU");
     private final static Locale FR = Locale.forLanguageTag("fr");

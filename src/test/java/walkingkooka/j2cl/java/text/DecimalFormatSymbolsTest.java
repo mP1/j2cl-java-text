@@ -40,7 +40,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public final class DecimalFormatSymbolsTest implements ClassTesting<DecimalFormatSymbols>,
     HashCodeEqualsDefinedTesting2<DecimalFormatSymbols>,
-    ToStringTesting<DecimalFormatSymbols> {
+    ToStringTesting {
 
     @BeforeEach
     public void beforeEach() {
