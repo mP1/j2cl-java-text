@@ -38,7 +38,7 @@ import static org.junit.jupiter.api.Assertions.assertNotSame;
 public final class DateFormatSymbolsTest extends JavaTextTestCase<DateFormatSymbols>
     implements
     HashCodeEqualsDefinedTesting2<DateFormatSymbols>,
-    ToStringTesting<DateFormatSymbols> {
+    ToStringTesting {
 
     // getAvailableLocales..............................................................................................
 

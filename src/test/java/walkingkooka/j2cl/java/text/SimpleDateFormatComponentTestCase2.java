@@ -27,7 +27,7 @@ import java.util.Locale;
 
 public abstract class SimpleDateFormatComponentTestCase2<C extends SimpleDateFormatComponent2> extends SimpleDateFormatComponentTestCase<C>
     implements HashCodeEqualsDefinedTesting2<C>,
-    ToStringTesting<C> {
+    ToStringTesting {
 
     SimpleDateFormatComponentTestCase2() {
         super();

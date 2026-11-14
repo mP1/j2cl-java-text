@@ -25,7 +25,7 @@ import java.util.Date;
 
 public final class SimpleDateFormatComponentLiteralTest extends SimpleDateFormatComponentTestCase<SimpleDateFormatComponentLiteral>
     implements HashCodeEqualsDefinedTesting2<SimpleDateFormatComponentLiteral>,
-    ToStringTesting<SimpleDateFormatComponentLiteral> {
+    ToStringTesting {
 
     @Test
     public void testFormat() {

@@ -25,7 +25,7 @@ import walkingkooka.text.CharSequences;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public abstract class DecimalFormatPatternParserTestCase<P extends DecimalFormatPatternParser> extends DecimalFormatPatternTestCase<P>
-    implements ToStringTesting<P> {
+    implements ToStringTesting {
 
     DecimalFormatPatternParserTestCase() {
         super();

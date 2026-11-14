@@ -29,7 +29,7 @@ import java.util.function.Predicate;
 public final class FieldPositionTest extends JavaTextTestCase<FieldPosition>
     implements
     HashCodeEqualsDefinedTesting2<FieldPosition>,
-    ToStringTesting<FieldPosition> {
+    ToStringTesting {
 
     private final static int FIELD = 11;
     private final static String FIELD_NAME = "Field123";

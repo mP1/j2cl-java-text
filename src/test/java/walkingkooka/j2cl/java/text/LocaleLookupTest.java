@@ -28,7 +28,7 @@ import java.util.Locale;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public final class LocaleLookupTest implements ClassTesting2<LocaleLookup<Integer>>,
-    ToStringTesting<LocaleLookup<Integer>> {
+    ToStringTesting {
 
     private final static Locale EN = Locale.forLanguageTag("en");
     private final static Locale FR = Locale.forLanguageTag("fr");
